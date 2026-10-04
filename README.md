@@ -53,4 +53,4 @@ The full article catalog, original replication source trees, paper PDFs, extract
 
 The `search` command is optional and requires an existing local SQLite index supplied with `--index <path>`, or placed at `local/fh_index.sqlite`. It is not part of the fresh-clone quick start. Skills, cards and notes remain usable without that index or the full corpus.
 
-Version: [harness/VERSION](harness/VERSION). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). License and third-party attribution: [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
+Version: [harness/VERSION](harness/VERSION). License: [LICENSE](LICENSE).

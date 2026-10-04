@@ -22,7 +22,7 @@ EconFinHarness provides empirical research skills, method guides and selected re
 
 ## Editing and access
 
-Maintain repository documentation, code, comments and reusable prompts in English. Keep changes focused and preserve existing research material. Use repository-relative paths in maintained files and the commit conventions in `CONTRIBUTING.md`.
+Maintain repository documentation, code, comments and reusable prompts in English. Keep changes focused and preserve existing research material. Use repository-relative paths in maintained files and Conventional Commits for commit messages.
 
 Do not modify audited local corpus metadata or databases during ordinary research tasks. Do not collect datasets, full replication archives or paper PDFs into this repository. Respect source licenses and access restrictions. Original third-party code remains separate from the public harness.
 
