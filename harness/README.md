@@ -6,7 +6,7 @@ Start with the [composition guide](skill-composition.md) to select a method and 
 |---|---|
 | `paradigms/` | Recommendations, code observations and paper practices for 20 methods |
 | `skills/` | 31 operational guides: 20 methods, nine shared research skills and two reading skills |
-| `agents/` | Nine roles, including paper and code reading |
+| `agents/` | Nine Markdown roles, including paper and code reading; Codex TOML configurations in `agents/codex/` |
 | `workflows/` | 11 optional task workflows |
 | `presets/` | 12 reusable task prompts |
 
@@ -26,4 +26,4 @@ For methodological advice, read `paradigms/<method>/recommendations.md`. For rec
 
 Use checklists and templates when they help. An [R template for RD](skills/rdd/templates/rd_analysis.R) is available. [Paper-practice notes](skills/paper-practice-notes/SKILL.md) and [code-card extraction](skills/recipe-card-extraction/SKILL.md) support a requested new reading of a paper or its code.
 
-Maintain source skills and roles here and keep the included host copies consistent when editing them. Shared repository guidance is in [AGENTS.md](../AGENTS.md).
+Maintain skills and Markdown roles here. The root skill directories and Claude Code role directory link to these files. Codex project settings refer to `agents/codex/`; keep each TOML configuration consistent with its Markdown role. Shared repository guidance is in [AGENTS.md](../AGENTS.md).

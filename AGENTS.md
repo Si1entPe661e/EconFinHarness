@@ -14,15 +14,17 @@ EconFinHarness provides empirical research skills, method guides and summaries o
 ## Repository layout
 
 - `harness/`: source skills, roles, composition guidance, methods, workflows and task prompts, including the reading skills and roles.
-- `.agents/skills/`: skill copies for Codex, corresponding to `harness/skills/`.
-- `.claude/`: skill copies and Claude Code role configurations.
-- `.codex/`: Codex role configurations derived from `harness/agents/`.
+- `.agents/skills`: a relative symlink to `harness/skills/` for Codex discovery.
+- `.claude/skills` and `.claude/agents`: relative symlinks to the shared skills and Markdown roles under `harness/`.
+- `.codex/config.toml`: Codex project settings referring to TOML roles under `harness/agents/codex/`.
 - `Paper/`, when available locally: an optional research corpus excluded from public version control. A fresh clone does not include it.
 - Local tools, standalone research records and construction materials are excluded from public version control. They are not prerequisites for using the guides.
 
 ## Editing and access
 
 Maintain repository documentation, code, comments and reusable prompts in English. Keep changes focused and preserve existing research material. Use repository-relative paths in maintained files and Conventional Commits for commit messages.
+
+Edit the shared skills and Markdown roles under `harness/`; preserve the root symlinks. Keep each Codex TOML role consistent with its corresponding Markdown role.
 
 Do not modify audited local corpus metadata or databases during ordinary research tasks. Do not collect datasets, full replication archives or paper PDFs into this repository. Respect source licenses and access restrictions. Original third-party code remains separate from the public harness.
 

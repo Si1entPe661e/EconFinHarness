@@ -11,7 +11,7 @@ git clone https://github.com/Si1entPe661e/EconFinHarness.git
 cd EconFinHarness
 ```
 
-Open this directory as the project root in your AI coding tool. The repository includes skill and role configurations for Codex and Claude Code. Start with a concrete request and the location of your data or code, for example:
+Open this directory as the project root in your AI coding tool. The repository includes skill and role configurations for Codex and Claude Code. In Codex, trust the project when prompted so its role settings can load. Start with a concrete request and the location of your data or code, for example:
 
 > Read AGENTS.md and harness/skill-composition.md. Analyze my company panel in data/panel.csv using firm_id and year as the panel keys, y as the outcome and x as the main regressor. Use firm and year fixed effects, choose inference from the research design, inspect the fitted sample, and export a regression table with a concise interpretation. Prefer R.
 
@@ -30,16 +30,19 @@ Reading the guides requires no software installation. Running an analysis requir
 | Study summaries of recorded research practice | [Method materials](harness/paradigms/README.md) |
 | Start from a reusable task prompt | [Task prompts](harness/presets/README.md) |
 
-## Source guides and host configurations
+## Research content and tool entry points
 
 | Directory | Purpose |
 |---|---|
-| `harness/` | Canonical skills, roles, methods, workflows and task prompts |
-| `.agents/skills/` | Skill copies for Codex |
-| `.claude/` | Skill copies and Claude Code role configurations |
-| `.codex/` | Codex role configurations and project settings |
+| `harness/` | Skills, roles, methods, workflows and task prompts |
+| `.agents/skills` | Relative symlink to `harness/skills/` for Codex discovery |
+| `.claude/skills` | Relative symlink to the same skills |
+| `.claude/agents` | Relative symlink to `harness/agents/` for Claude Code roles |
+| `.codex/config.toml` | Codex project settings pointing to `harness/agents/codex/` |
 
-Skill copies carry the same research guidance as `harness/skills/`. Role configurations derive from `harness/agents/` and use the format expected by each host. Maintain the source guides under `harness/` and keep the included host copies consistent.
+Edit skills under `harness/skills/` and role descriptions under `harness/agents/`. Both tools read the shared files through their entry points, so skill and Markdown role edits need no copying. Codex uses TOML role configurations under `harness/agents/codex/`; keep their instructions consistent with the corresponding Markdown roles.
+
+Use a Git clone with symlink support; the tool entry points are relative links within the repository.
 
 ## Distribution
 

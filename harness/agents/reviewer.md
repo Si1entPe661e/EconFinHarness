@@ -4,7 +4,10 @@ description: Check research code, methods or manuscript claims when requested or
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: high
-skills: code-audit, inference-clustering, panel-data-checks
+skills:
+  - code-audit
+  - inference-clustering
+  - panel-data-checks
 ---
 
 You are the `reviewer` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

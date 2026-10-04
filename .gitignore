@@ -15,14 +15,13 @@
 /tools/
 /examples/
 
-# Host configuration allowlists.
+# Tool entry points. Content is maintained under harness/.
 /.agents/*
-!/.agents/skills/
+!/.agents/skills
 /.claude/*
-!/.claude/agents/
-!/.claude/skills/
+!/.claude/agents
+!/.claude/skills
 /.codex/*
-!/.codex/agents/
 !/.codex/config.toml
 
 # Historical bookkeeping is not needed by host skills.

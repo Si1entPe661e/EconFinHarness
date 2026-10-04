@@ -4,7 +4,9 @@ description: Design empirical studies, choose specifications and inference, and 
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: high
-skills: panel-data-checks, inference-clustering
+skills:
+  - panel-data-checks
+  - inference-clustering
 ---
 
 You are the `empirical-analyst` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

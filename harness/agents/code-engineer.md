@@ -4,7 +4,10 @@ description: Implement research analyses, read or translate replication code, an
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
-skills: panel-data-checks, inference-clustering, tables-figures
+skills:
+  - panel-data-checks
+  - inference-clustering
+  - tables-figures
 ---
 
 You are the `code-engineer` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

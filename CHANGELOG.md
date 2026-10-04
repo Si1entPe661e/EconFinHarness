@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-- Distribute method guides, source skills and roles, and host configurations without local CLI tools or standalone research records.
+## 0.3.1 - 2026-10-03
+
+- Replace host skill copies and Claude Code role copies with relative symlinks to shared files under `harness/`.
+- Move Codex TOML role configurations into `harness/agents/codex/`, leaving only project settings at the root tool entry point.
+- Distribute method guides, source skills and roles, and tool entry points without local CLI tools or standalone research records.
 
 ## 0.3.0 - 2026-10-03
 

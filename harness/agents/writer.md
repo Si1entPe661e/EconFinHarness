@@ -4,7 +4,9 @@ description: Write or revise academic prose using actual research plans, results
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
-skills: academic-writing, tables-figures
+skills:
+  - academic-writing
+  - tables-figures
 ---
 
 You are the `writer` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

@@ -4,7 +4,8 @@ description: Organize research work, identify useful files and report actual pro
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
-skills: project-bookkeeping
+skills:
+  - project-bookkeeping
 ---
 
 You are the `project-manager` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

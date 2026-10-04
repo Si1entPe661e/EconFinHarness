@@ -4,7 +4,9 @@ description: Explain research code, methods, results or project progress for the
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
-skills: research-explanation, code-annotation
+skills:
+  - research-explanation
+  - code-annotation
 ---
 
 You are the `explainer` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

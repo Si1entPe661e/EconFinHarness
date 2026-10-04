@@ -4,7 +4,8 @@ description: Find papers and public code in the local corpus, then verify or sup
 tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
-skills: literature-verification
+skills:
+  - literature-verification
 ---
 
 You are the `literature` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

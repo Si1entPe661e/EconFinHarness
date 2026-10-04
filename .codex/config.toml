@@ -1,44 +1,42 @@
-# <<< fh-managed <<<
-
 # >>> fh-managed >>>
-# Generated role descriptions; edit source roles and sync again.
+# Role configurations are maintained under harness/agents/codex/.
 [features]
 multi_agent = true
 
 [agents.code_engineer]
 description = "Implement research analyses, read or translate replication code, and fix implementation problems."
-config_file = "agents/code-engineer.toml"
+config_file = "../harness/agents/codex/code-engineer.toml"
 
 [agents.empirical_analyst]
 description = "Design empirical studies, choose specifications and inference, and interpret existing research results."
-config_file = "agents/empirical-analyst.toml"
+config_file = "../harness/agents/codex/empirical-analyst.toml"
 
 [agents.explainer]
 description = "Explain research code, methods, results or project progress for the reader who asked."
-config_file = "agents/explainer.toml"
+config_file = "../harness/agents/codex/explainer.toml"
 
 [agents.literature]
 description = "Find papers and public code in the local corpus, then verify or supplement with public sources."
-config_file = "agents/literature.toml"
+config_file = "../harness/agents/codex/literature.toml"
 
 [agents.paper_note_reader]
 description = "Read a paper and record its research practice when a new reading is explicitly requested."
-config_file = "agents/paper-note-reader.toml"
+config_file = "../harness/agents/codex/paper-note-reader.toml"
 
 [agents.project_manager]
 description = "Organize research work, identify useful files and report actual progress and blockers."
-config_file = "agents/project-manager.toml"
+config_file = "../harness/agents/codex/project-manager.toml"
 
 [agents.recipe_card_writer]
 description = "Read one paper's research code and describe its implementation when new extraction is explicitly requested."
-config_file = "agents/recipe-card-writer.toml"
+config_file = "../harness/agents/codex/recipe-card-writer.toml"
 
 [agents.reviewer]
 description = "Check research code, methods or manuscript claims when requested or when a concrete issue needs attention."
-config_file = "agents/reviewer.toml"
+config_file = "../harness/agents/codex/reviewer.toml"
 
 [agents.writer]
 description = "Write or revise academic prose using actual research plans, results, figures and sources."
-config_file = "agents/writer.toml"
+config_file = "../harness/agents/codex/writer.toml"
 
 # <<< fh-managed <<<
