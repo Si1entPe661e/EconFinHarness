@@ -8,34 +8,12 @@
 !/CHANGELOG.md
 !/LICENSE
 !/harness/
-!/tools/
-!/examples/
 !/.agents/
 !/.claude/
 !/.codex/
 /harness_build/
-
-# Public tools only.
-/tools/*
-!/tools/README.md
-!/tools/fh.py
-!/tools/fh_common.py
-!/tools/fh_adapters.py
-!/tools/fh_cards.py
-!/tools/fh_index.py
-
-# Selected research examples only.
-/examples/*
-!/examples/README.md
-!/examples/code-cards/
-!/examples/paper-notes/
-!/examples/exclusions/
-/examples/code-cards/*
-!/examples/code-cards/*.json
-/examples/paper-notes/*
-!/examples/paper-notes/*.json
-/examples/exclusions/*
-!/examples/exclusions/*.json
+/tools/
+/examples/
 
 # Host configuration allowlists.
 /.agents/*

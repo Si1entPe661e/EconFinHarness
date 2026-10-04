@@ -28,7 +28,7 @@ Generated 2026-09-09T01:06:38Z by fhb papers distill fhb-papers-0.1.0 from 13 pa
 | rfs_2024_rfs_hhae015 | RFS | 2024 | full | yes | f7784e9db1b9 |
 | rfs_2026_rfs_hhaf079 | RFS | 2026 | full | yes | 2938d6c7b728 |
 
-Excluded (paper-level hold-out `examples/exclusions/rct.json`, not used for this method's skill evidence): aer_114_12_7, ecta_2026_ecta21180. Their notes still count in `_all`.
+Excluded (paper-level hold-out `harness/paradigms/rct/reported.md`, not used for this method's skill evidence): aer_114_12_7, ecta_2026_ecta21180. Their notes still count in `_all`.
 
 ## Practices by category and tag
 

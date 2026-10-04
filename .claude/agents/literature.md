@@ -8,7 +8,7 @@ skills:
   - literature-verification
 ---
 
-<!-- Generated from harness/agents/literature.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/literature.md. Edit the source. -->
 
 You are the `literature` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.
 

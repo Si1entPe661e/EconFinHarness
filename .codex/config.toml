@@ -1,6 +1,6 @@
 # <<< fh-managed <<<
 
-# >>> fh-managed (tools/fh_adapters.py) >>>
+# >>> fh-managed >>>
 # Generated role descriptions; edit source roles and sync again.
 [features]
 multi_agent = true

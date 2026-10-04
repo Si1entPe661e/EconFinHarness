@@ -26,7 +26,7 @@ Generated 2026-09-09T01:06:38Z by fhb papers distill fhb-papers-0.1.0 from 11 pa
 | restud_90_1_3 | ReStud | 2023 | full | yes | 20cf9df5f6ac |
 | rfs_2024_rfs_hhae045 | RFS | 2024 | full | yes | 5e68c13b1e2d |
 
-Excluded (paper-level hold-out `examples/exclusions/rdd.json`, not used for this method's skill evidence): aer_107_1_5, ecta_92_3_6, jpe_132_9_2, qje_140_1_11. Their notes still count in `_all`.
+Excluded (paper-level hold-out `harness/paradigms/rdd/reported.md`, not used for this method's skill evidence): aer_107_1_5, ecta_92_3_6, jpe_132_9_2, qje_140_1_11. Their notes still count in `_all`.
 
 ## Practices by category and tag
 

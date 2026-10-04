@@ -23,7 +23,7 @@ Verification: `verified_online` = DOI resolved through the Crossref API on 2026-
 | aer_114_7_10, restud_2026_restud_rdag080 | corpus_card | verified_repo | group-time ATT estimators (`csdid`, `att_gt`) |
 | restud_2026_restud_rdag056 | corpus_card | verified_repo | `did_multiplegt` with pre-trend plot output code |
 | aer_113_1_1 | corpus_card | verified_repo | TWFE event study with hand-built leads and lags, `felm` and `reghdfe` |
-| held out for evaluation (not used here): aer_110_9_10, aer_113_3_7, aer_114_6_6, aer_115_3_8, restud_90_5_11, restud_92_2_14, rfs_2025_rfs_hhaf065 | corpus_card | verified_repo | see examples/exclusions/did.json |
+| held out for evaluation (not used here): aer_110_9_10, aer_113_3_7, aer_114_6_6, aer_115_3_8, restud_90_5_11, restud_92_2_14, rfs_2025_rfs_hhaf065 | corpus_card | verified_repo | see harness/paradigms/did/reported.md |
 | restud_2026_restud_rdag011, restud_2026_restud_rdaf071 | corpus_card | verified_repo | `did_imputation` with pre-trend tests and PPML variants |
 | aer_111_12_8 | corpus_card | verified_repo | synthetic DID implementation in R (method paper code) |
 | harness/paradigms/did/observed.md, harness/paradigms/event_study/observed.md | paradigm | verified_repo | generated observed practice with pointers |

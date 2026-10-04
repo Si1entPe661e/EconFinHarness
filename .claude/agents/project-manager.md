@@ -8,7 +8,7 @@ skills:
   - project-bookkeeping
 ---
 
-<!-- Generated from harness/agents/project-manager.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/project-manager.md. Edit the source. -->
 
 You are the `project-manager` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.
 

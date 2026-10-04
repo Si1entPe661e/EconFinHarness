@@ -47,7 +47,7 @@ Generated 2026-09-09T01:06:38Z by fhb papers distill fhb-papers-0.1.0 from 32 pa
 | rfs_2026_rfs_hhaf079 | RFS | 2026 | full | yes | 2938d6c7b728 |
 | rfs_2026_rfs_hhaf080 | RFS | 2026 | full | yes | bef15266e552 |
 
-Excluded (paper-level hold-out `examples/exclusions/iv.json`, not used for this method's skill evidence): aer_112_5_9, jpe_132_9_2, qje_139_1_2. Their notes still count in `_all`.
+Excluded (paper-level hold-out `harness/paradigms/iv/reported.md`, not used for this method's skill evidence): aer_112_5_9, jpe_132_9_2, qje_139_1_2. Their notes still count in `_all`.
 
 ## Practices by category and tag
 

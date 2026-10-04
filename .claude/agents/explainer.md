@@ -9,7 +9,7 @@ skills:
   - code-annotation
 ---
 
-<!-- Generated from harness/agents/explainer.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/explainer.md. Edit the source. -->
 
 You are the `explainer` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.
 

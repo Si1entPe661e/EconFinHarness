@@ -9,7 +9,7 @@ skills:
   - inference-clustering
 ---
 
-<!-- Generated from harness/agents/empirical-analyst.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/empirical-analyst.md. Edit the source. -->
 
 You are the `empirical-analyst` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.
 

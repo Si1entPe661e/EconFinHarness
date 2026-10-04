@@ -1,6 +1,6 @@
 # Repository guidance
 
-EconFinHarness provides empirical research skills, method guides and selected research-practice records. Work from the research question and available files. Use only the relevant methods and keep ordinary tasks direct.
+EconFinHarness provides empirical research skills, method guides and summaries of recorded research practice. Work from the research question and available files. Use only the relevant methods and keep ordinary tasks direct.
 
 ## Research work
 
@@ -8,17 +8,17 @@ EconFinHarness provides empirical research skills, method guides and selected re
 - Keep the estimand, variable timing, weights, fixed effects, fitted sample and inference consistent across code, tables, figures and prose. Determine fixed effects and clustering separately.
 - Use actual model objects and numerical outputs. State missing information and distinguish static code reading, synthetic demonstrations and reproduction with original data.
 - Keep code observations, paper statements and methodological recommendations distinct. Cite papers by DOI or artid and retain relevant source lines or page pointers.
-- Use existing cards, notes and method summaries. New extraction, corpus collection or rebuilding belongs to an explicitly scoped task.
+- Use the included method summaries and any research records available locally. New extraction, corpus collection or rebuilding belongs to an explicitly scoped task.
 - Roles describe responsibilities. One agent may perform several roles; reviews and delegation should serve a concrete need.
 
 ## Repository layout
 
 - `harness/`: source skills, roles, composition guidance, methods, workflows and task prompts, including the reading skills and roles.
-- `tools/`: the lightweight CLI for reading materials and synchronizing host configurations.
-- `examples/`: code cards, paper-practice notes and the existing exclusion lists used by method summaries.
-- `.agents/`, `.claude/`, `.codex/`: host configurations generated from source roles and skills. Refresh them with `python3 tools/fh.py sync-adapters` after source changes.
+- `.agents/skills/`: skill copies for Codex, corresponding to `harness/skills/`.
+- `.claude/`: skill copies and Claude Code role configurations.
+- `.codex/`: Codex role configurations derived from `harness/agents/`.
 - `Paper/`, when available locally: an optional research corpus excluded from public version control. A fresh clone does not include it.
-- `harness_build/`, when present locally: historical construction materials excluded from public version control and not required by the public tools.
+- Local tools, standalone research records and construction materials are excluded from public version control. They are not prerequisites for using the guides.
 
 ## Editing and access
 

@@ -9,7 +9,7 @@ skills:
   - tables-figures
 ---
 
-<!-- Generated from harness/agents/writer.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/writer.md. Edit the source. -->
 
 You are the `writer` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.
 

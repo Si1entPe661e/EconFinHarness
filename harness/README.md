@@ -26,4 +26,4 @@ For methodological advice, read `paradigms/<method>/recommendations.md`. For rec
 
 Use checklists and templates when they help. An [R template for RD](skills/rdd/templates/rd_analysis.R) is available. [Paper-practice notes](skills/paper-practice-notes/SKILL.md) and [code-card extraction](skills/recipe-card-extraction/SKILL.md) support a requested new reading of a paper or its code.
 
-Refresh generated host copies with `python3 tools/fh.py sync-adapters` after editing source skills or roles. Shared repository guidance is in [AGENTS.md](../AGENTS.md).
+Maintain source skills and roles here and keep the included host copies consistent when editing them. Shared repository guidance is in [AGENTS.md](../AGENTS.md).

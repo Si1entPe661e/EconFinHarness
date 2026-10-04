@@ -21,5 +21,5 @@ Verification: `verified_online` = DOI resolved through the Crossref API on 2026-
 | restud_89_1_6 | corpus_card | verified_repo | shift-share method paper code (Borusyak-Hull-Jaravel) |
 | rfs_2026_rfs_hhaf079 | corpus_card | verified_repo | `twostepweakiv` weak-IV robust inference observed |
 | restud_2026_restud_rdaf044 | corpus_card | verified_repo | reduced form and IV with clustering, alternative samples |
-| held out for evaluation (not used here): aer_112_5_9, jpe_132_9_2, qje_139_1_2 | corpus_card | verified_repo | see examples/exclusions/iv.json |
+| held out for evaluation (not used here): aer_112_5_9, jpe_132_9_2, qje_139_1_2 | corpus_card | verified_repo | see harness/paradigms/iv/reported.md |
 | harness/paradigms/iv/observed.md, harness/paradigms/shift_share/observed.md | paradigm | verified_repo | generated observed practice with pointers |

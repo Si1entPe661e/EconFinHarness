@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Distribute method guides, source skills and roles, and host configurations without local CLI tools or standalone research records.
+
 ## 0.3.0 - 2026-10-03
 
 - Move the public CLI to `tools/fh.py` and research examples to `examples/code-cards/` and `examples/paper-notes/`.
