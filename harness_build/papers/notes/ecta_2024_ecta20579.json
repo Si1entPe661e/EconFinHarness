@@ -1,0 +1,1154 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "ecta_2024_ecta20579",
+  "journal": "Econometrica",
+  "year": 2024,
+  "doi": "10.3982/ecta20579",
+  "source": {
+    "pdf_path": "Paper/PDF/ecta_2024_ecta20579.pdf",
+    "pdf_sha256": "39a9da8fa742538f3da2438f7c345df181bb5e10ecfe867f77687c29b8e09451",
+    "text_path": "harness_build/papers/text/ecta_2024_ecta20579.txt",
+    "text_sha256": "a41d7a47f270a3f001e57841a6548bb80526716e274467bdf58ca4d810f72d48",
+    "pages": 30
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:10:00Z"
+  },
+  "card_link": null,
+  "methods": [
+    "regression",
+    "iv",
+    "other:natural_experiment",
+    "other:epidemiological_approach"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "other",
+      "title": "Title, abstract, keywords, author note",
+      "pages": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "introduction",
+      "title": "1. Introduction (including embedded Related Literature discussion)",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "background",
+      "title": "2. Historical Background",
+      "pages": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "3. Data and Descriptive Statistics",
+      "pages": [
+        8,
+        11
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "4. Empirical Specification and Strategy",
+      "pages": [
+        11,
+        16
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "5. Historical Self-Governance and Norms of Cooperation",
+      "pages": [
+        16,
+        20
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "6. Historical Self-Governance, Prosocial Behaviors, and Voter Turnout",
+      "pages": [
+        20,
+        24
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "mechanisms",
+      "title": "7. Plausible Channels",
+      "pages": [
+        24,
+        26
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "conclusion",
+      "title": "8. Conclusions",
+      "pages": [
+        26,
+        27
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "References and end matter (including replication statement)",
+      "pages": [
+        27,
+        30
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "States the research question as whether inclusive, participatory self-governance causally fosters internalized norms of generalized cooperation, distinguishing this from equilibrium prosocial behavior, and frames the strategy as a historical natural experiment.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Abstract and Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv",
+        "other:natural_experiment",
+        "other:epidemiological_approach"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "threats_discussed"
+      ],
+      "statement": "Describes a two-phase natural experiment in which self-governance first emerged in some areas after a ruling dynasty died out without an heir, while the remaining areas only gained self-governance much later through a nationwide reform, and compares outcomes by which phase granted self-governance.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "other:natural_experiment"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "instrument_exclusion_argued"
+      ],
+      "statement": "Argues the exclusion restriction for the dynasty-extinction instrument by claiming the extinguished dynasty's historical rule was not distinctive in character from the rule of the other noble dynasties active in the same territory and period.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "the Zaehringen rule was not special but like that of any other noble dynasty"
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "Argues the timing of the dynastic extinction was not anticipated by showing that no transfer of fiefs to other noble families occurred in the years immediately preceding the death that caused the extinction.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:natural_experiment"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Acknowledges that ordinary least squares estimates could be biased because compliance with the historical assignment mechanism was only partial, and states this motivates using both an observable balance and fixed-effects strategy and a separate instrumental-variables strategy.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "Notes in a footnote that a boundary-discontinuity design was considered but judged infeasible because too few municipalities lie close enough to the historical dynastic boundary to give the design statistical power, so a discontinuity approach is only mentioned rather than adopted as the main strategy.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4, footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "Draws the analysis on a combination of a purpose-run behavioral experiment, two pre-existing national attitude surveys, a household panel, and administrative referendum records, each introduced in the data section before being used in later sections.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Excludes one canton from the study because it lay outside the historical Swiss territory at the time of the dynastic extinction and only became integrated into the confederation long afterward, which the paper argues makes it an invalid counterfactual.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3, footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Reports the counts of individuals, municipalities, and cantons underlying the main experimental sample directly in the data section, and states that the municipality is the unit at which historical self-governance is assigned while the individual is the unit at which norms are measured.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Checks in a supplemental table whether sampled municipalities and individuals resemble non-sampled ones on observable characteristics, including comparisons made within the same canton, to address concern about nonrandom selection into the experimental sample.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3, referencing Supplemental Appendix Tables A.1-A.3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "restricted_data_used",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Restricts a supplementary analysis of cultural transmission to the subsample of migrants who moved between municipalities while remaining within the same canton, which considerably reduces the usable sample relative to the main experimental sample.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section 7.3, Table VII",
+      "basis": "stated",
+      "applies_to": [
+        "other:epidemiological_approach"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines the primary outcome as a rank-correlation measure of how an individual's stated contribution to a public good responds to a hypothetical partner's contribution, elicited through a strategy-method protocol adapted from prior laboratory experiments rather than through simultaneous choices.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Defines the main treatment as a binary indicator for whether a municipality allowed citizen participation in governing decisions before the later nationwide extension of self-governance, and separately constructs a continuous duration-based version of the same treatment for robustness checks.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "Constructs the instrument as an indicator for whether a municipality's territory belonged to the extinguished dynasty, built by overlaying a historical territorial map onto current municipal boundaries and cross-checked against an independent historical listing.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index"
+      ],
+      "statement": "Builds summary indices of prosocial behavior, including a measure of association membership and a measure of environmental-protection activity, each combining several distinct survey items into a single principal-component score.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section 6.1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Constructs the attitudes-toward-cooperation measure as a principal component of several survey items on the justifiability of self-interested behaviors, following a cited prior approach, with the response scale reoriented so that higher values indicate stronger cooperative attitudes.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "Constructs a historical migration-rate variable from a newly assembled register of family names holding citizenship in each municipality over time, measured as the share of family names that were newly recorded as citizens within a given historical period.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section 7.4",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o18",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "Notes that self-reported survey attitudes toward cooperation are likely biased upward by social desirability, and interprets this as working against, rather than for, finding a gap in attitudes between the treatment and comparison groups.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [],
+      "quote": "people may have poor incentives to reveal their true values"
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Reports the coefficient of interest across a progression of columns that add no controls, then municipal-level controls, then individual-level controls, while relegating the full set of estimated control coefficients to a separate appendix table.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table III",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes",
+        "se_type_in_notes"
+      ],
+      "statement": "States in the main results table notes that standard errors are clustered on the municipality and lists exactly which variables make up the municipal-level and individual-level control sets used in the corresponding columns.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table III notes",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table"
+      ],
+      "statement": "Organizes the main results table into separate panels for the ordinary least squares estimate, the instrumental-variables second stage, and the instrumental-variables first stage, so the reduced coefficient, the first-stage relationship, and instrument strength appear together.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table III",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported"
+      ],
+      "statement": "Reports the count of underlying referendum events and the count of clusters, in addition to the observation count, in the voter-turnout table, because the same municipalities and cantons recur across many repeated referendum events.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Table VI",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Justifies clustering standard errors at the municipality by describing the municipality as the level at which historical self-governance was assigned, rather than the level at which outcomes are measured.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ],
+      "quote": "I cluster standard errors at the treatment unit, which is a municipality"
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "twoway_cluster"
+      ],
+      "statement": "Reports as a check that results are essentially unchanged when standard errors are instead clustered two ways, on municipality and canton or on municipality and the historical canton, with the underlying table placed in the appendix.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4, referencing Supplemental Appendix Table A.12",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": [
+        "spatial_hac"
+      ],
+      "statement": "Reports as an additional check standard errors that account for spatial correlation among the errors using several distance cutoffs, without displaying the spatial correlation structure itself in the main text.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Reports a randomization-inference test built from many simulated reassignments of treatment as an alternative to the asymptotic clustered standard error, used to confirm that the main coefficient remains distinguishable from a null of no effect.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_level_in_notes"
+      ],
+      "statement": "Clusters standard errors at different levels for the cantonal and municipal versions of the voter-turnout regression, on canton by referendum event in one and on municipality by referendum event in the other, with each choice tied explicitly to that column's unit of analysis.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Table VI notes",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "Presents formal balance tables comparing municipal-level and individual-level covariates both by treatment status and by instrument status, reporting raw group differences alongside differences that remain after adding controls.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Table I, Table II",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "Reports the first-stage statistic testing instrument strength alongside every instrumental-variables specification presented in the main tables, rather than relegating this diagnostic to an appendix.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table III Panel C and later tables",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix"
+      ],
+      "statement": "Checks in an appendix that including canton, historical-canton, and language fixed effects does not disturb the main coefficient, and separately reports that these fixed effects are not individually or jointly distinguishable from zero.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, referencing Supplemental Appendix Tables A.14-A.15",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "diagnostic_reported",
+      "tags": [
+        "overid_test",
+        "in_appendix"
+      ],
+      "statement": "Treats agreement between the full-sample estimate and a within-dynasty comparison, which holds the historical ruling family fixed by contrasting areas under the same dynasty that did or did not become self-governing, as an informal check on the exclusion restriction rather than as a formal overidentification test.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 4.2, footnote, referencing Supplemental Appendix Table A.16",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_se",
+        "in_appendix",
+        "summarized_in_one_table"
+      ],
+      "statement": "Summarizes robustness to several alternative standard-error clustering and spatial-correlation choices together in a single appendix table referenced from the main discussion of inference.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.2, referencing Supplemental Appendix Table A.12",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "leave_one_out",
+        "in_appendix"
+      ],
+      "statement": "Checks that dropping each canton from the sample one at a time does not overturn either the ordinary least squares or the instrumental-variables estimate, with the results collected in a dedicated appendix table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.2, referencing Supplemental Appendix Table A.11",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "Reports a separate estimate that replaces the binary treatment with a continuous measure of how long a municipality had experienced self-governance before the nationwide reform, described as yielding a similarly sized effect.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section 5.2, referencing Supplemental Appendix Table A.17",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Reports that the main coefficient is essentially unchanged when the initially excluded canton is added back into the sample, addressing the concern that the exclusion rule itself drove the finding.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section 5.2, referencing Supplemental Appendix Table A.19",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Reports both the ordinary least squares and instrumental-variables specifications with further individual-level and municipal-level control variables added beyond the baseline, in a supplemental appendix table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.2, referencing Supplemental Appendix Table A.13",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "sensitivity_bounds",
+        "in_appendix"
+      ],
+      "statement": "Checks that the main finding does not depend on how individuals with an ambiguous behavioral classification are handled by re-estimating after dropping each behavioral type one at a time.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section 5.1, referencing Supplemental Appendix Figure A.12, Table A.10",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated",
+        "in_appendix"
+      ],
+      "statement": "Splits the historical-migration analysis by whether a municipality's migration rate is above or below the sample median, motivated by the argument that cultural transmission should operate more strongly where historical population turnover was lower.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section 7.4, referencing Supplemental Appendix Table A.28",
+      "basis": "stated",
+      "applies_to": [
+        "other:epidemiological_approach"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Interprets the size of the self-governance effect on conditional cooperation by comparing it against the average level of conditional cooperation among individuals in municipalities without historical self-governance.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section 5.1",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "iv"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "monetary_terms"
+      ],
+      "statement": "Translates the estimated behavioral response into an amount of currency that a typical player would add to the public good for each additional unit contributed by a partner, to make the estimated coefficient more concretely interpretable.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section 5.1",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Benchmarks the share of individuals classified as conditional cooperators in the sample against shares reported in unrelated experimental studies conducted in other countries, situating the sample's behavioral composition within a broader cross-country context.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.1, footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement"
+      ],
+      "statement": "Acknowledges that self-reported attitude measures likely understate the true gap between groups because survey respondents may lack incentive to reveal socially undesirable views to an interviewer.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "Notes that municipal-level voter-turnout records are missing for a substantial share of past referendums for a meaningful fraction of the sampled municipalities, introducing measurement error into that particular outcome variable.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section 6.2, footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "map",
+        "raw_data_plot"
+      ],
+      "statement": "Presents historical territorial holdings and the geographic distribution of self-governing versus non-self-governing municipalities as map figures, paired with a bar chart showing average cooperation by treatment status and confidence bands.",
+      "pages": [
+        6,
+        12
+      ],
+      "locator": "Figures 1-3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars"
+      ],
+      "statement": "Reports coefficients with standard errors in parentheses without significance stars in any regression table, describing statistical significance levels in words within the surrounding text instead.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table III and throughout",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "Writes table notes that specify which variables make up each control set, the clustering level used for standard errors, and, where applicable, the baseline mean of the dependent variable in the comparison group.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table III-VI notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "Previews the paper's three main sets of empirical results in the introduction using an enumerated First, Second, Third structure before presenting the formal identification strategy and estimates.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph"
+      ],
+      "statement": "Closes the introduction with a roadmap paragraph that maps each subsequent numbered section onto a specific part of the empirical argument.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction, final paragraph",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "Includes a dedicated related-literature discussion within the introduction, itself labeled as such, that positions the paper in turn against several separate strands of prior research.",
+      "pages": [
+        4,
+        5
+      ],
+      "locator": "Introduction, Related Literature",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "Places the data and descriptive-statistics section before the empirical specification and identification-strategy section, so institutional and measurement detail is established ahead of the econometric argument.",
+      "pages": [
+        8,
+        11
+      ],
+      "locator": "Sections 3-4",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main",
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "Places the discussion of plausible mechanisms sustaining the long-run effect in its own section after both the main norms results and the secondary prosocial-behavior results, and relies throughout on a Supplemental Appendix of numbered tables and figures not included in this text extraction.",
+      "pages": [
+        24,
+        26
+      ],
+      "locator": "Section 7",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o52",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "Shows that the aggregate treatment effect corresponds to a shift in the underlying composition of behavioral types, with treated municipalities having a different mix of conditional cooperators and other behavioral types rather than a uniform shift in everyone's behavior.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section 5.1, referencing Supplemental Appendix Table A.4",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives",
+        "suggestive_labelled"
+      ],
+      "statement": "Tests and largely dismisses a self-efficacy-belief channel drawn from a prior study of a related historical experience, by controlling for a survey measure of personal control beliefs and showing it does not account for the main coefficient.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives"
+      ],
+      "statement": "Rules out economic prosperity, education, and trade exposure as channels by showing the treatment and comparison groups are similar on historical and contemporary proxies of these factors and that controlling for them leaves the main coefficient unchanged.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section 7.1",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives"
+      ],
+      "statement": "Tests whether membership in a historical inter-municipal alliance among self-governing areas explains the persistence result, comparing allied with non-allied self-governing municipalities.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section 7.2",
+      "basis": "stated",
+      "applies_to": [],
+      "quote": "the confederacy did not have any special effect"
+    },
+    {
+      "id": "o56",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided",
+        "intermediate_outcomes"
+      ],
+      "statement": "Applies an epidemiological approach drawn from the migration literature, comparing migrants by whether their birth municipality experienced historical self-governance while holding their municipality of residence fixed, to isolate a cultural-transmission channel from a place-based channel.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section 7.3",
+      "basis": "stated",
+      "applies_to": [
+        "other:epidemiological_approach"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled"
+      ],
+      "statement": "Presents evidence on the frequency of local referendum use and on survey attitudes toward democracy as suggestive support for a feedback loop between self-governing institutions and cooperative norms, without formally testing the feedback mechanism itself.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section 7.5",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o58",
+      "category": "external_validity",
+      "tags": [
+        "site_specific"
+      ],
+      "statement": "Frames the empirical estimates as tied to the specific Swiss institutional and historical setting, while arguing the underlying self-governance experience shared common features with other self-governing areas of medieval Europe.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 2.2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o59",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "data_restricted",
+        "data_access_procedure_described"
+      ],
+      "statement": "States in the end matter that a replication package containing code and the non-restricted portions of the data is publicly archived, that some data could not be republished under a granted exemption because access is restricted, and that the journal separately verified reproducibility using the restricted data.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "End matter, replication statement",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o60",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "survey_collected"
+      ],
+      "statement": "Draws on several distinct modes of data collection within a single study: a purpose-run lab-in-the-field experiment, two pre-existing national attitude surveys, administrative voting records spanning many decades, and a newly assembled historical citizenship register.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [],
+  "gaps": [
+    "No preregistration, institutional review board approval, or participant-consent statement of any kind appears in the read text.",
+    "No named statistical software (for example Stata, R, or MATLAB) appears anywhere in the read text.",
+    "The Supplemental Appendix, referenced dozens of times for balance checks, robustness tables, figures, and construction detail (Tables A.1 through A.30, Figures A.1 through A.15), is a separate document not included in this text extraction and was not read.",
+    "No explicit multiple-hypothesis-testing correction is discussed despite reporting many separate outcomes, several attitude items, several prosocial-behavior measures, and several referendum topics, using the same treatment variable.",
+    "No formal density or running-variable manipulation test appears in the read text, consistent with the paper explicitly declining to adopt a boundary-discontinuity design as its main identification strategy.",
+    "No explicit attrition analysis for the survey-based samples appears beyond stating how many of the sampled municipalities are covered by each survey source."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        30
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full 30-page extracted text narratively: title and abstract, introduction with embedded related-literature discussion, historical background, data and descriptive statistics, empirical specification and identification strategy, main results on norms of cooperation with robustness checks, results on prosocial behaviors and voter turnout, the plausible-channels section, and the conclusion. The reference list (pages 27-30) was skimmed only to identify cited works, not read narratively. This article's Supplemental Appendix (Tables A.1-A.30, Figures A.1-A.15), referenced extensively throughout the main text for balance checks, robustness, and construction detail, is a separate document not included in this text extraction and was not read; its existence and general content are recorded only as stated by the main text."
+  }
+}

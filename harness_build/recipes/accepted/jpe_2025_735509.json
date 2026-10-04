@@ -1,0 +1,917 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jpe_2025_735509",
+ "journal": "JPE",
+ "year": 2025,
+ "doi": "10.1086/735509",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:20:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JPE/metadata/articles.csv",
+   "sha256": "0ede2238a117d9aee4e58b32cf05ae7120ca1c154cf1cb330e8a03a046490e0a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+    "sha256": "33802e02ea890e8494417c4ac450a07d8606a119ee82f1bcb39806d1a51fb5b0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      300
+     ],
+     [
+      598,
+      730
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/make_analysis.do",
+    "sha256": "5c8294f701431dd2b0b3701e2c95c0e1134992a91bf06ee21f1a518e28961b0b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      457
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/master_build.do",
+    "sha256": "d6ab9fdd7a5cd6aecf0fc42593424b579366f3cd5fcb91ebef66137938437e62",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      68
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/simulations.R",
+    "sha256": "f43bfd61f9d85e9f3510170134831d0bf6ef4753ff2dfd7c179cbda08bf51060",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      186
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+    "sha256": "778021e181ad9699ea814631972576895f84ac332cef0b142683d8b24e213ee9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      450
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Analysis at deal-location level (winner vs runner-up/alternatives). Reduced-form specifications use reghdfe with year FE. Structural models use MLE with random coefficients estimated separately for manufacturing and trade/services. Counterfactual analysis simulates location choices under different subsidy scenarios."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/master_build.do"
+  ],
+  "directory_layout": "Data build pipeline (make_*.do) → analysis dataset (make_analysis.do) → MLE estimation (Hv.R, Hv_altspec.R, Hv_norc.R) → tables/figures",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 20,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/master_build.do",
+     "lines": [
+      29,
+      29
+     ],
+     "snippet": "set seed 112724",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "set.seed(31389)",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/master_build.do",
+     "lines": [
+      13,
+      13
+     ],
+     "snippet": "global user \t \"<REPLICATION_ROOT>\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "analysis_cz",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "deal-location",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/make_analysis.do",
+     "lines": [
+      398,
+      398
+     ],
+     "snippet": "sa \"$datadir/analysis_cz\", replace",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/make_analysis.do",
+     "lines": [
+      1,
+      5
+     ],
+     "snippet": "create an analysis file. The main variables of interest",
+     "supports": [
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Stata scripts build data; R scripts estimate structural model and run counterfactual simulations",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "regression",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      175,
+      175
+     ],
+     "snippet": "eststo: reghdfe sub corp_tax income_tax r2w perc_est_n4 wage top_RD airport_any FHFA, absorb(year)",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "structural_estimation",
+   "variant": "discrete_choice",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      128,
+      128
+     ],
+     "snippet": "### RUN MLE FOR MANUFACTURING",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe sub jobs_direct, absorb(year)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Table 2, column 1",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      169,
+      169
+     ],
+     "snippet": "eststo: reghdfe sub jobs_direct, absorb(year)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      181,
+      181
+     ],
+     "snippet": "esttab using \"$draftdir/reg_reducedform.tex\", replace",
+     "supports": [
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe sub jobs_direct invest_B mult_total, absorb(year)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Table 2, column 3",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      171,
+      171
+     ],
+     "snippet": "eststo: reghdfe sub jobs_direct invest_B mult_total, absorb(year)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      181,
+      181
+     ],
+     "snippet": "esttab using \"$draftdir/reg_reducedform.tex\", replace",
+     "supports": [
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe sub corp_tax income_tax ln_pinc unemp, absorb(year)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Table 2, column 4",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      173,
+      173
+     ],
+     "snippet": "reghdfe sub corp_tax income_tax ln_pinc unemp, absorb(year)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      181,
+      181
+     ],
+     "snippet": "esttab using \"$draftdir/reg_reducedform.tex\", replace",
+     "supports": [
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe sub corp_tax income_tax r2w perc_est_n4 wage top_RD airport_any FHFA, absorb(year)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Table 2, column 5",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      175,
+      175
+     ],
+     "snippet": "reghdfe sub corp_tax income_tax r2w perc_est_n4 wage top_RD airport_any FHFA, absorb(year)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      181,
+      181
+     ],
+     "snippet": "esttab using \"$draftdir/reg_reducedform.tex\", replace",
+     "supports": [
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "mle",
+   "command": "mle2",
+   "package": "bbmle",
+   "formula_or_call": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "other:hessian_inverse",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+      "lines": [
+       205,
+       205
+      ],
+      "snippet": "mle_tab <- coef(summary(res$mle))[, 1:2]",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Manufacturing MLE with random coefficients on subsidy differences; maximizes negative log-likelihood of location choice; method BFGS",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      128,
+      128
+     ],
+     "snippet": "### RUN MLE FOR MANUFACTURING",
+     "supports": [
+      "notes"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      60,
+      60
+     ],
+     "snippet": "run_mle_rand <- function(data, rand_obs, vars, rand_vars, method = \"BFGS\"){",
+     "supports": [
+      "notes"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "LL_rand <- function(params) {",
+     "supports": [
+      "estimator",
+      "notes"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      95,
+      96
+     ],
+     "snippet": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      9,
+      9
+     ],
+     "snippet": "library(bbmle)",
+     "supports": [
+      "package"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "mle",
+   "command": "mle2",
+   "package": "bbmle",
+   "formula_or_call": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "other:hessian_inverse",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+      "lines": [
+       717,
+       717
+      ],
+      "snippet": "mle_tab <- coef(summary(res$mle))[, 1:2]",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Trade/Services MLE with random coefficients on subsidy differences; maximizes negative log-likelihood of location choice; method BFGS",
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      598,
+      598
+     ],
+     "snippet": "# NOW FOR SERVICES",
+     "supports": [
+      "notes"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      60,
+      60
+     ],
+     "snippet": "run_mle_rand <- function(data, rand_obs, vars, rand_vars, method = \"BFGS\"){",
+     "supports": [
+      "notes"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "LL_rand <- function(params) {",
+     "supports": [
+      "estimator",
+      "notes"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      95,
+      96
+     ],
+     "snippet": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      9,
+      9
+     ],
+     "snippet": "library(bbmle)",
+     "supports": [
+      "package"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "draft/reg_reducedform.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+      "lines": [
+       181,
+       181
+      ],
+      "snippet": "esttab using \"$draftdir/reg_reducedform.tex\", replace ///",
+      "supports": [
+       "path",
+       "package",
+       "format",
+       "spec_ids"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": {
+  "model_class": null,
+  "solution_method": null,
+  "estimation_method": "mle",
+  "moments_targeted": [],
+  "optimizer": "BFGS",
+  "counterfactuals": [],
+  "evidence": [
+   {
+    "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+    "lines": [
+     60,
+     60
+    ],
+    "snippet": "run_mle_rand <- function(data, rand_obs, vars, rand_vars, method = \"BFGS\"){",
+    "supports": [
+     "estimation_method",
+     "optimizer"
+    ]
+   }
+  ]
+ },
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/tables.do",
+     "lines": [
+      169,
+      169
+     ],
+     "snippet": "reghdfe sub",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "bbmle",
+   "kind": "unknown",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "mle2"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      9,
+      9
+     ],
+     "snippet": "library(bbmle)",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      95,
+      96
+     ],
+     "snippet": "mle2(minuslogl = LL_rand, start = start_vals,",
+     "supports": [
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "haven",
+   "kind": "unknown",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      8,
+      8
+     ],
+     "snippet": "library(haven)",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "MASS",
+   "kind": "unknown",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "fitdistr"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "library(MASS)",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/simulations.R",
+     "lines": [
+      53,
+      53
+     ],
+     "snippet": "fit_v <- fitdistr(v_data$x, \"lognormal\")",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "mvtnorm",
+   "kind": "unknown",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rmvnorm"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/simulations.R",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "library(mvtnorm)",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/simulations.R",
+     "lines": [
+      131,
+      131
+     ],
+     "snippet": "x <- lapply(s, function(x) {rmvnorm(N*1000, mean = c(fit_v$estimate[1],fit_pi$estimate[1]), sigma = x, method = \"chol\")})",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "regression",
+   "structural_estimation"
+  ],
+  "fields": []
+ }
+}

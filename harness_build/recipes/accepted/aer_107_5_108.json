@@ -1,0 +1,1021 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_107_5_108",
+ "journal": "AER",
+ "year": 2017,
+ "doi": "10.1257/aer.p20171000",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:25:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/Data/pp_causalForest.r",
+    "sha256": "19a00f2da24bb4f44021ab5be02ae4917bb23d4ec97e944a257be479cbcd614f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      273
+     ]
+    ]
+   },
+   {
+    "path": "code/Data/pp_table1.do",
+    "sha256": "3cca1dfbc7352183e012ce1a359be60d2d7ea316c1e7475f4b5a265f6571a875",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      341
+     ]
+    ]
+   },
+   {
+    "path": "code/Data/predictOS.R",
+    "sha256": "26ac38fb5c59376678fbd1473753ba5804a6dacbd4ef75566df4dccff8f14c5f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      37
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "full",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Three source files analyzed: causal forest estimation in R, RCT heterogeneous treatment effect analysis in Stata, and custom prediction helper function. All key stages traced."
+ },
+ "repository": {
+  "languages": [
+   "R",
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/Data/pp_causalForest.r",
+   "code/Data/pp_table1.do"
+  ],
+  "directory_layout": "code/Data/ contains analysis pipeline: pp_causalForest.r generates predictions, pp_table1.do runs RCT regressions, predictOS.R provides custom forest prediction aggregation",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 3,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "set.seed(-1990232151)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "pp_inSample",
+   "type": "experimental",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      60,
+      60
+     ],
+     "snippet": "data<-data.frame(read.table(\"/projects/plus2013/Stata_Data/pp_inSample.csv\"",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "pp_outSample",
+   "type": "experimental",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      61,
+      61
+     ],
+     "snippet": "predict<-data.frame(read.table(\"/projects/plus2013/Stata_Data/pp_outSample.csv\"",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/Data/pp_causalForest.r"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Data/pp_causalForest.r",
+      "lines": [
+       1,
+       5
+      ],
+      "snippet": "# Program based on Example Code in Athey and Wager's  (2015) causalForest documentation.",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/Data/pp_table1.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       20,
+       21
+      ],
+      "snippet": "/* Import In-Sample Causal Forest Predictions \n\tPredictions created by pp_causalForest.r */",
+      "supports": [
+       "stage",
+       "scripts",
+       "after"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Causal forest predictions precede RCT regressions; data flows from pp_causalForest.r CSV outputs to pp_table1.do Stata merges",
+  "sample_restrictions": [
+   {
+    "description": "Sample restricted by hasGoodSSN==1 for employment outcome",
+    "spec_ids": [
+     "s3",
+     "s4",
+     "s6"
+    ],
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       236,
+       236
+      ],
+      "snippet": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": [
+   {
+    "description": "Merge causal forest predictions back to RCT sample",
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       87,
+       93
+      ],
+      "snippet": "merge 1:1 personid using `viol_pred';",
+      "supports": [
+       "description"
+      ]
+     }
+    ],
+    "spec_ids": []
+   }
+  ]
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "main",
+   "method": "rct",
+   "variant": null,
+   "classification_basis": "author_statement",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      208,
+      209
+     ],
+     "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==1, a(blocks)",
+     "supports": [
+      "method",
+      "role"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "main",
+   "method": "ml_heterogeneity",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      129,
+      129
+     ],
+     "snippet": "emp_forest<-causalForest(emp_data[,1:19], emp_data[,21], emp_data$treatment, weights=emp_data$weight, num.trees=num.trees, nodesize=10)",
+     "supports": [
+      "method",
+      "role"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "blocks"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "group"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       208,
+       209
+      ],
+      "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "In-sample specification for violent arrests outcome; treatment interacted with predicted treatment effect direction (positive vs negative)",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      208,
+      209
+     ],
+     "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "se"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==0, a(blocks) \n\t\tcluster(group);",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "blocks"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "group"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       216,
+       217
+      ],
+      "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==0, a(blocks) \n\t\tcluster(group);",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Out-of-sample specification for violent arrests; honest predictions from causal forest",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      216,
+      217
+     ],
+     "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==0, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==1, a(blocks) \n\t\tcluster(group);",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "blocks"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "group"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       236,
+       237
+      ],
+      "snippet": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==1, a(blocks) \n\t\tcluster(group);",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "In-sample employment specification; restricted to records with good SSN for employment matching",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      236,
+      237
+     ],
+     "snippet": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==1, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==0, a(blocks) \n\t\tcluster(group);",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "blocks"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "group"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       244,
+       245
+      ],
+      "snippet": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==0, a(blocks) \n\t\tcluster(group);",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Out-of-sample employment specification with honest predictions",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      244,
+      245
+     ],
+     "snippet": "areg anyFormal_post t_empl_g0 t_empl_l0 empl_g0  $X_cf if hasGoodSSN==1 & inSample==0, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg ISPtotarrest_2Y_viol t_viol_g0_alt t_viol_l0_alt viol_g0_alt  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "blocks"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "group"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       225,
+       226
+      ],
+      "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0_alt t_viol_l0_alt viol_g0_alt  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Adjusted predictions: only trees where observation was not used for building or estimation",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      225,
+      226
+     ],
+     "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0_alt t_viol_l0_alt viol_g0_alt  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "formula_or_call",
+      "role",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg anyFormal_post t_empl_g0_alt t_empl_l0_alt empl_g0_alt  $X_cf if hasGoodSSN==1 & inSample==1, a(blocks) \n\t\tcluster(group);",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "blocks"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "group"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       252,
+       253
+      ],
+      "snippet": "areg anyFormal_post t_empl_g0_alt t_empl_l0_alt empl_g0_alt  $X_cf if hasGoodSSN==1 & inSample==1, a(blocks) \n\t\tcluster(group);",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Employment with adjusted honest predictions",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      252,
+      253
+     ],
+     "snippet": "areg anyFormal_post t_empl_g0_alt t_empl_l0_alt empl_g0_alt  $X_cf if hasGoodSSN==1 & inSample==1, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "formula_or_call",
+      "role",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s7",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "random_forest",
+   "command": "causalForest",
+   "package": "causalForest",
+   "formula_or_call": "emp_forest<-causalForest(emp_data[,1:19], emp_data[,21], emp_data$treatment, weights=emp_data$weight, num.trees=num.trees, nodesize=10)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "emp_data$weight",
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "num.trees=25000, nodesize=10 (min 10 T and C in each leaf), honest splitting via separate train/test split (emp_data vs emp_predict datasets)",
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      129,
+      129
+     ],
+     "snippet": "emp_forest<-causalForest(emp_data[,1:19], emp_data[,21], emp_data$treatment, weights=emp_data$weight, num.trees=num.trees, nodesize=10)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "package"
+     ]
+    },
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      129,
+      129
+     ],
+     "snippet": "emp_forest<-causalForest(emp_data[,1:19], emp_data[,21], emp_data$treatment, weights=emp_data$weight, num.trees=num.trees, nodesize=10)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  },
+  {
+   "id": "s8",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "random_forest",
+   "command": "causalForest",
+   "package": "causalForest",
+   "formula_or_call": "viol_forest<-causalForest(data[,1:19], data[,22], data$treatment, weights=data$weight, num.trees=num.trees, nodesize=10)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "data$weight",
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "num.trees=25000, nodesize=10 (min 10 T and C in each leaf), outcome is violent arrests (data[,22]), honest splitting via custom predictOS() aggregation excluding training trees",
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      155,
+      155
+     ],
+     "snippet": "viol_forest<-causalForest(data[,1:19], data[,22], data$treatment, weights=data$weight, num.trees=num.trees, nodesize=10)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "package"
+     ]
+    },
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      155,
+      155
+     ],
+     "snippet": "viol_forest<-causalForest(data[,1:19], data[,22], data$treatment, weights=data$weight, num.trees=num.trees, nodesize=10)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "unresolved_symbols": []
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/Data/pp_table1.do"
+   ],
+   "note": "Standard RCT balance test not found; block randomization documented in comments but formal balance table/diagnostics not in code",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "attrition",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3",
+    "s4"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Implicit attrition noted via hasGoodSSN==1 condition; magnitude not reported in analysis code",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d2",
+   "spec_ids": [],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Paper validates whether predicted heterogeneous treatment effects from causal forest correlate with actual differential responses in hold-out sample",
+   "searched_files": [
+    "code/Data/pp_causalForest.r",
+    "code/Data/pp_table1.do"
+   ],
+   "note": "Main contribution: implementation features honest splitting (separate train/test) and custom prediction aggregation",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      116,
+      118
+     ],
+     "snippet": "/* Table showing out of sample accuracy\t*/\n\n* Honest Predictions *;",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_se",
+   "description": "Adjusted causal forest predictions using custom aggregation",
+   "baseline_spec_ids": [
+    "s1",
+    "s3"
+   ],
+   "variant_spec_ids": [
+    "s5",
+    "s6"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Alternative prediction method excludes trees where observation was used for building or estimation",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      178,
+      178
+     ],
+     "snippet": "we used our modified prediction function which only averages over predictions",
+     "supports": [
+      "description",
+      "note",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "pp_table1_25k_l10.txt",
+    "path": "results/pp_table1_25k_l10.txt",
+    "package": "estout",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/Data/pp_table1.do",
+      "lines": [
+       310,
+       311
+      ],
+      "snippet": "estout viol_inS empl_inS \n\tusing  ${results_dir}pp_table1_25k_l10.txt, replace",
+      "supports": [
+       "output_ref",
+       "package",
+       "spec_ids",
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": {
+  "parallel": null,
+  "hpc_hints": null,
+  "runtime_hints": null,
+  "seeds": "set.seed(-1990232151)",
+  "evidence": [
+   {
+    "path": "code/Data/pp_causalForest.r",
+    "lines": [
+     3,
+     3
+    ],
+    "snippet": "set.seed(-1990232151)",
+    "supports": [
+     "seeds"
+    ]
+   }
+  ]
+ },
+ "packages": [
+  {
+   "ecosystem": "R",
+   "name": "causalForest",
+   "kind": "command",
+   "usage": "called",
+   "purpose": "Implement causal forest algorithm for treatment effect heterogeneity estimation (Athey & Wager 2015)",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "causalForest"
+   ],
+   "evidence": [
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "library(causalForest)",
+     "supports": [
+      "ecosystem",
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/Data/pp_causalForest.r",
+     "lines": [
+      129,
+      129
+     ],
+     "snippet": "emp_forest<-causalForest(emp_data[,1:19], emp_data[,21], emp_data$treatment, weights=emp_data$weight, num.trees=num.trees, nodesize=10)",
+     "supports": [
+      "commands",
+      "purpose"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "areg",
+   "kind": "builtin",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "areg"
+   ],
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      208,
+      209
+     ],
+     "snippet": "areg ISPtotarrest_2Y_viol t_viol_g0 t_viol_l0 viol_g0  $X_cf if inSample==1, a(blocks) \n\t\tcluster(group);",
+     "supports": [
+      "ecosystem",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global macros for sample/covariate definitions ($X_cf for covariates, $data_dir for data directory)",
+   "evidence": [
+    {
+     "path": "code/Data/pp_table1.do",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "global X_cf \"age_pre_yrs male hispanic black",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "ml_heterogeneity",
+   "rct"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,669 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdaf071",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdaf071",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:35:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/0_setup.do",
+    "sha256": "973831c16ccc643085a099477aa51456765d84159b09a6e2a0c24c43f8233131",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      49
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/1_dataprep/1_create_pretrends_check.do",
+    "sha256": "4bedead386b7fd0b30c1cf8b72a7ee81e1bd2b5ac30fc11b669396b87b001c0a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis.do",
+    "sha256": "3dff0542e2586e044262b70ea261a18b06594dc36c9a78cc099b38d63a1652b4",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      33
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/appendix/tableA22.do",
+    "sha256": "c4a8f0c602d1efc9ca2e59210139c415b821e747918f8f7431b4b778730dad46",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      120,
+      160
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+    "sha256": "1efe18e5d42d4bebee515e670be694c9c19de6a113acb695431805cbc530252f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      110
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table1.do",
+    "sha256": "597c4f70483589dfec9be3bfac1e710ff41692f2f0b5639233bc3ce78054e0e3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      65
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+    "sha256": "092b6915fbd68fb4044aab7b7b30b69bdfa9079b7ef1ac84aa7623f353391375",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table3.do",
+    "sha256": "b4b6f24703c42b0699a5e2d1b5a7b81e5183760084e0d18ad2858409559b2ae2",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      71
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table4.do",
+    "sha256": "bc35716cb2062963669742e51e1ef3fbfd7e38684af0da979b50ca6b1b11c110",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      58
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table5.do",
+    "sha256": "f6588bb892d13f90d8b200b5027cb1525b1e124cf042e67a623a9f279a7a486b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      35
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table6.do",
+    "sha256": "070ed472c30faf08e6bf1c8bbb914531a98272aed171ecbabcfb7dce87bb1f2f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      114
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table7.do",
+    "sha256": "77fbc209b32714ac1abb4fbae2db43a0c6ac1c2b92f3eaa0bd0cbc28943cd47c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table8.do",
+    "sha256": "b4b7af64b8671b2efee7464ffa3098c6388053dff71c488fc396ee51819ab991",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      103
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table9.do",
+    "sha256": "0c7d8e07302b303aba866bd126fab225876278b8d0bb80f9a678c8e930b70d44",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      51
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/ado/",
+    "reason": "vendored",
+    "note": "reghdfe, ftools, estout, did_imputation and other packaged libraries"
+   },
+   {
+    "path": "code/zenodo_16539681/Replication/Replication/code/r_script/",
+    "reason": "out_of_budget",
+    "note": "6 R scripts for supporting visualizations"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Read master script, 9 main table scripts, event study figure, and IV appendix spec. Skipped data prep (150 lines each), appendix tables/figures, and R scripts due to budget. Primary methods: DID and event_study with reghdfe for sample pooling analyses; individual cohort-level DID for survey data. IV specs present in appendix (tableA22) instrument for intermediate school entry using geographic variation in waqf and rice productivity."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_16539681/Replication/Replication/code/do/0_setup.do",
+   "code/zenodo_16539681/Replication/Replication/code/do/1_dataprep.do",
+   "code/zenodo_16539681/Replication/Replication/code/do/2_analysis.do"
+  ],
+  "directory_layout": "code/do/{0_setup,1_dataprep{/*.do},2_analysis{main,appendix}} with vendored packages in code/ado/ and R scripts in code/r_script/",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/zenodo_16539681/Replication/Replication/code/ado/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 18,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/0_setup.do",
+     "lines": [
+      23,
+      25
+     ],
+     "snippet": "global input_data \"$base_path/data/01_raw\"\n\tglobal outputdata \"$base_path/data/02_intermediary\"\n\tglobal final_data \"$base_path/data/03_final\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "0_setup.do sets globals, then 1_dataprep.do calls cleaning scripts in sequence, then 2_analysis.do runs main tables 1-9 and figures 1-2,4-8",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "reghdfe `outc' *Xpost73 if est_year>=1960 & est_year<=1999, a(id_dec80 est_year i.est_year#c.ch71",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "event_study",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+     "lines": [
+      45,
+      45
+     ],
+     "snippet": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `outc' *Xpost73 if est_year>=1960 & est_year<=1999, a(id_dec80 est_year i.est_year#c.ch71 i.est_year#c.en71 i.est_year#c.wsppc i.est_year#c.mi1960 i.est_year#c.mts1960 i.est_year#c.ma1960 i.est_year#c.pesantren1960) clus(id_dec80)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`outc'"
+   ],
+   "scope": "family",
+   "family_description": "Table 2A district-level outcomes (mi mts ma pesantren diniyah allisl)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Intensive margin DID: INPRES x post-1973 interaction with district and year FE and interactions",
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "reghdfe `outc' *Xpost73 if est_year>=1960 & est_year<=1999, a(id_dec80 est_year i.est_year#c.ch71",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `dep' anySD, a(uniqueid year i.year#c.anySDPre i.year#c.islprivXPre) vce(cluster kab)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`dep'"
+   ],
+   "scope": "family",
+   "family_description": "Table 2C village-level outcomes (MIpriv MTspriv MApriv pesantren din islprivAll)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "kab"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+      "lines": [
+       61,
+       61
+      ],
+      "snippet": "\teststo `dep': reghdfe `dep' anySD, a(uniqueid year i.year#c.anySDPre i.year#c.islprivXPre) vce(cluster kab)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Extensive margin DID: SD INPRES entry indicator with village and year FE and pre-treatment outcome interactions",
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+     "lines": [
+      61,
+      61
+     ],
+     "snippet": "reghdfe `dep' anySD, a(uniqueid year i.year#c.anySDPre i.year#c.islprivXPre) vce(cluster kab)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71 i.est_year#c.en71 i.est_year#c.wsppc i.est_year#c.mi1950 i.est_year#c.mts1950 i.est_year#c.ma1950 i.est_year#c.pesantren1950) clus(id_dec80)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`v'"
+   ],
+   "scope": "family",
+   "family_description": "Figure 2 event-study outcomes (allisl mi mts ma pesantren)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study: INPRES intensity interacted with decade bins (1950-2000), omitting 1965-70 baseline",
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+     "lines": [
+      45,
+      45
+     ],
+     "snippet": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_imputation",
+   "command": "did_imputation",
+   "package": null,
+   "formula_or_call": "did_imputation `outcome' uniqueid year mtreat_year if year>=1960 & year<=1999, fe(uniqueid year) timecontrols(SDpre1959 islpre1959) autosample",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`outcome'"
+   ],
+   "scope": "family",
+   "family_description": "Table 2D robust DID estimator outcomes (mi mts ma pesantren din islpesdin)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Robust DID allowing staggered treatment and dynamic treatment effects, with time-varying controls",
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+     "lines": [
+      97,
+      97
+     ],
+     "snippet": "did_imputation `outcome' uniqueid year mtreat_year if year>=1960 & year<=1999, fe(uniqueid year) timecontrols(SDpre1959 islpre1959) autosample",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "output/main/tables/table1.tex",
+    "package": "estout",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table1.do",
+      "lines": [
+       54,
+       54
+      ],
+      "snippet": "estout using \"$base_path/output/main/tables/table1.tex\", replace ///",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "output/main/tables/table2A.tex",
+    "package": "estout",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+      "lines": [
+       26,
+       26
+      ],
+      "snippet": "estout using \"$base_path/output/main/tables/table2A.tex\", replace",
+      "supports": [
+       "path",
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f2",
+    "output_ref": null,
+    "path": null,
+    "package": "twoway",
+    "format": "pdf",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "twoway (scatter beta dec, msymbol(O) mcolor(gs0) plotregion(color(white)) xlabel(1 2 3 4 5 6 7 8 9 10, valuelabel) ///",
+      "supports": [
+       "format",
+       "package"
+      ]
+     }
+    ],
+    "types": []
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "eststo: reghdfe `outc' *Xpost73 if est_year>=1960 & est_year<=1999, a(id_dec80 est_year i.est_year#c.ch71 i.est_year#c.en71 i.est_year#c.wsppc i.est_year#c.mi1960 i.est_year#c.mts1960 i.est_year#c.ma1",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "did_imputation",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "did_imputation"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+     "lines": [
+      97,
+      97
+     ],
+     "snippet": "did_imputation `outcome' uniqueid year mtreat_year if year>=1960 & year<=1999, fe(uniqueid year) timecontrols(SDpre1959 islpre1959) autosample",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": "Table output formatting and export to .tex",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table1.do",
+     "lines": [
+      54,
+      54
+     ],
+     "snippet": "estout using \"$base_path/output/main/tables/table1.tex\", replace",
+     "supports": [
+      "name",
+      "purpose"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did",
+   "event_study"
+  ],
+  "fields": []
+ }
+}

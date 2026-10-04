@@ -1,0 +1,1172 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_108_4_3",
+  "journal": "AER",
+  "year": 2018,
+  "doi": "10.1257/aer.20160816",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_108_4_3.pdf",
+    "pdf_sha256": "4e9d0d2f9d8bce50a7c392ca437a4992041a335cc824fffdf58a67d0bc4c696c",
+    "text_path": "harness_build/papers/text/aer_108_4_3.txt",
+    "text_sha256": "d3debe22ee1e20a698dc05e188791fdc871557434389550d70f205037970c8b8",
+    "pages": 49
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:45:19Z"
+  },
+  "card_link": null,
+  "methods": [
+    "other:regression_kink_design",
+    "event_study",
+    "structural_estimation",
+    "other:sufficient_statistics_approach"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "other",
+      "title": "Title, abstract, JEL codes, author note",
+      "pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "introduction",
+      "title": "Introduction (unlabeled section)",
+      "pages": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "model",
+      "title": "I. Model",
+      "pages": [
+        5,
+        15
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "background",
+      "title": "II. Context and Data, A. Institutional Background",
+      "pages": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "data",
+      "title": "II. Context and Data, B. Data",
+      "pages": [
+        17,
+        19
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "design",
+      "title": "III. Duration Responses, A. Regression Kink Design: Strategy and Results",
+      "pages": [
+        19,
+        22
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "III. Duration Responses, B. Implications for Moral Hazard Costs",
+      "pages": [
+        22,
+        24
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "results",
+      "title": "IV. Consumption Smoothing, A. Registry-Based Measure of Consumption",
+      "pages": [
+        24,
+        28
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "mechanisms",
+      "title": "IV. Consumption Smoothing, B. Implications for Consumption Smoothing Gains",
+      "pages": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "results",
+      "title": "V. Welfare Analysis, A. Sufficient-Statistics Implementation",
+      "pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "mechanisms",
+      "title": "V. Welfare Analysis, B. From Sufficient Statistics to Mechanisms",
+      "pages": [
+        30,
+        36
+      ]
+    },
+    {
+      "id": "sec12",
+      "kind": "model",
+      "title": "V. Welfare Analysis, C. Beyond Local Recommendations (structural calibration)",
+      "pages": [
+        36,
+        37
+      ]
+    },
+    {
+      "id": "sec13",
+      "kind": "conclusion",
+      "title": "VI. Conclusion",
+      "pages": [
+        37,
+        38
+      ]
+    },
+    {
+      "id": "sec14",
+      "kind": "appendix",
+      "title": "Print appendix: Figures 1-7 and Tables 1-3",
+      "pages": [
+        38,
+        47
+      ]
+    },
+    {
+      "id": "sec15",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        47,
+        49
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "States the empirical target as a small set of dynamic sufficient statistics, moral hazard cost and consumption smoothing gain evaluated at each part of a two-part benefit profile, derived to be sufficient for local welfare evaluation regardless of underlying model primitives.",
+      "pages": [
+        5,
+        15
+      ],
+      "locator": "Section I, Proposition 1",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "States two identifying assumptions for the regression kink design used to estimate benefit effects on unemployment duration: smoothness of the direct effect of wage on the outcome around the kink, and smooth evolution of unobserved heterogeneity around the kink point.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ],
+      "quote": "distribution of unobserved heterogeneity is assumed to be evolving smoothly"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "Names the identification strategy explicitly as a regression kink design, distinguishing it from a discontinuity design because it exploits a deterministic slope change rather than a level jump in the policy schedule.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Identifies nonlinearity in the underlying wage-outcome relationship that is unrelated to the kinked policy schedule as the main threat to identification and inference in the regression kink design.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section IIIA, discussion after Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "Defines the estimand as the marginal effect of benefits paid during a given part of the spell on a duration outcome, formalized as the ratio of the estimated change in slope of the outcome-wage relationship to the deterministic change in slope of the benefit schedule at the kink.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "restricted_data_used"
+      ],
+      "statement": "Constructs the analysis sample by linking three administrative Swedish registers, an unemployment history register, a longitudinal tax and demographic register, and a wealth tax register, plus a household expenditure survey covering a subset of years.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IIB",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated"
+      ],
+      "statement": "States the administrative sample spans a specific multi-year period, while the household expenditure survey used for consumption validation covers a partially overlapping but shorter, later period.",
+      "pages": [
+        16,
+        18
+      ],
+      "locator": "Section IIA-B",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Restricts the analysis sample to workers with a minimum prior employment history before layoff who contribute to an unemployment insurance fund, justified by the eligibility rules that govern benefit receipt under the Swedish system.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section IIA",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Defines an unemployment spell using specific criteria on job search reporting and zero earnings, excluding voluntary quits except a narrowly defined valid-reason category, and notes this excluded category is a small share of observed job separations.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IIB, footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Reports the number of observations underlying each regression kink panel directly alongside the point estimates and standard errors in the main results table.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines the start of an unemployment spell as the registration date with the public employment service and the end as either finding any employment or leaving the employment service, including exits to other social insurance programs.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section IIB",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "running_variable_definition",
+        "treatment_definition"
+      ],
+      "statement": "Defines the running variable as previous daily wage before layoff and the treatment as the benefit level, a deterministic kinked function of that wage created by duration-dependent caps introduced through policy reform.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section IIA, IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Constructs an annual household consumption measure indirectly from income and asset register data using a residual approach rather than direct expenditure reporting, extending prior registry-based consumption measurement methods, with full construction detail placed in an online appendix.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IIB",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs"
+      ],
+      "statement": "Uses the log change in annual consumption as the outcome variable in the event-study specification estimating the consumption drop at the onset of unemployment.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section IVA, equation (17)",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Defines the two-part benefit variation separately for three policy subperiods depending on which parts of the schedule exhibited a kink at the common wage threshold, using this variation to isolate effects of benefits paid at different times in the spell.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Derives a nonparametric procedure for recovering flow, weekly consumption drops from differences in annual consumption reported by individuals observed at different points of an ongoing spell, rather than by directly regressing on elapsed time.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section IVA",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported"
+      ],
+      "statement": "Specifies calendar-year fixed effects alongside event-time dummies in the consumption event-study equation and reports the estimated event-time coefficients in an accompanying figure rather than a table.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section IVA, equation (17)",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Presents a baseline linear local specification for the regression kink design and reports quadratic and cubic polynomial-order variants side by side with model-fit statistics used to justify the preferred order.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section IIIA, referencing online Appendix Table B-3",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes"
+      ],
+      "statement": "States in the figure notes that the reported confidence interval for the kink slope-change estimate comes from a robust variance estimator, while an elasticity standard error reported alongside comes from a separately described bootstrap procedure.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Figure 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "other:outcomes_across_columns"
+      ],
+      "statement": "Organizes the main duration results table with separate columns for total unemployment duration and for duration accrued in each part of the two-part benefit schedule, with separate panels for each policy subperiod plus a placebo panel.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "weights_stated"
+      ],
+      "statement": "Explicitly weights summed weekly consumption differences by the survival rate at each duration when constructing the aggregated consumption-drop statistic for each part of the benefit profile.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section IVA, equations (18)-(19)",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Reports bootstrapped standard errors for elasticity and moral hazard cost estimates using a stated small number of bootstrap replications, without discussing the choice of that replication count or its adequacy.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Section IIIA, footnote",
+      "basis": "inferred",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Reports an alternative inference approach based on permutation tests over placebo kink locations, following a cited methodology, and compares the resulting confidence interval width to the baseline robust and bootstrap intervals.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section IIIA, online Appendix B",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "other:delta_method"
+      ],
+      "statement": "States that standard errors for the nonparametric flow consumption-drop statistics are computed using the delta method applied to the estimated event-time coefficients.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section IVA, Figure 6 notes",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Reports a formal equality test between two moral hazard cost estimates using both an asymptotic test and a permutation test, noting the two give different p-values without stating an ex ante criterion for which result is treated as primary.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VB",
+      "basis": "inferred",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "density_test",
+        "in_appendix"
+      ],
+      "statement": "Reports a density-continuity test in the spirit of a standard manipulation test for the running variable around the kink threshold, checking continuity of the wage density and its first derivative, with the test itself placed in an online appendix.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IIIA, referencing online Appendix Figure B-4",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_cutoffs",
+        "in_main_text"
+      ],
+      "statement": "Uses a policy subperiod during which the schedule kink was removed as a placebo test of the regression kink design, estimating the change in slope in that subperiod.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_cutoffs",
+        "in_appendix"
+      ],
+      "statement": "Reports year-by-year placebo estimates of the change in slope at the kink location for years without an active kink, as an additional falsification exercise.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section IIIA, footnote referencing online Appendix Figure B-3",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "bandwidth_sensitivity",
+        "in_appendix"
+      ],
+      "statement": "Reports sensitivity of the regression kink point estimates to the choice of bandwidth around the threshold in an online appendix figure.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section IIIA, referencing online Appendix Figure B-6",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "Checks smoothness of observable worker characteristics as a function of wage around the kink threshold, treating non-smoothness in observables as evidence against the identifying assumption on unobserved heterogeneity.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IIIA, referencing online Appendix Figure B-5",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:nonparametric_kink_location_test",
+        "in_appendix"
+      ],
+      "statement": "Reports a nonparametric test for the presence and location of a kink in the outcome-wage relationship, following a cited method, to confirm the detected slope change coincides with the actual policy kink point.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section IIIA, referencing online Appendix Figure B-10",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix",
+        "summarized_in_one_table"
+      ],
+      "statement": "Reports robustness of the kink slope-change estimates to the order of the local polynomial, linear, quadratic and cubic, summarized in a single appendix table with model-fit criteria used to justify the preferred linear specification.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section IIIA, online Appendix Table B-3",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_appendix"
+      ],
+      "statement": "Compares two alternative ways of handling ongoing spells at the moment the benefit schedule changed, censoring durations versus dropping affected spells, and reports the two approaches deliver equivalent results.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Section IIIA, footnote referencing online Appendix Figure B-9",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "alt_sample",
+        "in_appendix",
+        "summarized_in_one_table"
+      ],
+      "statement": "Compares four alternative identification strategies for the relative moral hazard cost of benefits paid early versus late in the spell, exploiting different sources of policy variation over time and across kink locations, and reports the relative-magnitude finding is robust across all four.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Section IIIA, online Appendix Table B-4",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Reports separate consumption-drop profiles by category of completed unemployment spell length as a robustness check against dynamic selection into spell length, finding the profile shape is similar across the subgroups.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section IVA",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Cross-validates the registry-based consumption-drop estimates against an independent household expenditure survey with a much smaller sample and no panel structure, reporting that the two data sources deliver similar point estimates despite larger standard errors in the survey-based estimate.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section IVA, referencing online Appendix Table C-3",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "robustness_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "in_main_text"
+      ],
+      "statement": "Reports the welfare evaluation across a range of plausible relative risk aversion values rather than a single calibrated value, presenting the sensitivity of consumption smoothing gain estimates to this parameter directly in the main results table.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section VA",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated",
+        "in_appendix"
+      ],
+      "statement": "Splits the consumption-drop analysis by household net wealth at the start of the spell to examine whether asset holdings shape the consumption smoothing pattern, reporting a smaller drop for wealthier households.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VB, referencing online Appendix Figure C-2",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "ruled_out_alternatives"
+      ],
+      "statement": "Investigates several candidate mechanisms behind the rising consumption drop over the spell, including liquid asset depletion, reduced access to credit, spousal labor supply responses, and dynamic selection on preferences, largely ruling out the spousal labor supply channel as quantitatively important.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Section VB",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "Breaks down expenditure responses by category of good, distinguishing nondurable and committed expenditures from durable goods, to interpret substitution toward home production and away from durable purchases as mechanisms shaping the measured consumption drop.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section IVB, referencing online Appendix Table C-4",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "Uses a formal proposition characterizing how moral hazard cost and consumption smoothing gain evolve over the spell under stationary, single-agent benchmarks to structure the interpretation of which mechanisms could explain the empirically observed pattern.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VB, Proposition 2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Benchmarks the estimated consumption drop against a specific prior study that used a different data source and time period, noting the estimates are similar in magnitude despite differing samples and methods.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section IVB, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "relative_to_mean"
+      ],
+      "statement": "Interprets the moral hazard cost estimate as a multiplier on the resources a planner would need to raise from the employed relative to the static budgetary cost absent behavioral responses, translating the elasticity estimate into an intuitive fiscal magnitude.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "cost_benefit",
+        "precision_discussed"
+      ],
+      "statement": "Frames the ratio of consumption smoothing gains to moral hazard costs as a benefit-cost ratio for the marginal krona of benefits, stating this evaluation depends on implementation assumptions including the risk aversion parameter, the tax distortion, and the normalization point of the smoothing measure.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VA",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement"
+      ],
+      "statement": "States that the consumption smoothing gain estimate captures only the value to the unemployed individual rather than the full household, and notes this likely understates the true consumption smoothing gain of benefits.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VA, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "Notes that the registry-based consumption measure captures only annual, year-end aggregated expenditure rather than a genuinely high-frequency flow, and addresses this limitation by supplementing with a separate survey-based flow measure.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IIB",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "scaling_discussed"
+      ],
+      "statement": "Frames the empirical estimates as specific to the Swedish institutional and labor market context, while presenting the theoretical framework itself as portable, explicitly inviting application of the same statistics to other countries and other dynamic policy settings such as pensions or parental leave.",
+      "pages": [
+        37,
+        37
+      ],
+      "locator": "Section VI, Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "other:sufficient_statistics_approach"
+      ],
+      "quote": "framework that is easily replicable"
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "rd_plot",
+        "binscatter"
+      ],
+      "statement": "Presents binned scatterplots of the outcome against the running variable for each policy subperiod alongside a fitted local linear regression line, a presentation convention typical of kink and discontinuity designs.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Figure 2",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot"
+      ],
+      "statement": "Presents point estimates with confidence intervals across policy subperiods as a coefficient-style plot for the kink slope-change parameter.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure"
+      ],
+      "statement": "Presents an event-time coefficient plot for log consumption changes around the start of an unemployment spell, following a standard event-study graphing convention in the literature.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Figure 5",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "Presents summary statistics using the mean and three percentiles of each variable's distribution rather than mean and standard deviation, a presentation choice distinct from many summary tables in the corpus.",
+      "pages": [
+        45,
+        45
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o52",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars"
+      ],
+      "statement": "Reports point estimates with standard errors in parentheses in the main results tables without significance stars, relying on the reader to compare estimates against standard errors directly.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Table 2",
+      "basis": "inferred",
+      "applies_to": [
+        "other:regression_kink_design"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "Previews the paper's three main empirical findings in an enumerated First, Second, Finally structure within the introduction before presenting the formal analysis.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o54",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph"
+      ],
+      "statement": "Closes the introduction with an explicit roadmap paragraph describing the content of each subsequent numbered section.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction, final paragraph",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o55",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "Includes a dedicated contribution paragraph positioning the paper relative to three separate literatures: theoretical optimal unemployment insurance, empirical labor supply responses, and consumption-based measurement of income shocks.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o56",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "Relies extensively on a multi-part online technical appendix for proofs, additional robustness checks, construction details, and supplementary tests, none of which is included in the extracted print text of this article.",
+      "pages": [
+        17,
+        36
+      ],
+      "locator": "throughout Sections II-V",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_restricted"
+      ],
+      "statement": "Describes the analysis data as coming from linked Swedish government administrative registers covering unemployment, tax, and wealth records for the full population, a source not publicly downloadable and requiring registry access.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IIB",
+      "basis": "inferred",
+      "applies_to": []
+    }
+  ],
+  "concordance": [],
+  "gaps": [
+    "No explicit software or code availability statement appears anywhere in the read text.",
+    "No explicit data or replication package availability statement appears anywhere in the read text (consistent with this being a 2018 issue, before AER's current mandatory data availability policy statements became standard).",
+    "No explicit discussion of standard-error clustering appears; the data are individual unemployment spells with bootstrap or delta-method standard errors reported, but the text never states or defends an assumption of independence across individuals.",
+    "No preregistration, IRB approval, or participant-consent statement of any kind appears in the read text.",
+    "No formal multiple hypothesis testing correction is discussed despite many separate mechanism and robustness checks being reported across the paper.",
+    "The paper's online technical Appendices A through D and the separate online Appendix B and C figures and tables, referenced dozens of times for proofs, construction detail, and additional robustness, are not included in this text extraction and were not read."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        38
+      ],
+      [
+        39,
+        49
+      ]
+    ],
+    "coverage": "main_text",
+    "note": "Pages 1-38 (title through Conclusion) were read in full narrative detail: introduction, theoretical model, institutional background and data, regression kink design and results, consumption smoothing analysis, welfare analysis and structural calibration, and conclusion. Pages 39-49 (Figures 1-7, Tables 1-3, and References) were read for captions, table contents, and notes rather than as continuous narrative text, since they are figures, tables, and a bibliography rather than additional argument. The paper's online technical appendices (A-D) and its separate online Appendix B and C figures and tables, referenced extensively throughout the main text for proofs, robustness checks, and construction detail, are a separate document not included in this text extraction and were not read; their existence and general content are recorded only as stated by the main text."
+  }
+}

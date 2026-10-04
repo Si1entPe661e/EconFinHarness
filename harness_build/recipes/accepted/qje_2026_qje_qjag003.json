@@ -1,0 +1,394 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "qje_2026_qje_qjag003",
+ "journal": "QJE",
+ "year": 2026,
+ "doi": "10.1093/qje/qjag003",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:40:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/QJE/metadata/articles.csv",
+   "sha256": "8064dd0901f6f3bd3ec9089390b1b88958eda6dbba4e11911b955aeeb46b5d55"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/0_0_master.do",
+    "sha256": "603b99164b654eee6d621911692386257541a17fc2cbaa876883bc3c56c7c975",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/1_0_randomization.do",
+    "sha256": "2ecb5b2beec10f6dc0606e65ea81d86e1dfaf724698e3fa833f12a34baabcc28",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      165
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/2_0_intext_all_surveys.do",
+    "sha256": "f93e4629326af100381d39fd7100e6922ddb6d713b42be61e8c0e6baf313481c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/_conts.do",
+    "sha256": "b3c97e4b3aa227e00a80359a6b5b799af93eb25abc3ba205b31f07d81e0d90a6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/_multhyp2.do",
+    "sha256": "0ed077f527797c497eeabe59c4fdba8d224babaf551a877d23e299eeb2455ea8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/_pkgs.do",
+    "sha256": "0a9338def253bee20ee786fea7152c2dbe8f0b4aa15c8abd1b0ac1450d1d1bb1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      27
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/tab1.do",
+    "sha256": "251eb9052245436f854f6e54eab9560089fce6e5c24ac3069a09f79e12a9d436",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      140,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/tab2.do",
+    "sha256": "9464832939840d20293d64c8b06aa3ce3af5a55c5629109a6e6677698524864f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/tab3.do",
+    "sha256": "207afbc870a441377ff6a8d2c7b80608c6845b6c52a1b4a01bc350b38275d730",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/tab4.do",
+    "sha256": "09d62cc67e3d54b6fa0103cdbd84d95dc7a2a97f65c1aa264234f53073f697a1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Master script 0_0_master.do with pipeline: clean, randomization, analysis, tables. Reghdfe with lasso selection and sharpened q-values."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/0_0_master.do"
+  ],
+  "directory_layout": "Dataverse package with 73 .do files",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 73,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/1_0_randomization.do",
+     "lines": [
+      113,
+      113
+     ],
+     "snippet": "set seed 1",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/1_1_clean_w1.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/0_0_master.do",
+      "lines": [
+       107,
+       107
+      ],
+      "snippet": "include \"${code}/1_1_clean_w1.do\"",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/1_0_randomization.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/1_0_randomization.do",
+      "lines": [
+       1,
+       6
+      ],
+      "snippet": "Randomization of schools to PC and Treated Schools",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/2_0_intext_all_surveys.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/0_0_master.do",
+      "lines": [
+       162,
+       162
+      ],
+      "snippet": "include \"${code}/2_0_intext_all_surveys.do\"",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rct",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/1_0_randomization.do",
+     "lines": [
+      1,
+      7
+     ],
+     "snippet": "Randomization of schools to PC and Treated Schools",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `v' $full_x ``v'_c' if `v' != . &  index_sample == 1 , ///",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "v",
+    "full_x",
+    "v_c"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/tab1.do",
+      "lines": [
+       155,
+       155
+      ],
+      "snippet": "cluster(schule_code) absorb(strata)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/tab1.do",
+     "lines": [
+      154,
+      154
+     ],
+     "snippet": "reghdfe `v' $full_x ``v'_c' if `v' != . &  index_sample == 1 , ///",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_A9ZFFF/QJE_replicationpackage_transfer/QJE_replicationpackage_transfer/code/_pkgs.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "ssc install reghdfe, replace",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rct"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,1324 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_110_2_5",
+  "journal": "AER",
+  "year": 2020,
+  "doi": "10.1257/aer.20190759",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_110_2_5.pdf",
+    "pdf_sha256": "4d720b3d9919577d2338ef14cbcd74a026fc8c88df807108e765e494b270d345",
+    "text_path": "harness_build/papers/text/aer_110_2_5.txt",
+    "text_sha256": "d72dfe29ec2a6e0658691e778925a785c481eefbb608559a7a1794ab621eb605",
+    "pages": 51
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:47:49Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/aer_110_2_5.json",
+    "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c"
+  },
+  "methods": [
+    "rdd",
+    "iv",
+    "other:probit_regression"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "I.A-B Background: Broad Street Outbreak and Impact on Poverty",
+      "pages": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "I.C Data Collection",
+      "pages": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "II. Empirical Strategy (Catchment Boundary and RD Specification)",
+      "pages": [
+        10,
+        16
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "III.A-E Results: Exposure, Prices, Migration, Crowding, Long-Term Effects",
+      "pages": [
+        16,
+        24
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "robustness",
+      "title": "III.F Robustness Checks",
+      "pages": [
+        24,
+        26
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "mechanisms",
+      "title": "III.G Possible Interpretations",
+      "pages": [
+        26,
+        28
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "model",
+      "title": "IV. Theoretical Framework",
+      "pages": [
+        28,
+        30
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "background",
+      "title": "IV.A Related Literature and Contribution",
+      "pages": [
+        30,
+        32
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "mechanisms",
+      "title": "V. Other Contributing Factors",
+      "pages": [
+        32,
+        33
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "conclusion",
+      "title": "VI. Conclusion",
+      "pages": [
+        33,
+        33
+      ]
+    },
+    {
+      "id": "sec12",
+      "kind": "appendix",
+      "title": "Appendix A. Theoretical Analysis",
+      "pages": [
+        33,
+        40
+      ]
+    },
+    {
+      "id": "sec13",
+      "kind": "appendix",
+      "title": "Appendix B. Additional Tables and Figures",
+      "pages": [
+        40,
+        48
+      ]
+    },
+    {
+      "id": "sec14",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        48,
+        51
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "continuity_at_cutoff_argued",
+        "design_variant_named"
+      ],
+      "statement": "Identification rests on a spatial RD at the Voronoi-defined boundary of the well believed to have transmitted the disease, arguing that non-disease property attributes vary smoothly across that boundary while disease exposure does not.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "compliers_described"
+      ],
+      "statement": "The boundary-crossing indicator is presented as an intent-to-treat measure, with a separate fuzzy RD specification using an individual house-level death indicator as the endogenous treatment to recover a house-specific effect.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section III, discussion following Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd",
+        "iv"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The authors flag that pump catchment membership is not a strict assignment rule because nearby wells are non-excludable, and argue the design still works if residents are highly sensitive to walking distance for water collection.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "A dedicated subsection separately argues against disease stigma and updated beliefs about water-source quality as alternative explanations for the boundary discontinuity, treating both as identification threats rather than as robustness checks alone.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section III.G Possible Interpretations",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "Because the treatment boundary is two-dimensional, the authors collapse it to a one-dimensional forcing variable equal to walking distance to the closest boundary point, following the convention in the geographic RD literature.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section II.B, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated",
+        "sample_period_stated"
+      ],
+      "statement": "The unit of observation is an individual residential address in one London parish, tracked as an unbalanced panel across six waves spanning the pre-epidemic year through the present day.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section I.C",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "restricted_data_used"
+      ],
+      "statement": "Distinct data sources are stitched together by period: tax assessment records, a land registry sales database, a subscription-only rental archive, a public property-valuation website, decennial census manuscripts, and a philanthropic poverty survey.",
+      "pages": [
+        8,
+        10
+      ],
+      "locator": "Section I.C",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Observation counts differ substantially across otherwise-comparable tables because the estimation sample is redrawn to the outcome- and year-specific optimal bandwidth in each column.",
+      "pages": [
+        16,
+        24
+      ],
+      "locator": "Tables 2-8",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported",
+        "exclusions_justified"
+      ],
+      "statement": "For the latest historical wave the authors note an unexplained gap in digitized records for part of the parish and state that the resulting attrition is balanced on either side of the treatment boundary.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section III.E, discussion of Table 3 panel D",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "A cluster of houses that the original epidemiologist assigned to the affected catchment area is excluded from the constructed boundary because computed walking distance places it closer to a different well, with the choice later stress-tested against the original boundary.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "A falsification exercise draws on a large auxiliary transactions database covering an entire metropolitan area over nearly two decades, used only to benchmark how unusual the estimated boundary discontinuity is relative to ordinary block-to-block price variation.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section III.F, Falsification Tests",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "logs_or_ihs"
+      ],
+      "statement": "The primary outcome is a log transformation of property value, with the underlying value measure changing by period (rental price, assessed tax, sale price, or listing estimate) but log rental/price value used consistently as the left-hand-side variable.",
+      "pages": [
+        12,
+        24
+      ],
+      "locator": "Section II.B and Tables 3, 8",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Treatment status is an indicator for whether a property's nearest well by network (walking-distance) Voronoi partition is the contaminated one, rather than by simple Euclidean proximity.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "running_variable_definition"
+      ],
+      "statement": "The running variable is defined as signed walking distance in meters from a property to the nearest point on the catchment-area boundary, negative inside and positive outside.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section II.B, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "For the fuzzy design the endogenous treatment is redefined at the individual-house level as whether that specific address recorded at least one epidemic death, taken from a contemporaneous house-by-house casualty map.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section I.C and Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "rdd"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index",
+        "outcome_definition"
+      ],
+      "statement": "A four-category socioeconomic status variable is built by recoding an eight-tier historical poverty classification into broader tiers following a cited scholarly translation scheme.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section I.C, footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "other:distance_covariate_construction"
+      ],
+      "statement": "Distance-to-amenity control variables (wells, sewers, churches, banks, a plague pit, etc.) are computed as walking distance from each residence using digitized period-specific maps rather than straight-line distance.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Section I.C",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "controls_progressive_columns"
+      ],
+      "statement": "Each results table presents the same outcome across a fixed sequence of columns: local-linear baseline, local-linear with controls, polynomial at the optimal bandwidth, polynomial at a wide fixed bandwidth, and polynomial with boundary-segment fixed effects.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table 3 layout",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "mean_of_dependent_reported",
+        "other:no_r2_reported"
+      ],
+      "statement": "Every specification table reports the estimation sample size and the outcome mean among untreated (outside-boundary) observations directly beneath the coefficient, but no R-squared statistic appears in any regression table read.",
+      "pages": [
+        16,
+        24
+      ],
+      "locator": "Tables 2-8",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes",
+        "fe_listed_in_table"
+      ],
+      "statement": "Table notes state the standard-error type and clustering unit, list which control variables and fixed effects are included in each column, and name the kernel and bandwidth-selection rule used.",
+      "pages": [
+        16,
+        24
+      ],
+      "locator": "Notes to Tables 2-8",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes"
+      ],
+      "statement": "For the contemporary (post-2012) property tables the clustering unit switches from historical street block to postal code, reflecting the change in how the neighborhood is administratively subdivided today.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 8 notes; Table B3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": [
+        "weights_stated"
+      ],
+      "statement": "Every RD specification is described as using a triangular kernel that weights observations by distance to the boundary, documented in table notes as part of the estimator rather than as a separate sampling weight.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "other:block_level_clustering"
+      ],
+      "statement": "Standard errors are clustered at the street-block level in essentially every table, on the premise that unobserved shocks to price or amenities are correlated among neighboring properties on the same block.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Table 1 notes; Section II.B footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "spatial_hac",
+        "other:conservative_se_choice"
+      ],
+      "statement": "The authors compute an alternative spatial-HAC standard error for the baseline balance table and report choosing block-level clustering throughout because it is explicitly the more conservative (larger) of the two options.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, footnote 23",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "Conley (1999) standard errors tend to be smaller than block-level clustered standard errors"
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "A dedicated balance table reports RD coefficients for a wide set of pre-treatment property, sewer-access, and amenity-distance variables, offered as evidence on continuity at the boundary.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "Pre-epidemic rental prices and pre-epidemic cholera-exposure proxies are shown to be smooth across the boundary before the outbreak, functioning as a placebo-period check that precedes the post-outbreak results.",
+      "pages": [
+        13,
+        17
+      ],
+      "locator": "Table 1; Table 3 panel A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "density_test",
+        "in_appendix"
+      ],
+      "statement": "A manipulation test on the running variable's density, using the number of properties across the boundary, is run and reported in an appendix figure.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.A, referencing Appendix Figure B2",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "bandwidth_sensitivity",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "A footnote asserts that results are robust to bandwidth choice throughout and points readers to an online appendix for a bandwidth-sweep figure not included in the pages read.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.A, footnote 30",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_cutoffs",
+        "in_main_text",
+        "in_appendix"
+      ],
+      "statement": "Four alternative catchment boundaries for other, unaffected wells are used as placebo treatment boundaries in the same RD specification, with the figure shown in the main text and coefficients tabulated in an appendix table.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section III.F; Figure 5; Appendix Table B3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "other:spatial_placebo_distribution"
+      ],
+      "statement": "A separate falsification exercise compares the observed price gap against the distribution of price differences between many randomly drawn adjacent parcel pairs across the wider metropolitan area, placing the observed gap in the tail of that distribution.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Section III.F, Falsification Tests; Figure 4",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "diagnostic_reported",
+      "tags": [
+        "weak_iv_statistic",
+        "first_stage_table",
+        "overid_test",
+        "in_appendix"
+      ],
+      "statement": "The appendix instrumental-variable table reports a first-stage F-statistic and an overidentification test p-value alongside the second-stage estimate for the death-indicator instrument, without discussing either statistic's adequacy in the surrounding text.",
+      "pages": [
+        19,
+        46
+      ],
+      "locator": "Appendix Table B2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "in_appendix",
+        "summarized_in_one_table",
+        "other:alt_boundary_definition"
+      ],
+      "statement": "The main specification is rerun using the original epidemiologist's hand-drawn boundary instead of the authors' computed Voronoi boundary, with results summarized in a single appendix table after showing the two boundaries classify nearly all houses the same way.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section III.F, BSP Boundary Definition; Appendix Table B5",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "Rather than relegating functional-form choice to an appendix, every main results table places local-linear and polynomial RD estimates side by side as parallel columns of the same table.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Tables 2-8",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "in_main_text",
+        "other:alternative_explanations_addressed"
+      ],
+      "statement": "Two specific alternative explanations for the price gap, disease stigma and devaluation of the water source, are each addressed with a targeted empirical pattern rather than a generic robustness table.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section III.G",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_bandwidth",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "Widening the estimation window to a common fixed bandwidth across nearly every outcome table is used both as a robustness check on bandwidth choice and as a way to make estimates comparable across periods with different optimal bandwidths.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section III.B; Tables 3, 4, 6, 7, 8",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction"
+      ],
+      "statement": "Rather than splitting the sample, heterogeneity in the propensity to relocate is captured through an interaction between a household's own exposure and the intensity of exposure among its neighbors in a single probit specification.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "other:probit_regression"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "The proposed tenant-composition mechanism is supported with intermediate outcomes on residential turnover, household crowding, and immigrant composition rather than with a direct measure of landlord rent-setting behavior.",
+      "pages": [
+        20,
+        22
+      ],
+      "locator": "Sections III.C-D",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "A theoretical model is calibrated with historical return-to-capital estimates and contract-renegotiation frequencies to check whether the tipping mechanism is plausible under realistic parameter ranges, rather than being offered only as a qualitative story.",
+      "pages": [
+        39,
+        40
+      ],
+      "locator": "Appendix A, back-of-the-envelope calculations",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:cross_period_magnitude_comparison"
+      ],
+      "statement": "The paper's central magnitude claim is framed as a comparison across waves spanning more than a century, arguing that the gap between inside- and outside-boundary values does not narrow over time rather than resting on a single-period estimate.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:persistence_used_as_interpretive_evidence"
+      ],
+      "statement": "The persistence of the effect long after the well water source had been replaced by piped water is used as interpretive evidence against a pure water-quality-belief explanation, treating the stability of the effect over time itself as the argument.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section III.G, Devaluation of Water Infrastructure",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "cost_benefit"
+      ],
+      "statement": "The empirical rental-price gap is translated into an implied disutility/discount parameter in the theoretical model, connecting the reduced-form estimate to a structural back-of-envelope calibration rather than stopping at the reduced-form magnitude.",
+      "pages": [
+        39,
+        39
+      ],
+      "locator": "Appendix A",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement"
+      ],
+      "statement": "The authors flag that their migration measure only captures whether the primary occupant's recorded surname changed between waves, not the turnover of sub-tenants or other household members.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.C, footnote 32",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors state they cannot fully rule out a role for disease stigma in the estimated price effect, treating it as a residual possibility addressed with indirect evidence rather than one that is definitively excluded.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section III.G, Stigma of Disease",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "An unexplained gap in digitized records for part of the parish in the latest historical wave is acknowledged as reducing sample size and precision specifically for that cross-section.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section III.E",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "external_validity",
+      "tags": [
+        "other:contemporary_analogy_drawn"
+      ],
+      "statement": "The introduction draws an explicit analogy between the historical mechanism and modern disease-driven displacement episodes, extending the paper's relevance beyond the study setting without a formal generalizability argument.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o46",
+      "category": "external_validity",
+      "tags": [
+        "site_specific"
+      ],
+      "statement": "The authors present the single-parish, single-jurisdiction setting as a deliberate design choice that increases internal validity by ruling out confounding institutional channels, implicitly trading off how far the result extends to larger or differently governed housing markets.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "The introduction previews the paper's short-run and multi-decade quantitative findings before the formal empirical strategy and results sections are presented.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design",
+        "mechanisms_after_main"
+      ],
+      "statement": "The paper presents historical background and data collection before the formal empirical strategy section, and introduces its theoretical mechanism only after the reduced-form results, explicitly framed as an attempt to make sense of the empirical pattern.",
+      "pages": [
+        4,
+        28
+      ],
+      "locator": "Sections I-IV",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph"
+      ],
+      "statement": "A roadmap paragraph at the end of the introduction previews the organization of the paper section by section.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "other:epigraph_used"
+      ],
+      "statement": "The paper opens with an epigraph quoted from a popular history book before the formal introduction begins, an unusual framing device for this journal's empirical articles.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title page",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "A contribution paragraph explicitly distinguishes the paper's small, single-institutional-environment setting from three cited persistence studies, arguing their proposed mechanisms cannot explain the paper's setting.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "robustness_separate_section",
+        "appendix_heavy"
+      ],
+      "statement": "Robustness checks are collected in a dedicated lettered subsection within the results section, though several of the exercises reported there depend on appendix tables or an online appendix for full detail.",
+      "pages": [
+        24,
+        26
+      ],
+      "locator": "Section III.F",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "presentation_convention",
+      "tags": [
+        "rd_plot",
+        "binscatter"
+      ],
+      "statement": "RD figures throughout the paper use binned local averages at two bin widths overlaid with a fitted polynomial trend line, applied consistently to outcome variables, exposure variables, and covariates alike.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Figure 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars"
+      ],
+      "statement": "None of the regression tables use significance stars; coefficients and clustered standard errors are reported in parentheses and left for the reader to judge against, without asterisk markers anywhere in the tables read.",
+      "pages": [
+        13,
+        24
+      ],
+      "locator": "Tables 1-8",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "other:doubles_as_balance_table"
+      ],
+      "statement": "The paper's first table serves a dual role as both a pre-treatment summary-statistics table and a balance table, presenting group means alongside RD coefficients for the same set of variables.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "presentation_convention",
+      "tags": [
+        "other:appendix_tables_numbered_b"
+      ],
+      "statement": "Appendix tables and figures are labeled with a 'B' prefix rather than the more common 'A' prefix, because the letter 'A' is reserved in this paper for the separate theoretical-model appendix.",
+      "pages": [
+        40,
+        48
+      ],
+      "locator": "Appendix B heading",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o57",
+      "category": "replication_statement",
+      "tags": [
+        "other:availability_deferred_to_journal_page"
+      ],
+      "statement": "Rather than stating data or code availability in the body text, a title-page footnote directs readers to the journal's online article page for additional materials and author disclosure statements.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title page footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o58",
+      "category": "replication_statement",
+      "tags": [
+        "software_named"
+      ],
+      "statement": "Specific software tools are named directly in the text for constructing the geographic design, including a network-analysis solver for catchment areas and a grid-generation tool for the placebo exercise.",
+      "pages": [
+        10,
+        25
+      ],
+      "locator": "Section II.A footnote; Section III.F",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o59",
+      "category": "data_access",
+      "tags": [
+        "data_restricted"
+      ],
+      "statement": "One of the contemporary rental-price data sources is explicitly described as available only to verified real estate agents, marking it as a restricted-access commercial source.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section I.C",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Local-linear RD with a triangular kernel and MSE-optimal bandwidth (Calonico-Cattaneo-Titiunik), plus an AIC-order-selected polynomial RD variant.",
+      "card_shows": "Specifications s1, s2 and s7 record estimator local_linear_rd implemented via the rdrobust command.",
+      "status": "agree",
+      "pages": [
+        12,
+        17
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Table 3 column 5 adds fixed effects for five equal-length boundary segments as a robustness variant.",
+      "card_shows": "Card specifications s1 and s2 both record fixed_effects as null; no boundary-segment fixed-effect field is populated.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are clustered at the street-block level in essentially every table, stated as the default inference choice.",
+      "card_shows": "s1, s2 and s7 record se.type=cluster with se.cluster_level left null, though the underlying Stata call snippet captured as evidence reads vce(nncluster block).",
+      "status": "agree",
+      "pages": [
+        13,
+        14
+      ],
+      "card_ref": "s1.se.cluster_level",
+      "note": "Structured cluster_level field is null in the card; the raw call text it cites already shows the block-level cluster variable."
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Clustered standard errors are used as the primary inference method; Conley (1999) spatial-HAC standard errors are shown only once, as an appendix comparison used to justify preferring the (larger) clustered errors.",
+      "card_shows": "All extracted specifications (s1, s2, s7) record se.type=cluster; no spatial_hac or Conley entry appears among the card's diagnostics or packages.",
+      "status": "agree",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.se.type",
+      "note": "Agreement on the primary SE type; the card does not separately capture the Conley comparison exercise."
+    },
+    {
+      "item": "bandwidth",
+      "paper_says": "Bandwidth is chosen by an MSE-optimal, data-driven rule (Calonico-Cattaneo-Titiunik 2014) computed per outcome and year, with a fixed 100-meter window used as an alternate wide-bandwidth column.",
+      "card_shows": "Diagnostic x2 records kind=bandwidth_selection, status=observed, description 'MSE-optimal bandwidth selection via rdbwselect'.",
+      "status": "agree",
+      "pages": [
+        12,
+        17
+      ],
+      "card_ref": "x2"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "The comparison group is properties just outside the contaminated well's catchment-area boundary, within the estimation bandwidth.",
+      "card_shows": "Design d1 records comparison_group as null.",
+      "status": "paper_only",
+      "pages": [
+        10,
+        10
+      ],
+      "card_ref": "d1.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Covariates (distance to neighborhood amenities, sewer access) are added progressively as a 'Controls' column in each main results table.",
+      "card_shows": "Specification s2's structured controls_summary field is null, though its raw formula_or_call snippet lists a matching set of distance and sewer covariates.",
+      "status": "agree",
+      "pages": [
+        13,
+        17
+      ],
+      "card_ref": "s2.controls_summary",
+      "note": "Structured field is empty but the evidence text captured for the same record names the matching covariates."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A McCrary-style density (manipulation) test on the running variable is reported in an appendix figure and described as showing no discontinuity in property density at the boundary.",
+      "card_shows": "Diagnostic x1 records kind=density_test, status=unknown, with a note that 'No evidence of manipulation; output files generated'.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "x1",
+      "note": "Card marks the diagnostic's result status as unknown even though its own note affirms no evidence of manipulation."
+    },
+    {
+      "item": "robustness",
+      "paper_says": "A footnote states that results throughout the paper are robust to bandwidth choice, pointing to further discussion in the online appendix.",
+      "card_shows": "Robustness entry records type=alt_bandwidth, description 'Bandwidth sensitivity analysis 10-100 meters' via a dedicated bandwidth-sweep script, relationship_status=unresolved.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "robustness[0]"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The paper presents eight main numbered regression tables and five main figures, plus multiple lettered appendix tables and figures.",
+      "card_shows": "Card outputs.tables lists two table records (t1, t2) built with the estout package in tex format, corresponding to the main-results and fuzzy-IV do-files; no figure outputs are captured.",
+      "status": "paper_only",
+      "pages": [
+        13,
+        27
+      ],
+      "card_ref": "outputs.tables",
+      "note": "Card captures only two of the paper's table-producing scripts and no figure outputs."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The analysis draws on tax assessment records, land-registry sales, a rental-price archive, a valuation website, census microdata, a poverty survey, and digitized historical maps.",
+      "card_shows": "Card data[] entries name four Stata .dta files (Merged_1853_1864_data, Merged_1846_1894_data, houses_1936_final, final_deaths_byhouse) with type and access largely unknown or null.",
+      "status": "agree",
+      "pages": [
+        7,
+        10
+      ],
+      "card_ref": "data[0].name",
+      "note": "Card records internal merged-file names rather than the original source provenance described in the paper text."
+    }
+  ],
+  "gaps": [
+    "No discussion found of multiple-testing or joint-significance adjustment across the many outcomes and specification variants reported in Tables 2 through 8.",
+    "No formal preregistration, IRB, or human-subjects/ethics statement found; the study uses only historical archival and property records rather than living human subjects.",
+    "No explicit statement of code or data deposit, or a citation to a public replication package, found in the body text; only a title-page footnote directs readers to the journal's article landing page for disclosure materials.",
+    "No R-squared statistic reported in any regression table in the main text or the appendix tables read.",
+    "The bandwidth-sensitivity figure and further discussion referenced in footnote 30 sit in the online appendix, which was not part of the pages read."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        51
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 51 pages read, including the theoretical model appendix (Appendix A, pages 33-40), appendix tables and figures (Appendix B, pages 40-48), and the reference list (pages 48-51); the paper's separately hosted online appendix (referenced for additional bandwidth-sensitivity and model-extension material) was not available and is not counted in coverage."
+  }
+}

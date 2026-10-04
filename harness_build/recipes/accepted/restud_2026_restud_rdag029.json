@@ -1,0 +1,424 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdag029",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdag029",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:35:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_17503831/clean_archive/applications/src/0-main.do",
+    "sha256": "990023514960bd843fe2fb572d3aa4f9be6b9aba03365f59adc6fd640c3a250b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      380
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17503831/clean_archive/applications/src/1-card-acr-ddml.R",
+    "sha256": "247be1d2f891b151eae750e6703df8002433c82337c9945d5b58ef5ace8c7cec",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17503831/clean_archive/applications/src/dh-covariates.do",
+    "sha256": "dc40432eafe4e186452bd847c129de97b865741692c6033951f6f07e5e61eec4",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      178
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+    "sha256": "8150eed8b38dd4ca28b68437857a00318c912dd78b1757065eda2cc5350a3b16",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      280
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17503831/clean_archive/master.R",
+    "sha256": "20820ce2014f062dc56dbedf6953c1fa21cc058586ae33733ae671244b863cff",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      85
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17503831/clean_archive/simulations/src/04-main.R",
+    "sha256": "ffe8f4058665e91bd6ff9dde269e9cf343df5152bf2d588833c164f6f4c87317",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17503831/clean_archive/simulations/src/estimate.R",
+    "sha256": "d51d8f8842bef1dc4eea58cccde5cc97186ebf0150f95d3a27374796a8927d60",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      220
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_17503831/clean_archive/applications/src/cleaning/",
+    "reason": "vendored",
+    "note": "cleaning scripts"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Master.R, 13 applications, saturated specs"
+ },
+ "repository": {
+  "languages": [
+   "R",
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/zenodo_17503831/clean_archive/master.R"
+  ],
+  "directory_layout": "Zenodo archive",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 37,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/simulations/src/04-main.R",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "seed   <- 2002",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_17503831/clean_archive/simulations/src/04-main.R"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_17503831/clean_archive/master.R",
+      "lines": [
+       60,
+       60
+      ],
+      "snippet": "source(\"simulations/src/04-main.R\")",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "master.R coordinates simulations and 13 applications",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+     "lines": [
+      71,
+      80
+     ],
+     "snippet": "ivreg2 `y' (`d' = `z')",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 `y' (`d' = `z'), `ivreghdfe_se'",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "y",
+    "d",
+    "z",
+    "ivreghdfe_se"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+      "lines": [
+       71,
+       71
+      ],
+      "snippet": "ivreg2 `y' (`d' = `z'), `ivreghdfe_se'",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "TSLS without covariates",
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+     "lines": [
+      71,
+      73
+     ],
+     "snippet": "ivreg2 `y' (`d' = `z'), `ivreghdfe_se'",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "command",
+      "unresolved_symbols"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 `y' (`d' = `z') `x' `iv_x' `weighting', `ivreghdfe_se'",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "x",
+    "iv_x",
+    "weighting"
+   ],
+   "scope": "family",
+   "family_description": "13 empirical applications",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+      "lines": [
+       80,
+       80
+      ],
+      "snippet": "ivreg2 `y' (`d' = `z') `x' `iv_x' `weighting', `ivreghdfe_se'",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "TSLS with covariates; main specification",
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+     "lines": [
+      75,
+      84
+     ],
+     "snippet": "ivreg2 `y' (`d' = `z') `x' `iv_x' `weighting', `ivreghdfe_se'",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "command",
+      "unresolved_symbols"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+     "lines": [
+      71,
+      80
+     ],
+     "snippet": "ivreg2 `y' (`d' = `z')",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ddml",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "1.4.4",
+   "version_basis": "author_statement",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/applications/src/0-main.do",
+     "lines": [
+      6,
+      6
+     ],
+     "snippet": "ssc install ddml",
+     "supports": [
+      "name",
+      "version"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "ddml",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "0.2.2.9000",
+   "version_basis": "author_statement",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_17503831/clean_archive/master.R",
+     "lines": [
+      19,
+      19
+     ],
+     "snippet": "install.packages(\"ddml\")",
+     "supports": [
+      "name",
+      "version"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

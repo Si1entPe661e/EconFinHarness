@@ -1,0 +1,1267 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "jpe_2025_735509",
+  "journal": "JPE",
+  "year": 2025,
+  "doi": "10.1086/735509",
+  "source": {
+    "pdf_path": "Paper/PDF/jpe_2025_735509.pdf",
+    "pdf_sha256": "62f2470b93c11d01e61fce345336eda4f8c0103515fae498b40c12035e3f980f",
+    "text_path": "harness_build/papers/text/jpe_2025_735509.txt",
+    "text_sha256": "dea4d33044c6f198f3df726d87b85be8de5b1bc61e2daeb727f6a78d014ced18",
+    "pages": 52
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:16:33Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/jpe_2025_735509.json",
+    "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350"
+  },
+  "methods": [
+    "regression",
+    "structural_estimation"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "I. Introduction (incl. Related Literature)",
+      "pages": [
+        1,
+        8
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "II.A Subsidies and Site Selection",
+      "pages": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "II.B Data",
+      "pages": [
+        10,
+        14
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "II.C Descriptive Statistics (incl. reduced-form table)",
+      "pages": [
+        14,
+        19
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "model",
+      "title": "III. Model",
+      "pages": [
+        19,
+        26
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "design",
+      "title": "IV. Identification",
+      "pages": [
+        26,
+        33
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "V. Estimation and Results",
+      "pages": [
+        33,
+        41
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "results",
+      "title": "VI.A-C Counterfactual Implementation, Location and Welfare Results",
+      "pages": [
+        41,
+        46
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "robustness",
+      "title": "VI.D Additional Considerations",
+      "pages": [
+        46,
+        48
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "conclusion",
+      "title": "VII. Conclusion",
+      "pages": [
+        48,
+        49
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "other",
+      "title": "Data Availability",
+      "pages": [
+        49,
+        49
+      ]
+    },
+    {
+      "id": "sec12",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        49,
+        52
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named"
+      ],
+      "statement": "Frames identification as a private-value open-outcry ascending (English) scoring auction in which states bid subsidies and firms choose the location with the highest payoff, naming this design variant explicitly from the abstract onward.",
+      "pages": [
+        1,
+        4
+      ],
+      "locator": "Abstract; Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "States a numbered sequence of formal assumptions underlying identification, covering truthful revelation of competing offers by the firm, functional forms for profits and valuations, independence of an unobservable from location-characteristic differences, and i.i.d. welfare across short-listed locations.",
+      "pages": [
+        27,
+        33
+      ],
+      "locator": "Section IV, Assumptions 1-6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "States the equilibrium condition used for identification as a proposition: the winning location bids up the subsidy until the firm's payoff there equals its payoff in the runner-up location, which pins down the estimating equation for profit parameters.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section IV.A, Proposition 1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "Explicitly flags that the independence assumption needed for consistent profit-parameter estimates should not generally hold given the auction's selection structure, then argues it holds approximately and points to an appendix bias-adjustment exercise as a check.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section IV.A, Assumption 4 discussion",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "quote": "should not generally hold under the structure of the auction model"
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Discusses the possibility that firms strategically short-list low-profit, high-valuation locations to inflate the winning bid, treats it as a threat to the baseline specification, and states that an alternative model relaxing the assumption is estimated separately.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section III.C, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "Describes a hand-collected, two-part dataset built from a discretionary-incentive tracker, a trade magazine's annual top-deals report, state budget and tax-expenditure documents, and news articles and press releases on individual subsidy deals.",
+      "pages": [
+        3,
+        11
+      ],
+      "locator": "Introduction; Section II.B",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "exclusions_justified",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "States the analysis sample covers a fixed multi-year window, is restricted to deals above a minimum dollar threshold with confirmed competition, a known runner-up, and a runner-up location within the United States, yielding a stated count of firm-level deals used throughout.",
+      "pages": [
+        4,
+        12
+      ],
+      "locator": "Introduction; Section II.B",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Notes that firms which relocated or expanded without any discretionary subsidy are absent from the dataset because no administrative entry data are used, so the analysis sample is explicitly conditioned on having received a subsidy.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Limitations of the data",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "States the unit of observation for the subsidy data as an individual firm-level deal with a winning and runner-up location, while location characteristics used in estimation are defined at the state-by-commuting-zone level.",
+      "pages": [
+        5,
+        34
+      ],
+      "locator": "Introduction; Section V.A",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "exclusions_justified"
+      ],
+      "statement": "Splits the estimation sample into manufacturing and trade/services subsamples, each additionally restricted below an industry-specific dollar cap to exclude a small number of very large outlier deals, with the resulting counts stated in the corresponding table notes rather than the table body.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Tables 3-4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described"
+      ],
+      "statement": "Describes filling missing job and investment figures for a large share of observations by reading individual news articles and press releases, and matching firm names to an external financial database when industry classification is otherwise unavailable.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section II.B, footnotes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "other:profit_function_definition"
+      ],
+      "statement": "Defines firm profit in a location as a linear function of observed location and firm characteristics plus a normally distributed random coefficient, allowing observably similar firms to have unobservably different location preferences.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section IV.A, Assumption 2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "other:valuation_function_definition"
+      ],
+      "statement": "Defines the runner-up location's valuation for the firm as a function of observed location and firm characteristics plus an additively separable, normally distributed location-firm match component, kept conceptually distinct from firm profits.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section IV.A, Assumption 3",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "other:duration_normalization"
+      ],
+      "statement": "Normalizes every subsidy deal to a common contract length so that deals with different payout horizons are comparable, since most incentives are paid out over the same typical period.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section II.B",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "other:bidder_count_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Constructs the number-of-bidders variable from the firm's self-reported short list rather than from observed subsidy bids, explicitly distinguishing this from the usual concern that observed bid counts understate true bidder numbers in auction estimation.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section IV.B, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "other:spillover_proxy_construction"
+      ],
+      "statement": "Constructs an industry-level employment multiplier variable from an external research institute's input-output estimates as a proxy for the indirect job creation that subsidy programs are meant to capture, since firm-specific spillover data are not available.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section II.C",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "States an explicit simplifying assumption that promised jobs and planned investment in the winning location are treated as fixed across all competing locations in the auction, acknowledging this may not hold for establishment types other than large plants.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section II.B, Limitations of the data",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "controls_progressive_columns",
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "Reports the reduced-form subsidy-determinants table with columns that progressively add deal characteristics, then state characteristics, then local characteristics, before a final column with all variables together, with year fixed effects included throughout.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "r2_reported",
+        "exclusions_justified"
+      ],
+      "statement": "Reports observation counts and R-squared for every column of the reduced-form table, and states in the table note that a handful of extremely large outlier deals are excluded from that specification.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 2, note",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "other:no_fit_statistic_reported"
+      ],
+      "statement": "Reports point estimates and standard errors for each structural profit and valuation parameter in the main estimation tables, without reporting a model fit statistic such as a log-likelihood value or pseudo-R-squared alongside them.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Tables 3-4",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported"
+      ],
+      "statement": "States the mean and median of the dependent variable for each estimation subsample in the table notes rather than as a row inside the table body.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Tables 3-4, notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Gives no discussion anywhere in the main text of whether the reduced-form regression's reported standard errors are heteroskedasticity-robust, clustered, or ordinary, despite reporting stars for conventional significance levels.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Table 2 and surrounding text",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Does not discuss the source or properties of the standard errors reported alongside the structural profit and valuation parameter estimates, such as whether they come from the likelihood's information matrix or a resampling procedure.",
+      "pages": [
+        34,
+        36
+      ],
+      "locator": "Section V.A; Tables 3-4",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:model_fit_check"
+      ],
+      "statement": "Reports a scatterplot of observed runner-up subsidy offers against predicted runner-up valuations, together with correlation statistics, as a check that the estimated valuation function tracks an independent piece of the data not used to estimate it.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "Figure 4",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:model_fit_check"
+      ],
+      "statement": "Reports an overall model-fit diagnostic comparing the observed distribution of subsidies to the distribution implied by simulating the full auction game from the estimated primitives, including a discussion of where the simulated distribution over- and under-predicts.",
+      "pages": [
+        40,
+        41
+      ],
+      "locator": "Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "other:model_fit_check"
+      ],
+      "statement": "Reports a state-identity fit check in an appendix table comparing simulated versus observed shares of firms winning in each state, and states that a specific state-pair misspecification identified this way is explicitly corrected for in the counterfactual.",
+      "pages": [
+        41,
+        41
+      ],
+      "locator": "Section V.D; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "Cites an appendix exercise comparing location characteristics of winning, runner-up (bidding), and non-participating locations, used to support treating short-listed locations as exchangeable.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section IV.B, referencing online appendix",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_appendix",
+        "summarized_in_one_table"
+      ],
+      "statement": "Reports a robustness estimation that drops the random coefficient from the profit function and instead uses an ordinary-least-squares version of the profit parameters, then reruns the entire welfare pipeline and counterfactual and summarizes the resulting welfare comparison in an appendix table.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Section VI.C, referencing appendix table K.4",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Describes a full alternative identification and estimation approach, developed at a referee's suggestion, that changes the assumption on how the winning bid relates to the winner's valuation, and reports that the resulting welfare-gain and payoff-split conclusions are qualitatively similar to the baseline.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Section VI.C, referencing appendix L",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_footnote"
+      ],
+      "statement": "States that results are not sensitive to how ties in the runner-up assignment are broken when multiple locations are listed as runner-up, nor to the choice of commuting zone assigned when only the runner-up state, not county, is known.",
+      "pages": [
+        34,
+        35
+      ],
+      "locator": "Section V.A, footnotes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "in_main_text"
+      ],
+      "statement": "Incorporates an unmodeled cost of engaging in subsidy competition, namely site-selection consultant fees, under a plausible range of contingency-fee assumptions, and reports how the welfare-gain conclusion moves across that range.",
+      "pages": [
+        46,
+        47
+      ],
+      "locator": "Section VI.D",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "in_appendix",
+        "suggestive_labelled"
+      ],
+      "statement": "Runs a thought-experiment sensitivity exercise, explicitly labeled as not evidence-based, showing how quickly the welfare-gain conclusion disappears if state governments are assumed to systematically overestimate the value a firm will create.",
+      "pages": [
+        47,
+        47
+      ],
+      "locator": "Section VI.D, referencing appendix figure",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "quote": "This is a thought experiment"
+    },
+    {
+      "id": "o33",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample"
+      ],
+      "statement": "Estimates the profit and valuation model separately for manufacturing and trade/services firms throughout, rather than pooling with an industry interaction, motivated by wanting maximal flexibility in location preferences given the modest sample size.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section V.A",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "mechanism_evidence",
+      "tags": [
+        "other:valuation_correlates"
+      ],
+      "statement": "Reports the estimated correlates of the runner-up valuation function, such as local unemployment and income per capita, as suggestive of why some locations are willing to pay more for a firm, while explicitly stating these correlates are not to be read causally.",
+      "pages": [
+        37,
+        37
+      ],
+      "locator": "Section V.A, Tables 3-4 discussion",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "quote": "should not be interpreted as causal"
+    },
+    {
+      "id": "o35",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled"
+      ],
+      "statement": "Presents the association between a governor facing reelection and a higher estimated willingness to pay for firms as a political-economy channel worth further study, pointing to companion working papers rather than treating it as fully established within this paper.",
+      "pages": [
+        3,
+        47
+      ],
+      "locator": "Introduction; Section VI.D",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:percent_change_from_baseline"
+      ],
+      "statement": "Expresses the headline counterfactual result as a percentage change in aggregate welfare relative to a no-subsidy baseline policy, rather than only reporting the underlying dollar levels of valuations, profits, and payoffs.",
+      "pages": [
+        45,
+        45
+      ],
+      "locator": "Table 5; Section VI.C",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Benchmarks the share of firms predicted to choose an alternate location absent subsidies against prior 'but-for' estimates summarized in the literature, and attributes the difference to its sample of larger firms and deals rather than a different underlying responsiveness.",
+      "pages": [
+        43,
+        43
+      ],
+      "locator": "Section VI.B, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "monetary_terms"
+      ],
+      "statement": "Translates an assumed range of unmodeled consultant contingency fees into an adjusted welfare-gain range for each industry subsample, presented as an explicit back-of-envelope robustness calculation rather than a reestimated model.",
+      "pages": [
+        46,
+        47
+      ],
+      "locator": "Section VI.D",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "data_coverage"
+      ],
+      "statement": "States that in-kind components of subsidy deals, such as land grants or regulatory exemptions, are valued using the state's own reported estimate with no independent way to verify what that component is actually worth to the firm.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section II.B, Limitations of the data",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "interpretation_caveat"
+      ],
+      "statement": "States that the counterfactual is a partial-equilibrium exercise that holds each state's corporate tax rate and other location characteristics fixed, explicitly excluding any policy response by states to losing the ability to offer discretionary subsidies.",
+      "pages": [
+        42,
+        42
+      ],
+      "locator": "Section VI.A, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": [
+        "selection"
+      ],
+      "statement": "Notes that because the dataset only contains firms observed receiving a discretionary subsidy, location decisions made in the complete absence of subsidy competition are never directly observed, so all estimates are conditioned on this selected group of deals.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Limitations of the data",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "scaling_discussed"
+      ],
+      "statement": "States that its estimated responsiveness to subsidies pertains to a sample of unusually large discretionary deals for major firms and should not be extrapolated to smaller, nondiscretionary tax-credit programs studied elsewhere in the literature.",
+      "pages": [
+        43,
+        43
+      ],
+      "locator": "Section VI.B, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "external_validity",
+      "tags": [
+        "time_period_specific"
+      ],
+      "statement": "Frames the counterfactual analysis as specific to the sample period's set of observed deals and location fundamentals, since the underlying valuation and profit distributions are estimated from that period's competition outcomes only.",
+      "pages": [
+        42,
+        42
+      ],
+      "locator": "Section VI.A",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "binscatter",
+        "in_main_text"
+      ],
+      "statement": "Uses binned scatterplots that control for other covariates as the main graphical device for illustrating the identification argument, plotting winning subsidies against differences in runner-up and winning location characteristics.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_sample"
+      ],
+      "statement": "Uses conventional significance stars defined in the table note for the reduced-form regression table, with the note also stating the sample period, data sources, and the exclusion of a handful of outlier deals.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars"
+      ],
+      "statement": "Reports the structural profit and valuation parameter tables as estimate-standard error pairs without significance stars, unlike the reduced-form table elsewhere in the paper.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Tables 3-4",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "Includes a dedicated industry-by-industry summary statistics table reporting deal counts, average number of competing bidders, and the distribution of subsidy size, jobs promised, and planned investment.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "map"
+      ],
+      "statement": "Uses choropleth-style United States maps to show the geographic distribution of subsidy giving and, separately, the predicted change in firm locations across states under the counterfactual subsidy ban.",
+      "pages": [
+        15,
+        44
+      ],
+      "locator": "Figure 1; Figure 7",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph"
+      ],
+      "statement": "Previews a numbered list of the paper's main findings within the introduction, ahead of any tables or figures, before turning to a dedicated 'related literature' discussion later in the same section.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "Presents the institutional background, new dataset, descriptive statistics, and reduced-form correlations before introducing the structural auction model and identification argument.",
+      "pages": [
+        8,
+        20
+      ],
+      "locator": "Section II before Section III",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "other:related_literature_in_intro"
+      ],
+      "statement": "Places the literature-positioning discussion as a labeled subsection within the introduction itself rather than as a separate numbered section of the paper.",
+      "pages": [
+        7,
+        8
+      ],
+      "locator": "Introduction, 'Related literature'",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy"
+      ],
+      "statement": "Relies extensively on a lettered online appendix, spanning many named appendix sections cited throughout the main text, for auxiliary derivations, additional robustness checks, and supporting figures and tables not reproduced in the main text.",
+      "pages": [
+        11,
+        47
+      ],
+      "locator": "Throughout, appendix citations A-M",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "data_public",
+        "code_public"
+      ],
+      "statement": "Includes a dedicated data-availability statement citing a Harvard Dataverse replication package containing the data and code used to produce the paper's tables and figures.",
+      "pages": [
+        49,
+        49
+      ],
+      "locator": "Data Availability",
+      "basis": "stated",
+      "applies_to": [
+        "regression",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_access_procedure_described"
+      ],
+      "statement": "Describes a manual data-access procedure for state budget and tax-expenditure documents, stating that when such documents are not posted online the author called state budget offices directly to request the material from their archives.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section II.B, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "data_access",
+      "tags": [
+        "commercial",
+        "linked_records"
+      ],
+      "statement": "Supplements the hand-collected subsidy dataset with commercial financial-database records to fill in firm industry classification when it is not otherwise reported in a subsidy entry or news article.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section II.B, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Reports a linear reduced-form regression of subsidy size on deal, state, and local characteristics, and separately estimates a structural profit/valuation model via simulated maximum likelihood with random coefficients.",
+      "card_shows": "Records design d1 method=regression realized as reghdfe (hdfe_ols) for the reduced-form specifications, and design d2 method=structural_estimation (variant discrete_choice) realized as mle2 (mle) in the R estimation script.",
+      "status": "agree",
+      "pages": [
+        17,
+        34
+      ],
+      "card_ref": "d1; d2; s1.est; s5.est"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "States that the reduced-form subsidy regression includes year fixed effects in every column.",
+      "card_shows": "Specs s1-s4 all record fixed_effects=['year'] for the reghdfe calls underlying the reduced-form table.",
+      "status": "agree",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Gives no statement anywhere in the main text about how standard errors are computed for the reduced-form regression, despite reporting significance stars in the table.",
+      "card_shows": "Specs s1-s4 record se.type=null and se.cluster_level=null, i.e. the SE construction was not determinable from the read code excerpts.",
+      "status": "unknown",
+      "pages": [
+        17,
+        18
+      ],
+      "card_ref": "s1.se.type; s4.se.type",
+      "note": "Neither the paper nor the code excerpts read for the card resolve the SE type for the reduced-form table; genuinely unresolved on both sides."
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Presents standard errors next to each structural parameter estimate without describing in prose how they are derived.",
+      "card_shows": "Specs s5-s6 record se.type='other:hessian_inverse', evidenced by code that extracts the coefficient table (including SEs) from the fitted maximum-likelihood object.",
+      "status": "code_only",
+      "pages": [
+        35,
+        36
+      ],
+      "card_ref": "s5.se.type"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Describes the fully saturated reduced-form column as combining deal characteristics, tax rates, and local characteristics such as unemployment, income, industry concentration, wages, house prices, research universities, and airports.",
+      "card_shows": "Spec s4's formula_or_call lists a comparable set of regressors (corp_tax, income_tax, right-to-work proxy, establishment concentration, wage, an R&D/university-linked variable, airport indicator, and a house-price index) under the same year-FE reghdfe call.",
+      "status": "agree",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "s4.formula_or_call"
+    },
+    {
+      "item": "weights",
+      "paper_says": "Does not mention any weighting of observations in the reduced-form or structural estimation.",
+      "card_shows": "All specifications (s1-s6) record weights=null.",
+      "status": "agree",
+      "pages": [
+        17,
+        36
+      ],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "sample",
+      "paper_says": "States detailed sample-construction rules: a fixed multi-year window, a minimum deal-size threshold, confirmed competition, a known US runner-up, and separate dollar caps for the manufacturing and trade/services estimation subsamples.",
+      "card_shows": "The pipeline.sample_restrictions array is empty and no specification records a sample field, so the card does not capture these restrictions.",
+      "status": "paper_only",
+      "pages": [
+        4,
+        36
+      ],
+      "card_ref": "pipeline.sample_restrictions"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "States that the runner-up location is the explicit comparison object used for identification: the winning subsidy equals the runner-up's valuation plus the profit difference between the two locations.",
+      "card_shows": "Design records d1 and d2 both leave comparison_group as null.",
+      "status": "paper_only",
+      "pages": [
+        27,
+        28
+      ],
+      "card_ref": "d1.comparison_group; d2.comparison_group"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Reports several model-fit diagnostics, including a runner-up valuation scatterplot, a simulated-versus-observed subsidy distribution comparison, and a state-identity fit check used to correct the counterfactual.",
+      "card_shows": "The top-level diagnostics array is empty.",
+      "status": "paper_only",
+      "pages": [
+        37,
+        41
+      ],
+      "card_ref": "diagnostics"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Describes multiple robustness and sensitivity exercises: an alternative model without random coefficients, a referee-suggested alternative identification approach, and a consulting-fee sensitivity calculation.",
+      "card_shows": "The top-level robustness array is empty.",
+      "status": "paper_only",
+      "pages": [
+        46,
+        47
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Presents five numbered main-text tables and seven main-text figures, plus many additional lettered appendix tables and figures.",
+      "card_shows": "Records a single table object (spec_ids s1-s4, corresponding to the reduced-form table) and no figures, reflecting that only five of roughly twenty code files were read for the card.",
+      "status": "paper_only",
+      "pages": [
+        16,
+        45
+      ],
+      "card_ref": "outputs.tables; outputs.figures",
+      "note": "Card coverage is marked partial (5 of ~20 code files read), which explains the gap rather than indicating a discrepancy in the underlying code."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Names the specific external sources used to build the dataset and location-characteristic covariates, including a subsidy tracker, a trade magazine's deals report, state budget documents, and, for housing prices, a named housing-index provider.",
+      "card_shows": "The single recorded data entry (analysis_cz) has source_hint=null, so the card does not capture which external sources feed the analysis file, and does not resolve whether the house-price covariate is built from the source the paper names.",
+      "status": "paper_only",
+      "pages": [
+        11,
+        18
+      ],
+      "card_ref": "data.0.source_hint"
+    }
+  ],
+  "gaps": [
+    "No discussion anywhere in the main text of the standard-error type (robust vs. clustered vs. other) for either the reduced-form regression table or the structural parameter tables, despite reporting standard errors and significance stars.",
+    "No statement of the statistical software or package versions used for the reduced-form regression or the maximum-likelihood estimation; the recipe card independently shows Stata (reghdfe) and R (bbmle/mle2) but the paper text does not name them.",
+    "No preregistration, institutional review board, or data-subject consent statement appears anywhere in the read text, consistent with this being an observational/structural study built from public and hand-collected records rather than an experiment.",
+    "No explicit multiple-testing adjustment across the many robustness and sensitivity exercises reported across the main text and appendix.",
+    "No formal standard-error or confidence-interval statement attached to the headline counterfactual welfare-gain figures in Table 5, beyond presenting them as point simulation outputs."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        52
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full extracted text of all 52 pages, covering the introduction, institutional background, data description, descriptive statistics and reduced-form evidence, the auction model, identification, estimation and results, the counterfactual welfare analysis, the conclusion, the data-availability statement, and the reference list. The paper's lettered online appendices A-M, cited repeatedly for additional derivations, robustness checks, and figures/tables, are a separate document not included in this text extraction and were not read; their existence and cited content are recorded only as referenced by the main text."
+  }
+}

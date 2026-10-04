@@ -1,0 +1,1295 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "ecta_92_3_6",
+ "journal": "Econometrica",
+ "year": 2024,
+ "doi": "10.3982/ecta19466",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T03:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/Econometrica/metadata/articles.csv",
+   "sha256": "2c8b1723bc2637f1fb33a71083f6c2f9a3858d9cdd98ecd328ac57df6dbb0419"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_10724847/replication/application_rcp.R",
+    "sha256": "69f840a96454c756f96f0a3578d28ec1e5583d1bb83982fd8f53216fac5ea185",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      220
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10724847/replication/get_dgp_rcp.R",
+    "sha256": "78782d4db1f0a829e0e3310357353e1c570c58c706fe7cae42e471346d75c3fe",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      193
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10724847/replication/setup.R",
+    "sha256": "849bf7792c0953078a666a534019497fc1efa811e4e8ae68122bb8aa2d62866a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      32
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+    "sha256": "9ca20bde3d72bf1a56f81369f0afab7f97999089b041349006d49dd4c242d22d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      283
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+    "sha256": "e0c5386607ac92237cc87456b87e89dc08d145fdd3f11bf7668e137541048d29",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      280
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_10724847/replication/download_all_packages.R",
+    "reason": "other",
+    "note": "Package installation script, not analysis code"
+   },
+   {
+    "path": "code/zenodo_10724847/replication/simulations_rot.R",
+    "reason": "out_of_budget",
+    "note": "Supplementary simulations for rule-of-thumb bounds"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Coverage includes main simulation and application workflows. DGP empirically motivated from retirement eligibility data (rcp.rda). Three simulation types: coverage with local linear, coverage with optimized RDD, and power analysis. Applications presented in Tables 1, S.3 and Figures 1-4."
+ },
+ "repository": {
+  "languages": [
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_10724847/replication/simulations_rcp.R",
+   "code/zenodo_10724847/replication/application_rcp.R"
+  ],
+  "directory_layout": "Zenodo archive with replication subfolder containing R scripts, local package Packages/, and empirical data (rcp.rda)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 7,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      8,
+      8
+     ],
+     "snippet": "set.seed(12345678)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+    "lines": [
+     53,
+     54
+    ],
+    "snippet": "source(\"get_dgp_rcp.R\")\nsource(\"sim_functions_rcp.R\")",
+    "supports": [
+     "master_scripts"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": null,
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "individual or household",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/get_dgp_rcp.R",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "load(\"rcp.rda\")",
+     "supports": [
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "download",
+    "scripts": [
+     "code/zenodo_10724847/replication/setup.R"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/setup.R",
+      "lines": [
+       14,
+       14
+      ],
+      "snippet": "install.packages(\"./Packages/FRD_1.0.zip\", repos = NULL, type=\"binary\")",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "build",
+    "scripts": [
+     "code/zenodo_10724847/replication/get_dgp_rcp.R"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       52,
+       54
+      ],
+      "snippet": "source(\"get_dgp_rcp.R\")\nsource(\"sim_functions_rcp.R\")",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_10724847/replication/simulations_rcp.R"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       62,
+       67
+      ],
+      "snippet": "for(type in 1:3){\n  # Set run.power=TRUE if simulations for power pictures should run\n  run.power= c(FALSE, FALSE, TRUE)[type]",
+      "supports": [
+       "after",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_10724847/replication/application_rcp.R"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "unknown",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/application_rcp.R",
+      "lines": [
+       2,
+       2
+      ],
+      "snippet": "##################### Empirical Application for #######################",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "inferred",
+  "run_order_notes": "DGP generation produces 9 DGPs (3x3 cross-product of outcome and treatment specifications); simulations run coverage and power experiments; application script independently replicates table results.",
+  "sample_restrictions": [
+   {
+    "description": "Continuous running variable: seq.discrete=1000 adds continuous perturbation",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       72,
+       74
+      ],
+      "snippet": "if(run.power){\n   # seq.discrete=1000 implies a continuous running variable\n   seq.discrete=1000",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Discrete running variable: tested at support point differences of 3.6, 3, and 6",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       85,
+       87
+      ],
+      "snippet": "seq.discrete=c(3.6, 1000, 3, 6)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "bias_aware_anderson_rubin",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      10,
+      13
+     ],
+     "snippet": "### Methods \n# Bias-aware Anderson Rubin\nrd.ba <- function(d, h = NA, M, te, hmin){\n  d1 <- RDHonest:::NPRData(data.frame(Y = (d$Y - te * d$D), X = d$X), class = \"SRD\", cutoff = 0)",
+     "supports": [
+      "variant",
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "delta_method",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      27,
+      49
+     ],
+     "snippet": "# Bias-aware Delta Method\ndm.rd.ba <- function(d, h = NA, M, te, hmin){\n  d1 <- RDHonest:::NPRData(data.frame(Y = d$Y, D = d$D, X = d$X), cutoff = 0, class = \"FRD\")",
+     "supports": [
+      "variant",
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "optimized_rd",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      85,
+      86
+     ],
+     "snippet": "reg=try(optrdd::optrdd(X=X, Y=Y, W=W, max.second.derivative=max.second.derivative,",
+     "supports": [
+      "variant",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "other:honest_rd",
+   "command": "RDHonest:::NPRHonest.fit",
+   "package": null,
+   "formula_or_call": "RDHonest:::NPRHonest.fit(d1, M = M %*% c(1, abs(te)), sclass = \"H\", opt.criterion = \"FLCI\", se.method = \"supplied.var\")",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Main specification",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": "supplied.var",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+      "lines": [
+       16,
+       16
+      ],
+      "snippet": "reg <- RDHonest:::NPRHonest.fit(d1, M = M %*% c(1, abs(te)), sclass = \"H\", opt.criterion = \"FLCI\", se.method = \"supplied.var\")",
+      "supports": [
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Transformed outcome Y - te*D used for Anderson-Rubin construction; minimum bandwidth enforced via hmin parameter",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "reg <- RDHonest:::NPRHonest.fit(d1, M = M %*% c(1, abs(te)), sclass = \"H\", opt.criterion = \"FLCI\", se.method = \"supplied.var\")",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "other:honest_rd",
+   "command": "RDHonest:::NPRHonest.fit",
+   "package": null,
+   "formula_or_call": "reg <- RDHonest:::NPRHonest.fit(d1, M = M, sclass = \"H\", opt.criterion = \"FLCI\", \n                                  se.method = \"supplied.var\")",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Main specification",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": "supplied.var",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+      "lines": [
+       32,
+       33
+      ],
+      "snippet": "reg <- RDHonest:::NPRHonest.fit(d1, M = M, sclass = \"H\", opt.criterion = \"FLCI\", \n                                  se.method = \"supplied.var\")",
+      "supports": [
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "FRD class used; confidence interval constructed via inversion of hypothesis tests over parameter space",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      32,
+      33
+     ],
+     "snippet": "reg <- RDHonest:::NPRHonest.fit(d1, M = M, sclass = \"H\", opt.criterion = \"FLCI\", \n                                  se.method = \"supplied.var\")",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust::rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust::rdrobust(y=d$Y-te*d$D,x=d$X, c=0, h=h, b=b, vce=\"nn\")",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "3 RBC specifications: Naive (us=TRUE), Undersmoothed (scaled bandwidth), RBC baseline",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": "nn",
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+      "lines": [
+       55,
+       55
+      ],
+      "snippet": "reg=quiet(try(invisible(rdrobust::rdrobust(y=d$Y-te*d$D,x=d$X, c=0, h=h, b=b, vce=\"nn\"))))",
+      "supports": [
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Uses robust bias-corrected inference; bandwidth selection data-driven with fallback to minimum",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "reg=quiet(try(invisible(rdrobust::rdrobust(y=d$Y-te*d$D,x=d$X, c=0, h=h, b=b, vce=\"nn\"))))",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "other:optimized_rd",
+   "command": "optrdd2",
+   "package": null,
+   "formula_or_call": "reg= optrdd2(X=d$X, Y=(d$Y-te*d$D), W=d$ind.X,max.second.derivative=M%*%c(1, abs(te)))",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Main specification",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+      "lines": [
+       85,
+       86
+      ],
+      "snippet": "reg=try(optrdd::optrdd(X=X, Y=Y, W=W, max.second.derivative=max.second.derivative,\n                                        optimizer = c(\"auto\"), estimation.point=0, verbose=FALSE))",
+      "supports": [
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Optimized bandwidth selection via MSE minimization",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      97,
+      97
+     ],
+     "snippet": "reg= optrdd2(X=d$X, Y=(d$Y-te*d$D), W=d$ind.X,max.second.derivative=M%*%c(1, abs(te)))",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Fuzzy RD with immediate discontinuity; pre-trend testing not applicable",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "first_stage",
+   "design_id": "d2",
+   "spec_ids": [
+    "s2"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Observed in code for FRD specifications",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "weak_iv",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Tests robustness to weak identification regimes",
+   "evidence": []
+  },
+  {
+   "id": "x4",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/zenodo_10724847/replication/simulations_rcp.R",
+    "code/zenodo_10724847/replication/application_rcp.R"
+   ],
+   "note": "Continuity of density at cutoff not tested; standard RD assumption",
+   "evidence": []
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_estimator",
+   "description": "Comparison of Anderson-Rubin vs Delta Method inference approaches",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s2"
+   ],
+   "relationship_status": "unresolved",
+   "note": "Both are bias-aware; Delta Method uses two-stage approach vs. transformed outcome for AR",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      27,
+      32
+     ],
+     "snippet": "# Bias-aware Delta Method\ndm.rd.ba <- function(d, h = NA, M, te, hmin){",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_estimator",
+   "description": "Comparison of bias-aware (RDHonest) vs robust bias-corrected (rdrobust) inference",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s3"
+   ],
+   "relationship_status": "unresolved",
+   "note": "Different philosophies: Anderson-Rubin with explicit bias bounds vs RBC with data-driven bandwidth",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      51,
+      55
+     ],
+     "snippet": "# RBC Anderson Rubin\nrd.robust = function(d, h=NULL, b=NULL, te, us=FALSE, h.low, b.low){",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_estimator",
+   "description": "Comparison of local linear vs optimized RD estimation",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s5"
+   ],
+   "relationship_status": "unresolved",
+   "note": "Optimized RD uses optimal MSE-minimizing bandwidth; local linear uses bias-aware selection",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      94,
+      97
+     ],
+     "snippet": "# Optimized RD - Anderson Rubin\nar.opt = function(d, M, te){",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_se",
+   "description": "Smoothness bound specifications: true M, 0.5*M, 2*M (scaled), Armstrong-Kolesar ROT, Imbens-Wager ROT",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [],
+   "relationship_status": "unresolved",
+   "note": "Tests sensitivity to specification of maximum second derivative bound",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      162,
+      162
+     ],
+     "snippet": "### Determine rule-of-thumb Smoothness Bounds",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_sample",
+   "description": "Running variable specifications: continuous (seq.discrete=1000) and discrete (3.6, 3, 6 support point spacing)",
+   "baseline_spec_ids": [],
+   "variant_spec_ids": [],
+   "relationship_status": "unresolved",
+   "note": "Tests whether methods remain valid with discrete running variables and different support structures",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      73,
+      73
+     ],
+     "snippet": "# seq.discrete=1000 implies a continuous running variable",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": "xtable",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       146,
+       146
+      ],
+      "snippet": "print(xtable::xtable(100*table, digits=1), colnames=TRUE, file=\"sim_tabS1.tex\")",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": "xtable",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       149,
+       149
+      ],
+      "snippet": "print(xtable::xtable(table_bandwidth, digits=1), colnames=TRUE, file=\"sim_tabS2.tex\")",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": null,
+    "package": "xtable",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       159,
+       159
+      ],
+      "snippet": "print(xtable::xtable(table, digits=1), colnames=TRUE, file=\"sim_tabS4.tex\")",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "output_ref": null,
+    "path": null,
+    "package": "xtable",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/application_rcp.R",
+      "lines": [
+       220,
+       220
+      ],
+      "snippet": "print(xtable::xtable(as.matrix(results), digits = 3, booktabs=TRUE), file=\"applicationest.tex\")",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f7",
+    "output_ref": null,
+    "path": null,
+    "package": "tikzDevice",
+    "format": null,
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+      "lines": [
+       177,
+       177
+      ],
+      "snippet": "tikzDevice::tikz(\"power01.tex\", width =5, height =3.5)",
+      "supports": [
+       "package"
+      ]
+     }
+    ],
+    "types": []
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "R",
+   "name": "RDHonest",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "library(RDHonest)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "rdrobust",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      12,
+      12
+     ],
+     "snippet": "library(rdrobust)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "optrdd",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/setup.R",
+     "lines": [
+      19,
+      19
+     ],
+     "snippet": "devtools::install_github(\"swager/optrdd\")",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "FRD",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      14,
+      14
+     ],
+     "snippet": "library(FRD)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "foreach",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "foreach"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      13,
+      13
+     ],
+     "snippet": "library(foreach)",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "xtable",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "xtable::xtable"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      146,
+      146
+     ],
+     "snippet": "print(xtable::xtable(100*table, digits=1), colnames=TRUE, file=\"sim_tabS1.tex\")",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "tikzDevice",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "tikzDevice::tikz"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      177,
+      177
+     ],
+     "snippet": "tikzDevice::tikz(\"power01.tex\", width =5, height =3.5)",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "abind",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "abind::abind"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      97,
+      97
+     ],
+     "snippet": "acomb= function(...) abind::abind(..., along=ifelse(length(c.eval.seq)==1, 1,4))",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "R.utils",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "library(R.utils)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "doParallel",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "registerDoParallel",
+    "makeCluster"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/simulations_rcp.R",
+     "lines": [
+      45,
+      48
+     ],
+     "snippet": "library(doParallel)\n  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))\n  cl <- makeCluster(detectCores()-1)\n  registerDoParallel(cl)",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "limSolve",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/get_dgp_rcp.R",
+     "lines": [
+      9,
+      9
+     ],
+     "snippet": "library(limSolve)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "AER",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "AER::ivreg"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/application_rcp.R",
+     "lines": [
+      69,
+      69
+     ],
+     "snippet": "ivreg1=AER::ivreg(y~d+x+I(x^2)+I(x^3)+I(x^4)|z+x+I(x^2)+I(x^3)+I(x^4))",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "sandwich",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "sandwich::vcovHC"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/application_rcp.R",
+     "lines": [
+      70,
+      70
+     ],
+     "snippet": "ivreg1.se=sqrt(sandwich::vcovHC(ivreg1, type=\"HC0\")[2,2])",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Running variable cutoff always set to 0 in all RD specifications",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      13,
+      13
+     ],
+     "snippet": "d1 <- RDHonest:::NPRData(data.frame(Y = (d$Y - te * d$D), X = d$X), class = \"SRD\", cutoff = 0)",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Treatment effect parameter (te) computed as ratio of reduced form to first stage: te = rf/fs",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/get_dgp_rcp.R",
+     "lines": [
+      161,
+      161
+     ],
+     "snippet": "# Get jump in reduced form, first stage, and treatment effect",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Monte Carlo coverage computed as indicator for 0 or te contained in confidence interval",
+   "evidence": [
+    {
+     "path": "code/zenodo_10724847/replication/sim_functions_rcp.R",
+     "lines": [
+      22,
+      22
+     ],
+     "snippet": "res <- c(as.numeric((0 >= reg$coef$conf.low) & (0 <= reg$coef$conf.high)))",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd"
+  ],
+  "fields": []
+ }
+}

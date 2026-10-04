@@ -1,0 +1,402 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "rfs_2024_rfs_hhae045",
+ "journal": "RFS",
+ "year": 2024,
+ "doi": "10.1093/rfs/hhae045",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:38:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/RFS/metadata/articles.csv",
+   "sha256": "9c01e943d18e3d667f1beffa18cf5eaa9cc3fab65663d6cd8d84866ba430560a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_ABLKE4/Code/MasterCode_ISS_Engagement_RFS.do",
+    "sha256": "c8747e4d1c3e2cecb167512719aa0e2d8e1c6d29c9396c3c7130084ce7ff6bcf",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      145
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_figure5_final.do",
+    "sha256": "f3d1901242a4025c5e6cded1d8a33c2402601fb7e2dcbf2bb69e7653ec42e8c3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      24
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table10_final.do",
+    "sha256": "85bd177c0169281bc5bbf440451961dd219f35dfcfabebc4c1a075bab0873c38",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      19
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table11_final.do",
+    "sha256": "1bcb849ce9ee3569bc9264592ee2ef2ca1f85ff4622ccc8968781a6b1ef6e5cb",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      26
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table12_final.do",
+    "sha256": "3489e296650045e40ff9090f569ec7201e456e7febceb7b5a1a98ee2f6fc2c3a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      33
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table2_final.do",
+    "sha256": "95bc720895cd9f6502f2391471c94d733d6ce39233c84980696629b28cd9722b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      107
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table4_final.do",
+    "sha256": "739112c4af3d5738c19fa98206648c502fca9edfa7d6bf5524920e04faf89942",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table5_final.do",
+    "sha256": "c25a9d48c301c4130775cffed5e34808400148ec5389a49514be747bf158da8e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      35
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+    "sha256": "43ee3e68e3aac933fb201a5a59ece8842e45a0b6cbd6cbbb1412f1508caeb219",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      45
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_table9_final.do",
+    "sha256": "52c70671f74c5b49ba65d7243de624cbd2434207161021d09b814fab22cdb8fa",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      20
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/Code/produce_tableIA9_final.do",
+    "sha256": "80bc17ae418c0f30714749f47d9202ac7f6adf1e1921f97190bddc4846ddb3bd",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      21
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_ABLKE4/readme.txt",
+    "sha256": "694ff2705c58a6492bfc751096485208b69889c4060f7997db271f97571db511",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      30
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main RD and diagnostic analysis from table 4-6. Data external."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_ABLKE4/Code/MasterCode_ISS_Engagement_RFS.do"
+  ],
+  "directory_layout": "code/dataverse_ABLKE4/Code",
+  "readme_present": true,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 30,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "hardcoded",
+   "evidence": [
+    {
+     "path": "code/dataverse_ABLKE4/Code/MasterCode_ISS_Engagement_RFS.do",
+     "lines": [
+      12,
+      13
+     ],
+     "snippet": "capture cd",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_ABLKE4/Code/MasterCode_ISS_Engagement_RFS.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_ABLKE4/Code/MasterCode_ISS_Engagement_RFS.do",
+      "lines": [
+       35,
+       70
+      ],
+      "snippet": "do Code\\produce_table1_final",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Master script calls table/figure scripts sequentially",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+     "lines": [
+      1,
+      10
+     ],
+     "snippet": "TABLE 6: RD Tests of ISS Treatment and Shareholder Engagement",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025) c(0.7) p(1) q(2) all",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+      "lines": [
+       15,
+       15
+      ],
+      "snippet": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025) c(0.7)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025) c(0.7) p(1) q(2) all",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Table 4A",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "rdrobust",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rdrobust"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025)",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "rddensity",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rddensity"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_ABLKE4/Code/produce_table4_final.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "rddensity sop_for_iss, c(0.7)",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd"
+  ],
+  "fields": []
+ }
+}

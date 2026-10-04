@@ -1,0 +1,588 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_92_2_14",
+ "journal": "ReStud",
+ "year": 2025,
+ "doi": "10.1093/restud/rdae036",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/01_figures-paper.do",
+    "sha256": "9d20c616f3e651ac8f768c8d34e356164a89b9e5c68c828233f90ca25da21c0e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      180,
+      280
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+    "sha256": "0c07d31af54eea0052fc1c42d9c0333f833910bbb63c393b8823d82109ec728f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      550
+     ],
+     [
+      600,
+      800
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/did_imputation_multiclust.do",
+    "sha256": "109bb33412406b7ec5b43f99f48cc8c2eebc321857665457c0d937776ab3c317",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/measurement-error-simulation.R",
+    "sha256": "73f326c25d88c12c7785ff229138e4cbcc40b52eb45f1539c533d0edc6afae0d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/ols_spatial_HAC.ado",
+    "sha256": "3e01e3768121fe0f96ce8992e5e9166806f7e052456dc33ee1b7dbb441a84a46",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/sumstats.do",
+    "sha256": "6d00199cfab55660c489440e4b39a0d07a928619b066f237992269798615fb4e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/03_figures_appendix.do",
+    "reason": "out_of_budget",
+    "note": "appendix specifications"
+   },
+   {
+    "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/04_tables-appendix.do",
+    "reason": "out_of_budget",
+    "note": "appendix specifications"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Focused on main paper tables and figures. All main analysis uses Stata; R code implements measurement error robustness check. Central design: staggered DID comparing FDLR-controlled villages before/after 2009 Kimia military operation."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/01_figures-paper.do",
+   "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+   "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/04_tables-appendix.do"
+  ],
+  "directory_layout": "Replication package contains /code (Stata .do files, .ado modules, R script), /data (shared .dta files), /output (tables and figures)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 10,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/measurement-error-simulation.R",
+     "lines": [
+      66,
+      67
+     ],
+     "snippet": "set.seed(2009)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "village_data",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "village-year",
+   "period": "1995-2012",
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      62,
+      66
+     ],
+     "snippet": "use \"$data/village_data.dta\", clear\n\ndrop if year>2012\ndrop if new_village==1\ndrop if IDT==\"SHABUNDA\"",
+     "supports": [
+      "unit_of_observation",
+      "period",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hhold_data",
+   "type": "survey",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      302,
+      303
+     ],
+     "snippet": "use \"$data/hhold_data.dta\", clear",
+     "supports": [
+      "type",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Figures load did_imputation_multiclust at line 49; Tables define ols_spatial_HAC at line 53",
+  "sample_restrictions": [
+   {
+    "description": "Drop new villages and Shabunda chiefdom",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+      "lines": [
+       64,
+       66
+      ],
+      "snippet": "drop if new_village==1\ndrop if IDT==\"SHABUNDA\"",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Keep years 1995-2012",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+      "lines": [
+       64,
+       64
+      ],
+      "snippet": "drop if year>2012",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": "staggered_adoption",
+   "classification_basis": "code_trace",
+   "treatment": "Kimia II military operation targeting FDLR-controlled areas in 2009",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/01_figures-paper.do",
+     "lines": [
+      202,
+      202
+     ],
+     "snippet": "gen Ei=2009 if FDLR_2008==1 & IDT==\"MWENGA\"",
+     "supports": [
+      "treatment",
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe j_any_fdlr j_kimia2_alt j_Kimia_exp, absorb(IDV NKyear) vce(cluster IDV IDCyear)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "IDV",
+    "NKyear"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "IDV",
+     "IDCyear"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+      "lines": [
+       102,
+       102
+      ],
+      "snippet": "reghdfe j_any_fdlr j_kimia2_alt j_Kimia_exp, absorb(IDV NKyear) vce(cluster IDV IDCyear)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Conley spatial HAC also reported separately; reghdfe uses residuals from ols_spatial_HAC",
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      102,
+      102
+     ],
+     "snippet": "reghdfe j_any_fdlr j_kimia2_alt j_Kimia_exp, absorb(IDV NKyear)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_imputation",
+   "command": "did_imputation_multiclust",
+   "package": null,
+   "formula_or_call": "did_imputation_multiclust d_any_fdlr groupidv year Ei if IDT!=\"SHABUNDA\", ///\n\t\t\tcluster(groupidv new_NCyear) fe(new_NKyear groupidv year) ///\n\t\t\thor(0/3) pretrend(4) autosample minn(0)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "groupidv",
+     "new_NCyear"
+    ],
+    "details": "two-way cluster on group and chiefdom-year; Borusyak et al. 2021 DID imputation with multi-cluster extension",
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/01_figures-paper.do",
+      "lines": [
+       204,
+       206
+      ],
+      "snippet": "did_imputation_multiclust d_any_fdlr groupidv year Ei if IDT!=\"SHABUNDA\", ///\n\t\t\tcluster(groupidv new_NCyear) fe(new_NKyear groupidv year) ///\n\t\t\thor(0/3) pretrend(4) autosample minn(0)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     },
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/did_imputation_multiclust.do",
+      "lines": [
+       5,
+       10
+      ],
+      "snippet": "did_imputation: Treatment effect estimation and pre-trend testing in staggered adoption diff-in-diff designs with an imputation approach of Borusyak, Jaravel, and Spiess (2021)",
+      "supports": [
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study format with hor(0/3) horizons and pretrend(4) pretends; autosample allows imputation-based estimator to balance sample",
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/01_figures-paper.do",
+     "lines": [
+      204,
+      206
+     ],
+     "snippet": "did_imputation_multiclust d_any_fdlr groupidv year Ei if IDT!=\"SHABUNDA\",",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "Table I",
+    "path": "output/table_1_mechanism_motivation.tex",
+    "package": "outreg2",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+      "lines": [
+       103,
+       107
+      ],
+      "snippet": "outreg2 using \"$output/table_1_mechanism_motivation.tex\", keep(j_kimia2_alt)",
+      "supports": [
+       "output_ref",
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": "Table II",
+    "path": "output/table_2_mechanism_war.tex",
+    "package": "outreg2",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+      "lines": [
+       234,
+       236
+      ],
+      "snippet": "outreg2 using \"$output/table_2_mechanism_war.tex\", ctitle(\"FDLR, Attack\") replace tex(frag) dec(3) label nocon nonotes adec(2)",
+      "supports": [
+       "output_ref",
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": "output/table_3_welfare.tex",
+    "package": "outreg2",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+      "lines": [
+       755,
+       756
+      ],
+      "snippet": "outreg2 using \"$output/table_3_welfare.tex\", drop(j_Kimia_exp) ///\n\t\t\t\t\tctitle(\" Rape \") replace tex(frag pretty) ///",
+      "supports": [
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      102,
+      102
+     ],
+     "snippet": "reghdfe j_any_fdlr j_kimia2_alt j_Kimia_exp, absorb(IDV NKyear) vce(cluster IDV IDCyear)",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      102,
+      102
+     ],
+     "snippet": "reghdfe j_any_fdlr j_kimia2_alt j_Kimia_exp, absorb(IDV NKyear) vce(cluster IDV IDCyear)",
+     "supports": [
+      "purpose",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "outreg2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "outreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      103,
+      107
+     ],
+     "snippet": "outreg2 using \"$output/table_1_mechanism_motivation.tex\", keep(j_kimia2_alt)",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/zenodo_8370126/Replication_package_-_December_2023/Replication package/code/02_tables-paper.do",
+     "lines": [
+      103,
+      107
+     ],
+     "snippet": "outreg2 using \"$output/table_1_mechanism_motivation.tex\", keep(j_kimia2_alt)",
+     "supports": [
+      "purpose",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,1348 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_113_3_2",
+  "journal": "AER",
+  "year": 2023,
+  "doi": "10.1257/aer.20191594",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_113_3_2.pdf",
+    "pdf_sha256": "81dc51b6505514afaad0fe9b1efa5907ae30027fe60a537061bac3d51620daec",
+    "text_path": "harness_build/papers/text/aer_113_3_2.txt",
+    "text_sha256": "43e1851beec44a7365fe5bfe5cce4e37b845d8dc88a44fc7198ee597b381e319",
+    "pages": 36
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:00:08Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/aer_113_3_2.json",
+    "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793"
+  },
+  "methods": [
+    "panel_fe",
+    "ml_nuisance",
+    "other:structural_auction_estimation",
+    "other:duration_analysis"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Title, abstract, and introduction",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "I. Background (mineral leasing institutions; Texas Permanent School Fund and the Relinquishment Act)",
+      "pages": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "II. Data (sources, sample selection, Tables 1-2, Figure 1)",
+      "pages": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "III. Empirical Strategy (identification argument, Figure 2, Table 3 balance, equation 1, DML footnote, Figure 3)",
+      "pages": [
+        10,
+        15
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "IV. Lease Results (A. Bonus Results, B. Allocative Efficiency Results; Tables 4-6)",
+      "pages": [
+        15,
+        22
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "V. Parcel Results (A. Extensive Margin, B. Parcel Outcomes; Figure 4, Table 7)",
+      "pages": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "mechanisms",
+      "title": "VI. Discussion (firm composition, bid/value evidence, A. Mechanism, B. External Validity; Tables 8-12)",
+      "pages": [
+        25,
+        33
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "conclusion",
+      "title": "VII. Conclusion",
+      "pages": [
+        33,
+        34
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        34,
+        36
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "States its goal as directly measuring the gains from a centralized formal mechanism relative to informal decentralized transactions, comparing otherwise similar assets allocated by auction versus by negotiation.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Abstract; Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "States its identifying assumption as variation in a parcel's mineral-allocation history within a narrowly defined geographic area being uncorrelated with unobserved geological resource quality, given that this assignment predates knowledge of shale resources.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Section III",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ],
+      "quote": "as good as randomly assigned"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "Names two parallel design variants used to implement the comparison: fixed-effects regressions with location-by-time bins of varying granularity, and a nonparametric double/debiased machine-learning control for location and time.",
+      "pages": [
+        10,
+        15
+      ],
+      "locator": "Section III",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Discusses as the central threat to identification the possibility that the state or early land buyers had advance knowledge of which parcels would later prove valuable for shale development, and argues this is implausible given that the relevant mineral-ownership assignment predates the discovery of shale plays by decades.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section III",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Discusses a second threat to interpretation: that the allocation mechanism could itself affect whether a transaction happens at all, so that a lease-level comparison would miss the missing transactions under one mechanism, drawing an explicit parallel to a classic sample-selection argument.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Section III",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "restricted_data_used"
+      ],
+      "statement": "Draws its lease and payment data from a state land-management agency's administrative records, describing this as unusual in the broader mineral-leasing literature because it allows direct observation of the full payment structure rather than only a partial or indirect measure.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Restricts most analyses to leases signed within a defined multi-year window overlapping the shale-development period, using the individual lease as the primary unit of observation and separately constructing an aggregated parcel-level dataset for a companion analysis.",
+      "pages": [
+        7,
+        9
+      ],
+      "locator": "Section II; Section IIA",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Lists specific sample restrictions, exclusion of leases outside shale formations, of leases outside a defined acreage range, of leases with multiple ownership interests, and of leases with missing or inconsistent information, each justified on institutional or comparability grounds, with the full sequence of cuts placed in an online appendix waterfall table.",
+      "pages": [
+        7,
+        8
+      ],
+      "locator": "Section IIA",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ],
+      "note": "Online appendix waterfall table not available in extracted text."
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described"
+      ],
+      "statement": "Constructs parcel-level outcomes by spatially matching leases to an independently sourced parcel boundary map, allocating a lease's outcomes proportionally across parcels by acreage share whenever a single lease spans more than one parcel.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported",
+        "data_coverage"
+      ],
+      "statement": "Notes that production and royalty data are observed only through a fixed cutoff date, so output and revenue for leases with primary terms extending past that date are right-censored, and addresses this by restricting some analyses to leases whose primary term had already concluded.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section IVB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines its primary payment outcome as the natural logarithm of the up-front bonus payment per acre, and defines an output outcome as a discounted sum of oil and gas production converted into a common energy-weighted barrel-of-oil-equivalent unit, alongside a parallel production-revenue measure.",
+      "pages": [
+        16,
+        20
+      ],
+      "locator": "Section IVA; Section IVB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Defines its treatment indicator as whether a lease was allocated by auction rather than negotiation, with the value determined by the mineral-rights history of the underlying parcel rather than by any characteristic of the individual lease transaction itself.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section III, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "other:administrative_share_adjustment"
+      ],
+      "statement": "Notes that administrative payment data for one leasing category are recorded only as a fixed statutory half-share of total payments under the relevant statute, and states that these values are doubled throughout the analysis to represent full lease value.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed",
+        "other:zero_heavy_outcome_handling"
+      ],
+      "statement": "Explains that because a large share of leases are never drilled and record exactly zero output and revenue in reality rather than as a selection artifact, it avoids adding a small constant to enable a log transform for these outcomes and instead reports both a per-acre linear specification and a pseudo-Poisson specification designed for skewed, zero-heavy data.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section IVB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "Reports its main payment table as a sequence of columns that vary the granularity and interaction structure of the location and time fixed effects, from coarser to finer spatial grids and from quarter-only to grid-by-year time controls, with one column designated in the text as the main specification.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Table 4",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "r2_reported"
+      ],
+      "statement": "Reports the number of observations for every column of its fixed-effects and machine-learning tables, and additionally reports R-squared for the fixed-effects columns, while the machine-learning columns omit an R-squared measure.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported"
+      ],
+      "statement": "States the sample mean of the dependent variable for the omitted negotiated group directly in the notes beneath its main payment table, to give readers a benchmark against which to interpret the estimated coefficient.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes"
+      ],
+      "statement": "States in table notes that standard errors are clustered by grid, matching whichever spatial grid size defines the fixed effects in that column, while giving no comparable clustering statement for the machine-learning columns.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 4 notes; Table 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "controls_progressive_columns"
+      ],
+      "statement": "Adds a further block of surface-quality control variables, shape regularity, a multiple-parcel indicator, land-cover measures, and distance to infrastructure, in later columns of its main tables to check that the baseline result is not driven by omitted surface characteristics.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Table 4 columns for extra controls",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "no_justification_found"
+      ],
+      "statement": "Clusters standard errors throughout at the same spatial grid used to define its location fixed effects, but does not include an explicit sentence explaining why that grid, rather than some other level, is the appropriate clustering unit beyond its correspondence to the fixed-effect structure.",
+      "pages": [
+        13,
+        16
+      ],
+      "locator": "Table 3 notes; Table 4 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Leaves the standard-error or clustering approach for its double/debiased machine-learning columns undescribed in the tables and surrounding text that were read, so no inference justification could be located for that estimator.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 4 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Does not describe any adjustment for testing across the many outcome-by-specification combinations reported over its several tables, despite repeatedly interpreting individual coefficients as precisely or imprecisely estimated.",
+      "pages": [
+        16,
+        25
+      ],
+      "locator": "Tables 4-7",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "Reports a formal balance table that regresses proxies for geological resource quality and for surface characteristics known at the time of mechanism assignment onto category indicators with location fixed effects, arguing that the pattern of estimated coefficients supports treating assignment as good as random.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_main_text"
+      ],
+      "statement": "Presents a quarter-by-quarter comparison, shown as a figure of point estimates with confidence intervals, of the probability that a parcel is under an active lease across the two mechanisms, to check whether the mechanisms differ systematically in how often a transaction is actually completed.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section VA; Figure 4",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix"
+      ],
+      "statement": "States that a further duration-style analysis, comparing how quickly unleased spells end on the two parcel types, is conducted in an online appendix not included in the extracted text, as an additional check on the transaction-rate concern.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section VA, footnote 34",
+      "basis": "stated",
+      "applies_to": [
+        "other:duration_analysis"
+      ],
+      "note": "Online appendix analysis referenced but not available in extracted text."
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_fixed_effects",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "Reports the same payment regression under alternative sizes and interaction structures of the location and time fixed effects, presenting these as additional columns of the same main table rather than in a separate robustness table.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Table 4",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator"
+      ],
+      "statement": "Reports both a linear per-acre specification and a pseudo-Poisson quasi-maximum-likelihood specification for its output and revenue outcomes side by side in the same table, motivated by the heavily skewed and zero-heavy distribution of those variables.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample"
+      ],
+      "statement": "Re-estimates its main payment comparison on a sample restricted to leases where the state does not own the surface rights, to check that the result is not driven by a confound related to surface ownership rather than to the leasing mechanism itself.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Table 4 columns restricted to private surface",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "States that it collected and digitized supplementary lease-contract clause data and re-checks whether unobserved contractual side terms explain the payment difference, describing this exercise as occurring in an online appendix not included in the extracted text.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IVA, footnote referencing online Appendix E",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ],
+      "note": "Online appendix contractual-clause check referenced but not available in extracted text."
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Reports, in an online appendix table not included in the extracted text, a version of the main payment regression that additionally conditions on royalty rate and primary term, while explicitly flagging in the main text that this specification does not have a causal interpretation because those variables are themselves outcomes of the mechanism.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IVA; online Appendix Table",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ],
+      "quote": "bad controls"
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Tests whether the payment and output differences hold within the same firm by adding firm fixed effects to its main specification, in order to separate a market-composition explanation, different firms winning under each mechanism, from a within-firm matching explanation.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Table 9",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "exploratory_labelled",
+        "in_appendix"
+      ],
+      "statement": "Discusses an appendix table that adds measures of lessor experience and sophistication to its main payment regression, describing the resulting evidence that more sophisticated lessors secure somewhat higher payments as suggestive rather than as a primary finding.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section VIB, footnote referencing online Appendix Table",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ],
+      "note": "Underlying appendix table not available in extracted text."
+    },
+    {
+      "id": "o33",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "Uses the distribution of losing and winning bids within each completed auction, together with estimated bidder valuations recovered from a structural auction model, as intermediate evidence for its proposed explanation that auctions generate better firm-lease matches than negotiations.",
+      "pages": [
+        27,
+        30
+      ],
+      "locator": "Tables 10-12",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_auction_estimation"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "Draws on the theoretical distinction between vertical and horizontal heterogeneity in bidder values to interpret whether observed bid rankings between pairs of firms competing in the same auctions are more consistent with one firm being persistently stronger or with match-specific value differences.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Table 10; Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_auction_estimation"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives",
+        "suggestive_labelled"
+      ],
+      "statement": "Considers and partly rules out several alternative explanations for the estimated gap, including that negotiations are simply auctions with fewer bidders or that negotiations follow a formal sequential process, while explicitly labeling parts of this discussion as illustrative rather than as a fully identified test of any specific mechanism.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Section VIA",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "mechanism_evidence",
+      "tags": [
+        "survey_evidence"
+      ],
+      "statement": "Cites an external survey of private mineral-rights lessors, describing their reported search behavior and use of professional advice, as corroborating evidence that informal negotiators in the broader private market are relatively uninformed rather than merely under-incentivized.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section VIA",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Interprets its estimated payment and output coefficients relative to the average value of the outcome for the omitted negotiated group, reported in the accompanying table notes, translating a log-point difference into an implied revenue gain for a lease of average size.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 4 notes; Section IVA",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Compares the observed gap between average and single-bidder auction outcomes in its setting to bidding patterns documented for a neighboring state's mineral auctions in prior work, situating the magnitude of its own bid data against that external benchmark.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Table 11 discussion",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_auction_estimation"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "cost_benefit"
+      ],
+      "statement": "Offers an informal cost-benefit comparison between the estimated payment gain from switching to a formal mechanism and the typical fee charged by existing electronic mineral-auction platforms, to argue informally that the net benefit of using such a platform is large.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Section VIB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "precision_discussed"
+      ],
+      "statement": "Explicitly notes where certain specifications, particularly the parcel-level and nonlinear zero-heavy-outcome models, produce noisier and less precisely estimated coefficients than the main lease-level specifications, attributing this to sample composition and additional zeros rather than treating it as evidence against the main finding.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Section VB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity"
+      ],
+      "statement": "Acknowledges that its negotiation setting involves a public-agency intermediary that reviews and can improve negotiated terms before final approval, and states that this feature likely means the estimated gap understates what would be found for a fully private negotiation without such oversight.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section VIB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "States that its attempt to decompose the output effect into an extensive drilling margin and an intensive production-conditional-on-drilling margin does not itself carry a causal interpretation, because no instrument for the decision to drill is available.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IVA, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "Notes that no record exists of failed or attempted negotiations, or of the process leading up to a completed negotiated transaction, which limits its ability to directly test candidate explanations for why negotiated outcomes underperform.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VIA",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "scaling_discussed"
+      ],
+      "statement": "Devotes a dedicated subsection to discussing how the results from this specific public-land natural experiment would generalize to the broader population of private mineral leases and to other informally negotiated asset markets, weighing institutional features that would push the gap larger or smaller in other settings.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section VIB",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "external_validity",
+      "tags": [
+        "time_period_specific"
+      ],
+      "statement": "Frames its identifying variation as arising because the assignment of mineral rights was completed decades before the shale-development technology and resource locations were known, making the specific historical timing of its natural experiment central to the identification logic rather than incidental.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section III",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "Opens its empirical section with descriptive summary-statistics tables comparing auctioned and negotiated leases, and separately auctioned and negotiated parcels, on land characteristics, contract terms and outcomes, reporting means, standard deviations, and simple mean-difference tests.",
+      "pages": [
+        9,
+        11
+      ],
+      "locator": "Table 1; Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "map",
+        "raw_data_plot"
+      ],
+      "statement": "Includes one figure showing the raw geographic overlap of auctioned and negotiated leases within a concentrated study region, illustrating the source of identifying variation visually in addition to presenting it in regression-table form.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot"
+      ],
+      "statement": "Presents one figure of quarter-specific point estimates with confidence intervals for its extensive-margin leasing-incidence comparison, adopting an event-study-style visual convention even though the underlying design is a cross-sectional natural experiment rather than a staggered-adoption panel.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Figure 4",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "Places most interpretive and technical detail, including variable units, sample restrictions, and the standard-error clustering scheme, in the notes beneath each table rather than repeating it in the main prose, keeping the running text focused on results.",
+      "pages": [
+        9,
+        29
+      ],
+      "locator": "Table notes throughout",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a",
+        "online_appendix_not_available"
+      ],
+      "statement": "Refers throughout to a suite of alphabetically labeled online-appendix tables and figures for supplementary specifications, alternative outcome definitions, and additional robustness checks, none of which are included in the extracted text of the published article.",
+      "pages": [
+        12,
+        32
+      ],
+      "locator": "Multiple footnotes citing online Appendix sections A-E",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph",
+        "roadmap_paragraph"
+      ],
+      "statement": "Its introduction previews the main payment and output findings, situates the paper's contribution against short reviews of a mechanism-comparison literature and an oil-and-gas-leasing literature, and closes with an explicit roadmap paragraph listing the content of each subsequent section.",
+      "pages": [
+        1,
+        5
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "Presents institutional background and the data description before formally stating the empirical strategy and identifying assumptions in their own numbered section.",
+      "pages": [
+        5,
+        10
+      ],
+      "locator": "Sections I-III",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "writing_structure",
+      "tags": [
+        "main_result_first",
+        "mechanisms_after_main"
+      ],
+      "statement": "Presents its primary payment result before the output and allocative-efficiency results, and defers all discussion of the underlying match-quality mechanism and external validity to a dedicated section following both sets of main results.",
+      "pages": [
+        15,
+        25
+      ],
+      "locator": "Sections IV-VI",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "writing_structure",
+      "tags": [
+        "in_main_text"
+      ],
+      "statement": "Folds most robustness checks directly into its main results tables as additional columns rather than collecting them into a separate, clearly labeled robustness section.",
+      "pages": [
+        16,
+        21
+      ],
+      "locator": "Tables 4-6",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy"
+      ],
+      "statement": "Frequently defers supporting analyses, including contractual-clause coding, a duration model of unleased spells, alternative outcome definitions, and lessor-sophistication heterogeneity, to an extensive online appendix that is referenced repeatedly but not reproduced in the extracted text.",
+      "pages": [
+        12,
+        32
+      ],
+      "locator": "Footnotes throughout",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "replication_package_cited"
+      ],
+      "statement": "States in an acknowledgment footnote that replication code is available through a cited data-repository identifier, and separately lists a formal replication-data citation for the same package in its reference list.",
+      "pages": [
+        1,
+        35
+      ],
+      "locator": "Acknowledgment footnote; References",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "public_use"
+      ],
+      "statement": "Describes its primary lease and payment data as obtained directly from a state land-management agency's administrative records covering the full universe of leases on the relevant public-land category.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o58",
+      "category": "data_access",
+      "tags": [
+        "linked_records"
+      ],
+      "statement": "Describes constructing its parcel-level dataset by linking the agency's lease records to an independently sourced geographic parcel map obtained from a private mapping contractor.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    },
+    {
+      "id": "o59",
+      "category": "replication_statement",
+      "tags": [
+        "software_named"
+      ],
+      "statement": "Names the specific double/debiased machine-learning framework and estimation procedure it follows, citing the originating econometrics methodology paper and specifying that it uses random forests to estimate the nuisance functions.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section III, footnote 22",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "ml_nuisance"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Estimates lease-level regressions of log bonus payments on an auction indicator with a flexible acreage spline and location-by-time fixed effects, plus a partially linear double/debiased machine-learning specification with random-forest nuisance functions, as described in Section III and used in Table 4; the same core specification structure is reused in an online-appendix check on lease addenda.",
+      "card_shows": "designs.d1 (panel_fe): specifications.s1 is a feols call, LogBonus ~ Auction + bs(Acres, df=4) | Grid10Yr + YearQtr; designs.d2 (ml_nuisance): specifications.s3 is a dml() call with model 'linear' and ml='rf'.",
+      "status": "agree",
+      "pages": [
+        14,
+        16
+      ],
+      "card_ref": "specifications.s1; specifications.s3"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "States that its bonus regressions include fixed effects for a spatial grid interacted with year plus quarter-of-sample as the main specification, and separately reports a coarser grid as an alternative.",
+      "card_shows": "specifications.s1.fixed_effects = ['Grid10Yr','YearQtr']; specifications.s2.fixed_effects = ['Grid20Yr','YearQtr'].",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specifications.s1.fixed_effects; specifications.s2.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "States in table notes that standard errors are clustered by grid, matching the spatial grid size used to define the fixed effects in that column.",
+      "card_shows": "specifications.s1.se = {type: cluster, cluster_level: ['Grid10']}; specifications.s2.se = {type: cluster, cluster_level: ['Grid20']}.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specifications.s1.se.cluster_level; specifications.s2.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Gives no explicit standard-error or clustering description for its double/debiased machine-learning columns anywhere in the main-text tables that were read.",
+      "card_shows": "specifications.s3.se = {type: 'iid', cluster_level: null}; specifications.s4.se = {type: null, cluster_level: null}, i.e. the extracted code likewise shows no stated clustering and an inconsistent or absent SE type across the two machine-learning specs.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specifications.s3.se; specifications.s4.se"
+    },
+    {
+      "item": "sample",
+      "paper_says": "States that its output and production-revenue regressions restrict the sample to leases whose primary term had concluded by the end of the royalty-data window, to limit bias from right-censored outcomes.",
+      "card_shows": "specifications.s2.sample = '!Censored'; specifications.s4.sample = '!Censored'; pipeline.sample_restrictions records an additional InSample and year filter tied to spec s4.",
+      "status": "agree",
+      "pages": [
+        20,
+        20
+      ],
+      "card_ref": "specifications.s2.sample; pipeline.sample_restrictions"
+    },
+    {
+      "item": "controls",
+      "paper_says": "States that all specifications control flexibly for lease size, a spline in acres in the fixed-effects models, while the machine-learning specifications include acreage as one covariate alongside location and time in the random-forest nuisance functions.",
+      "card_shows": "specifications.s1 and s2 formula_or_call include bs(Acres, df = 4); specifications.s3 and s4 formula_or_call include Acres inside the covariate set Acres + CentLat + CentLong + EffDate.",
+      "status": "agree",
+      "pages": [
+        14,
+        16
+      ],
+      "card_ref": "specifications.s1.formula_or_call; specifications.s3.formula_or_call"
+    },
+    {
+      "item": "weights",
+      "paper_says": "Makes no mention of regression weights for any reported specification; all main models read as unweighted.",
+      "card_shows": "specifications.s1 through s4 all record weights as null.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specifications.s1.weights; specifications.s2.weights; specifications.s3.weights; specifications.s4.weights"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Its stated identification diagnostics are a location-fixed-effect balance regression of quality and surface-characteristic proxies on mechanism-assignment indicators, and a quarter-by-quarter comparison of leasing incidence across mechanisms; the design is a cross-sectional natural experiment rather than a staggered panel, so no conventional pre-trend event-study test is expected.",
+      "card_shows": "diagnostics.x1 = {kind: 'pretrend_test', status: 'not_found_in_scope'}, based only on the two regression scripts read for the extraction, with no time-varying treatment dynamics or placebo test found there.",
+      "status": "agree",
+      "pages": [
+        13,
+        23
+      ],
+      "card_ref": "diagnostics.x1"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "States in the main text that it reruns its bonus specification after adding hand-digitized measures of supplementary lease-contract clauses, describing this as an online-appendix robustness check that additional contractual demands do not explain the payment gap.",
+      "card_shows": "All four recorded specifications come from a script named for lease addenda and populate outputs.tables.t1 (output_ref = 'stacked_regressions_addenda.tex'), matching the paper's addenda check by file and table naming, but the read portion of the script shows only Auction, Acres and the fixed-effect or machine-learning covariates, with no addenda-clause variables visible in specifications.s1-s4.",
+      "status": "unknown",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "outputs.tables.t1; specifications.s1",
+      "note": "Card confirms this script builds the paper's addenda-robustness table but the read line ranges do not show the addenda-specific covariates, so full content agreement cannot be confirmed from the card alone."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Presents its bonus and output regression results in numbered in-text tables with several fixed-effects and machine-learning columns each; the specification set behind this recipe card corresponds to the paper's separate online-appendix addenda-robustness table rather than to the main Table 4 or Table 6.",
+      "card_shows": "outputs.tables has one entry (t1) with output_ref 'stacked_regressions_addenda.tex', built by the same script supplying specifications.s1-s4; outputs.figures is empty.",
+      "status": "agree",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "outputs.tables.t1"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Describes its lease- and royalty-level data as obtained directly from the state land-management agency's administrative records.",
+      "card_shows": "data[0] records access='unknown' and source_hint=null, evidenced in the read code only by sample start and end date constants in texas_constants.R; no data-provenance detail is present in the code sections that were read.",
+      "status": "paper_only",
+      "pages": [
+        7,
+        7
+      ],
+      "card_ref": "data.0"
+    }
+  ],
+  "gaps": [
+    "No explicit sentence justifies the choice of spatial grid as the clustering level beyond its correspondence to the fixed-effect structure; no alternative clustering level is discussed in the main text that was read.",
+    "No stated standard-error or clustering description is given anywhere for the double/debiased machine-learning specifications.",
+    "No multiple-testing adjustment is described despite many outcome-by-specification combinations being reported and individually characterized as precisely or imprecisely estimated across several tables.",
+    "No preregistration, IRB approval, or consent statement; not applicable in an obvious sense, as the paper analyzes secondary administrative and public records rather than newly collected primary human-subjects data.",
+    "The paper's several online appendices (additional extensions, alternative outcome definitions, the lease-addenda contractual-clause analysis, the duration/hazard model of unleased spells, lessor-sophistication heterogeneity, and structural-estimation implementation details) are referenced repeatedly but are not part of the extracted text and could not be read.",
+    "No formal weak-instrument or first-stage statistic is reported anywhere, consistent with the design not using an instrumental-variables strategy."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        36
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 36 pages of the extracted text were read, covering the title, abstract, introduction, institutional background, data description, empirical strategy, all main lease- and parcel-level results, the discussion of firm heterogeneity and mechanism evidence (including the auction bid and structural-value analysis), external validity, conclusion, and reference list. This extracted text is the full published main article (pages 628-663); the paper's several online appendices are hosted separately by the publisher and are not part of this extraction, so they were not read."
+  }
+}

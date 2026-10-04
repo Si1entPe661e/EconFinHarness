@@ -1,0 +1,1282 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "structural_estimation",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "ecta_2025_ecta22303",
+        "sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+        "journal": "Econometrica",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "R",
+          "MATLAB",
+          "C",
+          "Shell"
+        ]
+      },
+      {
+        "artid": "jpe_2025_735509",
+        "sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+        "journal": "JPE",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_90_5_11",
+        "sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+        "journal": "ReStud",
+        "year": 2023,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      },
+      {
+        "artid": "restud_92_2_7",
+        "sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+        "journal": "ReStud",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "MATLAB",
+          "Shell"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 4,
+    "specifications": 7,
+    "designs": 4,
+    "by_language": {
+      "R": 2,
+      "MATLAB": 2,
+      "C": 1,
+      "Shell": 2,
+      "Stata": 3,
+      "Python": 1
+    },
+    "by_journal": {
+      "Econometrica": 1,
+      "JPE": 1,
+      "ReStud": 2
+    },
+    "by_year": {
+      "2025": 3,
+      "2023": 1
+    },
+    "by_coverage": {
+      "partial": 4
+    }
+  },
+  "by_variant": {
+    "unknown": 2,
+    "discrete_choice": 1,
+    "dynamic_auction_demand": 1
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "discrete_choice",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            128,
+            128
+          ],
+          "snippet": "### RUN MLE FOR MANUFACTURING",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "variant",
+      "value": "dynamic_auction_demand",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_bids.m",
+          "lines": [
+            30,
+            30
+          ],
+          "snippet": "optimal bid",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "gmm",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": "s6",
+          "field": "estimator",
+          "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+          "lines": [
+            63,
+            63
+          ],
+          "snippet": "eststo sigma3_varepsilon3: gmm",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "gmm (bid - {k}*{theta}) (bid^2 - ({k}*{theta})^2 - X[`i',1]^2 - {k}*{theta}^2) if state==`i' & rank ==1, winitial(identity) from(k tmp_k theta tmp_theta) technique(dfp)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "estimator",
+      "value": "mle",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1,
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            62,
+            62
+          ],
+          "snippet": "LL_rand <- function(params) {",
+          "language": "R"
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+          "lines": [
+            66,
+            66
+          ],
+          "snippet": "fminunc",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "estimator",
+      "value": "cox_hazard",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            65,
+            66
+          ],
+          "snippet": "ml model d0 censgeo (bidder_bids censored = )\neststo t2: ml maximize",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/Structural_Model_Fitting.R",
+          "lines": [
+            369,
+            369
+          ],
+          "snippet": "s1 <- feols(",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "command",
+      "value": "gmm",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": "s6",
+          "field": "command",
+          "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+          "lines": [
+            63,
+            63
+          ],
+          "snippet": "eststo sigma3_varepsilon3: gmm",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "gmm (bid - {k}*{theta}) (bid^2 - ({k}*{theta})^2 - X[`i',1]^2 - {k}*{theta}^2) if state==`i' & rank ==1, winitial(identity) from(k tmp_k theta tmp_theta) technique(dfp)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "command",
+      "value": "feols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/Structural_Model_Fitting.R",
+          "lines": [
+            369,
+            369
+          ],
+          "snippet": "s1 <- feols(",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "command",
+      "value": "fminunc",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+          "lines": [
+            66,
+            66
+          ],
+          "snippet": "fminunc",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "command",
+      "value": "ml model d0",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            65,
+            66
+          ],
+          "snippet": "ml model d0 censgeo (bidder_bids censored = )\neststo t2: ml maximize",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "command",
+      "value": "mle2",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            95,
+            96
+          ],
+          "snippet": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "package",
+      "value": "bbmle",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 4,
+      "unknown_papers": 3,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "s5",
+          "field": "package",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            95,
+            96
+          ],
+          "snippet": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "se_type",
+      "value": "bootstrap",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+          "lines": [
+            124,
+            124
+          ],
+          "snippet": "bootstrap",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "se_type",
+      "value": "iid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s3",
+          "field": "se.type",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            65,
+            66
+          ],
+          "snippet": "ml model d0 censgeo (bidder_bids censored = )\neststo t2: ml maximize",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "se_type",
+      "value": "other:hessian_inverse",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "s5",
+          "field": "se.type",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            205,
+            205
+          ],
+          "snippet": "mle_tab <- coef(summary(res$mle))[, 1:2]",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "se_type",
+      "value": "robust",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s2",
+          "field": "se.type",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            215,
+            216
+          ],
+          "snippet": "sqrt(v[1,1])\n\tmat def A[2*`i',2] = sqrt(v[2,2])",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "fixed_effects_count",
+      "value": "0",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+          "lines": [
+            80,
+            81
+          ],
+          "snippet": "[est2,~,~,~,~,simulacion_hessian] = ...\n        fminunc(@(theta) f_lik(theta,H_simulacion,type_simulacion,ftype_simulacion), est1, optimset('MaxIter',10^9,'MaxFunEvals',10^9,'TolFun',10e-9,'TolX',10e-",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "fixed_effects_count",
+      "value": "1",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s2",
+          "field": "fixed_effects",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "gmm (bid - {k}*{theta}) (bid^2 - ({k}*{theta})^2 - X[`i',1]^2 - {k}*{theta}^2) if state==`i' & rank ==1, winitial(identity) from(k tmp_k theta tmp_theta) technique(dfp)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "fixed_effects_count",
+      "value": "2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s3",
+          "field": "fixed_effects",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/Structural_Model_Fitting.R",
+          "lines": [
+            374,
+            374
+          ],
+          "snippet": "loss_cut + Disaster_Id,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "diagnostic",
+      "value": "overid:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 1,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o21",
+      "facet": "output_format",
+      "value": "tex",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 3,
+      "share_of_known": 1.0,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "t1",
+          "field": "format",
+          "path": "code/zenodo_10416565/replication_package/replication_package/README.md",
+          "lines": [
+            126,
+            130
+          ],
+          "snippet": "output_estimates.tex",
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o22",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 4,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 2,
+        "Stata": 1,
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "d3",
+          "field": "classification_basis",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+          "lines": [
+            200,
+            222
+          ],
+          "snippet": "Fits structural model to estimate underlying parameters\nsource(file = \"./scripts/Structural_Model_Fitting.R\", echo = TRUE)",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            128,
+            128
+          ],
+          "snippet": "### RUN MLE FOR MANUFACTURING",
+          "language": "R"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+          "lines": [
+            3,
+            5
+          ],
+          "snippet": "Table 5, \"Structural Estimates\"\n\n***",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_bids.m",
+          "lines": [
+            30,
+            30
+          ],
+          "snippet": "optimal bid",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o23",
+      "facet": "role_known",
+      "value": "known",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1,
+        "Stata": 1,
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "d3",
+          "field": "role",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+          "lines": [
+            200,
+            222
+          ],
+          "snippet": "Fits structural model to estimate underlying parameters\nsource(file = \"./scripts/Structural_Model_Fitting.R\", echo = TRUE)",
+          "language": "R"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": "d2",
+          "field": "role",
+          "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+          "lines": [
+            3,
+            5
+          ],
+          "snippet": "Table 5, \"Structural Estimates\"\n\n***",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "d1",
+          "field": "role",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_bids.m",
+          "lines": [
+            30,
+            30
+          ],
+          "snippet": "optimal bid",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o24",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 3,
+      "specs": 6,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "R": 2,
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/Structural_Model_Fitting.R",
+          "lines": [
+            369,
+            369
+          ],
+          "snippet": "s1 <- feols(",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": "s5",
+          "field": "resolution_status",
+          "path": "code/dataverse_M7MEXG/BiddingForFirms_ReplicationPackage_code/Hv.R",
+          "lines": [
+            95,
+            96
+          ],
+          "snippet": "mle <- mle2(minuslogl = LL_rand, start = start_vals,\n                method = method, vecpar = TRUE, control = list(maxit = 5000))",
+          "language": "R"
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+          "lines": [
+            80,
+            81
+          ],
+          "snippet": "[est2,~,~,~,~,simulacion_hessian] = ...\n        fminunc(@(theta) f_lik(theta,H_simulacion,type_simulacion,ftype_simulacion), est1, optimset('MaxIter',10^9,'MaxFunEvals',10^9,'TolFun',10e-9,'TolX',10e-",
+          "language": "MATLAB"
+        }
+      ]
+    },
+    {
+      "id": "o25",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": "s6",
+          "field": "resolution_status",
+          "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+          "lines": [
+            63,
+            63
+          ],
+          "snippet": "eststo sigma3_varepsilon3: gmm",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o26",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o27",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "MATLAB": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o28",
+      "facet": "language",
+      "value": "R",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jpe_2025_735509",
+          "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o29",
+      "facet": "language",
+      "value": "Shell",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Shell": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_92_2_7",
+          "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o30",
+      "facet": "language",
+      "value": "C",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "C": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o31",
+      "facet": "language",
+      "value": "Python",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_11",
+          "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "convention",
+      "text": "Relative file paths throughout (./data/, ./figures/, ./tables/, ./scripts/); working directory set to analysis - Replication/",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+      "lines": [
+        42,
+        42
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "sample_restriction",
+      "text": "Loan amount must be positive (Phys_Amount_Disbursed > 0)",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+      "lines": [
+        28,
+        28
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "sample_restriction",
+      "text": "Must have verified loss amount (non-missing Current_Verified_Loss)",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+      "lines": [
+        31,
+        31
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "reading_note",
+      "text": "Focused on pipeline architecture (Master.R), bunching estimation calls and thresholds, DIB specification, moral hazard DID model, and structural model initialization. Skipped robustness checks, heterogeneity analysis, and complete structural model details due to budget constraints. Renv and stargazer packages are vendored dependencies.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jpe_2025_735509",
+      "card_sha256": "b9bfe1a70546ec6423b68da9bfb24157ef0e44ea4aa3e0cebb7a90cca404c350",
+      "kind": "reading_note",
+      "text": "Analysis at deal-location level (winner vs runner-up/alternatives). Reduced-form specifications use reghdfe with year FE. Structural models use MLE with random coefficients estimated separately for manufacturing and trade/services. Counterfactual analysis simulates location choices under different subsidy scenarios.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_90_5_11",
+      "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+      "kind": "convention",
+      "text": "Results stored to CSV via store_est_tpl, then templated into LaTeX tables via table_from_tpl.py",
+      "record_id": null,
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/modules/README.md",
+      "lines": [
+        11,
+        11
+      ]
+    },
+    {
+      "artid": "restud_90_5_11",
+      "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+      "kind": "convention",
+      "text": "Data weights used: earnwt (CPS earnings weight), wtfinl (CPS final weight)",
+      "record_id": null,
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+        42,
+        42
+      ]
+    },
+    {
+      "artid": "restud_90_5_11",
+      "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+      "kind": "sample_restriction",
+      "text": "Exclude universally licensed occupations (gt==1)",
+      "record_id": null,
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+        28,
+        29
+      ]
+    },
+    {
+      "artid": "restud_90_5_11",
+      "card_sha256": "a0076029c654d333dfb8bf181646d98523e39443e7b7ade8ef9a80d5829979a1",
+      "kind": "reading_note",
+      "text": "Paper on welfare analysis of occupational licensing with reduced-form DID-style regressions and structural general equilibrium estimation using GMM. Read master scripts and main analysis branches; did not fully trace all robustness/heterogeneity specifications or output mapping details due to code length.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_92_2_7",
+      "card_sha256": "50a2117e7feb1a495d6abfed565c0688e6560a43bdc486035da872226f9ef722",
+      "kind": "reading_note",
+      "text": "Repository contains Stata and MATLAB replication code for structural estimation of dynamic auction demand. Data files are proprietary and not included. Budget allows coverage of main pipeline and key structural specifications.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet variant: unknown in 2/4 papers; shares are computed over the 2 known papers only",
+    "facet package: unknown in 3/4 papers; shares are computed over the 1 known papers only",
+    "facet se_type: unknown in 2/4 papers; shares are computed over the 2 known papers only",
+    "facet fixed_effects_count: unknown in 2/4 papers; shares are computed over the 2 known papers only",
+    "facet output_format: unknown in 3/4 papers; shares are computed over the 1 known papers only",
+    "2/4 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

@@ -1,0 +1,2014 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "gmm",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+      "journal": "JFE",
+      "year": 2024,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdag013",
+      "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_90_5_11",
+      "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+      "journal": "ReStud",
+      "year": 2023,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 3,
+    "by_journal": {
+      "JFE": 1,
+      "ReStud": 2
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 1,
+      "2023": 1
+    },
+    "with_card": 3,
+    "papers_with_category": {
+      "design_statement": 2,
+      "sample_construction": 1,
+      "variable_construction": 1,
+      "specification_reporting": 1,
+      "inference_justification": 1,
+      "diagnostic_reported": 3,
+      "heterogeneity_reported": 1,
+      "mechanism_evidence": 1,
+      "limitation_stated": 1,
+      "presentation_convention": 3,
+      "writing_structure": 3,
+      "replication_statement": 3,
+      "data_access": 3,
+      "other": 2
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "commercial",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o47",
+          "pages": [
+            3,
+            13
+          ],
+          "locator": "throughout, footnotes and Table 8 note",
+          "statement": "Draws on standard commercial/licensed financial databases (implied by Compustat-style variable names) combined with numerous third-party macro-factor series each cited to its own source paper, rather than restricted or hand-collected firm-level data; no data-use agreement is mentioned.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "other:regulator_administrative_data",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o51",
+          "pages": [
+            8,
+            9
+          ],
+          "locator": "Section 2.3",
+          "statement": "Data come from the state environmental regulator's administrative records (identifiers, scores, inspections, violations, penalties) combined with an EPA environmental justice index; no access restrictions are mentioned.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "public_use",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o51",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "footnote 14, Section 3",
+          "statement": "Main data are public-use CPS microdata from IPUMS with a dataset citation; the ACS is used for a self-replication; policy data were hand-collected by the authors.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "survey_collected",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o51",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "footnote 14, Section 3",
+          "statement": "Main data are public-use CPS microdata from IPUMS with a dataset citation; the ACS is used for a self-replication; policy data were hand-collected by the authors.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "estimand_named",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Frames its estimand as a measurement/construct-validity question: whether HXZ/FF5F factor-model performance is driven by the specific asset-growth construction of the investment factor rather than by investment itself, not a causal treatment-effect design.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "identifying_assumption_explicit",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o5",
+          "pages": [
+            20,
+            21
+          ],
+          "locator": "Section 5.3.1",
+          "statement": "Identification of the second-stage parameters is exposited informally through a simplified one-period, single-plant version of the firm's problem, whose closed-form solution is used to motivate the choice of moments; a variance decomposition of detected violations is used to motivate the moments for",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "threats_discussed",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o4",
+          "pages": [
+            2,
+            16
+          ],
+          "locator": "Introduction and Conclusion",
+          "statement": "Explicitly declines to take a stance on whether findings reflect risk or mispricing, stating this cannot be resolved without a structural model, framing the paper's contribution as comparative/documentary rather than causal.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o24",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Tables 6-7 notes",
+          "statement": "Reports sum-of-squared and mean-absolute pricing errors as the fit diagnostic for every stochastic-discount-factor specification, annualized for comparability across factors measured at different frequencies.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o22",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Table 5, Figure 4, Section 6.1",
+          "statement": "Model fit is assessed by a table listing each estimation moment with its simulated and empirical value, followed by a binscatter of estimated plant types against the leave-one-out mean of co-owned plants' types.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o25",
+          "pages": [
+            31,
+            31
+          ],
+          "locator": "footnote 34, Appendix Table A15",
+          "statement": "For the structural model, an appendix robustness check calibrates two more parameters so the system is overidentified and reports tests of the overidentifying restrictions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o25",
+          "pages": [
+            31,
+            31
+          ],
+          "locator": "footnote 34, Appendix Table A15",
+          "statement": "For the structural model, an appendix robustness check calibrates two more parameters so the system is overidentified and reports tests of the overidentifying restrictions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:model_fit_moments_table",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o22",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Table 5, Figure 4, Section 6.1",
+          "statement": "Model fit is assessed by a table listing each estimation moment with its simulated and empirical value, followed by a binscatter of estimated plant types against the leave-one-out mean of co-owned plants' types.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:pricing_error_fit_statistics",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o24",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Tables 6-7 notes",
+          "statement": "Reports sum-of-squared and mean-absolute pricing errors as the fit diagnostic for every stochastic-discount-factor specification, annualized for comparability across factors measured at different frequencies.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "overid_test",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o25",
+          "pages": [
+            31,
+            31
+          ],
+          "locator": "footnote 34, Appendix Table A15",
+          "statement": "For the structural model, an appendix robustness check calibrates two more parameters so the system is overidentified and reports tests of the overidentifying restrictions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "mechanism_motivated",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o31",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Section 4, Tables 6-7",
+          "statement": "Organizes the macro-factor pricing results around a between-portfolio-group contrast, comparing which of twelve candidate macro shocks price AG/INVT/AREC portfolios versus PPE portfolios, treated as the central differentiating result rather than a firm-level subgroup split.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "other:cross_portfolio_group_heterogeneity",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o31",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Section 4, Tables 6-7",
+          "statement": "Organizes the macro-factor pricing results around a between-portfolio-group contrast, comparing which of twelve candidate macro shocks price AG/INVT/AREC portfolios versus PPE portfolios, treated as the central differentiating result rather than a firm-level subgroup split.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:identity_weighting_matrix_stated",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o23",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4, GMM setup",
+          "statement": "States that the GMM pricing tests use an identity weighting matrix at a first-stage estimation, a specific choice stated in the main text but not compared against an alternative weighting scheme.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "data_coverage",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o37",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4",
+          "statement": "Flags its review of the macroeconomic-shock literature underlying the chosen factor list as necessarily incomplete, limiting any claim that the tested shocks are exhaustive.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "identification_caveat",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o36",
+          "pages": [
+            2,
+            16
+          ],
+          "locator": "Introduction and Conclusion",
+          "statement": "States it is difficult to definitively conclude whether a factor model captures risk or mispricing absent a structural model, repeating this caveat in both the introduction and the conclusion.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "interpretation_caveat",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o38",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Explicitly declines to take a position on which specific driver of equity-financing costs (agency frictions, risk aversion, or behavioral biases) explains its results, treating that question as outside the paper's scope.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "ruled_out_alternatives",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o34",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Section 4, Table 6 discussion",
+          "statement": "Partially rules out technology/productivity-shock explanations for the AG/INVT/AREC advantage by showing those shocks also price PPE portfolios, so they fail to differentiate the groups the paper is explaining.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "other",
+      "tag": "other:multi_step_estimation_described",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o53",
+          "pages": [
+            20,
+            20
+          ],
+          "locator": "Section 5.2",
+          "statement": "Estimation is laid out as three explicit steps (offline calibration, simulated method of moments for firms with nested inner and outer loops, analytic inversion of regulator first-order conditions) with each step's parameters named.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "other",
+      "tag": "other:software_not_named",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o52",
+          "pages": [
+            1,
+            34
+          ],
+          "locator": "whole main text",
+          "statement": "No statistical software or packages are named in the main text.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "appendix_tables_numbered_a",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o43",
+          "pages": [
+            7,
+            28
+          ],
+          "locator": "various",
+          "statement": "Online appendix tables are referenced with an A- prefix and appendix sections by number throughout the main text.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o45",
+          "pages": [
+            3,
+            33
+          ],
+          "locator": "Figures 1 to 4, Appendix Tables A1, A4",
+          "statement": "Figures include maps of state policy variation for example occupations, coefficient plots with confidence bands for education categories and age profiles, and a scatter of predicted occupation effects sized by employment share. Summary statistics tables are in the appendix, numbered A.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "stars_used",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o40",
+          "pages": [
+            4,
+            15
+          ],
+          "locator": "Tables 1-10 notes",
+          "statement": "Uses the same stars convention in every table note, spelling out the same three conventional significance thresholds, uniformly across Sharpe-ratio, regression, and GMM tables despite their different statistical frameworks.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o44",
+          "pages": [
+            20,
+            30
+          ],
+          "locator": "Tables 2 to 5 notes",
+          "statement": "Tables use three-level significance stars defined in notes; notes state the fixed effects, cluster level, sample restrictions, and cross-reference appendix variants.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "summary_stats_table",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o40",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Table 1",
+          "statement": "A summary statistics table reports N, mean, standard deviation and the 1st and 99th percentiles for key variables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o45",
+          "pages": [
+            3,
+            33
+          ],
+          "locator": "Figures 1 to 4, Appendix Tables A1, A4",
+          "statement": "Figures include maps of state policy variation for example occupations, coefficient plots with confidence bands for education categories and age profiles, and a scatter of predicted occupation effects sized by employment share. Summary statistics tables are in the appendix, numbered A.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "coefficient_plot",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o45",
+          "pages": [
+            3,
+            33
+          ],
+          "locator": "Figures 1 to 4, Appendix Tables A1, A4",
+          "statement": "Figures include maps of state policy variation for example occupations, coefficient plots with confidence bands for education categories and age profiles, and a scatter of predicted occupation effects sized by employment share. Summary statistics tables are in the appendix, numbered A.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "map",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o45",
+          "pages": [
+            3,
+            33
+          ],
+          "locator": "Figures 1 to 4, Appendix Tables A1, A4",
+          "statement": "Figures include maps of state policy variation for example occupations, coefficient plots with confidence bands for education categories and age profiles, and a scatter of predicted occupation effects sized by employment share. Summary statistics tables are in the appendix, numbered A.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_sample",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o44",
+          "pages": [
+            20,
+            30
+          ],
+          "locator": "Tables 2 to 5 notes",
+          "statement": "Tables use three-level significance stars defined in notes; notes state the fixed effects, cluster level, sample restrictions, and cross-reference appendix variants.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_se",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o44",
+          "pages": [
+            20,
+            30
+          ],
+          "locator": "Tables 2 to 5 notes",
+          "statement": "Tables use three-level significance stars defined in notes; notes state the fixed effects, cluster level, sample restrictions, and cross-reference appendix variants.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 3,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "States, in a Data availability statement, a Mendeley Data DOI as the location where the paper's code and data can be found, an explicit citable replication-package pointer.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o49",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Data Availability",
+          "statement": "A Data Availability paragraph states that data and code are on Zenodo with a DOI.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o50",
+          "pages": [
+            34,
+            34
+          ],
+          "locator": "Data Availability Statement",
+          "statement": "A data availability statement gives a Zenodo DOI for code and data; supplementary data are said to be available online at the journal.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_public",
+      "papers": 3,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "States, in a Data availability statement, a Mendeley Data DOI as the location where the paper's code and data can be found, an explicit citable replication-package pointer.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o49",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Data Availability",
+          "statement": "A Data Availability paragraph states that data and code are on Zenodo with a DOI.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o50",
+          "pages": [
+            34,
+            34
+          ],
+          "locator": "Data Availability Statement",
+          "statement": "A data availability statement gives a Zenodo DOI for code and data; supplementary data are said to be available online at the journal.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 3,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "States, in a Data availability statement, a Mendeley Data DOI as the location where the paper's code and data can be found, an explicit citable replication-package pointer.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o49",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Data Availability",
+          "statement": "A Data Availability paragraph states that data and code are on Zenodo with a DOI.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o50",
+          "pages": [
+            34,
+            34
+          ],
+          "locator": "Data Availability Statement",
+          "statement": "A data availability statement gives a Zenodo DOI for code and data; supplementary data are said to be available online at the journal.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o48",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Appendix. Supplementary material",
+          "statement": "Points to supplementary material via the article's own DOI as a location separate from the Mendeley code/data DOI, though its contents (Tables E1-E14) are not reproduced in the extracted main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "other:software_not_named",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o50",
+          "pages": [
+            1,
+            29
+          ],
+          "locator": "whole paper",
+          "statement": "No software or package is named in the main text for estimation or regressions.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o9",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "Names the external repository location of the underlying data and code in a Data availability statement rather than describing raw data sources or exclusion criteria in the main text body.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "other:no_dedicated_data_section",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o7",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Has no separate Data or Sample section; data sources, coverage, and construction procedures appear only in footnotes and table notes scattered across sections, with fuller replication of HXZ/FF5F baselines deferred to an online appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "other:fit_statistics_reported",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o19",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Tables 6-7",
+          "statement": "Reports sum-of-squared and mean-absolute pricing errors (annualized) in the GMM pricing tables in place of R2, alongside t-statistics rather than raw standard errors.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "measurement_error_discussed",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o12",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section 1, footnote 8",
+          "statement": "Constructs total, physical, and intangible capital measures following a cited method that adds off-balance-sheet capitalized R&D and a fixed share of SG&A as intangible investment, explicitly flagging that assumption as one used in prior studies.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:ar1_residualization",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o13",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Section 4, macro-factor list",
+          "statement": "Transforms macroeconomic shock variables heterogeneously by source: several series use AR(1) residuals to isolate an unexpected component, others are used directly as return spreads or pre-built innovations, with the choice stated for every variable.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:survey_based_index_construction",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o15",
+          "pages": [
+            14,
+            14
+          ],
+          "locator": "Section 5, footnote 24",
+          "statement": "Constructs an aggregate overextrapolation index from survey-based return expectations via a recursively estimated nonlinear-least-squares decay parameter, with the estimation procedure and data source described in a single long footnote.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "outcome_definition",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o12",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section 1, footnote 8",
+          "statement": "Constructs total, physical, and intangible capital measures following a cited method that adds off-balance-sheet capitalized R&D and a fixed share of SG&A as intangible investment, explicitly flagging that assumption as one used in prior studies.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "contribution_paragraph",
+      "papers": 3,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o45",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Opens the introduction with a contribution paragraph framing the paper as challenging the theoretical interpretation of the HXZ/FF5F investment factors, rather than presenting a new return anomaly.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o45",
+          "pages": [
+            2,
+            6
+          ],
+          "locator": "Sections 1, 1.1, 1.2",
+          "statement": "The introduction previews the counterfactual findings, the mechanism decomposition and additional counterfactuals, then has a numbered contributions subsection and a related-literature subsection; no explicit roadmap paragraph.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the design, main results, and structural conclusions, includes a literature contribution paragraph, and ends with a section-by-section roadmap.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 3,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Previews every major finding in the introduction in the order the later sections present them, with footnotes pointing ahead to specific tables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o45",
+          "pages": [
+            2,
+            6
+          ],
+          "locator": "Sections 1, 1.1, 1.2",
+          "statement": "The introduction previews the counterfactual findings, the mechanism decomposition and additional counterfactuals, then has a numbered contributions subsection and a related-literature subsection; no explicit roadmap paragraph.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the design, main results, and structural conclusions, includes a literature contribution paragraph, and ends with a section-by-section roadmap.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "appendix_heavy",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Has no separate Robustness section; alternative-measure and alternative-specification checks are embedded as subsections within the same numbered sections as the corresponding main result, with further checks deferred to a cited online appendix.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o48",
+          "pages": [
+            5,
+            33
+          ],
+          "locator": "Sections 2 to 9",
+          "statement": "Order is model, data, empirical strategy, reduced-form results (opportunity cost first, then wages, then hours and employment), a separate threats section, structural estimation, heterogeneity, conclusion. Many checks, proofs, and data procedures are delegated to Appendices A to E.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "mechanisms_after_main",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o44",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Organizes the paper as a chain of sections that each resolve one sub-question in sequence (which alternative measures matter, then which AG subcomponents matter, then which macro shocks matter, then what mechanism explains it), with the conclusion restating the chain.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o48",
+          "pages": [
+            5,
+            33
+          ],
+          "locator": "Sections 2 to 9",
+          "statement": "Order is model, data, empirical strategy, reduced-form results (opportunity cost first, then wages, then hours and employment), a separate threats section, structural estimation, heterogeneity, conclusion. Many checks, proofs, and data procedures are delegated to Appendices A to E.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_paragraph",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Previews every major finding in the introduction in the order the later sections present them, with footnotes pointing ahead to specific tables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the design, main results, and structural conclusions, includes a literature contribution paragraph, and ends with a section-by-section roadmap.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "data_before_design",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o46",
+          "pages": [
+            6,
+            8
+          ],
+          "locator": "Section 2",
+          "statement": "Institutional context precedes data, and the context section is organised as short definitional subsections (what is a plant, a firm, an inspection, a violation) before the scoring rules.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "design_before_data",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o48",
+          "pages": [
+            5,
+            33
+          ],
+          "locator": "Sections 2 to 9",
+          "statement": "Order is model, data, empirical strategy, reduced-form results (opportunity cost first, then wages, then hours and employment), a separate threats section, structural estimation, heterogeneity, conclusion. Many checks, proofs, and data procedures are delegated to Appendices A to E.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:context_section_with_definitional_subsections",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o46",
+          "pages": [
+            6,
+            8
+          ],
+          "locator": "Section 2",
+          "statement": "Institutional context precedes data, and the context section is organised as short definitional subsections (what is a plant, a firm, an inspection, a violation) before the scoring rules.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:no_dedicated_robustness_section",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Has no separate Robustness section; alternative-measure and alternative-specification checks are embedded as subsections within the same numbered sections as the corresponding main result, with further checks deferred to a cited online appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_absent",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "note_sha256": "b781b6e5a7dcf2fecf5e52f972f159c3343984be91e92f400da572e0be68fadb",
+          "observation_id": "o45",
+          "pages": [
+            2,
+            6
+          ],
+          "locator": "Sections 1, 1.1, 1.2",
+          "statement": "The introduction previews the counterfactual findings, the mechanism decomposition and additional counterfactuals, then has a numbered contributions subsection and a related-literature subsection; no explicit roadmap paragraph.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "robustness_separate_section",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_90_5_11",
+          "note_sha256": "b9f9dec1a4cb4c689a8684d3260f1e84db4966ba621eebec179e5ba84b316271",
+          "observation_id": "o48",
+          "pages": [
+            5,
+            33
+          ],
+          "locator": "Sections 2 to 9",
+          "statement": "Order is model, data, empirical strategy, reduced-form results (opportunity cost first, then wages, then hours and employment), a separate threats section, structural estimation, heterogeneity, conclusion. Many checks, proofs, and data procedures are delegated to Appendices A to E.",
+          "basis": "inferred"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "cluster_level",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "Clustered at the state-occupation cell.",
+          "card_shows": "cluster on state_occ in s1 to s5.",
+          "pages": [
+            17,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "d1.implementation_features",
+          "paper_says": "Portfolio breakpoints throughout use NYSE cutoffs, e.g. NYSE quintile sorts on profitability and each investment measure.",
+          "card_shows": "Design d1 implementation_features lists NYSE-based breakpoints for portfolio formation.",
+          "pages": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "d3.implementation_features",
+          "paper_says": "Spanning regressions control for the remaining factors in the HXZ model (ME, INV, ROE) or the FF5F model (ME, BM, PROF, INV) alongside the market factor.",
+          "card_shows": "Design d3 implementation_features records the AG factor added to HXZ (ME, INV, ROE) and FF5F (ME, BM, FFOP, INV) factor lists.",
+          "pages": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s4.controls",
+          "paper_says": "Table 2 adds environmental justice index and region FE in columns (2) and (3).",
+          "card_shows": "s4 records only the baseline logit with scores and year/NAICS FE.",
+          "pages": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "data",
+          "paper_says": "The Data availability statement names a Mendeley Data DOI (10.17632/tzxtm6ys99.1) as the location of the paper's code and data.",
+          "card_shows": "The card's data array is empty, but the traced code path (code/mendeley_tzxtm6ys99_v1/...) embeds the same Mendeley identifier tzxtm6ys99, consistent with the p",
+          "pages": [
+            16,
+            16
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s1.source",
+          "paper_says": "Data and code on Zenodo (DOI 10.5281/zenodo.16987699).",
+          "card_shows": "Card file paths are under code/zenodo_16987699.",
+          "pages": [
+            28,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s1.weights",
+          "paper_says": "CPS basic monthly via IPUMS, ACS for self-replication, hand-collected policy data.",
+          "card_shows": "Weights earnwt and wtfinl identify CPS; data source not otherwise recorded.",
+          "pages": [
+            13,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "paper_only",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "diagnostics",
+          "paper_says": "GMM pricing tables report sum of squared pricing errors (SSQE) and mean absolute pricing errors (MAPE), annualized for comparability, as the fit diagnostic for ",
+          "card_shows": "The card's diagnostics array is empty; no fit-statistic record was extracted from the traced code files.",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "x1",
+          "paper_says": "Model fit reported as moment comparison table and type-correlation binscatter.",
+          "card_shows": "Diagnostics x1 balance and x2 first_stage marked unknown.",
+          "pages": [
+            22,
+            23
+          ]
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "x2",
+          "paper_says": "Overidentification tests reported for an overidentified calibration variant in the appendix.",
+          "card_shows": "diag x2 overid unknown.",
+          "pages": [
+            31,
+            31
+          ]
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "x3",
+          "paper_says": "TWFE weights decomposed following de Chaisemartin and D'Haultfoeuille; negative weight share reported; heterogeneity by mobility quartile and by occupation.",
+          "card_shows": "diag x3 and x4 heterogeneous_treatment_effects unknown.",
+          "pages": [
+            18,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "x1",
+          "paper_says": "No pre-trend test; the design is cross-sectional two-way FE, not a panel event study.",
+          "card_shows": "diag x1 pretrend_test not_found_in_scope.",
+          "pages": [
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "d4.method",
+          "paper_says": "Maximum Sharpe ratio comparison tests (Barillas and Shanken 2017; Barillas et al. 2020) are the primary model-comparison method in Sections 2-3 and Tables 9-10.",
+          "card_shows": "Design d4 records method other:maximum_sharpe_ratio_test with bias-adjusted Sharpe ratio and asymptotic p-values, traced to Barillas_Shanken_maxSR_Test.ado.",
+          "pages": [
+            4,
+            4
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s4.estimator",
+          "paper_says": "Table 2 uses logit regressions for inspection with year and NAICS sector FE (Section 3.2).",
+          "card_shows": "s4: logit inspection on log scores with i.year and i.naics_cat_fe.",
+          "pages": [
+            10,
+            11
+          ]
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "d1, d2, s1, s6",
+          "paper_says": "Two-way (state and occupation) fixed-effect OLS of worker outcomes on the cell licensed share, plus a classical minimum distance structural estimator.",
+          "card_shows": "d1 did with reghdfe hdfe_ols specs; d2 structural_estimation via Stata gmm (s6).",
+          "pages": [
+            17,
+            28
+          ]
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s3",
+          "paper_says": "Poisson regression on cell employment counts as a check and for age profiles.",
+          "card_shows": "s3 ppmlhdfe of wtfinl on sh_statec with state and occupation FE.",
+          "pages": [
+            21,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "code_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s1.estimator",
+          "paper_says": "The 17 pages of main text read never name Fama-MacBeth or a two-step cross-sectional regression as an empirical method.",
+          "card_shows": "Design d2 and specifications s1-s2 record a Fama-MacBeth two-step cross-sectional estimator (xtfmb_mion.ado) as one of the paper's methods.",
+          "pages": [
+            1,
+            17
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s1.estimator",
+          "paper_says": "Table 3 deterrence regressions are described only as regressions of violation counts on predicted inspection probability; no estimator named.",
+          "card_shows": "s1 to s3 use ppmlhdfe (Poisson PPML) for n_violations.",
+          "pages": [
+            11,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s2.fixed_effects",
+          "paper_says": "Table 3 columns (2) and (3) use year and plant FE.",
+          "card_shows": "s2 and s3 absorb year and c_re_fe (plant identifier).",
+          "pages": [
+            11,
+            11
+          ]
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s1.fe",
+          "paper_says": "Occupation, state, industry, survey month-year FE plus demographic strata FE in the baseline column.",
+          "card_shows": "s1 fe = strata, statefip, occ, ind, my.",
+          "pages": [
+            17,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "Table 3 column (1) lists year FE and unit FE 'Category, Firm'.",
+          "card_shows": "s1 absorbs year, naics_2, c_fe, region_fe.",
+          "pages": [
+            11,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "outputs.tables",
+          "paper_says": "The main text contains ten numbered tables (Tables 1-10) and two figures (Figs. 1-2).",
+          "card_shows": "The card's outputs.tables and outputs.figures arrays are both empty.",
+          "pages": [
+            1,
+            16
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "outputs",
+          "paper_says": "Tables 1 to 6 and Figures 1 to 5 in the main text.",
+          "card_shows": "Card records zero tables and figures.",
+          "pages": [
+            9,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "outputs",
+          "paper_says": "Five main tables and four figures plus appendix tables A1 to A15 and figures A1 to A8.",
+          "card_shows": "Card records 2 tables and 1 figure from files read (coverage partial).",
+          "pages": [
+            3,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "robustness",
+          "paper_says": "A dedicated 144-measure model-mining robustness exercise (Section 2.2) is presented with its own figure to show the main comparison is not sensitive to the choi",
+          "card_shows": "The card's robustness array is empty; this exercise was not captured by the files read for the card.",
+          "pages": [
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s5",
+          "paper_says": "IV using indicators for large positive or negative residual licensed shares.",
+          "card_shows": "s5 ivreghdfe with i.residual_cat as instrument in robustness_subsample.do.",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "Table notes state regressions and portfolio tests use monthly data from 1972 to 2018.",
+          "card_shows": "pipeline.sample_restrictions records only a generic non-missing-return filter (ret!=.) with no explicit sample-period value.",
+          "pages": [
+            7,
+            13
+          ]
+        },
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s1.sample",
+          "paper_says": "Employed adults in a stated age band, universally licensed occupations dropped, common sample across columns.",
+          "card_shows": "Specs condition on sample == 1 or wagesample == 1; the restriction's content is not recorded.",
+          "pages": [
+            14,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s3.sample",
+          "paper_says": "Column (3) of Table 3 restricts to plant-years with an inspection.",
+          "card_shows": "s3 conditions on inspection==1.",
+          "pages": [
+            11,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s2.se.type",
+          "paper_says": "Spanning regressions (Tables 3-5) state standard errors are corrected for heteroskedasticity and autocorrelation using the Newey and West (1987) procedure with ",
+          "card_shows": "Specification s2 (xtfmb_mion second step) records se.type=hac_newey_west with lag as an unresolved parameter.",
+          "pages": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s1.se.type",
+          "paper_says": "No cross-sectional/iid standard-error procedure for a Fama-MacBeth first step is described anywhere in the main text read.",
+          "card_shows": "Specification s1 records se.type=iid as the default xtfmb_mion behavior (mvreg step) when no lag is specified.",
+          "pages": [
+            1,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "s1.se",
+          "paper_says": "No SE type or cluster level stated for Tables 2 and 3.",
+          "card_shows": "se null for all specs.",
+          "pages": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag013",
+          "card_ref": "d2",
+          "paper_says": "Structural SEs from firm-level bootstrap (Table 4 notes).",
+          "card_shows": "No structural estimation spec recorded in the card.",
+          "pages": [
+            22,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s5.weights",
+          "paper_says": "Table titles and notes specify value-weighted (VW) portfolio returns are used in the GMM pricing tests.",
+          "card_shows": "None of the extracted specifications (s1, s2, s3, s5) record a weights value; all are null.",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_90_5_11",
+          "card_ref": "s1.weights, s2.weights",
+          "paper_says": "Earnings weights for MORG wage sample, final weights otherwise; stated only in Table 5 notes.",
+          "card_shows": "s1 aw=earnwt for lwage; s2 and s4 aw=wtfinl for hours and education.",
+          "pages": [
+            30,
+            30
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "No dedicated summary-statistics table (means/SDs of key variables) found anywhere in the 17 pages of main text read.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit description in the main text of sample-construction filters typical of asset-pricing studies (e.g., minimum ",
+      "papers": 1
+    },
+    {
+      "gap": "No justification given for the specific choice of a 12-lag Newey-West correction.",
+      "papers": 1
+    },
+    {
+      "gap": "No discussion of cross-sectional dependence or standard-error clustering beyond the time-series Newey-West adjustment; n",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or research-ethics statement; not applicable to this archival financial-data study and",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit external-validity or generalization discussion (e.g., to non-U.S. markets, periods outside 1972-2018, or tes",
+      "papers": 1
+    },
+    {
+      "gap": "No back-of-envelope dollar-value, cost-benefit, or elasticity translation of the Sharpe-ratio or GMM pricing-error magni",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix content (Section A, Section D, Tables E1-E14) referenced by footnote roughly a dozen times could not be ",
+      "papers": 1
+    },
+    {
+      "gap": "No statement of standard error type or clustering level for the descriptive logit and deterrence regressions (Tables 2 a",
+      "papers": 1
+    },
+    {
+      "gap": "No software or package named for estimation.",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration or ethics statement (administrative data, none expected).",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix not included in the text file; appendix robustness is known only through main-text references.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit roadmap paragraph in the introduction.",
+      "papers": 1
+    },
+    {
+      "gap": "No statistical software or package is named in the paper text.",
+      "papers": 1
+    },
+    {
+      "gap": "R-squared and dependent-variable means are not reported in regression tables.",
+      "papers": 1
+    },
+    {
+      "gap": "No IRB, preregistration, or ethics statement (secondary public data).",
+      "papers": 1
+    },
+    {
+      "gap": "No formal first-stage or weak-IV statistic is reported for the IV robustness column in the main text.",
+      "papers": 1
+    },
+    {
+      "gap": "Appendices A to E are online supplements not included in the text file; their content is known only from main-text refer",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

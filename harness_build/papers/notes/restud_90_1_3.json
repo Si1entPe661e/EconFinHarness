@@ -1,0 +1,651 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_90_1_3",
+  "journal": "ReStud",
+  "year": 2023,
+  "doi": "10.1093/restud/rdac025",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_90_1_3.pdf",
+    "pdf_sha256": "a94ae7659b181ae101691a9d8f26e95b83db006c996839b75f9117d7fffaf953",
+    "text_path": "harness_build/papers/text/restud_90_1_3.txt",
+    "text_sha256": "b89fe4f4658ebbcf7a3cd4ae00bebc49070aedbe72b9cf840c2eea6465911b71",
+    "pages": 37
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T00:00:00Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/restud_90_1_3.json",
+    "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327"
+  },
+  "methods": ["rdd", "iv", "did", "mle", "other:value_added_estimation", "other:discrete_choice_exploded_logit"],
+  "structure": [
+    {"id": "sec1", "kind": "introduction", "title": "1. Introduction", "pages": [2, 5]},
+    {"id": "sec2", "kind": "data", "title": "2. The Trinidad and Tobago context and data", "pages": [5, 8]},
+    {"id": "sec3", "kind": "design", "title": "3. Estimating school impacts (assignment, identification, 2SLS, assumption tests)", "pages": [8, 17]},
+    {"id": "sec4", "kind": "results", "title": "4. Magnitude of the school impacts and unidimensionality", "pages": [17, 21]},
+    {"id": "sec5", "kind": "model", "title": "5. Estimating preferences for schools (choice model and estimates)", "pages": [21, 34]},
+    {"id": "sec6", "kind": "conclusion", "title": "6. Conclusions and policy implications", "pages": [34, 35]},
+    {"id": "sec7", "kind": "other", "title": "Acknowledgments, supplementary data, data availability, references", "pages": [35, 37]}
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "estimand_named", "design_variant_named"],
+      "statement": "The identification framework is written as an outcome decomposition into school value-added, student ability, a match term and noise; the estimand is the relative value-added between schools. Two identifying assumptions are listed explicitly: assignments unrelated to potential outcomes conditional on choices and smooth score functions, and no differential average match effects.",
+      "pages": [9, 10],
+      "locator": "Section 3.2, equations (1) to (3)",
+      "basis": "stated",
+      "applies_to": ["iv", "rdd"]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": ["design_variant_named", "continuity_at_cutoff_argued"],
+      "statement": "The paper names two sources of variation from a multi-cutoff Deferred Acceptance mechanism: discontinuity variation around each school cutoff (standard RD) and difference-in-difference type variation across cutoffs using choice-group fixed effects. A hypothetical figure illustrates both, and the conditions under which they coincide (additive separability, homogeneous effects) are stated.",
+      "pages": [10, 13],
+      "locator": "Section 3.3, Figure 1",
+      "basis": "stated",
+      "applies_to": ["rdd", "did"]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "randomization_described"],
+      "statement": "The authors argue the tentative rule-based assignment cannot be gamed because cutoffs depend on the whole cohort's scores and choices, and they use the tentative assignment rather than the official placement because principals have some admission discretion. A footnote explains why a deterministic mechanism can be treated as random.",
+      "pages": [9, 9],
+      "locator": "Section 3.1, footnotes 11 and 12",
+      "basis": "stated",
+      "applies_to": ["rdd", "iv"]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": ["compliers_described", "instrument_exclusion_argued"],
+      "statement": "ITT effects of assignment are estimated by OLS with assignment indicators; TOT effects use one assignment instrument per attended school (one instrument per alternative), and the paper states that the IV coefficient is a causal effect for compliers relative to the omitted school set. Sources of noncompliance are described in a footnote.",
+      "pages": [13, 15],
+      "locator": "Sections 3.4 and 3.5, equations (4) to (6), footnote 19",
+      "basis": "stated",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "other:constant_effects_assumed_for_exposition"],
+      "statement": "The authors state that, following the literature, they assume constant value-added so the match term drops out, and then devote a dedicated subsection to testing this and the other modelling assumptions rather than leaving them as maintained assumptions.",
+      "pages": [10, 10],
+      "locator": "Section 3.2, Identifying assumptions paragraph",
+      "basis": "stated",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "threats_discussed"],
+      "statement": "For the preference analysis, the paper states the behavioural identifying conditions of the choice model as numbered conditions (higher ranked chosen school preferred to lower ranked; top choice preferred to unranked schools conditional on admission probability) and explains why standard truthful-ranking assumptions may fail under limited choice lists.",
+      "pages": [21, 23],
+      "locator": "Sections 5 and 5.1, Conditions (1) and (2)",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "sample_period_stated", "unit_of_observation_stated", "matching_or_linkage_described", "linked_records"],
+      "statement": "Each data source (entrance exam applications, three exam series, police arrests, birth registry, national insurance registry) is described with its provider, years available, and which application cohorts it was linked to. Linkage is by full name, gender and date of birth; the student is the unit.",
+      "pages": [6, 7],
+      "locator": "Section 2, data paragraphs",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": ["attrition_reported", "in_footnote"],
+      "statement": "Match rates of exam records to the application data are reported in a footnote, and the non-match share is benchmarked against the share of students in private schools to argue it is plausible.",
+      "pages": [7, 7],
+      "locator": "Section 2, footnote 8",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "in_appendix"],
+      "statement": "Schools with the weakest first stages are excluded from the instrument and endogenous variable sets and serve as the omitted category, to avoid under-identification; the exclusion criteria are relegated to a supplementary appendix and the paper notes the omitted set does not affect conclusions because all comparisons come from the same model.",
+      "pages": [14, 15],
+      "locator": "Section 3.5, footnote 20",
+      "basis": "stated",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "in_footnote"],
+      "statement": "When computing the variance of persistent school effects, schools with outlying estimates far from the median are removed as a conservative choice; a supplementary table reports the same estimates without removing outliers.",
+      "pages": [17, 17],
+      "locator": "Section 4, footnote 25, Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["mle"]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": ["sample_size_reported_per_table", "summary_stats_table"],
+      "statement": "The summary statistics table reports the number of individuals in each linked dataset panel and for each subgroup column, so sample sizes by outcome source are visible in one place.",
+      "pages": [8, 8],
+      "locator": "Table 1",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": ["standardized_index", "outcome_definition"],
+      "statement": "Multiple exam outcomes are combined into high-stakes and low-stakes indexes via principal-component factor analysis (first unrotated factor), standardized to mean zero and unit variance; the components and weights are listed in a supplementary table, and a footnote compares the index to a simple mean of standardized variables.",
+      "pages": [15, 15],
+      "locator": "Section 3.5, footnote 21",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": ["outcome_definition", "other:outcomes_signed_so_higher_is_better"],
+      "statement": "Binary outcomes (no dropout, no teen birth, no arrest, formal employment) are coded so that higher values mean better outcomes, and dropout is operationalised as not registering for a universal exam taken at a given age.",
+      "pages": [15, 17],
+      "locator": "Section 3.5 and Section 4 (Dropout paragraph)",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": ["treatment_definition", "instrument_construction", "running_variable_definition"],
+      "statement": "Attendance is defined as enrolment in the school at the time of the secondary completion exam; the instrument is the tentative rule-based assignment indicator; the running variable is the entrance exam score, modelled with a fifth-order polynomial in main results.",
+      "pages": [14, 15],
+      "locator": "Section 3.5, footnote 16",
+      "basis": "stated",
+      "applies_to": ["iv", "rdd"]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": ["other:admission_probability_from_historical_cutoffs", "in_appendix"],
+      "statement": "Rejection probabilities used in the choice model are approximated by the historical likelihood that a student with a given score would clear each school's cutoff; their construction is placed in a supplementary appendix.",
+      "pages": [23, 23],
+      "locator": "Section 5.2, equation (12)",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": ["standardized_index", "logs_or_ihs"],
+      "statement": "In the choice analysis all school attributes except distance are standardized to mean zero and unit variance for that section only, and distance enters as its natural log.",
+      "pages": [25, 25],
+      "locator": "Section 5.3",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": ["fe_listed_in_table", "notes_state_se", "other:pooled_cell_estimates"],
+      "statement": "The main choice-model table reports pooled averages of cell-level coefficients for two models (Impacts Only and Full), split by achievement and gender columns; notes list the controls, the pooling rule and how pooled standard errors are formed.",
+      "pages": [26, 26],
+      "locator": "Table 3 and notes",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": ["controls_progressive_columns", "baseline_then_variants"],
+      "statement": "Two nested choice specifications are presented throughout: a model with causal impacts, peer quality and distance, then a fuller model adding school-level average outcomes; figures show both stacked as panels a and b.",
+      "pages": [25, 30],
+      "locator": "Section 5.3, Figures 2 and 3",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": ["other:controls_listed_in_text"],
+      "statement": "The value-added regressions list controls in prose: a polynomial in the entrance score, choice-group fixed effects, sex, district and religion fixed effects, and cohort fixed effects. No regression table of individual school effects is shown; results enter as variance and correlation summaries.",
+      "pages": [13, 14],
+      "locator": "Section 3.4, equation (4)",
+      "basis": "stated",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": ["weights_stated"],
+      "statement": "When school effects are re-estimated to be representative of a given achievement percentile, the weight formula is written out in footnotes and in table notes.",
+      "pages": [16, 18],
+      "locator": "Footnotes 22 and 30, Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": ["other:bootstrap_ci", "other:confidence_intervals_reported"],
+      "statement": "Standard deviations and disattenuated correlations of persistent school effects are reported with bootstrap confidence intervals, using the median across replications as the point estimate and percentile bounds; the number of repetitions is in the table notes.",
+      "pages": [17, 18],
+      "locator": "Section 4, Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["mle"]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": ["multiple_testing_adjustment"],
+      "statement": "Because six school-impact coefficients are tested per model, a Bonferroni adjustment is applied and the implied t-statistic threshold is stated; results are then discussed against that threshold.",
+      "pages": [25, 25],
+      "locator": "Section 5.3",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": ["other:cluster_at_district_level", "no_justification_found"],
+      "statement": "Choice-model standard errors are said to be clustered at the school-district level, but no reason for that level is given. Pooled standard errors assume independence across cells, and the text cautions that pooled averages across non-linear models are for testing only.",
+      "pages": [25, 25],
+      "locator": "Section 5.3, footnote 38",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": ["no_justification_found"],
+      "statement": "For the 2SLS school-effect regressions the text does not state the standard error type or clustering; uncertainty in school effects is instead handled through the even/odd cohort split and bootstrap of the second-stage variance model.",
+      "pages": [13, 17],
+      "locator": "Sections 3.4 to 4",
+      "basis": "inferred",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": ["density_test", "first_stage_table", "placebo_outcomes", "in_appendix"],
+      "statement": "RD validity checks at cutoffs (no density jump, no jump in predicted outcomes, a strong jump in attendance) are summarised in a sentence in the main text and placed in a supplementary appendix.",
+      "pages": [11, 11],
+      "locator": "Section 3.3.1, reference to Supplementary Appendix A",
+      "basis": "stated",
+      "applies_to": ["rdd"]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": ["other:rd_validation_of_value_added", "in_appendix"],
+      "statement": "The value-added estimates are validated by comparing the jump in actual outcomes at each cutoff with the jump in estimated value-added of the attended school, using only local RD variation; the method is attributed to prior studies and details are in an appendix.",
+      "pages": [16, 16],
+      "locator": "Section 3.6.1, footnote 23, Supplementary Appendix F",
+      "basis": "stated",
+      "applies_to": ["rdd", "iv"]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": ["other:homogeneity_test_by_reweighting", "other:additivity_test", "in_appendix"],
+      "statement": "A dedicated subsection tests each modelling assumption: homogeneity by achievement via percentile-centred reweighting, additive separability via interactions of scores and choices, no comparative advantage via a rank-order test, and additivity of school effects via chained pairwise comparisons; each test lives in its own supplementary appendix.",
+      "pages": [15, 17],
+      "locator": "Section 3.6, Supplementary Appendices D, E, G, H",
+      "basis": "stated",
+      "applies_to": ["iv"]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": ["other:raw_scatter_of_effects", "in_appendix"],
+      "statement": "Raw scatterplots of estimated school effects across outcomes are provided in a supplementary figure while the main text reports only the disattenuated correlations.",
+      "pages": [19, 19],
+      "locator": "Footnote 28",
+      "basis": "stated",
+      "applies_to": ["mle"]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "in_appendix", "in_footnote"],
+      "statement": "Robustness to alternative polynomial orders in the running variable is asserted in a footnote with a pointer to a supplementary figure.",
+      "pages": [14, 14],
+      "locator": "Footnote 16, Supplementary Figure B2",
+      "basis": "stated",
+      "applies_to": ["rdd", "iv"]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": ["alt_estimator", "in_appendix", "in_footnote"],
+      "statement": "The choice results are said to hold under more restrictive models (standard rank-ordered logit without the extra pseudo-observation, and with the pseudo-observation but without admission probabilities), reported in a supplementary appendix.",
+      "pages": [25, 25],
+      "locator": "Footnote 36, Supplementary Appendix J",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": ["leave_one_out", "in_appendix", "in_footnote"],
+      "statement": "To address mechanical correlation between estimated impacts and choices in the same year, the choice models are re-estimated with leave-year-out school impacts and averages; the footnote notes these are noisier but qualitatively similar.",
+      "pages": [33, 33],
+      "locator": "Footnote 42, Supplementary Appendix N",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": ["alt_sample", "alt_specification", "in_appendix"],
+      "statement": "Variance and correlation estimates are repeated without outlier removal, with weights centred at different percentiles, and with a manual disattenuation calculation, all in supplementary tables cited from footnotes.",
+      "pages": [17, 20],
+      "locator": "Footnotes 25, 29, 31; Supplementary Tables B3 and B4",
+      "basis": "stated",
+      "applies_to": ["mle"]
+    },
+    {
+      "id": "o33",
+      "category": "heterogeneity_reported",
+      "tags": ["split_sample", "mechanism_motivated"],
+      "statement": "Choice models are estimated separately for each entrance-score ventile by gender cell, and results are shown as coefficient paths across ventiles with separate lines for boys and girls; table columns split by above/below median score and by gender.",
+      "pages": [25, 30],
+      "locator": "Section 5.3, Figures 2 and 3, Table 3",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o34",
+      "category": "heterogeneity_reported",
+      "tags": ["exploratory_labelled"],
+      "statement": "Patterns that appear only in particular subsamples or only in one of the two models are explicitly labelled as suggestive at best rather than as findings.",
+      "pages": [28, 29],
+      "locator": "Section 5.3.1",
+      "basis": "stated",
+      "quote": "so we take this as suggestive at best",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o35",
+      "category": "mechanism_evidence",
+      "tags": ["ruled_out_alternatives", "in_appendix"],
+      "statement": "The authors rule out that low cross-outcome correlations arise from different students being marginal for different outcomes by re-estimating impacts weighted to the same achievement percentile, and rule out match effects as the source of choice heterogeneity by showing effects are similar across the achievement distribution.",
+      "pages": [20, 33],
+      "locator": "Section 4.1, Section 5.3.2 end, footnote 43",
+      "basis": "stated",
+      "applies_to": ["iv", "mle"]
+    },
+    {
+      "id": "o36",
+      "category": "mechanism_evidence",
+      "tags": ["ruled_out_alternatives", "suggestive_labelled"],
+      "statement": "Counterintuitive heterogeneity patterns (for arrests) are addressed by enumerating several candidate explanations and then computing a relative willingness-to-travel comparison that nets out general responsiveness differences across groups.",
+      "pages": [31, 32],
+      "locator": "Section 5.3.2, Figure 4",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": ["sd_units", "compared_to_literature", "relative_to_mean"],
+      "statement": "School-effect magnitudes are expressed as the gain from moving from the median to the 85th percentile school (one SD of the effect distribution), compared with the outcome's mean rate, and benchmarked against charter-school, lottery and value-added studies from other settings.",
+      "pages": [17, 19],
+      "locator": "Section 4, outcome-by-outcome paragraphs, footnotes 26 and 27",
+      "basis": "stated",
+      "applies_to": ["mle"]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": ["other:willingness_to_travel", "precision_discussed"],
+      "statement": "Choice coefficients are said to be not directly interpretable, so magnitudes are converted into implied extra kilometres a parent would travel using the distance coefficient, and pooled t-statistics are used to describe strength of evidence; a figure reports relative weights of non-academic versus test impacts scaled by distance.",
+      "pages": [25, 32],
+      "locator": "Section 5.3, Figure 4",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": ["other:variance_shared_explained"],
+      "statement": "Correlations between school impacts are interpreted by squaring them to express the share of variance in one impact explained by another.",
+      "pages": [20, 20],
+      "locator": "Section 4.1",
+      "basis": "stated",
+      "applies_to": ["mle"]
+    },
+    {
+      "id": "o40",
+      "category": "limitation_stated",
+      "tags": ["identification_caveat", "interpretation_caveat"],
+      "statement": "The preference section opens by stating that preferences are inferred from rankings, that unobserved determinants of choices cannot be fully ruled out, and (in a footnote) that an insignificant coefficient could mean either no value or no information, with the authors declaring which interpretation they favour.",
+      "pages": [21, 28],
+      "locator": "Section 5 opening, footnote 40",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": ["interpretation_caveat", "in_footnote"],
+      "statement": "A footnote argues that if equal-weighted impacts mismeasure impacts for specific student types, the bias would go toward zero, so detected relationships are conservative.",
+      "pages": [33, 33],
+      "locator": "Footnote 44",
+      "basis": "stated",
+      "applies_to": ["other:discrete_choice_exploded_logit"]
+    },
+    {
+      "id": "o42",
+      "category": "external_validity",
+      "tags": ["site_specific", "scaling_discussed"],
+      "statement": "A discussion subsection contrasts the setting (small, high-information market) with the large low-information setting of a prior study, and uses market size and public reporting of averages to explain differences in findings and to qualify generalisation.",
+      "pages": [33, 34],
+      "locator": "Section 5.4",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o43",
+      "category": "presentation_convention",
+      "tags": ["summary_stats_table", "notes_state_sample"],
+      "statement": "The summary statistics table is organised in panels by linked data source with the cohort range in each panel title, columns for all, by gender, and by assigned-school selectivity, standard deviations in parentheses, and notes defining derived variables.",
+      "pages": [8, 8],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": ["coefficient_plot", "no_stars"],
+      "statement": "Main choice results are shown as connected coefficient lines across score ventiles with dashed confidence bands, separately by gender and model; tables report standard errors in parentheses and confidence intervals in brackets, with no significance stars.",
+      "pages": [18, 31],
+      "locator": "Tables 2 and 3, Figures 2 to 4",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": ["other:schematic_identification_figure"],
+      "statement": "A schematic figure with hypothetical data is used to explain the two sources of identifying variation before any real results appear, with a long note walking through each panel.",
+      "pages": [11, 11],
+      "locator": "Figure 1",
+      "basis": "stated",
+      "applies_to": ["rdd", "did"]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": ["appendix_tables_numbered_a", "other:supplementary_appendices_lettered_by_topic"],
+      "statement": "Supplementary material is organised into lettered appendices by topic (A through N) plus a B-series of figures and tables; the main text references them by letter throughout.",
+      "pages": [9, 33],
+      "locator": "Footnotes and text pointers to Supplementary Appendices A to N",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": ["results_previewed_in_intro", "contribution_paragraph", "roadmap_paragraph"],
+      "statement": "The introduction previews the main quantitative results, contains a paragraph positioning the contribution against the four closest prior studies, and ends with a section-by-section roadmap.",
+      "pages": [2, 5],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": ["data_before_design", "appendix_heavy", "other:assumption_tests_subsection"],
+      "statement": "The order is context and data, then design with a subsection that tests each identifying and modelling assumption, then magnitudes, then the choice model; nearly all diagnostics and robustness are in supplementary appendices with one-sentence summaries in the main text.",
+      "pages": [5, 17],
+      "locator": "Sections 2 to 3.6",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": ["other:two_part_paper", "mechanisms_after_main"],
+      "statement": "The paper is structured as two linked empirical exercises: causal school effects (first part) feed as regressors into a discrete-choice model (second part), followed by a separate discussion subsection comparing findings to prior work.",
+      "pages": [17, 34],
+      "locator": "Sections 4, 5 and 5.4",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "replication_statement",
+      "tags": ["code_public", "replication_package_cited", "data_restricted", "data_access_procedure_described"],
+      "statement": "A supplementary data note gives a Zenodo DOI for the replication package, and a data availability statement says the administrative data are confidential and can be accessed by submitting research proposals to each institution, with instructions in the package.",
+      "pages": [35, 35],
+      "locator": "Supplementary Data and Data Availability Statement",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o51",
+      "category": "data_access",
+      "tags": ["administrative", "linked_records", "data_restricted"],
+      "statement": "Data were obtained from ministry, exam council, police, civil registry and national insurance sources; acknowledgments note matching of employment records was done on site to preserve confidentiality, and each data source is listed as a reference entry.",
+      "pages": [35, 37],
+      "locator": "Acknowledgments and References",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "TOT school effects from 2SLS with one assignment instrument per attended school; ITT by OLS.",
+      "card_shows": "ivreghdfe 2SLS specs s1 to s3 with schattended_* instrumented by comply_*.",
+      "status": "agree",
+      "pages": [13, 15],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Choice-group FE on the first four choices with separate sets for 5th and 6th choices, plus cohort FE.",
+      "card_shows": "absorb choice_4a, sea_cohort, choice_gr5, choice_gr6.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s1.fixed_effects",
+      "note": "Footnote 17 describes exactly this grouping."
+    },
+    {
+      "item": "controls",
+      "paper_says": "Sex, district of residence FE, religion FE, polynomial in entrance score.",
+      "card_shows": "s5 uses sea_sex, sea_religion dummies, sea_district dummies, score terms.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s5"
+    },
+    {
+      "item": "bandwidth",
+      "paper_says": "Main models use all variation with a 5th-order polynomial; RD validation at cutoffs in Appendix F, no bandwidth stated in main text.",
+      "card_shows": "rdrobust with uniform kernel, p(5); areg restricted to abs(score) within a bandwidth macro.",
+      "status": "paper_only",
+      "pages": [14, 16],
+      "card_ref": "s4",
+      "note": "Card records a bandwidth loop in validation code; the paper text gives no bandwidth values, so numeric agreement cannot be checked."
+    },
+    {
+      "item": "se_type",
+      "paper_says": "No SE type stated for the 2SLS school effects; bootstrap CIs for variance model; district clustering for choice models.",
+      "card_shows": "se None/None on all specs.",
+      "status": "unknown",
+      "pages": [13, 25],
+      "card_ref": "s1.se"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Choice-model SEs clustered at school-district level.",
+      "card_shows": "No choice-model spec in the card; cluster_level null.",
+      "status": "paper_only",
+      "pages": [25, 25],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "weights",
+      "paper_says": "Percentile-centred weights used for reweighted school effects and Table 2 column 3.",
+      "card_shows": "w=None on all specs.",
+      "status": "paper_only",
+      "pages": [16, 18],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Alternative polynomial orders in the running variable (Supplementary Figure B2).",
+      "card_shows": "s2 and s3 re-run 2SLS with x_poly4 and x_poly3.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s2"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Schools with weakest first stages excluded and used as omitted category (Appendix C).",
+      "card_shows": "Specs restrict to mark!=1; meaning of mark not recorded.",
+      "status": "unknown",
+      "pages": [14, 15],
+      "card_ref": "s1"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Tables 1 to 3 and Figures 1 to 4 in the main text plus lettered supplementary appendices.",
+      "card_shows": "tables=0 figures=0.",
+      "status": "paper_only",
+      "pages": [8, 31],
+      "card_ref": "outputs"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Administrative SEA, exam, arrest, birth and national insurance records, confidential.",
+      "card_shows": "Card coverage minimal; no data source recorded.",
+      "status": "paper_only",
+      "pages": [6, 7],
+      "card_ref": "d1"
+    }
+  ],
+  "gaps": [
+    "No statement of standard error type or clustering for the 2SLS school-effect regressions in the main text.",
+    "No justification given for clustering choice-model standard errors at the school-district level.",
+    "No software named in the main text (the Zenodo package is cited but languages are not mentioned).",
+    "No balance table in the main text; covariate smoothness at cutoffs is only summarised as a sentence pointing to Supplementary Appendix A.",
+    "No preregistration or ethics/IRB statement found."
+  ],
+  "reading": {
+    "pages_read": [[1, 37]],
+    "coverage": "full",
+    "note": "All 37 text pages read (journal pages 65 to 101 map to text pages 1 to 37). Supplementary Appendices A to N are online only and not part of the text file; their content is recorded only as referenced from the main text. References (pages 35 to 37) skimmed."
+  }
+}

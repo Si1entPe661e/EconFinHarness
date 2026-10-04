@@ -1,0 +1,3 @@
+artifact_id,column,panel,specification_id,dependent_variable,estimator,fixed_effects,se_type,cluster_variables,n_obs,n_clusters,weight,sample_description,post_processing,status
+t01_main,1,A,spec-001,,,,,,,,,,,
+t01_main,2,A,spec-002,,,,,,,,,,,

@@ -1,0 +1,971 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jpe_2025_736209",
+ "journal": "JPE",
+ "year": 2025,
+ "doi": "10.1086/736209",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:43:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JPE/metadata/articles.csv",
+   "sha256": "0ede2238a117d9aee4e58b32cf05ae7120ca1c154cf1cb330e8a03a046490e0a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_J4UL7P/Code/Figure2.do",
+    "sha256": "7857c7141cde425753981f605f72deb98915f07d1210a9f1c5a4b60e7eb2ef72",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      89
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+    "sha256": "63a69d5a3f8f31c572f3ba732e81c047e2090918cfaac53315e6ceb7713c84d6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      111
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+    "sha256": "cfa6c945c8f968b2ce1950cd1e266c8dd28ac6a37c5def91867ce1b9cab49978",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      160
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/TablesA3_thru_A6_A9_thru_A15_C1_C2.do",
+    "sha256": "2f07575c501bcbf8dd3017da2ce426de446a3efc966ec86af0c6b021a75f915a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/TablesB4_B6_thru_B14.do",
+    "sha256": "d338f28efcb4b0535973dd261032a924c22348c409d641dec332ce78e27a0caa",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      355,
+      375
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/estimate_full_domains.do",
+    "sha256": "1421d7dc7957b9cfbcf89f626a70aadd690008b7b6b13bc40e23363f688fc002",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      150,
+      320
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/gen_variables.do",
+    "sha256": "7790e4d149da8f2628253f0ed8cf0bac08e01300fdfa7eeeeccb2ecb0fc4d089",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/lasso_varclean.do",
+    "sha256": "88684a739f34bf3a7b8084ace4ca61501d780a2f6f41f7c1eab590c281a5b393",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+    "sha256": "e749abd441f9d6d99ad9c8073c1e178dea1d417e1eb86862af522a4fe187c6cd",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      83
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_J4UL7P/Code/sharpened_qvalues.do",
+    "sha256": "a4ccb5095a030265bfc233390509e38ce8200697e22cc4613ff4ae2ad99c0d89",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      58
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/dataverse_J4UL7P/Code/AppendixD.do",
+    "reason": "out_of_budget",
+    "note": "Appendix specifications"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Core Uganda RCT: pdslasso ANCOVA main specs, event study, heterogeneity, entropy weighting; Kenya extension with areg and ritest; Anderson sharpened q-values for multiple testing correction"
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_J4UL7P/Code/master_dofile.do"
+  ],
+  "directory_layout": "17 Stata .do scripts in code/dataverse_J4UL7P/Code",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 17,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+     "lines": [
+      9,
+      9
+     ],
+     "snippet": "set seed 404496",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "raw_uganda.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+     "lines": [
+      30,
+      30
+     ],
+     "snippet": "dta",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "raw_kenya.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+     "lines": [
+      30,
+      30
+     ],
+     "snippet": "dta",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_J4UL7P/Code/lasso_varclean.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+      "lines": [
+       32,
+       32
+      ],
+      "snippet": "do \"$path/Code/lasso_varclean\"",
+      "supports": [
+       "order_basis"
+      ]
+     },
+     {
+      "path": "code/dataverse_J4UL7P/Code/lasso_varclean.do",
+      "lines": [
+       4,
+       4
+      ],
+      "snippet": "* Purpose: Variable preparation for LASSO",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_J4UL7P/Code/gen_variables.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+      "lines": [
+       33,
+       33
+      ],
+      "snippet": "do \"$path/Code/gen_variables\"",
+      "supports": [
+       "order_basis"
+      ]
+     },
+     {
+      "path": "code/dataverse_J4UL7P/Code/gen_variables.do",
+      "lines": [
+       5,
+       5
+      ],
+      "snippet": "* Purpose: Generate variables",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_J4UL7P/Code/estimate_full_domains.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+      "lines": [
+       51,
+       51
+      ],
+      "snippet": "do estimate_full_domains",
+      "supports": [
+       "order_basis"
+      ]
+     },
+     {
+      "path": "code/dataverse_J4UL7P/Code/estimate_full_domains.do",
+      "lines": [
+       3,
+       3
+      ],
+      "snippet": "*++++++++++++++ ITT LASSO Estimation +++++++++++++*",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_J4UL7P/Code/Tables1_3_4.do"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+      "lines": [
+       53,
+       53
+      ],
+      "snippet": "do Tables1_3_4",
+      "supports": [
+       "order_basis"
+      ]
+     },
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+      "lines": [
+       5,
+       5
+      ],
+      "snippet": "* Table 1 -- Policy Preferences",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p5",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+      "lines": [
+       63,
+       63
+      ],
+      "snippet": "do Tables2_A7_A8_B5_C3",
+      "supports": [
+       "order_basis"
+      ]
+     },
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+      "lines": [
+       2,
+       2
+      ],
+      "snippet": "***** Table 2 -- Impacts from Kenya Extension",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rct",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "Five treatment arms (mentored by Ugandan/Refugee; grant only; info only; grant+labeled) vs control",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "treatment",
+     "supports": [
+      "treatment",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "lasso",
+   "command": "pdslasso",
+   "package": null,
+   "formula_or_call": "pdslasso oyoh_yes ib6.treatment (i.strata $cat_list $lik_list $con_list), partial(i.strata) post(pds) robust cluster(ent_id) lopt(prestd)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "$cat_list",
+    "$lik_list",
+    "$con_list"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "i.strata"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "ent_id"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+      "lines": [
+       15,
+       15
+      ],
+      "snippet": "pdslasso oyoh_yes ib6.treatment (i.strata $cat_list $lik_list $con_list), partial(i.strata) post(pds) robust cluster(ent_id) lopt(prestd)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Phone campaign support outcome; treatment coded 1-5 vs control (6)",
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "pdslasso oyoh_yes ib6.treatment (i.strata $cat_list $lik_list $con_list), partial(i.strata) post(pds) robust cluster(ent_id) lopt(prestd)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "fixed_effects",
+      "unresolved_symbols"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "lasso",
+   "command": "pdslasso",
+   "package": null,
+   "formula_or_call": "pdslasso `var' ib6.treatment (i.strata i.wave phone_survey survey_date missing_b`var' b`var' $cat_list $lik_list $con_list), partial(i.strata i.wave phone_survey survey_date missing_b`var' b`var') post(pds) robust cluster(ent_id) lopt(prestd)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "$cat_list",
+    "$lik_list",
+    "$con_list"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "i.strata",
+    "i.wave"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Cultural attitudes outcomes (comfort marrying refugee, close friend); iterated over d6_2_tmp1 and d6_2_tmp3",
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+     "lines": [
+      73,
+      73
+     ],
+     "snippet": "pdslasso `var' ib6.treatment (i.strata i.wave phone_survey survey_date missing_b`var' b`var' $cat_list $lik_list $con_list), partial(i.strata i.wave phone_survey survey_date missing_b`var' b`var') pos",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "bindings",
+      "fixed_effects",
+      "unresolved_symbols"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg e_rf_index ref_info ref_cashonly, a(ref_stratum) cluster(village_id)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "unresolved_symbols": [],
+   "bindings": [],
+   "fixed_effects": [
+    "ref_stratum"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "village_id"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+      "lines": [
+       21,
+       21
+      ],
+      "snippet": "eststo e_index: areg e_rf_index ref_info ref_cashonly, a(ref_stratum) cluster(village_id)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Kenya immediate impacts on refugee integration policy support index; ref_info = Info + Labeled Grant; ref_cashonly = Grant Only",
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+     "lines": [
+      21,
+      21
+     ],
+     "snippet": "eststo e_index: areg e_rf_index ref_info ref_cashonly, a(ref_stratum) cluster(village_id)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "fixed_effects"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg e_rf_binary`i' ref_info ref_cashonly, a(ref_stratum) cluster(village_id)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "`i'"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "ref_stratum"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "village_id"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+      "lines": [
+       42,
+       42
+      ],
+      "snippet": "eststo e_rf`i': areg e_rf_binary`i' ref_info ref_cashonly, a(ref_stratum) cluster(village_id)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Kenya immediate impacts on individual refugee policy support items (binary); iterated over 6 outcome dimensions",
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+     "lines": [
+      41,
+      42
+     ],
+     "snippet": "forvalues i = 1/6{\neststo e_rf`i': areg e_rf_binary`i' ref_info ref_cashonly, a(ref_stratum) cluster(village_id)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "bindings",
+      "fixed_effects",
+      "unresolved_symbols"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg eb_rf_index ref_info, a(ref_stratum) r",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "unresolved_symbols": [],
+   "bindings": [],
+   "fixed_effects": [
+    "ref_stratum"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+      "lines": [
+       78,
+       78
+      ],
+      "snippet": "eststo eb_index: areg eb_rf_index ref_info, a(ref_stratum) r",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Kenya demand-free bound outcome on refugee integration policy support; second survey measurement",
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+     "lines": [
+      78,
+      78
+     ],
+     "snippet": "eststo eb_index: areg eb_rf_index ref_info, a(ref_stratum) r",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "fixed_effects"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg eb_rf_binary`i' ref_info, a(ref_stratum) r",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "`i'"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "ref_stratum"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+      "lines": [
+       83,
+       83
+      ],
+      "snippet": "eststo eb_rf`i': areg eb_rf_binary`i' ref_info, a(ref_stratum) r",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Kenya demand-free bound on individual refugee policy items (binary); iterated over 6 outcome dimensions",
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+     "lines": [
+      82,
+      83
+     ],
+     "snippet": "forvalues i = 1/6{\neststo eb_rf`i': areg eb_rf_binary`i' ref_info, a(ref_stratum) r",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "bindings",
+      "fixed_effects",
+      "unresolved_symbols"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/dataverse_J4UL7P/Code/master_dofile.do"
+   ],
+   "note": "Balance tables not in read sections",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "attrition",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Attrition-robust bounds computed for 18 outcome domains and 5 treatment arms vs control",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "multiple_testing",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Kenya: 2000-permutation ritest for treatment vs control comparisons; Uganda: Anderson sharpened q-values via wyoung",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "pdslasso",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "pdslasso"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+     "lines": [
+      21,
+      21
+     ],
+     "snippet": "foreach package in estout orth_out copydesc swindex lassopack pdslasso wyoung leebounds distplot ritest ebalfit moremata {",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "pdslasso oyoh_yes ib6.treatment (i.strata $cat_list $lik_list $con_list), partial(i.strata) post(pds) robust cluster(ent_id) lopt(prestd)",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ritest",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ritest"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+     "lines": [
+      21,
+      21
+     ],
+     "snippet": "foreach package in estout orth_out copydesc swindex lassopack pdslasso wyoung leebounds distplot ritest ebalfit moremata {",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables2_A7_A8_B5_C3.do",
+     "lines": [
+      25,
+      25
+     ],
+     "snippet": "ritest rf_treatment _b[3.rf_treatment], r(2000) strata(county_name) fixlevels(2) cluster(village_id) seed(1): areg e_rf_index i.rf_treatment, a(ref_stratum)",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_J4UL7P/Code/master_dofile.do",
+     "lines": [
+      21,
+      21
+     ],
+     "snippet": "foreach package in estout orth_out copydesc swindex lassopack pdslasso wyoung leebounds distplot ritest ebalfit moremata {",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_J4UL7P/Code/Tables1_3_4.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "esttab sw_domain1 domain1_1 domain1_3 domain1_7 domain1_5 oyoh using \"$path/Output/policy_pref.tex\"",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rct"
+  ],
+  "fields": []
+ }
+}

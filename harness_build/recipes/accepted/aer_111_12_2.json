@@ -1,0 +1,430 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_111_12_2",
+ "journal": "AER",
+ "year": 2021,
+ "doi": "10.1257/aer.20201237",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/Repository/code/0_master.do",
+    "sha256": "2111831e59a61d042e0ca89f45a35adf3174fbc8ba87eeffec8430247923479a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      132
+     ]
+    ]
+   },
+   {
+    "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+    "sha256": "300a2620975a70780c19da52c118a51e1b1eb8e474933f73f83980fb07993082",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ],
+     [
+      400,
+      600
+     ],
+     [
+      645,
+      800
+     ]
+    ]
+   },
+   {
+    "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+    "sha256": "539755db40c72f53ce1bcb1bd586e293be5c997248f58ca9d5839e4635db227a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      700,
+      900
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/Repository/code/ado/",
+    "reason": "vendored",
+    "note": "Stata packages bundled"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main analysis files traced: 3_1 (DID/event-study), 5_1 (ETI/IV). Two primary designs identified."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/Repository/code/0_master.do"
+  ],
+  "directory_layout": "prep/ data cleaning, analysis/ estimation",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/Repository/code/ado/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 44,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "set seed 98765",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      1,
+      10
+     ],
+     "snippet": "MTO",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      1,
+      10
+     ],
+     "snippet": "MTO",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      1,
+      10
+     ],
+     "snippet": "MTO",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "outcome"
+   ],
+   "scope": "family",
+   "family_description": "DID with multiple outcomes",
+   "fixed_effects": [
+    "npwp",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      498,
+      498
+     ],
+     "snippet": "ivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "role",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      498,
+      498
+     ],
+     "snippet": "\t\t\t\t\t\t\tivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe `var'  y20* (end_inMTO* =  inMTOby2008_2003 \tinMTOby2008_2004 ///",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "outcome"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study",
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+     "lines": [
+      722,
+      722
+     ],
+     "snippet": "ivreghdfe `var'  y20* (end_inMTO* =  inMTOby2008_2003 \tinMTOby2008_2004 ///",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe lntincome_chng lntincome lngincome  ///\n\t\t(lnnetmrate_chng  = lnnetmratehat_n_chng) [pw=w1] ///\n\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year",
+    "npwp"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "npwp"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+      "lines": [
+       785,
+       785
+      ],
+      "snippet": "\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "ETI main spec",
+   "evidence": [
+    {
+     "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+     "lines": [
+      783,
+      785
+     ],
+     "snippet": "ivreghdfe lntincome_chng lntincome lngincome  ///\n\t\t(lnnetmrate_chng  = lnnetmratehat_n_chng) [pw=w1] ///\n\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+     "supports": [
+      "formula_or_call",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+     "lines": [
+      783,
+      783
+     ],
+     "snippet": "ivreghdfe",
+     "supports": [
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+     "lines": [
+      785,
+      785
+     ],
+     "snippet": "\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Extracted from e(first)",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,906 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "portfolio_sorts",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "jfe_2024_j_jfineco_2023_103746",
+        "sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+        "journal": "JFE",
+        "year": 2024,
+        "coverage": "minimal",
+        "languages": [
+          "Stata",
+          "Python",
+          "Jupyter"
+        ]
+      },
+      {
+        "artid": "jfe_2026_j_jfineco_2025_104223",
+        "sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+        "journal": "JFE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "SAS"
+        ]
+      },
+      {
+        "artid": "rfs_2025_rfs_hhae056",
+        "sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+        "journal": "RFS",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      },
+      {
+        "artid": "rfs_2026_rfs_hhag042",
+        "sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+        "journal": "RFS",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Python",
+          "MATLAB"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 4,
+    "specifications": 8,
+    "designs": 4,
+    "by_language": {
+      "Stata": 3,
+      "Python": 3,
+      "Jupyter": 1,
+      "SAS": 1,
+      "MATLAB": 1
+    },
+    "by_journal": {
+      "JFE": 2,
+      "RFS": 2
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 2,
+      "2025": 1
+    },
+    "by_coverage": {
+      "minimal": 1,
+      "partial": 3
+    }
+  },
+  "by_variant": {
+    "unknown": 4
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "estimator",
+      "value": "2sls",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s15",
+          "field": "estimator",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+          "lines": [
+            20,
+            20
+          ],
+          "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/helper.py",
+          "lines": [
+            491,
+            491
+          ],
+          "snippet": "sm.OLS(x[\"XRet\"], np.ones(x[\"XRet\"].shape))",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "command",
+      "value": "OLS",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/helper.py",
+          "lines": [
+            491,
+            491
+          ],
+          "snippet": "sm.OLS(x[\"XRet\"], np.ones(x[\"XRet\"].shape))",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "Portfolio_Analysis_wOverlap_gt",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+          "lines": [
+            83,
+            85
+          ],
+          "snippet": "Portfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t/*Make_Portf Inputs*/\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*/  rank_var1(cur_svar_reg) cutoff_var1(cur_svar_nyse)  /*",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "command",
+      "value": "collapse",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_JTU2GF/Table 12.do",
+          "lines": [
+            189,
+            189
+          ],
+          "snippet": "collapse (mean) ret , by(t BK_pf)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "command",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s15",
+          "field": "command",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+          "lines": [
+            20,
+            20
+          ],
+          "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "package",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 4,
+      "unknown_papers": 3,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s15",
+          "field": "package",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+          "lines": [
+            20,
+            20
+          ],
+          "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "se_type",
+      "value": "hac_newey_west",
+      "papers": 2,
+      "specs": 4,
+      "denominator_papers": 4,
+      "unknown_papers": 2,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s15",
+          "field": "se.type",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+          "lines": [
+            20,
+            20
+          ],
+          "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/helper.py",
+          "lines": [
+            491,
+            493
+          ],
+          "snippet": ".fit(cov_type=\"HAC\", cov_kwds={\"maxlags\": maxlags,",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "diagnostic",
+      "value": "balance:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 1,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/dataverse_JTU2GF/Table 13.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 4,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+          "lines": [
+            83,
+            83
+          ],
+          "snippet": "Portfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+          "lines": [
+            37,
+            57
+          ],
+          "snippet": "ivreg2 Spread cons if yearq < 201704, kernel(bar) bw(auto) small robust nocons",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_JTU2GF/Table 13.do",
+          "lines": [
+            114,
+            114
+          ],
+          "snippet": "bys year: egen BK_pf = xtile(brandcap), nq(5) //",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/helper.py",
+          "lines": [
+            465,
+            466
+          ],
+          "snippet": "def do_strategy_overview(sub, weighting, col, ap_factors, pfs, bps, bp_min_n,",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 3,
+      "specs": 7,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 2,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s15",
+          "field": "resolution_status",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+          "lines": [
+            20,
+            20
+          ],
+          "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_JTU2GF/Table 12.do",
+          "lines": [
+            189,
+            189
+          ],
+          "snippet": "collapse (mean) ret , by(t BK_pf)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/helper.py",
+          "lines": [
+            491,
+            491
+          ],
+          "snippet": "lambda x: sm.OLS(x[\"XRet\"], np.ones(x[\"XRet\"].shape))",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s5",
+          "field": "resolution_status",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+          "lines": [
+            83,
+            85
+          ],
+          "snippet": "Portfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t/*Make_Portf Inputs*/\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*/  rank_var1(cur_svar_reg) cutoff_var1(cur_svar_nyse)  /*",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "language",
+      "value": "Python",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Python": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "language",
+      "value": "Jupyter",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Jupyter": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "language",
+      "value": "SAS",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "SAS": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "implementation_feature",
+      "text": "overlapping portfolio formation",
+      "record_id": "d1",
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        7,
+        7
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "implementation_feature",
+      "text": "NYSE-based breakpoints",
+      "record_id": "d1",
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        7,
+        7
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "implementation_feature",
+      "text": "10 portfolios per anomaly",
+      "record_id": "d1",
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        7,
+        7
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "convention",
+      "text": "Global macros defined in loops (foreach constructs) to apply factor sets across variable lists",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+      "lines": [
+        45,
+        45
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "convention",
+      "text": "Anomaly names shorthand (e.g., AG, NOA, BM) used throughout for sort variables and factors",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        22,
+        22
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "sample_restriction",
+      "text": "All sample group: filter on ret!=. (non-missing returns)",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_1_get_Sortvars_All.do",
+      "lines": [
+        36,
+        37
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "sample_restriction",
+      "text": "Portfolio_Analysis_wOverlap_gt Make_Portf Portf_Ret with overlapping option",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        83,
+        83
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "reading_note",
+      "text": "Master script defines 4 stages: data cleaning, anomaly/factor creation, statistical tests. Focuses on 44 anomalies across 3 frequencies (monthly, quarterly, annual). Key custom ados: xtfmb_mion (Fama-MacBeth), Portfolio_Analysis_wOverlap_gt (portfolio sorts), Barillas_Shanken_maxSR_Test (model comparison). Pipeline emphasizes overlapping portfolio formation and time-series factor model construction.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "Newey-West standard errors (kernel(bar) bw(auto))",
+      "record_id": "d2",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+        37,
+        57
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "portfolio-level regressions",
+      "record_id": "d2",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+        37,
+        57
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "risk factor controls (market return, FF factors)",
+      "record_id": "d2",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+        37,
+        57
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Fixed effects specification: ab(permno date) notation in reghdfe specifies stock-by-time two-way FE absorption",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        23,
+        23
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Interaction syntax: c.intermediary_shock#c.epsilonit creates fully-interacted term",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        23,
+        23
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Portfolio-level analysis: data aggregated to quintile × date level before ivreg2 estimation",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+        11,
+        11
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Output names: figures exported as .png in Figures/ subdirectory; tables as .tex in Tables/ subdirectory",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        78,
+        78
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "reading_note",
+      "text": "Analyzed master scripts and key analysis/cleaning scripts; found consistent patterns in reghdfe specifications with cluster(permno date) two-way clustering and date/stock FE; xtfmb in Table 1; ivreg2 with Newey-West HAC in portfolio regressions and event study; identified main data sources (CRSP, Compustat, FactSet, FF factors, S34)",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "reading_note",
+      "text": "Stata scripts use globals for paths; data files not included. Entry points are individual table-specific .do files. Portfolio returns computed externally from CRSP/Compustat/Interbrand sources.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2026_rfs_hhag042",
+      "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+      "kind": "reading_note",
+      "text": "Pipeline entry orchestrator, main analysis (portfolio sorts, Fama-MacBeth, panel OLS). HAC OLS on portfolio alphas, FamaMacBeth cross-sectional, PanelOLS with two-way clustering traced. MFD constructed as std() of ML forecasts.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet estimator: unknown in 2/4 papers; shares are computed over the 2 known papers only",
+    "facet package: unknown in 3/4 papers; shares are computed over the 1 known papers only",
+    "facet se_type: unknown in 2/4 papers; shares are computed over the 2 known papers only",
+    "4/4 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only",
+    "no design variants recorded; variant-conditional rules cannot be derived from this set"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

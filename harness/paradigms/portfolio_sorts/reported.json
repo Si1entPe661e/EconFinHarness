@@ -1,0 +1,4096 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "portfolio_sorts",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+      "journal": "JFE",
+      "year": 2024,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+      "journal": "JFE",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+      "journal": "RFS",
+      "year": 2025,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "rfs_2026_rfs_hhag042",
+      "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+      "journal": "RFS",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 4,
+    "by_journal": {
+      "JFE": 2,
+      "RFS": 2
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 2,
+      "2025": 1
+    },
+    "with_card": 4,
+    "papers_with_category": {
+      "design_statement": 4,
+      "sample_construction": 4,
+      "variable_construction": 4,
+      "specification_reporting": 4,
+      "robustness_reported": 3,
+      "mechanism_evidence": 2,
+      "magnitude_interpretation": 4,
+      "limitation_stated": 3,
+      "presentation_convention": 4,
+      "writing_structure": 4,
+      "replication_statement": 4,
+      "data_access": 4,
+      "inference_justification": 2,
+      "diagnostic_reported": 3,
+      "heterogeneity_reported": 2,
+      "external_validity": 2,
+      "other": 1
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "commercial",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o47",
+          "pages": [
+            3,
+            13
+          ],
+          "locator": "throughout, footnotes and Table 8 note",
+          "statement": "Draws on standard commercial/licensed financial databases (implied by Compustat-style variable names) combined with numerous third-party macro-factor series each cited to its own source paper, rather than restricted or hand-collected firm-level data; no data-use agreement is mentioned.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o46",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section 3",
+          "statement": "The paper's primary inputs are commercial or subscription market and holdings databases (return data, 13F holdings, accounting characteristics) rather than survey-collected or web-scraped data, consistent with a standard secondary-data asset-pricing design.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o48",
+          "pages": [
+            7,
+            34
+          ],
+          "locator": "Sections 1.1, 2.3, 3.2 footnote 16, 3.5, 4",
+          "statement": "Inputs are commercial databases (CRSP, Compustat, IBES), a commercial vendor's public brand list, factor data from named authors' websites and one set of factors obtained directly from other authors (acknowledged in a footnote), and filings scraped from SEC EDGAR.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            41
+          ],
+          "locator": "Acknowledgements; Section 6.2; Table 8 notes",
+          "statement": "Core inputs are public-use (published characteristics dataset built on CRSP and Compustat); mechanism tests draw on commercial sources (IHS Markit fees, Thomson Reuters 13F, StockTwits, option data) and a third-party-provided mispricing score acknowledged in the front matter.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_restricted",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o47",
+          "pages": [
+            17,
+            21
+          ],
+          "locator": "footnotes 4, 14, 26, 31",
+          "statement": "Beyond the deposited replication data, several auxiliary series used in the analysis are described as shared directly by other researchers rather than obtained from a public database, indicating restricted, non-standard access channels for part of the empirical inputs.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            41
+          ],
+          "locator": "Acknowledgements; Section 6.2; Table 8 notes",
+          "statement": "Core inputs are public-use (published characteristics dataset built on CRSP and Compustat); mechanism tests draw on commercial sources (IHS Markit fees, Thomson Reuters 13F, StockTwits, option data) and a third-party-provided mispricing score acknowledged in the front matter.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "public_use",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o48",
+          "pages": [
+            7,
+            34
+          ],
+          "locator": "Sections 1.1, 2.3, 3.2 footnote 16, 3.5, 4",
+          "statement": "Inputs are commercial databases (CRSP, Compustat, IBES), a commercial vendor's public brand list, factor data from named authors' websites and one set of factors obtained directly from other authors (acknowledged in a footnote), and filings scraped from SEC EDGAR.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            41
+          ],
+          "locator": "Acknowledgements; Section 6.2; Table 8 notes",
+          "statement": "Core inputs are public-use (published characteristics dataset built on CRSP and Compustat); mechanism tests draw on commercial sources (IHS Markit fees, Thomson Reuters 13F, StockTwits, option data) and a third-party-provided mispricing score acknowledged in the front matter.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "administrative",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o46",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section 3",
+          "statement": "The paper's primary inputs are commercial or subscription market and holdings databases (return data, 13F holdings, accounting characteristics) rather than survey-collected or web-scraped data, consistent with a standard secondary-data asset-pricing design.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            41
+          ],
+          "locator": "Acknowledgements; Section 6.2; Table 8 notes",
+          "statement": "Core inputs are public-use (published characteristics dataset built on CRSP and Compustat); mechanism tests draw on commercial sources (IHS Markit fees, Thomson Reuters 13F, StockTwits, option data) and a third-party-provided mispricing score acknowledged in the front matter.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "web_scraped",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o48",
+          "pages": [
+            7,
+            34
+          ],
+          "locator": "Sections 1.1, 2.3, 3.2 footnote 16, 3.5, 4",
+          "statement": "Inputs are commercial databases (CRSP, Compustat, IBES), a commercial vendor's public brand list, factor data from named authors' websites and one set of factors obtained directly from other authors (acknowledged in a footnote), and filings scraped from SEC EDGAR.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "estimand_named",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Frames its estimand as a measurement/construct-validity question: whether HXZ/FF5F factor-model performance is driven by the specific asset-growth construction of the investment factor rather than by investment itself, not a causal treatment-effect design.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o1",
+          "pages": [
+            4,
+            8
+          ],
+          "locator": "Section 2, Propositions 1-2",
+          "statement": "The identification strategy rests on a stylized CARA mean-variance model (Section 2) yielding two numbered propositions predicting monotonic sensitivity of intermediated stocks to intermediary risk-tolerance shocks; the propositions are referenced by number when interpreting later tables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Introduction; Section 3 opening paragraph",
+          "statement": "The empirical object is a cross-sectional return-prediction test: whether a simulated disagreement measure (dispersion of forecasts across randomly specified machine learning investor-models) predicts next-month stock returns. The design is stated as nonparametric portfolio sorts plus parametric Fam",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "design_variant_named",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o1",
+          "pages": [
+            4,
+            8
+          ],
+          "locator": "Section 2, Propositions 1-2",
+          "statement": "The identification strategy rests on a stylized CARA mean-variance model (Section 2) yielding two numbered propositions predicting monotonic sensitivity of intermediated stocks to intermediary risk-tolerance shocks; the propositions are referenced by number when interpreting later tables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Introduction; Section 3 opening paragraph",
+          "statement": "The empirical object is a cross-sectional return-prediction test: whether a simulated disagreement measure (dispersion of forecasts across randomly specified machine learning investor-models) predicts next-month stock returns. The design is stated as nonparametric portfolio sorts plus parametric Fam",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "identifying_assumption_explicit",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o2",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 4.1, Eq. (8)",
+          "statement": "The residualized intermediation measure is constructed so that cross-sectional variation in the sorting variable is uncorrelated with observed fundamentals, and this construction step is framed as the identifying move separating fundamental risk exposure from a pure intermediation channel.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o3",
+          "pages": [
+            8,
+            14
+          ],
+          "locator": "Section 1.1 end; Section 2 opening and footnote 10",
+          "statement": "Portfolio formation is timed to the first day of the month after the list announcement so that the short-term announcement reaction is excluded; the authors state the delay lets the market price the news before the return window starts.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "threats_discussed",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o4",
+          "pages": [
+            2,
+            16
+          ],
+          "locator": "Introduction and Conclusion",
+          "statement": "Explicitly declines to take a stance on whether findings reflect risk or mispricing, stating this cannot be resolved without a structural model, framing the paper's contribution as comparative/documentary rather than causal.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o2",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 4.1, Eq. (8)",
+          "statement": "The residualized intermediation measure is constructed so that cross-sectional variation in the sorting variable is uncorrelated with observed fundamentals, and this construction step is framed as the identifying move separating fundamental risk exposure from a pure intermediation channel.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Introduction; Section 3 opening paragraph",
+          "statement": "The empirical object is a cross-sectional return-prediction test: whether a simulated disagreement measure (dispersion of forecasts across randomly specified machine learning investor-models) predicts next-month stock returns. The design is stated as nonparametric portfolio sorts plus parametric Fam",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o22",
+          "pages": [
+            8,
+            8
+          ],
+          "locator": "Fig. 2",
+          "statement": "A figure plotting average characteristic quintiles over time for the top- and bottom-intermediation portfolios serves as a graphical covariate-balance check, showing spread induced in intermediation while other characteristic quintiles for the two portfolios stay close together.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o25",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Table 3; Figure 3; Section 1.2",
+          "statement": "Before the return tests the paper documents the size distribution of the portfolio firms against NYSE breakpoints (table and figure) to pre-empt the micro-cap concern for equal weighting, and uses that to motivate the choice of equal-weighted portfolios as the headline.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o21",
+          "pages": [
+            16,
+            18
+          ],
+          "locator": "Section 3.2; Table 4",
+          "statement": "Before controlling for characteristics, the paper reports time-series averages of cross-sectional medians of firm characteristics across sorted deciles, using the pattern to motivate which controls are needed next.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "balance_table",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o22",
+          "pages": [
+            8,
+            8
+          ],
+          "locator": "Fig. 2",
+          "statement": "A figure plotting average characteristic quintiles over time for the top- and bottom-intermediation portfolios serves as a graphical covariate-balance check, showing spread induced in intermediation while other characteristic quintiles for the two portfolios stay close together.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o24",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Section 4.5, Appendix Fig. A.1 referenced",
+          "statement": "A time-series plot of the intermediary shock variables is placed in an appendix figure and referenced from the main text specifically to support the claim that these variables are unusually volatile during the financial-crisis period.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:measure_validation",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o22",
+          "pages": [
+            22,
+            30
+          ],
+          "locator": "Section 5.1 to 5.3; Figures 2, 3, 4; Tables 7, 8, 9",
+          "statement": "A long section validates the new measure against existing proxies: distribution of monthly rank correlations with analyst dispersion (density figure), parallel Fama-MacBeth regressions of both measures on firm characteristics (bar figure), rank correlations with many other proxies, and a decompositi",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:portfolio_characteristics_table",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o21",
+          "pages": [
+            16,
+            18
+          ],
+          "locator": "Section 3.2; Table 4",
+          "statement": "Before controlling for characteristics, the paper reports time-series averages of cross-sectional medians of firm characteristics across sorted deciles, using the pattern to motivate which controls are needed next.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:size_distribution_check",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o25",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Table 3; Figure 3; Section 1.2",
+          "statement": "Before the return tests the paper documents the size distribution of the portfolio firms against NYSE breakpoints (table and figure) to pre-empt the micro-cap concern for equal weighting, and uses that to motivate the choice of equal-weighted portfolios as the headline.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:state_dependence",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o23",
+          "pages": [
+            29,
+            32
+          ],
+          "locator": "Section 5.4; Table 10",
+          "statement": "Time-variation checks split the sample at the median of many aggregate uncertainty, sentiment and factor-density proxies and report the spread in each state and its difference in one table; a LASSO count of selected characteristics defines factor density.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:turnover_reported",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o26",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 1 and 2; Figures 1 and 2",
+          "statement": "List turnover (additions and drops per year) and industry composition over time are tabulated and plotted to characterize the signal's persistence before returns are analyzed.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "summary_stats_table",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o25",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Table 3; Figure 3; Section 1.2",
+          "statement": "Before the return tests the paper documents the size distribution of the portfolio firms against NYSE breakpoints (table and figure) to pre-empt the micro-cap concern for equal weighting, and uses that to motivate the choice of equal-weighted portfolios as the headline.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "scaling_discussed",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o50",
+          "pages": [
+            22,
+            22
+          ],
+          "locator": "Section 6, Conclusion",
+          "statement": "In the conclusion, the author frames the equity-market estimates as a likely lower bound on the quantitative importance of intermediation frictions in other asset classes that are harder for households to access directly, an explicit claim about generalizing beyond the studied asset class.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o34",
+          "pages": [
+            10,
+            22
+          ],
+          "locator": "Section 1.3; Section 4",
+          "statement": "International replication across developed and emerging markets is presented explicitly as evidence of external validity, and the method is described as applicable to any asset class with characteristics data.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o34",
+          "pages": [
+            10,
+            22
+          ],
+          "locator": "Section 1.3; Section 4",
+          "statement": "International replication across developed and emerging markets is presented explicitly as evidence of external validity, and the method is described as applicable to any asset class with characteristics data.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "mechanism_motivated",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o29",
+          "pages": [
+            17,
+            19
+          ],
+          "locator": "Section 5.1, Table 9",
+          "statement": "The intermediation sort is re-formed separately using only hedge-fund holdings, and mutual-fund/advisor holdings are further split by alignment with top- or bottom-quintile hedge-fund holdings, motivated by the hypothesis that dealer exposure concentrates in institutions closest to prime brokers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o27",
+          "pages": [
+            35,
+            43
+          ],
+          "locator": "Tables 13, 15, 16",
+          "statement": "Heterogeneity is delivered through conditional (dependent) tercile-by-quintile sorts on mispricing score, borrowing fee, institutional ownership and an arbitrage-cost index, each table pairing an average-characteristic panel with a spread panel and a difference-in-spreads row.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "split_sample",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o29",
+          "pages": [
+            17,
+            19
+          ],
+          "locator": "Section 5.1, Table 9",
+          "statement": "The intermediation sort is re-formed separately using only hedge-fund holdings, and mutual-fund/advisor holdings are further split by alignment with top- or bottom-quintile hedge-fund holdings, motivated by the hypothesis that dealer exposure concentrates in institutions closest to prime brokers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o27",
+          "pages": [
+            35,
+            43
+          ],
+          "locator": "Tables 13, 15, 16",
+          "statement": "Heterogeneity is delivered through conditional (dependent) tercile-by-quintile sorts on mispricing score, borrowing fee, institutional ownership and an arbitrage-cost index, each table pairing an average-characteristic panel with a spread panel and a difference-in-spreads row.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o27",
+          "pages": [
+            35,
+            43
+          ],
+          "locator": "Tables 13, 15, 16",
+          "statement": "Heterogeneity is delivered through conditional (dependent) tercile-by-quintile sorts on mispricing score, borrowing fee, institutional ownership and an arbitrage-cost index, each table pairing an average-characteristic panel with a spread panel and a difference-in-spreads row.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "newey_west",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o17",
+          "pages": [
+            9,
+            13
+          ],
+          "locator": "Tables 4-5, 9-11, Figs. 3-6",
+          "statement": "Portfolio-level contemporaneous and predictive regressions report Newey-West standard errors using an automatic optimal-lag rule from the cited methodology, with the choice attributed to the citation rather than separately justified in prose as addressing serial correlation in overlapping quarterly ",
+          "basis": "inferred"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o18",
+          "pages": [
+            16,
+            20
+          ],
+          "locator": "footnote 9; Section 3.4",
+          "statement": "A footnote states that all reported t-statistics are Newey-West adjusted with a fixed lag count to address heteroskedasticity and autocorrelation; the lag choice itself is not further justified.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o18",
+          "pages": [
+            16,
+            20
+          ],
+          "locator": "footnote 9; Section 3.4",
+          "statement": "A footnote states that all reported t-statistics are Newey-West adjusted with a fixed lag count to address heteroskedasticity and autocorrelation; the lag choice itself is not further justified.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o20",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Table 10 notes; Section 5.4",
+          "statement": "Differences in the return spread between high and low uncertainty states are tested with a one-sided t-test, stated in the table note, consistent with the directional hypothesis.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "no_justification_found",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o21",
+          "pages": [
+            1,
+            23
+          ],
+          "locator": "throughout",
+          "statement": "No discussion of multiple-hypothesis-testing adjustment appears anywhere in the text despite many coefficients being reported with significance stars across numerous quintile-portfolio and robustness specifications.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:one_sided_test",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o20",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Table 10 notes; Section 5.4",
+          "statement": "Differences in the return spread between high and low uncertainty states are tested with a one-sided t-test, stated in the table note, consistent with the directional hypothesis.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "identification_caveat",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o36",
+          "pages": [
+            2,
+            16
+          ],
+          "locator": "Introduction and Conclusion",
+          "statement": "States it is difficult to definitively conclude whether a factor model captures risk or mispricing absent a structural model, repeating this caveat in both the introduction and the conclusion.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            34
+          ],
+          "locator": "Introduction; Section 4",
+          "statement": "The authors acknowledge the absence of exogenous variation, concede that an omitted mispriced variable cannot be excluded outright, and note that the text measure is deliberately crude.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "interpretation_caveat",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o38",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Explicitly declines to take a position on which specific driver of equity-financing costs (agency frictions, risk aversion, or behavioral biases) explains its results, treating that question as outside the paper's scope.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o34",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4.1",
+          "statement": "The author notes that the discount-rate and cashflow components of returns cannot be observed separately, and frames the joint pattern of contemporaneous comovement plus return predictability as indirect, combined evidence for a discount-rate channel rather than a direct observation of it.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "measurement",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o34",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4.1",
+          "statement": "The author notes that the discount-rate and cashflow components of returns cannot be observed separately, and frames the joint pattern of contemporaneous comovement plus return predictability as indirect, combined evidence for a discount-rate channel rather than a direct observation of it.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            34
+          ],
+          "locator": "Introduction; Section 4",
+          "statement": "The authors acknowledge the absence of exogenous variation, concede that an omitted mispriced variable cannot be excluded outright, and note that the text measure is deliberately crude.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "compared_to_literature",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o38",
+          "pages": [
+            9,
+            38
+          ],
+          "locator": "Section 1.2; Section 5",
+          "statement": "The number of firms per year is benchmarked against prior list-based anomaly studies, and the input-versus-output contrast is compared to an R&D efficiency paper.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o32",
+          "pages": [
+            32,
+            38
+          ],
+          "locator": "Section 5.4; Section 6.1",
+          "statement": "The announcement-window effect is expressed as a percentage increase of the strategy spread relative to nonannouncement days, and state-dependent spreads are compared to the unconditional average from the main table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "other:cross_group_percent_change_comparison",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o35",
+          "pages": [
+            13,
+            14
+          ],
+          "locator": "Section 5, Table 8 discussion",
+          "statement": "Interprets the relative size of the debt-equity substitution effect through cross-group percent-change comparisons of equity- versus debt-issuance responses across AG/INVT/AREC quintiles against PPE quintiles, rather than through standard-deviation units or a dollar-cost translation.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "precision_discussed",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o33",
+          "pages": [
+            9,
+            18
+          ],
+          "locator": "throughout Section 4",
+          "statement": "Alongside point estimates, the paper repeatedly reports the associated t-statistics and describes estimates as precise or imprecise in prose, treating statistical precision as a dimension separate from economic magnitude when interpreting results.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "relative_to_mean",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o32",
+          "pages": [
+            32,
+            38
+          ],
+          "locator": "Section 5.4; Section 6.1",
+          "statement": "The announcement-window effect is expressed as a percentage increase of the strategy spread relative to nonannouncement days, and state-dependent spreads are compared to the unconditional average from the main table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "sd_units",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o31",
+          "pages": [
+            9,
+            16
+          ],
+          "locator": "throughout Section 4",
+          "statement": "Coefficients are consistently interpreted relative to a one-standard-deviation change in the standardized shock variable and expressed in annualized percentage-return units, a convention applied uniformly across contemporaneous, predictive, and stock-level tables.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "intermediate_outcomes",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o32",
+          "pages": [
+            13,
+            14
+          ],
+          "locator": "Section 5, Table 8",
+          "statement": "Uses debt-versus-equity issuance behavior in high- versus low-sentiment periods as an intermediate-outcome test of a proposed debt-equity substitution mechanism connecting AG, INVT, and AREC to equity-financing-cost exposure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o28",
+          "pages": [
+            35,
+            39
+          ],
+          "locator": "Section 6.1; Tables 13, 14",
+          "statement": "Mispricing versus risk is adjudicated by three steps: alphas across factor models, correlation with an existing mispricing score, and concentration of returns in earnings-announcement windows using a daily panel with an interaction term, following a cited protocol for locating announcement days by s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o28",
+          "pages": [
+            35,
+            39
+          ],
+          "locator": "Section 6.1; Tables 13, 14",
+          "statement": "Mispricing versus risk is adjudicated by three steps: alphas across factor models, correlation with an existing mispricing score, and concentration of returns in earnings-announcement windows using a daily panel with an interaction term, following a cited protocol for locating announcement days by s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "model_guided",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o29",
+          "pages": [
+            33,
+            35
+          ],
+          "locator": "Section 5.6; Equations (6) to (8); Table 12",
+          "statement": "The measure is decomposed into a model-disagreement part and an information-set part by re-expressing the belief equations with separate indices for model and information subset, then sorting on each component.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "ruled_out_alternatives",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 2,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o28",
+          "pages": [
+            35,
+            39
+          ],
+          "locator": "Section 6.1; Tables 13, 14",
+          "statement": "Mispricing versus risk is adjudicated by three steps: alphas across factor models, correlation with an existing mispricing score, and concentration of returns in earnings-announcement windows using a daily panel with an interaction term, following a cited protocol for locating announcement days by s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "other",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 1,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Acknowledgements",
+          "statement": "The front matter carries a disclaimer for an author's affiliation with an investment management firm, stating views are the authors' own.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "other",
+      "tag": "other:conflict_disclosure",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 1,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Acknowledgements",
+          "statement": "The front matter carries a disclaimer for an author's affiliation with an investment management firm, stating views are the authors' own.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "stars_used",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o40",
+          "pages": [
+            4,
+            15
+          ],
+          "locator": "Tables 1-10 notes",
+          "statement": "Uses the same stars convention in every table note, spelling out the same three conventional significance thresholds, uniformly across Sharpe-ratio, regression, and GMM tables despite their different statistical frameworks.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o38",
+          "pages": [
+            9,
+            16
+          ],
+          "locator": "Tables 4-11",
+          "statement": "Regression tables use a conventional multi-tier significance-star convention alongside t-statistics reported in parentheses beneath each coefficient, applied consistently across portfolio-level and stock-level specifications.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o35",
+          "pages": [
+            13,
+            43
+          ],
+          "locator": "Tables 1 to 16 notes",
+          "statement": "Tables use three-level significance stars with t-statistics in parentheses; every table note restates sample period, sort procedure, weighting and the standard-error adjustment; a summary statistics table and a rank-correlation table open the empirical part.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "summary_stats_table",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o39",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Tables 2-3",
+          "statement": "Summary statistics are split across two separate tables rather than combined into one: one reporting means and medians of portfolio-level characteristics, and a second separately reporting return moments and Sharpe ratios for the same sorted portfolios.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o42",
+          "pages": [
+            10,
+            24
+          ],
+          "locator": "Figures 1 to 5; Table 3",
+          "statement": "Figures include an industry count bar chart, a heat map of industry affiliation by year, a size-category share plot, a cumulative excess-return line plot by model, and a bar-style comparison of alphas across models; a two-year summary statistics table gives first and last sample years.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o35",
+          "pages": [
+            13,
+            43
+          ],
+          "locator": "Tables 1 to 16 notes",
+          "statement": "Tables use three-level significance stars with t-statistics in parentheses; every table note restates sample period, sort procedure, weighting and the standard-error adjustment; a summary statistics table and a rank-correlation table open the empirical part.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "appendix_tables_numbered_a",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            38
+          ],
+          "locator": "Title page note; Sections 2.1, 2.3, 2.4, 5",
+          "statement": "Supplementary results are referenced as Internet Appendix Table or Figure numbers; the appendix is hosted by the publisher and is not part of the text read here.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o37",
+          "pages": [
+            21,
+            46
+          ],
+          "locator": "Section 4; Appendices A to C",
+          "statement": "Print appendices are lettered A to C with tables numbered A1, B1, C1; Internet Appendix material is referenced by letter sections and by I-prefixed figure and table numbers.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "coefficient_plot",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o36",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Figs. 3-6, Tables 4-5",
+          "statement": "Several main results are presented as coefficient plots across intermediation quintiles with shaded confidence bands, paired with a companion regression table reporting the identical specification numerically, and the plot notes state which standard-error procedure produced the bands.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o42",
+          "pages": [
+            10,
+            24
+          ],
+          "locator": "Figures 1 to 5; Table 3",
+          "statement": "Figures include an industry count bar chart, a heat map of industry affiliation by year, a size-category share plot, a cumulative excess-return line plot by model, and a bar-style comparison of alphas across models; a two-year summary statistics table gives first and last sample years.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_sample",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o37",
+          "pages": [
+            7,
+            20
+          ],
+          "locator": "throughout, e.g. Tables 1, 4, 7",
+          "statement": "Table notes consistently reproduce the numbered estimating equation beneath the table itself, in addition to stating the sample period, the standard-error type, and variable definitions, rather than relying only on in-text description of the specification.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o35",
+          "pages": [
+            13,
+            43
+          ],
+          "locator": "Tables 1 to 16 notes",
+          "statement": "Tables use three-level significance stars with t-statistics in parentheses; every table note restates sample period, sort procedure, weighting and the standard-error adjustment; a summary statistics table and a rank-correlation table open the empirical part.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_se",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o36",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Figs. 3-6, Tables 4-5",
+          "statement": "Several main results are presented as coefficient plots across intermediation quintiles with shaded confidence bands, paired with a companion regression table reporting the identical specification numerically, and the plot notes state which standard-error procedure produced the bands.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o35",
+          "pages": [
+            13,
+            43
+          ],
+          "locator": "Tables 1 to 16 notes",
+          "statement": "Tables use three-level significance stars with t-statistics in parentheses; every table note restates sample period, sort procedure, weighting and the standard-error adjustment; a summary statistics table and a rank-correlation table open the empirical part.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o37",
+          "pages": [
+            21,
+            46
+          ],
+          "locator": "Section 4; Appendices A to C",
+          "statement": "Print appendices are lettered A to C with tables numbered A1, B1, C1; Internet Appendix material is referenced by letter sections and by I-prefixed figure and table numbers.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o35",
+          "pages": [
+            13,
+            43
+          ],
+          "locator": "Tables 1 to 16 notes",
+          "statement": "Tables use three-level significance stars with t-statistics in parentheses; every table note restates sample period, sort procedure, weighting and the standard-error adjustment; a summary statistics table and a rank-correlation table open the empirical part.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            38
+          ],
+          "locator": "Title page note; Sections 2.1, 2.3, 2.4, 5",
+          "statement": "Supplementary results are referenced as Internet Appendix Table or Figure numbers; the appendix is hosted by the publisher and is not part of the text read here.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:self_contained_table_notes",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o41",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Table 8 note",
+          "statement": "Writes table notes to be self-contained, restating exact variable-construction formulas such as debt and equity issuance definitions rather than only cross-referencing the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "raw_data_plot",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o42",
+          "pages": [
+            10,
+            24
+          ],
+          "locator": "Figures 1 to 5; Table 3",
+          "statement": "Figures include an industry count bar chart, a heat map of industry affiliation by year, a size-category share plot, a cumulative excess-return line plot by model, and a bar-style comparison of alphas across models; a two-year summary statistics table gives first and last sample years.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "States, in a Data availability statement, a Mendeley Data DOI as the location where the paper's code and data can be found, an explicit citable replication-package pointer.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o44",
+          "pages": [
+            22,
+            22
+          ],
+          "locator": "Data availability section",
+          "statement": "A dedicated Data availability section states that replication materials are posted under a named dataset title on a public data repository and gives a resolvable link, placed separately from the authorship-contribution and competing-interest statements that follow it.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o47",
+          "pages": [
+            39,
+            39
+          ],
+          "locator": "Code Availability paragraph",
+          "statement": "A code availability statement at the end of the conclusion gives a Harvard Dataverse DOI for the replication code; no data availability statement or software name is given in the text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o41",
+          "pages": [
+            11,
+            44
+          ],
+          "locator": "Code and Data Availability; footnote 7",
+          "statement": "A Code and Data Availability statement after the conclusion gives a Harvard Dataverse DOI for replication code and data; a footnote separately points to the public GitHub source of the input characteristics dataset. No software is named in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "States, in a Data availability statement, a Mendeley Data DOI as the location where the paper's code and data can be found, an explicit citable replication-package pointer.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o47",
+          "pages": [
+            39,
+            39
+          ],
+          "locator": "Code Availability paragraph",
+          "statement": "A code availability statement at the end of the conclusion gives a Harvard Dataverse DOI for the replication code; no data availability statement or software name is given in the text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o41",
+          "pages": [
+            11,
+            44
+          ],
+          "locator": "Code and Data Availability; footnote 7",
+          "statement": "A Code and Data Availability statement after the conclusion gives a Harvard Dataverse DOI for replication code and data; a footnote separately points to the public GitHub source of the input characteristics dataset. No software is named in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_public",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "States, in a Data availability statement, a Mendeley Data DOI as the location where the paper's code and data can be found, an explicit citable replication-package pointer.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o44",
+          "pages": [
+            22,
+            22
+          ],
+          "locator": "Data availability section",
+          "statement": "A dedicated Data availability section states that replication materials are posted under a named dataset title on a public data repository and gives a resolvable link, placed separately from the authorship-contribution and competing-interest statements that follow it.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o41",
+          "pages": [
+            11,
+            44
+          ],
+          "locator": "Code and Data Availability; footnote 7",
+          "statement": "A Code and Data Availability statement after the conclusion gives a Harvard Dataverse DOI for replication code and data; a footnote separately points to the public GitHub source of the input characteristics dataset. No software is named in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o41",
+          "pages": [
+            11,
+            44
+          ],
+          "locator": "Code and Data Availability; footnote 7",
+          "statement": "A Code and Data Availability statement after the conclusion gives a Harvard Dataverse DOI for replication code and data; a footnote separately points to the public GitHub source of the input characteristics dataset. No software is named in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o48",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Appendix. Supplementary material",
+          "statement": "Points to supplementary material via the article's own DOI as a location separate from the Mendeley code/data DOI, though its contents (Tables E1-E14) are not reproduced in the extracted main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "other:software_not_named_in_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o45",
+          "pages": [
+            1,
+            23
+          ],
+          "locator": "throughout",
+          "statement": "The manuscript text itself does not name the statistical software used to produce the reported estimates; the estimation software is only identifiable indirectly from the deposited replication code rather than being stated in the paper.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_sample",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o30",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4, footnote 20",
+          "statement": "Checks the debt-equity substitution finding in an unreported test using single-sorted rather than bivariate-sorted portfolios, disclosed as qualitatively similar in a footnote rather than shown in a table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o26",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Section 4.5, Appendix Tables A.2-A.3",
+          "statement": "Separate robustness variants value-weight the portfolios instead of equal-weighting them and exclude the 2007-2009 financial-crisis window from the sample, with results for both variants placed in appendix tables that the main text summarizes narratively.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o24",
+          "pages": [
+            20,
+            22
+          ],
+          "locator": "Section 4; Internet Appendix A to H",
+          "statement": "A short robustness section summarizes in prose a battery of checks that live entirely in the Internet Appendix: persistence over horizons, extended bivariate sorts, a three-pass estimator robust to omitted factors, nonlinear SDF pricing errors, alternative ML architectures and hyperparameters, easy-",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_specification",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o25",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Section 4.5",
+          "statement": "Robustness checks reconstruct the residualized intermediation measure using both a stripped-down single-characteristic specification and an expanded set of dozens of financial ratios, then re-form and re-test the quintile portfolios under each alternative characteristic set.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o24",
+          "pages": [
+            20,
+            22
+          ],
+          "locator": "Section 4; Internet Appendix A to H",
+          "statement": "A short robustness section summarizes in prose a battery of checks that live entirely in the Internet Appendix: persistence over horizons, extended bivariate sorts, a three-pass estimator robust to omitted factors, nonlinear SDF pricing errors, alternative ML architectures and hyperparameters, easy-",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_appendix",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o25",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Section 4.5",
+          "statement": "Robustness checks reconstruct the residualized intermediation measure using both a stripped-down single-characteristic specification and an expanded set of dozens of financial ratios, then re-form and re-test the quintile portfolios under each alternative characteristic set.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o24",
+          "pages": [
+            20,
+            22
+          ],
+          "locator": "Section 4; Internet Appendix A to H",
+          "statement": "A short robustness section summarizes in prose a battery of checks that live entirely in the Internet Appendix: persistence over horizons, extended bivariate sorts, a three-pass estimator robust to omitted factors, nonlinear SDF pricing errors, alternative ML architectures and hyperparameters, easy-",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_control_group",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o27",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Section 4.5, Appendix Tables A.4-A.5",
+          "statement": "The full robustness battery is repeated using holdings of the entire universe of 13F institutional investor types rather than only mutual funds, hedge funds, and investment advisors, to check sensitivity to the chosen institutional subset.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_estimator",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o24",
+          "pages": [
+            20,
+            22
+          ],
+          "locator": "Section 4; Internet Appendix A to H",
+          "statement": "A short robustness section summarizes in prose a battery of checks that live entirely in the Internet Appendix: persistence over horizons, extended bivariate sorts, a three-pass estimator robust to omitted factors, nonlinear SDF pricing errors, alternative ML architectures and hyperparameters, easy-",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o30",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4, footnote 20",
+          "statement": "Checks the debt-equity substitution finding in an unreported test using single-sorted rather than bivariate-sorted portfolios, disclosed as qualitatively similar in a footnote rather than shown in a table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o25",
+          "pages": [
+            33,
+            46
+          ],
+          "locator": "Section 5.6; Table 12; Appendix C Table C1",
+          "statement": "Robustness of the measure to its own construction is shown in the main text by re-running sorts with four hyperparameter sets or four different learner types, tabulated as one row per configuration with configuration IDs keyed to an appendix table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o24",
+          "pages": [
+            20,
+            22
+          ],
+          "locator": "Section 4; Internet Appendix A to H",
+          "statement": "A short robustness section summarizes in prose a battery of checks that live entirely in the Internet Appendix: persistence over horizons, extended bivariate sorts, a three-pass estimator robust to omitted factors, nonlinear SDF pricing errors, alternative ML architectures and hyperparameters, easy-",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "summarized_in_one_table",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 3,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o25",
+          "pages": [
+            33,
+            46
+          ],
+          "locator": "Section 5.6; Table 12; Appendix C Table C1",
+          "statement": "Robustness of the measure to its own construction is shown in the main text by re-running sorts with four hyperparameter sets or four different learner types, tabulated as one row per configuration with configuration IDs keyed to an appendix table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o9",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Data availability",
+          "statement": "Names the external repository location of the underlying data and code in a Data availability statement rather than describing raw data sources or exclusion criteria in the main text body.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o5",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section 3",
+          "statement": "The core sample links CRSP monthly stock returns for ordinary common shares on NYSE/Amex/Nasdaq, delisting-adjusted, to Thomson Reuters 13F institutional holdings and Compustat-derived firm characteristics, at the stock-quarter level over a stated multi-decade sample period.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o4",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Sections 1.1 and 1.2; Table 1",
+          "statement": "The main signal is a commercial annual best-brands list; brands are mapped to stocks, analysis is at the stock level, and only U.S. companies with CRSP price data are kept, so private companies drop out. The sample period runs from the first list year to the end of the CRSP sample used.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o4",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section 2; footnote 7",
+          "statement": "Stock characteristics and returns come from a publicly available replication dataset (Jensen, Kelly, Pedersen), with underlying CRSP and Compustat sources named; a footnote gives the GitHub location of that dataset and its code.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_period_stated",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            13
+          ],
+          "locator": "Table 3-5 and Table 8 notes",
+          "statement": "States the sample period repeatedly in table notes rather than in a dedicated data section: spanning regressions and portfolio-return tables specify monthly data from 1972 to 2018.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o5",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section 3",
+          "statement": "The core sample links CRSP monthly stock returns for ordinary common shares on NYSE/Amex/Nasdaq, delisting-adjusted, to Thomson Reuters 13F institutional holdings and Compustat-derived firm characteristics, at the stock-quarter level over a stated multi-decade sample period.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o4",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Sections 1.1 and 1.2; Table 1",
+          "statement": "The main signal is a commercial annual best-brands list; brands are mapped to stocks, analysis is at the stock level, and only U.S. companies with CRSP price data are kept, so private companies drop out. The sample period runs from the first list year to the end of the CRSP sample used.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o6",
+          "pages": [
+            11,
+            15
+          ],
+          "locator": "Section 2; Table 3 notes",
+          "statement": "The full data period and the shorter out-of-sample test period are stated separately; the gap is explained by the rolling estimation window used to train the investor models. Table notes restate the sample period, including shortened windows when a factor model or proxy is available only for part of",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "exclusions_justified",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o6",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section 3",
+          "statement": "Microcap stocks, low-priced shares, and financial-sector SIC codes are excluded, each justified qualitatively (trading frictions for small stocks, tradability for large institutions, endogeneity of intermediation for financial firms) rather than by one blanket data-cleaning rule.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o4",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Sections 1.1 and 1.2; Table 1",
+          "statement": "The main signal is a commercial annual best-brands list; brands are mapped to stocks, analysis is at the stock level, and only U.S. companies with CRSP price data are kept, so private companies drop out. The sample period runs from the first list year to the end of the CRSP sample used.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o5",
+          "pages": [
+            11,
+            13
+          ],
+          "locator": "Section 2; Table 1 notes",
+          "statement": "Sample is common stocks on NYSE, AMEX and NASDAQ; financial and utility firms are excluded, and low-priced stocks are dropped with the stated justification of reducing the influence of small and illiquid stocks. Table notes repeat the SIC-based exclusion definitions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "unit_of_observation_stated",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o5",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section 3",
+          "statement": "The core sample links CRSP monthly stock returns for ordinary common shares on NYSE/Amex/Nasdaq, delisting-adjusted, to Thomson Reuters 13F institutional holdings and Compustat-derived firm characteristics, at the stock-quarter level over a stated multi-decade sample period.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o4",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Sections 1.1 and 1.2; Table 1",
+          "statement": "The main signal is a commercial annual best-brands list; brands are mapped to stocks, analysis is at the stock level, and only U.S. companies with CRSP price data are kept, so private companies drop out. The sample period runs from the first list year to the end of the CRSP sample used.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o5",
+          "pages": [
+            11,
+            13
+          ],
+          "locator": "Section 2; Table 1 notes",
+          "statement": "Sample is common stocks on NYSE, AMEX and NASDAQ; financial and utility firms are excluded, and low-priced stocks are dropped with the stated justification of reducing the influence of small and illiquid stocks. Table notes repeat the SIC-based exclusion definitions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "restricted_data_used",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o8",
+          "pages": [
+            17,
+            21
+          ],
+          "locator": "footnotes 4, 14, 26, 31",
+          "statement": "Several inputs are described as obtained directly from other researchers rather than a public repository (a hedge-fund manager list, primary-dealer capital-shock series, systematic fund-flow shocks), indicating some non-public auxiliary datasets sit alongside the deposited replication data.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o8",
+          "pages": [
+            39,
+            41
+          ],
+          "locator": "Section 6.2; footnote 17; Table 15 notes",
+          "statement": "Mechanism tests use proprietary short-lending fee data from IHS Markit and 13F institutional holdings from Thomson Reuters, each with its own shorter availability window noted in the text or footnote.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_public",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o4",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section 2; footnote 7",
+          "statement": "Stock characteristics and returns come from a publicly available replication dataset (Jensen, Kelly, Pedersen), with underlying CRSP and Compustat sources named; a footnote gives the GitHub location of that dataset and its code.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o4",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section 2; footnote 7",
+          "statement": "Stock characteristics and returns come from a publicly available replication dataset (Jensen, Kelly, Pedersen), with underlying CRSP and Compustat sources named; a footnote gives the GitHub location of that dataset and its code.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o4",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section 2; footnote 7",
+          "statement": "Stock characteristics and returns come from a publicly available replication dataset (Jensen, Kelly, Pedersen), with underlying CRSP and Compustat sources named; a footnote gives the GitHub location of that dataset and its code.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "matching_or_linkage_described",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o5",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 1.1",
+          "statement": "The data section documents the vendor's list eligibility criteria and its three-step valuation methodology at length, and justifies the source by its long time series covering booms and crises.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "other:no_dedicated_data_section",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o7",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Has no separate Data or Sample section; data sources, coverage, and construction procedures appear only in footnotes and table notes scattered across sections, with fuller replication of HXZ/FF5F baselines deferred to an online appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "other:nyse_breakpoints_stated",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o8",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Table 6 note",
+          "statement": "States NYSE-based breakpoints (NYSE quintile cutoffs) as the portfolio-formation rule for every sorted-portfolio table, adopted for consistency across tests rather than justified case by case.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "web_scraped",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o8",
+          "pages": [
+            34,
+            35
+          ],
+          "locator": "Section 4; Table 12 notes",
+          "statement": "For the text-based measure the authors download all annual filings from SEC EDGAR since digital filing became mandatory, drop duplicates and amendments, merge with CRSP/Compustat, keep December fiscal year-ends, and impose a market-cap floor to keep small caps out of the portfolio.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "weights_stated",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o20",
+          "pages": [
+            11,
+            13
+          ],
+          "locator": "Tables 6-8",
+          "statement": "States value-weighted portfolio returns and NYSE breakpoints directly in the table title or note for every sorted-portfolio result, making the weighting scheme explicit.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o16",
+          "pages": [
+            8,
+            9
+          ],
+          "locator": "Section 4.2",
+          "statement": "The baseline portfolio tables are built on equal-weighted quintile portfolios, a weighting choice stated and justified in the text rather than left implicit, with value-weighting introduced later only as an alternative specification.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o20",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Table 5",
+          "statement": "The weighting table stacks the original equal-weighted alphas with alphas after excluding small caps, straight value weighting, and capped value weighting at two NYSE percentiles, keeping the same five model columns for comparison.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o17",
+          "pages": [
+            14,
+            43
+          ],
+          "locator": "Tables 3, 5, 10, 13, 15, 16 notes",
+          "statement": "Portfolio weighting is stated for every sort: the headline sort reports both equal and value weights, while conditional sorts used for mechanisms are equal-weighted and the market-phase test is value-weighted.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "baseline_then_variants",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o20",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Table 5",
+          "statement": "The weighting table stacks the original equal-weighted alphas with alphas after excluding small caps, straight value weighting, and capped value weighting at two NYSE percentiles, keeping the same five model columns for comparison.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o14",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section 3.1; Table 3",
+          "statement": "The main portfolio table reports each decile and the high-minus-low spread with raw excess return and alphas from five factor models in adjacent columns, in separate equal-weighted and value-weighted panels, with Newey-West t-statistics in parentheses and significance stars.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o14",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section 3.1; Table 3",
+          "statement": "The main portfolio table reports each decile and the high-minus-low spread with raw excess return and alphas from five factor models in adjacent columns, in separate equal-weighted and value-weighted panels, with Newey-West t-statistics in parentheses and significance stars.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "se_type_in_notes",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o14",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section 3.1; Table 3",
+          "statement": "The main portfolio table reports each decile and the high-minus-low spread with raw excess return and alphas from five factor models in adjacent columns, in separate equal-weighted and value-weighted panels, with Newey-West t-statistics in parentheses and significance stars.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "stars_used",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o14",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section 3.1; Table 3",
+          "statement": "The main portfolio table reports each decile and the high-minus-low spread with raw excess return and alphas from five factor models in adjacent columns, in separate equal-weighted and value-weighted panels, with Newey-West t-statistics in parentheses and significance stars.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "standardized_index",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o10",
+          "pages": [
+            1,
+            9
+          ],
+          "locator": "Introduction footnote 3; Section 4.2",
+          "statement": "The composite intermediary-shock proxy is built by standardizing two previously published shock series separately and averaging them, with a sign flip on one component justified by that source model's own theoretical prediction of an opposite-signed return relationship.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o13",
+          "pages": [
+            27,
+            43
+          ],
+          "locator": "Section 5.3; Figure 4 notes; Section 6.3; Table 16 notes",
+          "statement": "Composite indices (a disagreement index and a limits-to-arbitrage index) are built by averaging or summing decile ranks of component proxies, following cited papers; the text and table note for the arbitrage index differ on the number of components.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "treatment_definition",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o9",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 4.1, Eq. (8)",
+          "statement": "The primary sorting variable is defined as the period-by-period cross-sectional residual from regressing institutional ownership on a fixed set of firm characteristics, explicitly intended to strip out the component of holdings attributable to fundamentals before forming quintile portfolios.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o12",
+          "pages": [
+            20,
+            37
+          ],
+          "locator": "Section 2.3; Section 5",
+          "statement": "Brand capital and organization capital stocks are built by the perpetual inventory method, with parameters and sample selection explicitly borrowed from named prior papers; the input-measure section states the depreciation rate and initial-stock growth assumption used.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o13",
+          "pages": [
+            27,
+            43
+          ],
+          "locator": "Section 5.3; Figure 4 notes; Section 6.3; Table 16 notes",
+          "statement": "Composite indices (a disagreement index and a limits-to-arbitrage index) are built by averaging or summing decile ranks of component proxies, following cited papers; the text and table note for the arbitrage index differ on the number of components.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "measurement_error_discussed",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o12",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section 1, footnote 8",
+          "statement": "Constructs total, physical, and intangible capital measures following a cited method that adds off-balance-sheet capitalized R&D and a fixed share of SG&A as intangible investment, explicitly flagging that assumption as one used in prior studies.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:perpetual_inventory",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o12",
+          "pages": [
+            20,
+            37
+          ],
+          "locator": "Section 2.3; Section 5",
+          "statement": "Brand capital and organization capital stocks are built by the perpetual inventory method, with parameters and sample selection explicitly borrowed from named prior papers; the input-measure section states the depreciation rate and initial-stock growth assumption used.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:survey_based_index_construction",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o15",
+          "pages": [
+            14,
+            14
+          ],
+          "locator": "Section 5, footnote 24",
+          "statement": "Constructs an aggregate overextrapolation index from survey-based return expectations via a recursively estimated nonlinear-least-squares decay parameter, with the estimation procedure and data source described in a single long footnote.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "outcome_definition",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o12",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section 1, footnote 8",
+          "statement": "Constructs total, physical, and intangible capital measures following a cited method that adds off-balance-sheet capitalized R&D and a fixed share of SG&A as intangible investment, explicitly flagging that assumption as one used in prior studies.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "winsorization",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o14",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Table 8 note",
+          "statement": "Defines equity and debt issuance (mechanism outcomes) from standard balance-sheet items, scales them by lagged total assets, and winsorizes at the 1st and 99th percentiles, the only explicit winsorization mentioned in the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "contribution_paragraph",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o45",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Opens the introduction with a contribution paragraph framing the paper as challenging the theoretical interpretation of the HXZ/FF5F investment factors, rather than presenting a new return anomaly.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o43",
+          "pages": [
+            3,
+            17
+          ],
+          "locator": "Section 1.1; Section 5",
+          "statement": "Mechanism and alternative-explanation tests are organized into their own numbered section following the main portfolio and stock-level results, explicitly described as extending rather than replacing the baseline findings; the introduction also contains a dedicated related-literature subsection nami",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o44",
+          "pages": [
+            1,
+            14
+          ],
+          "locator": "Introduction; Section 1",
+          "statement": "The introduction opens with practitioner epigraphs, motivates limitations of the input measure, previews the main results and mechanisms, positions against the closest paper, and has a contribution paragraph; a long data and descriptive section precedes the methodology section.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o38",
+          "pages": [
+            2,
+            22
+          ],
+          "locator": "Introduction; Section 5 opening",
+          "statement": "The introduction previews headline results with numbers and organizes the paper around three enumerated contributions (new measure, predictive power, economic underpinnings); there is no separate roadmap paragraph, but Section 5 opens with a subsection-by-subsection roadmap.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "mechanisms_after_main",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o44",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Organizes the paper as a chain of sections that each resolve one sub-question in sequence (which alternative measures matter, then which AG subcomponents matter, then which macro shocks matter, then what mechanism explains it), with the conclusion restating the chain.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o43",
+          "pages": [
+            3,
+            17
+          ],
+          "locator": "Section 1.1; Section 5",
+          "statement": "Mechanism and alternative-explanation tests are organized into their own numbered section following the main portfolio and stock-level results, explicitly described as extending rather than replacing the baseline findings; the introduction also contains a dedicated related-literature subsection nami",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o45",
+          "pages": [
+            14,
+            39
+          ],
+          "locator": "Sections 2 to 5",
+          "statement": "Empirical sections proceed from the headline factor regressions, to weighting sensitivity, to characteristic-controlled regressions, to time-series stability, then a separate mechanisms section, then the alternative measure and the input measure as a contrast; no roadmap paragraph is given.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            46
+          ],
+          "locator": "Sections 1 to 7",
+          "statement": "Order is model of beliefs, then data, then main sorts and regressions, then a short robustness section pointing to the Internet Appendix, then measure validation, then mechanisms, then conclusion; the print paper keeps only three small appendices and relies heavily on the Internet Appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 4,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Previews every major finding in the introduction in the order the later sections present them, with footnotes pointing ahead to specific tables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o40",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the direction and qualitative pattern of the main empirical results before the results sections appear, and closes with an explicit roadmap paragraph describing the order of the remaining numbered sections.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o44",
+          "pages": [
+            1,
+            14
+          ],
+          "locator": "Introduction; Section 1",
+          "statement": "The introduction opens with practitioner epigraphs, motivates limitations of the input measure, previews the main results and mechanisms, positions against the closest paper, and has a contribution paragraph; a long data and descriptive section precedes the methodology section.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o38",
+          "pages": [
+            2,
+            22
+          ],
+          "locator": "Introduction; Section 5 opening",
+          "statement": "The introduction previews headline results with numbers and organizes the paper around three enumerated contributions (new measure, predictive power, economic underpinnings); there is no separate roadmap paragraph, but Section 5 opens with a subsection-by-subsection roadmap.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "appendix_heavy",
+      "papers": 3,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.75,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Has no separate Robustness section; alternative-measure and alternative-specification checks are embedded as subsections within the same numbered sections as the corresponding main result, with further checks deferred to a cited online appendix.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o42",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Section 4.5",
+          "statement": "Robustness checks are collected into a dedicated numbered subsection distinct from the main results subsections, with most of the underlying robustness tables placed in an appendix and only briefly summarized narratively in the main text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            46
+          ],
+          "locator": "Sections 1 to 7",
+          "statement": "Order is model of beliefs, then data, then main sorts and regressions, then a short robustness section pointing to the Internet Appendix, then measure validation, then mechanisms, then conclusion; the print paper keeps only three small appendices and relies heavily on the Internet Appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "design_before_data",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o41",
+          "pages": [
+            4,
+            8
+          ],
+          "locator": "Sections 2-4",
+          "statement": "The paper places its theoretical model and numbered propositions (Section 2) before the data description (Section 3) and empirical design (Section 4), and subsequently references the proposition numbers directly when interpreting each empirical table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            46
+          ],
+          "locator": "Sections 1 to 7",
+          "statement": "Order is model of beliefs, then data, then main sorts and regressions, then a short robustness section pointing to the Internet Appendix, then measure validation, then mechanisms, then conclusion; the print paper keeps only three small appendices and relies heavily on the Internet Appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "main_result_first",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o45",
+          "pages": [
+            14,
+            39
+          ],
+          "locator": "Sections 2 to 5",
+          "statement": "Empirical sections proceed from the headline factor regressions, to weighting sensitivity, to characteristic-controlled regressions, to time-series stability, then a separate mechanisms section, then the alternative measure and the input measure as a contrast; no roadmap paragraph is given.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            46
+          ],
+          "locator": "Sections 1 to 7",
+          "statement": "Order is model of beliefs, then data, then main sorts and regressions, then a short robustness section pointing to the Internet Appendix, then measure validation, then mechanisms, then conclusion; the print paper keeps only three small appendices and relies heavily on the Internet Appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_paragraph",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o42",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Section 1, Introduction",
+          "statement": "Previews every major finding in the introduction in the order the later sections present them, with footnotes pointing ahead to specific tables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o40",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the direction and qualitative pattern of the main empirical results before the results sections appear, and closes with an explicit roadmap paragraph describing the order of the remaining numbered sections.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "robustness_separate_section",
+      "papers": 2,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "note_sha256": "e0a76ce6a2d4e4c747bb403f18eb34556d180100bf4bdb8bd376ce8f4b1b6510",
+          "observation_id": "o42",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Section 4.5",
+          "statement": "Robustness checks are collected into a dedicated numbered subsection distinct from the main results subsections, with most of the underlying robustness tables placed in an appendix and only briefly summarized narratively in the main text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o39",
+          "pages": [
+            6,
+            46
+          ],
+          "locator": "Sections 1 to 7",
+          "statement": "Order is model of beliefs, then data, then main sorts and regressions, then a short robustness section pointing to the Internet Appendix, then measure validation, then mechanisms, then conclusion; the print paper keeps only three small appendices and relies heavily on the Internet Appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "data_before_design",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o44",
+          "pages": [
+            1,
+            14
+          ],
+          "locator": "Introduction; Section 1",
+          "statement": "The introduction opens with practitioner epigraphs, motivates limitations of the input measure, previews the main results and mechanisms, positions against the closest paper, and has a contribution paragraph; a long data and descriptive section precedes the methodology section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o40",
+          "pages": [
+            16,
+            41
+          ],
+          "locator": "footnotes 11, 16, 17",
+          "statement": "Footnotes carry substantive supplementary analyses (an earnings-announcement test for the long leg, definitions of the mispricing score and institutional ownership) rather than only citations.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "note_sha256": "d63dc3bb1facdb85de2da7a1f925b21a67eacd6eb413567fb7abe75849fda429",
+          "observation_id": "o38",
+          "pages": [
+            2,
+            22
+          ],
+          "locator": "Introduction; Section 5 opening",
+          "statement": "The introduction previews headline results with numbers and organizes the paper around three enumerated contributions (new measure, predictive power, economic underpinnings); there is no separate roadmap paragraph, but Section 5 opens with a subsection-by-subsection roadmap.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:no_dedicated_robustness_section",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "note_sha256": "9ff4e91a324ba7660857d676492e0df2a4f96eeb6a48005ea0c960ccb94121c8",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            16
+          ],
+          "locator": "overall structure",
+          "statement": "Has no separate Robustness section; alternative-measure and alternative-specification checks are embedded as subsections within the same numbered sections as the corresponding main result, with further checks deferred to a cited online appendix.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:subsection_summary_sentences",
+      "papers": 1,
+      "denominator_papers": 4,
+      "papers_with_category": 4,
+      "share_of_papers": 0.25,
+      "pointers": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "note_sha256": "a8a927075f51f3fbb14cc744ca0c3aa03e5d5bf6d24d40a51af45c952f68971c",
+          "observation_id": "o46",
+          "pages": [
+            16,
+            39
+          ],
+          "locator": "Sections 2.1 to 5",
+          "statement": "Each subsection closes with an Overall sentence summarizing what the tests show, and each mechanism subsection states the hypothesis and expected sign before presenting the table.",
+          "basis": "inferred"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "cluster_level",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "Footnote states standard errors are clustered by date and double-clustered by firm for the stock-level panel regressions.",
+          "card_shows": "Card records se=twoway_cluster over ['permno','date'] for these specs.",
+          "pages": [
+            14,
+            14
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "s3.se",
+          "paper_says": "Standard errors double-clustered by month and firm in Table 11",
+          "card_shows": "s3.se twoway_cluster with cluster_entity=True; cluster_level null",
+          "pages": [
+            33,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "d4.implementation_features",
+          "paper_says": "No standard error type or clustering stated for the announcement-return regressions",
+          "card_shows": "reg CAR bb, vce(cluster permno)",
+          "pages": [
+            32,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "d1.implementation_features",
+          "paper_says": "Portfolio breakpoints throughout use NYSE cutoffs, e.g. NYSE quintile sorts on profitability and each investment measure.",
+          "card_shows": "Design d1 implementation_features lists NYSE-based breakpoints for portfolio formation.",
+          "pages": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s18",
+          "paper_says": "Table 6 reports six distinct named comparison groups (same size quintile, and size interacted with beta, book-to-market, profitability, investment, or momentum)",
+          "card_shows": "Card records a single spec (s18) for the underlying regression command without enumerating the six comparison-group column variants separately.",
+          "pages": [
+            14,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "agree",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "d3.implementation_features",
+          "paper_says": "Spanning regressions control for the remaining factors in the HXZ model (ME, INV, ROE) or the FF5F model (ME, BM, PROF, INV) alongside the market factor.",
+          "card_shows": "Design d3 implementation_features records the AG factor added to HXZ (ME, INV, ROE) and FF5F (ME, BM, FFOP, INV) factor lists.",
+          "pages": [
+            7,
+            9
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s10",
+          "paper_says": "Table 8 (and Table 1) regressions control for profitability, CAPM beta, asset growth, book-to-market, and a size polynomial, matching the characteristic set des",
+          "card_shows": "Card's spec s10 command lists control terms profit beta Gat bm lnme lnme_sq LNbe LNbe_sq, matching this description.",
+          "pages": [
+            7,
+            16
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "s2.family_description",
+          "paper_says": "Table 6 adds controls in three steps (4, 6, then 12 characteristics) before changing the dependent variable",
+          "card_shows": "s2 family of 3 specifications with increasing controls (5, 7, 12 characteristics)",
+          "pages": [
+            20,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "data",
+          "paper_says": "The Data availability statement names a Mendeley Data DOI (10.17632/tzxtm6ys99.1) as the location of the paper's code and data.",
+          "card_shows": "The card's data array is empty, but the traced code path (code/mendeley_tzxtm6ys99_v1/...) embeds the same Mendeley identifier tzxtm6ys99, consistent with the p",
+          "pages": [
+            16,
+            16
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "data",
+          "paper_says": "CRSP, Compustat, IBES, Interbrand list, factor libraries, SEC EDGAR filings",
+          "card_shows": "CRSP, CRSP-Compustat merged, I/B/E/S, Factors.xlsx; no EDGAR or Interbrand data recorded",
+          "pages": [
+            7,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "data",
+          "paper_says": "Jensen, Kelly, Pedersen characteristics dataset (CRSP/Compustat), plus IHS Markit and 13F for mechanisms",
+          "card_shows": "data array empty",
+          "pages": [
+            11,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "x1",
+          "paper_says": "Main text does not describe a graphical pre-trend check specifically for the S&P 500 inclusion event beyond the single before/after DID coefficient table.",
+          "card_shows": "Card records diagnostic x1 (pretrend_plot) for design d3 with status not_found_in_scope, i.e. no pre-trend plot located in the reviewed code.",
+          "pages": [
+            14,
+            15
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "x1",
+          "paper_says": "No multiple-testing adjustment mentioned; results reported across five models",
+          "card_shows": "x1 multiple_testing not_found_in_scope",
+          "pages": [
+            15,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "diagnostics",
+          "paper_says": "GMM pricing tables report sum of squared pricing errors (SSQE) and mean absolute pricing errors (MAPE), annualized for comparability, as the fit diagnostic for ",
+          "card_shows": "The card's diagnostics array is empty; no fit-statistic record was extracted from the traced code files.",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 7,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "d4.method",
+          "paper_says": "Maximum Sharpe ratio comparison tests (Barillas and Shanken 2017; Barillas et al. 2020) are the primary model-comparison method in Sections 2-3 and Tables 9-10.",
+          "card_shows": "Design d4 records method other:maximum_sharpe_ratio_test with bias-adjusted Sharpe ratio and asymptotic p-values, traced to Barillas_Shanken_maxSR_Test.ado.",
+          "pages": [
+            4,
+            4
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s1",
+          "paper_says": "Stock-level panel regressions in Tables 7-8 are estimated as OLS panel regressions with stock and time fixed effects (Eq. 13-14), described as controlling for c",
+          "card_shows": "Card records these specs as hdfe_ols estimated via Stata reghdfe with fe=['permno','date'] (e.g. spec s1, s10-s13).",
+          "pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s14",
+          "paper_says": "Table 1 reports Fama-MacBeth time-series-averaged cross-sectional regression coefficients as described in Eq. (8).",
+          "card_shows": "Card records this as spec s14, estimator other:fama_macbeth, implemented via Stata's xtfmb command.",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "d3.implementation_features; d2.implementation_features",
+          "paper_says": "Time-series factor regressions with five named models (Carhart, FF6, q, q5, AQR) and Fama-MacBeth average slopes",
+          "card_shows": "d3 factor_model listing the same five models; d2 fama_macbeth via asreg fmb",
+          "pages": [
+            15,
+            19
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "d1; pipeline.p1",
+          "paper_says": "Brand-capital portfolios sorted into top 100 and top-minus-bottom quintiles using the perpetual inventory method",
+          "card_shows": "d1 portfolio_sorts with xtile quintiles of brandcap; p1 build stage constructs brand capital",
+          "pages": [
+            37,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s1.estimator",
+          "paper_says": "The 17 pages of main text read never name Fama-MacBeth or a two-step cross-sectional regression as an empirical method.",
+          "card_shows": "Design d2 and specifications s1-s2 record a Fama-MacBeth two-step cross-sectional estimator (xtfmb_mion.ado) as one of the paper's methods.",
+          "pages": [
+            1,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "d3 / s18",
+          "paper_says": "Section 4.3 explicitly names the S&P 500 inclusion test a difference-in-differences (DID) estimator comparing beta changes before and after inclusion against co",
+          "card_shows": "Card classifies the same test under design d3 with method return_event_study rather than a DID/diff-in-diff label (spec s18).",
+          "pages": [
+            14,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s1.fe",
+          "paper_says": "Text states that both time fixed effects (for common shocks) and stock fixed effects are included in the stock-level panel regressions.",
+          "card_shows": "Card lists fe=['permno','date'] for the corresponding specs.",
+          "pages": [
+            15,
+            15
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "s3.formula_or_call",
+          "paper_says": "Volume and volatility panel regressions include stock and time fixed effects (Equation 5, Table 11)",
+          "card_shows": "s3 PanelOLS entity_effects=True, time_effects=True; fixed_effects field null",
+          "pages": [
+            32,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "Year and industry fixed effects in earnings-surprise and CAR regressions",
+          "card_shows": "fixed_effects null in all recorded specs; Table 10/11 scripts read but no spec recorded",
+          "pages": [
+            31,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "other",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "heterogeneity",
+          "paper_says": "Section 5 describes heterogeneity splits by hedge-fund holdings and by mutual-fund bond-market exposure (Tables 9-11) presented as mechanism tests.",
+          "card_shows": "Card's structured heterogeneity array is empty, so these splits are not captured as discrete heterogeneity records.",
+          "pages": [
+            17,
+            20
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "packages",
+          "paper_says": "Investor models are random forests; robustness uses gradient boosted trees, Lasso and Ridge (Table C1)",
+          "card_shows": "packages include scikit-learn and xgboost with usage unknown; no design records the ML construction",
+          "pages": [
+            7,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "outputs.tables",
+          "paper_says": "Thirteen numbered tables and five figures with stars and t-statistics",
+          "card_shows": "six table outputs via outreg2/esttab with coef and tstat; stars null; figures 1-2 Python script",
+          "pages": [
+            9,
+            38
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "s3.family_description",
+          "paper_says": "Six panel columns: SUV, turnover, historical volatility at t and t+1",
+          "card_shows": "s3 family: six outcomes SUV, turnover, realized volatility (current and next month)",
+          "pages": [
+            33,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "outputs.tables",
+          "paper_says": "The main text contains ten numbered tables (Tables 1-10) and two figures (Figs. 1-2).",
+          "card_shows": "The card's outputs.tables and outputs.figures arrays are both empty.",
+          "pages": [
+            1,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "paper_only",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "robustness",
+          "paper_says": "A dedicated 144-measure model-mining robustness exercise (Section 2.2) is presented with its own figure to show the main comparison is not sensitive to the choi",
+          "card_shows": "The card's robustness array is empty; this exercise was not captured by the files read for the card.",
+          "pages": [
+            5,
+            5
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "robustness",
+          "paper_says": "Section 4.5 describes an extensive robustness battery (alternative characteristic sets, value-weighting, crisis exclusion, liquidity/short-interest controls, al",
+          "card_shows": "Card's structured robustness array is empty, so none of these checks are captured as discrete robustness records.",
+          "pages": [
+            16,
+            17
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "robustness",
+          "paper_says": "Weighting, intangible factors, best-workplaces overlap, subperiods, alternative benchmarks and missing-value handling",
+          "card_shows": "robustness array empty",
+          "pages": [
+            16,
+            26
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "robustness",
+          "paper_says": "Robustness battery in Internet Appendix A to H (three-pass, nonlinear SDF, alternative ML models, international)",
+          "card_shows": "robustness array empty; run_analysis.py runs 16 analysis scripts in sequence",
+          "pages": [
+            20,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "paper_only",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "Table notes state regressions and portfolio tests use monthly data from 1972 to 2018.",
+          "card_shows": "pipeline.sample_restrictions records only a generic non-missing-return filter (ret!=.) with no explicit sample-period value.",
+          "pages": [
+            7,
+            13
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "Section 3 states explicit sample restrictions: share codes 10/11, NYSE/Amex/Nasdaq listing, delisting adjustment, microcap and low-price exclusion, financial-se",
+          "card_shows": "Card's pipeline.sample_restrictions field is an empty list, not capturing these restrictions structurally.",
+          "pages": [
+            6,
+            7
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "s1.sample",
+          "paper_says": "CRSP common shares on NYSE/Amex/Nasdaq, minimum monthly returns per year, six-month accounting lag, controls winsorized at 1/99",
+          "card_shows": "sample field null for all specs",
+          "pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "Common stocks on NYSE/AMEX/NASDAQ, excluding financials, utilities and stocks under $5; August 1976 to December 2022 test window",
+          "card_shows": "pipeline.sample_restrictions empty; s1 to s3 sample null",
+          "pages": [
+            11,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s2.se.type",
+          "paper_says": "Spanning regressions (Tables 3-5) state standard errors are corrected for heteroskedasticity and autocorrelation using the Newey and West (1987) procedure with ",
+          "card_shows": "Specification s2 (xtfmb_mion second step) records se.type=hac_newey_west with lag as an unresolved parameter.",
+          "pages": [
+            7,
+            9
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s15.se.se_type",
+          "paper_says": "Portfolio-level contemporaneous and predictive regressions report Newey-West standard errors with an optimal-lag rule.",
+          "card_shows": "Card records se_type=hac_newey_west for the corresponding ivreg2 specs (e.g. s15-s17), using kernel(bar) bw(auto).",
+          "pages": [
+            9,
+            13
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s18.se.se_type",
+          "paper_says": "The S&P 500 inclusion table states its t-statistics are based on Driscoll-Kraay standard errors with a stated maximum lag.",
+          "card_shows": "Card records the same spec (s18) generically as se_type=hac_newey_west with cluster(datemo) and bw(60), without a distinct Driscoll-Kraay label.",
+          "pages": [
+            15,
+            15
+          ]
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "d3.implementation_features; d2.implementation_features",
+          "paper_says": "Newey-West standard errors for factor and Fama-MacBeth regressions; lag length not stated",
+          "card_shows": "newey ... lag(1) for factor regressions and asreg fmb newey(1)",
+          "pages": [
+            15,
+            22
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "s1.se",
+          "paper_says": "Newey-West adjusted t-statistics with six lags for all tables (footnote 9)",
+          "card_shows": "s1.se hac_newey_west, kernel=bartlett, maxlags=6",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s1.se.type",
+          "paper_says": "No cross-sectional/iid standard-error procedure for a Fama-MacBeth first step is described anywhere in the main text read.",
+          "card_shows": "Specification s1 records se.type=iid as the default xtfmb_mion behavior (mvreg step) when no lag is specified.",
+          "pages": [
+            1,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "specifications",
+          "paper_says": "Earnings-announcement daily panel clusters standard errors by day (Table 14)",
+          "card_shows": "No specification for the daily announcement panel in the card",
+          "pages": [
+            38,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_ref": "s5.weights",
+          "paper_says": "Table titles and notes specify value-weighted (VW) portfolio returns are used in the GMM pricing tests.",
+          "card_shows": "None of the extracted specifications (s1, s2, s3, s5) record a weights value; all are null.",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_ref": "s1.weights",
+          "paper_says": "Text states portfolios are equal-weighted at baseline and separately reports a value-weighted robustness variant.",
+          "card_shows": "Card records weights=None (null) for all listed specs, not distinguishing equal- versus value-weighting.",
+          "pages": [
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_ref": "s1.notes; s2.notes; s3.notes",
+          "paper_says": "Equal-weighted baseline, straight value-weighted and capped value-weighted portfolios (NYSE 80th and 90th percentile caps)",
+          "card_shows": "s1 mean collapse, s2 market-value weighted collapse, s3 capped value weighting noted; weights field null",
+          "pages": [
+            17,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_ref": "s1.weights",
+          "paper_says": "Both equal- and value-weighted sorts reported in Table 3; conditional sorts equal-weighted",
+          "card_shows": "s1.weights null; helper function takes a weighting argument",
+          "pages": [
+            14,
+            15
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "No dedicated summary-statistics table (means/SDs of key variables) found anywhere in the 17 pages of main text read.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit description in the main text of sample-construction filters typical of asset-pricing studies (e.g., minimum ",
+      "papers": 1
+    },
+    {
+      "gap": "No justification given for the specific choice of a 12-lag Newey-West correction.",
+      "papers": 1
+    },
+    {
+      "gap": "No discussion of cross-sectional dependence or standard-error clustering beyond the time-series Newey-West adjustment; n",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or research-ethics statement; not applicable to this archival financial-data study and",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit external-validity or generalization discussion (e.g., to non-U.S. markets, periods outside 1972-2018, or tes",
+      "papers": 1
+    },
+    {
+      "gap": "No back-of-envelope dollar-value, cost-benefit, or elasticity translation of the Sharpe-ratio or GMM pricing-error magni",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix content (Section A, Section D, Tables E1-E14) referenced by footnote roughly a dozen times could not be ",
+      "papers": 1
+    },
+    {
+      "gap": "No pre-registration, IRB, or ethics statement is present; not applicable to this secondary-market asset-pricing study us",
+      "papers": 1
+    },
+    {
+      "gap": "The paper's own text does not name the statistical software used for estimation; Stata/SAS are only identifiable from th",
+      "papers": 1
+    },
+    {
+      "gap": "No first-stage or weak-instrument statistic appears anywhere in the main text, consistent with no stage of the empirical",
+      "papers": 1
+    },
+    {
+      "gap": "The Online Appendix (Tables A.1-A.9, the Appendix A model extension, and Appendix B data details) referenced throughout ",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit multiple-hypothesis-testing correction is discussed despite many specifications and robustness tables being ",
+      "papers": 1
+    },
+    {
+      "gap": "No standard error type or clustering justification is given for the earnings-surprise and announcement-return regression",
+      "papers": 1
+    },
+    {
+      "gap": "Newey-West lag length is never stated in the text.",
+      "papers": 1
+    },
+    {
+      "gap": "No data availability statement and no software named; only a code DOI.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit roadmap paragraph in the introduction.",
+      "papers": 1
+    },
+    {
+      "gap": "No formal validation test of the text-based measure beyond example firms and a correlation with the vendor portfolio.",
+      "papers": 1
+    },
+    {
+      "gap": "Several robustness checks are described as unreported or not tabulated.",
+      "papers": 1
+    },
+    {
+      "gap": "No justification given for the Newey-West lag length beyond citing the correction",
+      "papers": 1
+    },
+    {
+      "gap": "No reasoning offered for the clustering dimensions in panel regressions (month and firm; day)",
+      "papers": 1
+    },
+    {
+      "gap": "No multiple-testing adjustment discussed despite many sorts, proxies and market-phase splits",
+      "papers": 1
+    },
+    {
+      "gap": "No software or package versions named in the paper text",
+      "papers": 1
+    },
+    {
+      "gap": "R-squared and mean of the dependent variable not reported for Fama-MacBeth tables",
+      "papers": 1
+    },
+    {
+      "gap": "Number of stocks per decile or per month not reported",
+      "papers": 1
+    },
+    {
+      "gap": "Internet Appendix not available in the text file; its contents are known only from the prose summary in Section 4",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

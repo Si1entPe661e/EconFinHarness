@@ -1,0 +1,76 @@
+{
+  "method": "did",
+  "seed": 20260908,
+  "share": 0.25,
+  "generated_at": "2026-09-08T15:13:57Z",
+  "n_cards": 24,
+  "n_groups": 19,
+  "shared_file_groups": [
+    [
+      "restud_90_5_11",
+      "rfs_2025_rfs_hhaf065"
+    ],
+    [
+      "ecta_2025_ecta22303",
+      "jfe_2024_j_jfineco_2024_103809",
+      "restud_2026_restud_rdaf071",
+      "restud_2026_restud_rdaf080",
+      "rfs_2026_rfs_hhag045"
+    ]
+  ],
+  "holdout": [
+    "aer_110_9_10",
+    "aer_113_3_7",
+    "aer_114_6_6",
+    "aer_115_3_8",
+    "restud_90_5_11",
+    "restud_92_2_14",
+    "rfs_2025_rfs_hhaf065"
+  ],
+  "distill": [
+    "aer_111_12_8",
+    "aer_113_1_1",
+    "aer_114_11_7",
+    "aer_114_7_10",
+    "ecta_2025_ecta22303",
+    "jfe_2024_j_jfineco_2024_103809",
+    "qje_139_1_2",
+    "qje_139_4_7",
+    "qje_140_1_10",
+    "restud_2025_restud_rdae091",
+    "restud_2026_restud_rdaf071",
+    "restud_2026_restud_rdaf080",
+    "restud_2026_restud_rdag011",
+    "restud_2026_restud_rdag056",
+    "restud_2026_restud_rdag080",
+    "rfs_2026_rfs_hhaf080",
+    "rfs_2026_rfs_hhag045"
+  ],
+  "inputs": [
+    {
+      "path": "Paper/AER/metadata/files.csv",
+      "sha256": "52218942e4b6ead30f5ec42732353d34817347176e48cc91c81f41eef4549054"
+    },
+    {
+      "path": "Paper/Econometrica/metadata/files.csv",
+      "sha256": "249aa1fd72fbf4f98a56650a33f591e4f708f37f41ca77ae73e995a70635ad70"
+    },
+    {
+      "path": "Paper/JFE/metadata/files.csv",
+      "sha256": "f78b9f0897a5525519acd5d82bf6722e14157b0bf29c820a54d867849418b4a3"
+    },
+    {
+      "path": "Paper/QJE/metadata/files.csv",
+      "sha256": "d043326f16b6173de67bf63953aaf23c7de9a725ae61d27b0a5d7eb8049ee1c0"
+    },
+    {
+      "path": "Paper/ReStud/metadata/files.csv",
+      "sha256": "378f2f022f1e6052479cf489475639a41f43346da5d714217a28284159b68e3e"
+    },
+    {
+      "path": "Paper/RFS/metadata/files.csv",
+      "sha256": "cd35a7e196e68c70c728db4ccae4b330ac89da4d44a1309fd45df1c312f812a2"
+    }
+  ],
+  "rule": "paper-level split; papers sharing identical source-file hashes (files.csv) stay on one side; deterministic per seed+method"
+}

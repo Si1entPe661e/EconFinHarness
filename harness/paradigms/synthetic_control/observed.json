@@ -1,0 +1,638 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "synthetic_control",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "jfe_2024_j_jfineco_2024_103809",
+        "sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+        "journal": "JFE",
+        "year": 2024,
+        "coverage": "minimal",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "jpe_2026_742424",
+        "sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+        "journal": "JPE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "R"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 2,
+    "specifications": 5,
+    "designs": 2,
+    "by_language": {
+      "Stata": 1,
+      "R": 1
+    },
+    "by_journal": {
+      "JFE": 1,
+      "JPE": 1
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 1
+    },
+    "by_coverage": {
+      "minimal": 1,
+      "partial": 1
+    }
+  },
+  "by_variant": {
+    "unknown": 2
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "estimator",
+      "value": "synthetic_did",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_sdid.do",
+          "lines": [
+            213,
+            213
+          ],
+          "snippet": "sdid return_i firmn year treat, vce(placebo) covariates($controls)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            103,
+            107
+          ],
+          "snippet": "tau.sdid  <- synthdid_estimate(t(cbind(Y0,c(Y1))),J,T0)\nse.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "did_twfe",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            96,
+            101
+          ],
+          "snippet": "r.did   <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"did\",K=3,alpha=alpha.sig,lsei_type = 1)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "synthetic_control",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            89,
+            94
+          ],
+          "snippet": "r.sc.3    <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=3,alpha=alpha.sig,lsei_type = 1)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "li2020",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            109,
+            113
+          ],
+          "snippet": "r.li    <- li2020(Y1,Y0,T0=T0,T1=T1,20,1000,alpha.sig)\ntau.li  <- r.li$ATT_SC",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "command",
+      "value": "scinference",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            89,
+            94
+          ],
+          "snippet": "r.sc.3    <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=3,alpha=alpha.sig,lsei_type = 1)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "command",
+      "value": "sdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_sdid.do",
+          "lines": [
+            213,
+            213
+          ],
+          "snippet": "sdid return_i firmn year treat, vce(placebo) covariates($controls)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "command",
+      "value": "synthdid_estimate",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            103,
+            107
+          ],
+          "snippet": "tau.sdid  <- synthdid_estimate(t(cbind(Y0,c(Y1))),J,T0)\nse.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "package",
+      "value": "scinference",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            89,
+            94
+          ],
+          "snippet": "r.sc.3    <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=3,alpha=alpha.sig,lsei_type = 1)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "package",
+      "value": "synthdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s3",
+          "field": "package",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            103,
+            107
+          ],
+          "snippet": "tau.sdid  <- synthdid_estimate(t(cbind(Y0,c(Y1))),J,T0)\nse.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "se_type",
+      "value": "bootstrap",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s3",
+          "field": "se.type",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            105,
+            105
+          ],
+          "snippet": "se.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+          "lines": [
+            47,
+            47
+          ],
+          "snippet": "tau.db <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=K,lsei_type=1)$att",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "se_type",
+      "value": "randomization_inference",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s3",
+          "field": "se.type",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_sdid.do",
+          "lines": [
+            191,
+            191
+          ],
+          "snippet": "sdid return_i firmn year treat, vce(placebo) graph seed(1234) covariates($controls)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "d3",
+          "field": "classification_basis",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_sdid.do",
+          "lines": [
+            181,
+            181
+          ],
+          "snippet": "gen treat=(jewish_director_beg==1 & year>=1895)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+          "lines": [
+            1,
+            3
+          ],
+          "snippet": "# Figure 1",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "role_known",
+      "value": "known",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "d1",
+          "field": "role",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+          "lines": [
+            1,
+            3
+          ],
+          "snippet": "# Figure 1",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 1,
+      "specs": 4,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+          "lines": [
+            89,
+            94
+          ],
+          "snippet": "r.sc.3    <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=3,alpha=alpha.sig,lsei_type = 1)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_sdid.do",
+          "lines": [
+            213,
+            213
+          ],
+          "snippet": "sdid return_i firmn year treat, vce(placebo) covariates($controls)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "language",
+      "value": "R",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+      "kind": "reading_note",
+      "text": "Main analysis files comprehensively read (450+685+300 lines). Appendix partially read (first 100 lines show robustness). Data preparation and key regression calls documented. Market model computations, event windows, DID periods, and synthetic control setup all traced. Vendored tool library skipped per policy.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jpe_2026_742424",
+      "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df",
+      "kind": "reading_note",
+      "text": "Paper implements synthetic control debiasing and t-test inference. Primary analysis focuses on Swedish CO2 emissions application (Andersson 2019 data). Multiple R scripts organized for figures and tables. Some auxiliary scripts referenced in main orchestrator not located in repository.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet package: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "facet role_known: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "2/2 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only",
+    "no design variants recorded; variant-conditional rules cannot be derived from this set"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

@@ -1,0 +1,729 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jpe_2026_742424",
+ "journal": "JPE",
+ "year": 2026,
+ "doi": "10.1086/742424",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:28:33Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JPE/metadata/articles.csv",
+   "sha256": "0ede2238a117d9aee4e58b32cf05ae7120ca1c154cf1cb330e8a03a046490e0a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_CVRPTZ/code/0_setup.R",
+    "sha256": "4e05357611ed4731233c14a51679b6fe3c3c29160c70425404e05db80f40839a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      34
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code/1_main.R",
+    "sha256": "83811a2d33f56f228bfae8ba7b38c4f473fe0c2757e871e1d399847f948cd8d1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      39
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/RAE.R",
+    "sha256": "f0412821c5d6e2c60f47cd533c4b3c16c94ab16c07a2867fc7d36c0a4cda48c6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      59
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+    "sha256": "8d66cd372b6af4fc239d06c459145714923a19c453567ac366ee8517a543da8b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      125
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/calibration_dgps.R",
+    "sha256": "4b47da126306a2aef662a00f6d62321f5f8af00f279a7b2e02ff1347ec156624",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      74
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/common_functions.R",
+    "sha256": "9a2f2c6ce1a95b7987fda51268975a31d40f27695dda2dab53ed8b6178ac5275",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      277
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/comparison_permutation.R",
+    "sha256": "b90a0e0fa19a52e874129ca4572fc26f5a6a8d57bfbeb9fccf3ec5a0915ad8ef",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      82
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+    "sha256": "7abe48a590745bc5a90d883a9ead5810fc1378cf2a8fedd5c3629cc1931fa4be",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Paper implements synthetic control debiasing and t-test inference. Primary analysis focuses on Swedish CO2 emissions application (Andersson 2019 data). Multiple R scripts organized for figures and tables. Some auxiliary scripts referenced in main orchestrator not located in repository."
+ },
+ "repository": {
+  "languages": [
+   "R"
+  ],
+  "master_scripts": [
+   "code/dataverse_CVRPTZ/code/1_main.R"
+  ],
+  "directory_layout": "code/dataverse_CVRPTZ/code/ contains entry points (0_setup.R, 1_main.R); code/dataverse_CVRPTZ/code_auxiliary scripts/ contains figure/table generation scripts; graphics/ and tables/ for outputs",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 13,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "hardcoded",
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code/1_main.R",
+     "lines": [
+      6,
+      6
+     ],
+     "snippet": "setwd(\"<REPLICATION_ROOT>\")",
+     "supports": [
+      "path_handling"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+     "lines": [
+      14,
+      14
+     ],
+     "snippet": "set.seed(12345)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "carbontax_data",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": "1960-2005",
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      23,
+      28
+     ],
+     "snippet": "carbontax_data <- read.dta(\"data/carbontax_data.dta\")",
+     "supports": [
+      "type",
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      38,
+      40
+     ],
+     "snippet": "T0  <- 30 # 1960-1989\nT1  <- length(Y1)-T0",
+     "supports": [
+      "period"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_CVRPTZ/code/0_setup.R"
+    ],
+    "after": [],
+    "order_basis": "documentation",
+    "evidence": [
+     {
+      "path": "code/dataverse_CVRPTZ/code/1_main.R",
+      "lines": [
+       1,
+       3
+      ],
+      "snippet": "# Main file that replicates all the results",
+      "supports": [
+       "stage"
+      ]
+     },
+     {
+      "path": "code/dataverse_CVRPTZ/code/0_setup.R",
+      "lines": [
+       1,
+       11
+      ],
+      "snippet": "install.packages",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_CVRPTZ/code/1_main.R",
+      "lines": [
+       12,
+       27
+      ],
+      "snippet": "source(\"code/auxiliary scripts/intro_bias.R\")",
+      "supports": [
+       "scripts",
+       "stage"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Main orchestrator (1_main.R) calls scripts in sequence: intro_bias.R (Fig 1), intro_nw.R (Fig 2), tradeoff.R (Fig 3), RAE.R (Table 1), sim_sweden_small.R (Table 3, Figs 5-6), app_sweden.R (Fig 4, Tables 4-5), sim_sweden_large.R (Table 6), comparison_permutation.R (Fig 7), time_varying_weights.R (Fig 8)",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "main",
+   "method": "synthetic_control",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+     "lines": [
+      1,
+      3
+     ],
+     "snippet": "# Figure 1",
+     "supports": [
+      "role",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "synthetic_control",
+   "command": "scinference",
+   "package": "scinference",
+   "formula_or_call": "scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=3,alpha=alpha.sig,lsei_type = 1)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": "t-test with K blocks, df=K-1",
+    "evidence": [
+     {
+      "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/intro_bias.R",
+      "lines": [
+       47,
+       47
+      ],
+      "snippet": "tau.db <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=K,lsei_type=1)$att",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main empirical specification with K=3 blocks",
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      89,
+      94
+     ],
+     "snippet": "r.sc.3    <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"sc\",K=3,alpha=alpha.sig,lsei_type = 1)",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "package"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "scinference",
+   "package": "scinference",
+   "formula_or_call": "scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"did\",K=3,alpha=alpha.sig,lsei_type = 1)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Robustness specification: equal-weight DID",
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      96,
+      101
+     ],
+     "snippet": "r.did   <- scinference(Y1,Y0,T1=T1,T0=T0,inference_method=\"ttest\",estimation_method=\"did\",K=3,alpha=alpha.sig,lsei_type = 1)",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "command",
+      "package"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "synthetic_did",
+   "command": "synthdid_estimate",
+   "package": "synthdid",
+   "formula_or_call": "tau.sdid  <- synthdid_estimate(t(cbind(Y0,c(Y1))),J,T0)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "bootstrap",
+    "cluster_level": null,
+    "details": "Placebo bootstrap with 100 replications",
+    "evidence": [
+     {
+      "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+      "lines": [
+       105,
+       105
+      ],
+      "snippet": "se.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Robustness: SDID with standard normal inference",
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      103,
+      107
+     ],
+     "snippet": "tau.sdid  <- synthdid_estimate(t(cbind(Y0,c(Y1))),J,T0)\nse.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "command",
+      "package"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "synthetic_control",
+   "command": "li2020",
+   "package": null,
+   "formula_or_call": "r.li    <- li2020(Y1,Y0,T0=T0,T1=T1,20,1000,alpha.sig)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "bootstrap",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/common_functions.R",
+      "lines": [
+       52,
+       92
+      ],
+      "snippet": "li2020 <- function(Y1,Y0,T0,T1,m,nb,alpha.sig){",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Robustness: Li (2020) subsampling-based inference",
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      109,
+      113
+     ],
+     "snippet": "r.li    <- li2020(Y1,Y0,T0=T0,T1=T1,20,1000,alpha.sig)\ntau.li  <- r.li$ATT_SC",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "command"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "R",
+   "name": "scinference",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "v1.0.0",
+   "version_basis": "pinned",
+   "commands": [
+    "scinference",
+    "sc"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code/0_setup.R",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "remotes::install_github(\"kwuthrich/scinference@v1.0.0\")",
+     "supports": [
+      "name",
+      "version",
+      "version_basis"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/common_functions.R",
+     "lines": [
+      60,
+      60
+     ],
+     "snippet": "b_SC    <- as.matrix(scinference:::sc(y_pre,x_pre,lsei_type = 1)$w.hat)",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "synthdid",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": "70c1ce3",
+   "version_basis": "pinned",
+   "commands": [
+    "synthdid_estimate",
+    "vcov"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code/0_setup.R",
+     "lines": [
+      12,
+      12
+     ],
+     "snippet": "devtools::install_github(\"synth-inference/synthdid@70c1ce3\")",
+     "supports": [
+      "name",
+      "version",
+      "version_basis"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      104,
+      105
+     ],
+     "snippet": "tau.sdid  <- synthdid_estimate(t(cbind(Y0,c(Y1))),J,T0)\nse.sdid   <- sqrt(vcov(tau.sdid, method='placebo'))",
+     "supports": [
+      "commands",
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "xtable",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "xtable"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/RAE.R",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "library(xtable)",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/RAE.R",
+     "lines": [
+      47,
+      47
+     ],
+     "snippet": "print(xtable(cbind(results_table1)",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "foreign",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "read.dta"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      14,
+      14
+     ],
+     "snippet": "library(foreign)",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      81,
+      81
+     ],
+     "snippet": "write_xlsx(data_results_table4",
+     "supports": [
+      "commands"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      28,
+      28
+     ],
+     "snippet": "read.dta(\"data/carbontax_data.dta\")",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "writexl",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "write_xlsx"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "library(writexl)",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/dataverse_CVRPTZ/code_auxiliary scripts/app_sweden.R",
+     "lines": [
+      81,
+      81
+     ],
+     "snippet": "write_xlsx(data_results_table4,\"tables/table4.xlsx\")",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "synthetic_control"
+  ],
+  "fields": []
+ }
+}

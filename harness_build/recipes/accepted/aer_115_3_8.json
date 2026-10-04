@@ -1,0 +1,823 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_115_3_8",
+ "journal": "AER",
+ "year": 2025,
+ "doi": "10.1257/aer.20220528",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:45:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/code/Figures_main.do",
+    "sha256": "25b8035487840f11dfdfb611289dff8638a76b96a8695bd330ad3ce9b3185139",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/code/Tables_Appendix.do",
+    "sha256": "4f475c68f8e061b99fa5bcc23e89a29854b73178494317f063a375ee78185836",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1220,
+      1260
+     ],
+     [
+      1860,
+      1880
+     ],
+     [
+      1960,
+      1990
+     ]
+    ]
+   },
+   {
+    "path": "code/code/Tables_main.do",
+    "sha256": "ae16d6b0af998c22cb44bbce0a331df9ca3a7882f1920372655d22c55d3cf99d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      800,
+      900
+     ]
+    ]
+   },
+   {
+    "path": "code/code/cleaning_main.do",
+    "sha256": "229e7c90cb4e416e6a9abcd030d501a027c0fea9b9cab05a5d464a028c91e5de",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      400
+     ]
+    ]
+   },
+   {
+    "path": "code/code/conleyreg.R",
+    "sha256": "3859a19678e80b04e0f0edf7a4b46a65261bb9eabb9099c34c4ad8bd2d920e61",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      46
+     ]
+    ]
+   },
+   {
+    "path": "code/code/progs.do",
+    "sha256": "e329b1c725c0743470a9e67b98a3f065426913833e4f8d4d20aa954eee3bd3f0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      32
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Focus on main tables and core methodology. Staggered DID with stacked event study, Bacon decomposition, wild bootstrap, and spatial-correlation robust SE. Treatment timing varies by field; unit of analysis is field-year panel 2006-2016."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/code/cleaning_main.do",
+   "code/code/Tables_main.do",
+   "code/code/Figures_main.do"
+  ],
+  "directory_layout": "Single code/code/ directory with 19 files (18 Stata, 1 R)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 19,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "field_panel_all",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "field-year",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/code/cleaning_main.do",
+     "lines": [
+      307,
+      307
+     ],
+     "snippet": "save \"$adat/field_panel_all\"",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/code/cleaning_main.do"
+    ],
+    "after": [],
+    "order_basis": "unknown",
+    "evidence": [
+     {
+      "path": "code/code/cleaning_main.do",
+      "lines": [
+       2,
+       2
+      ],
+      "snippet": "//Import field-level geographic covariates",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/code/Tables_main.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/code/Tables_main.do",
+      "lines": [
+       11,
+       11
+      ],
+      "snippet": "use \"$adat/field_panel_all\", clear",
+      "supports": [
+       "after",
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "figures",
+    "scripts": [
+     "code/code/Figures_main.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/code/Figures_main.do",
+      "lines": [
+       8,
+       8
+      ],
+      "snippet": "use \"$adat/field_panel_all\", clear",
+      "supports": [
+       "stage",
+       "after",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "cleaning_main.do creates field_panel_all; Tables_main.do and Figures_main.do both use it as input",
+  "sample_restrictions": [
+   {
+    "description": "Field-year panel, only years 2006-2016 with active production",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/code/cleaning_main.do",
+      "lines": [
+       144,
+       144
+      ],
+      "snippet": "keep if inrange(year,2006,2016)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "Indigenization (local firm participation in oil field); treatment occurs when first local company enters field (eyr = min(first_div_yr_close, loc_yr))",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/code/cleaning_main.do",
+     "lines": [
+      273,
+      273
+     ],
+     "snippet": "gen treat = year>=loc_yr",
+     "supports": [
+      "treatment",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' pt , cl(fcode) absorb(fcode year) keepsingle",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Main table (Table 1) specifications with outcomes looped over qtyoil_bbl_mil, malf_15km, sab_15km",
+   "fixed_effects": [
+    "fcode",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "fcode"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/Tables_main.do",
+      "lines": [
+       16,
+       16
+      ],
+      "snippet": "cl(fcode)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Baseline specification with field and year fixed effects",
+   "evidence": [
+    {
+     "path": "code/code/Tables_main.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "reghdfe `y' pt , cl(fcode) absorb(fcode year) keepsingle",
+     "supports": [
+      "formula_or_call",
+      "bindings",
+      "fixed_effects",
+      "scope",
+      "family_description",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' pt , cl(fcode) absorb(fcode year##c.($controls)) keepsingle",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Main table with spatial controls interacted with year FE (field centroid coordinates, distance to coast, Niger, capital)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "fcode"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/Tables_main.do",
+      "lines": [
+       20,
+       20
+      ],
+      "snippet": "cl(fcode)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main specification with spatial controls",
+   "evidence": [
+    {
+     "path": "code/code/Tables_main.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "reghdfe `y' pt , cl(fcode) absorb(fcode year##c.($controls)) keepsingle",
+     "supports": [
+      "formula_or_call",
+      "resolved_call",
+      "resolution_status",
+      "bindings",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_group_time_att",
+   "command": "csdid",
+   "package": null,
+   "formula_or_call": "qui csdid `y', i(fcode) time(year) g(divyr) method(dripw) `z'",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "divyr"
+   ],
+   "scope": "family",
+   "family_description": "Callaway Sant'Anna DID with Doubly-Robust Imputation method (dripw) and variant with restricted control group (notyet)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Robustness check for staggered DID with alternative estimator robust to negative weights from TWFE",
+   "evidence": [
+    {
+     "path": "code/code/Tables_Appendix.do",
+     "lines": [
+      1969,
+      1969
+     ],
+     "snippet": "qui csdid `y', i(fcode) time(year) g(divyr) method(dripw) `z'",
+     "supports": [
+      "formula_or_call",
+      "bindings",
+      "scope",
+      "family_description",
+      "unresolved_symbols",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "other:bacon_decomposition",
+   "command": "bacondecomp",
+   "package": null,
+   "formula_or_call": "bacondecomp `y' pt,  ddetail nograph",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Bacon decomposition to analyze composition of TWFE treatment effect from early/late/never-treated comparisons",
+   "evidence": [
+    {
+     "path": "code/code/Tables_Appendix.do",
+     "lines": [
+      1866,
+      1866
+     ],
+     "snippet": "bacondecomp `y' pt,  ddetail nograph",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' c.(stackdum1-stackdum9 stackdum11-stackdum21)#c.(treated_in_stack) , cl(fcode) absorb(fcode##eventstack year##eventstack year#eventstack#c.($controls))",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "stackdum1",
+    "stackdum21",
+    "treated_in_stack",
+    "eventstack"
+   ],
+   "scope": "family",
+   "family_description": "Stacked event study with event-time interactions and stacked cohort fixed effects",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "fcode"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/Figures_main.do",
+      "lines": [
+       61,
+       61
+      ],
+      "snippet": "cl(fcode)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study visualization; stacked specification to handle staggered treatment timing",
+   "evidence": [
+    {
+     "path": "code/code/Figures_main.do",
+     "lines": [
+      61,
+      61
+     ],
+     "snippet": "reghdfe `y' c.(stackdum1-stackdum9 stackdum11-stackdum21)#c.(treated_in_stack) , cl(fcode) absorb(fcode##eventstack year##eventstack year#eventstack#c.($controls))",
+     "supports": [
+      "formula_or_call",
+      "unresolved_symbols",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/code/Tables_main.do",
+    "code/code/Tables_Appendix.do"
+   ],
+   "note": "Explicit pre-trend parallel trends test not identified; event study plot serves as visual inspection",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Callaway Sant'Anna DID outputs group-time specific treatment effects",
+   "searched_files": [
+    "code/code/Tables_Appendix.do"
+   ],
+   "note": "csdid command with method(dripw) provides heterogeneous effects by treatment cohort and time period",
+   "evidence": [
+    {
+     "path": "code/code/Tables_Appendix.do",
+     "lines": [
+      1969,
+      1969
+     ],
+     "snippet": "qui csdid `y', i(fcode) time(year) g(divyr) method(dripw) `z'",
+     "supports": [
+      "status",
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/progs.do",
+     "lines": [
+      7,
+      9
+     ],
+     "snippet": "net install reghdfe, from(\"https://raw.githubusercontent.com/sergiocorreia/reghdfe/master/src/\")",
+     "supports": [
+      "ecosystem",
+      "name",
+      "kind",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/progs.do",
+     "lines": [
+      15,
+      17
+     ],
+     "snippet": "net install ivreghdfe, from(\"https://raw.githubusercontent.com/sergiocorreia/ivreghdfe/master/src/\")",
+     "supports": [
+      "ecosystem",
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "csdid",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/progs.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "local commandlist erepost estout boottest ranktest binscatter shp2dta ereplace csdid bacondecomp drdid",
+     "supports": [
+      "ecosystem",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/progs.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "local commandlist erepost estout boottest ranktest binscatter shp2dta ereplace csdid bacondecomp drdid",
+     "supports": [
+      "ecosystem",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ftools",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/progs.do",
+     "lines": [
+      2,
+      5
+     ],
+     "snippet": "net install ftools, from(\"https://raw.githubusercontent.com/sergiocorreia/ftools/master/src/\")",
+     "supports": [
+      "ecosystem",
+      "name",
+      "kind"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "conleyreg",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "conleyreg"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/conleyreg.R",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "reg<-conleyreg(paste0(y,\"~pt| fcode + year\"), data=data,dist_cutoff=d, unit=\"fcode\",",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "fixest",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/conleyreg.R",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "install.packages(\"fixest\")",
+     "supports": [
+      "ecosystem",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

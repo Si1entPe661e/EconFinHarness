@@ -1,0 +1,895 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_110_2_5",
+ "journal": "AER",
+ "year": 2020,
+ "doi": "10.1257/aer.20190759",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T13:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/aer_replication/dofiles/Fig_RD_plots.do",
+    "sha256": "cd313b179718d066d6d7c2dfaefd587b2171895868c6d7db78e1c84d90f809b0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      810,
+      860
+     ]
+    ]
+   },
+   {
+    "path": "code/aer_replication/dofiles/Fig_bandwidth_sensitivity.do",
+    "sha256": "4a096fc9affecd2af7f714042d8faa3a6b5e74a5b63fc0108c8e3a7fc5a79390",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/aer_replication/dofiles/Master.do",
+    "sha256": "360637eb672706b2bfa952317b48c0549c665edd77c35ea0596f56b1e8eca6d5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      276
+     ]
+    ]
+   },
+   {
+    "path": "code/aer_replication/dofiles/Table_fuzzy_iv.do",
+    "sha256": "0111316af28ce1cc0a374bc6fa1c9be492e0decfd96be2a8ab3146f10e16fc99",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      127
+     ]
+    ]
+   },
+   {
+    "path": "code/aer_replication/dofiles/Table_main_results.do",
+    "sha256": "43bb8e11cb2c42802db50855fcb9f7b2fc19e342a8b851e61fa7bdd0ccc8cef7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      351
+     ]
+    ]
+   },
+   {
+    "path": "code/aer_replication/dofiles/Table_summary_stats.do",
+    "sha256": "da8dfdc0796203bd5f093fdcb8c1cad4f47a465413527426e3f49acd19135784",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      70,
+      107
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/aer_replication/dofiles/mccrary-s-ado",
+    "reason": "vendored",
+    "note": "McCrary's DCdensity implementation"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Geographic boundary RD. Main table via rdrobust (Table 3 panels A-D, 1853-1936). Fuzzy RD with death_ind (Appendix B2). Conley spatial SE for balance. Custom rd plotting via local polynomial."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/aer_replication/dofiles/Master.do"
+  ],
+  "directory_layout": "Master.do triggers 19 do-files sequentially; self-contained data loads in each script",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/aer_replication/dofiles/mccrary-s-ado",
+   "code/aer_replication/dofiles/spatial_HAC"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 24,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Master.do",
+     "lines": [
+      23,
+      23
+     ],
+     "snippet": "global dir = \"D:\\Dropbox",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "Merged_1853_1864_data",
+   "type": "geospatial",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      19,
+      19
+     ],
+     "snippet": "use \"$dir\\data\\19th\\Merged_1853_1864_data.dta\"",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Merged_1846_1894_data",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      185,
+      185
+     ],
+     "snippet": "use \"$dir\\data\\19th\\Merged_1846_1894_data.dta\"",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "houses_1936_final",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      271,
+      271
+     ],
+     "snippet": "use \"$dir\\data\\20th\\houses_1936_final.dta\"",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "final_deaths_byhouse",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Fig_RD_plots.do",
+     "lines": [
+      85,
+      85
+     ],
+     "snippet": "use \"$dir\\data\\19th\\final_deaths_byhouse.dta\"",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/aer_replication/dofiles/Table_summary_stats.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Master.do",
+      "lines": [
+       35,
+       35
+      ],
+      "snippet": "do \"$dir\\dofiles\\Table_summary_stats.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/aer_replication/dofiles/Table_main_results.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Master.do",
+      "lines": [
+       55,
+       55
+      ],
+      "snippet": "do \"$dir\\dofiles\\Table_main_results.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/aer_replication/dofiles/Table_fuzzy_iv.do"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Master.do",
+      "lines": [
+       120,
+       120
+      ],
+      "snippet": "do \"$dir\\dofiles\\Table_fuzzy_iv.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Sequential; Master orchestrates all analyses",
+  "sample_restrictions": [
+   {
+    "description": "MSE-optimal bandwidth from rdbwselect",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       42,
+       45
+      ],
+      "snippet": "rdbwselect `var' temp, vce(nncluster",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Fixed 1-meter window for alternative specs",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       91,
+       91
+      ],
+      "snippet": "if dist_netw<1, cl(block)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      22,
+      26
+     ],
+     "snippet": "gen temp=dist_netw/100",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "fuzzy",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_fuzzy_iv.do",
+     "lines": [
+      55,
+      56
+     ],
+     "snippet": "rdrobust log_rentals_1864 dist_2, fuzzy(death_ind)",
+     "supports": [
+      "variant",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) all",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "vce(nncluster block)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "LLR no controls 1853",
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) all",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) covs(dist_cent dist_square /// \n\tdist_fire dist_thea dist_polic dist_urinal dist_pub dist_church dist_bank ///\n\tno_sewer old_sewer dist_vent dist_pump dist_pit_fake) all",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       69,
+       71
+      ],
+      "snippet": "vce(nncluster block) covs(dist_cent",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "LLR with controls 1853",
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      69,
+      71
+     ],
+     "snippet": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) covs(dist_cent dist_square",
+     "supports": [
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      69,
+      71
+     ],
+     "snippet": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) covs(dist_cent dist_square /// \n\tdist_fire dist_thea dist_polic dist_urinal dist_pub dist_church dist_bank ///\n\tno_sewer old_sewer dist_vent dist",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust log_rentals_1864 dist_2, fuzzy(death_ind) vce(nncluster block) ///\n\tcovs(dist_cent dist_urinal old_sewer dist_pump) all",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_fuzzy_iv.do",
+      "lines": [
+       55,
+       56
+      ],
+      "snippet": "vce(nncluster block)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Fuzzy RD first-stage boundary -> death_ind",
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_fuzzy_iv.do",
+     "lines": [
+      55,
+      56
+     ],
+     "snippet": "rdrobust log_rentals_1864 dist_2, fuzzy(death_ind) vce(nncluster block) ///\n\tcovs(dist_cent dist_urinal old_sewer dist_pump) all",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "No evidence of manipulation; output files generated",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "bandwidth_selection",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "MSE-optimal bandwidth selection via rdbwselect",
+   "searched_files": [
+    "code/aer_replication/dofiles/Table_main_results.do"
+   ],
+   "note": "Data-driven bandwidth for each outcome",
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      43,
+      45
+     ],
+     "snippet": "rdbwselect `var' temp, vce(nncluster block)",
+     "supports": [
+      "kind",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_bandwidth",
+   "description": "Bandwidth sensitivity analysis 10-100 meters",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [],
+   "relationship_status": "unresolved",
+   "note": "Figure SA4 shows robustness across bandwidths",
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Fig_bandwidth_sensitivity.do",
+     "lines": [
+      24,
+      45
+     ],
+     "snippet": "forvalues i=10(1)100 {",
+     "supports": [
+      "type"
+     ]
+    },
+    {
+     "path": "code/aer_replication/dofiles/Fig_bandwidth_sensitivity.do",
+     "lines": [
+      24,
+      45
+     ],
+     "snippet": "forvalues i=10(1)100",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": "estout",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       107,
+       109
+      ],
+      "snippet": "estout tab2_1a tab2_2a",
+      "supports": [
+       "package"
+      ]
+     },
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       107,
+       109
+      ],
+      "snippet": "style(tex)",
+      "supports": [
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": "estout",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/aer_replication/dofiles/Table_fuzzy_iv.do",
+      "lines": [
+       121,
+       126
+      ],
+      "snippet": "estout tab2_1 tab2_2 tab2_3",
+      "supports": [
+       "package"
+      ]
+     },
+     {
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+       107,
+       112
+      ],
+      "snippet": "estout",
+      "supports": [
+       "format",
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "rdrobust",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rdrobust"
+   ],
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "rdrobust log_rentals_1853",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "rdrobust",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "rdbwselect",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rdbwselect"
+   ],
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      43,
+      43
+     ],
+     "snippet": "rdbwselect `var'",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "rdrobust",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "DCdensity",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "DCdensity"
+   ],
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Fig_RD_plots.do",
+     "lines": [
+      824,
+      824
+     ],
+     "snippet": "DCdensity dist_2",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "rdrobust",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "estout"
+   ],
+   "evidence": [
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      107,
+      107
+     ],
+     "snippet": "estout tab2_1a",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/aer_replication/dofiles/Table_main_results.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "rdrobust",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd"
+  ],
+  "fields": []
+ }
+}

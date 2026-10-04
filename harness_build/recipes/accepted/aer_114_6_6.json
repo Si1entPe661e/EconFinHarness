@@ -1,0 +1,771 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_114_6_6",
+ "journal": "AER",
+ "year": 2024,
+ "doi": "10.1257/aer.20220792",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dofiles/main_cleandata.do",
+    "sha256": "dbd060cc99975fa3fd5d15fcf33f5c91afcf5317bbcc5994a9f0fa9f77293e97",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      900,
+      1050
+     ]
+    ]
+   },
+   {
+    "path": "code/dofiles/main_figstables.do",
+    "sha256": "4801554eca6b2932a9bcf29a75a3c4941f7a8f03be82bda8f200915105b994a0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      140,
+      350
+     ],
+     [
+      420,
+      700
+     ],
+     [
+      900,
+      1010
+     ]
+    ]
+   },
+   {
+    "path": "code/dofiles/master.do",
+    "sha256": "9c88e1e935608266966b8d7f1874b65927cdf2040d8e6bc5e7f8d10416e2a02f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      43
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/dofiles/sipp_infile/",
+    "reason": "vendored",
+    "note": "data prep"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Triple-difference with time windows"
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dofiles/master.do"
+  ],
+  "directory_layout": "code/dofiles",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/dofiles/sipp_infile/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 18,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dofiles/master.do",
+     "lines": [
+      1,
+      12
+     ],
+     "snippet": "global",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": "survey",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "CPS",
+   "evidence": [
+    {
+     "path": "code/dofiles/main_cleandata.do",
+     "lines": [
+      35,
+      45
+     ],
+     "snippet": "cpsmar",
+     "supports": [
+      "type"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_cleandata.do",
+     "lines": [
+      33,
+      33
+     ],
+     "snippet": "CPS",
+     "supports": [
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "admin",
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dofiles/main_cleandata.do",
+     "lines": [
+      80,
+      81
+     ],
+     "snippet": "numident",
+     "supports": [
+      "type",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "admin",
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dofiles/main_cleandata.do",
+     "lines": [
+      118,
+      124
+     ],
+     "snippet": "cps_newder",
+     "supports": [
+      "type",
+      "access"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/dofiles/main_cleandata.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dofiles/master.do",
+      "lines": [
+       36,
+       37
+      ],
+      "snippet": "main_cleandata.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dofiles/main_figstables.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dofiles/master.do",
+      "lines": [
+       37,
+       37
+      ],
+      "snippet": "main_figstables.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "tables",
+    "scripts": [
+     "code/dofiles/appa_tables.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dofiles/master.do",
+      "lines": [
+       39,
+       39
+      ],
+      "snippet": "appa_tables.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [
+   {
+    "description": "SSA matched",
+    "spec_ids": [
+     "s1"
+    ],
+    "evidence": [
+     {
+      "path": "code/dofiles/main_cleandata.do",
+      "lines": [
+       1022,
+       1022
+      ],
+      "snippet": "matched",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "main",
+   "method": "did",
+   "variant": "triple_difference",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dofiles/main_cleandata.do",
+     "lines": [
+      1003,
+      1004
+     ],
+     "snippet": "fb9396",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      42,
+      48
+     ],
+     "snippet": "ddd_base",
+     "supports": [
+      "role"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "eststo `out'ddd: xi: reg `out' postbrth049396xnm postbrth599396xnm postbrth10plus9396xnm i.yearfb*i.gr_yrs_fr_fb ///\n\t\t`ddd_base' [aw=num], cluster(statefip)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [
+    {
+     "symbol": "ddd_base",
+     "value": "i.married*i.gr_yrs_fr_fb i.married*i.yearfb i.married*i.brthyr ///",
+     "evidence": [
+      {
+       "path": "code/dofiles/main_figstables.do",
+       "lines": [
+        43,
+        48
+       ],
+       "snippet": "local ddd_base \ti.married*i.gr_yrs_fr_fb i.married*i.yearfb i.married*i.brthyr ///\n\t\t\t\ti.married*i.white_post i.married*i.black_post i.married*i.hisp_post ///",
+       "supports": [
+        "symbol",
+        "value"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "out"
+   ],
+   "scope": "family",
+   "family_description": "foreach out in posinc realinc yrsexp_adj",
+   "fixed_effects": [
+    "yearfb",
+    "gr_yrs_fr_fb"
+   ],
+   "controls_summary": null,
+   "weights": "aw=num",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "statefip"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dofiles/main_figstables.do",
+      "lines": [
+       964,
+       964
+      ],
+      "snippet": "cluster(statefip)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Main",
+   "evidence": [
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      963,
+      964
+     ],
+     "snippet": "eststo `out'ddd: xi: reg `out' postbrth049396xnm postbrth599396xnm postbrth10plus9396xnm i.yearfb*i.gr_yrs_fr_fb ///\n\t\t`ddd_base' [aw=num], cluster(statefip)",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "command",
+      "weights",
+      "unresolved_symbols",
+      "fixed_effects"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      952,
+      952
+     ],
+     "snippet": "foreach out in posinc realinc yrsexp_adj {",
+     "supports": [
+      "scope",
+      "family_description"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      1001,
+      1001
+     ],
+     "snippet": "table1.tex",
+     "supports": [
+      "role",
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "xi: reg posinc fbyr*x9396xnm i.yearfb*i.gr_yrs_fr_fb `ddd_base' [aw=num], cluster(statefip)",
+   "resolved_call": "xi: reg posinc fbyr*x9396xnm i.yearfb*i.gr_yrs_fr_fb i.married*i.gr_yrs_fr_fb i.married*i.yearfb i.married*i.brthyr i.married*i.white_post i.married*i.black_post i.married*i.hisp_post i.married*i.edgr_post i.married*i.statefip i.married*urate i.married*minwage i.married*afdcmax4 i.married*medthresh i.married*i.missmedthresh i.married*i.reform i.married*i.tl i.married*i.jobs_ex i.married*i.jobs_sanc i.married*i.disr i.married*i.famcap i.married*i.work_tl i.married*i.yr09plus i.married*i.a_age [aw=num], cluster(statefip)",
+   "resolution_status": "resolved",
+   "bindings": [
+    {
+     "symbol": "ddd_base",
+     "value": "i.married*i.gr_yrs_fr_fb i.married*i.yearfb i.married*i.brthyr ///",
+     "evidence": [
+      {
+       "path": "code/dofiles/main_figstables.do",
+       "lines": [
+        43,
+        48
+       ],
+       "snippet": "local ddd_base \ti.married*i.gr_yrs_fr_fb i.married*i.yearfb i.married*i.brthyr ///\n\t\t\t\ti.married*i.white_post i.married*i.black_post i.married*i.hisp_post ///",
+       "supports": [
+        "symbol",
+        "value"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "yearfb",
+    "gr_yrs_fr_fb"
+   ],
+   "controls_summary": null,
+   "weights": "aw=num",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "statefip"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dofiles/main_figstables.do",
+      "lines": [
+       165,
+       165
+      ],
+      "snippet": "cluster(statefip)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study dynamic DDD specification",
+   "evidence": [
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      165,
+      165
+     ],
+     "snippet": "xi: reg posinc fbyr*x9396xnm i.yearfb*i.gr_yrs_fr_fb `ddd_base' [aw=num], cluste",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "command",
+      "weights",
+      "unresolved_symbols",
+      "fixed_effects"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      211,
+      212
+     ],
+     "snippet": "figure2c.pdf",
+     "supports": [
+      "role"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      165,
+      165
+     ],
+     "snippet": "xi: reg posinc fbyr*x9396xnm i.yearfb*i.gr_yrs_fr_fb",
+     "supports": [
+      "resolved_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "xi: reg posinc fbyr*x9396 `dd_base' if nevmar==1 [aw=num], cluster(statefip)",
+   "resolved_call": "xi: reg posinc fbyr*x9396 i.gr_yrs_fr_fb i.yearfb i.brthyr i.white_post i.black_post i.hisp_post i.edgr_post i.statefip urate minwage afdcmax4 medthresh i.missmedthresh i.reform tl jobs_ex jobs_sanc disr famcap work_tl i.yr09plus i.a_age if nevmar==1 [aw=num], cluster(statefip)",
+   "resolution_status": "resolved",
+   "bindings": [
+    {
+     "symbol": "dd_base",
+     "value": "i.gr_yrs_fr_fb i.yearfb i.brthyr i.white_post i.black_post i.hisp_post ///",
+     "evidence": [
+      {
+       "path": "code/dofiles/main_figstables.do",
+       "lines": [
+        59,
+        61
+       ],
+       "snippet": "local dd_base \ti.gr_yrs_fr_fb i.yearfb i.brthyr i.white_post i.black_post i.hisp_post ///",
+       "supports": [
+        "symbol",
+        "value"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aw=num",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "statefip"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dofiles/main_figstables.do",
+      "lines": [
+       154,
+       154
+      ],
+      "snippet": "cluster(statefip)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "nevmar==1",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Simple DD on never-married subsample",
+   "evidence": [
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      154,
+      154
+     ],
+     "snippet": "xi: reg posinc fbyr*x9396 `dd_base' if nevmar==1 [aw=num], clu",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "command",
+      "weights",
+      "sample",
+      "role"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      154,
+      154
+     ],
+     "snippet": "xi: reg posinc fbyr*x9396",
+     "supports": [
+      "resolved_call"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Pre-birth coefficients in event study show treatment timing",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "table1.tex",
+    "package": null,
+    "format": "tex",
+    "spec_ids": [
+     "s1"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dofiles/main_figstables.do",
+      "lines": [
+       1001,
+       1001
+      ],
+      "snippet": "table1.tex",
+      "supports": [
+       "path"
+      ]
+     },
+     {
+      "path": "code/dofiles/main_figstables.do",
+      "lines": [
+       1001,
+       1007
+      ],
+      "snippet": "replace",
+      "supports": [
+       "format"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "xi",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "xi"
+   ],
+   "evidence": [
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      963,
+      963
+     ],
+     "snippet": "xi:",
+     "supports": [
+      "usage",
+      "commands"
+     ]
+    },
+    {
+     "path": "code/dofiles/main_figstables.do",
+     "lines": [
+      165,
+      165
+     ],
+     "snippet": "xi: reg",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "global",
+   "evidence": [
+    {
+     "path": "code/dofiles/master.do",
+     "lines": [
+      1,
+      12
+     ],
+     "snippet": "global",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

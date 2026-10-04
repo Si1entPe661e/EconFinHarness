@@ -1,0 +1,466 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jpe_2026_740222",
+ "journal": "JPE",
+ "year": 2026,
+ "doi": "10.1086/740222",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JPE/metadata/articles.csv",
+   "sha256": "0ede2238a117d9aee4e58b32cf05ae7120ca1c154cf1cb330e8a03a046490e0a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/0all_tables_figures_1.R",
+    "sha256": "72e0ec78f974623d103f972b1a9bbe5dacdb067b35d523d3fea77d8382456da3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      90
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/functions.R",
+    "sha256": "8297be2408d35ffb68860c7e783dbbf00b983d0613647d3fd89410568ffd76f1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      400
+     ],
+     [
+      438,
+      480
+     ],
+     [
+      750,
+      866
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+    "sha256": "436e108bb51e68004125effedf9c0227eeff2df45ad6167cf2492c2f59a8722c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      237
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GZMO6B/replication/make.R",
+    "sha256": "14369a2e0388a0c298b85d669f5b9b496db5110e6df634b144f69bc83b8996a8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      31
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Master pipeline (make.R) sources 4 main analysis files in parallel. Focused on table1_heat_rate.R as primary specification example; other scripts follow similar event-study patterns with different outcomes."
+ },
+ "repository": {
+  "languages": [
+   "R"
+  ],
+  "master_scripts": [
+   "code/dataverse_GZMO6B/replication/make.R"
+  ],
+  "directory_layout": "code/1_raw_data_process; code/2_gen_capacity; code/3_data_clean; code/4_data_merge; code/5_empirical_analysis (47 scripts); code/6_process_figures",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 57,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "heat_rate_date.csv",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/functions.R",
+     "lines": [
+      54,
+      54
+     ],
+     "snippet": "datasets$heat_rate <- fread(file.path(get_data_path(\"4\"), \"heat_rate_date.csv\"), verbose=FALSE, showProgress=FALSE)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "merger_data.csv",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/functions.R",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "datasets$mergers   <- fread(file.path(get_data_path(\"4\"), \"merger_data.csv\"), verbose=FALSE, showProgress=FALSE)",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/1_raw_data_process/process_raw_gads_data.R",
+     "code/1_raw_data_process/create_hourly_processed_data.R"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GZMO6B/replication/make.R",
+      "lines": [
+       6,
+       9
+      ],
+      "snippet": "scripts <- c(\n# Block 1: raw data\n\"code/1_raw_data_process/process_raw_gads_data.R\",\n\"code/1_raw_data_process/create_hourly_processed_data.R\",",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "build",
+    "scripts": [
+     "code/2_gen_capacity/capacity_est.R"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GZMO6B/replication/make.R",
+      "lines": [
+       10,
+       11
+      ],
+      "snippet": "# Block 2: capacity estimates\n\"code/2_gen_capacity/capacity_est.R\",",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "clean",
+    "scripts": [
+     "code/3_data_clean/gen_weekly_data.R",
+     "code/3_data_clean/gen_daily_data.R",
+     "code/3_data_clean/gen_hourly.R"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GZMO6B/replication/make.R",
+      "lines": [
+       12,
+       15
+      ],
+      "snippet": "# Block 3: clean & aggregate\n\"code/3_data_clean/gen_weekly_data.R\",\n\"code/3_data_clean/gen_daily_data.R\",\n\"code/3_data_clean/gen_hourly.R\",",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "merge",
+    "scripts": [
+     "code/4_data_merge/data_merge.R"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GZMO6B/replication/make.R",
+      "lines": [
+       16,
+       17
+      ],
+      "snippet": "# Block 4: merge\n\"code/4_data_merge/data_merge.R\",",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Parallel execution via foreach(.inorder = TRUE) in 0all_tables_figures_*.R scripts",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "event_study",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+     "lines": [
+      161,
+      162
+     ],
+     "snippet": "formula        <- as.formula(paste(outcome, \"~\", names, \"+ treat_all + treat_post + \", controls , \"|\", fixed_var, sep=\"\"))\n    fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "feols",
+   "package": null,
+   "formula_or_call": "as.formula(paste(outcome, \"~\", names, \"+ treat_all + treat_post + \", controls , \"|\", fixed_var, sep=\"\"))",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": "Clustered at plant (cluster_var = deal_number if available, else plant_id)",
+    "evidence": [
+     {
+      "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+      "lines": [
+       162,
+       162
+      ],
+      "snippet": "fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/functions.R",
+      "lines": [
+       244,
+       244
+      ],
+      "snippet": "temp[!is.na(deal_number),cluster_var:=deal_number,]",
+      "supports": [
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Specification 1 of 4 analysis branches in table1_heat_rate.R",
+   "evidence": [
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+     "lines": [
+      162,
+      162
+     ],
+     "snippet": "fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+     "lines": [
+      161,
+      162
+     ],
+     "snippet": "formula        <- as.formula(paste(outcome, \"~\", names, \"+ treat_all + treat_post + \", controls , \"|\", fixed_var, sep=\"\"))",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": "xtable",
+    "format": "txt",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/functions.R",
+      "lines": [
+       453,
+       453
+      ],
+      "snippet": "print(xtable(coef_matrix), align = c(\"l\", rep(\"c\", ncol(data) - 1)), file=paste0(figure_folder_table, \"Tables/\", name, \".txt\"))",
+      "supports": [
+       "package",
+       "format"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "R",
+   "name": "fixest",
+   "kind": "distribution",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "feols"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/0all_tables_figures_1.R",
+     "lines": [
+      2,
+      2
+     ],
+     "snippet": "vec.pac <- c(\"data.table\", \"fixest\", \"lubridate\",\"dplyr\", \"ggplot2\", \"zoo\", \"tidyverse\",",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    },
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+     "lines": [
+      162,
+      162
+     ],
+     "snippet": "fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "xtable",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "xtable"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/functions.R",
+     "lines": [
+      453,
+      453
+     ],
+     "snippet": "print(xtable(coef_matrix),",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "event_study"
+  ],
+  "fields": []
+ }
+}

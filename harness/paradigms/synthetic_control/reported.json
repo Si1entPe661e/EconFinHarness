@@ -1,0 +1,3562 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "synthetic_control",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "aer_111_12_8",
+      "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+      "journal": "AER",
+      "year": 2021,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+      "journal": "JFE",
+      "year": 2024,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jfe_2025_j_jfineco_2025_104150",
+      "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+      "journal": "JFE",
+      "year": 2025,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jpe_2026_742424",
+      "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+      "journal": "JPE",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdaf071",
+      "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "note_sha256": "6ac6bc1756be01be4aca536c364172e547cd8d4e890d48a8377914fa87acd61b",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 6,
+    "by_journal": {
+      "AER": 1,
+      "JFE": 2,
+      "JPE": 1,
+      "ReStud": 2
+    },
+    "by_year": {
+      "2021": 1,
+      "2024": 1,
+      "2025": 1,
+      "2026": 3
+    },
+    "with_card": 6,
+    "papers_with_category": {
+      "design_statement": 4,
+      "sample_construction": 2,
+      "specification_reporting": 3,
+      "inference_justification": 5,
+      "diagnostic_reported": 3,
+      "robustness_reported": 4,
+      "magnitude_interpretation": 2,
+      "external_validity": 2,
+      "presentation_convention": 5,
+      "writing_structure": 3,
+      "variable_construction": 2,
+      "heterogeneity_reported": 1,
+      "limitation_stated": 1,
+      "replication_statement": 2,
+      "data_access": 2,
+      "mechanism_evidence": 1,
+      "other": 1
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "administrative",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o47",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section VII, footnote",
+          "statement": "The country-panel emissions data reanalyzed in the empirical application are described as originating from an existing, separately deposited replication package for the original published study rather than from a new or restricted-access source.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o51",
+          "pages": [
+            5,
+            18
+          ],
+          "locator": "Section 2; Appendix C; footnote 21",
+          "statement": "Data are administrative registries, national surveys, census microdata, and historical election records; the authors also collected oral histories from school founders, reported in an appendix and used qualitatively in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "linked_records",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o51",
+          "pages": [
+            5,
+            18
+          ],
+          "locator": "Section 2; Appendix C; footnote 21",
+          "statement": "Data are administrative registries, national surveys, census microdata, and historical election records; the authors also collected oral histories from school founders, reported in an appendix and used qualitatively in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "other:oral_histories",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o51",
+          "pages": [
+            5,
+            18
+          ],
+          "locator": "Section 2; Appendix C; footnote 21",
+          "statement": "Data are administrative registries, national surveys, census microdata, and historical election records; the authors also collected oral histories from school founders, reported in an appendix and used qualitatively in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "public_use",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o47",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section VII, footnote",
+          "statement": "The country-panel emissions data reanalyzed in the empirical application are described as originating from an existing, separately deposited replication package for the original published study rather than from a new or restricted-access source.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "survey_collected",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o51",
+          "pages": [
+            5,
+            18
+          ],
+          "locator": "Section 2; Appendix C; footnote 21",
+          "statement": "Data are administrative registries, national surveys, census microdata, and historical election records; the authors also collected oral histories from school founders, reported in an appendix and used qualitatively in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "design_variant_named",
+      "papers": 4,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Introduction, equations (1)-(3)",
+          "statement": "The paper proposes synthetic difference-in-differences as a new estimator combining DID's parallel-trends logic with SC's unit reweighting, and states its objective as a weighted two-way-fixed-effects regression contrasted directly against unweighted DID and time-weight-free SC.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            7
+          ],
+          "locator": "Section 1 (introduction) and Section 4.2",
+          "statement": "The paper names three complementary designs for the main analysis: a firm and day fixed-effects difference-in-differences comparing two phases of the Affair, a synthetic difference-in-differences, and Coarsened Exact Matching.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Abstract / Introduction",
+          "statement": "The paper names its target parameter precisely as the average treatment effect on the treated over the post-treatment period for a single treated unit, distinguishing it from per-period effects and sharp-null tests used elsewhere in the synthetic control literature.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section 1, empirical strategy paragraph",
+          "statement": "The paper announces a suite of DID methods up front: cross-sectional district intensity DID with flexible trend controls, synthetic DID as a parallel-trends-robust complement, and a village-level staggered-entry design. Each is presented as addressing a distinct threat.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "identifying_assumption_explicit",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o3",
+          "pages": [
+            4,
+            5
+          ],
+          "locator": "Section I.A",
+          "statement": "Unit weights are chosen so unexposed units' pre-period trend is only approximately, not exactly, parallel to the treated units'; the paper states that the added unit fixed effect absorbs the remaining constant level difference, which it presents as the key relaxation of the original synthetic-contro",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o2",
+          "pages": [
+            2,
+            3
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction states two inferential threats motivating the method: the synthetic control estimator is biased because the weights are estimated in a setting with many controls relative to the pre-period length, and the long-run variance needed for standard errors is hard to estimate reliably in s",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section 1, empirical strategy paragraph",
+          "statement": "The paper announces a suite of DID methods up front: cross-sectional district intensity DID with flexible trend controls, synthetic DID as a parallel-trends-robust complement, and a village-level staggered-entry design. Each is presented as addressing a distinct threat.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "parallel_trends_argued",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o3",
+          "pages": [
+            4,
+            5
+          ],
+          "locator": "Section I.A",
+          "statement": "Unit weights are chosen so unexposed units' pre-period trend is only approximately, not exactly, parallel to the treated units'; the paper states that the added unit fixed effect absorbs the remaining constant level difference, which it presents as the key relaxation of the original synthetic-contro",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o5",
+          "pages": [
+            3,
+            24
+          ],
+          "locator": "Section III.C; Section IV.B Remark",
+          "statement": "The paper formally argues that the debiased synthetic control estimator is asymptotically at least as efficient as difference-in-differences and remains valid when the common-trends assumption underlying difference-in-differences fails, framing this as a design advantage over the leading alternative",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section 1, empirical strategy paragraph",
+          "statement": "The paper announces a suite of DID methods up front: cross-sectional district intensity DID with flexible trend controls, synthetic DID as a parallel-trends-robust complement, and a village-level staggered-entry design. Each is presented as addressing a distinct threat.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "estimand_named",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            3
+          ],
+          "locator": "Introduction, equations (1)-(3)",
+          "statement": "The paper proposes synthetic difference-in-differences as a new estimator combining DID's parallel-trends logic with SC's unit reweighting, and states its objective as a weighted two-way-fixed-effects regression contrasted directly against unweighted DID and time-weight-free SC.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Abstract / Introduction",
+          "statement": "The paper names its target parameter precisely as the average treatment effect on the treated over the post-treatment period for a single treated unit, distinguishing it from per-period effects and sharp-null tests used elsewhere in the synthetic control literature.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            7
+          ],
+          "locator": "Section 1 (introduction) and Section 4.2",
+          "statement": "The paper names three complementary designs for the main analysis: a firm and day fixed-effects difference-in-differences comparing two phases of the Affair, a synthetic difference-in-differences, and Coarsened Exact Matching.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "threats_discussed",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o2",
+          "pages": [
+            2,
+            3
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction states two inferential threats motivating the method: the synthetic control estimator is biased because the weights are estimated in a setting with many controls relative to the pre-period length, and the long-run variance needed for standard errors is hard to estimate reliably in s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o21",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Figure 1, top panel",
+          "statement": "No formal statistical pre-trends test is reported anywhere; pre-treatment fit is instead conveyed only visually, through the top panel of the main comparison figure showing each method's fitted pre-period trend against the raw outcome trajectory.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o21",
+          "pages": [
+            26,
+            33
+          ],
+          "locator": "Section V.A; Section VII, Table 4",
+          "statement": "A placebo-in-time procedure is proposed and applied: the pre-treatment period is split into a placebo pre- and post-period, the test is applied within that placebo window, and rejection is interpreted as evidence against the assumptions underlying the method, including possible structural breaks or ",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o27",
+          "pages": [
+            14,
+            28
+          ],
+          "locator": "Figures 2, 3, 4, 7",
+          "statement": "Pre-trends are shown graphically in three event-study figures (semi-decade district estimates, SDID trend plots with pre-period weights, village imputation event study) and a cohort-specific exposure figure; the text reads these visually rather than reporting a formal pre-trend test.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "pre_trends_plot",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o21",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Figure 1, top panel",
+          "statement": "No formal statistical pre-trends test is reported anywhere; pre-treatment fit is instead conveyed only visually, through the top panel of the main comparison figure showing each method's fitted pre-period trend against the raw outcome trajectory.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o27",
+          "pages": [
+            14,
+            28
+          ],
+          "locator": "Figures 2, 3, 4, 7",
+          "statement": "Pre-trends are shown graphically in three event-study figures (semi-decade district estimates, SDID trend plots with pre-period weights, village imputation event study) and a cohort-specific exposure figure; the text reads these visually rather than reporting a formal pre-trend test.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "balance_table",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o22",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Figure 1, bottom panel",
+          "statement": "The bottom panel of the same comparison figure functions as an implicit influence diagnostic, plotting each control unit's weighted contribution to the estimate so that unusually influential units are visible by dot size, and explicitly contrasting how concentrated each estimator's influence is.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "event_study_figure",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o27",
+          "pages": [
+            14,
+            28
+          ],
+          "locator": "Figures 2, 3, 4, 7",
+          "statement": "Pre-trends are shown graphically in three event-study figures (semi-decade district estimates, SDID trend plots with pre-period weights, village imputation event study) and a cohort-specific exposure figure; the text reads these visually rather than reporting a formal pre-trend test.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o23",
+          "pages": [
+            27,
+            29
+          ],
+          "locator": "Section VI, appendix reference",
+          "statement": "An extended simulation exercise with a much longer pre-treatment period is described as reported in the online appendix to check whether the theoretical requirement that the pre-period be much longer than the post-period materially affects performance; this appendix material was not part of the extr",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o23",
+          "pages": [
+            27,
+            29
+          ],
+          "locator": "Section VI, appendix reference",
+          "statement": "An extended simulation exercise with a much longer pre-treatment period is described as reported in the online appendix to check whether the theoretical requirement that the pre-period be much longer than the post-period materially affects performance; this appendix material was not part of the extr",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:ar1_residual_persistence_check",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o22",
+          "pages": [
+            19,
+            27
+          ],
+          "locator": "Section III.B; Section VI",
+          "statement": "Persistence in the pre-treatment prediction errors is diagnosed by fitting an autoregressive model to the synthetic-control residuals, which the paper treats as an input both to choosing the cross-fitting block count and to calibrating the application-based simulations.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:coverage_simulation",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o23",
+          "pages": [
+            24,
+            24
+          ],
+          "locator": "Table 4",
+          "statement": "Coverage of nominal confidence intervals is reported as the paper's primary diagnostic of inference quality, computed by simulation for each variance-estimation method and each estimator/design combination, rather than relying on the asymptotic theorem alone.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:influence_diagnostic",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o22",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Figure 1, bottom panel",
+          "statement": "The bottom panel of the same comparison figure functions as an implicit influence diagnostic, plotting each control unit's weighted contribution to the estimate so that unusually influential units are visible by dot size, and explicitly contrasting how concentrated each estimator's influence is.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:placebo_in_time_test",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o21",
+          "pages": [
+            26,
+            33
+          ],
+          "locator": "Section V.A; Section VII, Table 4",
+          "statement": "A placebo-in-time procedure is proposed and applied: the pre-treatment period is split into a placebo pre- and post-period, the test is applied within that placebo window, and rejection is interpreted as evidence against the assumptions underlying the method, including possible structural breaks or ",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "scaling_discussed",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o34",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction explicitly frames DID and SC as historically suited to different empirical regimes, many treated units under DID versus a single or few treated units under SC, and positions the proposed estimator as intended to perform well across both regimes rather than only one.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o44",
+          "pages": [
+            33,
+            34
+          ],
+          "locator": "Section VIII.A",
+          "statement": "The practical-recommendations section discusses how the method should be adapted when there are multiple treated units, noting that applying it separately unit by unit is reasonable for a small number of treated units but that other methods designed for many simultaneously treated units may be prefe",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "mechanism_motivated",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 1,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o30",
+          "pages": [
+            27,
+            28
+          ],
+          "locator": "Section VI, Table 2",
+          "statement": "Heterogeneity across data-generating processes rather than across observational units is the paper's main lens: several simulation designs deliberately introduce heterogeneous trends or heterogeneous drift terms across comparison units to probe how much the method's guarantees depend on unit homogen",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "alt_se",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o25",
+          "pages": [
+            12,
+            18
+          ],
+          "locator": "Table 2 notes; footnote 19",
+          "statement": "SDID standard errors use the cluster bootstrap algorithm from the SDID paper; a footnote adds that the imputation estimates are also robust to clustering at the district instead of village level.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:accuracy_length_tradeoff",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o18",
+          "pages": [
+            18,
+            20
+          ],
+          "locator": "Section III.B",
+          "statement": "Choosing the number of cross-fitting blocks is explicitly justified as a trade-off between the accuracy of the coverage and the expected width of the confidence interval, with a formula for relative asymptotic efficiency offered to help researchers navigate that trade-off.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:bootstrap_se",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o21",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Section 5.1, Fig. 6 notes",
+          "statement": "The synthetic-control confidence intervals are constructed from a nonparametric bootstrap procedure specific to that estimator, a distinct inference approach from the firm-clustered standard errors used in the regression tables.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:cluster_bootstrap",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o25",
+          "pages": [
+            12,
+            18
+          ],
+          "locator": "Table 2 notes; footnote 19",
+          "statement": "SDID standard errors use the cluster bootstrap algorithm from the SDID paper; a footnote adds that the imputation estimates are also robust to clustering at the district instead of village level.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:cross_fitting_blocks",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o17",
+          "pages": [
+            11,
+            18
+          ],
+          "locator": "Section II.B; Section III.B",
+          "statement": "The degrees of freedom of the inferential t-distribution are tied directly to the number of cross-fitting blocks chosen by the researcher, so the paper frames the block count as an explicit, user-set inferential tuning parameter rather than a nuisance choice.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:jackknife_bias_caveat",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o18",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section IV, Theorem 2",
+          "statement": "The jackknife variance estimator is proven conservative in general and exact only under an additional stated condition; the authors explicitly state this same jackknife construction is not recommended for the synthetic-control estimator because it is severely biased upward there.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:newey_west_critiqued",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o19",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Introduction, Figure 2",
+          "statement": "The authors justify avoiding classical long-run-variance estimators by pointing to simulation evidence, cited from their own prior work, that a popular heteroskedasticity- and autocorrelation-consistent estimator produces substantial undercoverage in the small-sample regime typical of this literatur",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:persistence_diagnostic_for_block_choice",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o20",
+          "pages": [
+            19,
+            20
+          ],
+          "locator": "Section III.B",
+          "statement": "The paper recommends that researchers gauge the persistence of prediction errors by fitting a simple autoregressive model to pre-treatment residuals, and use that persistence estimate together with application-based simulations to select the number of cross-fitting blocks.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:self_normalized_pivotal_statistic",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o16",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section II.B; Theorem 2",
+          "statement": "Inference is justified by constructing a scale-free, self-normalized statistic whose asymptotic distribution is a pivotal Student-t, which the authors motivate as a way to sidestep the difficult and unreliable estimation of the long-run variance in small samples.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "randomization_inference",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o25",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Table 4 notes",
+          "statement": "Synthetic difference-in-differences standard errors are computed with the placebo-based inference method associated with that estimator rather than with a cluster-robust formula.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "identification_caveat",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 1,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o33",
+          "pages": [
+            2,
+            34
+          ],
+          "locator": "Introduction; Section VIII.A",
+          "statement": "The recommendations section states explicitly that the method should not be used when there are too few post-treatment periods, such as when data are limited or when comparison units also become treated shortly after the focal unit, since the underlying asymptotic requirement is violated.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "compared_to_literature",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o30",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Section I.B",
+          "statement": "Differences between estimators in the California application are interpreted qualitatively as well as numerically: the authors argue that when the synthetic-control-type and the proposed estimator's point estimates diverge, the latter is generally the more credible one, using the direction of the ga",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o31",
+          "pages": [
+            6,
+            32
+          ],
+          "locator": "Introduction; Section VII",
+          "statement": "The empirical illustration's inferential conclusion is explicitly framed as corroborating a specific published finding from the original study, which used a different, permutation-based inference procedure, rather than as a free-standing new empirical claim.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "precision_discussed",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o30",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Section I.B",
+          "statement": "Differences between estimators in the California application are interpreted qualitatively as well as numerically: the authors argue that when the synthetic-control-type and the proposed estimator's point estimates diverge, the latter is generally the more credible one, using the direction of the ga",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o32",
+          "pages": [
+            32,
+            33
+          ],
+          "locator": "Section VII",
+          "statement": "Differences in the width of confidence intervals across the four compared methods in the empirical application are explained by appeal to the simulation evidence, attributing wider intervals from one competing method to its reliance on cross-sectional homoskedasticity, which the paper argues is less",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "sd_units",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o29",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Table 2 notes",
+          "statement": "Outcomes in the simulation studies are standardized before reporting bias and RMSE, and the resulting figures are rescaled for readability, so magnitudes are interpreted on a comparable unit-free scale across the different underlying outcome variables rather than in their original units.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "model_guided",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 1,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o40",
+          "pages": [
+            10,
+            32
+          ],
+          "locator": "Section 2.3; Appendix B",
+          "statement": "A Hotelling-style model of school entry and curriculum choice is placed in an appendix and referenced as the organizing framework for the predictions section and for interpreting heterogeneity by ideology.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "other",
+      "tag": "other:funding_disclosed",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 1,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "note_sha256": "6ac6bc1756be01be4aca536c364172e547cd8d4e890d48a8377914fa87acd61b",
+          "observation_id": "o56",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Acknowledgments",
+          "statement": "Funding source and host institutions are disclosed, along with a disclaimer that views are not those of the named central banks.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "coefficient_plot",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o46",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Figures 1 and 2",
+          "statement": "Both the standard and synthetic difference-in-differences results are visualized as coefficient-over-time figures with confidence bands and vertical markers at the two key historical dates, giving a common visual template across the two estimators.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o42",
+          "pages": [
+            13,
+            15
+          ],
+          "locator": "Fig. 4 and Fig. 6",
+          "statement": "Dynamic treatment-effect estimates around issuance are presented as coefficient/event-study figures, with each figure's note stating the underlying estimating equation and how the plotted confidence interval was constructed.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            28
+          ],
+          "locator": "Figures 1 to 7",
+          "statement": "Figures include district binscatters for targeting, semi-decade coefficient plots with confidence bars, SDID trend plots with pre-period weights drawn beneath, an imputation event study with shaded bands, and raw cohort means by high and low intensity before the regression version.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "event_study_figure",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o46",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Figures 1 and 2",
+          "statement": "Both the standard and synthetic difference-in-differences results are visualized as coefficient-over-time figures with confidence bands and vertical markers at the two key historical dates, giving a common visual template across the two estimators.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o42",
+          "pages": [
+            13,
+            15
+          ],
+          "locator": "Fig. 4 and Fig. 6",
+          "statement": "Dynamic treatment-effect estimates around issuance are presented as coefficient/event-study figures, with each figure's note stating the underlying estimating equation and how the plotted confidence interval was constructed.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            28
+          ],
+          "locator": "Figures 1 to 7",
+          "statement": "Figures include district binscatters for targeting, semi-decade coefficient plots with confidence bars, SDID trend plots with pre-period weights drawn beneath, an imputation event study with shaded bands, and raw cohort means by high and low intensity before the regression version.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "raw_data_plot",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o37",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Figure 1",
+          "statement": "The main comparison figure is a two-row diagram: raw trend lines with weighted control averages on top, paired with a dot-size-weighted influence plot of adjusted outcome gaps below, rather than a conventional event-study coefficient plot.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o37",
+          "pages": [
+            29,
+            32
+          ],
+          "locator": "Section VII, Figure 4",
+          "statement": "The empirical application opens with a raw time-series plot of the outcome for the treated unit before any modeling, which the authors use to motivate visually that something changes in the outcome path around the treatment date before turning to formal inference.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            28
+          ],
+          "locator": "Figures 1 to 7",
+          "statement": "Figures include district binscatters for targeting, semi-decade coefficient plots with confidence bars, SDID trend plots with pre-period weights drawn beneath, an imputation event study with shaded bands, and raw cohort means by high and low intensity before the regression version.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "no_stars",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o36",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Table 1",
+          "statement": "Every main table reports point estimates and standard errors without significance stars, consistent with the paper's methods-comparison framing where the objects of interest are estimator bias, variance, and coverage rather than the significance of a single treatment effect.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o36",
+          "pages": [
+            30,
+            33
+          ],
+          "locator": "Table 3; Table 5",
+          "statement": "Result tables in both the simulation study and the empirical application report point estimates together with confidence intervals rather than using significance stars, and table notes state the nominal coverage level and the inference procedure used to construct each interval.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_se",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o42",
+          "pages": [
+            13,
+            15
+          ],
+          "locator": "Fig. 4 and Fig. 6",
+          "statement": "Dynamic treatment-effect estimates around issuance are presented as coefficient/event-study figures, with each figure's note stating the underlying estimating equation and how the plotted confidence interval was constructed.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o36",
+          "pages": [
+            30,
+            33
+          ],
+          "locator": "Table 3; Table 5",
+          "statement": "Result tables in both the simulation study and the empirical application report point estimates together with confidence intervals rather than using significance stars, and table notes state the nominal coverage level and the inference procedure used to construct each interval.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "appendix_tables_numbered_a",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o46",
+          "pages": [
+            5,
+            38
+          ],
+          "locator": "Section 2 and appendix references throughout",
+          "statement": "Appendix material is numbered with an A prefix and lettered appendices (B model, C oral histories, D data); no summary statistics table appears in the main text, with means shown only in table rows.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "binscatter",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            28
+          ],
+          "locator": "Figures 1 to 7",
+          "statement": "Figures include district binscatters for targeting, semi-decade coefficient plots with confidence bars, SDID trend plots with pre-period weights drawn beneath, an imputation event study with shaded bands, and raw cohort means by high and low intensity before the regression version.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:error_density_plot",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o38",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Figure 2",
+          "statement": "A second figure reports the simulated sampling distribution of estimator errors as overlaid density curves for each estimator and assignment-randomness scenario, rather than only a table of moments, to visualize bias and dispersion jointly.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:no_summary_stats_table_in_main_text",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o46",
+          "pages": [
+            5,
+            38
+          ],
+          "locator": "Section 2 and appendix references throughout",
+          "statement": "Appendix material is numbered with an A prefix and lettered appendices (B model, C oral histories, D data); no summary statistics table appears in the main text, with means shown only in table rows.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:simulation_distribution_figure",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o38",
+          "pages": [
+            2,
+            3
+          ],
+          "locator": "Introduction, Figures 1-2",
+          "statement": "Simulation results are also conveyed graphically rather than only in tables: one figure overlays the sampling distribution of the estimator with and without debiasing against the true parameter value, and another plots empirical coverage of a competing variance estimator across a design parameter.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:weight_influence_diagram",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o37",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Figure 1",
+          "statement": "The main comparison figure is a two-row diagram: raw trend lines with weighted control averages on top, paired with a dot-size-weighted influence plot of adjusted outcome gaps below, rather than a conventional event-study coefficient plot.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "summary_stats_table",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 5,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o39",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Table 2",
+          "statement": "A dedicated table enumerates each Monte Carlo data-generating process by name, its parameter settings, and the theoretical section of the paper it is designed to satisfy or violate, functioning as a design summary table rather than a summary-statistics table of real data.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o45",
+          "pages": [
+            35,
+            35
+          ],
+          "locator": "Data Availability statement",
+          "statement": "A dedicated data-availability statement cites a deposited replication package containing both the code and data for the paper, and states that the package was checked by the journal for its ability to reproduce the paper's results.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o50",
+          "pages": [
+            39,
+            39
+          ],
+          "locator": "Data Availability; Supplementary Data",
+          "statement": "A Data Availability paragraph gives a Zenodo DOI for the data and code; a Supplementary Data line points to the journal website for the online appendix. No software is named in the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_public",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o45",
+          "pages": [
+            35,
+            35
+          ],
+          "locator": "Data Availability statement",
+          "statement": "A dedicated data-availability statement cites a deposited replication package containing both the code and data for the paper, and states that the package was checked by the journal for its ability to reproduce the paper's results.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o50",
+          "pages": [
+            39,
+            39
+          ],
+          "locator": "Data Availability; Supplementary Data",
+          "statement": "A Data Availability paragraph gives a Zenodo DOI for the data and code; a Supplementary Data line points to the journal website for the online appendix. No software is named in the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o45",
+          "pages": [
+            35,
+            35
+          ],
+          "locator": "Data Availability statement",
+          "statement": "A dedicated data-availability statement cites a deposited replication package containing both the code and data for the paper, and states that the package was checked by the journal for its ability to reproduce the paper's results.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o50",
+          "pages": [
+            39,
+            39
+          ],
+          "locator": "Data Availability; Supplementary Data",
+          "statement": "A Data Availability paragraph gives a Zenodo DOI for the data and code; a Supplementary Data line points to the journal website for the online appendix. No software is named in the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "software_named",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o46",
+          "pages": [
+            2,
+            32
+          ],
+          "locator": "Introduction footnote; Section VII",
+          "statement": "The main inferential method is stated to be implemented in a named, publicly hosted R package, and the paper reports that all computations in both the simulation study and the empirical application were carried out in R.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_main_text",
+      "papers": 4,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o24",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Table 2",
+          "statement": "The Monte Carlo comparison table is itself structured as a large set of robustness variants around one baseline design: components of the outcome-generating process are dropped one at a time, and the assignment mechanism, outcome variable, and treated-block size are each varied in turn, all summariz",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o32",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 3-5 and Figures 1-2",
+          "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o28",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section 5.1",
+          "statement": "Robustness to confounding between treated and control firms is pursued through a sequence of distinct named estimators (propensity-score matched stacked DID, overlap-weighted regression, generalized synthetic control), each presented as its own table or figure within the same results subsection rath",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o25",
+          "pages": [
+            27,
+            30
+          ],
+          "locator": "Section VI, Table 3",
+          "statement": "Robustness to the choice of estimator is addressed by comparing the proposed method against a difference-in-differences cross-fitting variant, a subsampling procedure from prior literature, and a synthetic-difference-in-differences estimator, all summarized together in one simulation table across mu",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_estimator",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o32",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 3-5 and Figures 1-2",
+          "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o28",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section 5.1",
+          "statement": "Robustness to confounding between treated and control firms is pursued through a sequence of distinct named estimators (propensity-score matched stacked DID, overlap-weighted regression, generalized synthetic control), each presented as its own table or figure within the same results subsection rath",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o25",
+          "pages": [
+            27,
+            30
+          ],
+          "locator": "Section VI, Table 3",
+          "statement": "Robustness to the choice of estimator is addressed by comparing the proposed method against a difference-in-differences cross-fitting variant, a subsampling procedure from prior literature, and a synthetic-difference-in-differences estimator, all summarized together in one simulation table across mu",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "summarized_in_one_table",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o24",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Table 2",
+          "statement": "The Monte Carlo comparison table is itself structured as a large set of robustness variants around one baseline design: components of the outcome-generating process are dropped one at a time, and the assignment mechanism, outcome variable, and treated-block size are each varied in turn, all summariz",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o32",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 3-5 and Figures 1-2",
+          "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o25",
+          "pages": [
+            27,
+            30
+          ],
+          "locator": "Section VI, Table 3",
+          "statement": "Robustness to the choice of estimator is addressed by comparing the proposed method against a difference-in-differences cross-fitting variant, a subsampling procedure from prior literature, and a synthetic-difference-in-differences estimator, all summarized together in one simulation table across mu",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_specification",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o24",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Table 2",
+          "statement": "The Monte Carlo comparison table is itself structured as a large set of robustness variants around one baseline design: components of the outcome-generating process are dropped one at a time, and the assignment mechanism, outcome variable, and treated-block size are each varied in turn, all summariz",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o27",
+          "pages": [
+            19,
+            19
+          ],
+          "locator": "Section III.B, Figure 3 and Table 1",
+          "statement": "Sensitivity of the method to its own tuning parameter is reported through a figure showing the coverage-versus-length trade-off across a range of block counts under one calibrated design, alongside a table of relative asymptotic efficiency for a range of block-count choices.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "online_appendix_not_available",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o25",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "footnote 5",
+          "statement": "A footnote references a further comparison table contrasting more strongly regularized weights against the paper's own minimally regularized default, but this table does not appear in the extracted main text, suggesting supplementary material not captured here.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o29",
+          "pages": [
+            25,
+            25
+          ],
+          "locator": "Section V.A, appendix reference",
+          "statement": "Robustness of the method to a different kind of instability, namely time-varying synthetic control weights that follow a persistent regime-switching process, is investigated through simulation evidence that the paper states is reported in an online appendix section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 4,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o29",
+          "pages": [
+            25,
+            25
+          ],
+          "locator": "Section V.A, appendix reference",
+          "statement": "Robustness of the method to a different kind of instability, namely time-varying synthetic control weights that follow a persistent regime-switching process, is investigated through simulation evidence that the paper states is reported in an online appendix section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o8",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Section II.B",
+          "statement": "The Penn World Table placebo sample's ending year is deliberately chosen so the treatment period does not coincide with the global recession that followed it, with this exclusion rule stated directly rather than left implicit.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o7",
+          "pages": [
+            29,
+            30
+          ],
+          "locator": "Section VII",
+          "statement": "The empirical illustration reuses a previously published country-panel dataset on transport carbon emissions with one treated country and a fixed set of OECD comparison countries, citing the original study as the data source rather than assembling a new sample.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "exclusions_justified",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o8",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Section II.B",
+          "statement": "The Penn World Table placebo sample's ending year is deliberately chosen so the treatment period does not coincide with the global recession that followed it, with this exclusion rule stated directly rather than left implicit.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o8",
+          "pages": [
+            29,
+            29
+          ],
+          "locator": "Section VII",
+          "statement": "The sample period is justified by an external institutional cutoff: the post-treatment window ends at the year the original study also stops, because a separate EU-wide emissions trading system began that year and would confound the treatment being studied.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_period_stated",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o8",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Section II.B",
+          "statement": "The Penn World Table placebo sample's ending year is deliberately chosen so the treatment period does not coincide with the global recession that followed it, with this exclusion rule stated directly rather than left implicit.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o8",
+          "pages": [
+            29,
+            29
+          ],
+          "locator": "Section VII",
+          "statement": "The sample period is justified by an external institutional cutoff: the post-treatment window ends at the year the original study also stops, because a separate EU-wide emissions trading system began that year and would confound the treatment being studied.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_size_reported_per_table",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o9",
+          "pages": [
+            10,
+            13
+          ],
+          "locator": "Table 2 and Table 3 notes",
+          "statement": "Panel dimensions and the number of treated units and periods for every simulation design variant are stated directly in each table's own notes, so each row of the Monte Carlo tables is self-contained rather than requiring the reader to consult the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "unit_of_observation_stated",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o7",
+          "pages": [
+            29,
+            30
+          ],
+          "locator": "Section VII",
+          "statement": "The empirical illustration reuses a previously published country-panel dataset on transport carbon emissions with one treated country and a fixed set of OECD comparison countries, citing the original study as the data source rather than assembling a new sample.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "baseline_then_variants",
+      "papers": 3,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o14",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Table 1 and notes",
+          "statement": "The California results table reports point estimates and standard errors for five estimators side by side in one compact table, with the note naming the specific variance-estimation method used rather than listing it separately per column.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o13",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Table 5",
+          "statement": "The main application table reports the proposed estimator as the primary panel and then presents three alternative inference methods (an equal-weight comparison, a subsampling approach, and a synthetic-difference-in-differences approach) as separate panels of the same table rather than as later robu",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o21",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2 panels (a) to (d)",
+          "statement": "The main entry table stacks four panels for the same outcomes: standard DID, synthetic DID, village DID, and the imputation estimator, so that the reader compares estimators column by column rather than in separate tables.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "fe_listed_in_table",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o15",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Table 3",
+          "statement": "The Monte Carlo results table organizes rows by data-generating process and by the number of cross-fitting folds used, so the reported bias, coverage, and interval length can be read as a function of the estimator's tuning choice rather than of covariate sets or fixed effects, which are not part of ",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o23",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Table 1",
+          "statement": "The targeting table progresses columns across alternative measures of Islamic education presence and then adds a political preference covariate and a village-level column, with a check-mark row for policy-rule controls.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "se_type_in_notes",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o14",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Table 1 and notes",
+          "statement": "The California results table reports point estimates and standard errors for five estimators side by side in one compact table, with the note naming the specific variance-estimation method used rather than listing it separately per column.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o14",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Table 5 notes",
+          "statement": "Table notes describe how each panel's interval was constructed (e.g., that one panel's interval is asymmetric because it is based on a percentile method), giving readers the specific inferential procedure behind each row rather than a single uniform standard-error convention.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "alt_estimator",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o21",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2 panels (a) to (d)",
+          "statement": "The main entry table stacks four panels for the same outcomes: standard DID, synthetic DID, village DID, and the imputation estimator, so that the reader compares estimators column by column rather than in separate tables.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "controls_progressive_columns",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o23",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Table 1",
+          "statement": "The targeting table progresses columns across alternative measures of Islamic education presence and then adds a political preference covariate and a village-level column, with a check-mark row for policy-rule controls.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "other:no_r2_reported",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "aer_111_12_8",
+          "note_sha256": "2dad5774a7aff74215a0857fe002bf77372783e01afbb40b55b4452bd968e9d3",
+          "observation_id": "o15",
+          "pages": [
+            6,
+            13
+          ],
+          "locator": "Tables 1-4",
+          "statement": "Neither the California table nor the simulation tables report an R-squared or a dependent-variable mean; the tables instead report bias, RMSE, or coverage as the relevant summary statistics for a methods-comparison paper.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "treatment_definition",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o11",
+          "pages": [
+            31,
+            31
+          ],
+          "locator": "Section VII, footnote",
+          "statement": "The predictor set used to construct synthetic control weights in the reanalysis is stated to differ from the original study: the paper uses the full history of past outcomes as predictors, while the original study used a subset of past outcomes plus additional covariates.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o14",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section 3.1; Table 2 notes",
+          "statement": "Treatment intensity is defined as programme schools built in the 1973 to 1978 window per thousand children in 1971; the village treatment is an absorbing indicator switching on in the first construction year; the SDID version is a binary above-percentile indicator.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "measurement_error_discussed",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o12",
+          "pages": [
+            13,
+            14
+          ],
+          "locator": "Section III.A",
+          "statement": "The paper interprets its underlying prediction model as a statistical approximation rather than a structural model, explicitly allowing the fitted weights to diverge from any notion of 'true' synthetic control weights and treating this divergence as ordinary misspecification rather than measurement ",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "outcome_definition",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 2,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o10",
+          "pages": [
+            29,
+            30
+          ],
+          "locator": "Section VII",
+          "statement": "The outcome variable is defined as the treated country's per-capita emissions from a specific sector, matching the definition used in the original study being revisited rather than proposing a new outcome measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "contribution_paragraph",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o42",
+          "pages": [
+            3,
+            6
+          ],
+          "locator": "Introduction; Section I.A",
+          "statement": "The introduction closes with an explicit roadmap sentence pointing readers to the practical-recommendations section, following an earlier paragraph in the same introduction that states the paper's contribution relative to the two closest prior papers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            10
+          ],
+          "locator": "Section 1; Section 2.3",
+          "statement": "The introduction previews results for each of three outcome families in order, followed by three contribution paragraphs positioned against distinct literatures; a separate predictions subsection at the end of the background serves as the roadmap for Sections 3 to 5.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "mechanisms_after_main",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o43",
+          "pages": [
+            27,
+            29
+          ],
+          "locator": "Section VI precedes Section VII",
+          "statement": "Simulation evidence assessing when the method works well or poorly is placed in its own section immediately before, and explicitly calibrated to, the real-data application that follows it, so the robustness-style evidence precedes rather than follows the main empirical result.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o48",
+          "pages": [
+            10,
+            38
+          ],
+          "locator": "Sections 3, 4, 5",
+          "statement": "Each results section opens with a short data paragraph, then the equation, then the main table, then a titled Robustness paragraph, then mechanisms or heterogeneity; robustness is never a standalone section and is dispatched to the appendix with brief in-text summaries.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o40",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Introduction",
+          "statement": "The direction and significance of the empirical application's main finding is previewed in the introduction, well before the formal application section, alongside a statement that the result corroborates the original published study.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            10
+          ],
+          "locator": "Section 1; Section 2.3",
+          "statement": "The introduction previews results for each of three outcome families in order, followed by three contribution paragraphs positioned against distinct literatures; a separate predictions subsection at the end of the background serves as the roadmap for Sections 3 to 5.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_paragraph",
+      "papers": 2,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o42",
+          "pages": [
+            3,
+            6
+          ],
+          "locator": "Introduction; Section I.A",
+          "statement": "The introduction closes with an explicit roadmap sentence pointing readers to the practical-recommendations section, following an earlier paragraph in the same introduction that states the paper's contribution relative to the two closest prior papers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            10
+          ],
+          "locator": "Section 1; Section 2.3",
+          "statement": "The introduction previews results for each of three outcome families in order, followed by three contribution paragraphs positioned against distinct literatures; a separate predictions subsection at the end of the background serves as the roadmap for Sections 3 to 5.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "appendix_heavy",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o49",
+          "pages": [
+            13,
+            37
+          ],
+          "locator": "Footnotes 15, 19, 28, 30, 41",
+          "statement": "Many secondary results live in footnotes that cite appendix tables (robust clustering, transitions, years of schooling benchmarks, Islamist ideology outcomes), keeping the main text focused on headline tables.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "data_before_design",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o48",
+          "pages": [
+            10,
+            38
+          ],
+          "locator": "Sections 3, 4, 5",
+          "statement": "Each results section opens with a short data paragraph, then the equation, then the main table, then a titled Robustness paragraph, then mechanisms or heterogeneity; robustness is never a standalone section and is dispatched to the appendix with brief in-text summaries.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "design_before_data",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o41",
+          "pages": [
+            9,
+            27
+          ],
+          "locator": "Sections II-IV precede Sections VI-VII",
+          "statement": "The paper's overall structure develops the estimator and its theoretical guarantees under stationary and then nonstationary data across several sections before presenting any simulation or real-data evidence, so design and theory precede data and application by a wide margin.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o49",
+          "pages": [
+            13,
+            37
+          ],
+          "locator": "Footnotes 15, 19, 28, 30, 41",
+          "statement": "Many secondary results live in footnotes that cite appendix tables (robust clustering, transitions, years of schooling benchmarks, Islamist ideology outcomes), keeping the main text focused on headline tables.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "main_result_first",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "note_sha256": "66bf5dfc1113616c881c92719d254ee0f632d8bc00f667f9b884e352cbcaef24",
+          "observation_id": "o48",
+          "pages": [
+            10,
+            38
+          ],
+          "locator": "Sections 3, 4, 5",
+          "statement": "Each results section opens with a short data paragraph, then the equation, then the main table, then a titled Robustness paragraph, then mechanisms or heterogeneity; robustness is never a standalone section and is dispatched to the appendix with brief in-text summaries.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:robustness_integrated_in_main_results",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o48",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section 5.1",
+          "statement": "Robustness to alternative econometric approaches (matching, overlap-weighting, synthetic control) is integrated within the main results subsection rather than isolated into a separate stand-alone robustness section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "robustness_separate_section",
+      "papers": 1,
+      "denominator_papers": 6,
+      "papers_with_category": 3,
+      "share_of_papers": 0.167,
+      "pointers": [
+        {
+          "artid": "jpe_2026_742424",
+          "note_sha256": "4c49976efe5e662c173aba4a477c42284a42612ce2efe7545dc979d38e969ae1",
+          "observation_id": "o43",
+          "pages": [
+            27,
+            29
+          ],
+          "locator": "Section VI precedes Section VII",
+          "statement": "Simulation evidence assessing when the method works well or poorly is placed in its own section immediately before, and explicitly calibrated to, the real-data application that follows it, so the robustness-style evidence precedes rather than follows the main empirical result.",
+          "basis": "stated"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "cluster_level",
+      "status": "agree",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "The paper's variance estimators (bootstrap, jackknife, placebo) resample or reweight whole units rather than using an analytic cluster-robust formula at a named",
+          "card_shows": "s1.se.cluster_level is null across all specifications, consistent with a resampling-based approach rather than a named clustering variable.",
+          "pages": [
+            21,
+            24
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.se.cluster_level",
+          "paper_says": "Table 4 notes state standard errors clustered at the firm level",
+          "card_shows": "s1.se.cluster_level = [id_firm]",
+          "pages": [
+            10,
+            10
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "District level for the district-year DID.",
+          "card_shows": "s1 command has clus(id_dec80) but se.cluster_level is null.",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "Standard errors clustered by country",
+          "card_shows": "cluster(sourcecountry) in s1 to s4",
+          "pages": [
+            11,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "The paper does not cluster standard errors at any group level; the relevant tuning parameter is the number of cross-fitting time blocks, not a cluster identifie",
+          "card_shows": "s1.se.cluster_level is null.",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "s2.se.cluster_level",
+          "paper_says": "Village level for village-level DID and imputation estimates (Table 2 panels c and d).",
+          "card_shows": "s2 records cluster by kab (district); s4 shows no cluster option.",
+          "pages": [
+            12,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.comparison_group",
+          "paper_says": "Comparison group is explicitly defined as never-SLL-issuer control firms, matched by propensity score on country, industry and year in the stacked-DID analyses,",
+          "card_shows": "s1.comparison_group and s2.comparison_group are both null",
+          "pages": [
+            10,
+            12
+          ]
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "specifications[0,0].comparison_group",
+          "paper_says": "The set of comparison units is explicitly named in a footnote as a specific list of OECD member countries used to construct the synthetic control.",
+          "card_shows": "No comparison_group field is populated in any specification (comparison_group is null for s1-s4).",
+          "pages": [
+            29,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "s3",
+          "paper_says": "Event-study leads and lags from minus five to plus ten with the period just before entry omitted.",
+          "card_shows": "s3 includes inpresXdec1 to dec3 and dec5 to dec10 with dec4 omitted (semi-decade version for Figure 2).",
+          "pages": [
+            13,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "specifications[].controls_summary",
+          "paper_says": "A footnote describes an optional covariate-adjustment procedure (residualize the outcome on time-varying covariates, then apply the estimator to the residuals) ",
+          "card_shows": "controls_summary is null on every specification, and no specification's evidence mentions a covariate-residualization step being exercised in the traced applica",
+          "pages": [
+            4,
+            5
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.controls_summary",
+          "paper_says": "Even-numbered columns of the main tables add a stated set of firm-level controls (sector, admission type, state guarantee, foreign operations, political connect",
+          "card_shows": "s2.controls_summary is null.",
+          "pages": [
+            9,
+            9
+          ]
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "specifications[0,0].controls_summary",
+          "paper_says": "A footnote states that the reanalysis uses the full history of past outcomes as predictors for the synthetic control weights, explicitly noting this differs fro",
+          "card_shows": "controls_summary is null for every specification in the card; the predictor set used to build the weights is not recorded.",
+          "pages": [
+            31,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "s2.controls; s4.controls",
+          "paper_says": "Three blocks: trade, policy, neighbour use; log controls added for log-like outcomes",
+          "card_shows": "$Tradecontrols $PolicyControls $NeighbourControls clearingbanks; $LogControls in ppml",
+          "pages": [
+            11,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "agree",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "data[0] (california_prop99)",
+          "paper_says": "The California application is sourced from a well-known cigarette-tax historical compilation (Orzechowski and Walker 2005).",
+          "card_shows": "The data entry for california_prop99 records type=admin, access=public, matching the cited public historical-compilation source.",
+          "pages": [
+            4,
+            4
+          ]
+        },
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "data[1] (CPS)",
+          "paper_says": "The CPS placebo study is built from average log wages in the Current Population Survey outgoing rotation groups, sourced via a National Bureau of Economic Resea",
+          "card_shows": "The CPS data entry records type=survey, access=public, unit_of_observation=US state-year, matching the paper's description.",
+          "pages": [
+            9,
+            9
+          ]
+        },
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "data[2] (PENN)",
+          "paper_says": "The second placebo study uses the Penn World Table's country-year real GDP series, citing Feenstra, Inklaar, and Timmer (2015).",
+          "card_shows": "The PENN data entry records type=macro_aggregate, access=public, consistent with the paper's citation of the Penn World Table.",
+          "pages": [
+            12,
+            12
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "card_link.path",
+          "paper_says": "SWIFT microdata with permission; Zenodo DOI for data",
+          "card_shows": "code in zenodo_15675543 package",
+          "pages": [
+            30,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "data[0].source_hint",
+          "paper_says": "Financial and board data are described as hand-collected from named archival sources (a stockbroker yearbook, a national-library price bulletin, corporate regis",
+          "card_shows": "data[0].source_hint and data[1].source_hint are null; the card records only generic dataset file names (dataset9199, data_car) with type and access unknown.",
+          "pages": [
+            5,
+            5
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "data.panel_firmyear.source_hint",
+          "paper_says": "Appendix Table A.1 attributes variables to named commercial sources: DealScan, LSEG/Refinitiv ESG, S&P Trucost Environmental, Worldscope, CapitalIQ, Compustat, ",
+          "card_shows": "data record panel_firmyear has type=null, access=unknown, source_hint=null, evidenced only by a raw Stata use statement",
+          "pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "data",
+          "paper_says": "MORA and MEC registries, Podes, Susenas, IFLS, 2010 census, election returns, Pepinsky survey, FAO-GAEZ, waqf data.",
+          "card_shows": "Data block is empty.",
+          "pages": [
+            11,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "agree",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "x1",
+          "paper_says": "No formal pre-trend statistical test is reported; pre-treatment fit is conveyed only visually through the top panel of the main comparison figure.",
+          "card_shows": "x1 records kind=pretrend_plot with status=not_found_in_scope, noting that a plotting function exists but no explicit pre-trend test was found in the traced scri",
+          "pages": [
+            7,
+            7
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "diagnostics.x2",
+          "paper_says": "Table 5 reports covariate balance (assets, leverage, ROA, Q, ESG score) with differences and t-statistics for each pre-issuance year, separately by transparency",
+          "card_shows": "diagnostics x2 (balance) status=observed, describing a clttest of size, totdebt, roa, q stratified by post-treatment period in tab5.do",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "x1; x2",
+          "paper_says": "Formal pre-trend test rejects only up to two months prior; event-study horizons -18/+24 in figure",
+          "card_shows": "pretrends(18) and event plot -48 to +48 months",
+          "pages": [
+            12,
+            15
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "x3",
+          "paper_says": "No balance table; summary stats only in appendix",
+          "card_shows": "balance not_found_in_scope",
+          "pages": [
+            9,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "diagnostics",
+          "paper_says": "The paper reports a pre-trends figure, a covariate-balance table, and a board-composition stability check as design diagnostics supporting the causal reading of",
+          "card_shows": "diagnostics is an empty list in the card.",
+          "pages": [
+            6,
+            9
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "diagnostics.x1.status",
+          "paper_says": "Text states that the event-study plot shows parallel pre-issuance trends for both transparency subgroups before treatment",
+          "card_shows": "diagnostics x1 (pretrend_test) has status=unknown, only noting that pre-period dummies are included in the regression",
+          "pages": [
+            13,
+            13
+          ]
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "diagnostics",
+          "paper_says": "The paper reports a placebo-in-time validity test, splitting the pre-treatment period into placebo pre- and post-periods and checking whether the estimated plac",
+          "card_shows": "The card's diagnostics array is empty; no placebo or specification-check procedure is recorded from the code.",
+          "pages": [
+            26,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 10,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s1",
+          "paper_says": "SDID is defined by equations (1) and (4)-(6) and summarized as Algorithm 1: solve for regularized unit and time weights, then run a weighted two-way-fixed-effec",
+          "card_shows": "s1 records estimator=synthetic_did, command=synthdid_estimate, called as estimator(setup$Y, setup$N0, setup$T0) in the vignette.",
+          "pages": [
+            4,
+            6
+          ]
+        },
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s4",
+          "paper_says": "The matrix-completion (MC) estimator is described as imputing missing untreated potential outcomes via a low-rank factor model with nuclear-norm regularization,",
+          "card_shows": "s4 records estimator=other:matrix_completion, command=mc_estimate, matching the low-rank/nuclear-norm description.",
+          "pages": [
+            6,
+            6
+          ]
+        },
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s5",
+          "paper_says": "The DIFP estimator is attributed to Doudchenko and Imbens (2016) and Ferman and Pinto (2019) and described as synthetic control applied after centering each uni",
+          "card_shows": "s5 records estimator=other:demeaned_synthetic_control, command=difp_estimate, with notes crediting the same two source papers.",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.estimator",
+          "paper_says": "Difference-in-differences with firm and trading-day fixed effects, estimated on the balanced firm panel (Section 4.2, equation 2).",
+          "card_shows": "Specification s2 (design d2, method did) records estimator hdfe_ols via reghdfe.",
+          "pages": [
+            7,
+            9
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s1.estimator",
+          "paper_says": "Event-study cumulative abnormal returns from a one-factor market model regressed on the Jewish-connection measure and controls (Section 4.1, equation 1, Table 2",
+          "card_shows": "Specification s1 (design d1, method return_event_study) records estimator ols via reg with clus(firm).",
+          "pages": [
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "designs",
+          "paper_says": "Coarsened Exact Matching (Iacus et al., 2012) is described as a fourth main empirical strategy, with its own main-text table of matched-sample estimates.",
+          "card_shows": "The card's designs and specifications list only d1/d2/d3 (return_event_study, did, synthetic_control); no design or specification entry corresponds to matching,",
+          "pages": [
+            7,
+            10
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "designs.d1.method",
+          "paper_says": "Identification combines a panel OLS quasi-DID, a propensity-score matched stacked DID, overlap-weighted regressions, and a generalized synthetic control estimat",
+          "card_shows": "d1 records only method=event_study with role, variant, treatment and classification_basis all unknown",
+          "pages": [
+            10,
+            16
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "specifications",
+          "paper_says": "Synthetic DID following Arkhangelsky et al. applied to residualized outcomes, with cluster bootstrap SEs.",
+          "card_shows": "No SDID specification or package recorded among the traced specs.",
+          "pages": [
+            11,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "agree",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.fixed_effects",
+          "paper_says": "Table 4 col. 1/4/7 lists Country x Year FE and Industry x Year FE as the fixed-effects configuration",
+          "card_shows": "s1.fixed_effects = [id_cyear, id_indyear] from tab4.do line 39",
+          "pages": [
+            10,
+            10
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s2.fixed_effects",
+          "paper_says": "Table 6 notes list Firm x Cohort FE and Year x Cohort FE for the stacked-DID event-study specification underlying Fig. 4",
+          "card_shows": "s2.fixed_effects = [id_firmpair, id_yearpair] from fig4.do line 15",
+          "pages": [
+            12,
+            13
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "District FE and year FE, plus year FE interacted with targeting variables and 1959 school stocks.",
+          "card_shows": "s1 absorbs id_dec80, est_year and year interactions with ch71, en71, wsppc and 1960 school counts; fixed_effects field is null.",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "s1.fe; s3.fe",
+          "paper_says": "Country and time fixed effects in all specifications",
+          "card_shows": "s1 fe(t sourcecountry); s3/s4 absorb(date sourcecountry)",
+          "pages": [
+            11,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "The SDID objective (equation 1) explicitly includes a unit fixed effect and a time fixed effect alongside the treatment indicator in the weighted regression.",
+          "card_shows": "s1.fixed_effects is null; the card does not record which fixed effects are included in the estimating equation.",
+          "pages": [
+            1,
+            4
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.fixed_effects",
+          "paper_says": "The difference-in-differences specification includes firm fixed effects, trading-day fixed effects, and sector-by-period interactions (Section 4.2, equation 2; ",
+          "card_shows": "s2.fixed_effects is null in the card's structured fields, even though the formula_or_call field for s2 shows a(firmn daten i.sectorn##i.period1 i.sectorn##i.per",
+          "pages": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "outputs.tables",
+          "paper_says": "Paper presents eleven main numbered tables and six main numbered figures plus an appendix table and five appendix figures",
+          "card_shows": "outputs.tables and outputs.figures are both empty arrays",
+          "pages": [
+            7,
+            22
+          ]
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "outputs.tables; outputs.figures",
+          "paper_says": "The paper contains a small number of numbered tables and figures presenting the theoretical efficiency calculation, the Monte Carlo design and results, and the ",
+          "card_shows": "outputs.tables and outputs.figures are both empty arrays.",
+          "pages": [
+            1,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "outputs.tables, outputs.figures",
+          "paper_says": "The paper presents four main numbered tables (California estimates; CPS point estimates; Penn World Table point estimates; coverage) and two main figures (the t",
+          "card_shows": "outputs.tables lists t1-t4 matching the same four tables in the same order, and outputs.figures lists f1-f2 matching the two described figures.",
+          "pages": [
+            6,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "outputs",
+          "paper_says": "Nine main tables and eight main figures plus appendix tables A.1 to A.27 and figures.",
+          "card_shows": "Two tables (table1, table2 via estout) and one figure (figure2 twoway) traced.",
+          "pages": [
+            9,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "outputs",
+          "paper_says": "Seven main tables and seven main figures plus appendix tables A1 to A5 and figures",
+          "card_shows": "tables=8 figures=3",
+          "pages": [
+            6,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "paper_only",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "robustness",
+          "paper_says": "The paper describes an extensive robustness program spanning alternative return definitions, alternative event windows and factor models, alternative treatment ",
+          "card_shows": "robustness is an empty list in the card.",
+          "pages": [
+            8,
+            14
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "robustness",
+          "paper_says": "Paper reports multiple named robustness checks: log-transformed ESG score, alternative fixed-effect configuration, alternative emission-based outcomes, overlap-",
+          "card_shows": "card robustness array is empty",
+          "pages": [
+            10,
+            16
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "robustness",
+          "paper_says": "Honest DID sensitivity, historical registries, alternative trend controls, shorter windows, alternative clustering, IFLS validation.",
+          "card_shows": "Robustness block is empty.",
+          "pages": [
+            13,
+            31
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "robustness",
+          "paper_says": "Anticipation shift of six months, relaxed income filter, sent vs received, tenor and spread variants",
+          "card_shows": "only alt_sample and alt_estimator robustness records",
+          "pages": [
+            12,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "robustness",
+          "paper_says": "Table 2 reports an extensive set of robustness-style simulation variants (dropped model components, alternative assignment mechanisms, alternative outcomes, alt",
+          "card_shows": "The card's robustness array is empty, recording no robustness checks for this paper.",
+          "pages": [
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "specifications[1,1].notes; specifications[2,2].notes; specifications[3,3].notes",
+          "paper_says": "The paper frames its comparison to difference-in-differences, subsampling, and synthetic difference-in-differences, run on the same simulation designs and the s",
+          "card_shows": "The card's top-level robustness array is empty, but the same three comparison methods are captured as separate specifications, each annotated in its own notes f",
+          "pages": [
+            27,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "The difference-in-differences analysis is run on a balanced panel of firms listed throughout the study period, after excluding firms below a stated liquidity th",
+          "card_shows": "pipeline.sample_restrictions is an empty list and s1/s2/s3 sample fields are null.",
+          "pages": [
+            5,
+            7
+          ]
+        },
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "data[0,0].period; data[0,0].unit_of_observation",
+          "paper_says": "The paper states the pre-treatment period is a specific multiple of the post-treatment period's length in the application, describes the comparison group as a n",
+          "card_shows": "The data record gives only the overall panel period and leaves unit_of_observation and source_hint null; it does not record the pre/post split, the size of the ",
+          "pages": [
+            29,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "s1.sample, s4.sample",
+          "paper_says": "Balanced panels from 1960 to 1999.",
+          "card_shows": "s1 and s4 restrict est_year or year to 1960 through 1999.",
+          "pages": [
+            11,
+            16
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "s1.sample; s4.sample",
+          "paper_says": "Developing economies below an income threshold; Iran dropped; Mongolia excluded for intensive margin",
+          "card_shows": "if em_tag==1 filter; s4 excludes MNG",
+          "pages": [
+            8,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s1.se.type",
+          "paper_says": "The California results table's notes state directly that the 'placebo method' standard-error estimator described in the inference section is the one used for th",
+          "card_shows": "s1.se.type is recorded as randomization_inference with details describing a placebo standard error based on resampling control units, matching the paper's own d",
+          "pages": [
+            6,
+            6
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.se.cluster_level",
+          "paper_says": "Baseline panel regressions (returns, volatility, risk-adjusted returns) report standard errors clustered by firm (Table 3, Table 6 notes).",
+          "card_shows": "s2.se.type is cluster with cluster_level firm.",
+          "pages": [
+            7,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s1.se",
+          "paper_says": "The event-study table (Table 2) note states only that standard errors are robust, without naming a cluster level, even though each firm contributes a single cro",
+          "card_shows": "s1.se.type is cluster with cluster_level firm, taken from the clus(firm) option in the underlying Stata call.",
+          "pages": [
+            8,
+            8
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s3.se.type",
+          "paper_says": "Synthetic difference-in-differences standard errors are computed with the placebo method of Arkhangelsky et al. (2021) rather than a cluster formula (Table 4 no",
+          "card_shows": "s3.se.type is randomization_inference, cluster_level null.",
+          "pages": [
+            11,
+            11
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "s5.se",
+          "paper_says": "SDID reports bootstrapped standard errors",
+          "card_shows": "s5 vce(bootstrap) reps(1000); card se field null",
+          "pages": [
+            14,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "specifications",
+          "paper_says": "The firm-year dividend regressions and the media-coverage regression are reported with standard errors two-way clustered by firm and by trading day (or year), n",
+          "card_shows": "No specification in the card corresponds to the dividend regression or the media-coverage regression; only s1, s2 and s3 are recorded, and none uses two-way clu",
+          "pages": [
+            13,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_2026_742424",
+          "card_ref": "s1.se.type",
+          "paper_says": "Inference for the main estimator is described as a self-normalized t-statistic with degrees of freedom equal to the number of cross-fitting blocks minus one; th",
+          "card_shows": "Specification s1's se.type field is recorded as 'cluster' with cluster_level null, and se.details describes 't-test with K blocks, df=K-1'.",
+          "pages": [
+            11,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "unknown",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_ref": "s1.weights",
+          "paper_says": "No weights mentioned in main text or notes.",
+          "card_shows": "No weights recorded (null).",
+          "pages": [
+            11,
+            38
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_ref": "s1.weights",
+          "paper_says": "No regression weights mentioned",
+          "card_shows": "w=None for all specs",
+          "pages": [
+            11,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_12_8",
+          "card_ref": "s2.weights, s3.weights, s5.weights",
+          "paper_says": "SC is defined as the same weighted objective with the time weights fixed at zero (no time weighting) and no intercept; DID uses uniform unit and time weights; D",
+          "card_shows": "s2.weights, s3.weights, and s5.weights record exactly these constrained weight settings (lambda fixed to zero for SC; uniform lambda and omega for DID; uniform ",
+          "pages": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.weights",
+          "paper_says": "Section 5.1 and Table 7 describe overlap-weighted regressions using propensity scores as a weighting mechanism on the full sample",
+          "card_shows": "Neither s1 nor s2 records a weighting specification, and no specification for the overlap-weight regression scripts appears in the card at all (only 9 of 26 pip",
+          "pages": [
+            14,
+            16
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "A footnote (page 4) references a further comparison table ('Table 6') of regularization choices for SC/DIFP; that table ",
+      "papers": 1
+    },
+    {
+      "gap": "No empirical subgroup or heterogeneity analysis of treatment effects is reported; the general model in Section III permi",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or research-ethics statement appears anywhere in the text; all analyses use secondary ",
+      "papers": 1
+    },
+    {
+      "gap": "No analytic cluster-robust standard error at a named grouping level is used or discussed anywhere; all variance estimato",
+      "papers": 1
+    },
+    {
+      "gap": "There is no separate concluding section; the paper moves directly from the related-work discussion into a technical appe",
+      "papers": 1
+    },
+    {
+      "gap": "The paper does not name the statistical software or packages used for estimation anywhere in the main text (the CRediT s",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification is given for choosing firm-level clustering as opposed to, for example, addressing serial corr",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, pre-analysis plan, IRB approval, or consent statement is present or expected, consistent with this b",
+      "papers": 1
+    },
+    {
+      "gap": "The recipe card (coverage: minimal) does not record a design or specification for the Coarsened Exact Matching strategy,",
+      "papers": 1
+    },
+    {
+      "gap": "No passage in the main text justifies clustering standard errors at the firm level specifically (versus country, industr",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, pre-analysis plan, or IRB/ethics statement is present anywhere in the text; the study uses secondary",
+      "papers": 1
+    },
+    {
+      "gap": "Main regression tables (e.g., Tables 4, 6, 8) report N and adjusted R2 but do not include a row for the mean of the depe",
+      "papers": 1
+    },
+    {
+      "gap": "No passage discusses a multiple-testing or multiple-comparisons adjustment despite many subgroup and successive robustne",
+      "papers": 1
+    },
+    {
+      "gap": "The paper's main text and appendix never name the statistical software or estimation package used; this is only recovera",
+      "papers": 1
+    },
+    {
+      "gap": "The recipe card's coverage is partial (9 of 26 pipeline scripts read), so several paper-stated robustness and diagnostic",
+      "papers": 1
+    },
+    {
+      "gap": "No heterogeneous-treatment-effect analysis across sub-populations or interaction terms is reported; the only heterogenei",
+      "papers": 1
+    },
+    {
+      "gap": "No mechanism evidence (intermediate outcomes, survey evidence, or model-guided channel tests) is reported; the paper is ",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, institutional review board statement, or consent statement is present or expected, consistent with a",
+      "papers": 1
+    },
+    {
+      "gap": "No multiple-testing adjustment or randomization-inference procedure is discussed as an alternative inferential safeguard",
+      "papers": 1
+    },
+    {
+      "gap": "The online appendix sections (labeled A through H in the text) that contain the full random-treatment-status proofs, add",
+      "papers": 1
+    },
+    {
+      "gap": "No formal balance table, density test, or attrition analysis is reported, consistent with a single-treated-unit aggregat",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification for the cluster level beyond stating it; no discussion of the number of clusters for district-",
+      "papers": 1
+    },
+    {
+      "gap": "No multiple testing adjustment mentioned despite many outcomes and an index only for piety.",
+      "papers": 1
+    },
+    {
+      "gap": "No software or package names in the main text (reghdfe, did_imputation, sdid appear only in code).",
+      "papers": 1
+    },
+    {
+      "gap": "No summary statistics table in the main text; appendix D data description not in the PDF.",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix (tables A.1 to A.27, Appendices B, C, D) is not included in the text file, so appendix practices are rec",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB, or ethics statement for the oral histories.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification for clustering at the country level beyond stating it.",
+      "papers": 1
+    },
+    {
+      "gap": "No balance table or covariate comparison between treated and control countries in the main text.",
+      "papers": 1
+    },
+    {
+      "gap": "No software or package named for the estimators.",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

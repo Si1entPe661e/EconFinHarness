@@ -1,0 +1,4381 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "matching",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "aer_111_12_2",
+      "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+      "journal": "AER",
+      "year": 2021,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "aer_113_6_2",
+      "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+      "journal": "AER",
+      "year": 2023,
+      "coverage": "main_text",
+      "card_link": false
+    },
+    {
+      "artid": "aer_114_7_10",
+      "note_sha256": "a2ce2c0a92fe653760b44a8889cca0b729422508554f4b2dcd41b388265e1eeb",
+      "journal": "AER",
+      "year": 2024,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+      "journal": "JFE",
+      "year": 2024,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jfe_2025_j_jfineco_2025_104150",
+      "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+      "journal": "JFE",
+      "year": 2025,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jpe_2026_740222",
+      "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+      "journal": "JPE",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "qje_140_1_4",
+      "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+      "journal": "QJE",
+      "year": 2025,
+      "coverage": "partial",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2025_restud_rdaf004",
+      "note_sha256": "adc4b78e8b0839dac2843e00f293b7e1369fdeb704a15b327a019413b942e335",
+      "journal": "ReStud",
+      "year": 2025,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdaf027",
+      "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdag080",
+      "note_sha256": "feb48766a8b7098926bc284ed01935fb6dd8e51330f1cc9ad7807ff9471a3413",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf080",
+      "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+      "journal": "RFS",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 11,
+    "by_journal": {
+      "AER": 3,
+      "JFE": 2,
+      "JPE": 1,
+      "QJE": 1,
+      "ReStud": 3,
+      "RFS": 1
+    },
+    "by_year": {
+      "2021": 1,
+      "2023": 1,
+      "2024": 2,
+      "2025": 3,
+      "2026": 4
+    },
+    "with_card": 10,
+    "papers_with_category": {
+      "design_statement": 6,
+      "sample_construction": 6,
+      "variable_construction": 1,
+      "diagnostic_reported": 9,
+      "robustness_reported": 8,
+      "limitation_stated": 3,
+      "specification_reporting": 3,
+      "inference_justification": 1,
+      "mechanism_evidence": 2,
+      "external_validity": 3,
+      "presentation_convention": 2,
+      "writing_structure": 4,
+      "replication_statement": 3,
+      "data_access": 3,
+      "heterogeneity_reported": 1,
+      "magnitude_interpretation": 1,
+      "other": 1
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "administrative",
+      "papers": 3,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.273,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o60",
+          "pages": [
+            9,
+            12
+          ],
+          "locator": "Section II",
+          "statement": "Draws underlying data from a mix of publicly available digitized newspaper archives, publicly compiled historical registers, and public administrative crime-reporting data, without describing any restricted-access or application-based data source.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o59",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Section III.A",
+          "statement": "The empirical analysis is built from two named external academic data products rather than data collected by the author, with no discussion in the main text of a restricted-access or licensing procedure for either source.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o52",
+          "pages": [
+            1,
+            12
+          ],
+          "locator": "Acknowledgements, Section 2.1",
+          "statement": "Data combine central bank administrative and confidential registry files, a web-scraped aggregator, a commercial firm database, a public bankruptcy bulletin and a proprietary rejected-applicant list shared by one platform (acknowledged by name). No access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "commercial",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o52",
+          "pages": [
+            1,
+            12
+          ],
+          "locator": "Acknowledgements, Section 2.1",
+          "statement": "Data combine central bank administrative and confidential registry files, a web-scraped aggregator, a commercial firm database, a public bankruptcy bulletin and a proprietary rejected-applicant list shared by one platform (acknowledged by name). No access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_public",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o60",
+          "pages": [
+            9,
+            12
+          ],
+          "locator": "Section II",
+          "statement": "Draws underlying data from a mix of publicly available digitized newspaper archives, publicly compiled historical registers, and public administrative crime-reporting data, without describing any restricted-access or application-based data source.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_restricted",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o52",
+          "pages": [
+            1,
+            12
+          ],
+          "locator": "Acknowledgements, Section 2.1",
+          "statement": "Data combine central bank administrative and confidential registry files, a web-scraped aggregator, a commercial firm database, a public bankruptcy bulletin and a proprietary rejected-applicant list shared by one platform (acknowledged by name). No access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "linked_records",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o52",
+          "pages": [
+            1,
+            12
+          ],
+          "locator": "Acknowledgements, Section 2.1",
+          "statement": "Data combine central bank administrative and confidential registry files, a web-scraped aggregator, a commercial firm database, a public bankruptcy bulletin and a proprietary rejected-applicant list shared by one platform (acknowledged by name). No access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "public_use",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o60",
+          "pages": [
+            9,
+            12
+          ],
+          "locator": "Section II",
+          "statement": "Draws underlying data from a mix of publicly available digitized newspaper archives, publicly compiled historical registers, and public administrative crime-reporting data, without describing any restricted-access or application-based data source.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "web_scraped",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o52",
+          "pages": [
+            1,
+            12
+          ],
+          "locator": "Acknowledgements, Section 2.1",
+          "statement": "Data combine central bank administrative and confidential registry files, a web-scraped aggregator, a commercial firm database, a public bankruptcy bulletin and a proprietary rejected-applicant list shared by one platform (acknowledged by name). No access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "design_variant_named",
+      "papers": 4,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.364,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            4
+          ],
+          "locator": "Abstract and Introduction",
+          "statement": "Names the tax administration analysis a matched difference-in-differences design and states the estimand as the effect of being assigned to a medium taxpayer office on taxpayer outcomes, later contrasted with a separate tax-rate elasticity estimand.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            7
+          ],
+          "locator": "Section 1 (introduction) and Section 4.2",
+          "statement": "The paper names three complementary designs for the main analysis: a firm and day fixed-effects difference-in-differences comparing two phases of the Affair, a synthetic difference-in-differences, and Coarsened Exact Matching.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o1",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Section 4, opening paragraph",
+          "statement": "The authors describe two difference-in-differences strategies: a within-student before/after comparison for short-run outcomes and an across-cohort comparison (exposed cohorts versus cohorts enrolled five years earlier) for long-run outcomes, each benchmarked against matched control schools.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o1",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Introduction, paragraphs on benchmark borrowers",
+          "statement": "The identifying assumption for the matched comparison is stated in the introduction: observably similar FinTech and benchmark borrowers have similar credit demand. The main threat (firms with investment opportunities applying to several lenders at once) is named up front and the two benchmark groups",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "threats_discussed",
+      "papers": 4,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.364,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o2",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section IIIA, Empirical Strategy",
+          "statement": "States that the original assignment formula and worksheets used to place taxpayers into the medium taxpayer offices were not archived, so assignment cannot be reconstructed, and explains that entropy-balancing matching on preperiod size variables is used instead to address the resulting selection co",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o4",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Section IV.A, footnote 34",
+          "statement": "A stable-unit-treatment-value threat is named explicitly: never-treated units competing in the same markets as treated units could be indirectly affected through competitive spillovers, motivating a market-restricted matching design as a check.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o5",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "The paper names its main identification threat directly: productivity trajectories could diverge between movers and non-movers for reasons unrelated to migration, which motivates the placebo-matched control-group design rather than a simple before/after comparison.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o1",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Introduction, paragraphs on benchmark borrowers",
+          "statement": "The identifying assumption for the matched comparison is stated in the introduction: observably similar FinTech and benchmark borrowers have similar credit demand. The main threat (firms with investment opportunities applying to several lenders at once) is named up front and the two benchmark groups",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "estimand_named",
+      "papers": 3,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.273,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            4
+          ],
+          "locator": "Abstract and Introduction",
+          "statement": "Names the tax administration analysis a matched difference-in-differences design and states the estimand as the effect of being assigned to a medium taxpayer office on taxpayer outcomes, later contrasted with a separate tax-rate elasticity estimand.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o5",
+          "pages": [
+            7,
+            10
+          ],
+          "locator": "Section 4.2 and Table 5",
+          "statement": "Coarsened Exact Matching is introduced as a strategy to select a comparison sample that minimizes covariate imbalance between connected and unconnected firms before differencing returns across the phases of the Affair.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o1",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Section 4, opening paragraph",
+          "statement": "The authors describe two difference-in-differences strategies: a within-student before/after comparison for short-run outcomes and an across-cohort comparison (exposed cohorts versus cohorts enrolled five years earlier) for long-run outcomes, each benchmarked against matched control schools.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "identifying_assumption_explicit",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o2",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section IIIA, Empirical Strategy",
+          "statement": "States that the original assignment formula and worksheets used to place taxpayers into the medium taxpayer offices were not archived, so assignment cannot be reconstructed, and explains that entropy-balancing matching on preperiod size variables is used instead to address the resulting selection co",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o1",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Introduction, paragraphs on benchmark borrowers",
+          "statement": "The identifying assumption for the matched comparison is stated in the introduction: observably similar FinTech and benchmark borrowers have similar credit demand. The main threat (firms with investment opportunities applying to several lenders at once) is named up front and the two benchmark groups",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "in_main_text",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o1",
+          "pages": [
+            2,
+            7
+          ],
+          "locator": "Section 1 (introduction) and Section 4.2",
+          "statement": "The paper names three complementary designs for the main analysis: a firm and day fixed-effects difference-in-differences comparing two phases of the Affair, a synthetic difference-in-differences, and Coarsened Exact Matching.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o1",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Introduction, paragraphs on benchmark borrowers",
+          "statement": "The identifying assumption for the matched comparison is stated in the introduction: observably similar FinTech and benchmark borrowers have similar credit demand. The main threat (firms with investment opportunities applying to several lenders at once) is named up front and the two benchmark groups",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "other:control_group_selection_justified",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o5",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Section 4.1",
+          "statement": "Nearest-neighbour matching of control schools is justified as reducing differential trend concerns; schools in the same district are excluded because of evidence of spillovers, and the matching variables and their timing (first grading period of the shooting year) are listed.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "other:regression_discontinuity_ruled_out",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o3",
+          "pages": [
+            18,
+            18
+          ],
+          "locator": "Section IIIA, footnote",
+          "statement": "Explicitly explains why a regression discontinuity design is not used for the administration reform: the exact assignment formula is unknown and no sharp discontinuity in assignment probability is observed in the data.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "parallel_trends_argued",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o2",
+          "pages": [
+            20,
+            24
+          ],
+          "locator": "Section 3.1 end and Section 3.3",
+          "statement": "Each benchmark group is introduced with an explicit strength and limitation: bank borrowers share credit demand and quality but do not use FinTech; rejected applicants share the application decision but may be lower quality. The authors argue that similar results across both benchmarks make unobserv",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "balance_table",
+      "papers": 7,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.636,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o25",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Table 1, columns 1 and 2",
+          "statement": "Presents preperiod weighted means for treated and comparison taxpayers not only on the variables explicitly targeted by matching but also on related subcomponents, to argue that balance extends beyond the matched variables themselves.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o31",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness, footnote",
+          "statement": "Reports a formal coefficient-stability statistic for selection on unobservables computed from the unmatched and propensity-score-matched samples, alongside balance tables and density plots for the matched samples that are placed in the online appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o23",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Table 5",
+          "statement": "A dedicated balance table reports mean differences and t-statistics on the matching covariates for each of the three pre-issuance years separately, split by transparency subgroup, to check the quality of the propensity-score match.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o30",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "Balance between migrants and their matched placebo controls is asserted qualitatively in the main text through the closeness of raw pre-period means, but the formal balance table for the matching procedure is placed in the online appendix rather than shown in the main text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "note_sha256": "adc4b78e8b0839dac2843e00f293b7e1369fdeb704a15b327a019413b942e335",
+          "observation_id": "o25",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Table 1; Section 5.2",
+          "statement": "A main-text table compares treated and matched controls on demographics, job and area characteristics and pre-period DV using standardized differences with a stated threshold from Imbens and Rubin, and also compares mass-layoff workers with all displaced workers for external validity.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o23",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 4.1; Appendix Table A3",
+          "statement": "A balance table compares shooting schools, matched controls and all state schools, with p-values for differences, separately for high and non-high schools; it is in the appendix and discussed in the design section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 5,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.455,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o27",
+          "pages": [
+            28,
+            29
+          ],
+          "locator": "Section IIIB, footnote",
+          "statement": "Constructs a placebo assignment among comparison taxpayers that mimics the increasing relationship between assignment probability and preperiod size, reruns the main procedure on this placebo treatment, and presents the estimates in an online appendix figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o31",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness, footnote",
+          "statement": "Reports a formal coefficient-stability statistic for selection on unobservables computed from the unmatched and propensity-score-matched samples, alongside balance tables and density plots for the matched samples that are placed in the online appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o25",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Section IV.A, footnote 34",
+          "statement": "Possible spillovers onto comparison units are addressed diagnostically in two ways: an appendix matching design that pairs each treated unit only with units from different markets, and a robustness sample restricted to transactions too small to plausibly move market-wide outcomes.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o30",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "Balance between migrants and their matched placebo controls is asserted qualitatively in the main text through the closeness of raw pre-period means, but the formal balance table for the matching procedure is placed in the online appendix rather than shown in the main text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o23",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 4.1; Appendix Table A3",
+          "statement": "A balance table compares shooting schools, matched controls and all state schools, with p-values for differences, separately for high and non-high schools; it is in the appendix and discussed in the design section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 5,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.455,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o25",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Table 1, columns 1 and 2",
+          "statement": "Presents preperiod weighted means for treated and comparison taxpayers not only on the variables explicitly targeted by matching but also on related subcomponents, to argue that balance extends beyond the matched variables themselves.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o23",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Table 5",
+          "statement": "A dedicated balance table reports mean differences and t-statistics on the matching covariates for each of the three pre-issuance years separately, split by transparency subgroup, to check the quality of the propensity-score match.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o25",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Section IV.A, footnote 34",
+          "statement": "Possible spillovers onto comparison units are addressed diagnostically in two ways: an appendix matching design that pairs each treated unit only with units from different markets, and a robustness sample restricted to transactions too small to plausibly move market-wide outcomes.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "note_sha256": "adc4b78e8b0839dac2843e00f293b7e1369fdeb704a15b327a019413b942e335",
+          "observation_id": "o25",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Table 1; Section 5.2",
+          "statement": "A main-text table compares treated and matched controls on demographics, job and area characteristics and pre-period DV using standardized differences with a stated threshold from Imbens and Rubin, and also compares mass-layoff workers with all displaced workers for external validity.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o23",
+          "pages": [
+            17,
+            23
+          ],
+          "locator": "Table 3 Panels A to D, Figure 2, Section 3.2.3",
+          "statement": "Balance is shown twice: a four-panel table of means, differences and t statistics before and after matching for both benchmark groups, and a coefficient plot of standardized differences with confidence intervals. Remaining imbalances are discussed with their sign relative to the hypothesis.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "online_appendix_not_available",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o27",
+          "pages": [
+            28,
+            29
+          ],
+          "locator": "Section IIIB, footnote",
+          "statement": "Constructs a placebo assignment among comparison taxpayers that mimics the increasing relationship between assignment probability and preperiod size, reruns the main procedure on this placebo treatment, and presents the estimates in an online appendix figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o30",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "Balance between migrants and their matched placebo controls is asserted qualitatively in the main text through the closeness of raw pre-period means, but the formal balance table for the matching procedure is placed in the online appendix rather than shown in the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "density_test",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o31",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness, footnote",
+          "statement": "Reports a formal coefficient-stability statistic for selection on unobservables computed from the unmatched and propensity-score-matched samples, alongside balance tables and density plots for the matched samples that are placed in the online appendix.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:placebo_treatment_assignment",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_114_7_10",
+          "note_sha256": "a2ce2c0a92fe653760b44a8889cca0b729422508554f4b2dcd41b388265e1eeb",
+          "observation_id": "o26",
+          "pages": [
+            32,
+            33
+          ],
+          "locator": "Section VI",
+          "statement": "Separately from randomization inference, the paper runs a placebo check that assigns fake treatment to non-Carolina Southern counties chosen to resemble the true treated counties, reporting that estimated placebo effects are small and inconsistently signed.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:spillover_check",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o25",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Section IV.A, footnote 34",
+          "statement": "Possible spillovers onto comparison units are addressed diagnostically in two ways: an appendix matching design that pairs each treated unit only with units from different markets, and a robustness sample restricted to transactions too small to plausibly move market-wide outcomes.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "placebo_outcomes",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o27",
+          "pages": [
+            28,
+            29
+          ],
+          "locator": "Section IIIB, footnote",
+          "statement": "Constructs a placebo assignment among comparison taxpayers that mimics the increasing relationship between assignment probability and preperiod size, reruns the main procedure on this placebo treatment, and presents the estimates in an online appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "sensitivity_bounds",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 9,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o31",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness, footnote",
+          "statement": "Reports a formal coefficient-stability statistic for selection on unobservables computed from the unmatched and propensity-score-matched samples, alongside balance tables and density plots for the matched samples that are placed in the online appendix.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "scaling_discussed",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o54",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section I, end",
+          "statement": "The paper explicitly generalizes its inventor-specific findings to other categories of high-skilled workers, naming students, engineers, scientists, and STEM workers as groups the mechanism should plausibly extend to, while noting that the empirical analysis itself is restricted to inventors because",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o45",
+          "pages": [
+            47,
+            48
+          ],
+          "locator": "Section 6, footnotes 47 and 48",
+          "statement": "The conclusion has a dedicated generalisation paragraph arguing portability beyond France (collateral constraints are widespread; FinTech loans are typically unsecured elsewhere, supported by surveys and platform websites), and separately flags unbanked firms and other channels as open questions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "site_specific",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o45",
+          "pages": [
+            47,
+            48
+          ],
+          "locator": "Section 6, footnotes 47 and 48",
+          "statement": "The conclusion has a dedicated generalisation paragraph arguing portability beyond France (collateral constraints are widespread; FinTech loans are typically unsecured elsewhere, supported by surveys and platform websites), and separately flags unbanked firms and other channels as open questions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "time_period_specific",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o51",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Introduction",
+          "statement": "Discusses the historical specificity of the setting, an early-twentieth-century road-show distribution system with limited theater penetration, as a scope condition distinguishing this evidence from studies of modern, already media-saturated markets.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "mechanism_motivated",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o33",
+          "pages": [
+            30,
+            46
+          ],
+          "locator": "Section 4.1.2, 4.2.1, 5.2, footnote 33",
+          "statement": "Heterogeneity is always run as split samples (loan purpose, rated versus unrated, high versus low interest rate), and the propensity score matching is re-run within each subsample so that treated and benchmark firms are matched on the same split. A footnote notes that rejected applicants cannot be s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "other:rematching_within_subsample",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o33",
+          "pages": [
+            30,
+            46
+          ],
+          "locator": "Section 4.1.2, 4.2.1, 5.2, footnote 33",
+          "statement": "Heterogeneity is always run as split samples (loan purpose, rated versus unrated, high versus low interest rate), and the propensity score matching is re-run within each subsample so that treated and benchmark firms are matched on the same split. A footnote notes that rejected applicants cannot be s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "split_sample",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o33",
+          "pages": [
+            30,
+            46
+          ],
+          "locator": "Section 4.1.2, 4.2.1, 5.2, footnote 33",
+          "statement": "Heterogeneity is always run as split samples (loan purpose, rated versus unrated, high versus low interest rate), and the propensity score matching is re-run within each subsample so that treated and benchmark firms are matched on the same split. A footnote notes that rejected applicants cannot be s",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "no_justification_found",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o25",
+          "pages": [
+            1,
+            37
+          ],
+          "locator": "throughout",
+          "statement": "Does not discuss a multiple-testing adjustment anywhere in the text despite reporting many outcome variables and many robustness specifications across the short-run and long-run designs.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "measurement",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o50",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section V",
+          "statement": "States explicitly that mechanism evidence on persuasion is only suggestive because the available historical measures of racial attitudes are coarse and represent the views of a small, non-representative share of the population.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o42",
+          "pages": [
+            4,
+            30
+          ],
+          "locator": "footnotes 7, 29, 31",
+          "statement": "Limits of the collateral data are stated in footnotes: only pledges of specific assets are observed, not personal guarantees or cash collateral, and secured status is observed only for loans sampled by reporting branches.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "data_coverage",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o42",
+          "pages": [
+            4,
+            30
+          ],
+          "locator": "footnotes 7, 29, 31",
+          "statement": "Limits of the collateral data are stated in footnotes: only pledges of specific assets are observed, not personal guarantees or cash collateral, and secured status is observed only for loans sampled by reporting branches.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "identification_caveat",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o41",
+          "pages": [
+            18,
+            18
+          ],
+          "locator": "Section IIIA, footnote",
+          "statement": "States as a limitation that the precise taxpayer-assignment formula and files were not retained, which rules out a sharper regression-discontinuity approach and requires relying on a matching-based comparison instead.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "interpretation_caveat",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o50",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section V",
+          "statement": "States explicitly that mechanism evidence on persuasion is only suggestive because the available historical measures of racial attitudes are coarse and represent the views of a small, non-representative share of the population.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "back_of_envelope",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o40",
+          "pages": [
+            45,
+            47
+          ],
+          "locator": "Section 5.2, footnote 46, Internet Appendix Sections J and K",
+          "statement": "Interest-expense and investor-return calculations combine regression estimates with summary statistics and external parameters from cited studies (trade credit cost, corporate bond yields); details are placed in appendix sections and the break-even assumption is made explicit.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "cost_benefit",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o40",
+          "pages": [
+            45,
+            47
+          ],
+          "locator": "Section 5.2, footnote 46, Internet Appendix Sections J and K",
+          "statement": "Interest-expense and investor-return calculations combine regression estimates with summary statistics and external parameters from cited studies (trade credit cost, corporate bond yields); details are placed in appendix sections and the break-even assumption is made explicit.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "other:binscatter_slope_comparison",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o41",
+          "pages": [
+            33,
+            34
+          ],
+          "locator": "Figure 6, Section 4.1.4",
+          "statement": "A binned scatter of new loan size against subsequent bank credit growth for the two groups is used to compare fitted slopes, with slope coefficients and significance printed on the figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "suggestive_labelled",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o42",
+          "pages": [
+            29,
+            29
+          ],
+          "locator": "Section V, opening paragraph",
+          "statement": "States at the outset of the mechanisms section that data constraints prevent a comprehensive test of channels, and explicitly labels the discussion of coordination, imitation, and persuasion channels as suggestive rather than conclusive.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o37",
+          "pages": [
+            27,
+            27
+          ],
+          "locator": "footnote 28",
+          "statement": "A footnote uses loan-to-value reasoning to distinguish sequential from simultaneous financing and compares implied multipliers from OLS and IV, while stating the paper does not formally distinguish the two.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o37",
+          "pages": [
+            27,
+            27
+          ],
+          "locator": "footnote 28",
+          "statement": "A footnote uses loan-to-value reasoning to distinguish sequential from simultaneous financing and compares implied multipliers from OLS and IV, while stating the paper does not formally distinguish the two.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "survey_evidence",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o43",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section V",
+          "statement": "Uses survey-based attitude data from later decades as an indirect proxy for contemporaneous persuasion effects, explicitly noting that no contemporaneous survey of racial attitudes exists for the period under study.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "other",
+      "tag": "other:descriptive_regression_of_loan_terms",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o53",
+          "pages": [
+            14,
+            16
+          ],
+          "locator": "Table 2, Section 2.2.2 and 2.2.3",
+          "statement": "Before the main analysis, FinTech and bank loans are compared by regressing loan size, maturity and rate on a FinTech indicator with progressive fixed effects, and firms are compared with proxies for financing constraints chosen with citations to the literature.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_sample",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o54",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Table 3, and generally",
+          "statement": "Reports standard errors in parentheses beneath every coefficient directly in the regression tables, with notes in each table stating the clustering level and the composition of control blocks rather than relegating that information to a separate methods appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_se",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o54",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Table 3, and generally",
+          "statement": "Reports standard errors in parentheses beneath every coefficient directly in the regression tables, with notes in each table stating the clustering level and the composition of control blocks rather than relegating that information to a separate methods appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "appendix_tables_numbered_a",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o47",
+          "pages": [
+            1,
+            47
+          ],
+          "locator": "Title page note, references throughout",
+          "statement": "Internet Appendix material is referenced by lettered sections and tables or figures (A.1 to K), covering variable definitions, sample descriptions, robustness, heterogeneity in the first stage, and calculations; the appendix is hosted separately by the publisher and is not part of the read text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "binscatter",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "coefficient_plot",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "event_study_figure",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "map",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o53",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Figure 2",
+          "statement": "Uses paired choropleth maps to visualize the geographic footprint of both the film's road show and the second Klan's chapter locations, presented together early in the data section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o47",
+          "pages": [
+            1,
+            47
+          ],
+          "locator": "Title page note, references throughout",
+          "statement": "Internet Appendix material is referenced by lettered sections and tables or figures (A.1 to K), covering variable definitions, sample descriptions, robustness, heterogeneity in the first stage, and calculations; the appendix is hosted separately by the publisher and is not part of the read text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "stars_used",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "summary_stats_table",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 2,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o46",
+          "pages": [
+            14,
+            46
+          ],
+          "locator": "Figures 1 to 6, Tables 1 to 10",
+          "statement": "Figures are event-study coefficient plots with confidence intervals (base period minus one), a standardized-difference balance plot, and one binned scatter. Tables use three-level stars, standard errors in parentheses, and notes that restate the equation, sample window and clustering. Descriptive st",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 3,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.273,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o59",
+          "pages": [
+            35,
+            35
+          ],
+          "locator": "References",
+          "statement": "Cites a formal archived replication-data deposit for the paper in the reference list rather than including a dedicated data-and-code availability statement in the body of the article.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o56",
+          "pages": [
+            69,
+            69
+          ],
+          "locator": "Data Availability statement",
+          "statement": "A dedicated data-availability statement at the end of the article names the public repository and identifier where the replication data are deposited, placed separately from the acknowledgments and the reference list.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o51",
+          "pages": [
+            48,
+            48
+          ],
+          "locator": "Code Availability paragraph",
+          "statement": "A one-sentence Code Availability statement at the end of the conclusion points to a Harvard Dataverse DOI for the replication code. No data availability statement or software is mentioned in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o51",
+          "pages": [
+            48,
+            48
+          ],
+          "locator": "Code Availability paragraph",
+          "statement": "A one-sentence Code Availability statement at the end of the conclusion points to a Harvard Dataverse DOI for the replication code. No data availability statement or software is mentioned in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_public",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o56",
+          "pages": [
+            69,
+            69
+          ],
+          "locator": "Data Availability statement",
+          "statement": "A dedicated data-availability statement at the end of the article names the public repository and identifier where the replication data are deposited, placed separately from the acknowledgments and the reference list.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o58",
+          "pages": [
+            69,
+            69
+          ],
+          "locator": "Supplementary Material statement",
+          "statement": "The article repeatedly refers throughout the main text to an Online Appendix published separately at the journal's website for proofs, additional data description, robustness tables, and model derivations; that appendix content is not part of the extracted main-text file used for this note.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "software_named",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o57",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Section III.A.1",
+          "statement": "A commercial third-party software product is named and described for one specific analysis step, inferring an inventor's country of origin from their name, and it is the only piece of analysis software the main text names explicitly anywhere in the paper.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_appendix",
+      "papers": 6,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.545,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o28",
+          "pages": [
+            27,
+            28
+          ],
+          "locator": "Section IIIB, Robustness paragraph",
+          "statement": "Summarizes robustness of the administration treatment effect to alternative weighting strategies, including no weights, logit and random-forest propensity scores, and inverse-propensity weighting, discussed in a paragraph in the main text with results collected in one appendix table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o37",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness",
+          "statement": "Reports propensity-score-matching estimates as an alternative-estimator robustness check for the long-run design, run across three different comparison-group definitions and both with and without additional covariate adjustment.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "note_sha256": "a2ce2c0a92fe653760b44a8889cca0b729422508554f4b2dcd41b388265e1eeb",
+          "observation_id": "o30",
+          "pages": [
+            30,
+            33
+          ],
+          "locator": "Section VI",
+          "statement": "Paper reports several alternative control-group constructions as robustness checks: adding non-Carolina Southern counties, restricting to propensity-score-matched Southern counties, and versions that also drop untreated North Carolina counties.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o28",
+          "pages": [
+            44,
+            44
+          ],
+          "locator": "Section VII, Matching difference-in-differences",
+          "statement": "A matched difference-in-differences check pairs each treated generator with several comparison units drawn from a different market but sharing fuel type and technology, chosen via a distance metric on capacity and age, as an alternative to the regression-based comparison group.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o31",
+          "pages": [
+            30,
+            31
+          ],
+          "locator": "Section 5.3; Appendix Figures A12 to A14",
+          "statement": "Eight alternative matching strategies (extra match variables, exact region match, more controls, reverse order, earlier timing, staff measures, excluding nearest schools) are listed and shown as coefficient plots with the baseline in each panel.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o28",
+          "pages": [
+            26,
+            26
+          ],
+          "locator": "Section 3.3 last paragraph, Internet Appendix Section D",
+          "statement": "Robustness of the matched DiD is delegated to an appendix section: alternative matching procedures (one nearest neighbour with and without replacement), dropping the two platforms with larger loans, dropping firms with missing characteristics, and running on the unmatched sample. Results are summari",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_estimator",
+      "papers": 5,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.455,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o28",
+          "pages": [
+            27,
+            28
+          ],
+          "locator": "Section IIIB, Robustness paragraph",
+          "statement": "Summarizes robustness of the administration treatment effect to alternative weighting strategies, including no weights, logit and random-forest propensity scores, and inverse-propensity weighting, discussed in a paragraph in the main text with results collected in one appendix table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o37",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness",
+          "statement": "Reports propensity-score-matching estimates as an alternative-estimator robustness check for the long-run design, run across three different comparison-group definitions and both with and without additional covariate adjustment.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o32",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 3-5 and Figures 1-2",
+          "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o28",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section 5.1",
+          "statement": "Robustness to confounding between treated and control firms is pursued through a sequence of distinct named estimators (propensity-score matched stacked DID, overlap-weighted regression, generalized synthetic control), each presented as its own table or figure within the same results subsection rath",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o28",
+          "pages": [
+            26,
+            26
+          ],
+          "locator": "Section 3.3 last paragraph, Internet Appendix Section D",
+          "statement": "Robustness of the matched DiD is delegated to an appendix section: alternative matching procedures (one nearest neighbour with and without replacement), dropping the two platforms with larger loans, dropping firms with missing characteristics, and running on the unmatched sample. Results are summari",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_control_group",
+      "papers": 4,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.364,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o37",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.D, Other Robustness",
+          "statement": "Reports propensity-score-matching estimates as an alternative-estimator robustness check for the long-run design, run across three different comparison-group definitions and both with and without additional covariate adjustment.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "note_sha256": "a2ce2c0a92fe653760b44a8889cca0b729422508554f4b2dcd41b388265e1eeb",
+          "observation_id": "o30",
+          "pages": [
+            30,
+            33
+          ],
+          "locator": "Section VI",
+          "statement": "Paper reports several alternative control-group constructions as robustness checks: adding non-Carolina Southern counties, restricting to propensity-score-matched Southern counties, and versions that also drop untreated North Carolina counties.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o28",
+          "pages": [
+            44,
+            44
+          ],
+          "locator": "Section VII, Matching difference-in-differences",
+          "statement": "A matched difference-in-differences check pairs each treated generator with several comparison units drawn from a different market but sharing fuel type and technology, chosen via a distance metric on capacity and age, as an alternative to the regression-based comparison group.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o31",
+          "pages": [
+            30,
+            31
+          ],
+          "locator": "Section 5.3; Appendix Figures A12 to A14",
+          "statement": "Eight alternative matching strategies (extra match variables, exact region match, more controls, reverse order, earlier timing, staff measures, excluding nearest schools) are listed and shown as coefficient plots with the baseline in each panel.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_main_text",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o32",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 3-5 and Figures 1-2",
+          "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o28",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section 5.1",
+          "statement": "Robustness to confounding between treated and control firms is pursued through a sequence of distinct named estimators (propensity-score matched stacked DID, overlap-weighted regression, generalized synthetic control), each presented as its own table or figure within the same results subsection rath",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "summarized_in_one_table",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o28",
+          "pages": [
+            27,
+            28
+          ],
+          "locator": "Section IIIB, Robustness paragraph",
+          "statement": "Summarizes robustness of the administration treatment effect to alternative weighting strategies, including no weights, logit and random-forest propensity scores, and inverse-propensity weighting, discussed in a paragraph in the main text with results collected in one appendix table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o32",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Tables 3-5 and Figures 1-2",
+          "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_sample",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o28",
+          "pages": [
+            26,
+            26
+          ],
+          "locator": "Section 3.3 last paragraph, Internet Appendix Section D",
+          "statement": "Robustness of the matched DiD is delegated to an appendix section: alternative matching procedures (one nearest neighbour with and without replacement), dropping the two platforms with larger loans, dropping firms with missing characteristics, and running on the unmatched sample. Results are summari",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_specification",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o28",
+          "pages": [
+            27,
+            28
+          ],
+          "locator": "Section IIIB, Robustness paragraph",
+          "statement": "Summarizes robustness of the administration treatment effect to alternative weighting strategies, including no weights, logit and random-forest propensity scores, and inverse-propensity weighting, discussed in a paragraph in the main text with results collected in one appendix table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "measurement_error_discussed",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o36",
+          "pages": [
+            5,
+            5
+          ],
+          "locator": "footnote 1",
+          "statement": "Discloses that the two independently constructed treatment datasets were developed by separate research teams working concurrently, who later coordinated to cross-check their measures against each other after independent development.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "jpe_2026_740222",
+          "note_sha256": "98c23fe937225d40d45949f921576d2b1a3dc1a137eb0eefb892e5220348b543",
+          "observation_id": "o28",
+          "pages": [
+            44,
+            44
+          ],
+          "locator": "Section VII, Matching difference-in-differences",
+          "statement": "A matched difference-in-differences check pairs each treated generator with several comparison units drawn from a different market but sharing fuel type and technology, chosen via a distance metric on capacity and age, as an alternative to the regression-based comparison group.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "summarized_in_figure",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 8,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "note_sha256": "e5e02c526e9018a8cddf084a576c4d53516c7d5e5f2743efb48fd6587e8bbd37",
+          "observation_id": "o31",
+          "pages": [
+            30,
+            31
+          ],
+          "locator": "Section 5.3; Appendix Figures A12 to A14",
+          "statement": "Eight alternative matching strategies (extra match variables, exact region match, more controls, reverse order, earlier timing, staff measures, excluding nearest schools) are listed and shown as coefficient plots with the baseline in each panel.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "exclusions_justified",
+      "papers": 4,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.364,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o7",
+          "pages": [
+            18,
+            18
+          ],
+          "locator": "Section IIIA, discussion of office waves",
+          "statement": "Restricts the main administration analysis to regions where offices opened in a single later wave rather than the earlier pilot regions, justified because primary tax offices in the pilot regions had not yet been reorganized to the same administrative structure, which would confound the comparison.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o11",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section II.C, KKK Chapters",
+          "statement": "Notes that the klavern data record only the date a chapter was first mentioned, not its founding or dissolution date, and explicitly defines the primary long-run outcome as an indicator for whether a klavern had ever existed in a county by a fixed cutoff year given this limitation.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o9",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "The comparison group for the migrant event study is built by one-to-one exact matching on origin country, first sample year, cumulative patent count at the time of migration, and experience, with the added requirement that matched controls also file a patent in the first post-migration year, mirrori",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o7",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Section 2.1.1, footnote 19, Internet Appendix B.1",
+          "statement": "Platform exclusions (equity or bond platforms, an agriculture-only platform) are justified by comparability with bank loans, with each excluded platform and its market share listed in a footnote. The sample end date is justified by the need for a post-origination window and by avoiding the pandemic ",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "matching_or_linkage_described",
+      "papers": 4,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.364,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o7",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Section II.A, Movie Screenings",
+          "statement": "Describes construction of the treatment-timing variable from newspaper advertisements gathered across three digitized newspaper archives plus a trade magazine, with research assistants visually inspecting search hits to confirm genuine screening advertisements.",
+          "basis": "stated"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o7",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section 5.1; Table 5 and Table 6 notes",
+          "statement": "The stacked-DID sample is built by matching each SLL borrower to a single never-issuer control firm on country, industry and nearest pre-issuance propensity score, then stacking each matched pair over a fixed pre/post event window; per-subsample borrower and matched-firm counts are reported directly",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o9",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "The comparison group for the migrant event study is built by one-to-one exact matching on origin country, first sample year, cumulative patent count at the time of migration, and experience, with the added requirement that matched controls also file a patent in the first post-migration year, mirrori",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o6",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Section 2.1.1 to 2.1.6, Table A.1",
+          "statement": "Data sources are listed one by one in numbered subsections (scraped aggregator website, central bank FinTech reporting, credit registry, loan-level bank survey, FIBEN/Orbis firm financials, bankruptcy bulletin) and linked through a unique firm identifier. A variable dictionary is placed in an Intern",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_size_reported_per_table",
+      "papers": 3,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.273,
+      "pointers": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o7",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section 5.1; Table 5 and Table 6 notes",
+          "statement": "The stacked-DID sample is built by matching each SLL borrower to a single never-issuer control firm on country, industry and nearest pre-issuance propensity score, then stacking each matched pair over a fixed pre/post event window; per-subsample borrower and matched-firm counts are reported directly",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o10",
+          "pages": [
+            36,
+            37
+          ],
+          "locator": "Section III.B.2",
+          "statement": "The paper reports how many migrants find an exact match under the matching procedure separately for EU-origin and U.S.-origin migrants, and states that unmatched individuals are dropped, so the analysis sample is smaller than the full identified migrant population.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o9",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 2.1.8, Tables A.3 and A.4",
+          "statement": "Two Internet Appendix tables document, for every table and figure, the sample restrictions, frequency, time period, event window and number of firms by group.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o7",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Section II.A, Movie Screenings",
+          "statement": "Describes construction of the treatment-timing variable from newspaper advertisements gathered across three digitized newspaper archives plus a trade magazine, with research assistants visually inspecting search hits to confirm genuine screening advertisements.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o6",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Section 2.1.1 to 2.1.6, Table A.1",
+          "statement": "Data sources are listed one by one in numbered subsections (scraped aggregator website, central bank FinTech reporting, credit registry, loan-level bank survey, FIBEN/Orbis firm financials, bankruptcy bulletin) and linked through a unique firm identifier. A variable dictionary is placed in an Intern",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_period_stated",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "note_sha256": "adc4b78e8b0839dac2843e00f293b7e1369fdeb704a15b327a019413b942e335",
+          "observation_id": "o9",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Section 5.2",
+          "statement": "The DiD uses a perfectly balanced worker-year panel from several years before to several years after layoff, with treated workers displaced in mass layoffs in the central years of the sample period; controls are exact-matched on cohort, tenure, earnings bin, firm size quartile, sector and state, wit",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o7",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Section 2.1.1, footnote 19, Internet Appendix B.1",
+          "statement": "Platform exclusions (equity or bond platforms, an agriculture-only platform) are justified by comparability with bank loans, with each excluded platform and its market share listed in a footnote. The sample end date is justified by the need for a post-origination window and by avoiding the pandemic ",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "unit_of_observation_stated",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "note_sha256": "adc4b78e8b0839dac2843e00f293b7e1369fdeb704a15b327a019413b942e335",
+          "observation_id": "o9",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Section 5.2",
+          "statement": "The DiD uses a perfectly balanced worker-year panel from several years before to several years after layoff, with treated workers displaced in mass layoffs in the central years of the sample period; controls are exact-matched on cohort, tenure, earnings bin, firm size quartile, sector and state, wit",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o8",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Section 2.1.7, footnote 22",
+          "statement": "The unmatched sample is built as an ordered list: industry exclusions, minimum presence in the credit registry before the event, a definition of new relationship loans, restriction to fixed-term bank loans (excluding revolving, working capital and leasing loans for comparability with unsecured FinTe",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o9",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 2.1.8, Tables A.3 and A.4",
+          "statement": "Two Internet Appendix tables document, for every table and figure, the sample restrictions, frequency, time period, event window and number of firms by group.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "in_footnote",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o7",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Section 2.1.1, footnote 19, Internet Appendix B.1",
+          "statement": "Platform exclusions (equity or bond platforms, an agriculture-only platform) are justified by comparability with bank loans, with each excluded platform and its market share listed in a footnote. The sample end date is justified by the need for a post-origination window and by avoiding the pandemic ",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o6",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Section 2.1.1 to 2.1.6, Table A.1",
+          "statement": "Data sources are listed one by one in numbered subsections (scraped aggregator website, central bank FinTech reporting, credit registry, loan-level bank survey, FIBEN/Orbis firm financials, bankruptcy bulletin) and linked through a unique firm identifier. A variable dictionary is placed in an Intern",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "other:common_support_trimming",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o8",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section IIIA",
+          "statement": "Imposes a common support restriction that drops taxpayers in the extreme tails of the matching-variable distributions on both sides, stating that this excludes very large treated firms and very small comparison firms.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "restricted_data_used",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 6,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o6",
+          "pages": [
+            10,
+            12
+          ],
+          "locator": "Section 2.1.1 to 2.1.6, Table A.1",
+          "statement": "Data sources are listed one by one in numbered subsections (scraped aggregator website, central bank FinTech reporting, credit registry, loan-level bank survey, FIBEN/Orbis firm financials, bankruptcy bulletin) and linked through a unique firm identifier. A variable dictionary is placed in an Intern",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "weights_stated",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o22",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 5.2, discussion around Table 5",
+          "statement": "The matching table states explicitly that observations are equally weighted in the reported specification, with matching-derived weights relegated to an appendix table as a variant check rather than the baseline.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o20",
+          "pages": [
+            21,
+            26
+          ],
+          "locator": "Section 3.2.1, Table 4 notes",
+          "statement": "Matching is described as five nearest neighbours with replacement, and the text notes that a benchmark firm can be matched to several treated firms; however, no regression weights are mentioned in the text or in table notes.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "baseline_then_variants",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "note_sha256": "3776fdfeb8c7f0d02b4055f0525eb08abd8f55c9a62895ed9325122bb5dc6762",
+          "observation_id": "o22",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 5.2, discussion around Table 5",
+          "statement": "The matching table states explicitly that observations are equally weighted in the reported specification, with matching-derived weights relegated to an appendix table as a variant check rather than the baseline.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "mean_of_dependent_reported",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o18",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Table 1",
+          "statement": "Presents a summary-statistics table comparing treatment and control counties, with a separate comparison restricted to control counties that had a theater, aiming to isolate selection on theater presence from selection on screening status itself.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "notes_state_sample",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o18",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Table 1",
+          "statement": "Presents a summary-statistics table comparing treatment and control counties, with a separate comparison restricted to control counties that had a theater, aiming to isolate selection on theater presence from selection on screening status itself.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "other:weights_not_stated_in_text",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 3,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o20",
+          "pages": [
+            21,
+            26
+          ],
+          "locator": "Section 3.2.1, Table 4 notes",
+          "statement": "Matching is described as five nearest neighbours with replacement, and the text notes that a benchmark firm can be matched to several treated firms; however, no regression weights are mentioned in the text or in table notes.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:balancing_weight_construction",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 1,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_111_12_2",
+          "note_sha256": "1e6a579f8a8ade24f40f04be5705d35edba2a7dd77c6dc9ec56c239e0de24bbe",
+          "observation_id": "o12",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section IIIA",
+          "statement": "Constructs taxpayer-level balancing weights through an entropy-balancing procedure that matches treated and comparison taxpayers on preperiod gross income, tax paid, and region, choosing the reweighting of the comparison group that minimally departs from uniform weights while equalizing these covari",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "appendix_heavy",
+      "papers": 3,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.273,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o58",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Introduction, end",
+          "statement": "Relies heavily on the online appendix for supporting figures and tables referenced repeatedly throughout the main text, which is explicitly flagged at the end of the introduction as containing additional material not part of the reviewed text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o51",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section I, end",
+          "statement": "A short roadmap paragraph at the end of the introduction states the section order for the rest of the article, and robustness checks are not given their own section but are instead folded into brief paragraphs at the end of each empirical subsection, each pointing onward to the online appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o49",
+          "pages": [
+            26,
+            42
+          ],
+          "locator": "Sections 3.3, 4.1, 4.3.3",
+          "statement": "There is no roadmap paragraph and no separate robustness section; robustness is folded into the end of each results subsection with pointers to appendix sections. Hypotheses are stated as numbered testable predictions before the tests.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "contribution_paragraph",
+      "papers": 3,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.273,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o56",
+          "pages": [
+            5,
+            6
+          ],
+          "locator": "Introduction",
+          "statement": "Places a stand-alone contribution paragraph enumerating three separate literatures the paper claims to contribute to, followed by a roadmap paragraph outlining section order, at the end of the introduction.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o49",
+          "pages": [
+            8,
+            10
+          ],
+          "locator": "Section I.A",
+          "statement": "A dedicated related-literature subsection immediately follows the introduction and organizes prior work into several numbered strands, with each strand explicitly mapped to how the paper's contribution differs from or builds on it.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o48",
+          "pages": [
+            2,
+            8
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction previews every result in the order of the paper (credit dynamics, mechanism, IV, overborrowing), followed by four literature-contribution paragraphs. The body goes institutional background, data, event study and matched DiD, mechanisms with an embedded IV, then real outcomes and def",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o55",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Introduction",
+          "statement": "Previews the paper's main qualitative findings (short-run violence spike, long-run Klan formation, and persistence into modern hate crimes) in the introduction before presenting any results in the body of the paper.",
+          "basis": "stated"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o48",
+          "pages": [
+            2,
+            8
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction previews every result in the order of the paper (credit dynamics, mechanism, IV, overborrowing), followed by four literature-contribution paragraphs. The body goes institutional background, data, event study and matched DiD, mechanisms with an embedded IV, then real outcomes and def",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_paragraph",
+      "papers": 2,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.182,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o56",
+          "pages": [
+            5,
+            6
+          ],
+          "locator": "Introduction",
+          "statement": "Places a stand-alone contribution paragraph enumerating three separate literatures the paper claims to contribute to, followed by a roadmap paragraph outlining section order, at the end of the introduction.",
+          "basis": "stated"
+        },
+        {
+          "artid": "qje_140_1_4",
+          "note_sha256": "793bd3a24ebba1d8ae4e917576893ddab2e83cd10c2c9602524a18cb7ef9cd26",
+          "observation_id": "o51",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section I, end",
+          "statement": "A short roadmap paragraph at the end of the introduction states the section order for the rest of the article, and robustness checks are not given their own section but are instead folded into brief paragraphs at the end of each empirical subsection, each pointing onward to the online appendix.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "data_before_design",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o48",
+          "pages": [
+            2,
+            8
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction previews every result in the order of the paper (credit dynamics, mechanism, IV, overborrowing), followed by four literature-contribution paragraphs. The body goes institutional background, data, event study and matched DiD, mechanisms with an embedded IV, then real outcomes and def",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "main_result_first",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o48",
+          "pages": [
+            2,
+            8
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction previews every result in the order of the paper (credit dynamics, mechanism, IV, overborrowing), followed by four literature-contribution paragraphs. The body goes institutional background, data, event study and matched DiD, mechanisms with an embedded IV, then real outcomes and def",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "mechanisms_after_main",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o48",
+          "pages": [
+            2,
+            8
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction previews every result in the order of the paper (credit dynamics, mechanism, IV, overborrowing), followed by four literature-contribution paragraphs. The body goes institutional background, data, event study and matched DiD, mechanisms with an embedded IV, then real outcomes and def",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "aer_113_6_2",
+          "note_sha256": "a9a4f1c0f4ad7f598c213703e653acb94d0f59368f26c1159e484352792d40ca",
+          "observation_id": "o58",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Introduction, end",
+          "statement": "Relies heavily on the online appendix for supporting figures and tables referenced repeatedly throughout the main text, which is explicitly flagged at the end of the introduction as containing additional material not part of the reviewed text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:no_roadmap_paragraph",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o49",
+          "pages": [
+            26,
+            42
+          ],
+          "locator": "Sections 3.3, 4.1, 4.3.3",
+          "statement": "There is no roadmap paragraph and no separate robustness section; robustness is folded into the end of each results subsection with pointers to appendix sections. Hypotheses are stated as numbered testable predictions before the tests.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:no_separate_robustness_section",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "note_sha256": "bef15266e552da47ba03a98c4c751f698e608bd97b3eb44abdb7c9a401458b4f",
+          "observation_id": "o49",
+          "pages": [
+            26,
+            42
+          ],
+          "locator": "Sections 3.3, 4.1, 4.3.3",
+          "statement": "There is no roadmap paragraph and no separate robustness section; robustness is folded into the end of each results subsection with pointers to appendix sections. Hypotheses are stated as numbered testable predictions before the tests.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:robustness_integrated_in_main_results",
+      "papers": 1,
+      "denominator_papers": 11,
+      "papers_with_category": 4,
+      "share_of_papers": 0.091,
+      "pointers": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "note_sha256": "d509ecfbe6d03a24c903f90f862389d06dd95a4ff4080f20887aad1612d6272b",
+          "observation_id": "o48",
+          "pages": [
+            11,
+            16
+          ],
+          "locator": "Section 5.1",
+          "statement": "Robustness to alternative econometric approaches (matching, overlap-weighting, synthetic control) is integrated within the main results subsection rather than isolated into a separate stand-alone robustness section.",
+          "basis": "inferred"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "bandwidth",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "s10.sample",
+          "paper_says": "45 days, symmetric",
+          "card_shows": "abs(t)<=${band} with band unspecified",
+          "pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "agree",
+      "count": 8,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s3.se.cluster_level",
+          "paper_says": "States that standard errors in the elasticity regression are clustered at the taxpayer level.",
+          "card_shows": "spec s3 records se.type 'cluster' and se.cluster_level ['npwp'], where npwp is the taxpayer identification number, read directly from the cluster() clause.",
+          "pages": [
+            34,
+            34
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "Standard errors clustered by county throughout the paper",
+          "card_shows": "s1 se.type=cluster, se.cluster_level=[fips]",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.se.cluster_level",
+          "paper_says": "Table 4 notes state standard errors clustered at the firm level",
+          "card_shows": "s1.se.cluster_level = [id_firm]",
+          "pages": [
+            10,
+            10
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "The main text and every main-table note state that standard errors are clustered at the acquisition (transaction) level; two secondary figures instead state pla",
+          "card_shows": "s1.se.type is recorded as cluster with the structured cluster_level field left null; the card's free-text se.details notes clustering on a deal_number variable ",
+          "pages": [
+            20,
+            26
+          ]
+        },
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s2.se.cluster_level",
+          "paper_says": "Standard errors for the migrant productivity and interaction tables are stated in the table notes to be clustered at the inventor and year level.",
+          "card_shows": "The card records two-way clustering at the same two levels (inventor identifier and year) for the corresponding specifications.",
+          "pages": [
+            39,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "States that standard errors in the administration regressions are clustered at the taxpayer level.",
+          "card_shows": "spec s1's se.cluster_level is null; the underlying call uses cluster(`clust'), a Stata local macro whose value was not resolved during code reading.",
+          "pages": [
+            19,
+            19
+          ]
+        },
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "specifications",
+          "paper_says": "For the co-inventor spillover regression (Table III) the text separately justifies clustering at the level of the associated migrant inventor and year, citing c",
+          "card_shows": "No specification extracted in the card corresponds to the co-inventor spillover regression; the card's extracted specifications cover only the migrant-level eve",
+          "pages": [
+            44,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "unknown",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "DiD standard errors clustered at the firm level",
+          "card_shows": "s1 to s5: cl(identificad)",
+          "pages": [
+            17,
+            17
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "Short-run standard errors clustered by school (shooting plus control schools).",
+          "card_shows": "cluster(unique_id); design note interprets unique_id as school match-group identifier.",
+          "pages": [
+            14,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s3.se.cluster_level",
+          "paper_says": "The main text does not state a cluster level for the shift-share IV regression.",
+          "card_shows": "The card records two-way clustering at the region and decade level for the IV specification.",
+          "pages": [
+            46,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "paper_only",
+      "count": 6,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s1.comparison_group",
+          "paper_says": "Describes the comparison group as taxpayers not assigned to the medium taxpayer office, entropy-balanced on 2005 gross income, taxes paid, and region within a c",
+          "card_shows": "spec s1's comparison_group field is null.",
+          "pages": [
+            18,
+            19
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s1.comparison_group",
+          "paper_says": "Comparison group is counties without a Duke funding commitment (never/not-yet treated), with non-Carolina Southern counties used as an alternative control group",
+          "card_shows": "s1 comparison_group=null",
+          "pages": [
+            2,
+            31
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.comparison_group",
+          "paper_says": "Comparison group is explicitly defined as never-SLL-issuer control firms, matched by propensity score on country, industry and year in the stacked-DID analyses,",
+          "card_shows": "s1.comparison_group and s2.comparison_group are both null",
+          "pages": [
+            10,
+            12
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "d1.comparison_group",
+          "paper_says": "The comparison group for the baseline design is generators never or not-yet acquired; for the structural heat-rate-curve analysis a separate matched control gro",
+          "card_shows": "d1.comparison_group is null; the design record traced from the code does not specify how the comparison group is constructed.",
+          "pages": [
+            20,
+            34
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "d1.treatment",
+          "paper_says": "Never-treated plots as controls, not-yet-treated as robustness.",
+          "card_shows": "d1 treatment and comparison null.",
+          "pages": [
+            20,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "d1.implementation_features / packages.teffects",
+          "paper_says": "Two nearest-neighbour matched control schools per shooting school, different district, same grade span, campus type and charter status, fuzzy match on six chara",
+          "card_shows": "teffects nnmatch with fuzzy_vars enrollment, share_female, share_white, share_black, share_hispanic, share_lunch and exact ematch variables; comparison_group fi",
+          "pages": [
+            12,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "paper_only",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s1.controls_summary",
+          "paper_says": "Preferred specifications add a control vector (percent illiterate, percent Black, percent other race, percent urban, retail sales per capita, county health depa",
+          "card_shows": "s1 controls_summary=null (not resolved from code trace)",
+          "pages": [
+            12,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.controls_summary",
+          "paper_says": "Even-numbered columns of the main tables add a stated set of firm-level controls (sector, admission type, state guarantee, foreign operations, political connect",
+          "card_shows": "s2.controls_summary is null.",
+          "pages": [
+            9,
+            9
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "s1.controls_summary",
+          "paper_says": "The preferred specification's controls are described in detail: ambient temperature and humidity, environmental-program participation indicators, and pollution-",
+          "card_shows": "s1.controls_summary is null; the card records only the formula string with a generic controls placeholder rather than resolving which variables it contains.",
+          "pages": [
+            20,
+            21
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "s1.controls_summary",
+          "paper_says": "Long-run models include race/ethnicity and gender controls; short-run models have no individual controls.",
+          "card_shows": "s1 controls_summary null; long-run specification not carded.",
+          "pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "s1.controls",
+          "paper_says": "Propensity and outcome-adjustment covariates: soil suitability, elevation, climate zones, biogeographic regions, rainfall, degree days, growing season, 1985 bas",
+          "card_shows": "s1 snippet shows no xformla; controls not recorded.",
+          "pages": [
+            21,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s2.controls_summary",
+          "paper_says": "The migrant event-study and interaction specifications are described as including only fixed effects and the leads/lags indicators, with no separate control var",
+          "card_shows": "The card's controls_summary field is unset (null) for the extracted specifications, consistent with no additional controls.",
+          "pages": [
+            37,
+            39
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_ref": "d2.evidence",
+          "paper_says": "IV stages include the matching covariates as controls plus a shift-share credit supply control.",
+          "card_shows": "ivreghdfe call includes $control_0 and volloanv; controls_summary null.",
+          "pages": [
+            39,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "s10.controls",
+          "paper_says": "RD baseline has only eligibility dummy, running variable and interaction",
+          "card_shows": "s10 adds worker and firm covariates (tempempr, lnrem, school, age, sector, firm size)",
+          "pages": [
+            26,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 7,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "data",
+          "paper_says": "Names several distinct anonymized administrative data extracts obtained from the tax authority (payment, filing, employment withholding, audit, and assessment r",
+          "card_shows": "The card's top-level data array is empty.",
+          "pages": [
+            10,
+            11
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "data[0].source_hint",
+          "paper_says": "Data section names specific sources for each processed dataset (Duke Endowment annual reports, AMA hospital records, AMD, NC death certificates, Numident)",
+          "card_shows": "data entries (nc_deaths_event_study_input, gompertz_event_study_input_pooled, gompertz_event_study_input_by_race) all have source_hint=null and access=unknown",
+          "pages": [
+            7,
+            11
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "data[0].source_hint",
+          "paper_says": "Financial and board data are described as hand-collected from named archival sources (a stockbroker yearbook, a national-library price bulletin, corporate regis",
+          "card_shows": "data[0].source_hint and data[1].source_hint are null; the card records only generic dataset file names (dataset9199, data_car) with type and access unknown.",
+          "pages": [
+            5,
+            5
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "data.panel_firmyear.source_hint",
+          "paper_says": "Appendix Table A.1 attributes variables to named commercial sources: DealScan, LSEG/Refinitiv ESG, S&P Trucost Environmental, Worldscope, CapitalIQ, Compustat, ",
+          "card_shows": "data record panel_firmyear has type=null, access=unknown, source_hint=null, evidenced only by a raw Stata use statement",
+          "pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "data",
+          "paper_says": "The empirical analysis is built from two named external data products, an international patent-application migration dataset and a disambiguated single-office i",
+          "card_shows": "The card's data array is empty; no data-source records were extracted from the code files that were read.",
+          "pages": [
+            31,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "d1",
+          "paper_says": "CDDA designated-area database, Landsat NDVI, Li et al. nightlights, HILDA, BioTIME, EEA/ESDAC/ECMWF/WorldClim controls.",
+          "card_shows": "Variable names greenness, foundationCS, cddaid consistent with CDDA and NDVI; sources not recorded.",
+          "pages": [
+            14,
+            16
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_ref": "data[0]",
+          "paper_says": "Credit registry, M-Contran survey, Banque de France FinTech data, scraped Crowdlending.fr, FIBEN, Orbis, BODACC.",
+          "card_shows": "Three intermediate admin files with unknown access; one is a scraped IFP file at firm-month level.",
+          "pages": [
+            10,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "paper_only",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "x1",
+          "paper_says": "Reports first-stage F-statistics for both instrumented regressions directly in the main text and tables, describing both as very strong.",
+          "card_shows": "diagnostic x1 records kind 'first_stage' for design d1 with status 'unknown', no observation value, and a note that it was to be extracted from Stata's e(first)",
+          "pages": [
+            20,
+            37
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "diagnostics",
+          "paper_says": "The paper reports a pre-trends figure, a covariate-balance table, and a board-composition stability check as design diagnostics supporting the causal reading of",
+          "card_shows": "diagnostics is an empty list in the card.",
+          "pages": [
+            6,
+            9
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "diagnostics.x1.status",
+          "paper_says": "Text states that the event-study plot shows parallel pre-issuance trends for both transparency subgroups before treatment",
+          "card_shows": "diagnostics x1 (pretrend_test) has status=unknown, only noting that pre-period dummies are included in the regression",
+          "pages": [
+            13,
+            13
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "diagnostics",
+          "paper_says": "The paper reports a pre-trends event-study figure with flat, insignificant pre-acquisition coefficients as its main design diagnostic, plus placebo checks using",
+          "card_shows": "diagnostics is an empty list; no diagnostic checks were captured in the card's code trace.",
+          "pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_ref": "diagnostics",
+          "paper_says": "Balance table and plot, event-study pre-trends, Kleibergen-Paap F, Anderson-Rubin and Lee et al. intervals, lagged-shift placebos.",
+          "card_shows": "diagnostics array is empty.",
+          "pages": [
+            22,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "agree",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "x1",
+          "paper_says": "Paper reports and interprets a formal test of whether Black and White treatment-effect coefficients differ, from a fully race-interacted model",
+          "card_shows": "x1 diagnostic kind=heterogeneous_treatment_effects, status=observed, observation=call_present, description='Race interactions tested'",
+          "pages": [
+            22,
+            23
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "diagnostics.x2",
+          "paper_says": "Table 5 reports covariate balance (assets, leverage, ROA, Q, ESG score) with differences and t-statistics for each pre-issuance year, separately by transparency",
+          "card_shows": "diagnostics x2 (balance) status=observed, describing a clttest of size, totdebt, roa, q stratified by post-treatment period in tab5.do",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "x1",
+          "paper_says": "The main text names the shift-share IV strategy but reports no first-stage coefficient or weak-instrument statistic for it anywhere in the extracted text.",
+          "card_shows": "The card's single diagnostic record for a first-stage check has status unknown, with no supporting evidence located in the code files that were read.",
+          "pages": [
+            46,
+            46
+          ]
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "x1",
+          "paper_says": "Balance table, event-study pre-trends, McCrary and Cattaneo density tests, bandwidth sensitivity",
+          "card_shows": "x1 balance, x2 pretrend_plot, x3 density_test, x4 bandwidth_selection, all with unknown details",
+          "pages": [
+            14,
+            27
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "x2",
+          "paper_says": "Raw trends and event-study pre-period coefficients shown in main text; attrition, Lee bounds and honest-DiD in appendix.",
+          "card_shows": "x2 pretrend_plot with status unknown; honestdid package installed in master file.",
+          "pages": [
+            16,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 14,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s3.estimator",
+          "paper_says": "Describes a two-equation instrumental-variables procedure: a first-stage equation predicting the change in marginal tax rate using a schedule-based instrument, ",
+          "card_shows": "spec s3 records estimator '2sls', command 'ivreghdfe', with the endogenous regressor and instrument matching the paper's rate-change variable and predicted rate",
+          "pages": [
+            33,
+            35
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s1.estimator",
+          "paper_says": "First-stage hospital and physician outcomes estimated by a linear two-way fixed effects (OLS) regression model (equation 1)",
+          "card_shows": "s1 estimator=hdfe_ols via reghdfe, formula reghdfe depvar b0.treated, absorb(fips year) vce(cluster fips)",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s2.estimator",
+          "paper_says": "Callaway and Sant'Anna (2021) group-time ATT estimator used as one of the staggered-adoption robustness estimators",
+          "card_shows": "s2 estimator=did_group_time_att via csdid, formula csdid depvar [iw=weightvar], ivar(fips) time(year) gvar(time_treated_2) agg(event)",
+          "pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.estimator",
+          "paper_says": "Difference-in-differences with firm and trading-day fixed effects, estimated on the balanced firm panel (Section 4.2, equation 2).",
+          "card_shows": "Specification s2 (design d2, method did) records estimator hdfe_ols via reghdfe.",
+          "pages": [
+            7,
+            9
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s1.estimator",
+          "paper_says": "Event-study cumulative abnormal returns from a one-factor market model regressed on the Jewish-connection measure and controls (Section 4.1, equation 1, Table 2",
+          "card_shows": "Specification s1 (design d1, method return_event_study) records estimator ols via reg with clus(firm).",
+          "pages": [
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "designs",
+          "paper_says": "Coarsened Exact Matching (Iacus et al., 2012) is described as a fourth main empirical strategy, with its own main-text table of matched-sample estimates.",
+          "card_shows": "The card's designs and specifications list only d1/d2/d3 (return_event_study, did, synthetic_control); no design or specification entry corresponds to matching,",
+          "pages": [
+            7,
+            10
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "designs.d1.method",
+          "paper_says": "Identification combines a panel OLS quasi-DID, a propensity-score matched stacked DID, overlap-weighted regressions, and a generalized synthetic control estimat",
+          "card_shows": "d1 records only method=event_study with role, variant, treatment and classification_basis all unknown",
+          "pages": [
+            10,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "d1/d2",
+          "paper_says": "Frames the administration analysis primarily as a matched difference-in-differences design (reduced-form equation), with an instrumental-variables version used ",
+          "card_shows": "Designs d1 and d2 are both recorded with method 'iv' only, extracted from ivreghdfe calls with an endogenous MTO status variable; the card's method vocabulary i",
+          "pages": [
+            18,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s3.formula_or_call",
+          "paper_says": "The text names a shift-share instrumental-variables strategy based on immigrant enclaves for the co-inventor exposure result, without stating the unit of observ",
+          "card_shows": "The card's IV specification (s3) is a two-stage-least-squares regression of a regional average patenting outcome on an emigration share, run at a region-by-deca",
+          "pages": [
+            46,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "agree",
+      "count": 10,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "States that the administration regressions include taxpayer fixed effects and year fixed effects.",
+          "card_shows": "spec s1 records fixed_effects as the Stata absorb() variables 'npwp' and 'year', where npwp is the Indonesian taxpayer identification number.",
+          "pages": [
+            19,
+            19
+          ]
+        },
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s3.fixed_effects",
+          "paper_says": "States that the elasticity regression includes taxpayer and year fixed effects.",
+          "card_shows": "spec s3 records fixed_effects as 'year' and 'npwp' (taxpayer identification number), read directly from the absorb() clause.",
+          "pages": [
+            34,
+            34
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "All first-stage specifications include county and calendar-year (or AMD-wave) fixed effects",
+          "card_shows": "s1 fixed_effects=[fips, year]",
+          "pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.fixed_effects",
+          "paper_says": "Table 4 col. 1/4/7 lists Country x Year FE and Industry x Year FE as the fixed-effects configuration",
+          "card_shows": "s1.fixed_effects = [id_cyear, id_indyear] from tab4.do line 39",
+          "pages": [
+            10,
+            10
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s2.fixed_effects",
+          "paper_says": "Table 6 notes list Firm x Cohort FE and Year x Cohort FE for the stacked-DID event-study specification underlying Fig. 4",
+          "card_shows": "s2.fixed_effects = [id_firmpair, id_yearpair] from fig4.do line 15",
+          "pages": [
+            12,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.fixed_effects",
+          "paper_says": "The difference-in-differences specification includes firm fixed effects, trading-day fixed effects, and sector-by-period interactions (Section 4.2, equation 2; ",
+          "card_shows": "s2.fixed_effects is null in the card's structured fields, even though the formula_or_call field for s2 shows a(firmn daten i.sectorn##i.period1 i.sectorn##i.per",
+          "pages": [
+            7,
+            9
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "Table 2 lists a progression of fixed effects for the preferred column: generator and week fixed effects, state-by-month trends, unit-characteristic-by-month tre",
+          "card_shows": "Specification s1.fixed_effects is null; the card's evidence trace only captured the feols call and formula string, not the enumerated fixed-effect terms actuall",
+          "pages": [
+            21,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "disagree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "The main text describes the leads-and-lags event-study specification (equation 20) as including individual, year, and experience fixed effects only.",
+          "card_shows": "The card's leads-and-lags specification (s1) additionally absorbs a technology-class fixed effect that is not mentioned in the main-text description of the spec",
+          "pages": [
+            37,
+            38
+          ]
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "s10.fe",
+          "paper_says": "RD: no fixed effects in the baseline local linear model",
+          "card_shows": "s10 absorb(mun)",
+          "pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "item": "other",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "d1.variant",
+          "paper_says": "Design is named specifically as a staggered-adoption difference-in-differences with an extensive-margin intent-to-treat variant",
+          "card_shows": "d1 method=did, variant=null",
+          "pages": [
+            2,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "paper_only",
+      "count": 6,
+      "examples": [
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "outputs.tables",
+          "paper_says": "Six numbered main tables and five numbered main figures reported in the text",
+          "card_shows": "outputs.tables=[] and outputs.figures=[] in the card",
+          "pages": [
+            18,
+            29
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "outputs.tables",
+          "paper_says": "Paper presents eleven main numbered tables and six main numbered figures plus an appendix table and five appendix figures",
+          "card_shows": "outputs.tables and outputs.figures are both empty arrays",
+          "pages": [
+            7,
+            22
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "outputs.tables",
+          "paper_says": "The main text alone presents six numbered tables and nine numbered figures, with a further set of appendix-only tables and figures referenced throughout Section",
+          "card_shows": "outputs.tables lists a single generic table entry (format txt, via the xtable package) traced from one output-writing call, and outputs.figures is empty.",
+          "pages": [
+            17,
+            44
+          ]
+        },
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "outputs.tables",
+          "paper_says": "The paper presents a numbered sequence of main-text tables and figures for both the empirical and the quantitative results.",
+          "card_shows": "The card's outputs object lists no tables or figures for either specification extracted from the code.",
+          "pages": [
+            39,
+            63
+          ]
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "outputs",
+          "paper_says": "Three main tables and nine figures plus lettered supplementary tables and figures",
+          "card_shows": "tables=0 figures=0",
+          "pages": [
+            13,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "outputs.tables.t2",
+          "paper_says": "Tables 2 and 3 report long-run educational and labor market outcomes from equation (4) with p-values in brackets and no stars.",
+          "card_shows": "t2 and t3 produced by esttab from B3_Long_run_analysis_baseline.do; stars null.",
+          "pages": [
+            24,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "outputs",
+          "paper_says": "Four main tables, eight main figures and appendix tables A.3 to A.16.",
+          "card_shows": "tables 0, figures 2 with partial coverage.",
+          "pages": [
+            16,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "paper_only",
+      "count": 8,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "robustness",
+          "paper_says": "Describes extensive robustness checks for both empirical exercises (alternative weighting schemes, common support restrictions, clustering levels, sample defini",
+          "card_shows": "The card's top-level robustness array is empty.",
+          "pages": [
+            27,
+            28
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "robustness",
+          "paper_says": "Extensive robustness section covering alternative estimators, alternative control groups, an IV design, and randomization inference",
+          "card_shows": "robustness array is empty in the card",
+          "pages": [
+            30,
+            34
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "robustness",
+          "paper_says": "The paper describes an extensive robustness program spanning alternative return definitions, alternative event windows and factor models, alternative treatment ",
+          "card_shows": "robustness is an empty list in the card.",
+          "pages": [
+            8,
+            14
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "robustness",
+          "paper_says": "Paper reports multiple named robustness checks: log-transformed ESG score, alternative fixed-effect configuration, alternative emission-based outcomes, overlap-",
+          "card_shows": "card robustness array is empty",
+          "pages": [
+            10,
+            16
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "robustness",
+          "paper_says": "Section VII enumerates several robustness checks: alternative data frequency, an expanded acquisition sample, capacity weighting, an alternative generation meas",
+          "card_shows": "robustness is an empty list; the card's reading scope covered only one baseline analysis script and did not trace the robustness scripts.",
+          "pages": [
+            43,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "robustness[0]",
+          "paper_says": "TWFE and matched TWFE reported as alternatives to the preferred estimator.",
+          "card_shows": "Robustness record alt_estimator base s2 variant s3 confirmed; s1 alt unresolved.",
+          "pages": [
+            24,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "paper_only",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s3.sample",
+          "paper_says": "States the elasticity sample uses CIT filings for the tax years immediately surrounding the rate reform, restricted to the same taxpayers as the administration ",
+          "card_shows": "spec s3's sample field is null, though the raw formula_or_call includes an if-condition restricting to a bounded year range and a 'mainsamp' indicator, consiste",
+          "pages": [
+            34,
+            35
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "The difference-in-differences analysis is run on a balanced panel of firms listed throughout the study period, after excluding firms below a stated liquidity th",
+          "card_shows": "pipeline.sample_restrictions is an empty list and s1/s2/s3 sample fields are null.",
+          "pages": [
+            5,
+            7
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "pipeline.sample_restrictions",
+          "paper_says": "The estimation sample restricts to each generator's first acquisition, excludes cogenerators, non-majority ownership changes, and restructuring-driven ownership",
+          "card_shows": "pipeline.sample_restrictions is an empty list; no sample-restriction steps were captured by the code trace underlying the card.",
+          "pages": [
+            15,
+            21
+          ]
+        },
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s2.sample",
+          "paper_says": "The migrant event-study sample is built by one-to-one exact matching on origin, first sample year, cumulative patents at migration, and experience, with match r",
+          "card_shows": "The card leaves the sample field unset (null) for both event-study specifications extracted from the code.",
+          "pages": [
+            36,
+            37
+          ]
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_ref": "s1.sample",
+          "paper_says": "Matched samples over a 36-month window; collateral tests start in the later quarter when the secured field exists.",
+          "card_shows": "s1.sample and s2.sample are null.",
+          "pages": [
+            12,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "agree",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "pipeline.sample_restrictions[0]",
+          "paper_says": "Main analysis restricted to North Carolina counties and birth years 1922-1942",
+          "card_shows": "pipeline sample_restrictions: statefip==37 (North Carolina) births, 1922-1942, applied to s1 and s2",
+          "pages": [
+            2,
+            11
+          ]
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "s1.sample",
+          "paper_says": "DiD main sample restricted to mass layoffs; ITT and plant closure variants",
+          "card_shows": "s1 if mass==1; s3 if empcont==1 & t<=103",
+          "pages": [
+            12,
+            20
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "s1.sample",
+          "paper_says": "Balanced student panel from three years before to two years after the shooting.",
+          "card_shows": "s1 sample: balanced panel with event_t from -3 to +2.",
+          "pages": [
+            13,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "s2.sample",
+          "paper_says": "Some estimations use a stratified 1 percent random sample of never-treated land per country for memory reasons.",
+          "card_shows": "Script named 4_CS_small.R uses object strat_sample; sample restriction not recorded explicitly.",
+          "pages": [
+            29,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s2.se.cluster_level",
+          "paper_says": "Baseline panel regressions (returns, volatility, risk-adjusted returns) report standard errors clustered by firm (Table 3, Table 6 notes).",
+          "card_shows": "s2.se.type is cluster with cluster_level firm.",
+          "pages": [
+            7,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s1.se",
+          "paper_says": "The event-study table (Table 2) note states only that standard errors are robust, without naming a cluster level, even though each firm contributes a single cro",
+          "card_shows": "s1.se.type is cluster with cluster_level firm, taken from the clus(firm) option in the underlying Stata call.",
+          "pages": [
+            8,
+            8
+          ]
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "s3.se.type",
+          "paper_says": "Synthetic difference-in-differences standard errors are computed with the placebo method of Arkhangelsky et al. (2021) rather than a cluster formula (Table 4 no",
+          "card_shows": "s3.se.type is randomization_inference, cluster_level null.",
+          "pages": [
+            11,
+            11
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "s1.se.type",
+          "paper_says": "Standard errors are described throughout as clustered (never heteroskedasticity-robust alone, wild-bootstrapped, or randomization-inference based) in the main s",
+          "card_shows": "s1.se.type = cluster, traced to the cluster argument of the feols call.",
+          "pages": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_ref": "specifications",
+          "paper_says": "The firm-year dividend regressions and the media-coverage regression are reported with standard errors two-way clustered by firm and by trading day (or year), n",
+          "card_shows": "No specification in the card corresponds to the dividend regression or the media-coverage regression; only s1, s2 and s3 are recorded, and none uses two-way clu",
+          "pages": [
+            13,
+            15
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "s1.se.type",
+          "paper_says": "Wild cluster bootstrap for few-cluster subgroup analyses; permutation test for long-run inference.",
+          "card_shows": "Only cluster-robust SE recorded for s1.",
+          "pages": [
+            20,
+            31
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_ref": "s1.se",
+          "paper_says": "Multiplier bootstrap standard errors for the doubly-robust estimator.",
+          "card_shows": "s1 se type null.",
+          "pages": [
+            22,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s2.se.type",
+          "paper_says": "Text does not separately describe the standard-error method used specifically for the Callaway and Sant'Anna robustness estimator beyond the general county-clus",
+          "card_shows": "s2 se.type=null, se.cluster_level=null (unresolved in code trace)",
+          "pages": [
+            13,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "paper_only",
+      "count": 6,
+      "examples": [
+        {
+          "artid": "aer_111_12_2",
+          "card_ref": "s1.weights",
+          "paper_says": "States that the administration regressions are weighted by taxpayer-specific entropy-balancing weights constructed from 2005 gross income and total taxes paid.",
+          "card_shows": "spec s1's structured weights field is null, though the raw formula_or_call string shows a probability weight, [pw=`weight'], confirming a weighting scheme is us",
+          "pages": [
+            18,
+            19
+          ]
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_ref": "s1.weights",
+          "paper_says": "Preferred specifications weight observations by county-by-year (or wave) births",
+          "card_shows": "s1 weights=null; s2 formula references an unresolved iw=weightvar",
+          "pages": [
+            12,
+            12
+          ]
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_ref": "specifications.s1.weights",
+          "paper_says": "Section 5.1 and Table 7 describe overlap-weighted regressions using propensity scores as a weighting mechanism on the full sample",
+          "card_shows": "Neither s1 nor s2 records a weighting specification, and no specification for the overlap-weight regression scripts appears in the card at all (only 9 of 26 pip",
+          "pages": [
+            14,
+            16
+          ]
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_ref": "s1.weights",
+          "paper_says": "The baseline specification is described as an unweighted average effect, with a capacity-weighted version presented separately as a robustness check.",
+          "card_shows": "s1.weights is null (unknown), with no evidence trace either confirming or contradicting an unweighted baseline.",
+          "pages": [
+            43,
+            43
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdaf027",
+          "card_ref": "s1.weights",
+          "paper_says": "Student-level regressions unweighted; staffing regressions weighted by enrolment.",
+          "card_shows": "s1 weights null.",
+          "pages": [
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "qje_140_1_4",
+          "card_ref": "s2.weights",
+          "paper_says": "No specification in the empirical section is described as weighted.",
+          "card_shows": "The card's weights field is unset (null) for every extracted specification.",
+          "pages": [
+            37,
+            46
+          ]
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_ref": "s5.weights",
+          "paper_says": "Entropy balancing reweighting for robustness (job loss and RD samples)",
+          "card_shows": "s5 [w=wei] in balancing do-file",
+          "pages": [
+            20,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_ref": "s1.weights",
+          "paper_says": "No regression weights are mentioned; matching is five nearest neighbours with replacement.",
+          "card_shows": "pweight=weight in both s1 and s2.",
+          "pages": [
+            21,
+            26
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "No pre-analysis plan, IRB approval, or participant consent statement appears anywhere in the article text.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit software name (e.g., Stata) appears anywhere in the article text, even though this is a code-based empirical",
+      "papers": 1
+    },
+    {
+      "gap": "No dedicated data-and-code availability statement appears in the article body describing what the cited replication pack",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit multiple-testing adjustment is discussed despite many outcomes and subgroups being tested across the adminis",
+      "papers": 1
+    },
+    {
+      "gap": "No R-squared or adjusted R-squared is reported on any main regression table.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification is given in the main text for choosing the taxpayer level for standard-error clustering, beyon",
+      "papers": 1
+    },
+    {
+      "gap": "No statistical software (e.g., Stata, R) is named anywhere in the main text, even though the paper is a code-based empir",
+      "papers": 1
+    },
+    {
+      "gap": "No dedicated data-and-code availability statement appears in the article body describing what the replication package co",
+      "papers": 1
+    },
+    {
+      "gap": "No pre-analysis plan, IRB approval, or participant-consent statement appears anywhere in the text; the study uses archiv",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification for choosing the state as the standard-error clustering level appears in the main text beyond ",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit multiple-testing adjustment is discussed despite many outcome variables (lynchings, riots, homicides, klaver",
+      "papers": 1
+    },
+    {
+      "gap": "The extracted text contains only the published article; the online Appendix referenced dozens of times (additional figur",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, pre-analysis plan, or IRB/ethics statement found anywhere in the main text.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit multiple-testing adjustment stated despite reporting many outcome subgroups (race splits) and robustness var",
+      "papers": 1
+    },
+    {
+      "gap": "No dedicated summary-statistics table appears in the main text itself; it is referenced as being in the online appendix ",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit statement of statistical software beyond what can be inferred from the recipe card's Stata commands (reghdfe",
+      "papers": 1
+    },
+    {
+      "gap": "No formal density or manipulation test is reported, consistent with the design not relying on a running-variable cutoff.",
+      "papers": 1
+    },
+    {
+      "gap": "The paper does not name the statistical software or packages used for estimation anywhere in the main text (the CRediT s",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification is given for choosing firm-level clustering as opposed to, for example, addressing serial corr",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, pre-analysis plan, IRB approval, or consent statement is present or expected, consistent with this b",
+      "papers": 1
+    },
+    {
+      "gap": "The recipe card (coverage: minimal) does not record a design or specification for the Coarsened Exact Matching strategy,",
+      "papers": 1
+    },
+    {
+      "gap": "No passage in the main text justifies clustering standard errors at the firm level specifically (versus country, industr",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, pre-analysis plan, or IRB/ethics statement is present anywhere in the text; the study uses secondary",
+      "papers": 1
+    },
+    {
+      "gap": "Main regression tables (e.g., Tables 4, 6, 8) report N and adjusted R2 but do not include a row for the mean of the depe",
+      "papers": 1
+    },
+    {
+      "gap": "No passage discusses a multiple-testing or multiple-comparisons adjustment despite many subgroup and successive robustne",
+      "papers": 1
+    },
+    {
+      "gap": "The paper's main text and appendix never name the statistical software or estimation package used; this is only recovera",
+      "papers": 1
+    },
+    {
+      "gap": "The recipe card's coverage is partial (9 of 26 pipeline scripts read), so several paper-stated robustness and diagnostic",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, pre-analysis plan, IRB approval, or research-ethics/consent statement appears anywhere in the read m",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit statement of the statistical software, package, or version used for estimation appears in the main text; thi",
+      "papers": 1
+    },
+    {
+      "gap": "No formal joint-significance test (for example an F-test or Wald test) for the pre-acquisition event-study coefficients ",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

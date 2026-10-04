@@ -1,0 +1,1219 @@
+{
+ "schema_version": "paper-practice-note-v1",
+ "artid": "jfe_2025_j_jfineco_2025_104150",
+ "journal": "JFE",
+ "year": 2025,
+ "doi": "10.1016/j.jfineco.2025.104150",
+ "source": {
+  "pdf_path": "Paper/PDF/jfe_2025_j_jfineco_2025_104150.pdf",
+  "pdf_sha256": "7fe356dcf86f27232b45cb74483a95de2405167ca1b9eade4ae8b97eadf3f862",
+  "text_path": "harness_build/papers/text/jfe_2025_j_jfineco_2025_104150.txt",
+  "text_sha256": "d898b0c82957e46124abb50363473daa5822abc953da3e5125bacebe681f2028",
+  "pages": 30
+ },
+ "reader": {
+  "role": "empirical-analyst",
+  "model": "claude-sonnet (Agent tool)",
+  "prompt_version": "paper-practice-v1",
+  "generated_at": "2026-09-08T20:09:19Z"
+ },
+ "card_link": {
+  "path": "harness_build/recipes/accepted/jfe_2025_j_jfineco_2025_104150.json",
+  "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8"
+ },
+ "methods": [
+  "did",
+  "event_study",
+  "matching",
+  "synthetic_control",
+  "return_event_study",
+  "panel_fe",
+  "other:overlap_weighting"
+ ],
+ "structure": [
+  {
+   "id": "sec1",
+   "kind": "introduction",
+   "title": "1. Introduction",
+   "pages": [
+    1,
+    3
+   ]
+  },
+  {
+   "id": "sec2",
+   "kind": "background",
+   "title": "2. Institutional details",
+   "pages": [
+    3,
+    4
+   ]
+  },
+  {
+   "id": "sec3",
+   "kind": "design",
+   "title": "3. Hypothesis development",
+   "pages": [
+    4,
+    4
+   ]
+  },
+  {
+   "id": "sec4",
+   "kind": "data",
+   "title": "4. Data and sample (4.1-4.3)",
+   "pages": [
+    5,
+    9
+   ]
+  },
+  {
+   "id": "sec5",
+   "kind": "results",
+   "title": "5.1 SLL issuance and borrower ESG performance",
+   "pages": [
+    10,
+    16
+   ]
+  },
+  {
+   "id": "sec6",
+   "kind": "results",
+   "title": "5.2 Borrowers or lenders: who pays for SLL issuance?",
+   "pages": [
+    16,
+    17
+   ]
+  },
+  {
+   "id": "sec7",
+   "kind": "mechanisms",
+   "title": "5.3 Do borrowers draw down or renegotiate SLLs?",
+   "pages": [
+    17,
+    19
+   ]
+  },
+  {
+   "id": "sec8",
+   "kind": "results",
+   "title": "5.4 Do stock investors price the value or costs of SLLs?",
+   "pages": [
+    19,
+    20
+   ]
+  },
+  {
+   "id": "sec9",
+   "kind": "conclusion",
+   "title": "6. Conclusion",
+   "pages": [
+    20,
+    21
+   ]
+  },
+  {
+   "id": "sec10",
+   "kind": "appendix",
+   "title": "Appendix A (variable definitions, contract examples, transparency classification algorithm)",
+   "pages": [
+    21,
+    28
+   ]
+  },
+  {
+   "id": "sec11",
+   "kind": "other",
+   "title": "References",
+   "pages": [
+    29,
+    30
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "id": "o1",
+   "category": "design_statement",
+   "tags": [
+    "estimand_named",
+    "design_variant_named"
+   ],
+   "statement": "States a formal panel regression equation with an SLL-borrower by post-issuance interaction as the coefficient of interest, described as a quasi difference-in-differences estimator of differential ESG-score changes for SLL borrowers versus control firms.",
+   "pages": [
+    10,
+    10
+   ],
+   "locator": "Section 5.1, Eq. (1)",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o2",
+   "category": "design_statement",
+   "tags": [
+    "identifying_assumption_explicit"
+   ],
+   "statement": "Frames the whole empirical analysis around three competing hypotheses (incentive contract, certification, greenwashing) plus an alternative supply-effect hypothesis, each generating a distinct testable prediction for post-issuance ESG performance and loan pricing rather than a single causal claim.",
+   "pages": [
+    4,
+    4
+   ],
+   "locator": "Section 3, Hypothesis development",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o3",
+   "category": "design_statement",
+   "tags": [
+    "design_variant_named",
+    "threats_discussed"
+   ],
+   "statement": "Names a stacked-DID design with cohort-interacted firm and year fixed effects as the remedy for bias from time-varying treatment effects in staggered DID settings, citing the Goodman-Bacon and Baker-Larcker-Wang critiques explicitly.",
+   "pages": [
+    12,
+    12
+   ],
+   "locator": "Section 5.1, matched-sample stacked DID discussion",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o4",
+   "category": "design_statement",
+   "tags": [
+    "parallel_trends_argued"
+   ],
+   "statement": "States that an event-time plot of yearly interaction coefficients is used to inspect pre-issuance parallel trends before interpreting the post-issuance dynamics of the same specification.",
+   "pages": [
+    13,
+    13
+   ],
+   "locator": "Section 5.1, discussion of Fig. 4",
+   "basis": "stated",
+   "applies_to": [
+    "event_study",
+    "did"
+   ]
+  },
+  {
+   "id": "o5",
+   "category": "sample_construction",
+   "tags": [
+    "data_source_named",
+    "sample_period_stated"
+   ],
+   "statement": "Loan-level sample is built from a commercial loan database's market-segment classification over a stated multi-year issuance window, with coverage cross-checked against two additional commercial data sources.",
+   "pages": [
+    5,
+    6
+   ],
+   "locator": "Section 4.1",
+   "basis": "stated",
+   "applies_to": [
+    "other:overlap_weighting"
+   ]
+  },
+  {
+   "id": "o6",
+   "category": "sample_construction",
+   "tags": [
+    "exclusions_justified",
+    "sample_period_stated"
+   ],
+   "statement": "The ESG-performance regression sample restricts control firms to those domiciled in countries with SLL issuance activity during the sample period, and extends the panel window several years before the first issuance through the most recent year of available ESG data.",
+   "pages": [
+    10,
+    10
+   ],
+   "locator": "Section 5.1, panel OLS discussion",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o7",
+   "category": "sample_construction",
+   "tags": [
+    "matching_or_linkage_described",
+    "sample_size_reported_per_table"
+   ],
+   "statement": "The stacked-DID sample is built by matching each SLL borrower to a single never-issuer control firm on country, industry and nearest pre-issuance propensity score, then stacking each matched pair over a fixed pre/post event window; per-subsample borrower and matched-firm counts are reported directly in the table notes.",
+   "pages": [
+    11,
+    12
+   ],
+   "locator": "Section 5.1; Table 5 and Table 6 notes",
+   "basis": "stated",
+   "applies_to": [
+    "did",
+    "matching"
+   ]
+  },
+  {
+   "id": "o8",
+   "category": "sample_construction",
+   "tags": [
+    "attrition_reported",
+    "data_source_named"
+   ],
+   "statement": "The credit-line drawdown analysis explains that a linked commercial database only sparsely covers the relevant variable, and reports how many of the eligible revolver borrowers could actually be matched to usable drawdown data.",
+   "pages": [
+    17,
+    17
+   ],
+   "locator": "Section 5.3, footnote 23",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o9",
+   "category": "sample_construction",
+   "tags": [
+    "exclusions_justified",
+    "matching_or_linkage_described"
+   ],
+   "statement": "The stock-reaction sample keeps only SLL issuances with an identifiable public announcement date located through a keyword-based news search and a stated date window around the loan's facility start date, following a cited news-search methodology.",
+   "pages": [
+    19,
+    19
+   ],
+   "locator": "Section 5.4; Table 11 notes",
+   "basis": "stated",
+   "applies_to": [
+    "return_event_study"
+   ]
+  },
+  {
+   "id": "o10",
+   "category": "variable_construction",
+   "tags": [
+    "outcome_definition",
+    "winsorization"
+   ],
+   "statement": "The primary outcome is a firm-year percentile-rank ESG score from a commercial ESG database, and the paper states that all continuous variables used in the analyses are winsorized at the first and ninety-ninth percentiles.",
+   "pages": [
+    5,
+    5
+   ],
+   "locator": "Section 4.1",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o11",
+   "category": "variable_construction",
+   "tags": [
+    "treatment_definition"
+   ],
+   "statement": "The treatment indicator is defined as a firm-invariant dummy for ever obtaining an SLL during the sample period, interacted with a post-issuance period dummy, rather than being coded as an issuance-year-specific timing variable; this definition is stated explicitly in the appendix variable table.",
+   "pages": [
+    21,
+    21
+   ],
+   "locator": "Appendix A.1, Table A.1",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o12",
+   "category": "variable_construction",
+   "tags": [
+    "treatment_definition"
+   ],
+   "statement": "The high/low transparency classification is built as a manually hand-coded five-point disclosure score assembled from four distinct information sources, with the exact scoring thresholds for each disclosure level spelled out step by step in an appendix subsection.",
+   "pages": [
+    22,
+    23
+   ],
+   "locator": "Appendix A.3",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o13",
+   "category": "variable_construction",
+   "tags": [
+    "outcome_definition"
+   ],
+   "statement": "Borrowing cost is operationalized in two distinct ways, an all-in-spread-drawn measure and a total-cost-of-borrowing measure that additionally incorporates fees, each explicitly following a cited prior methodology rather than being defined from scratch.",
+   "pages": [
+    16,
+    16
+   ],
+   "locator": "Section 5.2",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o14",
+   "category": "variable_construction",
+   "tags": [
+    "outcome_definition",
+    "logs_or_ihs"
+   ],
+   "statement": "Alongside the composite ESG score, the paper introduces a narrower emission score and the log of a directly measured emission-intensity variable as alternative outcome definitions, motivated by a cited concern about inconsistency across ESG rating agencies.",
+   "pages": [
+    14,
+    14
+   ],
+   "locator": "Section 5.1, discussion before Table 6",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o15",
+   "category": "specification_reporting",
+   "tags": [
+    "fe_listed_in_table",
+    "controls_progressive_columns",
+    "baseline_then_variants"
+   ],
+   "statement": "The main ESG-performance table lists a firm-characteristics control vector plus alternate fixed-effect blocks (none; firm and year; firm, country-by-year and industry-by-year) across columns for the same interaction coefficient, repeated identically for the full sample and each transparency subsample.",
+   "pages": [
+    10,
+    10
+   ],
+   "locator": "Table 4",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o16",
+   "category": "specification_reporting",
+   "tags": [
+    "n_reported",
+    "r2_reported",
+    "se_type_in_notes",
+    "cluster_level_in_notes"
+   ],
+   "statement": "Every regression table reports the number of observations and adjusted R-squared for each column, with standard errors clustered at the firm level stated in parentheses beneath coefficients and repeated in the table notes.",
+   "pages": [
+    10,
+    20
+   ],
+   "locator": "Tables 4-11",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o17",
+   "category": "specification_reporting",
+   "tags": [
+    "controls_progressive_columns",
+    "fe_listed_in_table"
+   ],
+   "statement": "The loan-pricing table varies the sample composition across columns (full sample, fee-available subsample, loan-matched subsample) rather than only adding controls, with each column's own fixed-effects block listed separately underneath the coefficient.",
+   "pages": [
+    16,
+    16
+   ],
+   "locator": "Table 8",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o18",
+   "category": "specification_reporting",
+   "tags": [
+    "other:descriptive_paired_with_regression"
+   ],
+   "statement": "Several tables present an unconditional mean-difference panel with t-statistics or p-values directly alongside a multivariate regression panel testing the same relationship, pairing descriptive and model-based evidence in one table.",
+   "pages": [
+    7,
+    18
+   ],
+   "locator": "Table 1; Table 9",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o19",
+   "category": "inference_justification",
+   "tags": [
+    "cluster_at_unit_level",
+    "no_justification_found"
+   ],
+   "statement": "All regression tables state that standard errors are clustered at the firm level, but no passage in the main text argues why firm-level clustering (rather than an alternative level such as country, industry, or lead-lender) is the appropriate choice.",
+   "pages": [
+    10,
+    20
+   ],
+   "locator": "Table notes throughout Section 5",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o20",
+   "category": "inference_justification",
+   "tags": [
+    "no_justification_found"
+   ],
+   "statement": "Despite reporting many subsample splits and successive robustness specifications with significance stars, no passage discusses a multiple-testing adjustment for the accumulated set of hypothesis tests.",
+   "pages": [
+    10,
+    20
+   ],
+   "locator": "Section 5, throughout",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o21",
+   "category": "inference_justification",
+   "tags": [
+    "other:bootstrap_se"
+   ],
+   "statement": "The synthetic-control confidence intervals are constructed from a nonparametric bootstrap procedure specific to that estimator, a distinct inference approach from the firm-clustered standard errors used in the regression tables.",
+   "pages": [
+    15,
+    15
+   ],
+   "locator": "Section 5.1, Fig. 6 notes",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o22",
+   "category": "diagnostic_reported",
+   "tags": [
+    "pre_trends_plot",
+    "in_main_text"
+   ],
+   "statement": "Pre-trends are diagnosed visually with an event-time coefficient plot spanning several years before and after issuance, described in the text as showing parallel trends prior to treatment for both transparency subgroups.",
+   "pages": [
+    13,
+    13
+   ],
+   "locator": "Fig. 4 and surrounding text",
+   "basis": "stated",
+   "applies_to": [
+    "event_study"
+   ]
+  },
+  {
+   "id": "o23",
+   "category": "diagnostic_reported",
+   "tags": [
+    "balance_table",
+    "in_main_text"
+   ],
+   "statement": "A dedicated balance table reports mean differences and t-statistics on the matching covariates for each of the three pre-issuance years separately, split by transparency subgroup, to check the quality of the propensity-score match.",
+   "pages": [
+    11,
+    12
+   ],
+   "locator": "Table 5",
+   "basis": "stated",
+   "applies_to": [
+    "matching"
+   ]
+  },
+  {
+   "id": "o24",
+   "category": "diagnostic_reported",
+   "tags": [
+    "balance_table",
+    "in_main_text"
+   ],
+   "statement": "A second balance diagnostic reports a named percent-bias statistic and a distributional-difference statistic before and after applying overlap weights, benchmarked against a cited bias definition from the matching literature.",
+   "pages": [
+    14,
+    16
+   ],
+   "locator": "Fig. 5 and Table 7 Panel A",
+   "basis": "stated",
+   "applies_to": [
+    "other:overlap_weighting"
+   ]
+  },
+  {
+   "id": "o25",
+   "category": "diagnostic_reported",
+   "tags": [
+    "attrition_analysis",
+    "in_footnote"
+   ],
+   "statement": "No standalone attrition-analysis table accompanies the drawdown subsample; the extent of data loss from the full matched sample to the drawdown-available subsample is reported only as a count in a footnote.",
+   "pages": [
+    17,
+    17
+   ],
+   "locator": "Section 5.3, footnote 23",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o26",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_specification",
+    "in_footnote"
+   ],
+   "statement": "A robustness check to log-transforming the ESG score is reported as an untabulated result described only in a footnote rather than shown in a table.",
+   "pages": [
+    10,
+    10
+   ],
+   "locator": "Section 5.1, footnote 18",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o27",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_fixed_effects",
+    "in_footnote"
+   ],
+   "statement": "A second untabulated robustness check confirms the main result survives a less stringent fixed-effects configuration without firm fixed effects, again described only in a footnote.",
+   "pages": [
+    12,
+    12
+   ],
+   "locator": "Section 5.1, footnote 19",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o28",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_estimator",
+    "in_main_text"
+   ],
+   "statement": "Robustness to confounding between treated and control firms is pursued through a sequence of distinct named estimators (propensity-score matched stacked DID, overlap-weighted regression, generalized synthetic control), each presented as its own table or figure within the same results subsection rather than compressed into a single combined robustness table.",
+   "pages": [
+    11,
+    16
+   ],
+   "locator": "Section 5.1",
+   "basis": "stated",
+   "applies_to": [
+    "matching",
+    "synthetic_control",
+    "other:overlap_weighting"
+   ]
+  },
+  {
+   "id": "o29",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_specification",
+    "in_footnote"
+   ],
+   "statement": "The renegotiation analysis notes in a footnote that using a two-year rather than one-year change in ESG score yields similar results, without a corresponding table.",
+   "pages": [
+    18,
+    18
+   ],
+   "locator": "Section 5.3, footnote 25",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o30",
+   "category": "heterogeneity_reported",
+   "tags": [
+    "split_sample",
+    "mechanism_motivated"
+   ],
+   "statement": "The paper's central heterogeneity cut is the high- versus low-transparency subgroup split, applied consistently across every outcome examined (ESG scores, emission measures, pricing, drawdowns, renegotiation, stock reactions) rather than introduced as a one-off cross-section.",
+   "pages": [
+    6,
+    20
+   ],
+   "locator": "Section 4.2 onward",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o31",
+   "category": "mechanism_evidence",
+   "tags": [
+    "intermediate_outcomes",
+    "suggestive_labelled"
+   ],
+   "statement": "Credit-line drawdown behavior and loan-renegotiation frequency are introduced explicitly as evidence meant to corroborate the interpretation of the main ESG-score results, rather than as the paper's primary outcome of interest.",
+   "pages": [
+    17,
+    17
+   ],
+   "locator": "Section 5.3, opening paragraph",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o32",
+   "category": "mechanism_evidence",
+   "tags": [
+    "intermediate_outcomes"
+   ],
+   "statement": "Stock-market reactions to issuance announcements are used as an independent, investor-side check on the certification-versus-greenwashing interpretation, separate from the firm-side ESG-score evidence in earlier sections.",
+   "pages": [
+    19,
+    19
+   ],
+   "locator": "Section 5.4",
+   "basis": "stated",
+   "applies_to": [
+    "return_event_study"
+   ]
+  },
+  {
+   "id": "o33",
+   "category": "mechanism_evidence",
+   "tags": [
+    "intermediate_outcomes",
+    "mechanism_motivated"
+   ],
+   "statement": "The relationship between year-on-year ESG-score changes and subsequent loan-renegotiation likelihood is used as a mechanism test for whether disclosed contract terms are actually acted upon, rather than merely correlated with issuance.",
+   "pages": [
+    18,
+    19
+   ],
+   "locator": "Table 10 Panel B discussion",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o34",
+   "category": "magnitude_interpretation",
+   "tags": [
+    "relative_to_mean"
+   ],
+   "statement": "The ESG-score decline estimated for low-transparency borrowers is interpreted as a share of the pre-issuance level gap between SLL and control firms rather than being left as a standalone point estimate.",
+   "pages": [
+    12,
+    12
+   ],
+   "locator": "Section 5.1, discussion after Table 4",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o35",
+   "category": "magnitude_interpretation",
+   "tags": [
+    "compared_to_literature",
+    "back_of_envelope"
+   ],
+   "statement": "The economic size of a sustainability-linked spread adjustment in the motivating institutional example is explicitly benchmarked against a comparable credit-rating-based performance-pricing contract from another borrower to argue that the pricing incentive is modest.",
+   "pages": [
+    4,
+    4
+   ],
+   "locator": "Section 2, institutional details",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o36",
+   "category": "magnitude_interpretation",
+   "tags": [
+    "sd_units"
+   ],
+   "statement": "The effect of an ESG-score improvement on renegotiation likelihood is translated into a standard-deviation-based magnitude for the change in ESG score, rather than reported only as a raw regression coefficient.",
+   "pages": [
+    18,
+    18
+   ],
+   "locator": "Section 5.3, Table 10 Panel B discussion",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o37",
+   "category": "limitation_stated",
+   "tags": [
+    "measurement"
+   ],
+   "statement": "The authors flag documented cross-rating-agency inconsistency in ESG scores as a measurement concern and respond by adding alternative, more objective outcome measures rather than relying on the composite ESG score alone.",
+   "pages": [
+    14,
+    14
+   ],
+   "locator": "Section 5.1, before Table 6",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o38",
+   "category": "limitation_stated",
+   "tags": [
+    "identification_caveat"
+   ],
+   "statement": "The paper explicitly flags the estimated ESG-score improvement for high-transparency borrowers in the matched stacked-DID specification as fragile, stating that it is not robust to the alternative, more objective outcome measures used later in the same table.",
+   "pages": [
+    13,
+    13
+   ],
+   "locator": "Section 5.1, discussion after Table 6",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o39",
+   "category": "limitation_stated",
+   "tags": [
+    "data_coverage"
+   ],
+   "statement": "The conclusion states that further research is needed as the SLL market continues to evolve, framing the findings as conditional on the market's still-developing state rather than as a settled long-run characterization.",
+   "pages": [
+    20,
+    20
+   ],
+   "locator": "Section 6, Conclusion",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o40",
+   "category": "external_validity",
+   "tags": [
+    "scaling_discussed"
+   ],
+   "statement": "The authors describe their sample as an international and comprehensive characterization of the global market, concentrated in North America and Europe, presenting this geographic breadth as support for generalizability beyond a single jurisdiction.",
+   "pages": [
+    6,
+    6
+   ],
+   "locator": "Section 4.3",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o41",
+   "category": "external_validity",
+   "tags": [
+    "time_period_specific"
+   ],
+   "statement": "The sample window for loan issuance and the ESG-score panel are both explicitly time-bounded, and the conclusion frames the SLL market as still evolving, implying the results are not asserted to generalize to a future, more mature state of the market.",
+   "pages": [
+    20,
+    20
+   ],
+   "locator": "Section 6, Conclusion",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o42",
+   "category": "presentation_convention",
+   "tags": [
+    "event_study_figure",
+    "coefficient_plot",
+    "notes_state_se"
+   ],
+   "statement": "Dynamic treatment-effect estimates around issuance are presented as coefficient/event-study figures, with each figure's note stating the underlying estimating equation and how the plotted confidence interval was constructed.",
+   "pages": [
+    13,
+    15
+   ],
+   "locator": "Fig. 4 and Fig. 6",
+   "basis": "stated",
+   "applies_to": [
+    "event_study",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o43",
+   "category": "presentation_convention",
+   "tags": [
+    "stars_used"
+   ],
+   "statement": "Every regression table uses an identical ten/five/one percent significance-star convention, restated word for word in each table's own notes rather than defined once for the whole paper.",
+   "pages": [
+    7,
+    20
+   ],
+   "locator": "Tables 1-11, notes",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o44",
+   "category": "presentation_convention",
+   "tags": [
+    "appendix_tables_numbered_a"
+   ],
+   "statement": "A dedicated appendix table lists every variable's definition and originating data source in one consolidated place rather than scattering definitions through the main text.",
+   "pages": [
+    21,
+    22
+   ],
+   "locator": "Appendix Table A.1",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o45",
+   "category": "presentation_convention",
+   "tags": [
+    "summary_stats_table"
+   ],
+   "statement": "A hand-collected disclosure-quality summary table reports descriptive statistics on the transparency classification itself, presented before any regression results are shown.",
+   "pages": [
+    9,
+    9
+   ],
+   "locator": "Table 3",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o46",
+   "category": "writing_structure",
+   "tags": [
+    "results_previewed_in_intro"
+   ],
+   "statement": "The introduction previews the paper's main empirical findings, selection at issuance, absence of ex-post improvement, deterioration for low-transparency borrowers, and pricing and stock-reaction results, in narrative form well before any table is presented.",
+   "pages": [
+    1,
+    2
+   ],
+   "locator": "Section 1, Introduction",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o47",
+   "category": "writing_structure",
+   "tags": [
+    "design_before_data"
+   ],
+   "statement": "Institutional background and a formal hypothesis-development section are placed before the data section, separating conceptual framing of the three competing hypotheses from the empirical description of the sample.",
+   "pages": [
+    3,
+    4
+   ],
+   "locator": "Sections 2-3",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o48",
+   "category": "writing_structure",
+   "tags": [
+    "other:robustness_integrated_in_main_results"
+   ],
+   "statement": "Robustness to alternative econometric approaches (matching, overlap-weighting, synthetic control) is integrated within the main results subsection rather than isolated into a separate stand-alone robustness section.",
+   "pages": [
+    11,
+    16
+   ],
+   "locator": "Section 5.1",
+   "basis": "inferred",
+   "applies_to": [
+    "matching",
+    "synthetic_control",
+    "other:overlap_weighting"
+   ]
+  },
+  {
+   "id": "o49",
+   "category": "writing_structure",
+   "tags": [
+    "contribution_paragraph"
+   ],
+   "statement": "The introduction contains an explicit contribution paragraph laying out three distinct literature contributions before a roadmap of the empirical sections.",
+   "pages": [
+    2,
+    3
+   ],
+   "locator": "Section 1, Introduction",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o50",
+   "category": "writing_structure",
+   "tags": [
+    "mechanisms_after_main"
+   ],
+   "statement": "Mechanism-oriented analyses (drawdowns, renegotiation, stock reactions) are ordered as subsections following the main ESG-performance result, moving from what changes on the borrower's ESG side to who pays and how contracts and markets react.",
+   "pages": [
+    16,
+    20
+   ],
+   "locator": "Sections 5.2-5.4",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o51",
+   "category": "replication_statement",
+   "tags": [
+    "code_public",
+    "data_public",
+    "replication_package_cited"
+   ],
+   "statement": "A data-availability statement names deposited pseudo data and code on a public data repository as the replication material, referenced both in the article-info block on the first page and in a dedicated data-availability section before the references.",
+   "pages": [
+    1,
+    23
+   ],
+   "locator": "Article info block; Data availability section",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o52",
+   "category": "data_access",
+   "tags": [
+    "data_restricted"
+   ],
+   "statement": "The deposited replication material is described as pseudo data, an implicit signal that the original underlying commercial data cannot itself be redistributed even though code and a stand-in dataset are shared publicly.",
+   "pages": [
+    23,
+    23
+   ],
+   "locator": "Data availability section",
+   "basis": "inferred",
+   "applies_to": [
+    "did"
+   ]
+  },
+  {
+   "id": "o53",
+   "category": "data_access",
+   "tags": [
+    "commercial",
+    "administrative"
+   ],
+   "statement": "Distinct commercial and administrative data providers are named separately for different variables in the appendix variable table, including loan-level data, ESG and emission scores, directly measured emissions, financial statement variables, credit-line drawdowns, stock returns, and news search results.",
+   "pages": [
+    21,
+    22
+   ],
+   "locator": "Appendix Table A.1",
+   "basis": "stated",
+   "applies_to": [
+    "did"
+   ]
+  }
+ ],
+ "concordance": [
+  {
+   "item": "estimator",
+   "paper_says": "Identification combines a panel OLS quasi-DID, a propensity-score matched stacked DID, overlap-weighted regressions, and a generalized synthetic control estimator across Sections 5.1",
+   "card_shows": "d1 records only method=event_study with role, variant, treatment and classification_basis all unknown",
+   "status": "paper_only",
+   "pages": [
+    10,
+    16
+   ],
+   "card_ref": "designs.d1.method"
+  },
+  {
+   "item": "fixed_effects",
+   "paper_says": "Table 4 col. 1/4/7 lists Country x Year FE and Industry x Year FE as the fixed-effects configuration",
+   "card_shows": "s1.fixed_effects = [id_cyear, id_indyear] from tab4.do line 39",
+   "status": "agree",
+   "pages": [
+    10,
+    10
+   ],
+   "card_ref": "specifications.s1.fixed_effects"
+  },
+  {
+   "item": "cluster_level",
+   "paper_says": "Table 4 notes state standard errors clustered at the firm level",
+   "card_shows": "s1.se.cluster_level = [id_firm]",
+   "status": "agree",
+   "pages": [
+    10,
+    10
+   ],
+   "card_ref": "specifications.s1.se.cluster_level"
+  },
+  {
+   "item": "fixed_effects",
+   "paper_says": "Table 6 notes list Firm x Cohort FE and Year x Cohort FE for the stacked-DID event-study specification underlying Fig. 4",
+   "card_shows": "s2.fixed_effects = [id_firmpair, id_yearpair] from fig4.do line 15",
+   "status": "agree",
+   "pages": [
+    12,
+    13
+   ],
+   "card_ref": "specifications.s2.fixed_effects"
+  },
+  {
+   "item": "diagnostic",
+   "paper_says": "Text states that the event-study plot shows parallel pre-issuance trends for both transparency subgroups before treatment",
+   "card_shows": "diagnostics x1 (pretrend_test) has status=unknown, only noting that pre-period dummies are included in the regression",
+   "status": "paper_only",
+   "pages": [
+    13,
+    13
+   ],
+   "card_ref": "diagnostics.x1.status"
+  },
+  {
+   "item": "diagnostic",
+   "paper_says": "Table 5 reports covariate balance (assets, leverage, ROA, Q, ESG score) with differences and t-statistics for each pre-issuance year, separately by transparency group",
+   "card_shows": "diagnostics x2 (balance) status=observed, describing a clttest of size, totdebt, roa, q stratified by post-treatment period in tab5.do",
+   "status": "agree",
+   "pages": [
+    11,
+    12
+   ],
+   "card_ref": "diagnostics.x2"
+  },
+  {
+   "item": "comparison_group",
+   "paper_says": "Comparison group is explicitly defined as never-SLL-issuer control firms, matched by propensity score on country, industry and year in the stacked-DID analyses, or included as the broader same-country control pool in the panel OLS",
+   "card_shows": "s1.comparison_group and s2.comparison_group are both null",
+   "status": "paper_only",
+   "pages": [
+    10,
+    12
+   ],
+   "card_ref": "specifications.s1.comparison_group"
+  },
+  {
+   "item": "data_source",
+   "paper_says": "Appendix Table A.1 attributes variables to named commercial sources: DealScan, LSEG/Refinitiv ESG, S&P Trucost Environmental, Worldscope, CapitalIQ, Compustat, Factiva",
+   "card_shows": "data record panel_firmyear has type=null, access=unknown, source_hint=null, evidenced only by a raw Stata use statement",
+   "status": "paper_only",
+   "pages": [
+    21,
+    22
+   ],
+   "card_ref": "data.panel_firmyear.source_hint"
+  },
+  {
+   "item": "weights",
+   "paper_says": "Section 5.1 and Table 7 describe overlap-weighted regressions using propensity scores as a weighting mechanism on the full sample",
+   "card_shows": "Neither s1 nor s2 records a weighting specification, and no specification for the overlap-weight regression scripts appears in the card at all (only 9 of 26 pipeline scripts were read)",
+   "status": "paper_only",
+   "pages": [
+    14,
+    16
+   ],
+   "card_ref": "specifications.s1.weights",
+   "note": "Card coverage is partial; the overlap-weighting and synthetic-control scripts were not among the files read."
+  },
+  {
+   "item": "robustness",
+   "paper_says": "Paper reports multiple named robustness checks: log-transformed ESG score, alternative fixed-effect configuration, alternative emission-based outcomes, overlap-weighting, and generalized synthetic control",
+   "card_shows": "card robustness array is empty",
+   "status": "paper_only",
+   "pages": [
+    10,
+    16
+   ],
+   "card_ref": "robustness"
+  },
+  {
+   "item": "outputs",
+   "paper_says": "Paper presents eleven main numbered tables and six main numbered figures plus an appendix table and five appendix figures",
+   "card_shows": "outputs.tables and outputs.figures are both empty arrays",
+   "status": "paper_only",
+   "pages": [
+    7,
+    22
+   ],
+   "card_ref": "outputs.tables"
+  }
+ ],
+ "gaps": [
+  "No passage in the main text justifies clustering standard errors at the firm level specifically (versus country, industry, or lead-lender level); the choice appears only in table notes without discussion.",
+  "No preregistration, pre-analysis plan, or IRB/ethics statement is present anywhere in the text; the study uses secondary administrative and commercial data with no apparent human-subjects component, so this category was not found rather than overlooked.",
+  "Main regression tables (e.g., Tables 4, 6, 8) report N and adjusted R2 but do not include a row for the mean of the dependent variable, so magnitude benchmarking against the sample mean happens only in prose, not in the tables themselves.",
+  "No passage discusses a multiple-testing or multiple-comparisons adjustment despite many subgroup and successive robustness specifications being reported with significance stars.",
+  "The paper's main text and appendix never name the statistical software or estimation package used; this is only recoverable from the separately reviewed replication code (Stata, reghdfe).",
+  "The recipe card's coverage is partial (9 of 26 pipeline scripts read), so several paper-stated robustness and diagnostic procedures (overlap-weighting, synthetic control, drawdown and renegotiation regressions, CAR event study) have no corresponding card record to compare against."
+ ],
+ "reading": {
+  "pages_read": [
+   [
+    1,
+    30
+   ]
+  ],
+  "coverage": "full",
+  "note": "Read the full extracted text sequentially from the title page through the reference list (pages 1-30), including the introduction, institutional background, hypothesis development, data section, all main-text results subsections (5.1-5.4), conclusion, and Appendix A (variable definitions, contract-term examples, transparency-classification algorithm, and the data-availability statement). Appendix figures A.1-A.5 (pages 24-28) are scanned public-announcement screenshots reproduced as image captions in the extracted text with no additional analytic content beyond what Section 4.2/Appendix A.3 already describe; the reference list (pages 29-30) was read only to confirm it contained no additional methods text. No Internet Appendix / online-only material was available in the supplied text (online_appendix_not_available)."
+ }
+}

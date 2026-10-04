@@ -1,0 +1,1127 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jpe_2025_736212",
+ "journal": "JPE",
+ "year": 2025,
+ "doi": "10.1086/736212",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:40:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JPE/metadata/articles.csv",
+   "sha256": "0ede2238a117d9aee4e58b32cf05ae7120ca1c154cf1cb330e8a03a046490e0a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+    "sha256": "09ce05acbfd012ffeadf5b9f6a61936eee1448a02ef99ba4be0f45f61fb1e8fb",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      87
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/01 dependency summary stats.do",
+    "sha256": "eeb6d9232d25a8f4e74e02711e87442b2f62972f7560109d49558ab17bfbb799",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      108
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/02 balance_tables.do",
+    "sha256": "708686f282364dde508fef101da81d6da43c5adb70a288ecef9458c452141ba3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+    "sha256": "74b8b92d99fd0e4a315aec4015604ee807d78068ef20bd574b6a19ec2c902e44",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      358
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+    "sha256": "0689050717d98f41cb207edb8afae9d2286ac5190adacba50b73e8ee06ed8b34",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      400
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/05 worker_teammate_regressions.do",
+    "sha256": "a9ea30d9217864ce001f28ab839aa532fef81cbc9a1bbb638869498aabae3805",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Prep/01 prep balance.do",
+    "sha256": "c48a080ce42e6442eca2da9376be507fd4596aff14a9ba8c11d139a5cf5a617c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Read master script and main analysis files for line-level and line-section-level regressions. Paper is an RCT in factory setting examining effects of religious composition on team production and worker behavior. Treatment is assignment of religious composition (mixed vs homogeneous) to production teams."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do"
+  ],
+  "directory_layout": "Prep (data cleaning) and Analysis (estimation) branches; code organized by analysis unit (line-level, section-level, worker-level)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 21,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      195,
+      195
+     ],
+     "snippet": "bootstrap, seed(17) cluster(line_team) strata(line)",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "global projectfolder \"<REPLICATION_ROOT>\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "linelevel_data",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "production line-day",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      36,
+      36
+     ],
+     "snippet": "use \"$Data/Final/linelevel_data.dta\", clear",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "linesectionlevel_data",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "production line-section-day",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "use \"$Data/Final/linesectionlevel_data.dta\"",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "baseline_raw",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "individual worker",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Prep/01 prep balance.do",
+     "lines": [
+      28,
+      28
+     ],
+     "snippet": "use \"$Data/Original/baseline_raw.dta\", clear",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/dataverse_DF8XXE/JPE_Replication_Code_Prep/01 prep balance.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+      "lines": [
+       61,
+       69
+      ],
+      "snippet": "if $Preparation == 1 {",
+      "supports": [
+       "stage"
+      ]
+     },
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+      "lines": [
+       62,
+       68
+      ],
+      "snippet": "do \"$Prep/01 prep balance.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+      "lines": [
+       72,
+       85
+      ],
+      "snippet": "if $Analyses == 1 {",
+      "supports": [
+       "stage"
+      ]
+     },
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+      "lines": [
+       75,
+       75
+      ],
+      "snippet": "do \"$Analysis/03 line_level_regressions.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Two main phases: Preparation (data cleaning) and Analyses. Both phases can be toggled via global switches in master script.",
+  "sample_restrictions": [
+   {
+    "description": "Analysis restricted to workers surveyed at baseline who match with production records",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+      "lines": [
+       21,
+       21
+      ],
+      "snippet": "keep if _merge == 3 /* Egg Room and Maida (Flour) Room do not merge because no production ratings for them */",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": [
+   {
+    "description": "Merge line-section level data with section-level characteristics (dependency, etc.)",
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+      "lines": [
+       18,
+       19
+      ],
+      "snippet": "merge m:1 Line_R team new_section using \"$Data/Original/Section_Aggregates.dta\"",
+      "supports": [
+       "description"
+      ]
+     }
+    ],
+    "spec_ids": []
+   }
+  ]
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "main",
+   "method": "rct",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "religious composition of production team (mixed vs. homogeneous)",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+     "lines": [
+      19,
+      19
+     ],
+     "snippet": "merge m:1 Line_R team new_section using \"$Data/Original/Section_Aggregates.dta\"",
+     "supports": [
+      "method",
+      "treatment"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+     "lines": [
+      4,
+      5
+     ],
+     "snippet": "Master do file for Ghosh (2024):\n      Religious Divisions and Production Technology --",
+     "supports": [
+      "role"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "doy"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "line_team"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+      "lines": [
+       42,
+       42
+      ],
+      "snippet": "areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Main outcome: log output in pieces",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      40,
+      40
+     ],
+     "snippet": "* Main Table (Line-level Output) - Table 2",
+     "supports": [
+      "role",
+      "estimator",
+      "command",
+      "output_ids"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "command",
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "    areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg ln_productioncfc HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "doy"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "line_team"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+      "lines": [
+       57,
+       57
+      ],
+      "snippet": "areg ln_productioncfc HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Alternative output measure: log output in boxes (completed filled containers)",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      57,
+      57
+     ],
+     "snippet": "areg ln_productioncfc HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "estimator",
+      "command",
+      "output_ids",
+      "fixed_effects"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      57,
+      57
+     ],
+     "snippet": "areg ln_productioncfc HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      57,
+      57
+     ],
+     "snippet": "areg ln_productioncfc HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "command"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg rating mixed  i.line_section i.Shift, absorb(doy) cluster(line_section_team)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "doy"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "line_section_team"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+      "lines": [
+       55,
+       55
+      ],
+      "snippet": "areg rating mixed  i.line_section i.Shift, absorb(doy) cluster(line_section_team)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Supervisor quality rating of team output",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "areg rating mixed  i.line_section i.Shift, absorb(doy) cluster(line_section_team)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg rating c.mixed#i.dep  i.line_section i.Shift, absorb(doy) cluster(line_section_team)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "doy"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "line_section_team"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+      "lines": [
+       61,
+       61
+      ],
+      "snippet": "areg rating c.mixed#i.dep  i.line_section i.Shift, absorb(doy) cluster(line_section_team)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Interaction: mixing effect conditional on section dependency (HD or LD)",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+     "lines": [
+      61,
+      61
+     ],
+     "snippet": "areg rating c.mixed#i.dep  i.line_section i.Shift, absorb(doy) cluster(line_section_team)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Table A.1 examines balance on tenure, muslim coworkers share, orders, communication, age, schooling, trust, altruism, inter-religious contact",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "attrition",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/02 balance_tables.do",
+    "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do"
+   ],
+   "note": "Merge notes indicate some sections excluded (Egg Room, Maida Room) but full attrition analysis not located in examined files",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+      "lines": [
+       86,
+       86
+      ],
+      "snippet": "esttab A1 A2 using \"$Output/Tables/tables_maina\", style(tex) replace booktabs ///",
+      "supports": [
+       "package",
+       "format",
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "Output/Tables/tables_rating_balance_maina.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/02 balance_tables.do",
+      "lines": [
+       101,
+       101
+      ],
+      "snippet": "esttab A1 A2 A3 A4 A5 A6 A7 A8 A9 using \"$Output/Tables/tables_rating_balance_maina.tex\", ///",
+      "supports": [
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+      "lines": [
+       103,
+       103
+      ],
+      "snippet": "esttab A1 A2 A3 A4 using \"$Output/Tables/tables_rating_pooledmaina\", style(tex) replace booktabs ///",
+      "supports": [
+       "package",
+       "format",
+       "spec_ids"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": null,
+    "path": "Output/Figures/DD_Dist.pdf",
+    "format": null,
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/01 dependency summary stats.do",
+      "lines": [
+       70,
+       71
+      ],
+      "snippet": "hist w_int_mins, bin(15) frequency ytitle(\"Number of Production Sections\") xtitle(\"Direct Dependency: Minutes of continuous coordination (out of 10)\") \ngraph export \"$Output/Figures/DD_Dist.pdf\", as(p",
+      "supports": [
+       "path"
+      ]
+     }
+    ],
+    "package": null,
+    "types": []
+   },
+   {
+    "id": "f2",
+    "output_ref": null,
+    "path": "Output/Figures/Event_Diag_AO1_BW.pdf",
+    "format": null,
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+      "lines": [
+       242,
+       242
+      ],
+      "snippet": "graph export \"$Output/Figures/Event_Diag_AO1_BW.pdf\", as(pdf) replace",
+      "supports": [
+       "path"
+      ]
+     }
+    ],
+    "package": null,
+    "types": []
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "areg",
+   "kind": "builtin",
+   "usage": "called",
+   "purpose": "Absorb fixed effects in linear regression",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "areg"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)",
+     "supports": [
+      "usage",
+      "purpose",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/04 linesection_level_regressions.do",
+     "lines": [
+      315,
+      315
+     ],
+     "snippet": "reghdfe rating mixed if dep == 1, absorb(doy i.line_section i.Shift) cluster(line_section_team)",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "boottest",
+   "kind": "command",
+   "usage": "called",
+   "purpose": "Wild cluster bootstrap for robust inference",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "boottest"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      47,
+      47
+     ],
+     "snippet": "boottest HD_Mixed, boottype(wild)",
+     "supports": [
+      "usage",
+      "purpose",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ritest",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ritest"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      269,
+      269
+     ],
+     "snippet": "ritest HD_Mixed _b[1.HD_Mixed], reps(2000) cluster(line_team) seed(9393) kdensityplot ///",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "estout"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      69,
+      69
+     ],
+     "snippet": "estout A1 A2 using \"$Output/Tables/tables_main\", style(tex) replace",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "binsreg",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "binsreg"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      347,
+      347
+     ],
+     "snippet": "binsreg ln_output bin_int_days, absorb(line Shift)",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "parmest",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "parmest"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      198,
+      198
+     ],
+     "snippet": "parmest, level(90, 95) fast",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "coefplot",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "coefplot"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "ssc install coefplot",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global macros for directory structure: $projectfolder, $Code, $Prep, $Analysis, $Data, $Output",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "global projectfolder \"<REPLICATION_ROOT>\"",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Specification naming: areg models stored as A1, A2, B1, B2, etc.; conditional on local switch variables",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code_Analysis/03 line_level_regressions.do",
+     "lines": [
+      42,
+      43
+     ],
+     "snippet": "areg ln_output HD_Mixed i.line i.Shift, absorb(doy) cluster(line_team)\n\teststo A1",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Separate Prep and Analysis branches; Preparation switched by global $Preparation, Analyses by global $Analyses",
+   "evidence": [
+    {
+     "path": "code/dataverse_DF8XXE/JPE_Replication_Code/00 main.do",
+     "lines": [
+      57,
+      60
+     ],
+     "snippet": "global Preparation     1",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rct"
+  ],
+  "fields": []
+ }
+}

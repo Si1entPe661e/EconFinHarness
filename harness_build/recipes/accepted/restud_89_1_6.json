@@ -1,0 +1,691 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_89_1_6",
+ "journal": "ReStud",
+ "year": 2022,
+ "doi": "10.1093/restud/rdab030",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table1.do",
+    "sha256": "ab9b698b22be823b13223e30ccb1676920e50419a8fbb9e782fba1f28e5b71b1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      119
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table2.do",
+    "sha256": "cf2397beb078180eb87900f47b4297ea19da5efc5ae9cccce1106a0cb9026b85",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      16
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table3.do",
+    "sha256": "6414efbec568021d1429b1fe50a4ce753001575ee854de1a76d16a50d5a4ee97",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      48
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+    "sha256": "c253781a440fd63f4b0937e2f656d53fb0fbe2601f58cc1a52848b23f43c3a6f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      87
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Transformation.do",
+    "sha256": "c48961a3fe835573d2326348676b01087425816620e9e196084e706c9fbc72ee",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      58
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/build_data.do",
+    "sha256": "7c2c5234c0d6ecf0428de12e5eceadc2bc08029b1a53ae893d67b069eec53505",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      200,
+      300
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/iv.R",
+    "sha256": "6d8ff2203e52856a54b01bec83908268ad4a6690235cd125a61b7512885b42ee",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/master_adh.do",
+    "sha256": "d55f15b246b3ef9785298430153ce01bfb75946851474c78a4f8dc6cb18d85f5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      24
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/ssaggregate.ado",
+    "sha256": "7d25e8ff583694611ceeca632fa66d29f03ef645155f17efde5142654ce39901",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      174
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/ssiv_null_imposed.ado",
+    "sha256": "23b86d3e5ec4e46d41772abebdffeb502a8bd9aea39173c264818d1d58d89120",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      75
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/weakssivtest.ado",
+    "sha256": "d074279f5b32e5234aad45eb1fe0ab700de89c0970be16da72a79ff2c9489981",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "ADH main application. Traced master entry, data build, Transformation (equivalence via ssaggregate), Table4_C1_C2_C4 (main IV). 11 control variants, 4 outcomes."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/master_adh.do"
+  ],
+  "directory_layout": "ADH/Code and Raw subdirectories",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 12,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "unknown",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "shift_share",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [
+    "y",
+    "d_sh_unempl",
+    "d_sh_nilf",
+    "d_avg_lnwkwage"
+   ],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Transformation.do",
+     "lines": [
+      2,
+      4
+     ],
+     "snippet": "local outcomes y d_sh_unempl d_sh_nilf d_avg_lnwkwage",
+     "supports": [
+      "outcomes"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Transformation.do",
+     "lines": [
+      27,
+      28
+     ],
+     "snippet": "ssaggregate `outcomes' z x x90_ x00_ zAUS-zNZL [aw=wei], ///",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": "ivreg2",
+   "formula_or_call": "ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus) partial(`controls`r'')",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`v'",
+    "`controls`r''",
+    "`r'"
+   ],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aw=wei",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "clus"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+      "lines": [
+       41,
+       41
+      ],
+      "snippet": "\t\tqui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus) partial(`controls`r'')",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Conventional commuting zone-level 2SLS used for comparison with shift-share method. Reported in Table 4 Columns 1-7 and Table C2 with conventional SE.",
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "qui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus)",
+     "supports": [
+      "package"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "\t\tqui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus) partial(`controls`r'')",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 `v'`r' (x`r'=g) `indcontrols`r'' `iff' [aw=s_n], cluster(sic3)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`v'",
+    "`r'",
+    "`indcontrols`r''",
+    "`iff'",
+    "`s_n'"
+   ],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aw=s_n",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sic3"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+      "lines": [
+       70,
+       70
+      ],
+      "snippet": "\t\tif (`r'!=7) eststo : ivreg2 `v'`r' (x`r'=g) `indcontrols`r'' `iff' [aw=s_n], cluster(sic3) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main shift-share 2SLS specification: industry-level regression after residualization by ssaggregate. This is the key methodological contribution showing equivalence to CZ-level under shift-share design. Reported in Table 4 Columns 1-7 and Table C2.",
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      70,
+      70
+     ],
+     "snippet": "if (`r'!=7) eststo : ivreg2 `v'`r' (x`r'=g) `indcontrols`r''",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      70,
+      70
+     ],
+     "snippet": "\t\tif (`r'!=7) eststo : ivreg2 `v'`r' (x`r'=g) `indcontrols`r'' `iff' [aw=s_n], cluster(sic3) ",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 x`r' (z`r'=g) `indcontrols`r'' `iff' [aw=s_n], cluster(sic3)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`r'",
+    "`z`r''",
+    "`indcontrols`r''",
+    "`iff'"
+   ],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aw=s_n",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sic3"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+      "lines": [
+       65,
+       65
+      ],
+      "snippet": "\t\tif (`r'!=7) ivreg2 x`r' (z`r'=g) `indcontrols`r'' `iff' [aw=s_n], cluster(sic3) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "First-stage regression documenting instrument strength (F-statistic). Used to compute SSIV F-test statistic for weak IV testing as reported in Table 4.",
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      65,
+      65
+     ],
+     "snippet": "if (`r'!=7) ivreg2 x`r' (z`r'=g) `indcontrols`r''",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      64,
+      65
+     ],
+     "snippet": "* produce and save SSIV F-stat\n\t\tif (`r'!=7) ivreg2 x`r'",
+     "supports": [
+      "role"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      65,
+      65
+     ],
+     "snippet": "\t\tif (`r'!=7) ivreg2 x`r' (z`r'=g) `indcontrols`r'' `iff' [aw=s_n], cluster(sic3) ",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": null,
+   "command": "ssiv_null_imposed",
+   "package": null,
+   "formula_or_call": "ssiv_null_imposed `iff', range(-4 4) vce(cluster(sic3))",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`iff'",
+    "`v'",
+    "`r'",
+    "`indcontrols`r'''",
+    "`v'`r''",
+    "`x`r''"
+   ],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sic3"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+      "lines": [
+       59,
+       59
+      ],
+      "snippet": "\t\tif (`r'!=7) ssiv_null_imposed `iff', range(-4 4) vce(cluster(sic3)) controls(`indcontrols`r'') y(`v'`r') x(x`r') ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Null-imposed confidence interval for robust weak IV inference following Adao-Kolesar-Morales (QJE 2019). Reported in Table 4 and Table C2 as robustness to weak instruments in shift-share design.",
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      59,
+      60
+     ],
+     "snippet": "if (`r'!=7) ssiv_null_imposed `iff', range(-4 4) vce(cluster(sic3))",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "role"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Reported in Table 4 as SSIV F-statistic from s3 first-stage regression",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      70,
+      70
+     ],
+     "snippet": "ivreg2",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+     "lines": [
+      71,
+      71
+     ],
+     "snippet": "ivreghdfe",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ssaggregate",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ssaggregate"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Transformation.do",
+     "lines": [
+      27,
+      28
+     ],
+     "snippet": "ssaggregate `outcomes' z x x90_ x00_ zAUS-zNZL [aw=wei], ///",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ssiv_null_imposed",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": "Null-imposed confidence interval for weak IV inference",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ssiv_null_imposed"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/ssiv_null_imposed.ado",
+     "lines": [
+      1,
+      2
+     ],
+     "snippet": "* Produces confidence intervals with the null imposed",
+     "supports": [
+      "purpose"
+     ]
+    },
+    {
+     "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/ssiv_null_imposed.ado",
+     "lines": [
+      4,
+      5
+     ],
+     "snippet": "program define ssiv_null_imposed, rclass",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "shift_share"
+  ],
+  "fields": []
+ }
+}

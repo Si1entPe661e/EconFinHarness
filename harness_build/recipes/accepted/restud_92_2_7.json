@@ -1,0 +1,597 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_92_2_7",
+ "journal": "ReStud",
+ "year": 2025,
+ "doi": "10.1093/restud/rdae031",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-07T21:15:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/README.md",
+    "sha256": "bfd2a2ae4775ce2d7b4a12075897d02e6ee94949a7e7ac4cbac6bedfc051ff3a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      156
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/run_code.sh",
+    "sha256": "41ac747e6c672b09ec1e39164c04b4c41d6352008b811c291023a66a79c19903",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      19
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_1_cleaning.do",
+    "sha256": "69dd5bc5ad228c4127b521bfd10b2ad5611a8d8a792b73ea9b1cd7c873bb4e51",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_2_summarystats.do",
+    "sha256": "0e81cfbb05d2f29fd4169ca756f3911458c90cce2affcb7da58dd99e43d00d83",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+    "sha256": "b740f5b18c7c3723bffed3c0d48de8aac94d26755281e1ae029b29c3c32bf563",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      264
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_4_environment.m",
+    "sha256": "5739eb7f900fd3faccfadb862c8d8a059723d3e133c4e42f2677c2840c2563e5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      49
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+    "sha256": "92c43504cdeb1161114de9227e48443bbf15df1d8cc654713784521958091c93",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      144
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_6_counterfactuals.m",
+    "sha256": "114a89774f3d92db6b5e0a4f2b0b428a5a20a926706dd968948efec0c93a1744",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/step_7_pictures.m",
+    "sha256": "eafac083b82e8471d4a53f212fef8fc69867e659a20e2d28c6c77cd1e595248e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_bids.m",
+    "sha256": "147611c3fae89644eecb6852158a24e88d9ade6db87e27d4674e55f2e6b10405",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      34
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_likelihood.m",
+    "sha256": "a57aa364f4ed8f6e551618fc7f9b488df5e1c5e43dfb8be607010c531aa42169",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      20
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_sim_distribution.m",
+    "sha256": "c8238c17dd245e60d3749bbaaace4cab6331e1d1fd7e936d321ff79dc5351899",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      70
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Repository contains Stata and MATLAB replication code for structural estimation of dynamic auction demand. Data files are proprietary and not included. Budget allows coverage of main pipeline and key structural specifications."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "MATLAB",
+   "Shell"
+  ],
+  "master_scripts": [
+   "code/zenodo_10416565/replication_package/replication_package/code/run_code.sh"
+  ],
+  "directory_layout": "Zenodo replication package with code/ containing Stata and MATLAB scripts, supporting functions, and step-numbered analysis files",
+  "readme_present": true,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 22,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "relative",
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/README.md",
+     "lines": [
+      48,
+      53
+     ],
+     "snippet": "seed",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/code/step_1_cleaning.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "local datadir ../data",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": "transactions",
+   "access": "proprietary",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/README.md",
+     "lines": [
+      1,
+      5
+     ],
+     "snippet": "proprietary",
+     "supports": [
+      "access",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "transactions",
+   "access": "proprietary",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/README.md",
+     "lines": [
+      1,
+      5
+     ],
+     "snippet": "proprietary",
+     "supports": [
+      "access",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/zenodo_10416565/replication_package/replication_package/code/step_1_cleaning.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/code/run_code.sh",
+      "lines": [
+       6,
+       6
+      ],
+      "snippet": "$STATA_exe -b do step_1_cleaning.do ;",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "estimation",
+    "scripts": [
+     "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/code/run_code.sh",
+      "lines": [
+       8,
+       8
+      ],
+      "snippet": "$STATA_exe -b do step_3_firststage.do ;",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p5",
+    "stage": "estimation",
+    "scripts": [
+     "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/code/run_code.sh",
+      "lines": [
+       11,
+       11
+      ],
+      "snippet": "$MATLAB_exe -batch \"run('step_5_estimation.m')\"",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Sequential execution specified in run_code.sh; dependencies enforced by data file I/O across Stata/MATLAB stages",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "main",
+   "method": "structural_estimation",
+   "variant": "dynamic_auction_demand",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/code/fn_bids.m",
+     "lines": [
+      30,
+      30
+     ],
+     "snippet": "optimal bid",
+     "supports": [
+      "method",
+      "role",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "mle",
+   "command": "fminunc",
+   "package": null,
+   "formula_or_call": "[est2,~,~,~,~,simulacion_hessian] = ...\n        fminunc(@(theta) f_lik(theta,H_simulacion,type_simulacion,ftype_simulacion), est1, optimset('MaxIter',10^9,'MaxFunEvals',10^9,'TolFun',10e-9,'TolX',10e-9,'Algorithm','quasi-newton'));",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "bootstrap",
+    "cluster_level": null,
+    "details": "Combined ML Hessian and 1000 bootstrap replications; theta_se = (ml_se^2 + boot_se^2)^(1/2)",
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+      "lines": [
+       124,
+       124
+      ],
+      "snippet": "bootstrap",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "Two-stage procedure: first estimation at starting values, then re-estimation at initial estimates to refine",
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+     "lines": [
+      66,
+      66
+     ],
+     "snippet": "fminunc",
+     "supports": [
+      "estimator",
+      "command",
+      "role"
+     ]
+    },
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/code/step_5_estimation.m",
+     "lines": [
+      80,
+      81
+     ],
+     "snippet": "[est2,~,~,~,~,simulacion_hessian] = ...\n        fminunc(@(theta) f_lik(theta,H_simulacion,type_simulacion,ftype_simulacion), est1, optimset('MaxIter',10^9,'MaxFunEvals',10^9,'TolFun',10e-9,'TolX',10e-",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "gmm",
+   "command": "gmm",
+   "package": null,
+   "formula_or_call": "gmm (bid - {k}*{theta}) (bid^2 - ({k}*{theta})^2 - X[`i',1]^2 - {k}*{theta}^2) if state==`i' & rank ==1, winitial(identity) from(k tmp_k theta tmp_theta) technique(dfp)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "state"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+      "lines": [
+       215,
+       216
+      ],
+      "snippet": "sqrt(v[1,1])\n\tmat def A[2*`i',2] = sqrt(v[2,2])",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": "Winning bids (rank==1) and second-highest bids (rank==2) by state (product)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "First-stage estimation of structural parameters for demand model; uses method of moments on bid distributions",
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+     "lines": [
+      210,
+      210
+     ],
+     "snippet": "gmm (bid - {k}*{theta}) (bid^2 - ({k}*{theta})^2 - X[`i',1]^2 - {k}*{theta}^2) if state==`i' & rank ==1, winitial(identity) from(k tmp_k theta tmp_theta) technique(dfp)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "fixed_effects",
+      "role",
+      "sample",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "cox_hazard",
+   "command": "ml model d0",
+   "package": null,
+   "formula_or_call": "ml model d0 censgeo (bidder_bids censored = )",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "iid",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+      "lines": [
+       65,
+       66
+      ],
+      "snippet": "ml model d0 censgeo (bidder_bids censored = )\neststo t2: ml maximize",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Bootstrapped 1000 times with cluster sampling at bidder level",
+   "evidence": [
+    {
+     "path": "code/zenodo_10416565/replication_package/replication_package/code/step_3_firststage.do",
+     "lines": [
+      65,
+      66
+     ],
+     "snippet": "ml model d0 censgeo (bidder_bids censored = )\neststo t2: ml maximize",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "role",
+      "fixed_effects"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "objects/output_estimates.tex",
+    "package": null,
+    "format": "tex",
+    "spec_ids": [
+     "s1"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_10416565/replication_package/replication_package/README.md",
+      "lines": [
+       126,
+       130
+      ],
+      "snippet": "output_estimates.tex",
+      "supports": [
+       "path",
+       "format"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "structural_estimation"
+  ],
+  "fields": []
+ }
+}

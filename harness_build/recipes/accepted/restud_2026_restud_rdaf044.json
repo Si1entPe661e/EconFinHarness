@@ -1,0 +1,1265 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdaf044",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdaf044",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+    "sha256": "8d2dabdbf19c505595d4edc14edb3ab9ea8dd19421de46cb3a4e6ab98c263a8b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      53
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+    "sha256": "3894a8b11a50784eb601d1e5330031316bc5a2a6639705288e3881e16d5ded95",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      700,
+      900
+     ],
+     [
+      1243,
+      1243
+     ],
+     [
+      2216,
+      2217
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/compliers.do",
+    "sha256": "7568e4e42162107dc09206c44ebb8a31d41e426e22bf1b4397e51cf130a59479",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      87
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/01data_clean.do",
+    "sha256": "b045676a2010351a7ab948c6038154676d4a5252462da2f16a2a75366668cea9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      2350,
+      2380
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/02data_addons.do",
+    "sha256": "a4a79c50f15a3f4bc7427ebeae334df7c373830a857b43bca9fdc24292f45329",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      2230,
+      2253
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do",
+    "sha256": "af5ee60d62105a5bb743dd148dc18f279e4d90fa0ae04769723e692cb8b61a53",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      227
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/04data_addjscores.do",
+    "sha256": "ee464d04c9641a65ac43ba8ee2259c0dca1d2780fd2b6acba8a1af0c24dc68d1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      280
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Complete read of master, all cleaning scripts, complier weighting logic, and main analysis specifications for mortality tables. All estimation commands and sample definitions traced."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/zenodo_14293584/helensdotter_replication/00masterfile.do"
+  ],
+  "directory_layout": "code/zenodo_14293584/helensdotter_replication/ with cleaning/code/ (4 files) and analysis/code/ (3 files)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 7,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do",
+     "lines": [
+      103,
+      107
+     ],
+     "snippet": "set seed 990541684\ngen randuni = runiform()",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/compliers.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "qui rforest removed $controls cfe_* , type(reg) iter(500) seed(252164)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+    "lines": [
+     38,
+     39
+    ],
+    "snippet": "do \"cleaning\\code\\01data_clean.do\"\ndo \"cleaning\\code\\02data_addons.do\"",
+    "supports": [
+     "master_scripts"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": null,
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "child within case (case-level variation in judge assignment)",
+   "period": null,
+   "source_hint": "courtdata_base.dta from Swedish family courts",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/01data_clean.do",
+     "lines": [
+      4,
+      4
+     ],
+     "snippet": "Input: courtdata_base.dta + raw register data",
+     "supports": [
+      "source_hint",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/zenodo_14293584/helensdotter_replication/cleaning/code/01data_clean.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+      "lines": [
+       38,
+       38
+      ],
+      "snippet": "do \"cleaning\\code\\01data_clean.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "clean",
+    "scripts": [
+     "code/zenodo_14293584/helensdotter_replication/cleaning/code/02data_addons.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+      "lines": [
+       39,
+       39
+      ],
+      "snippet": "do \"cleaning\\code\\02data_addons.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "clean",
+    "scripts": [
+     "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+      "lines": [
+       40,
+       40
+      ],
+      "snippet": "do \"cleaning\\code\\03data_jscores.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "clean",
+    "scripts": [
+     "code/zenodo_14293584/helensdotter_replication/cleaning/code/04data_addjscores.do"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+      "lines": [
+       41,
+       41
+      ],
+      "snippet": "do \"cleaning\\code\\04data_addjscores.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p5",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do"
+    ],
+    "after": [
+     "p4"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/00masterfile.do",
+      "lines": [
+       48,
+       48
+      ],
+      "snippet": "do \"analysis\\code\\analysis.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Sequential: cleaning pipeline produces data_noappeals_addjscore.dta; analysis.do calls compliers.do inline for complier weight calculation",
+  "sample_restrictions": [
+   {
+    "description": "Drop judges with fewer than 25 cases",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       56,
+       56
+      ],
+      "snippet": "drop if judge_less25cases==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Exclude court-year cells with fewer than 2 judges",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       61,
+       63
+      ],
+      "snippet": "gen court_less2judges = (Njudges < 2)\ndrop firstjudge\ndrop if court_less2judges==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Exclude appeals (only first-instance cases)",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4",
+     "s5",
+     "s6"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/02data_addons.do",
+      "lines": [
+       2246,
+       2250
+      ],
+      "snippet": "***LIMIT SAMPLE TO CASES AT COURT OF FIRST-INSTANCE\nuse \"$output/data_complete\", clear\ndrop if onlyappeald==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Judge assignment is quasi-random source of exogenous variation",
+    "Judge removal tendency (jscore) is the instrument",
+    "Complier analysis with reweighting by risk stratification"
+   ],
+   "author_stated_assumptions": [
+    {
+     "description": "Judge assignment is as-good-as-random within court-year-case",
+     "evidence": [
+      {
+       "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+       "lines": [
+        727,
+        737
+       ],
+       "snippet": "***Table 2. Test of Random Assignment of Judge Removal Tendency",
+       "supports": [
+        "description"
+       ]
+      }
+     ]
+    }
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      777,
+      777
+     ],
+     "snippet": "foreach y in dead_byYTURNS19 SOD_dead_byYTURNS19 suicidB_dead_byYTURNS19 OD_dead_byYTURNS19 dead_f_m0_48  SOD_dead_f_m0_48 suicidB_dead_f_m0_48 OD_dead_f_m0_48  {",
+     "supports": [
+      "method"
+     ]
+    },
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do",
+     "lines": [
+      22,
+      32
+     ],
+     "snippet": "gen jscore = (total_removed-case_removed)/(total_obs-case_obs)",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' removed , noabsorb cluster( $clusterop )",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "OLS without fixed effects or controls",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "case_nr"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       778,
+       778
+      ],
+      "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     },
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       32,
+       32
+      ],
+      "snippet": "global clusterop case_nr",
+      "supports": [
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Naive OLS estimate (Panel A of Table 3)",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      778,
+      779
+     ],
+     "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )\n\test store m1_`y'",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "se"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' removed $controls , absorb( $FE ) cluster( $clusterop )",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "OLS with full controls and court-by-year fixed effects",
+   "fixed_effects": null,
+   "controls_summary": "Child characteristics (female, age, siblings, foreign, behavior/abuse/neglect indicators), case characteristics (mainparty_consents, parent_consents, psychmain, notjuniortopic), education history (HSage, pre_eligibleHS), crime history (pre_pplC_p1_3, pre_narcoticsC_p1_3, pre_otherBNC_p1_3), hospitalization history (pre_notSuD_H_p1_3, pre_allSuD_H_p1_3, pre_nopsych_p1_3), parent characteristics (pre_dead_par, pre_teen_i_par, pre_married_i_par, pre_noinc_i_par, pre_notSuD_H_p1_par, pre_allSuD_H_p1_par, pre_nopsych_p1_par, pre_anyBNC_p1_par)",
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       780,
+       780
+      ],
+      "snippet": "reghdfe `y' removed $controls , absorb( $FE ) cluster( $clusterop )",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "OLS with controls and FEs (Panel B of Table 3)",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      780,
+      781
+     ],
+     "snippet": "reghdfe `y' removed $controls , absorb( $FE ) cluster( $clusterop )\n\test store m2_`y'",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "se",
+      "controls_summary"
+     ]
+    },
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      10,
+      10
+     ],
+     "snippet": "global x_child = \"female age siblings foreign Behavior abuse neglect mainparty_consents parent_consents\"",
+     "supports": [
+      "controls_summary"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' removed $controls [aw=SAMP_child18_complier_weight], absorb( $FE ) cluster( $clusterop )",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "scope": "family",
+   "family_description": "OLS with complier reweighting",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aw=SAMP_child18_complier_weight",
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Complier reweighted OLS (Panel C of Table 3)",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      822,
+      822
+     ],
+     "snippet": "reghdfe `y' removed $controls [aw=SAMP_child18_complier_weight], absorb( $FE ) cluster( $clusterop )",
+     "supports": [
+      "estimator",
+      "command",
+      "unresolved_symbols"
+     ]
+    },
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      822,
+      822
+     ],
+     "snippet": "reghdfe `y' removed $controls [aw=SAMP_child18_complier_weight], absorb( $FE ) cluster( $clusterop )",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      822,
+      822
+     ],
+     "snippet": "\treghdfe `y' removed $controls [aw=SAMP_child18_complier_weight], absorb( $FE ) cluster( $clusterop )",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "SAMP_child18_complier_weight"
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `y' jscore , absorb( $FE ) cluster( $clusterop )",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Reduced form: jscore on outcomes",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       782,
+       782
+      ],
+      "snippet": "reghdfe `y' jscore , absorb( $FE ) cluster( $clusterop )",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Reduced form (Panel D of Table 3)",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      782,
+      783
+     ],
+     "snippet": "reghdfe `y' jscore , absorb( $FE ) cluster( $clusterop )\n\test store m4_`y'",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "qui: ivreg2 `y' (removed=jscore) i.courtyearfe , cluster( $clusterop ) small",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "i.courtyearfe"
+   ],
+   "scope": "family",
+   "family_description": "IV with jscore as instrument, court-by-year FE only",
+   "fixed_effects": [
+    "courtyearfe"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": "small-sample correction",
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       786,
+       786
+      ],
+      "snippet": "qui: ivreg2 `y' (removed=jscore) i.courtyearfe , cluster( $clusterop ) small",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV with court-year FE only (Panel E of Table 3)",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      786,
+      787
+     ],
+     "snippet": "qui: ivreg2 `y' (removed=jscore) i.courtyearfe , cluster( $clusterop ) small\n\test store m5_`y'",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "unresolved_symbols",
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe `y' (removed=jscore) $controls , absorb( $FE ) cluster( $clusterop )",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "IV with full controls and court-by-year FE",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       784,
+       784
+      ],
+      "snippet": "ivreghdfe `y' (removed=jscore) $controls , absorb( $FE ) cluster( $clusterop )",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV with controls (Panel F of Table 3, main specification)",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      784,
+      784
+     ],
+     "snippet": "ivreghdfe `y' (removed=jscore) $controls , absorb( $FE ) cluster( $clusterop )",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s5",
+    "s6"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Figure 3 generated at line 754; first-stage estimate shown in Table 2",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "weak_iv",
+   "design_id": "d1",
+   "spec_ids": [
+    "s5",
+    "s6"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "weakiv command called after ivreg2; AR p-value and confidence set stored as local macros for table output",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+    "code/zenodo_14293584/helensdotter_replication/cleaning/code/01data_clean.do",
+    "code/zenodo_14293584/helensdotter_replication/cleaning/code/02data_addons.do"
+   ],
+   "note": "No explicit event-study or parallel trends test found in main mortality results; judge assignment variation is the source of identification, not temporal variation",
+   "evidence": []
+  },
+  {
+   "id": "x4",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "F-statistic and p-value from testparm of controls reported in Table 2",
+   "evidence": []
+  }
+ ],
+ "robustness": [
+  {
+   "description": "Drop judges with fewer than 25 cases after Feb 15, 2010",
+   "baseline_spec_ids": [
+    "s2",
+    "s6"
+   ],
+   "variant_spec_ids": [],
+   "relationship_status": "unresolved",
+   "note": "fullcoverage indicator created in cleaning but variant specifications not traced",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      56,
+      56
+     ],
+     "snippet": "drop if judge_less25cases==1",
+     "supports": [
+      "description",
+      "type"
+     ]
+    }
+   ],
+   "type": "alt_sample"
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "analysis/output/tex/table2.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       739,
+       744
+      ],
+      "snippet": "esttab RT* using \"$output/tex/table2.tex\", replace ///\nmtitles(\"Removed\" \"Judge Removal Tendency\") ///\ncells((b(star fmt(%9.4f)) se( fmt(%9.4f)))) starlevel(* 0.10 ** 0.05 *** 0.01)",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "analysis/output/tex/table3.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       836,
+       836
+      ],
+      "snippet": "esttab m1_* using \"$output/tex/table3.tex\", replace ///",
+      "supports": [
+       "path",
+       "package",
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": "analysis/output/tex/table4.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       1243,
+       1243
+      ],
+      "snippet": "esttab m5_CNassault* m6_CNassault*  m5_assault* m6_assault* using \"$output/tex/table4.tex\", replace",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": null,
+    "path": null,
+    "package": "twoway",
+    "format": null,
+    "types": [
+     "time_series"
+    ],
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       712,
+       712
+      ],
+      "snippet": "twoway (line event t if treat==1, lcolor(black) lpat(solid) lwidth(medthick))  ///",
+      "supports": [
+       "types",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "f2",
+    "output_ref": "Figure 3",
+    "path": null,
+    "package": null,
+    "format": null,
+    "types": [
+     "binscatter"
+    ],
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       752,
+       752
+      ],
+      "snippet": "***Figure 3. First-Stage Graph of Removal on Judge Removal Tendency",
+      "supports": [
+       "output_ref",
+       "types"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "f3",
+    "output_ref": null,
+    "path": null,
+    "package": "ivreg2",
+    "format": null,
+    "types": [],
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+       883,
+       895
+      ],
+      "snippet": "ivreg2 `y'`t' (removed=jscore) i.courtyearfe , cluster( $clusterop )",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      778,
+      778
+     ],
+     "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )",
+     "supports": [
+      "name",
+      "kind",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      784,
+      784
+     ],
+     "snippet": "ivreghdfe `y' (removed=jscore) $controls , absorb( $FE ) cluster( $clusterop )",
+     "supports": [
+      "name",
+      "kind",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      786,
+      786
+     ],
+     "snippet": "ivreg2 `y' (removed=jscore)",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "esttab",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      739,
+      739
+     ],
+     "snippet": "esttab RT* using \"$output/tex/table2.tex\"",
+     "supports": [
+      "name",
+      "kind",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "rforest",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rforest"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/compliers.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "qui rforest removed $controls cfe_* , type(reg) iter(500) seed(252164)",
+     "supports": [
+      "name",
+      "kind",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global macro system for sample, FE, and control sets: $controls, $FE, $clusterop, $SAMP define all model components",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "global controls = \"$x_child missing_consent $x_topics $x_educ $x_crime $x_hist $x_mom\"",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Stored model naming: est store m1/m2/m3 by outcome",
+   "evidence": [
+    {
+     "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+     "lines": [
+      779,
+      779
+     ],
+     "snippet": "est store m1_`y'",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

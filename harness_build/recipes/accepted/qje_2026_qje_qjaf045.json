@@ -1,0 +1,919 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "qje_2026_qje_qjaf045",
+ "journal": "QJE",
+ "year": 2026,
+ "doi": "10.1093/qje/qjaf045",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:00:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/QJE/metadata/articles.csv",
+   "sha256": "8064dd0901f6f3bd3ec9089390b1b88958eda6dbba4e11911b955aeeb46b5d55"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+    "sha256": "99c06ddcde84b5da2718a154cdda64b477b7dfc9a4fd811a5bf67f885872c6aa",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      82
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+    "sha256": "340b72ba8a72ae15ce152d4772ce7b78512023151765d37d842070a3c4406dfb",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      400
+     ],
+     [
+      700,
+      818
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/2c_placebo_exercises.do",
+    "sha256": "f132568ebadef6fb3f7f28c0c6062df416b2bfb34cac8923dab80763e31b29cb",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      250
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+    "sha256": "4071a5e232ff4001a273ae2c2ff78f91b490fb6b248badc3a6d3e426b2de1155",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      550
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1b_signaling.do",
+    "reason": "out_of_budget",
+    "note": "signaling dataset analysis not fully read"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Read master script pipeline, main dataset construction (election data merging, lynching data integration, outcome variable definition), main RDD specifications, and placebo/robustness test structure. Budget remained: analyzed rdrobust commands via grep and targeted reads of key regression sections. Specification landscape includes balance tests (p=1,2), main outcomes by polynomial order, alternative outcome measures, competitive subsample, event-study dynamics, temporal placebo tests, and leave-one-out robustness."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do"
+  ],
+  "directory_layout": "0_master_results.do calls 1a-1c (data construction), 2a-2f (figures), 3a-3g (tables). Code files organized by analysis module.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 18,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+     "lines": [
+      21,
+      21
+     ],
+     "snippet": "[insert folder name]",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "08611-0001-Data.dta",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "use \"$path/data/raw_data/election_data/08611-0001-Data.dta\", clear",
+     "supports": [
+      "type",
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "sr_lynching_data.dta",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+     "lines": [
+      141,
+      141
+     ],
+     "snippet": "use \"$path/data/raw_data/lynchings/sr_lynching_data.dta\", clear",
+     "supports": [
+      "type",
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "hal_raw.dta",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+     "lines": [
+      306,
+      306
+     ],
+     "snippet": "use \"$path/data/raw_data/lynchings/hal_raw.dta\", clear",
+     "supports": [
+      "type",
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Census geographic data (1880-1930)",
+   "type": "census",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": "1880-1930",
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+     "lines": [
+      182,
+      183
+     ],
+     "snippet": "use \"$path/data/raw_data/@geo/1880/Identifiers_1880.dta\", clear",
+     "supports": [
+      "name",
+      "type",
+      "period"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Crop suitability (GAEZ)",
+   "type": "geospatial",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "FAOsuitabilities_*_county_boundaries.dta",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+     "lines": [
+      705,
+      705
+     ],
+     "snippet": "merge m:1 gisjoin decade using \"$path/data/raw_data/GAEZ/FAOsuitabilities_1880_county_boundaries.dta\"",
+     "supports": [
+      "name",
+      "type",
+      "source_hint"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+      "lines": [
+       35,
+       35
+      ],
+      "snippet": "qui do \"$path/code/1a_main.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1b_signaling.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+      "lines": [
+       37,
+       37
+      ],
+      "snippet": "qui do \"$path/code/1b_signaling.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1c_newspapers.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+      "lines": [
+       39,
+       39
+      ],
+      "snippet": "qui do \"$path/code/1c_newspapers.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "tables",
+    "scripts": [
+     "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+      "lines": [
+       66,
+       66
+      ],
+      "snippet": "do \"$path/code/3a_main_regressions.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Master script orchestrates pipeline: 1a-1c build datasets in parallel, then analysis stages (figures/tables) run sequentially using cached datasets.",
+  "sample_restrictions": [
+   {
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       50,
+       50
+      ],
+      "snippet": "rdrobust logdensity demloss if South==1",
+      "supports": [
+       "description",
+       "spec_ids"
+      ]
+     }
+    ],
+    "description": "Restrict to South==1"
+   },
+   {
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+      "lines": [
+       112,
+       125
+      ],
+      "snippet": "gen demsecond = 1 if dem<other & votes!=. | dem<rep & votes!=.",
+      "supports": [
+       "description"
+      ]
+     }
+    ],
+    "description": "Exclude demsecond cases"
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "Democratic loss in presidential election (demloss > 0)",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+     "lines": [
+      356,
+      356
+     ],
+     "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1)",
+     "supports": [
+      "method",
+      "treatment"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls) vce(cluster $county)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year",
+    "state"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       356,
+       357
+      ],
+      "snippet": "vce(cluster $county)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main specification: linear RDD with year FE, state FE, spatial controls. Bandwidth chosen by rdrobust data-driven procedure.",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+     "lines": [
+      374,
+      375
+     ],
+     "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "rdrobust black_lynch_after demloss if South==1, c(0) p(2) all covs($year_fe $state_fe $xy_ctrls) vce(cluster $county)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year",
+    "state"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       356,
+       357
+      ],
+      "snippet": "vce(cluster $county)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Robustness: quadratic RDD polynomial order. All other specifications match s1.",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+     "lines": [
+      384,
+      385
+     ],
+     "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(2) all covs($year_fe $state_fe $xy_ctrls)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "rdrobust black_lynch_after demloss if South==1 & competitive_med==0, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls) vce(cluster $county)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "competitive_med"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       356,
+       357
+      ],
+      "snippet": "vce(cluster $county)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": "South==1, competitive_med==0 (uncompetitive elections)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Heterogeneous effect: restrict to counties with low electoral competitiveness in t-1.",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+     "lines": [
+      478,
+      478
+     ],
+     "snippet": "rdrobust black_lynch_after demloss if South==1 & competitive_med==0, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls) vce(cluster $county)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "package",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "rdrobust black_lynch_count demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls) vce(cluster $county)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       356,
+       357
+      ],
+      "snippet": "vce(cluster $county)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Alternative outcome: black lynch count (continuous) instead of binary indicator.",
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/2c_placebo_exercises.do",
+     "lines": [
+      79,
+      79
+     ],
+     "snippet": "rdrobust black_lynch_count demloss if South==1, c(0) p(1) all covs",
+     "supports": [
+      "formula_or_call",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "searched_files": [],
+   "note": "Multiple pre-election covariates tested for discontinuity at cutoff",
+   "evidence": [],
+   "description": null
+  },
+  {
+   "id": "x2",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "searched_files": [
+    "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+    "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do"
+   ],
+   "note": "rddensity package installed but not called in main analysis files",
+   "evidence": [],
+   "description": null
+  },
+  {
+   "id": "x3",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "searched_files": [],
+   "note": "Lagged lynching outcome tested for pre-trends",
+   "evidence": [],
+   "description": null
+  },
+  {
+   "id": "x4",
+   "kind": "multiple_testing",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "searched_files": [],
+   "note": "Temporal falsification: rdrobust estimated at placebo cutoffs",
+   "evidence": [],
+   "description": null
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "tabfig/tables/table2_a.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       436,
+       436
+      ],
+      "snippet": "esttab regR* using \"$path/tabfig/tables/table2_a.tex\", replace",
+      "supports": [
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "tabfig/tables/table2_b.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+       540,
+       540
+      ],
+      "snippet": "esttab regR* using \"$path/tabfig/tables/table2_b.tex\", replace",
+      "supports": [
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": "tabfig/tables/tablec2.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/2c_placebo_exercises.do",
+      "lines": [
+       135,
+       135
+      ],
+      "snippet": "esttab regR* using \"$path/tabfig/tables/tablec2.tex\", replace",
+      "supports": [
+       "package",
+       "format",
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "rdrobust",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rdrobust"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "foreach pkg in rdrobust",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "foreach pkg in rdrobust rddensity estout confirmdir",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+     "lines": [
+      91,
+      91
+     ],
+     "snippet": "esttab regR*",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "foreach pkg in rdrobust rddensity estout confirmdir geonear confirmdir reghdfe suest",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "geonear",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "geonear"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+     "lines": [
+      754,
+      754
+     ],
+     "snippet": "geonear icpsrfip lat_mean lon_mean using `nearcount', neighbors",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,450 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_114_7_10",
+ "journal": "AER",
+ "year": 2024,
+ "doi": "10.1257/aer.20230008",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/duke-replication/0_run_all.do",
+    "sha256": "5f8f1c41b254b51b330e7e89ab821efec37d410be18c55c40b390792c804cacf",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      356
+     ]
+    ]
+   },
+   {
+    "path": "code/duke-replication/README.md",
+    "sha256": "cca8bffa02fdfcc844ec5bcf4770369f3ccf6404ff6f459a9e44ccf79b91b661",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+    "sha256": "25de3f8d5929546910a88ee986d7a260f5105e8cf1931e3b0d300e1c1005f61d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      400,
+      550
+     ]
+    ]
+   },
+   {
+    "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+    "sha256": "8dd6665ec0829b0a75c96d9bd1d1ad4bec97b0d1d123b93c0a46e1ce390f586d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      400,
+      550
+     ],
+     [
+      590,
+      750
+     ],
+     [
+      1099,
+      1200
+     ]
+    ]
+   },
+   {
+    "path": "code/duke-replication/analysis/scripts/code/6.08.0_online_appendix_i_es_diagnostics.do",
+    "sha256": "ec8a1a20d5088469538833a199159a75ebfee00b77bfc041a402f2aeecfedd3c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/duke-replication/analysis/scripts/code/6.08.1_bacon_decomp.R",
+    "sha256": "83c38662f7cfa46fcada711dbd188def1657ced31c9e33c3c5aa85037c224124",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      67
+     ]
+    ]
+   },
+   {
+    "path": "code/duke-replication/analysis/scripts/programs/duketreat.ado",
+    "sha256": "5a2db0742a7acd191b0dab9dace7a50a38f076c69432848cc78af55515a76e4b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      43
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Focused on main tables/figures and estimation design. Data pipeline (build stage) not read; appendices sampled."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/duke-replication/0_run_all.do"
+  ],
+  "directory_layout": "main analysis scripts in code/duke-replication/analysis/scripts/code/; .ado programs in programs/",
+  "readme_present": true,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/duke-replication/analysis/scripts/libraries/stata-18/",
+   "code/duke-replication/analysis/scripts/programs/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 32,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/duke-replication/0_run_all.do",
+     "lines": [
+      73,
+      76
+     ],
+     "snippet": "local root_directory `c(pwd)'",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "nc_deaths_event_study_input",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+     "lines": [
+      593,
+      593
+     ],
+     "snippet": "use \"$PROJ_PATH/analysis/processed/data/nc_deaths_event_study_input.dta\"",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "gompertz_event_study_input_pooled",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+     "lines": [
+      1114,
+      1114
+     ],
+     "snippet": "use \"$PROJ_PATH/analysis/processed/data/gompertz_event_study_input_pooled.dta\"",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "gompertz_event_study_input_by_race",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+     "lines": [
+      1132,
+      1132
+     ],
+     "snippet": "use \"$PROJ_PATH/analysis/processed/data/gompertz_event_study_input_by_race.dta\"",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Two-hour runtime total. Main tables/figures (~2 min) after build.",
+  "sample_restrictions": [
+   {
+    "description": "statefip=37 (North Carolina) births, 1922-1942",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+      "lines": [
+       593,
+       593
+      ],
+      "snippet": "if statefip == 37 & year >= `year_start'",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/programs/duketreat.ado",
+     "lines": [
+      23,
+      34
+     ],
+     "snippet": "treated = 1 if post == 1",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe `depvar' b0.treated, absorb(fips year) vce(cluster fips)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "fips",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "fips"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+      "lines": [
+       56,
+       56
+      ],
+      "snippet": "\teststo c_c_1 :reghdfe `depvar' b0.treated, absorb(fips year) vce(cluster fips)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "First-stage",
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+     "lines": [
+      56,
+      56
+     ],
+     "snippet": "reghdfe `depvar' b0.treated, absorb(fips year)",
+     "supports": [
+      "formula_or_call",
+      "package",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_group_time_att",
+   "command": "csdid",
+   "package": "csdid",
+   "formula_or_call": "csdid `depvar' [iw = `weightvar'], ivar(fips) time(year) gvar(time_treated_2) agg(event)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "depvar",
+    "weightvar"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Callaway and Sant'Anna",
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+     "lines": [
+      522,
+      525
+     ],
+     "snippet": "csdid `depvar'",
+     "supports": [
+      "command",
+      "package",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+     "lines": [
+      522,
+      522
+     ],
+     "snippet": "csdid `depvar' [iw = `weightvar'], ivar(fips) time(year) gvar(time_treated_2) agg(event)",
+     "supports": [
+      "formula_or_call",
+      "unresolved_symbols"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Race interactions tested",
+   "searched_files": [
+    "code/duke-replication/analysis/scripts/code/5_tables.do"
+   ],
+   "note": "no note recorded",
+   "evidence": [
+    {
+     "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+     "lines": [
+      1170,
+      1171
+     ],
+     "snippet": "test _b[1.treated#2.race]",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,691 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_113_3_7",
+ "journal": "AER",
+ "year": 2023,
+ "doi": "10.1257/aer.20211537",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:40:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/AP_Replication/Datasets/___do_master_county.do",
+    "sha256": "7276a069bf1d9fac411ea14d13340e850e45d6a1d40e5f3a628981647e26b37e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      300,
+      567
+     ]
+    ]
+   },
+   {
+    "path": "code/AP_Replication/Do_Files/__do_Main_Figures.do",
+    "sha256": "05da920b49bb98307a07be40cabfd1afbcb7dcfa162880d669f91cfc0b3124f4",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      480,
+      550
+     ]
+    ]
+   },
+   {
+    "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+    "sha256": "3d62eb796165cba44ef1b8a020ccbca5b1e5841e56c4efba596df7be465d4183",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      450
+     ]
+    ]
+   },
+   {
+    "path": "code/AP_Replication/Text_AP/_do_SLANT.do",
+    "sha256": "fc1c6cf5b3ca3f149a36e97cddbec53c42559df565dc21699dbe94b0706b1bfa",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      200,
+      350
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main specifications extracted from outlet-level diffusion (Table 2) and individual-level border security (Table 4). Text slant measurement uses lexical approach with Congressional speech calibration. Media content text analysis (Jupyter notebooks) not fully read due to budget."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Python",
+   "R",
+   "Jupyter"
+  ],
+  "master_scripts": [
+   "code/AP_Replication/Datasets/___do_master_AP.do",
+   "code/AP_Replication/Datasets/___do_master_county.do",
+   "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+   "code/AP_Replication/Do_Files/__do_Main_Figures.do"
+  ],
+  "directory_layout": "Datasets (master_data_outlets, master_data_county, master_data_county_CCES); Do_Files (main tables/figures, appendix analysis); Text_AP (slant measurement, sentiment); Text_Outlets (outlet-level slant); raw_data (newspapers, CCES, Congress, vote shares, county controls)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 43,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "inferred",
+  "run_order_notes": "Data construction master files must run before analysis; text analysis (Jupyter) appears to feed into slant measures",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      49,
+      51
+     ],
+     "snippet": "label var APintI_post \"PostBan $\\times$ IHS(AP-intensity)\"\n\t\t\t\n\t\tlabel var num_IllimmImm \"Illegal immigrant, pct. of Immigrant\"",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo: reghdfe num_IllimmImm  APintI_post        [pw=num_imm], /*\n\t*/  absorb(year_month source_code) cluster(source_code)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year_month",
+    "source_code"
+   ],
+   "controls_summary": null,
+   "weights": "num_imm",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "source_code"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+      "lines": [
+       56,
+       56
+      ],
+      "snippet": "\t*/  absorb(year_month source_code) cluster(source_code)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main outlet-level diffusion specification",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      55,
+      56
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm  APintI_post        [pw=num_imm], /*\n\t*/  absorb(year_month source_code) cluster(source_code)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "weights",
+      "se",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo: reghdfe num_IllimmImm APintI_post          [pw=num_imm], /*\n\t*/  absorb(year_month##state__  source_code year_month) cluster(source_code)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year_month##state__",
+    "source_code",
+    "year_month"
+   ],
+   "controls_summary": null,
+   "weights": "num_imm",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "source_code"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+      "lines": [
+       67,
+       67
+      ],
+      "snippet": "\t*/  absorb(year_month##state__  source_code year_month) cluster(source_code)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Specification with state×month FEs",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      66,
+      67
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm APintI_post          [pw=num_imm], /*\n\t*/  absorb(year_month##state__  source_code year_month) cluster(source_code)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "weights",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo: reghdfe num_IllimmImm APintI_post          [pw=num_imm], /*\n\t*/  absorb(c.year_month##i.source_code source_code year_month) cluster(source_code)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "c.year_month##i.source_code",
+    "source_code",
+    "year_month"
+   ],
+   "controls_summary": null,
+   "weights": "pw=num_imm",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "source_code"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+      "lines": [
+       78,
+       78
+      ],
+      "snippet": "\t*/  absorb(c.year_month##i.source_code source_code year_month) cluster(source_code)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Specification with outlet-specific time trend",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      77,
+      78
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm APintI_post          [pw=num_imm], /*\n\t*/  absorb(c.year_month##i.source_code source_code year_month) cluster(source_code)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      77,
+      77
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm APintI_post          [pw=num_imm], /*",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo: reghdfe num_IllimmImm  APintI_post        [pw=num_imm] if NPsample==1, /*\n\t*/  absorb(year_month source_code) cluster(source_code)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year_month",
+    "source_code"
+   ],
+   "controls_summary": null,
+   "weights": "pw=num_imm",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "source_code"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+      "lines": [
+       91,
+       91
+      ],
+      "snippet": "\t*/  absorb(year_month source_code) cluster(source_code)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "Subset of outlets meeting sample criteria (NPsample==1)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Subsample of daily print newspapers",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      90,
+      91
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm  APintI_post        [pw=num_imm] if NPsample==1, /*\n\t*/  absorb(year_month source_code) cluster(source_code)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      90,
+      90
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm  APintI_post        [pw=num_imm] if NPsample==1, /*",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo:   reghdfe immig_border $indiv_controls  /*\n\t\t*/  APintI_post , /*\n\t\t*/   absorb(fips year) cluster(fips) ",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "$indiv_controls"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "fips",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "fips"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+      "lines": [
+       311,
+       311
+      ],
+      "snippet": "\t\t*/   absorb(fips year) cluster(fips) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Individual-level outcome on border security preferences",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      309,
+      311
+     ],
+     "snippet": "eststo:   reghdfe immig_border $indiv_controls  /*\n\t\t*/  APintI_post , /*\n\t\t*/   absorb(fips year) cluster(fips)",
+     "supports": [
+      "formula_or_call",
+      "unresolved_symbols",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "eststo:   ivreghdfe immig_border $indiv_controls  /*\n\t\t*/  (num_IllimmImm = APintI_post ) , /*\n\t\t*/  absorb(fips year) cluster(fips) ",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "$indiv_controls"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "fips",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "fips"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+      "lines": [
+       394,
+       394
+      ],
+      "snippet": "\t\t*/  absorb(fips year) cluster(fips) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV second stage: media slant as mediator of individual preference shift",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Tables.do",
+     "lines": [
+      392,
+      394
+     ],
+     "snippet": "eststo:   ivreghdfe immig_border $indiv_controls  /*\n\t\t*/  (num_IllimmImm = APintI_post ) , /*\n\t\t*/  absorb(fips year) cluster(fips)",
+     "supports": [
+      "formula_or_call",
+      "unresolved_symbols",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo: reghdfe num_IllimmImm APintI_lead*  APintI_lag* [pw=num_imm], /*\n*/ absorb(year_month NPNAME1) cluster(NPNAME1)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Event study with 9 leads and 9 lags",
+   "fixed_effects": [
+    "year_month",
+    "NPNAME1"
+   ],
+   "controls_summary": null,
+   "weights": "pw=num_imm",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "NPNAME1"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/AP_Replication/Do_Files/__do_Main_Figures.do",
+      "lines": [
+       493,
+       493
+      ],
+      "snippet": "*/ absorb(year_month NPNAME1) cluster(NPNAME1)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Dynamic specification documenting pre-trends and post-ban trajectory",
+   "evidence": [
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Figures.do",
+     "lines": [
+      492,
+      493
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm APintI_lead*  APintI_lag* [pw=num_imm], /*\n*/ absorb(year_month NPNAME1) cluster(NPNAME1)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/AP_Replication/Do_Files/__do_Main_Figures.do",
+     "lines": [
+      492,
+      492
+     ],
+     "snippet": "eststo: reghdfe num_IllimmImm APintI_lead*  APintI_lag* [pw=num_imm], /*",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s7"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "no note recorded",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "weak_iv",
+   "design_id": "d1",
+   "spec_ids": [
+    "s6"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "no note recorded",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s5",
+    "s6"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/AP_Replication/Do_Files/__do_Main_Tables.do"
+   ],
+   "note": "no note recorded",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

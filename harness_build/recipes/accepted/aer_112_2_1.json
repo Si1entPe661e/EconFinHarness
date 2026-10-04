@@ -1,0 +1,674 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_112_2_1",
+ "journal": "AER",
+ "year": 2022,
+ "doi": "10.1257/aer.20200002",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/replication_AER/code/0_MASTER.do",
+    "sha256": "2dd24e9a77c1cbdd1915dc522b0b3423738f9922a4ca82e689442aa8b19131f6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      143
+     ]
+    ]
+   },
+   {
+    "path": "code/replication_AER/code/3_instrument.do",
+    "sha256": "0ac8e4c61525e848299f5501a32df10ce8d60e3fdadd37ee2826b91a5bd5bc4a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/replication_AER/code/4_final_dataset.do",
+    "sha256": "1c847e778afd3d45899defe16d226af722c8d1978f49f898273e4a57d267d350",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/replication_AER/code/5_main_figures_tables.do",
+    "sha256": "4dca0f235b7c96f071223e3eb55e93b745516ceda42f7a2affb1d73b91849d85",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      250,
+      450
+     ],
+     [
+      481,
+      750
+     ],
+     [
+      790,
+      920
+     ]
+    ]
+   },
+   {
+    "path": "code/replication_AER/code/bartik/bartik_generic.do",
+    "sha256": "b97c9b382850c3cdd75036a6fbe735e6c00592a793df66666724e51a325c8a5f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      140
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/replication_AER/data/",
+    "reason": "out_of_scope",
+    "note": "Data files not read; focus on code structure"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main analysis pipeline traced: master→build→lasso→instrument→analysis. Primary focus on IV design with shift-share instrument (GM_hat2). Shift-share construction uses 1935-1940 Black migrant location shares interacted with LASSO-predicted county-level out-migration 1940-1970. Main tables and figures identified; appendix tables omitted. Standard error specification not explicitly documented in main scripts."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "SAS"
+  ],
+  "master_scripts": [
+   "code/replication_AER/code/0_MASTER.do"
+  ],
+  "directory_layout": "Organized by analysis stage: build (1_*.do), LASSO (2_*.do), instrument (3_*.do), final data (4_*.do), tables/figures (5_*.do, 6_*.do). Data directory with crosswalks, instrument, mechanisms, mobility, randomization inference subfolders.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/replication_AER/data/mechanisms/incarceration/raw/In-Our-Backyards-Data-master/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 60,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/0_MASTER.do",
+     "lines": [
+      35,
+      35
+     ],
+     "snippet": "global XXX \t\t\"~/Dropbox/Great_Migration_Mobility/replication_AER\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "GM_cz_final_dataset",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "commuting zone",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/5_main_figures_tables.do",
+     "lines": [
+      257,
+      257
+     ],
+     "snippet": "use ${data}/GM_cz_final_dataset.dta, clear",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/replication_AER/code/1_build.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/0_MASTER.do",
+      "lines": [
+       105,
+       105
+      ],
+      "snippet": "do $code/1_build.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "estimation",
+    "scripts": [
+     "code/replication_AER/code/2_lasso.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/0_MASTER.do",
+      "lines": [
+       111,
+       111
+      ],
+      "snippet": "do $code/2_lasso.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/replication_AER/code/3_instrument.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/0_MASTER.do",
+      "lines": [
+       117,
+       117
+      ],
+      "snippet": "do $code/3_instrument.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/replication_AER/code/4_final_dataset.do"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/0_MASTER.do",
+      "lines": [
+       123,
+       123
+      ],
+      "snippet": "do $code/4_final_dataset.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p5",
+    "stage": "tables",
+    "scripts": [
+     "code/replication_AER/code/5_main_figures_tables.do"
+    ],
+    "after": [
+     "p4"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/0_MASTER.do",
+      "lines": [
+       129,
+       129
+      ],
+      "snippet": "do $code/5_main_figures_tables.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": "shift_share",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/3_instrument.do",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "Construct versions of shift-share instrument",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 perm_res_p25_kr26 ($x_ols = $x_iv )  ${baseline_controls} , first",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main specification on permanent residence rank p25 (Chetty-Hendren mobility metric) for children from families in bottom 25% income distribution",
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/5_main_figures_tables.do",
+     "lines": [
+      494,
+      494
+     ],
+     "snippet": "qui: ivreg2 perm_res_p25_kr26 ($x_ols = $x_iv )  ${baseline_controls} , first",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 causal_p25_czkr26 ($x_ols = $x_iv )  ${baseline_controls} [aw=1/(causal_p25_czkr26_se^2)], first",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "x_ols",
+    "x_iv",
+    "baseline_controls"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "[aw=1/(causal_p25_czkr26_se^2)]",
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Causal exposure effect on income rank p25 with analytical weights",
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/5_main_figures_tables.do",
+     "lines": [
+      510,
+      510
+     ],
+     "snippet": "qui: ivreg2 causal_p25_czkr26 ($x_ols = $x_iv )  ${baseline_controls} [aw=1/(causal_p25_czkr26_se^2)], first",
+     "supports": [
+      "formula_or_call",
+      "weights",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 `y' ($x_ols =$x_iv ) ${baseline_controls} if `y'!=., first",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "y"
+   ],
+   "scope": "family",
+   "family_description": "Loop over outcomes: kfr_black_pooled_p25, kfr_black_pooled_p75, kir_black_male_p25, kir_black_male_p75, kir_black_female_p25, kir_black_female_p75, kfr_white_pooled_p25, kfr_white_pooled_p75, kir_white_male_p25, kir_white_male_p75, kir_white_female_p25, kir_white_female_p75",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Heterogeneous effects by race, gender, and parental income percentile; treatment standardized",
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/5_main_figures_tables.do",
+     "lines": [
+      328,
+      328
+     ],
+     "snippet": "ivreg2 `y' ($x_ols =$x_iv ) ${baseline_controls} if `y'!=., first",
+     "supports": [
+      "formula_or_call",
+      "scope",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "F-stat reported for first stage, computed with test command",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "observed",
+   "observation": "output_code_present",
+   "description": "Placebo test on pre-1940 outcomes (enrolled_occs 1900-1940, avg_wt_med_educ1940)",
+   "searched_files": [
+    "code/replication_AER/code/5_main_figures_tables.do"
+   ],
+   "note": "Table 3 tests GM_hat2 on pre-1940 measures of upward mobility and education",
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/5_main_figures_tables.do",
+     "lines": [
+      795,
+      815
+     ],
+     "snippet": "local outcomes \"enrolled_occs1900 enrolled_occs1910 enrolled_occs1920 enrolled_occs1930 enrolled_occs1940  avg_wt_med_educ1940\"",
+     "supports": [
+      "status",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "figures_tables/table1.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/5_main_figures_tables.do",
+      "lines": [
+       809,
+       809
+      ],
+      "snippet": "esttab `outcomes' using $figtab/table1.tex, tex replace",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/5_main_figures_tables.do",
+      "lines": [
+       847,
+       847
+      ],
+      "snippet": "esttab `outcomes' using \"permres_table_p`p'.tex\", frag replace",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "types": [
+     "binscatter"
+    ],
+    "output_ref": null,
+    "path": null,
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/replication_AER/code/5_main_figures_tables.do",
+      "lines": [
+       271,
+       275
+      ],
+      "snippet": "binscatter `x_ols' `x_iv', controls( ${baseline_controls})",
+      "supports": [
+       "types"
+      ]
+     }
+    ],
+    "package": null,
+    "format": null
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/0_MASTER.do",
+     "lines": [
+      44,
+      44
+     ],
+     "snippet": "ssc install ivreg2, replace",
+     "supports": [
+      "usage",
+      "kind",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/0_MASTER.do",
+     "lines": [
+      39,
+      39
+     ],
+     "snippet": "ssc install estout, replace",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "binscatter",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "binscatter"
+   ],
+   "evidence": [
+    {
+     "path": "code/replication_AER/code/0_MASTER.do",
+     "lines": [
+      50,
+      50
+     ],
+     "snippet": "ssc install binscatter, replace",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

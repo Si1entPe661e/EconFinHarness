@@ -1,0 +1,564 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdag037",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdag037",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/1_001_import_raw_ussc.do",
+    "sha256": "ee71cded4ee21a725c48c91ef4ce2e4c279903f6c6b0030de8b7832df4116898",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+    "sha256": "a5209a292d8fa95087970dc0c08d0277ff07a28afdc94ddc4800bcabbd0ef7fc",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      200,
+      500
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_002_main_ussc_missing_mass.do",
+    "sha256": "015ad8534f1a8cb267b6485f6f46000970da406048a3bcb24b98113d9da1e5d8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_003_main_eousa.do",
+    "sha256": "70b7cbe402fb1de2c30c22790d3778d210cf916a62fe18ca6b34d68afecf082d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      227
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/9_001_ussc_setup.do",
+    "sha256": "65184e6f205a1934a17ba2366637eaa49999c17bd13c8dce14fbb48b47eda5ea",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      368
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/__2_run_main.do",
+    "sha256": "90fefed80602e9b0f630fdef7dd8429285ba85445066937bf496a9bd2d933f14",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      23
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/packages/",
+    "reason": "vendored",
+    "note": "Stata packages"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main pipeline and three analysis branches traced. Core specifications extracted from bunching, missing mass, and heterogeneity analyses."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R",
+   "MATLAB"
+  ],
+  "master_scripts": [
+   "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/__2_run_main.do"
+  ],
+  "directory_layout": "Clean separation: raw data, intermediate, final, analysis code",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/packages/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 34,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/__2_run_main.do",
+     "lines": [
+      8,
+      9
+     ],
+     "snippet": "global base",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "USSC sentencing data",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/1_001_import_raw_ussc.do",
+     "lines": [
+      1,
+      1
+     ],
+     "snippet": "USSC sentencing data from ICPSR",
+     "supports": [
+      "type",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_003_main_eousa.do",
+     "lines": [
+      24,
+      25
+     ],
+     "snippet": "eousa_final.dta",
+     "supports": [
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "download",
+    "scripts": [
+     "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/1_001_import_raw_ussc.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/1_001_import_raw_ussc.do",
+      "lines": [
+       1,
+       1
+      ],
+      "snippet": "imports",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/__2_run_main.do",
+      "lines": [
+       16,
+       16
+      ],
+      "snippet": "2_001_main_ussc.do",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [
+   {
+    "description": "Keep if sources==1 and key variables non-missing",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/9_001_ussc_setup.do",
+      "lines": [
+       367,
+       367
+      ],
+      "snippet": "keep if mainsample==1 & accepted_facts==1 & sources==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "bunching",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [
+    "in280290"
+   ],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      56,
+      59
+     ],
+     "snippet": "reg in280290 after2010, r",
+     "supports": [
+      "method",
+      "outcomes"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg in280290 after2010, r",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+      "lines": [
+       58,
+       58
+      ],
+      "snippet": "reg in280290 after2010, r",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main bunching",
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      56,
+      56
+     ],
+     "snippet": "TABLE 2: Main USSC bunching results",
+     "supports": [
+      "role"
+     ]
+    },
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "reg in280290 after2010, r",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "reg in280290 after2010, r",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg in280290 after10white after10notwhite notwhite, r",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+      "lines": [
+       61,
+       62
+      ],
+      "snippet": "reg in280290 after10white after10notwhite notwhite, r",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Differential by race",
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      61,
+      61
+     ],
+     "snippet": "reg in280290 after10white after10notwhite notwhite, r",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      61,
+      61
+     ],
+     "snippet": "reg in280290 after10white after10notwhite notwhite, r",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "KS test pre-2010",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "tab2_main_bunching.tex",
+    "path": "results/main/tab2_main_bunching.tex",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+      "lines": [
+       59,
+       59
+      ],
+      "snippet": "tab2_main_bunching.tex",
+      "supports": [
+       "output_ref",
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": "pdf",
+    "types": [],
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+      "lines": [
+       247,
+       252
+      ],
+      "snippet": "histogram cwgt",
+      "supports": [
+       "format"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "rdplot",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rdplot"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      338,
+      338
+     ],
+     "snippet": "rdplot yearsprison center280",
+     "supports": [
+      "kind",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "All reg specifications use robust standard errors",
+   "evidence": [
+    {
+     "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "reg in280290 after2010, r",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "bunching"
+  ],
+  "fields": []
+ }
+}

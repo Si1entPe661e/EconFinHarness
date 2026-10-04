@@ -1,0 +1,695 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "rfs_2026_rfs_hhag045",
+ "journal": "RFS",
+ "year": 2026,
+ "doi": "10.1093/rfs/hhag045",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:20:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/RFS/metadata/articles.csv",
+   "sha256": "9c01e943d18e3d667f1beffa18cf5eaa9cc3fab65663d6cd8d84866ba430560a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_2EVES4/1_code/0_Borchert_et_al_MASTER.do",
+    "sha256": "65403a302cff42ae0b8201bb3f5c850c11525cb40ffad0f6d0451c42cfde6c45",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      285
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/3_1_sumstats.do",
+    "sha256": "63af422d79ad64c5b39cc9a34b9a91fda24d1aa4d368d2154a369e2209d74ed6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+    "sha256": "625c60ab4b56557a4fca2ab47e6ba5435daf7300ad6afc9c07c04074f01aef5d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      120,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/4_3_did_bilateral_productlevel.do",
+    "sha256": "ca20a0f9a6d8f7a0073ab2dd618b4623687d5a2a1bcd41c6f367934c6ec4f841",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      112
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/_setup.do",
+    "sha256": "d2e0ec6de6abb3a50e6c8745bce868b169ad4bd3c0b2e861ad81de77cb9d09ba",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      66
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/dataverse_2EVES4/ado__/",
+    "reason": "vendored",
+    "note": "gtools library helpers (73 files)"
+   },
+   {
+    "path": "code/dataverse_2EVES4/ado_d/",
+    "reason": "vendored",
+    "note": "did_imputation, did_multiplegt_dyn estimator implementations"
+   },
+   {
+    "path": "code/dataverse_2EVES4/ado_e/",
+    "reason": "vendored",
+    "note": "estout/esttab table packages"
+   },
+   {
+    "path": "code/dataverse_2EVES4/ado_f/",
+    "reason": "vendored",
+    "note": "ftools, fcollapse, fmerge utility libraries"
+   },
+   {
+    "path": "code/dataverse_2EVES4/ado_g/",
+    "reason": "vendored",
+    "note": "gtools suite (gcollapse, gegen, gstats)"
+   },
+   {
+    "path": "code/dataverse_2EVES4/ado_m/",
+    "reason": "vendored",
+    "note": "misc utility functions"
+   },
+   {
+    "path": "code/dataverse_2EVES4/ado_r/",
+    "reason": "vendored",
+    "note": "reghdfe and related regression utilities"
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/1_1a_tfp_survey_ebrd.do",
+    "reason": "out_of_budget",
+    "note": "data cleaning; non-main-table script"
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/1_2_flatfiles_orbis.ipynb",
+    "reason": "out_of_budget",
+    "note": "Jupyter data import; non-main-table script"
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/1_6_prepare_un_comtrade.R",
+    "reason": "out_of_budget",
+    "note": "R data processing; non-main-table script"
+   },
+   {
+    "path": "code/dataverse_2EVES4/1_code/4_2_did_citylevel_treatment.do",
+    "reason": "out_of_budget",
+    "note": "robustness design; specifications similar to 4_1"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Master and main-analysis scripts read; data construction (1_x, 2_x) skipped per budget; city-level robustness (4_2) deferred. Bilateral-level design (4_3) fully read. Three main designs identified: (d1) firm-level DID with bank-level treatment; (d2) firm-level DID with city-level treatment (city_level_treatment.do not read); (d3) bilateral product-level DID with country-level treatment."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R",
+   "Jupyter"
+  ],
+  "master_scripts": [
+   "code/dataverse_2EVES4/1_code/0_Borchert_et_al_MASTER.do"
+  ],
+  "directory_layout": "1_code/ contains 19 scripts (data cleaning, merging, analysis); ado_*/ directories contain vendored library packages (gtools, reghdfe, estout, etc.)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/dataverse_2EVES4/ado__/",
+   "code/dataverse_2EVES4/ado_d/",
+   "code/dataverse_2EVES4/ado_e/",
+   "code/dataverse_2EVES4/ado_f/",
+   "code/dataverse_2EVES4/ado_g/",
+   "code/dataverse_2EVES4/ado_h/",
+   "code/dataverse_2EVES4/ado_j/",
+   "code/dataverse_2EVES4/ado_l/",
+   "code/dataverse_2EVES4/ado_m/",
+   "code/dataverse_2EVES4/ado_p/",
+   "code/dataverse_2EVES4/ado_r/",
+   "code/dataverse_2EVES4/ado_t/",
+   "code/dataverse_2EVES4/ado_w/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 19,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/_setup.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "global your_directory  `\"your_directory\"'  // <-- Change to your directory here",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Pipeline follows: survey cleaning → Orbis import → firm/bank prep → merge → summary stats → estimation. Three parallel estimation branches: firm-level bank treatment (4.1), firm-level city treatment (4.2), bilateral product-level (4.3).",
+  "sample_restrictions": [
+   {
+    "description": "Regression sample for firm-level analyses: trade dummy non-missing",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+      "lines": [
+       131,
+       132
+      ],
+      "snippet": "did_imputation trade bvd_id year Ei, ///\n               fe(bvd_id year year#country_num) ///",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      12,
+      16
+     ],
+     "snippet": "This DoFile runs all Difference-in-Difference regressions",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "High bilateral correspondent bank withdrawal rate (FSB survey, above-median by country) × post-2014 (event: BNP Paribas fine June 2014)",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_3_did_bilateral_productlevel.do",
+     "lines": [
+      15,
+      15
+     ],
+     "snippet": "*             the unexpected record fine against BNP Paribas in June 2014. The",
+     "supports": [
+      "method",
+      "treatment"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_group_time_att",
+   "command": "jwdid",
+   "package": "jwdid",
+   "formula_or_call": "jwdid exportrevenue i.large, ivar(bvd_id) tvar(year) gvar(first_treat) ///\n      method(ppmlhdfe) fevar(i.country_num#i.year) ///\n      cluster(BankID)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "BankID"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+      "lines": [
+       154,
+       156
+      ],
+      "snippet": "cluster(BankID)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main specification for export revenue (intensive margin via PPML Poisson)",
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      154,
+      156
+     ],
+     "snippet": "jwdid exportrevenue i.large, ivar(bvd_id) tvar(year) gvar(first_treat) ///\n      method(ppmlhdfe) fevar(i.country_num#i.year) ///\n      cluster(BankID)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "se",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_imputation",
+   "command": "did_imputation",
+   "package": "did_imputation",
+   "formula_or_call": "did_imputation trade bvd_id year Ei, ///\n               fe(bvd_id year year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "BankID_num"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+      "lines": [
+       131,
+       133
+      ],
+      "snippet": "cluster(BankID_num) tol(0.1)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Imputation-based estimator for extensive margin (trade dummy binary outcome)",
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      131,
+      133
+     ],
+     "snippet": "did_imputation trade bvd_id year Ei, ///\n               fe(bvd_id year year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "se",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_imputation",
+   "command": "did_imputation",
+   "package": null,
+   "formula_or_call": "did_imputation `var' bvd_id year Ei if sample == 1, ///\n               fe(bvd_id year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Loop over outcome variables: domestic revenues (asinh), total revenues (asinh), employees (asinh), firm dissolution (binary)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "BankID_num"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+      "lines": [
+       147,
+       147
+      ],
+      "snippet": "               autosample cluster(BankID_num) tol(0.1)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Multiple outcome specifications in single regression loop",
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      145,
+      147
+     ],
+     "snippet": "did_imputation `var' bvd_id year Ei if sample == 1, ///\n               fe(bvd_id year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+     "supports": [
+      "scope",
+      "family_description",
+      "formula_or_call",
+      "estimator",
+      "command"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "conventions": [],
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "jwdid",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "jwdid"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      194,
+      195
+     ],
+     "snippet": "jwdid exportrevenue i.large, ivar(bvd_id) tvar(year) gvar(first_treat) ///\n      method(ppmlhdfe) ///",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "did_multiplegt_dyn",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "did_multiplegt_dyn"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      83,
+      83
+     ],
+     "snippet": "*             - Intermediate results saved by did_multiplegt_dyn used to plot",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_3_did_bilateral_productlevel.do",
+     "lines": [
+      46,
+      46
+     ],
+     "snippet": "eststo m1 : reghdfe Dlog_exports withdraw_times_post post,  absorb(pair_FE partner_time_FE industry_time_FE) cluster(pair_FE)",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ppmlhdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ppmlhdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+     "lines": [
+      154,
+      156
+     ],
+     "snippet": "method(ppmlhdfe)",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "esttab",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_2EVES4/1_code/4_3_did_bilateral_productlevel.do",
+     "lines": [
+      102,
+      102
+     ],
+     "snippet": "esttab using ///",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "Table 1 (main paper)",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [
+     "Summary statistics for firm-level analysis with bank-level treatment"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/3_1_sumstats.do",
+      "lines": [
+       32,
+       32
+      ],
+      "snippet": "*                - Table 1 (main paper): Summary statistics for the firm-level",
+      "supports": [
+       "output_ref",
+       "notes_content"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": "Table 2 (main paper, Panels A-C)",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [
+     "Panel A: Export outcomes (trade dummy, export revenue; by firm size)",
+     "Panel B: Domestic and total revenues (asinh; by firm size)",
+     "Panel C: Employment and firm dissolution (asinh, binary; by firm size)"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+      "lines": [
+       24,
+       24
+      ],
+      "snippet": "*             - Table 2, Panel A (main paper): Export outcomes (trade dummy",
+      "supports": [
+       "output_ref",
+       "notes_content"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "output_ref": null,
+    "path": "tables/tab_4.tex",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_2EVES4/1_code/4_3_did_bilateral_productlevel.do",
+      "lines": [
+       24,
+       24
+      ],
+      "snippet": "* Output:     ${tables}/tab_4.tex",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

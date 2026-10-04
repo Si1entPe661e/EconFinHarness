@@ -1,0 +1,1206 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_2026_restud_rdaf071",
+  "journal": "ReStud",
+  "year": 2026,
+  "doi": "10.1093/restud/rdaf071",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_2026_restud_rdaf071.pdf",
+    "pdf_sha256": "a337a0edd4db0d724d1fa3e98045d2b329ad9b87e1b992dc4f46e002a2243fc8",
+    "text_path": "harness_build/papers/text/restud_2026_restud_rdaf071.txt",
+    "text_sha256": "d4c9a76c3fa71b4e131eaca3b28167b5a4bb3ba4f4f28c2cbbbad85c138bda5e",
+    "pages": 42
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:33:00Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/restud_2026_restud_rdaf071.json",
+    "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0"
+  },
+  "methods": [
+    "did",
+    "event_study",
+    "synthetic_control",
+    "other:staggered_did_imputation",
+    "other:selection_correction_two_step"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "1. Introduction",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "2. Political economy of education in Indonesia (incl. 2.3 Predictions)",
+      "pages": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "results",
+      "title": "3. Religious school entry and differentiation (entry, financing, curriculum)",
+      "pages": [
+        10,
+        24
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "results",
+      "title": "4. Religious school choice (exposure effects, selection, heterogeneity)",
+      "pages": [
+        24,
+        32
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "5. Mass schooling and nation building (elections, identity, transmission)",
+      "pages": [
+        32,
+        38
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "conclusion",
+      "title": "6. Conclusion, acknowledgments, data availability",
+      "pages": [
+        38,
+        39
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        39,
+        42
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "identifying_assumption_explicit",
+        "parallel_trends_argued"
+      ],
+      "statement": "The paper announces a suite of DID methods up front: cross-sectional district intensity DID with flexible trend controls, synthetic DID as a parallel-trends-robust complement, and a village-level staggered-entry design. Each is presented as addressing a distinct threat.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Section 1, empirical strategy paragraph",
+      "quote": "Using a suite of difference-in-differences (DID) methods",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "synthetic_control",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "The targeting rule is stated as the source of non-random allocation: schools went to districts with more non-enrolled children, which correlate with historical Islamic schooling. The authors show this correlation graphically and in a table before the main analysis and use it to motivate the trend controls.",
+      "pages": [
+        7,
+        9
+      ],
+      "locator": "Section 2.2, Figure 1, Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "design_variant_named"
+      ],
+      "statement": "The district-year DID equation is written out with fixed effects, a treatment intensity times post indicator, and year FE interacted with targeting variables and baseline school stocks; the authors state the estimates are conditional on initial enrollment and population, following the original programme evaluation.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.1, Equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "parallel_trends_argued"
+      ],
+      "statement": "SDID is described as reweighting and matching pre-period trends across high and low exposure districts; the continuous intensity is discretized at a percentile cutoff because the estimator needs a binary regressor, and a footnote discusses the trade-off between less variation and more credible local comparisons.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.1 and footnote 14",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control",
+        "did"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "threats_discussed"
+      ],
+      "statement": "The village-level event-study equation is written with leads and lags around first SD INPRES entry and estimated with the imputation estimator to allow arbitrary effect heterogeneity in staggered adoption; the footnote spells out the three-step imputation procedure.",
+      "pages": [
+        13,
+        16
+      ],
+      "locator": "Section 3.1, Equation (2), footnote 17",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The authors acknowledge that village timing variation may be partly endogenous and answer with two checks: absence of pre-trends in the imputation event study and an appendix regression showing timing is uncorrelated with baseline Islamic schools and geographic characteristics.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 3.1, Village Level paragraph; Appendix Table A.4",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "design_variant_named"
+      ],
+      "statement": "The individual-level exposure design compares young cohorts with older school-age cohorts at programme start, excludes partially exposed cohorts in the DID, and reuses them for the synthetic control group in SDID; district FE, cohort FE and cohort FE times targeting variables are listed.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Section 4.1, Equation (4)",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "compliers_described"
+      ],
+      "statement": "Selection into higher education levels is framed as a sample selection problem; parametric and semiparametric two-step corrections are used with a 1960s compulsory schooling pilot as the exclusion restriction, and the corrected estimates are interpreted as a local effect among compliers.",
+      "pages": [
+        26,
+        30
+      ],
+      "locator": "Section 4.1, Accounting for Selection; Table 6 panels (c), (d)",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "other:selection_correction_two_step"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "unit_of_observation_stated",
+        "sample_period_stated",
+        "administrative"
+      ],
+      "statement": "School registries from two ministries covering the universe of schools active in 2019 with establishment dates are the entry data; they are collapsed to balanced district-year and village-year panels over a stated forty-year window, with counts normalized per thousand children at baseline.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section 3.1, Data on School Registries; Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated",
+        "unit_of_observation_stated"
+      ],
+      "statement": "School choice outcomes come from six pooled rounds of a national household survey identifying district of birth; a longitudinal survey with per-year school type is used only for validation because of limited geographic scope.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section 4.1, Survey Data on Schooling",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "in_footnote"
+      ],
+      "statement": "The district count is fixed at 1970s boundaries and a footnote reconciles it with the count used in the prior literature based on later boundaries.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Footnote 27",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "exclusions_justified"
+      ],
+      "statement": "Every regression table reports the number of observations and the number of districts or villages; when a table's sample differs from the baseline (missing funding proxies, conditional graduation samples), the notes explain the difference.",
+      "pages": [
+        12,
+        38
+      ],
+      "locator": "Tables 2 to 9 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "matching_or_linkage_described"
+      ],
+      "statement": "Auxiliary sources are named for each mechanism: FAO-GAEZ potential yields and 1960 mosque waqf land for funding proxies, an online timetable registry for curriculum, informal taxation survey data, waqf board records, historical election returns, the 2010 full-count census, and a 2008 piety survey.",
+      "pages": [
+        18,
+        36
+      ],
+      "locator": "Sections 3.2, 3.3, 5.1, 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Treatment intensity is defined as programme schools built in the 1973 to 1978 window per thousand children in 1971; the village treatment is an absorbing indicator switching on in the first construction year; the SDID version is a binary above-percentile indicator.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section 3.1; Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study",
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Entry outcomes are new schools of each type per period, split into formal madrasa by level, informal boarding and Qur'anic schools, and totals; a further set expresses Islamic entry as a share of all school entry to study formalization.",
+      "pages": [
+        11,
+        23
+      ],
+      "locator": "Table 2; Figure 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Curriculum outcomes are subject shares of weekly instruction time from a single 2019 timetable snapshot, turned into a retrospective district by grade by entry-year panel using establishment years; a footnote discusses selective reporting to the registry and checks it does not vary with treatment.",
+      "pages": [
+        20,
+        22
+      ],
+      "locator": "Section 3.3; footnote 24; Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index",
+        "other:ml_text_proxy"
+      ],
+      "statement": "A school ideology proxy for all schools is built by regressing curriculum content on school-name word indicators interacted with level and province, selecting covariates with ridge shrinkage, and predicting for schools without timetables; the prediction is standardized before use as an outcome.",
+      "pages": [
+        21,
+        23
+      ],
+      "locator": "Section 3.3; footnote 25; Appendix Table A.15",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "School choice outcomes are indicators for whether the highest completed level was in a madrasa, both unconditionally and conditional on graduating at that level; the conditional versions are motivated as a check that effects are not mechanical from more schooling.",
+      "pages": [
+        25,
+        29
+      ],
+      "locator": "Table 5 and Table 6 notes; Section 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index",
+        "outcome_definition"
+      ],
+      "statement": "Religiosity is measured by a set of practice indicators and a mean index across them; suspicious election outcomes are defined as vote shares or tallies above one or one and a half standard deviations from the year mean.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Section 5.1; Table 8 panel (b) notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "r2_reported",
+        "mean_of_dependent_reported",
+        "cluster_level_in_notes",
+        "se_type_in_notes"
+      ],
+      "statement": "Main tables use check-mark rows for each fixed effect and interaction set, report observations, dependent variable mean, and R2 for the OLS panel, and put the standard error type and cluster level at the end of the notes.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "alt_estimator"
+      ],
+      "statement": "The main entry table stacks four panels for the same outcomes: standard DID, synthetic DID, village DID, and the imputation estimator, so that the reader compares estimators column by column rather than in separate tables.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Table 2 panels (a) to (d)",
+      "basis": "inferred",
+      "applies_to": [
+        "did",
+        "synthetic_control",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported",
+        "n_reported"
+      ],
+      "statement": "The curriculum table reports the dependent variable standard deviation alongside the mean, which the text then uses to scale effects; observation counts and district counts are given per panel.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 4",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "controls_progressive_columns"
+      ],
+      "statement": "The targeting table progresses columns across alternative measures of Islamic education presence and then adds a political preference covariate and a village-level column, with a check-mark row for policy-rule controls.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "cluster_at_unit_level"
+      ],
+      "statement": "Standard errors are clustered at the district level for district-intensity designs (the level of policy variation) and at the village level for village-timing designs; in individual-level designs clustering is by district of birth, and by parent's district of birth in the transmission table. No further rationale is given beyond the level of variation.",
+      "pages": [
+        11,
+        38
+      ],
+      "locator": "Section 3.1; Table 2, 5, 9 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": [
+        "other:cluster_bootstrap",
+        "alt_se"
+      ],
+      "statement": "SDID standard errors use the cluster bootstrap algorithm from the SDID paper; a footnote adds that the imputation estimates are also robust to clustering at the district instead of village level.",
+      "pages": [
+        12,
+        18
+      ],
+      "locator": "Table 2 notes; footnote 19",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "inference_justification",
+      "tags": [
+        "other:percentile_t_bootstrap",
+        "few_clusters_addressed"
+      ],
+      "statement": "For the two-step selection models, significance and p-values come from an asymmetric percentile-t cluster bootstrap with a stated number of repetitions, chosen with a citation on its small-sample performance; conventional SEs are still printed. The polynomial order is tied to consistency results given the effective sample size of policy variation.",
+      "pages": [
+        26,
+        29
+      ],
+      "locator": "Footnote 31; Table 6 notes",
+      "basis": "stated",
+      "applies_to": [
+        "other:selection_correction_two_step"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text",
+        "event_study_figure"
+      ],
+      "statement": "Pre-trends are shown graphically in three event-study figures (semi-decade district estimates, SDID trend plots with pre-period weights, village imputation event study) and a cohort-specific exposure figure; the text reads these visually rather than reporting a formal pre-trend test.",
+      "pages": [
+        14,
+        28
+      ],
+      "locator": "Figures 2, 3, 4, 7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study",
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "in_appendix",
+        "in_footnote"
+      ],
+      "statement": "A honest-DID style sensitivity analysis reports confidence sets over how far post-period trend violations may exceed pre-period ones; the footnote explains the procedure and cautions that it and the visual pre-trend evidence are formally valid only for binary treatment.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 3.1 Robustness; footnote 15; Appendix Figure A.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_appendix"
+      ],
+      "statement": "Survivor bias in the 2019 registries is addressed by re-estimating entry with historical village census waves that predate registry attrition, reported in an appendix table.",
+      "pages": [
+        11,
+        13
+      ],
+      "locator": "Section 3.1; footnote 13; Appendix Table A.3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix"
+      ],
+      "statement": "Non-Islamic private school entry serves as a comparison outcome at district and village level to show the Islamic response is distinctive; a placebo-period check shows the funding heterogeneity does not appear in earlier or later decades.",
+      "pages": [
+        18,
+        20
+      ],
+      "locator": "Appendix Figures A.2, A.4, A.5; Appendix Table A.7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "The exclusion restriction for the selection correction is supported by an appendix table showing the pilot compulsory schooling programme is unrelated to predetermined Islamic schooling and its correlates.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section 4.1; footnote 32; Appendix Table A.20",
+      "basis": "stated",
+      "applies_to": [
+        "other:selection_correction_two_step"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "diagnostic_reported",
+      "tags": [
+        "measurement",
+        "in_appendix"
+      ],
+      "statement": "Electoral data reliability is probed by plotting vote distributions and regressing indicators of suspicious support and tallies on programme intensity to check fraud is uncorrelated with treatment.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Section 5.1; Appendix Figure A.11, Tables A.25, A.26",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_fixed_effects",
+        "in_appendix",
+        "in_main_text"
+      ],
+      "statement": "Robustness paragraphs list interacting year or cohort FE with a fixed menu of predetermined religious and political characteristics (waqf, Muslim share, 1950s Islamic vote, Arab settlement, insurgency, resettlement, pilot schooling), with results in appendix tables and a short summary sentence in the text.",
+      "pages": [
+        13,
+        30
+      ],
+      "locator": "Section 3.1 Robustness; Section 4.1 Robustness Checks; Appendix Tables A.2, A.19",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "alt_se",
+        "alt_specification",
+        "in_footnote"
+      ],
+      "statement": "Village estimates are reported robust to dropping time-varying controls, using a shorter panel window, and changing the cluster level, all summarized in one footnote pointing to an appendix table.",
+      "pages": [
+        16,
+        18
+      ],
+      "locator": "Footnote 19; Appendix Table A.5",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Measurement of school type in the household survey is validated by re-running the exposure design in the longitudinal survey that records school type at every level, with results described as noisy but consistent.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section 4.1; Appendix Table A.18",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_control_group",
+        "in_main_text"
+      ],
+      "statement": "Election-year event studies are shown with and without interactions of year FE with 1950s vote shares for Communist and Islamic blocs, presented side by side as baseline and augmented panels in the same figure.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Figure 8 panels (a) to (f)",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "mechanism_motivated"
+      ],
+      "statement": "Funding heterogeneity is estimated by interacting village treatment with above-median dummies for potential rice yield and waqf endowment, including year FE times each proxy, and reporting the linear combination for high-funding villages as a separate row.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Table 3; Equation (3)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Gender heterogeneity interacts exposure with a female dummy separately for two cohort groups defined by a later veiling ban, with all FE and controls also interacted with gender; ideology heterogeneity uses 1950s Islamic party vote share and is placed in an appendix table.",
+      "pages": [
+        30,
+        32
+      ],
+      "locator": "Table 7; Section 4.2; Appendix Table A.21",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "suggestive_labelled",
+        "ruled_out_alternatives"
+      ],
+      "statement": "Mechanisms are examined through intermediate outcomes (informal taxation rates, waqf land composition, curriculum shares, marriage matching, household Arabic literacy); several are explicitly labelled suggestive and one sample restriction is acknowledged as endogenous.",
+      "pages": [
+        20,
+        38
+      ],
+      "locator": "Sections 3.2, 3.3, 5.3",
+      "quote": "Although endogenous, this sample restriction provides further suggestive evidence",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "A Hotelling-style model of school entry and curriculum choice is placed in an appendix and referenced as the organizing framework for the predictions section and for interpreting heterogeneity by ideology.",
+      "pages": [
+        10,
+        32
+      ],
+      "locator": "Section 2.3; Appendix B",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "sd_units",
+        "compared_to_literature"
+      ],
+      "statement": "Effects are scaled as one standard deviation of intensity translated into entries in the average district relative to baseline mean entry, as shares of the outcome mean and standard deviation for curriculum, and years-of-schooling effects are benchmarked against the range in the original programme evaluation.",
+      "pages": [
+        11,
+        26
+      ],
+      "locator": "Section 3.1; Section 3.3; footnote 30",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "interpretation_caveat"
+      ],
+      "statement": "The authors list three reasons the household survey understates Islamic exposure and therefore describe their estimates as a likely lower bound; they also note curriculum is observed only in 2019 and that school type at intermediate levels is missing.",
+      "pages": [
+        21,
+        31
+      ],
+      "locator": "Section 4.1, measurement error paragraph; Section 3.3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "data_coverage"
+      ],
+      "statement": "Caveats are stated that only one pre-programme election exists so pre-trends in voting cannot be fully assessed, that one election round could not be obtained, and that Suharto-era election data may be unreliable.",
+      "pages": [
+        33,
+        35
+      ],
+      "locator": "Section 5.1; footnote 36",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure",
+        "coefficient_plot",
+        "binscatter",
+        "raw_data_plot"
+      ],
+      "statement": "Figures include district binscatters for targeting, semi-decade coefficient plots with confidence bars, SDID trend plots with pre-period weights drawn beneath, an imputation event study with shaded bands, and raw cohort means by high and low intensity before the regression version.",
+      "pages": [
+        8,
+        28
+      ],
+      "locator": "Figures 1 to 7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study",
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_se",
+        "notes_state_sample",
+        "other:90pct_confidence_intervals"
+      ],
+      "statement": "Tables use three-level significance stars with the thresholds restated in every note; figure bands are at a ninety percent level; notes restate the full control set, the sample, and the cluster level each time rather than referring back.",
+      "pages": [
+        9,
+        38
+      ],
+      "locator": "All table and figure notes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a",
+        "other:no_summary_stats_table_in_main_text"
+      ],
+      "statement": "Appendix material is numbered with an A prefix and lettered appendices (B model, C oral histories, D data); no summary statistics table appears in the main text, with means shown only in table rows.",
+      "pages": [
+        5,
+        38
+      ],
+      "locator": "Section 2 and appendix references throughout",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction previews results for each of three outcome families in order, followed by three contribution paragraphs positioned against distinct literatures; a separate predictions subsection at the end of the background serves as the roadmap for Sections 3 to 5.",
+      "pages": [
+        2,
+        10
+      ],
+      "locator": "Section 1; Section 2.3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design",
+        "main_result_first",
+        "mechanisms_after_main"
+      ],
+      "statement": "Each results section opens with a short data paragraph, then the equation, then the main table, then a titled Robustness paragraph, then mechanisms or heterogeneity; robustness is never a standalone section and is dispatched to the appendix with brief in-text summaries.",
+      "pages": [
+        10,
+        38
+      ],
+      "locator": "Sections 3, 4, 5",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "in_footnote"
+      ],
+      "statement": "Many secondary results live in footnotes that cite appendix tables (robust clustering, transitions, years of schooling benchmarks, Islamist ideology outcomes), keeping the main text focused on headline tables.",
+      "pages": [
+        13,
+        37
+      ],
+      "locator": "Footnotes 15, 19, 28, 30, 41",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "A Data Availability paragraph gives a Zenodo DOI for the data and code; a Supplementary Data line points to the journal website for the online appendix. No software is named in the main text.",
+      "pages": [
+        39,
+        39
+      ],
+      "locator": "Data Availability; Supplementary Data",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o51",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "survey_collected",
+        "linked_records",
+        "other:oral_histories"
+      ],
+      "statement": "Data are administrative registries, national surveys, census microdata, and historical election records; the authors also collected oral histories from school founders, reported in an appendix and used qualitatively in the text.",
+      "pages": [
+        5,
+        18
+      ],
+      "locator": "Section 2; Appendix C; footnote 21",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o52",
+      "category": "other",
+      "tags": [
+        "other:full_control_list_in_every_note"
+      ],
+      "statement": "Rather than a compact reference to a baseline specification, most notes enumerate the full set of interaction controls; the baseline stock year for Islamic schools changes across tables and figures (1949, 1957, 1959, 1972) and is stated in each note.",
+      "pages": [
+        12,
+        34
+      ],
+      "locator": "Table 2, Figure 2, Figure 3, Table 5, Figure 8 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "District-year DID estimated by OLS with high-dimensional fixed effects; village panel estimated with the Borusyak et al. imputation estimator.",
+      "card_shows": "s1 and s3 use reghdfe (hdfe_ols); s4 uses did_imputation.",
+      "status": "agree",
+      "pages": [
+        11,
+        16
+      ],
+      "card_ref": "s1.estimator, s4.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Synthetic DID following Arkhangelsky et al. applied to residualized outcomes, with cluster bootstrap SEs.",
+      "card_shows": "No SDID specification or package recorded among the traced specs.",
+      "status": "paper_only",
+      "pages": [
+        11,
+        15
+      ],
+      "card_ref": "specifications"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "District FE and year FE, plus year FE interacted with targeting variables and 1959 school stocks.",
+      "card_shows": "s1 absorbs id_dec80, est_year and year interactions with ch71, en71, wsppc and 1960 school counts; fixed_effects field is null.",
+      "status": "agree",
+      "pages": [
+        11,
+        12
+      ],
+      "card_ref": "s1.fixed_effects",
+      "note": "Command snippet matches paper; card field itself not filled. Snippet labels stocks 1960 while paper says 1959."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "District level for the district-year DID.",
+      "card_shows": "s1 command has clus(id_dec80) but se.cluster_level is null.",
+      "status": "agree",
+      "pages": [
+        11,
+        12
+      ],
+      "card_ref": "s1.se.cluster_level",
+      "note": "Agreement based on command snippet; card field unfilled."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Village level for village-level DID and imputation estimates (Table 2 panels c and d).",
+      "card_shows": "s2 records cluster by kab (district); s4 shows no cluster option.",
+      "status": "disagree",
+      "pages": [
+        12,
+        16
+      ],
+      "card_ref": "s2.se.cluster_level",
+      "note": "s2 may correspond to the district-clustered robustness in footnote 19 or Appendix Table A.5; the card does not say which output it feeds."
+    },
+    {
+      "item": "sample",
+      "paper_says": "Balanced panels from 1960 to 1999.",
+      "card_shows": "s1 and s4 restrict est_year or year to 1960 through 1999.",
+      "status": "agree",
+      "pages": [
+        11,
+        16
+      ],
+      "card_ref": "s1.sample, s4.sample"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "Event-study leads and lags from minus five to plus ten with the period just before entry omitted.",
+      "card_shows": "s3 includes inpresXdec1 to dec3 and dec5 to dec10 with dec4 omitted (semi-decade version for Figure 2).",
+      "status": "agree",
+      "pages": [
+        13,
+        14
+      ],
+      "card_ref": "s3",
+      "note": "s3 is the semi-decade district event study of Figure 2, with 1965 to 1969 as reference."
+    },
+    {
+      "item": "weights",
+      "paper_says": "No weights mentioned in main text or notes.",
+      "card_shows": "No weights recorded (null).",
+      "status": "unknown",
+      "pages": [
+        11,
+        38
+      ],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Nine main tables and eight main figures plus appendix tables A.1 to A.27 and figures.",
+      "card_shows": "Two tables (table1, table2 via estout) and one figure (figure2 twoway) traced.",
+      "status": "code_only",
+      "pages": [
+        9,
+        38
+      ],
+      "card_ref": "outputs",
+      "note": "Card coverage is partial; paper references far more outputs than the card records."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "MORA and MEC registries, Podes, Susenas, IFLS, 2010 census, election returns, Pepinsky survey, FAO-GAEZ, waqf data.",
+      "card_shows": "Data block is empty.",
+      "status": "paper_only",
+      "pages": [
+        11,
+        36
+      ],
+      "card_ref": "data"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Honest DID sensitivity, historical registries, alternative trend controls, shorter windows, alternative clustering, IFLS validation.",
+      "card_shows": "Robustness block is empty.",
+      "status": "paper_only",
+      "pages": [
+        13,
+        31
+      ],
+      "card_ref": "robustness"
+    }
+  ],
+  "gaps": [
+    "No explicit justification for the cluster level beyond stating it; no discussion of the number of clusters for district-level inference except indirectly via the selection-model polynomial order.",
+    "No multiple testing adjustment mentioned despite many outcomes and an index only for piety.",
+    "No software or package names in the main text (reghdfe, did_imputation, sdid appear only in code).",
+    "No summary statistics table in the main text; appendix D data description not in the PDF.",
+    "Online appendix (tables A.1 to A.27, Appendices B, C, D) is not included in the text file, so appendix practices are recorded only as referenced.",
+    "No preregistration, IRB, or ethics statement for the oral histories."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        42
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 42 pages read, including references. The online appendix (Appendices A to D) is not part of the PDF; observations tagged in_appendix rely on the main text's description of appendix content."
+  }
+}

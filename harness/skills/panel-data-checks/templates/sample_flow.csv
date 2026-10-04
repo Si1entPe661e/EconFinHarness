@@ -1,0 +1,8 @@
+step,rule,source_location,rows_before,rows_after,units_after,periods_after,reason_for_drop,status
+1,raw input loaded,,,,,,,
+2,,,,,,,,
+3,,,,,,,,
+4,listwise deletion on regression variables,,,,,,,
+5,fixed effect absorption / singleton drop,,,,,,,
+6,weight non-missing and positive,,,,,,,
+7,final estimation sample,,,,,,,

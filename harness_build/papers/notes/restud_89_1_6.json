@@ -1,0 +1,641 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_89_1_6",
+  "journal": "ReStud",
+  "year": 2022,
+  "doi": "10.1093/restud/rdab030",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_89_1_6.pdf",
+    "pdf_sha256": "ba8c4341af99eecddc71d3f2bd6d7a8452911893663835c7fec3393b72c2a33b",
+    "text_path": "harness_build/papers/text/restud_89_1_6.txt",
+    "text_sha256": "50ca730338a827cd1f7848fe58f08c25dc95a8d1135353a2b09ca86e8dbb21ea",
+    "pages": 33
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T00:00:00Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/restud_89_1_6.json",
+    "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07"
+  },
+  "methods": ["shift_share", "iv", "other:econometric_theory_with_simulations"],
+  "structure": [
+    {"id": "sec1", "kind": "introduction", "title": "1. Introduction", "pages": [1, 4]},
+    {"id": "sec2", "kind": "model", "title": "2. Setting and motivation (equivalence results)", "pages": [4, 9]},
+    {"id": "sec3", "kind": "model", "title": "3. A quasi-experimental SSIV framework", "pages": [9, 13]},
+    {"id": "sec4", "kind": "model", "title": "4. Extensions (estimated shocks, incomplete shares, panel, multiple shocks)", "pages": [13, 17]},
+    {"id": "sec5", "kind": "design", "title": "5. Shock-level inference and testing (incl. Monte Carlo summary)", "pages": [17, 19]},
+    {"id": "sec6", "kind": "results", "title": "6. Shift-share IV in practice: taxonomy and application to Autor et al. (2013)", "pages": [19, 31]},
+    {"id": "sec7", "kind": "conclusion", "title": "7. Conclusion", "pages": [31, 32]},
+    {"id": "sec8", "kind": "other", "title": "Data availability, supplementary data, acknowledgments, references", "pages": [32, 33]}
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": ["estimand_named", "design_variant_named", "in_main_text"],
+      "statement": "The paper states the target parameter as the coefficient in a linear causal or structural model with a control vector, and names the design as shift-share IV where identification comes from quasi-random assignment of shocks with endogenous exposure shares.",
+      "pages": [5, 6],
+      "locator": "Section 2.1, equations (1)-(3)",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "in_main_text"],
+      "statement": "Identifying assumptions are stated as numbered formal Assumptions (quasi-random shock assignment; many uncorrelated shocks) with Propositions giving sufficient conditions for validity and consistency, and proofs deferred to the Supplementary Appendix.",
+      "pages": [9, 12],
+      "locator": "Section 3.1-3.2, Assumptions 1-6, Propositions 2-4",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "instrument_exclusion_argued", "in_main_text"],
+      "statement": "For the application, the authors first build an a priori argument that the shocks approximate an idealized experiment (import growth in comparable non-US economies), then list concrete threats such as factor-endowment-driven specialization and common technology shocks, before running falsification tests.",
+      "pages": [22, 23],
+      "locator": "Section 6.2.1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "in_main_text"],
+      "statement": "The paper contrasts its shock-exogeneity view with the share-exogeneity view of Goldsmith-Pinkham et al. and argues why share exogeneity is a priori implausible when shares are generic and unobserved industry shocks enter the error.",
+      "pages": [7, 7],
+      "locator": "Section 2.2; also Section 6.2.1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": ["design_variant_named", "in_main_text"],
+      "statement": "A taxonomy of three SSIV cases (observed quasi-random shocks; shocks estimated in-sample; shares as the identifying source) is provided so that readers can classify their own application and decide whether the framework applies.",
+      "pages": [19, 21],
+      "locator": "Section 6.1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "in_main_text"],
+      "statement": "The authors explicitly abandon the iid sampling assumption and define consistency along a sequence of data-generating processes in which the number of shocks grows, explaining this is an approximation device rather than a description of actual sampling.",
+      "pages": [6, 6],
+      "locator": "Section 2.1, footnote 9",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "unit_of_observation_stated", "sample_period_stated", "in_main_text"],
+      "statement": "The application reuses the Autor, Dorn and Hanson (2013) replication data: a repeated cross section of commuting zones and four-digit SIC manufacturing industries over two decade-length periods; counts of zones, industries and periods are stated in the text.",
+      "pages": [21, 22],
+      "locator": "Section 6.2.1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "in_main_text"],
+      "statement": "The non-manufacturing (service) aggregate with an implicit zero shock is dropped from the identifying variation after showing it dominates the exposure weights and has a different mean, which the authors argue violates both baseline assumptions.",
+      "pages": [23, 24],
+      "locator": "Section 6.2.2, Table 1 columns 1-2",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": ["sample_size_reported_per_table", "in_main_text"],
+      "statement": "Each table reports observation counts at both levels of the analysis: region-periods and industry-periods (and SIC3 groups in Table 1), so readers can see the effective shock-level sample alongside the observation-level sample.",
+      "pages": [24, 29],
+      "locator": "Tables 1, 2, 3, 4",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": ["matching_or_linkage_described", "in_footnote"],
+      "statement": "Missing industry-level balance covariates for a handful of industries are imputed with SIC3 group medians, falling back to SIC2 medians; the rule is disclosed in a footnote.",
+      "pages": [26, 26],
+      "locator": "footnote 45",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": ["instrument_construction", "treatment_definition", "outcome_definition", "in_main_text", "in_footnote"],
+      "statement": "Outcome, treatment and instrument are defined in notation that separates exposure shares (lagged local industry employment shares) from shocks (import growth in eight comparable economies per US worker); a footnote rewrites the ADH instrument in this form and notes the original used shares relative to industry totals.",
+      "pages": [21, 22],
+      "locator": "Section 6.2.1, footnote 39",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": ["standardized_index", "in_main_text"],
+      "statement": "For balance tests the independent variables (shocks and shift-share instrument) are normalized to unit variance so that coefficients across balance variables are comparable.",
+      "pages": [26, 27],
+      "locator": "Section 6.2.3, Table 3 notes",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": ["instrument_construction", "in_main_text"],
+      "statement": "Shock-level controls are translated into observation-level controls as exposure-weighted sums (e.g. lagged manufacturing share, its interaction with period indicators, lagged sector shares, share-weighted sums of production controls), following the paper's Proposition 4.",
+      "pages": [12, 12],
+      "locator": "Section 3.2, Section 6.2.4, Table 4",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": ["other:incomplete_shares_control", "in_main_text"],
+      "statement": "Because exposure shares do not sum to one, the paper controls for the sum of shares (lagged manufacturing share) and, to isolate within-period variation, interacts it with period indicators instead of using plain period fixed effects.",
+      "pages": [14, 16],
+      "locator": "Section 4.2, Section 4.3, footnote 31",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": ["controls_progressive_columns", "baseline_then_variants", "n_reported", "se_type_in_notes", "cluster_level_in_notes", "in_main_text"],
+      "statement": "The main table starts by replicating the original ADH preferred column, then progressively swaps or adds shift-share-structured controls in later columns; a checkmark grid lists controls, and notes state the SE type (exposure-robust from equivalent industry-level IV) and the cluster level.",
+      "pages": [28, 29],
+      "locator": "Table 4 and notes",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": ["weights_stated", "in_main_text"],
+      "statement": "Regression weights (start-of-period commuting zone population) are stated in the text, and the paper notes how they map to shock-level importance weights; Table 1 statistics are stated to be weighted by average exposure shares.",
+      "pages": [22, 24],
+      "locator": "Section 6.2.1, footnote 41, Table 1 notes",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": ["fe_listed_in_table", "in_main_text"],
+      "statement": "Fixed effects (period, Census division) and covariate sets are listed in table notes and as rows of the control grid rather than in the column headers.",
+      "pages": [29, 29],
+      "locator": "Table 4 notes",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": ["other:no_stars_no_r2", "in_main_text"],
+      "statement": "Tables report coefficients with standard errors in parentheses, first-stage F statistics and observation counts; no R-squared, no mean of the dependent variable and no significance stars appear.",
+      "pages": [27, 29],
+      "locator": "Tables 3 and 4",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": ["other:exposure_robust_shock_level_se", "in_main_text"],
+      "statement": "Standard errors are justified by a formal result: estimating the numerically equivalent shock-level IV regression yields exposure-robust SEs that are valid under stated assumptions and conservative under weaker ones; conventional SEs are argued to be invalid due to exposure-based correlation.",
+      "pages": [17, 18],
+      "locator": "Section 5.1, Proposition 5",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": ["cluster_at_assignment_level", "other:icc_based_cluster_choice", "in_main_text"],
+      "statement": "The clustering level for shocks (SIC3) is chosen empirically by estimating intra-class correlations of shock residuals from a hierarchical random-effects model across nested industry groupings, and the choice is also aligned with prior industry-level studies.",
+      "pages": [25, 26],
+      "locator": "Section 6.2.2, equation (11), Table 2",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": ["alt_se", "in_appendix", "in_footnote"],
+      "statement": "Three alternative inference methods (conventional state-clustered SEs as in ADH, Adao et al. SEs, and null-imposed confidence intervals from shock-level LM tests) are reported in a supplementary table and their relative behaviour is discussed in a footnote.",
+      "pages": [28, 28],
+      "locator": "footnote 47, Supplementary Appendix Table C2",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": ["other:effective_sample_size_reported", "in_main_text"],
+      "statement": "The authors recommend and report the inverse Herfindahl index of shock-level exposure weights as the effective sample size, computed both at industry-period level and at the cluster (SIC3) level, plus the largest single weight.",
+      "pages": [24, 24],
+      "locator": "Section 6.2.2, Table 1",
+      "basis": "stated",
+      "quote": "report the inverse of the HHI of shock-level average exposure as a simple way of describing their effective sample size",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": ["balance_table", "in_main_text"],
+      "statement": "Two kinds of balance tests are reported in one table: shock-level regressions of predetermined industry covariates on shocks, and region-level regressions of ADH covariates on the shift-share instrument with exposure-robust SEs; covariate sets are borrowed from prior papers to discipline the choice.",
+      "pages": [26, 27],
+      "locator": "Section 6.2.3, Table 3 Panels A and B",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": ["pre_trends_test", "in_main_text"],
+      "statement": "A pre-trend test regresses lagged outcome growth from two earlier decades on the instrument using the same specification as the balance rows, and the results are compared with the original paper's own pre-trend analysis.",
+      "pages": [27, 27],
+      "locator": "Section 6.2.3, Table 3 Panel B last rows",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": ["first_stage_table", "weak_iv_statistic", "in_main_text"],
+      "statement": "First-stage F statistics computed from the equivalent shock-level IV regression (squared t-statistic with exposure-robust clustering) are reported in every column of the main table and compared to the conventional rule-of-thumb threshold.",
+      "pages": [19, 29],
+      "locator": "Section 5.2, Table 4 row 'SSIV first stage F-stat.'",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": ["overid_test", "in_appendix"],
+      "statement": "An over-identified version using country-specific shocks is reported in the supplementary appendix together with a shock-level over-identification test p-value, cited as support for the identifying assumptions.",
+      "pages": [30, 30],
+      "locator": "Section 6.2.4, Supplementary Appendix Table C5",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": ["other:shock_distribution_summary", "in_main_text"],
+      "statement": "Before estimation, the distribution of shocks (mean, SD, interquartile range) is summarized with and without the missing sector and after residualizing on period effects, to assess whether the large-N asymptotics are a useful approximation.",
+      "pages": [23, 25],
+      "locator": "Section 6.2.2, Table 1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": ["binscatter", "in_appendix"],
+      "statement": "Binned scatter plots of the industry-level first-stage and reduced-form relationships for the preferred specification are relegated to a supplementary figure mentioned in a footnote.",
+      "pages": [28, 28],
+      "locator": "footnote 48, Supplementary Appendix Figure C1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": ["other:monte_carlo", "in_appendix"],
+      "statement": "Monte Carlo simulations of finite-sample coverage and weak-instrument behaviour are summarized in a short main-text subsection with details in the supplementary appendix.",
+      "pages": [19, 19],
+      "locator": "Section 5.3, Supplementary Appendix A.11",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "in_main_text", "summarized_in_one_table"],
+      "statement": "Sensitivity to controls is presented within the main table itself: one column drops the original regional controls (motivated by a failed balance test) and further columns add increasingly demanding shift-share-structured industry controls mirroring an industry-level companion study.",
+      "pages": [28, 30],
+      "locator": "Section 6.2.4, Table 4 columns 4-7",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "alt_estimator", "in_appendix"],
+      "statement": "Additional control sets, other outcomes, period-specific coefficients and over-identified SSIV variants are reported in supplementary tables and described in the text as leaving coefficients stable.",
+      "pages": [28, 30],
+      "locator": "footnotes 46 and 48, Supplementary Appendix Tables C1, C3, C4, C5",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": ["leave_one_out", "in_appendix"],
+      "statement": "For the Bartik setting, the paper replicates estimates with and without a leave-one-out shock estimator using another paper's data, and reports the comparison in the supplementary appendix.",
+      "pages": [14, 14],
+      "locator": "Section 4.1, Supplementary Appendix A.6",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o33",
+      "category": "magnitude_interpretation",
+      "tags": ["compared_to_literature", "precision_discussed", "in_main_text"],
+      "statement": "Estimates are interpreted by comparison across columns and against the original ADH and Acemoglu et al. numbers; changes across specifications are explained in terms of which variation each control set removes, and precision is compared across columns and inference methods.",
+      "pages": [28, 30],
+      "locator": "Section 6.2.4, footnotes 47 and 49",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o34",
+      "category": "limitation_stated",
+      "tags": ["interpretation_caveat", "in_main_text"],
+      "statement": "The authors state the application is meant to illustrate the framework, not to reassess the substantive findings of the original study.",
+      "pages": [21, 21],
+      "locator": "Section 6.2 opening",
+      "basis": "stated",
+      "quote": "aims to illustrate our theoretical framework only, and not to reassess their substantive findings",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o35",
+      "category": "limitation_stated",
+      "tags": ["identification_caveat", "in_main_text"],
+      "statement": "Valid inference with general control vectors is flagged as an open problem; the proposed SEs are stated to be exact only for two control types and conservative otherwise.",
+      "pages": [18, 18],
+      "locator": "Section 5.1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o36",
+      "category": "limitation_stated",
+      "tags": ["identification_caveat", "in_main_text"],
+      "statement": "When some balance tests fail, the paper explicitly discusses that the decision is context specific, presents both possible responses, and then uses a sensitivity check as a way to gauge omitted variable bias.",
+      "pages": [27, 28],
+      "locator": "Section 6.2.3 closing paragraphs",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o37",
+      "category": "presentation_convention",
+      "tags": ["no_stars", "notes_state_se", "notes_state_sample", "in_main_text"],
+      "statement": "Tables use no significance stars; notes describe the estimation procedure, the SE construction and cluster level, the sample composition, and how each column's controls differ.",
+      "pages": [24, 29],
+      "locator": "Tables 1-4 notes",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o38",
+      "category": "presentation_convention",
+      "tags": ["summary_stats_table", "in_main_text"],
+      "statement": "The summary statistics table is about the shocks and their importance weights (not about outcomes or covariates), with columns defined by sample restriction and residualization and a checkmark grid indicating each.",
+      "pages": [24, 24],
+      "locator": "Table 1",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o39",
+      "category": "presentation_convention",
+      "tags": ["other:checkmark_control_grid", "in_main_text"],
+      "statement": "The main results table uses a checkmark grid of control groups under the coefficient row rather than listing coefficients on controls.",
+      "pages": [29, 29],
+      "locator": "Table 4",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": ["other:no_main_text_figures", "in_appendix"],
+      "statement": "The main text contains four tables and no figures; the only figure (binned scatters) is in the supplementary appendix.",
+      "pages": [1, 33],
+      "locator": "whole paper; footnote 48",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o41",
+      "category": "writing_structure",
+      "tags": ["results_previewed_in_intro", "contribution_paragraph", "roadmap_paragraph"],
+      "statement": "The introduction previews the equivalence results, the two consistency conditions, extensions, inference tools and the application, contains a related-literature discussion with explicit positioning against alternative frameworks, and ends with a roadmap paragraph.",
+      "pages": [1, 4],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o42",
+      "category": "writing_structure",
+      "tags": ["design_before_data", "main_result_first"],
+      "statement": "Theory (setting, framework, extensions, inference) precedes the empirical application; within the application the order is setting and identification argument, shock properties, falsification tests, main estimates with sensitivity, then discussion.",
+      "pages": [4, 31],
+      "locator": "Sections 2-6",
+      "basis": "inferred",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o43",
+      "category": "writing_structure",
+      "tags": ["appendix_heavy"],
+      "statement": "Proofs, heterogeneous-effects results, the Bartik replication, Monte Carlo simulations, alternative inference, other outcomes and further robustness are all in a Supplementary Appendix referenced throughout by section and table label.",
+      "pages": [5, 30],
+      "locator": "footnotes 5, 14, 16, 17, 46-48; Sections 4.1, 5.3, 6.2.4",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": ["other:running_example"],
+      "statement": "A running labour supply example with import tariffs as shocks is used throughout the theory sections to ground each formal condition.",
+      "pages": [5, 12],
+      "locator": "Sections 2-3",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": ["other:practitioner_recommendations"],
+      "statement": "The paper phrases parts of its guidance as explicit recommendations to practitioners (how to write the instrument, report effective sample size, establish an a priori argument before testing), and the conclusion restates these as practical steps.",
+      "pages": [5, 31],
+      "locator": "footnote 4, Section 6.1 closing, Section 6.2.2, Section 7",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o46",
+      "category": "replication_statement",
+      "tags": ["code_public", "data_public", "replication_package_cited", "software_named"],
+      "statement": "A Data Availability Statement gives a Zenodo DOI for data and replication package; a GitHub repository and a Stata package (ssaggregate, installable from SSC) are named in a footnote; Stata's mixed command is named for the ICC model.",
+      "pages": [3, 32],
+      "locator": "footnote 3, footnote 44, Data Availability Statement",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o47",
+      "category": "data_access",
+      "tags": ["public_use", "data_public"],
+      "statement": "The application relies on replication data and code shared by the authors of the original studies, acknowledged by name, and the paper's own package is posted publicly on Zenodo.",
+      "pages": [32, 32],
+      "locator": "Acknowledgments, Data Availability Statement",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o48",
+      "category": "mechanism_evidence",
+      "tags": ["ruled_out_alternatives", "in_main_text"],
+      "statement": "Differences between specifications are attributed to a specific confound (a sector-wide manufacturing decline in the later period) and the control that removes it, mirroring how industry-level studies use period fixed effects.",
+      "pages": [29, 30],
+      "locator": "Section 6.2.4, footnote 49",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    },
+    {
+      "id": "o49",
+      "category": "external_validity",
+      "tags": ["site_specific", "in_main_text"],
+      "statement": "Applicability of the framework is described as depending on details of each application; examples across trade, finance, immigration and innovation are given to indicate settings where it may or may not apply.",
+      "pages": [19, 21],
+      "locator": "Section 6.1",
+      "basis": "stated",
+      "applies_to": ["shift_share"]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "SSIV coefficients estimated via equivalent shock-level (industry-level) IV regressions using ssaggregate-transformed data.",
+      "card_shows": "d1 method shift_share; s2/s3 ivreg2 2SLS at shock level with instrument g; ssaggregate in Transformation.do",
+      "status": "agree",
+      "pages": [28, 28],
+      "card_ref": "s2"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Exposure-robust SEs clustered at three-digit SIC level in the shock-level regressions.",
+      "card_shows": "s2 and s3 se=cluster sic3",
+      "status": "agree",
+      "pages": [25, 29],
+      "card_ref": "s2.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Conventional state-clustered SEs reported as an alternative in Supplementary Table C2 (observation-level regression).",
+      "card_shows": "s1 ivreg2 at observation level with cluster clus",
+      "status": "agree",
+      "pages": [28, 28],
+      "card_ref": "s1.se",
+      "note": "Card variable name clus is generic; paper says state clustering as in ADH."
+    },
+    {
+      "item": "weights",
+      "paper_says": "Observation-level regressions weighted by start-of-period commuting zone population; shock-level regressions weighted by average exposure shares.",
+      "card_shows": "s1 aw=wei; s2/s3 aw=s_n",
+      "status": "agree",
+      "pages": [22, 24],
+      "card_ref": "s2.weights"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Period FE and Census division FE in the ADH replication column; period FE and sector or industry FE in shock-level regressions for later columns.",
+      "card_shows": "fe=None on all specs; ivreghdfe present in packages",
+      "status": "paper_only",
+      "pages": [28, 30],
+      "card_ref": "s2.fixed_effects"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Progressive control sets: ADH regional controls, lagged manufacturing share, period-interacted share, lagged sector shares, share-weighted production controls, lagged industry shares.",
+      "card_shows": "controls macros (`controls`, `indcontrols`) present but content not recorded",
+      "status": "paper_only",
+      "pages": [28, 30],
+      "card_ref": "s2.controls"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Service sector with zero shock excluded from columns 2-7; two periods; commuting zones and four-digit industries.",
+      "card_shows": "no sample restriction recorded (d1 unit_time null; `iff' macro unresolved)",
+      "status": "paper_only",
+      "pages": [23, 29],
+      "card_ref": "d1.unit_time"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "First-stage F statistics from shock-level IV regression reported in Table 4; balance and pre-trend tests in Table 3; ICCs in Table 2.",
+      "card_shows": "x1 first_stage status unknown, linked to s3; no balance or ICC diagnostic recorded",
+      "status": "paper_only",
+      "pages": [25, 29],
+      "card_ref": "x1"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Null-imposed confidence intervals and Adao et al. SEs in Table C2; over-identified SSIV in Table C5; extra controls in Table C4.",
+      "card_shows": "robustness [] but s4 ssiv_null_imposed with cluster sic3 present",
+      "status": "agree",
+      "pages": [28, 30],
+      "card_ref": "s4",
+      "note": "Card records the null-imposed procedure as a spec rather than under robustness."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Four main tables (1-4) and supplementary Tables C1-C5 and Figure C1.",
+      "card_shows": "outputs tables [] figures []; file name Table4_C1_C2_C4.do suggests mapping",
+      "status": "paper_only",
+      "pages": [24, 30],
+      "card_ref": "outputs"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "ADH (2013) replication data and Goldsmith-Pinkham et al. (2020) data for the Bartik appendix; package on Zenodo.",
+      "card_shows": "data []; repository path zenodo_4619197",
+      "status": "paper_only",
+      "pages": [14, 32],
+      "card_ref": "data"
+    },
+    {
+      "item": "other",
+      "paper_says": "Other outcomes (unemployment, non-participation, wages) reported in Supplementary Table C1.",
+      "card_shows": "d1 outcomes y d_sh_unempl d_sh_nilf d_avg_lnwkwage",
+      "status": "agree",
+      "pages": [28, 28],
+      "card_ref": "d1.outcomes"
+    }
+  ],
+  "gaps": [
+    "No IRB, preregistration or ethics statement (not expected for a methods paper reusing public data).",
+    "No heterogeneity analysis by subgroup; the only split is period-specific coefficients in a supplementary table.",
+    "No mean of the dependent variable or R-squared reported in tables.",
+    "No explicit statement of software version or of the R code that the recipe card lists.",
+    "Multiple testing across the balance rows is not adjusted or discussed."
+  ],
+  "reading": {
+    "pages_read": [[1, 33]],
+    "coverage": "full",
+    "note": "All 33 pages read, including references. The Supplementary Appendix (A and B sections, Tables C1-C5, Figure C1) is not part of the text file and was only seen through in-text references."
+  }
+}

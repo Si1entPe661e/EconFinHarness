@@ -1,0 +1,2106 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jfe_2026_j_jfineco_2025_104223",
+ "journal": "JFE",
+ "year": 2026,
+ "doi": "10.1016/j.jfineco.2025.104223",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:20:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JFE/metadata/articles.csv",
+   "sha256": "49e4fc58dc8d12acb48961a05f08124cf4188e251615fbdec35daadd7fac6e10"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/01 SplitS34.sas",
+    "sha256": "a16b98a2093059a85456ecda0e82d23a95e70c308c0ffd523667404672bd6b56",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      41
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/02 MasterCleaning.do",
+    "sha256": "d845d3c942c0f97f9b003799766bc619c23e2f527e447169a9856dfd4b85e16f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      13
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/03 MasterAnalysis.do",
+    "sha256": "d33eaaee9d4e4f815c7ee63572e4ea2115a57f47490dfb57998959643317ce2a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      38
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+    "sha256": "467ec25e52c14f49d359338ffbd7b4cd12ab20da72fa5efc8726df39d7291c49",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+    "sha256": "d5557ec8da10bb036a2589dbf02701a0619a53f7e61da880223742a9b65031a5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      21
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+    "sha256": "f0a4dd337c32348e4f215983f2e3c73e85680aacd2eeef3f032c65bdd6c6ef1b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      112
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table5.do",
+    "sha256": "d1de4a02d2fddb77247481d922243703e11a3e2f7c0ac2345812cda655dbfecd",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      59
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+    "sha256": "43c627271459b1b96729fdb0191dfff98189932d1dba68296c0e5e9c557c2653",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      23
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+    "sha256": "9cee9cc2ff5717972f374bb1b3e3bb5447f5f9c289c82fd90969252bb1ee7aa6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      85
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+    "sha256": "b1db342d59cd8978d3c2566ffed6ff0d7606d453bc26084cddc7dd905ade4bc2",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      45
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table9.do",
+    "sha256": "b50839c3586c21136ec8c7ef6af6c2bd2ee2c4a4cdf58275d3537eb83b38f496",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/TableA6.do",
+    "sha256": "23190f3c8dea270a103f5b1894655d62cfe14ebe10af9d96764e797415dc9185",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      37
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/CleanFactSetHoldings.do",
+    "sha256": "80ea6cbd6858c4cd496205331e24c618f5d54db2d91a20cb887b2ec49a9245d6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/ConstructPortfolioData.do",
+    "sha256": "d4471a636cdd1275d5f70b8a7cd7b4c864f02da48116d3f816b59d82404b151d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/QuarterlyPanel.do",
+    "sha256": "09d40679bda6751f9f69de5127f72f38d8ef36a350f82609702d2173ac3224d9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      260,
+      270
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Analyzed master scripts and key analysis/cleaning scripts; found consistent patterns in reghdfe specifications with cluster(permno date) two-way clustering and date/stock FE; xtfmb in Table 1; ivreg2 with Newey-West HAC in portfolio regressions and event study; identified main data sources (CRSP, Compustat, FactSet, FF factors, S34)"
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "SAS"
+  ],
+  "master_scripts": [
+   "code/mendeley_9z43x4c6yr_v2/Code/01 SplitS34.sas",
+   "code/mendeley_9z43x4c6yr_v2/Code/02 MasterCleaning.do",
+   "code/mendeley_9z43x4c6yr_v2/Code/03 MasterAnalysis.do"
+  ],
+  "directory_layout": "master_scripts and stage-specific subscripts (Code/Analysis, Code/Cleaning)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 38,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/02 MasterCleaning.do",
+     "lines": [
+      1,
+      2
+     ],
+     "snippet": "cd <REPLICATION_ROOT>",
+     "supports": [
+      "path_handling"
+     ]
+    },
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/03 MasterAnalysis.do",
+     "lines": [
+      1,
+      2
+     ],
+     "snippet": "global outputdir Output",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/mendeley_9z43x4c6yr_v2/Code/03 MasterAnalysis.do",
+    "lines": [
+     1,
+     1
+    ],
+    "snippet": "cd <REPLICATION_ROOT> // Set to your own project directory",
+    "supports": [
+     "languages",
+     "master_scripts"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": "CRSP",
+   "type": "market_prices",
+   "access": "unknown",
+   "unit_of_observation": "stock-month",
+   "period": null,
+   "source_hint": "CRSP_monthly.dta",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/QuarterlyPanel.do",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "use prc shrout vol ncusip ret permno dlret dlstcd date exchcd shrcd hsiccd using \"Data/Raw/CRSP/CRSP_monthly.dta\"",
+     "supports": [
+      "type",
+      "unit_of_observation",
+      "source_hint",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "market_prices",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "FF5Factors.dta, momentum.dta",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/QuarterlyPanel.do",
+     "lines": [
+      71,
+      71
+     ],
+     "snippet": "use Data/Raw/Other/FF5Factors.dta, clear",
+     "supports": [
+      "type",
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "transactions",
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "s34files.s34",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/01 SplitS34.sas",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "libname s34files \"&basedir./Data/Raw/S34\";",
+     "supports": [
+      "type",
+      "access",
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "transactions",
+   "access": "unknown",
+   "unit_of_observation": "institution-security-quarter",
+   "period": null,
+   "source_hint": "FactSet own_*.txt files",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/CleanFactSetHoldings.do",
+     "lines": [
+      4,
+      4
+     ],
+     "snippet": "import delimited \"Data/Raw/FactSet//own_ent_funds.txt\" , clear varnames(1)",
+     "supports": [
+      "type",
+      "unit_of_observation",
+      "source_hint"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "01 SplitS34.sas must run first (SAS); then 02 MasterCleaning.do (Stata); then 03 MasterAnalysis.do (Stata). Within cleaning/analysis stages, scripts are called sequentially in order.",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "panel_fe",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "intermediary_shock, capital, levshock, exretfin (continuous shocks)",
+   "outcomes": [
+    "exret"
+   ],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "interaction with epsilonit (intermediary exposure)",
+    "two-way clustering (permno, date)",
+    "multiple shock types tested"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      23,
+      23
+     ],
+     "snippet": "reghdfe exret c.intermediary_shock#c.epsilonit epsilonit , cluster(permno date) ab(permno date)",
+     "supports": [
+      "method",
+      "outcomes",
+      "treatment",
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "portfolio_sorts",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Newey-West standard errors (kernel(bar) bw(auto))",
+    "portfolio-level regressions",
+    "risk factor controls (market return, FF factors)"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+     "lines": [
+      37,
+      57
+     ],
+     "snippet": "ivreg2 Spread cons if yearq < 201704, kernel(bar) bw(auto) small robust nocons",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "return_event_study",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "30-month window before/after",
+    "Newey-West HAC inference",
+    "multiple FF6 factor specifications with different control groups"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "role": "unknown",
+   "method": "fama_macbeth",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "continuous firm characteristics (log BE, profitability, beta, asset growth, book-to-market)",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "lag(8) for time-series averaging",
+    "controls for multiple firm characteristics"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+     "supports": [
+      "method",
+      "treatment",
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.intermediary_shock#c.epsilonit epsilonit , cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "permno",
+    "date"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       23,
+       23
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     },
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       23,
+       23
+      ],
+      "snippet": "reghdfe exret c.intermediary_shock#c.epsilonit epsilonit , cluster(permno date) ab(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      23,
+      23
+     ],
+     "snippet": "reghdfe exret c.intermediary_shock#c.epsilonit epsilonit , cluster(permno date) ab(permno date)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.capital#c.epsilonit c.levshock#c.epsilonit ///\n\tepsilonit , cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "permno",
+    "date"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       29,
+       33
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      29,
+      30
+     ],
+     "snippet": "reghdfe exret c.capital#c.epsilonit c.levshock#c.epsilonit ///\n\tepsilonit , cluster(permno date) ab(permno date)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.exretfin#c.epsilonit epsilonit if !missing(intermediary_shock), cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       36,
+       39
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if !missing(intermediary_shock)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      36,
+      39
+     ],
+     "snippet": "reghdfe exret c.exretfin#c.epsilonit epsilonit if !missing(intermediary_shock)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.intermediary_shock#c.epsilonit c.exretnonfin#c.epsilonit epsilonit, cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       42,
+       45
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      42,
+      45
+     ],
+     "snippet": "reghdfe exret c.intermediary_shock#c.epsilonit c.exretnonfin#c.epsilonit epsilonit",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.capital#c.epsilonit c.levshock#c.epsilonit c.exretnonfin#c.epsilonit epsilonit, cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       48,
+       51
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      48,
+      51
+     ],
+     "snippet": "reghdfe exret c.capital#c.epsilonit c.levshock#c.epsilonit c.exretnonfin#c.epsilonit epsilonit",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.exretfin#c.epsilonit c.exretnonfin#c.epsilonit epsilonit if !missing(intermediary_shock), cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       54,
+       57
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if !missing(intermediary_shock)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      54,
+      57
+     ],
+     "snippet": "reghdfe exret c.exretfin#c.epsilonit c.exretnonfin#c.epsilonit epsilonit if !missing(intermediary_shock)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.intermediary_shock#c.epsilonit c.exretnonfin#c.epsilonit c.smb#c.epsilonit c.hml#c.epsilonit c.cma#c.epsilonit c.rmw#c.epsilonit c.mom#c.epsilonit epsilonit, cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": "market return and Fama-French 5 factors (smb, hml, cma, rmw, mom)",
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       60,
+       63
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      60,
+      63
+     ],
+     "snippet": "reghdfe exret c.intermediary_shock#c.epsilonit c.exretnonfin#c.epsilonit c.smb#c.epsilonit c.hml#c.epsilonit c.cma#c.epsilonit c.rmw#c.epsilonit c.mom#c.epsilonit epsilonit",
+     "supports": [
+      "formula_or_call",
+      "controls_summary",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.capital#c.epsilonit c.levshock#c.epsilonit c.exretnonfin#c.epsilonit c.smb#c.epsilonit c.hml#c.epsilonit c.cma#c.epsilonit c.rmw#c.epsilonit c.mom#c.epsilonit epsilonit, cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       66,
+       69
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      66,
+      69
+     ],
+     "snippet": "reghdfe exret c.capital#c.epsilonit c.levshock#c.epsilonit c.exretnonfin#c.epsilonit c.smb#c.epsilonit c.hml#c.epsilonit c.cma#c.epsilonit c.rmw#c.epsilonit c.mom#c.epsilonit epsilonit",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exret c.exretfin#c.epsilonit c.exretnonfin#c.epsilonit c.smb#c.epsilonit c.hml#c.epsilonit c.cma#c.epsilonit c.rmw#c.epsilonit c.mom#c.epsilonit epsilonit if !missing(intermediary_shock), cluster(permno date) ab(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       72,
+       75
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if !missing(intermediary_shock)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      72,
+      72
+     ],
+     "snippet": "reghdfe exret c.exretfin#c.epsilonit c.exretnonfin#c.epsilonit c.smb#c.epsilonit c.hml#c.epsilonit c.cma#c.epsilonit c.rmw#c.epsilonit c.mom#c.epsilonit epsilonit if !missing(intermediary_shock), clus",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe b_intermediary epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "permno",
+    "date"
+   ],
+   "controls_summary": "profit, beta, asset growth, book-to-market, log market cap (and square), log book equity (and square)",
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+      "lines": [
+       13,
+       16
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if nobslev >= 31",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+     "lines": [
+      13,
+      13
+     ],
+     "snippet": "reghdfe b_intermediary epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "controls_summary",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe b_capital epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "permno",
+    "date"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+      "lines": [
+       20,
+       23
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if nobslev >= 31",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "reghdfe b_capital epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe b_levshock epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "permno",
+    "date"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+      "lines": [
+       27,
+       30
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if nobslev >= 31",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+     "lines": [
+      27,
+      27
+     ],
+     "snippet": "reghdfe b_levshock epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe b_exretfin epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "permno",
+    "date"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "twoway_cluster",
+    "cluster_level": [
+     "permno",
+     "date"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+      "lines": [
+       34,
+       38
+      ],
+      "snippet": "cluster(permno date)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "if nobslev >= 31",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "reghdfe b_exretfin epsilonit profit beta Gat bm lnme lnme_sq LNbe LNbe_sq  if nobslev >= 31, ab(permno date) cluster(permno date)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "design_id": "d4",
+   "role": "unknown",
+   "estimator": "other:fama_macbeth",
+   "command": "xtfmb",
+   "package": null,
+   "formula_or_call": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": "firm characteristics: log book equity, profitability, CAPM beta, asset growth, book-to-market",
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": "if samp (defined in data preparation)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+     "lines": [
+      16,
+      17
+     ],
+     "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "controls_summary",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": "ivreg2",
+   "formula_or_call": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "portfolio-level regressions by quintile, plus spread",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "hac_newey_west",
+    "cluster_level": null,
+    "details": "Newey-West kernel (Bartlett), bandwidth selected automatically",
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+      "lines": [
+       20,
+       20
+      ],
+      "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "5 quintile regressions plus spread (Q5-Q1)",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+     "lines": [
+      28,
+      28
+     ],
+     "snippet": "est store spread",
+     "supports": [
+      "scope",
+      "family_description"
+     ]
+    },
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "ivreg2 exret`i' intermediary_shock`i' exretnonfin`i' , kernel(bar) bw(auto) small robust",
+     "supports": [
+      "formula_or_call",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": "ivreg2",
+   "formula_or_call": "ivreg2 exret1 eta z_pls,  kernel(bar) bw(auto) small robust",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "portfolio-level regressions by quintile, plus spread; tests predictability of eta vs z_pls",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "hac_newey_west",
+    "cluster_level": null,
+    "details": "Newey-West kernel (Bartlett), bandwidth selected automatically",
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table5.do",
+      "lines": [
+       33,
+       33
+      ],
+      "snippet": "eststo r1: ivreg2 exret1 eta z_pls,  kernel(bar) bw(auto) small robust",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "6 specifications (5 quintiles + spread)",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table5.do",
+     "lines": [
+      33,
+      33
+     ],
+     "snippet": "eststo r1: ivreg2 exret1 eta z_pls,  kernel(bar) bw(auto) small robust",
+     "supports": [
+      "formula_or_call",
+      "scope",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": "ivreg2",
+   "formula_or_call": "ivreg2 spread_hedge intermediary_shock exretnonfin , kernel(bar) bw(auto) small robust",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "portfolio-level analysis: hedge funds, high/low hedge-fund alignment groups",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "hac_newey_west",
+    "cluster_level": null,
+    "details": "Newey-West kernel (Bartlett), bandwidth selected automatically",
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table9.do",
+      "lines": [
+       17,
+       17
+      ],
+      "snippet": "eststo h1: ivreg2 spread_hedge intermediary_shock exretnonfin , kernel(bar) bw(auto) small robust",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "tests effects on hedge fund portfolios; 2 versions (with/without FF factors) x 3 groups",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table9.do",
+     "lines": [
+      17,
+      17
+     ],
+     "snippet": "eststo h1: ivreg2 spread_hedge intermediary_shock exretnonfin , kernel(bar) bw(auto) small robust",
+     "supports": [
+      "family_description",
+      "scope",
+      "package",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table9.do",
+     "lines": [
+      17,
+      17
+     ],
+     "snippet": "ivreg2 spread_hedge intermediary_shock exretnonfin , kernel(bar) bw(auto) small robust",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": "ivreg2",
+   "formula_or_call": "ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0, cluster(datemo) bw(60) small nocons",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "6 specifications testing S&P 500 inclusion with different matched control groups (by size, beta, B/M, profitability, investment, momentum)",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "hac_newey_west",
+    "cluster_level": [
+     "datemo"
+    ],
+    "details": "Newey-West HAC with 60-month bandwidth",
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+      "lines": [
+       7,
+       7
+      ],
+      "snippet": "cluster(datemo) bw(60) small nocons",
+      "supports": [
+       "type",
+       "cluster_level",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": "if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "eststo diff1: ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0, cluster(datemo) bw(60) ",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "scope",
+      "family_description",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_plot",
+   "design_id": "d3",
+   "spec_ids": [
+    "s18"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do"
+   ],
+   "note": "Event study specification present but no pre-event trend plot found",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "Tables/Table1.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+      "lines": [
+       18,
+       20
+      ],
+      "snippet": "esttab * using ${outputdir}/Tables/Table1.tex",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+       106,
+       106
+      ],
+      "snippet": "esttab matrix(PortfolioSummaryMean) using  \"${outputdir}/Tables/Table2_panelA.tex\", ///",
+      "supports": [
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": "Tables/Table3.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+       111,
+       112
+      ],
+      "snippet": "esttab matrix(PortfolioSummaryRets) using  \"${outputdir}/Tables/Table3.tex\"",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t5",
+    "output_ref": null,
+    "path": "Tables/Table5.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table5.do",
+      "lines": [
+       52,
+       54
+      ],
+      "snippet": "esttab r* using ${outputdir}/Tables/Table5.tex",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t6",
+    "output_ref": null,
+    "path": "Tables/Table6.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+      "lines": [
+       20,
+       22
+      ],
+      "snippet": "esttab diff1 diff2 diff3 diff4 diff5 diff6 using ${outputdir}/Tables/Table6.tex",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t7",
+    "output_ref": null,
+    "path": "Tables/Table7.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+       78,
+       84
+      ],
+      "snippet": "esttab * using ${outputdir}/Tables/Table7.tex",
+      "supports": [
+       "path",
+       "package",
+       "format",
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t8",
+    "output_ref": null,
+    "path": "Tables/Table8.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table8.do",
+      "lines": [
+       41,
+       44
+      ],
+      "snippet": "esttab * using ${outputdir}/Tables/Table8.tex",
+      "supports": [
+       "path",
+       "package",
+       "format",
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t9",
+    "output_ref": null,
+    "path": "Tables/Table9_PanelA.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table9.do",
+      "lines": [
+       33,
+       37
+      ],
+      "snippet": "esttab h1 h2 highalign1 highalign2 lowalign1 lowalign2 using ${outputdir}/Tables/Temp_Table9_PanelA.tex",
+      "supports": [
+       "path",
+       "package",
+       "format"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": null,
+    "path": null,
+    "package": "coefplot",
+    "format": "png",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+      "lines": [
+       30,
+       30
+      ],
+      "snippet": "coefplot (q1 q2 q3 q4 q5, recast(connected) ciopts(lcolor(navy) lwidth(medthick) recast(rcap))  ) ///",
+      "supports": [
+       "package",
+       "format",
+       "spec_ids"
+      ]
+     }
+    ],
+    "types": []
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      23,
+      23
+     ],
+     "snippet": "reghdfe exret c.intermediary_shock#c.epsilonit epsilonit , cluster(permno date) ab(permno date)",
+     "supports": [
+      "commands",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+     "lines": [
+      57,
+      57
+     ],
+     "snippet": "ivreg2 Spread cons if yearq < 201704, kernel(bar) bw(auto) small robust nocons",
+     "supports": [
+      "commands",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "xtfmb",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "xtfmb"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+     "supports": [
+      "commands",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "esttab",
+   "kind": "command",
+   "usage": "called",
+   "purpose": "export estimation results to LaTeX tables",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      78,
+      84
+     ],
+     "snippet": "esttab * using ${outputdir}/Tables/Table7.tex",
+     "supports": [
+      "purpose",
+      "commands",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "coefplot",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "coefplot"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Figure4.do",
+     "lines": [
+      30,
+      30
+     ],
+     "snippet": "coefplot (q1 q2 q3 q4 q5, recast(connected) ciopts(lcolor(navy) lwidth(medthick) recast(rcap))  ) ///",
+     "supports": [
+      "commands",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "asreg",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "asreg"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Cleaning/ConstructPortfolioData.do",
+     "lines": [
+      28,
+      28
+     ],
+     "snippet": "asreg percent_im LNbe LNbe_sq profit beta Gat bm `wrdsvarlist' if samp , by(date) fitted",
+     "supports": [
+      "commands",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Fixed effects specification: ab(permno date) notation in reghdfe specifies stock-by-time two-way FE absorption",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      23,
+      23
+     ],
+     "snippet": "ab(permno date)",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Interaction syntax: c.intermediary_shock#c.epsilonit creates fully-interacted term",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      23,
+      23
+     ],
+     "snippet": "c.intermediary_shock#c.epsilonit",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Portfolio-level analysis: data aggregated to quintile × date level before ivreg2 estimation",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "gcollapse (mean) exret percent_im lnme LNbe bm Gat profit beta, by(yearq date epsilonit5)",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Output names: figures exported as .png in Figures/ subdirectory; tables as .tex in Tables/ subdirectory",
+   "evidence": [
+    {
+     "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+     "lines": [
+      78,
+      78
+     ],
+     "snippet": "esttab * using ${outputdir}/Tables/Table7.tex",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "fama_macbeth",
+   "panel_fe",
+   "portfolio_sorts",
+   "return_event_study"
+  ],
+  "fields": []
+ }
+}

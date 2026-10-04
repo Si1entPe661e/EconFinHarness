@@ -1,0 +1,1195 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jpe_2026_740226",
+ "journal": "JPE",
+ "year": 2026,
+ "doi": "10.1086/740226",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:15:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JPE/metadata/articles.csv",
+   "sha256": "0ede2238a117d9aee4e58b32cf05ae7120ca1c154cf1cb330e8a03a046490e0a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_GXY45B/Code/Master.do",
+    "sha256": "2a1efe19ea8266ad08bec569204b2727803c8035581cc37610210dacec00afa6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GXY45B/Code_Output/2_Clean_dataset.do",
+    "sha256": "e117ae57707874d0e8132d5affef64c0e6ccf4223491a29b5c8df61d688d4a3b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+    "sha256": "90a3da4a2b11d29dc6cb5ab4242b726161102cd6114e7b8a96716d774c915568",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      110
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GXY45B/Code_Output/4_value_added_model.do",
+    "sha256": "0845419f4c209510a8fcf07f1fe0e45e02eeb6c076edcc7680a5468dd1e02af5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      177
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GXY45B/Code_Output/Fig_2_3.do",
+    "sha256": "711add6727c848eccaaae0915f906dab21baf4e9c799f177073e5822f7de9ee5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      61
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+    "sha256": "16844c00e65718a8744a30e6886b1739d255ae4ba53b5bb42b0770c2a89f9cf0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      34
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+    "sha256": "9fa305b582bb4da8a41f95d335a3e6755b2ade9b89ac29f6a98226c65bdcd629",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      380
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [
+   {
+    "description": "Data loading source: ${data}/data_RD and ${data2}/PILA_cuatrimestral datasets not publicly available in code",
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+       12,
+       12
+      ],
+      "snippet": "use \"${data}/data_RD\", clear",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Entry point: Master.do calls 2 input scripts (3_Results_years_PILA.do, 4_value_added_model.do) then 16 figure/table scripts. Main estimation conducted through rdrobust command (37 hits) with two running variables (running_saber11, running_sisben). Identified 3 specification families: reduced-form RD, fuzzy RD with beneficiary_spp instrument, and value-added model with reghdfe. Budget exhausted at 7 of 32 code files; remaining scripts (Fig_4_5.do, Fig_6.do, Fig_7_8.do, etc.) follow identical rdrobust patterns and extract same matrix elements."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_GXY45B/Code/Master.do"
+  ],
+  "directory_layout": "Master.do entry point calls 2 input scripts (3_Results_years_PILA.do, 4_value_added_model.do) then 16 figure output scripts and 7 table output scripts. Code directory structure: /Code/Master.do, /Code_Output/{analysis,figure,table scripts}.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 32,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code/Master.do",
+     "lines": [
+      43,
+      43
+     ],
+     "snippet": "global data \t\t\"C:\\Users/`c(username)'/Dropbox\\EvaluacionSPP-GeneracionE\\Data\\Clean\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/dataverse_GXY45B/Code/Master.do",
+    "lines": [
+     69,
+     69
+    ],
+    "snippet": "net install rdrobust, from(https://raw.githubusercontent.com/rdpackages/rdrobust/master/stata) replace",
+    "supports": [
+     "languages"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": "data_RD",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+     "lines": [
+      12,
+      12
+     ],
+     "snippet": "use \"${data}/data_RD\", clear",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "PILA_cuatrimestral",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "merge m:1 estu_snp using \"${data2}/PILA_cuatrimestral\", keep(1 3) nogen",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "S11_20101_20202",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/4_value_added_model.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "use \"${data2}/S11_20101_20202.dta\", clear",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+     "code/dataverse_GXY45B/Code_Output/4_value_added_model.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code/Master.do",
+      "lines": [
+       77,
+       79
+      ],
+      "snippet": "* Inputs for Figures and tables\ndo \"${code}/Output/3_Results_years_PILA.do\" \ndo \"${code}/Output/4_value_added_model.do\"",
+      "supports": [
+       "scripts",
+       "stage"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "tables",
+    "scripts": [
+     "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "code/dataverse_GXY45B/Code_Output/Tab_5.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code/Master.do",
+      "lines": [
+       90,
+       92
+      ],
+      "snippet": "* Tables\ndo \"${code}/Output/Tab_1_2_3_4_A3.do\"\ndo \"${code}/Output/Tab_5.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "figures",
+    "scripts": [
+     "code/dataverse_GXY45B/Code_Output/Fig_1.do",
+     "code/dataverse_GXY45B/Code_Output/Fig_2_3.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code/Master.do",
+      "lines": [
+       81,
+       84
+      ],
+      "snippet": "**# Main\n* Figures\ndo \"${code}/Output/Fig_1.do\" \ndo \"${code}/Output/Fig_2_3.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Master.do explicitly sequences 2 input prep scripts, then table/figure scripts in order.",
+  "sample_restrictions": [
+   {
+    "description": "keep if icfes_per==20142: sample cohort with ICFES exam date 2014/2",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+       13,
+       13
+      ],
+      "snippet": "keep if icfes_per==20142",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "eligible_sisben==1 condition for SABER 11 running variable analysis",
+    "spec_ids": [
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+       14,
+       14
+      ],
+      "snippet": "glo cond_saber11\t\"eligible_sisben==1\"",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "eligible_saber11==1 condition for SISBEN running variable analysis",
+    "spec_ids": [
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+       15,
+       15
+      ],
+      "snippet": "glo cond_sisben\t\t\"eligible_saber11==1\"",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": [
+   {
+    "description": "Merge PILA employment/wage data by student ID",
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+       18,
+       18
+      ],
+      "snippet": "merge m:1 estu_snp using \"${data2}/PILA_cuatrimestral\", keep(1 3) nogen",
+      "supports": [
+       "description"
+      ]
+     }
+    ],
+    "spec_ids": []
+   }
+  ]
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "fuzzy",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Two independent running variables: SABER 11 score and SISBEN index",
+    "Sharp discontinuity at each cutoff (cutoff=0)",
+    "First stage: beneficiary_spp (receipt of Ser Pilo Paga scholarship)",
+    "Bandwidth selection: data-driven (rdrobust default)",
+    "Kernel: triangular (rdrobust default)"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      268,
+      268
+     ],
+     "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off) fuzzy(`f')",
+     "supports": [
+      "method",
+      "variant",
+      "implementation_features"
+     ]
+    },
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "rddensity running_saber11 if eligible_sisben==1, c(0) vce(plugin) pl plot_range(-60 60) hist_range(-60 60) graph_opt(xline(0, lcolor(black) lpattern(line)) xtitle(Distance to SABER 11 cutoff) legend(o",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "panel_fe",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Fixed effects at program level (codigo_prog)",
+    "Multiple sets of controls (models a-f)",
+    "Model a: individual baseline characteristics",
+    "Model f: adds prior school and college peer characteristics"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/4_value_added_model.do",
+     "lines": [
+      164,
+      164
+     ],
+     "snippet": "reghdfe `x' ${model_`m'}, abs(`x'_`m'_va=codigo_prog)",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    },
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/4_value_added_model.do",
+     "lines": [
+      136,
+      136
+     ],
+     "snippet": "global model_f ${model_e} college_sisben_score_100 college_m_sisben",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+       67,
+       67
+      ],
+      "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "First stage specification: outcome is program beneficiary indicator. Main running variable is SABER 11 score (running_saber11), cutoff at 0.",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      67,
+      67
+     ],
+     "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+     "supports": [
+      "formula_or_call",
+      "output_ids",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Loop over outcomes: access_0 through access_6 (year 0-6 college enrollment), access by college type (hq, lq, pri, pub), and heterogeneous interactions. Outcomes include dropout, graduation timing, and field of study indicators.",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Reduced-form ITT estimates for college enrollment outcomes. Bandwidth selected data-driven per rdrobust.",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      62,
+      67
+     ],
+     "snippet": "foreach o of global outcomes{\n\tforeach r in saber11 sisben{\n\tif \"`r'\"==\"saber11\" local j=0\n\tif \"`r'\"==\"sisben\" \tlocal j=17\n\t\t\n\tcap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+     "supports": [
+      "scope",
+      "family_description",
+      "package",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      67,
+      67
+     ],
+     "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off) fuzzy(beneficiary_spp)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Fuzzy RD estimates for multiple outcomes: access (0-6 years), graduation, SABER Pro scores, employment (work_1 to work_8), and wages (log and levels) for years 1-8. Two separate first stages per outcome: one for each running variable.",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Instrumental variable estimates: beneficiary_spp (receipt of Ser Pilo Paga scholarship) instruments for college enrollment/quality. Estimates local average treatment effect (LATE).",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      331,
+      331
+     ],
+     "snippet": "rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off) fuzzy(beneficiary_spp)",
+     "supports": [
+      "formula_or_call",
+      "family_description",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "cap rdrobust `o' running_`r' if ${cond_`r'} & `h'==1, masspoints(off) h(${bw_`r'}) b(${br_`r'}) fuzzy(beneficiary_spp)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Heterogeneous treatment effects by: income stratum (het1: icfes_stratum1-3, icfes_stratum456), gender/family (het2: female, ethnicity, urban, parental BA, college/major selectivity), and prior test score quartiles (het4: quartil_sb11, quartil_enrollment).",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Baseline bandwidth (h, b) computed once per outcome and held fixed across heterogeneous subgroups for comparability. Estimates interaction of RD effect with subgroup membership.",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      355,
+      355
+     ],
+     "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'} & `h'==1, masspoints(off) h(${bw_`r'}) b(${br_`r'}) fuzzy(beneficiary_spp)",
+     "supports": [
+      "formula_or_call",
+      "bindings",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe `x' ${model_`m'}, abs(`x'_`m'_va=codigo_prog)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Value-added models regressing outcomes (graduation_exam_7, graduation_exam_pro_7, score_saberpro_5, work_9, mw_9) on baseline and school-level controls with program fixed effects. Six model variants (aa, a, b, c, d, e, f) progressively add: school covariates, school aggregate characteristics, college aggregate characteristics, college selectivity.",
+   "fixed_effects": [
+    "codigo_prog"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Coefficient represents program fixed effect (school value-added). Non-enrolled students coded as baseline (codigo_prog==0). Missing SISBEN coded as binary indicator.",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/4_value_added_model.do",
+     "lines": [
+      164,
+      164
+     ],
+     "snippet": "reghdfe `x' ${model_`m'}, abs(`x'_`m'_va=codigo_prog)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "rddensity test on running_saber11 (cutoff 0) for SISBEN-eligible sample: tests for manipulation at SABER 11 cutoff",
+   "searched_files": [],
+   "note": "Density test result p-value extracted and reported in figure",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "rddensity running_saber11 if eligible_sisben==1, c(0) vce(plugin) pl plot_range(-60 60) hist_range(-60 60) graph_opt(xline(0, lcolor(black) lpattern(line)) xtitle(Distance to SABER 11 cutoff) legend(o",
+     "supports": [
+      "status",
+      "description",
+      "observation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x2",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "rddensity test on running_sisben (cutoff 0) for SABER 11-eligible sample: tests for manipulation at SISBEN cutoff",
+   "searched_files": [],
+   "note": "Density test result p-value extracted and reported in figure",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+     "lines": [
+      30,
+      30
+     ],
+     "snippet": "rddensity running_sisben if eligible_saber11==1, c(0) vce(plugin) pl plot_range(-20 20) hist_range(-20 20) graph_opt(xline(0, lcolor(black) lpattern(line)) xtitle(Distance to SISBEN cutoff) legend(off",
+     "supports": [
+      "status",
+      "description",
+      "observation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x3",
+   "kind": "bandwidth_selection",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Data-driven bandwidth selection via rdrobust command (default optimal bandwidth, CCT plug-in estimator, triangular kernel)",
+   "searched_files": [],
+   "note": "Density test result p-value extracted and reported in figure",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      67,
+      67
+     ],
+     "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+     "supports": [
+      "description",
+      "observation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x4",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "First stage: rdrobust with beneficiary_spp as outcome (program benefit receipt indicator) with running_saber11 and running_sisben as running variables",
+   "searched_files": [],
+   "note": "Density test result p-value extracted and reported in figure",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "global outcomes beneficiary_spp access_0 access_1 access_2 access_3 access_4 access_5 access_6 access_0_hq access_0_lq access_0_pri access_0_pub access_0_hq_pri access_0_hq_pub access_0_lq_pri access_",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_bandwidth",
+   "description": "bandwidth held fixed h(${bw_`r'}) across heterogeneous subgroup analysis for consistency",
+   "baseline_spec_ids": [
+    "s2"
+   ],
+   "variant_spec_ids": [
+    "s4"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Addresses concern that varying bandwidth across outcomes could confound heterogeneous treatment estimates.",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      162,
+      164
+     ],
+     "snippet": "rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)\n\tglobal bw_`r' `e(h_r)'\n\tglobal br_`r' `e(b_r)'",
+     "supports": [
+      "type",
+      "description"
+     ]
+    },
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      355,
+      355
+     ],
+     "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'} & `h'==1, masspoints(off) h(${bw_`r'}) b(${br_`r'}) fuzzy(beneficiary_spp)",
+     "supports": [
+      "baseline_spec_ids",
+      "variant_spec_ids"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [
+  {
+   "dimension": "icfes_stratum1 icfes_stratum2 icfes_stratum3 icfes_stratum456",
+   "how": "interaction",
+   "spec_ids": [
+    "s4"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      319,
+      319
+     ],
+     "snippet": "global het1 icfes_stratum1 icfes_stratum2 icfes_stratum3 icfes_stratum456",
+     "supports": [
+      "dimension",
+      "spec_ids",
+      "how"
+     ]
+    }
+   ]
+  },
+  {
+   "dimension": "icfes_female ethnminority student_resides_urban parental_ba",
+   "how": "interaction",
+   "spec_ids": [
+    "s4"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      320,
+      320
+     ],
+     "snippet": "global het2 icfes_female ethnminority student_resides_urban parental_ba quartil_enrollment_hq college_selectivity major_selectivity",
+     "supports": [
+      "dimension",
+      "spec_ids",
+      "how"
+     ]
+    }
+   ]
+  }
+ ],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+    "package": null,
+    "format": null,
+    "spec_ids": [
+     "s1"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code/Master.do",
+      "lines": [
+       90,
+       92
+      ],
+      "snippet": "* Tables\ndo \"${code}/Output/Tab_1_2_3_4_A3.do\"\ndo \"${code}/Output/Tab_5.do\"",
+      "supports": [
+       "spec_ids",
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": null,
+    "path": null,
+    "package": "twoway",
+    "format": "pdf",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/Fig_2_3.do",
+      "lines": [
+       33,
+       33
+      ],
+      "snippet": "twoway \t(lfit access_0 running_saber11 [pw=kw] if abs(running_saber11)<`bw' & ${cond_saber11} & running_saber11 < 0, sort lcolor(black) ) (lfit access_0 running_saber11 [pw=kw] if abs(running_saber11)",
+      "supports": [
+       "spec_ids",
+       "format",
+       "package"
+      ]
+     },
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/Fig_2_3.do",
+      "lines": [
+       27,
+       27
+      ],
+      "snippet": "rdrobust access_0 running_saber11",
+      "supports": [
+       "types"
+      ]
+     }
+    ],
+    "types": [
+     "rd_plot"
+    ]
+   },
+   {
+    "id": "f2",
+    "output_ref": null,
+    "path": null,
+    "package": "rddensity",
+    "format": "pdf",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+      "lines": [
+       24,
+       24
+      ],
+      "snippet": "rddensity running_saber11 if eligible_sisben==1, c(0) vce(plugin) pl plot_range(-60 60) hist_range(-60 60) graph_opt(xline(0, lcolor(black) lpattern(line)) xtitle(Distance to SABER 11 cutoff) legend(o",
+      "supports": [
+       "spec_ids",
+       "format",
+       "package"
+      ]
+     },
+     {
+      "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+      "lines": [
+       24,
+       24
+      ],
+      "snippet": "rddensity running_saber11",
+      "supports": [
+       "types"
+      ]
+     }
+    ],
+    "types": [
+     "distribution"
+    ]
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "rdrobust",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rdrobust"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code/Master.do",
+     "lines": [
+      69,
+      69
+     ],
+     "snippet": "net install rdrobust, from(https://raw.githubusercontent.com/rdpackages/rdrobust/master/stata) replace",
+     "supports": [
+      "usage",
+      "ecosystem",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "rddensity",
+   "kind": "command",
+   "usage": "called",
+   "purpose": "Density discontinuity test at running variable cutoff",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rddensity"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "rddensity running_saber11 if eligible_sisben==1, c(0) vce(plugin) pl plot_range(-60 60) hist_range(-60 60) graph_opt(xline(0, lcolor(black) lpattern(line)) xtitle(Distance to SABER 11 cutoff) legend(o",
+     "supports": [
+      "usage",
+      "purpose",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code/Master.do",
+     "lines": [
+      66,
+      67
+     ],
+     "snippet": "cap ado uninstall reghdfe\nnet install reghdfe, from(\"https://raw.githubusercontent.com/sergiocorreia/reghdfe/master/src/\")",
+     "supports": [
+      "usage",
+      "ecosystem",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Bandwidth stored in global macro after rdrobust call (${bw_r}, ${br_r}) for reuse in heterogeneous subgroup analysis to ensure consistency",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+     "lines": [
+      163,
+      164
+     ],
+     "snippet": "global bw_`r' `e(h_r)'\n\tglobal br_`r' `e(b_r)'",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Sampling conditions stored as global macros: ${cond_saber11} = 'eligible_sisben==1', ${cond_sisben} = 'eligible_saber11==1'",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+     "lines": [
+      14,
+      15
+     ],
+     "snippet": "glo cond_saber11\t\"eligible_sisben==1\"\nglo cond_sisben\t\t\"eligible_saber11==1\"",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "matrix ry2014 stores rdrobust results for table/figure production",
+   "evidence": [
+    {
+     "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+     "lines": [
+      36,
+      36
+     ],
+     "snippet": "matrix ry2014=J(`NO',34,.)",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "panel_fe",
+   "rdd"
+  ],
+  "fields": []
+ }
+}

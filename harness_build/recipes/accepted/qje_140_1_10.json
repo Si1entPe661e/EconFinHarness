@@ -1,0 +1,1043 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "qje_140_1_10",
+ "journal": "QJE",
+ "year": 2025,
+ "doi": "10.1093/qje/qjae036",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:20:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/QJE/metadata/articles.csv",
+   "sha256": "8064dd0901f6f3bd3ec9089390b1b88958eda6dbba4e11911b955aeeb46b5d55"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_XABPWK/Replication package/MASTER.do",
+    "sha256": "71ecabe3fea99dda358277d026a25409fad59048636503ab8ac464b0fff6347f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      92
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/bartik_BHJ_robustness.do",
+    "sha256": "5db610bbebaaf190fa4d2d1fe19d4e7e000a86aa984d165f543b362ddf4ce3da",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+    "sha256": "f8e3c2f72ce3224bb0da5eaa8ab1fd9306a229ca01749b376e977041010af24b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ],
+     [
+      260,
+      340
+     ],
+     [
+      530,
+      650
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/established_workers.do",
+    "sha256": "4776a9b8a3fb346defa9b2b980ea2f836f067718d3eb4f11ca2c994b704af4b9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+    "sha256": "41f79ec29df15ed39457920bf30d389dd914d352af86a0ab44f95b59268d08c6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+    "sha256": "c69029693d983ce5f7c1ebe9a4aca05397e07b34288092626dca716f83918f37",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      294
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/industry_ddd.do",
+    "sha256": "41f79ec29df15ed39457920bf30d389dd914d352af86a0ab44f95b59268d08c6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+    "sha256": "e5c3adeb4cf1e77cbb6b91118537b8299aefbf6b216d84d766e9d1c36e8f4a5a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      350
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Focused on pipeline structure and key DID/DDD/shift-share specifications across industry, municipality, and individual levels."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_XABPWK/Replication package/MASTER.do"
+  ],
+  "directory_layout": "Single directory with 52 .do/.ado files organized by analysis stage",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 52,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+     "lines": [
+      98,
+      98
+     ],
+     "snippet": "set seed 1608",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "industry_data",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "use \"$path/industry_data.dta\", clear",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "manufacturing_data",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "use \"$path/manufacturing_data\", clear",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_XABPWK/Replication package/industry_analysis.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/MASTER.do",
+      "lines": [
+       24,
+       25
+      ],
+      "snippet": "do \"$path/industry_analysis.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_XABPWK/Replication package/industry_ddd.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/MASTER.do",
+      "lines": [
+       33,
+       34
+      ],
+      "snippet": "do \"$path/industry_DDD.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_XABPWK/Replication package/muni_analysis.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/MASTER.do",
+      "lines": [
+       74,
+       75
+      ],
+      "snippet": "do \"$path/muni_analysis.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Three main parallel branches: industry DID, industry DDD, municipality/individual shift-share",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+     "lines": [
+      130,
+      140
+     ],
+     "snippet": "reghdfe `var' scaledpost",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_ddd.do",
+     "lines": [
+      92,
+      92
+     ],
+     "snippet": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country)",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "shift_share",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+     "lines": [
+      75,
+      85
+     ],
+     "snippet": "bartik_standardized",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": [
+    "year",
+    "isic"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "isic"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+      "lines": [
+       133,
+       133
+      ],
+      "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 3, Column 1; outcome: log value of production",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+     "lines": [
+      131,
+      146
+     ],
+     "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "unresolved_symbols",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$sharecontrols"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "isic"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+      "lines": [
+       133,
+       133
+      ],
+      "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 3; outcome: log labor force",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+     "lines": [
+      131,
+      146
+     ],
+     "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$sharecontrols"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "isic"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+      "lines": [
+       133,
+       133
+      ],
+      "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 3; outcome: log value added",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+     "lines": [
+      131,
+      146
+     ],
+     "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$sharecontrols"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s4",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "fixed_effects": [
+    "year_country",
+    "isic_country"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "isic_country"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+      "lines": [
+       92,
+       92
+      ],
+      "snippet": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 4, Column 1; triple-difference: Finland/Norway x Before/After 1944 x Treated/Control industries",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+     "lines": [
+      92,
+      92
+     ],
+     "snippet": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country)",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "fixed_effects",
+      "command"
+     ]
+    }
+   ],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s5",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `x' scaledpost_finland treat_post  finland_post , absorb(year_country isic_country $sharecontrols2) vce(cluster isic_country)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": [
+    "year_country",
+    "isic_country"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "isic_country"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+      "lines": [
+       102,
+       102
+      ],
+      "snippet": "reghdfe `x' scaledpost_finland treat_post  finland_post , absorb(year_country isic_country $sharecontrols2) vce(cluster isic_country) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 4, Column 2; with baseline controls",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+     "lines": [
+      102,
+      102
+     ],
+     "snippet": "reghdfe `x' scaledpost_finland treat_post  finland_post , absorb(year_country isic_country $sharecontrols2) vce(cluster isic_country)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$sharecontrols2"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s6",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "fixed_effects": [
+    "year_country",
+    "isic_country"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "isic_country"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+      "lines": [
+       92,
+       92
+      ],
+      "snippet": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 4; outcome: log labor force; triple-difference specification",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+     "lines": [
+      91,
+      99
+     ],
+     "snippet": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_XABPWK/Replication package/industry_DDD.do",
+     "lines": [
+      92,
+      92
+     ],
+     "snippet": "reghdfe `x'   scaledpost_finland treat_post  finland_post, absorb(year_country isic_country ) vce(cluster isic_country) ",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s7",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": [
+    "year#laani50",
+    "year#city",
+    "year#town",
+    "code"
+   ],
+   "controls_summary": null,
+   "weights": "aw=wei",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "code"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+      "lines": [
+       192,
+       192
+      ],
+      "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 6, Panel A; shift-share IV: bartik_post = post-1944 indicator x Bartik shock to municipality",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+     "lines": [
+      192,
+      192
+     ],
+     "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code)",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "fixed_effects",
+      "command",
+      "unresolved_symbols"
+     ]
+    },
+    {
+     "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+     "lines": [
+      192,
+      192
+     ],
+     "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code) ",
+     "supports": [
+      "weights"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$baseline2"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s8",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe income_rank bartik_standardized    $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": [
+    "fem",
+    "age50",
+    "laani50"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "muni_g"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+      "lines": [
+       540,
+       540
+      ],
+      "snippet": "reghdfe income_rank bartik_standardized    $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Individual-level: income rank in 1970; sample: children of uneducated parents",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+     "lines": [
+      540,
+      540
+     ],
+     "snippet": "reghdfe income_rank bartik_standardized    $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$municontrols"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s9",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe yos bartik_standardized    i.edu50_head  $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": [
+    "fem",
+    "age50",
+    "laani50"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "muni_g"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+      "lines": [
+       557,
+       557
+      ],
+      "snippet": "reghdfe yos bartik_standardized    i.edu50_head  $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Outcome: years of schooling completed; sample: children of uneducated parents",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+     "lines": [
+      557,
+      557
+     ],
+     "snippet": "reghdfe yos bartik_standardized    i.edu50_head  $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$municontrols"
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s10",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe hdegree bartik_standardized    i.edu50_head  $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "fixed_effects": [
+    "fem",
+    "age50",
+    "laani50"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "muni_g"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+      "lines": [
+       575,
+       575
+      ],
+      "snippet": "reghdfe hdegree bartik_standardized    i.edu50_head  $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g) ",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Outcome: higher degree attainment indicator; sample: children of uneducated parents",
+   "evidence": [
+    {
+     "path": "code/dataverse_XABPWK/Replication package/education_UM_analysis.do",
+     "lines": [
+      575,
+      575
+     ],
+     "snippet": "reghdfe hdegree bartik_standardized    i.edu50_head  $municontrols if no_edu_head==1, a(fem age50 laani50) cl(muni_g)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "$municontrols"
+   ],
+   "scope": "single",
+   "family_description": null
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did",
+   "shift_share"
+  ],
+  "fields": []
+ }
+}

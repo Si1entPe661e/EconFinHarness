@@ -1,0 +1,765 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "jfe_2024_j_jfineco_2023_103746",
+ "journal": "JFE",
+ "year": 2024,
+ "doi": "10.1016/j.jfineco.2023.103746",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:18:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/JFE/metadata/articles.csv",
+   "sha256": "49e4fc58dc8d12acb48961a05f08124cf4188e251615fbdec35daadd7fac6e10"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/00_Master_Submission.do",
+    "sha256": "23892df1ec844e992038198251087d806cf8dddbdcab1ca2904b4bb304b87f7f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      55
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/Barillas_Shanken_maxSR_Test.ado",
+    "sha256": "c7cfb3c1e4aab0c256d265d2119f293a4723ebaab318b7e118382c35fd8aa7a8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      95
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/Portfolio_Analysis_wOverlap_gt.ado",
+    "sha256": "43445cdc609e5e6dd8c630aeeec97edaed6fe7dfdf05f655204f7df39697ce82",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+    "sha256": "03532950d75280292a5b6f941b80688e62a81d5beb193e40d0f38913c78c3106",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      196
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_1_get_Sortvars_All.do",
+    "sha256": "74ab4810a601cb392ad86a7932f3e651a5cbf6a424dbcf83c1dd1b19c69425c8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+    "sha256": "884397f8493f916444838c0db4e4ce5b1eca2814d37cc8b5ee0f7e680ebd10be",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_3_make_Factors_Data.do",
+    "sha256": "4a0d421e1ae91680492b65fb2402dc005663d05587ab5379c4195c30d5d8c670",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+    "sha256": "0098c90618282937fa1829cccc38386981a82d7c4493e25786ed51518dc05153",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      113
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Tables_CompareModels_BS_Submission.do",
+    "sha256": "fabdbe2a91ccc1d4b7005d9d3cb8aa669869371feecd572437e0e0409a422c2d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/python_tables_3_to_5.ipynb",
+    "sha256": "31d2dc345ed51667d030d4b5a6ea56572e04b8731b43163609e3e140cb374e4a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/datasets/",
+    "reason": "out_of_scope",
+    "note": "Data download and cleaning infrastructure; not core analysis code"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "minimal",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Master script defines 4 stages: data cleaning, anomaly/factor creation, statistical tests. Focuses on 44 anomalies across 3 frequencies (monthly, quarterly, annual). Key custom ados: xtfmb_mion (Fama-MacBeth), Portfolio_Analysis_wOverlap_gt (portfolio sorts), Barillas_Shanken_maxSR_Test (model comparison). Pipeline emphasizes overlapping portfolio formation and time-series factor model construction."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Python",
+   "Jupyter"
+  ],
+  "master_scripts": [
+   "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/00_Master_Submission.do"
+  ],
+  "directory_layout": "Master script orchestrates 4 stages: (1) data cleaning (CRSP/Compustat), (2) anomaly/factor creation from 44 variables, (3) portfolio formation and returns calculation, (4) factor model tests",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 51,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/00_Master_Submission.do",
+     "lines": [
+      4,
+      29
+     ],
+     "snippet": "global",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Data cleaning takes ~10 hours (CRSP daily); portfolio formation ~3 hours; factor creation ~48 hours",
+  "sample_restrictions": [
+   {
+    "description": "All sample group: filter on ret!=. (non-missing returns)",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_1_get_Sortvars_All.do",
+      "lines": [
+       36,
+       37
+      ],
+      "snippet": "local by_groups    all\n\t\t\t\tlocal all                   & ret!=.",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Portfolio_Analysis_wOverlap_gt Make_Portf Portf_Ret with overlapping option",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+       83,
+       83
+      ],
+      "snippet": "Portfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "portfolio_sorts",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "overlapping portfolio formation",
+    "NYSE-based breakpoints",
+    "10 portfolios per anomaly"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "local nr_portf              = 10",
+     "supports": [
+      "implementation_features"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+     "lines": [
+      83,
+      83
+     ],
+     "snippet": "Portfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "fama_macbeth",
+   "variant": "two-step cross-sectional",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "* This program is an implementation of Fama and MacBeth's (1973)",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": null,
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "asset growth factor (AG) added to HXZ (ME, INV, ROE) and FF5F (ME, BM, FFOP, INV)",
+    "Newey-West standard errors"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+     "lines": [
+      48,
+      48
+     ],
+     "snippet": "global `v'4  mktrf  hxz`v'_ME hxz`v'_INV hxz`v'_ROE",
+     "supports": [
+      "implementation_features"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+     "lines": [
+      51,
+      51
+     ],
+     "snippet": "global `v'5  mktrf  ff`v'_ME ff`v'_BM ff`v'_FFOP   ff`v'_INV",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "role": "unknown",
+   "method": "other:maximum_sharpe_ratio_test",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "bias-adjusted maximum Sharpe ratio",
+    "asymptotic p-values",
+    "tests across subsamples (full, above-median DOX, below-median DOX)"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/Barillas_Shanken_maxSR_Test.ado",
+     "lines": [
+      45,
+      45
+     ],
+     "snippet": "matrix thetasq`m' = th`m'*(`T'-`n`m''-2)/`T' - `n`m''/`T' //bias adjusted",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "other:fama_macbeth",
+   "command": "xtfmb_mion",
+   "package": null,
+   "formula_or_call": "qui mvreg `rhsvars' constant = `ones', noconstant",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "rhsvars",
+    "touse"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "iid",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+      "lines": [
+       89,
+       89
+      ],
+      "snippet": "qui mvreg `rhsvars' constant = `ones', noconstant",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Default behavior when no lag specified; uses multivariate regression (mvreg) on cross-sectional coefficients",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      37,
+      37
+     ],
+     "snippet": "program define xtfmb_mion , eclass sortpreserve byable(recall)",
+     "supports": [
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      89,
+      89
+     ],
+     "snippet": "qui mvreg `rhsvars' constant = `ones', noconstant",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "other:fama_macbeth",
+   "command": "xtfmb_mion",
+   "package": null,
+   "formula_or_call": "newey `var' , lag(`lag') `force'",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "lag",
+    "force"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "hac_newey_west",
+    "cluster_level": null,
+    "details": "Newey-West lag correction applied to coefficient time-series in second step",
+    "evidence": [
+     {
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+      "lines": [
+       102,
+       102
+      ],
+      "snippet": "newey `var' , lag(`lag') `force'",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Optional; applied to each coefficient separately in second step",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      37,
+      37
+     ],
+     "snippet": "program define xtfmb_mion , eclass sortpreserve byable(recall)",
+     "supports": [
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      102,
+      102
+     ],
+     "snippet": "newey `var' , lag(`lag') `force'",
+     "supports": [
+      "formula_or_call",
+      "unresolved_symbols"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": null,
+   "command": "global",
+   "package": null,
+   "formula_or_call": "global CAPM   mktrf",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "factor1",
+    "factor2"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Multiple factor models tested: CAPM, FF3F, FF4F, HXZ, FF5F (with/without AG factor)",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+     "lines": [
+      26,
+      29
+     ],
+     "snippet": "global Raw\n\t\t\t\tglobal CAPM   mktrf",
+     "supports": [
+      "command"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+     "lines": [
+      27,
+      27
+     ],
+     "snippet": "global CAPM   mktrf",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": null,
+   "command": "Portfolio_Analysis_wOverlap_gt",
+   "package": null,
+   "formula_or_call": "\t\t\t\t\t\t\t\tPortfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t/*Make_Portf Inputs*/",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "rank_var1",
+    "ngroups1"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Deciles formed using NYSE cutoffs; overlapping holding periods",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+     "lines": [
+      83,
+      85
+     ],
+     "snippet": "Portfolio_Analysis_wOverlap_gt    Make_Portf Portf_Ret  if mdate>tm(1968m1), /*\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t/*Make_Portf Inputs*/\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t*/  rank_var1(cur_svar_reg) cutoff_var1(cur_svar_nyse)  /*",
+     "supports": [
+      "formula_or_call",
+      "command"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [
+  {
+   "name": "AG, NOA, BM sort variables",
+   "definition": "cash_ag, ncash_ag, ppent_ag, other_ag components of AG anomaly",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+     "lines": [
+      22,
+      22
+     ],
+     "snippet": "local sortvarsA_names  BM EP CFP NOP Dur AG NOA dPIA IG NSI CEI IvG IvC OA POA PTA GPA OCA AdM RDM OL",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_3_make_Factors_Data.do",
+     "lines": [
+      59,
+      60
+     ],
+     "snippet": "gen cash_ag  = d.che/l.at\n\t\t\t\t\t\tgen cura_ag  = d.act/l.at",
+     "supports": [
+      "definition"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+     "lines": [
+      51,
+      51
+     ],
+     "snippet": "forval anom =  1/`nr_anoms'  {",
+     "supports": [
+      "role"
+     ]
+    }
+   ],
+   "role": "outcome",
+   "transformations": []
+  }
+ ],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "xtfmb_mion",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "xtfmb_mion"
+   ],
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      37,
+      37
+     ],
+     "snippet": "program define xtfmb_mion , eclass sortpreserve byable(recall)",
+     "supports": [
+      "name"
+     ]
+    },
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+     "lines": [
+      36,
+      37
+     ],
+     "snippet": "capture program drop xtfmb_mion\nprogram define xtfmb_mion , eclass sortpreserve byable(recall)",
+     "supports": [
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Python",
+   "name": "pandas",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/python_tables_3_to_5.ipynb",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "import pandas as pd",
+     "supports": [
+      "name",
+      "usage"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global macros defined in loops (foreach constructs) to apply factor sets across variable lists",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+     "lines": [
+      45,
+      45
+     ],
+     "snippet": "foreach lst in `list_of_model_lists' {",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Anomaly names shorthand (e.g., AG, NOA, BM) used throughout for sort variables and factors",
+   "evidence": [
+    {
+     "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+     "lines": [
+      22,
+      22
+     ],
+     "snippet": "local sortvarsA_names  BM EP CFP NOP Dur AG NOA dPIA IG NSI CEI IvG IvC OA POA PTA GPA OCA AdM RDM OL",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "fama_macbeth",
+   "other:maximum_sharpe_ratio_test",
+   "portfolio_sorts"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,1269 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_107_1_5",
+  "journal": "AER",
+  "year": 2017,
+  "doi": "10.1257/aer.20150355",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_107_1_5.pdf",
+    "pdf_sha256": "7716c3e867600ea2ef75d0cd4865bfe0cefe5d8870ff13c104536d02a41f4894",
+    "text_path": "harness_build/papers/text/aer_107_1_5.txt",
+    "text_sha256": "6456d6e9db50c516e42a738775ad30e29e8d51c9d61291881b5cd8f8acd0ea00",
+    "pages": 31
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:45:16Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/aer_107_1_5.json",
+    "card_sha256": "1626b643aabe61ec712a1f3ae3776a89aa21da3a4e965643f2ff2a305e493a72"
+  },
+  "methods": [
+    "rdd"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "I. Institutional Background",
+      "pages": [
+        5,
+        12
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "design",
+      "title": "II. Empirical Strategy and Data / A. The RD Design",
+      "pages": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "II.B Data",
+      "pages": [
+        14,
+        16
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "III. Results / A. Baseline Estimates",
+      "pages": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "robustness",
+      "title": "III.B Threats to the Identification",
+      "pages": [
+        22,
+        27
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "mechanisms",
+      "title": "III.C Channels",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "conclusion",
+      "title": "IV. Conclusions",
+      "pages": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        29,
+        31
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named"
+      ],
+      "statement": "Frames identification as a fuzzy regression discontinuity design built on an unpredictable first-come-first-served application cutoff within each permit lottery, with before/after-cutoff assignment instrumenting for actually obtaining legal status.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Abstract",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "States the key identifying assumption that applicants near the cutoff cannot precisely determine which side of the cutoff their application will fall on, because the exact cutoff time is unknown ex ante and depends on the realized timing of all applications in the lottery.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "unable to precisely determine whether their application is received"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "continuity_at_cutoff_argued",
+        "design_variant_named"
+      ],
+      "statement": "Sets out the fuzzy RD estimand formally as the ratio of the reduced-form jump in crime to the first-stage jump in the probability of obtaining legal status at the cutoff, interpreted as a local average treatment effect under an added monotonicity assumption.",
+      "pages": [
+        12,
+        14
+      ],
+      "locator": "Section II, equations (1)-(2)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "compliers_described"
+      ],
+      "statement": "Explicitly names the local-average-treatment-effect interpretation of the fuzzy-RD coefficient, distinguishing compliers whose legal status is switched by the cutoff from always-takers who would obtain status regardless, and states which group the estimate identifies.",
+      "pages": [
+        13,
+        18
+      ],
+      "locator": "Section II.A; Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Devotes a dedicated subsection to identification threats distinct from the RD continuity assumption itself, addressing whether applicants are actually present in Italy before the cutoff and whether crime-record measurement error differs systematically by legal status.",
+      "pages": [
+        22,
+        27
+      ],
+      "locator": "Section III.B, Threats to the Identification",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "restricted_data_used"
+      ],
+      "statement": "States that application data come from the Immigration Department and criminal-record data from the Criminal Police Department, both restricted-use datasets obtained from the Italian Ministry of Interior under a data-sharing agreement rather than a public archive.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Defines the unit of observation as the individual click-day applicant and the sample period as applications submitted on the December 2007 click days, with the crime outcome measured in the years immediately before and after.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Justifies restricting the estimation sample to a symmetric time window around each lottery cutoff to avoid extrapolation bias in the polynomial regressions, and further restricts to male applicants because the female crime rate is described as negligible.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Data, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Explains that some lotteries are dropped from the sample because they received no applications or because a data-entry error corrupted the records for one nationality-province combination.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Section II.B, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described"
+      ],
+      "statement": "Describes matching applicants to criminal records at the individual level using name, surname, nationality, and year of birth, since no common administrative identifier links the two restricted datasets.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section III.B, Measurement Error",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Defines the endogenous treatment as an indicator for having obtained legal status on the 2007 click days, instrumented by an indicator for having applied before the (endogenously determined) lottery cutoff.",
+      "pages": [
+        12,
+        13
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines the main outcome as an indicator for being reported by police for at least one serious offense in the year following click days, and reports the same indicator for the prior year as a pre-trend/placebo check rather than a separate outcome of interest.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "running_variable_definition"
+      ],
+      "statement": "Constructs the running variable as the millisecond-precision delay of each application relative to its own lottery's cutoff, with the cutoff itself estimated rather than treated as an ex ante known threshold.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Section II.B, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "Constructs the instrument as an indicator for applying before the estimated structural-break point in each lottery, obtained from a test for a break at an unknown date in the time series of application acceptance.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section II.B, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "other:offense_type_classification"
+      ],
+      "statement": "Classifies offenses into economically motivated versus purely violent categories for the mechanism analysis, dropping offense types that the authors say do not fit cleanly into either category.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section III.C, Channels",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "controls_progressive_columns"
+      ],
+      "statement": "Structures the main results table as two panels of otherwise parallel columns, with the second panel adding lottery fixed effects, an age polynomial, and cluster-robust standard errors on top of the first panel's simpler specification.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "mean_of_dependent_reported"
+      ],
+      "statement": "Reports the number of observations for every column and displays the pre-period crime rate for the untreated side of the cutoff in brackets directly below the reduced-form row, rather than in a separate summary-statistics table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3, Panel B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes"
+      ],
+      "statement": "States in the table notes which columns use heteroskedasticity-robust standard errors and which use standard errors clustered by lottery, rather than applying one standard-error type uniformly across the whole table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Reports the first-stage coefficient and its F-statistic for the excluded instrument in the same table as the reduced-form and two-stage-least-squares rows, rather than relegating the first stage to an appendix table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Justifies clustering standard errors by lottery, rather than a coarser or finer grouping, on the grounds that applicants competing for the same quota may interact with each other and so are not independent draws.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "account for interactions in crime among groups"
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Gives no explicit discussion of whether the number of lottery clusters is large enough for standard cluster-robust asymptotics to be reliable, despite pooling across a very large number of small lotteries.",
+      "pages": [
+        14,
+        18
+      ],
+      "locator": "Section II.B; Section III.A",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Uses a permutation-based placebo exercise that randomly reassigns cutoff points across lotteries as an additional, randomization-based check on inference, presented alongside rather than instead of the cluster-robust standard errors.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section III.A; Figure 7",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "density_test",
+        "in_main_text"
+      ],
+      "statement": "Reports a manipulation test on the density of the running variable at the cutoff, presented together with a companion density figure in the main text.",
+      "pages": [
+        19,
+        21
+      ],
+      "locator": "Section III.A; Figure 5",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "Presents a graphical balance check plotting individual characteristics such as age and region of origin against the running variable, arguing visually that these covariates move smoothly through the cutoff rather than jumping.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Section III.A; Figure 4",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "Reports the first-stage F-statistic for the excluded instrument in the main results table, separately for the pooled sample and for each applicant subgroup, rather than only stating that the first stage is strong.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "bandwidth_sensitivity",
+        "in_main_text"
+      ],
+      "statement": "Reports two alternative theory-based bandwidth-selection criteria side by side in the nonparametric results table and separately plots the coefficient across a full grid of bandwidths in a dedicated sensitivity figure.",
+      "pages": [
+        19,
+        22
+      ],
+      "locator": "Section III.A; Table 4; Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_cutoffs",
+        "in_main_text"
+      ],
+      "statement": "Reports a placebo exercise built by permuting cutoff points across lotteries at random, comparing the true reduced-form coefficient to the resulting distribution of placebo coefficients in a figure.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Figure 7",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:structural_break_test",
+        "in_main_text"
+      ],
+      "statement": "Reports a formal structural-break test used to estimate the unknown cutoff time within each lottery, illustrated for two example lotteries in a timing figure and summarized across all lotteries in the data description.",
+      "pages": [
+        11,
+        15
+      ],
+      "locator": "Figure 2; Section II.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_bandwidth",
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "Summarizes robustness to the polynomial order and to the bandwidth choice in a single sensitivity figure with confidence bands, rather than only a table of point estimates at a small number of alternative choices.",
+      "pages": [
+        19,
+        22
+      ],
+      "locator": "Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_fixed_effects",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Reruns the specification with lottery fixed effects replaced by province fixed effects, or by province fixed effects interacted with nationality fixed effects, with standard errors reclustered at the corresponding level, reported in an online appendix table.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "footnote; online Appendix Table A3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Checks whether the effect reflects legalized applicants spending time abroad to collect an entry visa by re-estimating separately for applicants from countries near and far from Italy and by progressively restricting the outcome window to later months of the year.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Section III.B; Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "summarized_in_one_table",
+        "in_main_text"
+      ],
+      "statement": "Restricts the sample to crimes where the offender was caught in the act to address concerns about differential identification of legal versus irregular offenders, reporting this check as one more column of the same robustness table as the other checks.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Splits the sample by permit type, domestic-worker sponsorship versus firm-employee sponsorship, throughout the paper, motivating the split with earlier evidence that one category is disproportionately used to legalize otherwise unemployed applicants through fictitious job offers.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Section IB; Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "exploratory_labelled"
+      ],
+      "statement": "Further splits the domestic-worker subsample by offense type and by whether the sponsoring employer shares the applicant's nationality or not, presented as a step toward the channel rather than as a pre-specified hypothesis test.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section III.C; Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism",
+        "intermediate_outcomes"
+      ],
+      "statement": "Interprets the concentration of the effect among economically motivated offenses and among applicants with weaker prior labor-market attachment as evidence for an opportunity-cost-of-crime channel operating through improved access to the legal labor market.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section III.C, Channels",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives"
+      ],
+      "statement": "Argues against a bureaucratic-procedure explanation, time spent abroad collecting an entry visa, and against a differential crime-reporting explanation by showing the result is stable to restricting the outcome window to later months and to red-handed arrests only.",
+      "pages": [
+        24,
+        26
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Interprets the estimated reduction in crime relative to the baseline crime rate for untreated applicants at the same cutoff, reported alongside the coefficient in the same table rather than computed in separate prose.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3, Panel B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Situates the sign and the concentration of the effect in economically motivated offenses relative to prior quasi-experimental studies of legalization and crime in the United States and a companion Italian study by the same author, without formally pooling across studies.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section III.C",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "precision_discussed"
+      ],
+      "statement": "Computes an illustrative bound on how many months a legalized applicant would need to spend abroad for the visa-collection explanation alone to account for the estimated effect, describing the implied duration as implausibly long.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section III.B, Collecting the Entry Visa",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:lower_bound_argued"
+      ],
+      "statement": "Argues in two separate places, on presence-abroad effects and on measurement error, that the estimated coefficient should be read as a lower bound on the true magnitude because the identified biases push the estimate toward zero.",
+      "pages": [
+        23,
+        27
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity"
+      ],
+      "statement": "States that the results for Italy may not generalize to settings such as the United States, where undocumented immigrants face a materially different risk of expulsion conditional on offending.",
+      "pages": [
+        28,
+        29
+      ],
+      "locator": "Section IV, Conclusions",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "Acknowledges that the treatment-on-the-treated parameter cannot be separated into a change in underlying criminal behavior versus a change in the probability of expulsion, because expulsion and cross-border mobility are not observed in the data.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "Notes that a social-welfare-access channel is unlikely to matter empirically in this setting because undocumented and legal residents in Italy have similar access to the specific public services available, flagging this as a scope limitation on the mechanism story.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section IV, Conclusions",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed",
+        "site_specific"
+      ],
+      "statement": "Argues that the quota-and-cutoff institutional mechanism generating the design is not unique to Italy, naming other countries that use analogous migration quota systems, as a basis for arguing the design travels beyond the single country studied.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "Compares average observable characteristics of estimated compliers to those of the full applicant sample and reports them as similar, used to argue the local average treatment effect is not obviously unrepresentative of the broader applicant population.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section III.A; online Appendix Table A1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "rd_plot",
+        "binscatter"
+      ],
+      "statement": "Presents the core RD evidence as binned-average scatterplots with an overlaid polynomial fit and confidence band, split by pre/post period and by applicant type within a single multi-panel figure.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot"
+      ],
+      "statement": "Presents specification-sensitivity results as coefficient-and-confidence-interval plots against the varying tuning parameter, polynomial degree or bandwidth, rather than as a table listing alternative point estimates.",
+      "pages": [
+        19,
+        22
+      ],
+      "locator": "Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "Places a descriptive institutional table of permit quotas and applications by nationality near the start of the paper as background, kept separate from the estimation-sample statistics embedded within the main results tables.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars"
+      ],
+      "statement": "Does not use significance stars in the main regression tables, instead reporting coefficients with standard errors in parentheses and describing statistical significance narratively in the surrounding text.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Table 3",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph",
+        "contribution_paragraph"
+      ],
+      "statement": "Previews the main quantitative pattern and the type-A/type-B heterogeneity finding in the introduction before the formal design section, and closes the introduction with an explicit roadmap paragraph naming each subsequent section.",
+      "pages": [
+        3,
+        5
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "design_before_data"
+      ],
+      "statement": "Presents the identification strategy before the data description within the same numbered section, rather than describing the data first and the design afterward.",
+      "pages": [
+        12,
+        14
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main"
+      ],
+      "statement": "Places the mechanism and channels discussion after both the baseline results and the identification-threats subsection, as a distinct final results subsection rather than folding it into the main results presentation.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section III.C",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "Relies on an online appendix, cited repeatedly across the results and robustness discussion, for supporting figures and tables such as additional heterogeneity, first-stage, and complier-characteristic evidence not reproduced in the main text.",
+      "pages": [
+        18,
+        26
+      ],
+      "locator": "multiple footnotes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "data_restricted"
+      ],
+      "statement": "Cites its own dataset entry in the journal's data-and-code archive within the reference list, while stating elsewhere in the text that the underlying administrative crime and application records are restricted-use and were obtained through an agreement with the ministry.",
+      "pages": [
+        14,
+        31
+      ],
+      "locator": "footnote; References",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "replication_statement",
+      "tags": [
+        "software_named"
+      ],
+      "statement": "Names the specific nonparametric bandwidth-selection procedures used by their standard methodological labels, citing the originating papers, rather than only describing the choice narratively.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_restricted",
+        "data_access_procedure_described"
+      ],
+      "statement": "Describes the data-access route as a direct agreement between the author and two Ministry of Interior departments, rather than access through a public repository or a commercial data provider.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B; author note",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "linked_records"
+      ],
+      "statement": "Uses linked records constructed by matching two separately maintained restricted administrative datasets by name and demographic fields, rather than drawing on a single pre-linked administrative source.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section III.B, Measurement Error",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Reports both a parametric fuzzy-RD estimate obtained by 2SLS with a polynomial control in the running variable, and a nonparametric fuzzy-RD estimate obtained by local-linear kernel regression via rdrobust, presented as complementary estimators of the same effect.",
+      "card_shows": "Records estimator=2sls for the ivreg2/xtivreg2 specifications (s1-s6, s24-s28) and estimator=local_polynomial_rd for the rdrobust specifications (s7-s23), matching the paper's parametric/nonparametric split.",
+      "status": "agree",
+      "pages": [
+        13,
+        21
+      ],
+      "card_ref": "d1; s1.est; s7.est"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "States lottery fixed effects are added in the second panel of the main table, and that province fixed effects, alone or interacted with nationality, are used as a robustness check in an appendix table.",
+      "card_shows": "s4-s6 record fixed_effects=['lotterycode']; s28 records fixed_effects=['provcode'], matching both the main lottery-FE specification and the province-FE robustness check.",
+      "status": "agree",
+      "pages": [
+        18,
+        19
+      ],
+      "card_ref": "s4.fixed_effects; s28.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "States standard errors are clustered by lottery in the fixed-effects columns of the main table and in the heterogeneity table, to allow for interaction among applicants competing in the same lottery.",
+      "card_shows": "s4-s6 and s24-s27 record se.type=cluster with cluster_level=['lotterycode']; s28 records cluster_level=['provcode'] for the province-FE variant.",
+      "status": "agree",
+      "pages": [
+        18,
+        28
+      ],
+      "card_ref": "s4.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "States that the nonparametric local-linear regressions in Tables 4 and 5 also use heteroskedasticity-robust standard errors, reported in parentheses.",
+      "card_shows": "Specs s7-s23, the rdrobust local-linear specifications, record se.type and se.cluster_level as null, i.e. the standard-error type used by rdrobust is not captured in the structured fields.",
+      "status": "paper_only",
+      "pages": [
+        20,
+        21
+      ],
+      "card_ref": "s7.se; s10.se"
+    },
+    {
+      "item": "bandwidth",
+      "paper_says": "Reports two named theory-based bandwidth-selection criteria, IK2012 and CCT2014, side by side as separate column blocks in the nonparametric results table.",
+      "card_shows": "Diagnostic x3 (bandwidth_selection) documents only the IK bandwidth via rdrobust's bwselect(IK) option and a manual bandwidth loop; the CCT2014 criterion is not separately recorded.",
+      "status": "paper_only",
+      "pages": [
+        20,
+        21
+      ],
+      "card_ref": "x3"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "States the comparison is between applicants who submitted just before versus just after their own lottery's estimated cutoff time, i.e. near-cutoff compliers on either side of the discontinuity.",
+      "card_shows": "d1.comparison_group is null in the card.",
+      "status": "paper_only",
+      "pages": [
+        13,
+        13
+      ],
+      "card_ref": "d1.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "States that, beyond the running-variable polynomial and its interaction with the assignment dummy, a quadratic polynomial in applicant age is the only additional individual-level control used in the fixed-effects specifications.",
+      "card_shows": "s4's controls_summary field is null even though the traced Stata command line includes 'age age2' alongside the running-variable terms.",
+      "status": "paper_only",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "s4.controls_summary"
+    },
+    {
+      "item": "weights",
+      "paper_says": "Gives no indication that the main RD/IV regressions are weighted; sampling weights are mentioned only for the separate descriptive ISMU survey comparison, not for the crime regressions.",
+      "card_shows": "All traced specifications (s1-s28) record weights=null.",
+      "status": "agree",
+      "pages": [
+        8,
+        18
+      ],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "sample",
+      "paper_says": "States the estimation sample is restricted to a symmetric one-hour window around each cutoff and to male applicants, with further bandwidth-based subsamples used for the nonparametric specifications.",
+      "card_shows": "No specification records a populated 'sample' field (all null); the card's data entries do not capture the time-window or male-only restriction.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.sample"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "States the application data and criminal-record data are restricted-use, obtained directly from two Italian Ministry of Interior departments under a data-sharing agreement, not from a public-use file.",
+      "card_shows": "The dataclickday data entry records type='admin' and access='unknown', without capturing the restricted-use, agreement-based access route described in the paper.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "data[0].access"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "States that a McCrary-type density test does not reject the null of no manipulation at the cutoff, reported as a completed diagnostic with a stated conclusion.",
+      "card_shows": "Diagnostic x1 (density_test) has status='unknown' and observation=null, i.e. the card could not confirm from the code alone whether the test was run and what it showed.",
+      "status": "paper_only",
+      "pages": [
+        19,
+        19
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "States the placebo/permutation exercise re-estimates the effect for 1,000 random permutations of the lottery cutoffs and reports the share of placebo estimates smaller than the actual estimate.",
+      "card_shows": "Diagnostic x5 (multiple_testing) documents the placebo code as looping over 100 permutations ('forvalues i=1/100'), an order of magnitude fewer than the paper's stated permutation count.",
+      "status": "disagree",
+      "pages": [
+        22,
+        23
+      ],
+      "card_ref": "x5"
+    }
+  ],
+  "gaps": [
+    "No preregistration, IRB approval, or participant/data-subject consent statement appears anywhere in the read text (category preregistration_or_ethics is entirely absent).",
+    "No explicit discussion of whether standard errors clustered by lottery are reliable given the very large number of small lotteries; no wild-bootstrap or few-cluster correction is mentioned.",
+    "No explicit statement of the statistical software or package versions used for estimation; rdrobust, ivreg2, and the density test are named as methods but not tied to a stated software version in the main text.",
+    "No explicit multiple-testing correction across the many reported subgroups and robustness checks; the placebo/permutation exercise addresses small-sample bias in a single coefficient, not multiplicity across the many tables.",
+    "No formal overidentification test is reported, consistent with a single excluded instrument, and no discussion of sample attrition since the sample is built from complete administrative records rather than a survey with nonresponse."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        31
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full text of all 31 pages (138-168), covering the introduction, institutional background, empirical strategy, data, results, identification threats, channels/mechanisms, conclusions and reference list. The paper's online Appendix, cited repeatedly for additional figures and tables (e.g. Appendix Tables A1-A3, Appendix Figures A1-A9), is a separate document not included in this text extraction and was not read; its existence and stated content are recorded only as referenced by the main text."
+  }
+}

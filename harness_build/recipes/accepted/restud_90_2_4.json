@@ -1,0 +1,756 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_90_2_4",
+ "journal": "ReStud",
+ "year": 2023,
+ "doi": "10.1093/restud/rdac036",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:35:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/appendix_C4.R",
+    "sha256": "0c0730f6be8b5a7c2b3f168669f0626a7da2144bc9c5cce3cdeae3fcb110db95",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      75,
+      90
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/counterfactual_analysis_planner.R",
+    "sha256": "a15fbe36647a32e5197e5316e8efffb667bf6a97b01b5ef8f2e241967203702a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/descriptive_statistics.R",
+    "sha256": "9a34b88fa2fae14a5084c160f5dd9dd95f47263d5f5f53e6ef8c62b154f1a304",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+    "sha256": "9c3307a28030433075c85bd30f120907eb3ad25833db4e3bb21df79c15063487",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      300
+     ],
+     [
+      800,
+      1000
+     ],
+     [
+      1050,
+      1300
+     ],
+     [
+      1500,
+      1700
+     ],
+     [
+      2200,
+      2331
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/appendix_B_TableA3.do",
+    "reason": "binary",
+    "note": "Stata .do file; no Stata available in environment"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+    "lines": [
+     300,
+     800
+    ],
+    "reason": "out_of_budget"
+   },
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+    "lines": [
+     1000,
+     1050
+    ],
+    "reason": "out_of_budget"
+   }
+  ],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Two-stage structural estimation of dynamic discrete choice game. First stage: ordered probit on adoption decisions (mle2). Second stage: nested fixed point with value function iteration over transition matrices. Counterfactual analyses solve social planner and subsidy scenarios. Bootstrap procedure for SE. Repository lacks README and explicit entry point; execution order inferred from section comments."
+ },
+ "repository": {
+  "languages": [
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/descriptive_statistics.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/appendix_C4.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/appendix_D2.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/appendix_D5.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/counterfactual_analysis_planner.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/counterfactual_analysis_targetsubsidy.R",
+   "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/counterfactual_analysis_blanketsubsidy.R"
+  ],
+  "directory_layout": "Zenodo extraction with nested Replication_final_v2/Replication_final_v2/code/ structure. Dependent data (RData, rds) referenced in code/ but not present in archive.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 9,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "relative",
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1096,
+      1097
+     ],
+     "snippet": "set.seed(5987*bs)",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      21,
+      21
+     ],
+     "snippet": "setwd()",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+    "lines": [
+     1,
+     5
+    ],
+    "snippet": "# - Estimating the Costs of Standardization: Evidence from Movie Industry\n# - El Hadi Caoui\n# - Replication Package\n# - Date: 03/02/2022\n# - Estimation - Section 6.5",
+    "supports": [
+     "master_scripts"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": "theater_panel.RData",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/descriptive_statistics.R",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "load(\"./data/theater_panel.RData\")",
+     "supports": [
+      "name",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "bootstrap_secondstep_param.RData",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1661,
+      1661
+     ],
+     "snippet": "load(\"./data/bootstrap_secondstep_param.RData\")",
+     "supports": [
+      "name",
+      "access"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/descriptive_statistics.R"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/descriptive_statistics.R",
+      "lines": [
+       1,
+       5
+      ],
+      "snippet": "# - Descriptive statistics - Section 4 (Figures 1-2, Table 1-2)",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "estimation",
+    "scripts": [
+     "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+       1,
+       5
+      ],
+      "snippet": "# - Estimation - Section 6.5 (Figures 3-4, Tables 3-5)",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "unknown",
+  "run_order_notes": "Execution order inferred from section headers and data dependencies (theater_panel.RData required by all analyses); descriptive statistics and estimation are prerequisites for counterfactuals.",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Two-step estimation: first-step ordered probit on adoption choices; second-step nested fixed point",
+    "Value function iteration using transition matrix contraction (I - beta*P)^{-1}",
+    "Bootstrap procedure (500 replicates) for standard errors",
+    "Counterfactual simulations: social planner coordination benchmark, targeted and blanket subsidies"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      898,
+      900
+     ],
+     "snippet": "Tperiod = 20 # number of periods\n  discrate = 0.95  # discount factor",
+     "supports": [
+      "implementation_features",
+      "method"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1190,
+      1190
+     ],
+     "snippet": "invertedtransitionmat=solve(diag(1,nrow(CCProws),nrow(CCProws))-discrate*transitionmat)",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "mle",
+   "command": "mle2",
+   "package": null,
+   "formula_or_call": "fit1 <- mle2(LL, start = betakappaini0, vecpar = TRUE, hessian.opts = (method.args <- list(eps = 1e-4, d = 0.001, zero.tol = sqrt(.Machine$double.eps / 7e-7), r = 4, v = 2)))",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": "date, date^2, theater characteristics (ECRANS, ECRANSsqrd, numscreens), art-house indicator, own share of digital screens, and interactions",
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "First-step estimation in two-stage structural model. Produces Table 3 (adoption policy function estimates). Uses ordered probit with 8 cutoff parameters (kappa1-kappa8) for adoption decision categories.",
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      241,
+      241
+     ],
+     "snippet": "fit1 <- mle2(LL, start = betakappaini0, vecpar = TRUE, hessian.opts = (method.args <- list(eps = 1e-4, d = 0.001, zero.tol = sqrt(.Machine$double.eps / 7e-7), r = 4, v = 2)))",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      230,
+      230
+     ],
+     "snippet": "opm1 <- clm(as.factor(projector_converted_grp) ~ date + datesqrd + date * as.factor(AEtable) + datesqrd",
+     "supports": [
+      "controls_summary"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "# - Table 3: Adoption policy function (First-Step Estimates) -------------------------------------------------------------------------------------------------------------------------------------------",
+     "supports": [
+      "notes",
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "secondary",
+   "estimator": "ols",
+   "command": "lm",
+   "package": null,
+   "formula_or_call": "lm1 <- lm(predictdeltaW~.-1,data = regdata)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Second-stage regression linking value function differences to choice probabilities. Results used to estimate marginal costs and network effects. Requires ~9 minutes estimation (first stage).",
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1615,
+      1615
+     ],
+     "snippet": "lm1 <- lm(predictdeltaW~.-1,data = regdata)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1616,
+      1616
+     ],
+     "snippet": "result1 = lm1$coefficients",
+     "supports": [
+      "role"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg",
+   "package": "ivreg",
+   "formula_or_call": "lm2_2SLS<-ivreg(time_FE ~ dmovies | us_dmovies_share , data = regdata_IV)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": "Time-series observations (date 2-13 from 2006-2013) with matching US digital movie adoption data",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV specification to estimate time-varying component of marginal costs. Instruments domestic digital movie share with US adoption (accounts for reverse causality in supply response). Coefficient on dmovies used to calibrate network effects.",
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1638,
+      1638
+     ],
+     "snippet": "lm2_2SLS<-ivreg(time_FE ~ dmovies | us_dmovies_share , data = regdata_IV)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "package"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1635,
+      1635
+     ],
+     "snippet": "regdata_IV = merge(regdata_IV, tbl_digitalmovies_US, by = 'year', all.x = TRUE)",
+     "supports": [
+      "controls_summary"
+     ]
+    },
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      1621,
+      1621
+     ],
+     "snippet": "regdata_IV = as.data.frame(-result1[grep('date', names(result1))])",
+     "supports": [
+      "sample"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": "Figure 3a",
+    "path": "figures/figure_3a.png",
+    "spec_ids": [],
+    "format": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+       29,
+       29
+      ],
+      "snippet": "png(file=\"./figures/figure_3a.png\", pointsize = 13)",
+      "supports": [
+       "output_ref",
+       "path"
+      ]
+     }
+    ],
+    "package": null,
+    "types": []
+   },
+   {
+    "id": "f2",
+    "output_ref": "Figure 3b",
+    "path": "figures/figure_3b.png",
+    "spec_ids": [],
+    "format": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+       35,
+       35
+      ],
+      "snippet": "png(file=\"./figures/figure_3b.png\", pointsize = 13)",
+      "supports": [
+       "output_ref",
+       "path"
+      ]
+     }
+    ],
+    "package": null,
+    "types": []
+   }
+  ]
+ },
+ "structural": {
+  "model_class": null,
+  "solution_method": null,
+  "estimation_method": "mle",
+  "moments_targeted": [],
+  "optimizer": null,
+  "counterfactuals": [],
+  "evidence": [
+   {
+    "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+    "lines": [
+     241,
+     241
+    ],
+    "snippet": "fit1 <- mle2(LL, start = betakappaini0, vecpar = TRUE",
+    "supports": [
+     "estimation_method"
+    ]
+   }
+  ]
+ },
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "R",
+   "name": "tidyverse",
+   "kind": "distribution",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "library"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      10,
+      10
+     ],
+     "snippet": "library(tidyverse)",
+     "supports": [
+      "ecosystem",
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "stargazer",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "stargazer"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "library(stargazer)",
+     "supports": [
+      "ecosystem",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "bbmle",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      13,
+      13
+     ],
+     "snippet": "library(bbmle)",
+     "supports": [
+      "ecosystem",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "ordinal",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      12,
+      12
+     ],
+     "snippet": "library(ordinal)",
+     "supports": [
+      "ecosystem",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "ivreg",
+   "kind": "distribution",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "library(ivreg)",
+     "supports": [
+      "ecosystem",
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "truncnorm",
+   "kind": "distribution",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+     "lines": [
+      14,
+      14
+     ],
+     "snippet": "library(truncnorm)",
+     "supports": [
+      "ecosystem",
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

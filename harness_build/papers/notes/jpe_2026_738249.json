@@ -1,0 +1,953 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "jpe_2026_738249",
+  "journal": "JPE",
+  "year": 2026,
+  "doi": "10.1086/738249",
+  "source": {
+    "pdf_path": "Paper/PDF/jpe_2026_738249.pdf",
+    "pdf_sha256": "bb544be7cc2c5354722b19ece910b091c7d824c370e95db10d3bfeabcba67f48",
+    "text_path": "harness_build/papers/text/jpe_2026_738249.txt",
+    "text_sha256": "4a5592ab14cda604cc3ef4ce6a04750a1ebdf758c4e7ff58847a05f9efa7e151",
+    "pages": 45
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:15:21Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/jpe_2026_738249.json",
+    "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379"
+  },
+  "methods": [
+    "iv",
+    "regression"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "I. Introduction",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "II. Background",
+      "pages": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "III. Data",
+      "pages": [
+        8,
+        18
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "IV. Methods",
+      "pages": [
+        19,
+        22
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "V. Estimation Results (A. First-Stage Estimates; B. Estimates of the Effects of Treatments on Outcomes)",
+      "pages": [
+        23,
+        31
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "robustness",
+      "title": "V.C. Robustness",
+      "pages": [
+        32,
+        37
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "conclusion",
+      "title": "VI. Discussion and Conclusions; Data Availability",
+      "pages": [
+        37,
+        42
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        42,
+        45
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The paper estimates effects of each type of initial mental-health treatment (any treatment, drug treatment, and drug type) on later costs, facility use and self-harm, naming its identification strategy as a post-Lasso two-stage-least-squares instrumental-variables design.",
+      "pages": [
+        19,
+        22
+      ],
+      "locator": "IV. Methods",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "instrument_exclusion_argued",
+        "threats_discussed",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "Authors argue that patient-level physician-prescribing-propensity instruments are threatened by endogenous patient-physician matching, so they use area-level measures of local practice style instead, reasoning that living in an area exposes a child to that style regardless of which doctor is chosen.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "IV. Methods, discussion after eq. (1)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Authors consider whether area-level clustering of instruments could instead reflect parents sorting into places based on preexisting medication preferences, but argue this is unlikely because the sample is restricted to children's first mental-illness treatment episode.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "VI. Discussion and Conclusions",
+      "quote": "makes it unlikely that this is the major source of variation in the treatments that are chosen",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The identification strategy is explicitly named as the post-Lasso instrumental-variables procedure of Belloni et al. (2012), adopted because interacting practice-style instruments with patient characteristics creates a very large candidate instrument set that risks weak-instrument bias under ordinary 2SLS.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "IV. Methods",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "The empirical design compares treatment types through nested subsamples: any treatment versus none, drug versus non-drug treatment among treated children, and each drug category (red-flag, gray-area, FDA-approved) against the other drug categories among drug-treated children.",
+      "pages": [
+        26,
+        30
+      ],
+      "locator": "V.B, table 4 panels A-E",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated",
+        "restricted_data_used"
+      ],
+      "statement": "The main sample is drawn from a named multi-year commercial insurance-claims database covering a fixed calendar-year window, accessed under a data-use arrangement with a health-plan research alliance rather than being publicly downloadable.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "III. Data",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "The final analysis sample is built through a documented sequence of exclusion steps (coverage and follow-up requirements, valid identifiers, mental-illness diagnosis codes, minimum follow-up length, and restriction to anxiety, depression or adjustment-disorder diagnoses), with the count remaining after each step reported in the text.",
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "III. Data",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "The unit of observation is a child-month cell nested within an area, year and calendar month, with outcomes aggregated for measurement at several fixed horizons after the child's first mental-health claim.",
+      "pages": [
+        19,
+        26
+      ],
+      "locator": "IV. Methods, eq. (1); V.B",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described"
+      ],
+      "statement": "Provider identifiers in the claims data are linked to a national provider registry to classify each treating clinician's specialty, and this linkage restricts the supply-side measures to clinicians confirmed to actually treat the insurer's pediatric patients.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Drug treatment received soon after the initial claim is classified into three mutually exclusive categories, FDA-approved, gray-area (consistent with professional-society guidelines but not FDA-approved), and red-flag (consistent with neither), by cross-referencing the prescribed drug and diagnosis against a guideline-summary table.",
+      "pages": [
+        5,
+        6
+      ],
+      "locator": "II.A; table A1 (online appendix)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "logs_or_ihs"
+      ],
+      "statement": "Outcome variables are the natural log of total (and, separately, mental-health-specific) health care costs, a binary indicator for any facility visit, and a binary indicator for any self-harm behavior, each measured cumulatively over several horizons after the initial claim.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "III.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "Candidate instruments are area-level measures of provider composition and prescribing style, computed over a travel-based market area built from where the insurer's own patients actually go for care rather than from a fixed administrative boundary such as a county.",
+      "pages": [
+        15,
+        17
+      ],
+      "locator": "III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The candidate instrument pool is expanded by interacting the base practice-style measures with patient age, gender, diagnosis and severity indicators, producing a high-dimensional instrument vector from which the Lasso procedure selects a small working subset for each outcome model.",
+      "pages": [
+        21,
+        22
+      ],
+      "locator": "IV. Methods",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "mean_of_dependent_reported",
+        "n_reported",
+        "r2_reported"
+      ],
+      "statement": "Every results table reports the number of observations, the R-squared for the OLS rows, and the mean of the dependent variable, alongside a note stating which fixed effects and controls are included in every column of that table.",
+      "pages": [
+        24,
+        28
+      ],
+      "locator": "tables 3-4",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "For every outcome, the paper reports the OLS coefficient directly above the corresponding post-Lasso 2SLS coefficient within the same table panel, presenting the naive and instrumented estimates side by side rather than in separate tables.",
+      "pages": [
+        26,
+        28
+      ],
+      "locator": "table 4",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "regression"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "other:instrument_count_disclosed"
+      ],
+      "statement": "Table notes disclose how many instruments were selected by the Lasso procedure for each outcome panel, letting the reader see that instrument-set size varies across specifications rather than being fixed by the researcher.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "table 4 note",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Standard errors are clustered at the three-digit zip code (area) level in every specification, justified as accounting for correlation among children who face the same area-level supply-side and practice-style measures used as instruments.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "IV. Methods, footnote 19",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "other:post_lasso_se_validity"
+      ],
+      "statement": "Authors state that conventional standard errors remain valid for the post-Lasso 2SLS estimates because the number of selected instruments is small relative to the sample size, citing prior methodological work rather than applying a Lasso-specific correction.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "IV. Methods, footnote 23",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "No adjustment for multiple hypothesis testing is discussed anywhere in the text, despite the paper reporting many outcome-by-horizon coefficients across several treatment-type panels in the main results tables.",
+      "pages": [
+        26,
+        37
+      ],
+      "locator": "V.B-C, tables 4-6",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "in_main_text"
+      ],
+      "statement": "A full first-stage table reports coefficients on every selected instrument for each treatment margin (any treatment, drug treatment, and each drug type), placed as a numbered main-text table rather than relegated to the online appendix.",
+      "pages": [
+        23,
+        25
+      ],
+      "locator": "table 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "weak_iv_statistic",
+        "in_main_text",
+        "in_appendix"
+      ],
+      "statement": "A weak-instrument diagnostic (the Montiel Olea-Pflueger effective F-statistic) is computed for the Lasso-selected instrument set in every specification and reported both in the main first-stage table and in a dedicated online-appendix table comparing alternative instrument sets.",
+      "pages": [
+        21,
+        26
+      ],
+      "locator": "table 3 note; table A3 (online appendix)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:randomization_placebo_bootstrap",
+        "in_footnote",
+        "in_appendix"
+      ],
+      "statement": "A bootstrap placebo test is reported in a footnote: children are repeatedly randomly reassigned across areas to build a null distribution of between-area treatment variation, and the observed test statistic is compared against this distribution to argue that real between-area variation exceeds what chance would produce.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "III.B, footnote 18; fig. A1 (online appendix)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "A robustness table re-estimates every main specification after dropping children with comorbid diagnoses that could independently justify red-flag prescriptions, placing the original and trimmed-sample coefficients side by side in the same table for direct comparison.",
+      "pages": [
+        31,
+        36
+      ],
+      "locator": "V.C; table 6",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix",
+        "summarized_in_figure"
+      ],
+      "statement": "Robustness to the instrument-selection procedure is checked two ways, by constraining Lasso to a fixed small number of top instruments and by re-adding the raw provider-count instruments to the candidate pool; both alternative coefficient sets are placed in online-appendix tables and overlaid with the main estimates and their confidence interval in one summary figure.",
+      "pages": [
+        36,
+        38
+      ],
+      "locator": "V.C; tables A4-A5 (online appendix); figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope"
+      ],
+      "statement": "Effect sizes are translated from regression coefficients into implied probabilities and dollar amounts through decision-tree figures that trace the predicted outcome level along each sequential treatment choice, rather than being reported only as coefficients relative to the sample mean.",
+      "pages": [
+        30,
+        32
+      ],
+      "locator": "V.B; figures 3-5",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "precision_discussed"
+      ],
+      "statement": "Authors explicitly flag that the self-harm outcome is rare, making its estimates comparatively imprecise, and interpret weaker statistical significance on self-harm coefficients in that light rather than treating a null result as evidence of no effect.",
+      "pages": [
+        39,
+        39
+      ],
+      "locator": "VI. Discussion and Conclusions",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity",
+        "data_coverage"
+      ],
+      "statement": "Authors state as a limitation that the privately insured sample skews toward areas that are younger, less racially diverse and of higher socioeconomic status than the national average, a comparison documented in an online-appendix table.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "III. Data; table A2 (online appendix)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "Authors acknowledge that even after conditioning on diagnosis, age, gender and observed severity measures, unobserved differences in illness severity or parental preferences for aggressive treatment could still confound the plain OLS treatment-outcome association, which motivates the instrumental-variables approach.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "IV. Methods",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "Authors note that the achievable follow-up window is capped by data availability, so children with more recent initial claims can only be followed for a shorter period, and state a longer horizon would have been preferred if sample size had allowed it.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "III. Data, footnote 13",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "Authors frame the instrumented estimates as identifying effects for children whose treatment is swayed by local practice-style variation, while separately cautioning against interpreting the pattern of selected instrument coefficients as revealing which supply-side factor structurally drives treatment choice.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "V.A, footnote 24",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "notes_state_sample"
+      ],
+      "statement": "A single wide descriptive-statistics table presents child characteristics and outcomes broken out by treatment category across many columns, with the table note explaining exactly which exclusion or treatment group each column represents.",
+      "pages": [
+        10,
+        12
+      ],
+      "locator": "table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "presentation_convention",
+      "tags": [
+        "other:decision_tree_figure"
+      ],
+      "statement": "Main results are additionally summarized using tree-diagram figures that branch sequentially through the treatment decision (treat or not, drug or not, which drug), showing the implied outcome level and the sample share at each branch.",
+      "pages": [
+        30,
+        32
+      ],
+      "locator": "figures 3-5",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "appendix_tables_numbered_a"
+      ],
+      "statement": "A coefficient-comparison figure overlays point estimates and confidence intervals from the main specification against several alternative-specification estimates using distinct markers per specification, and online-appendix tables are labeled with an A-prefix.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "figure 6; tables A4-A6 (online appendix)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_se"
+      ],
+      "statement": "Regression tables use conventional asterisk significance markers at three thresholds, and every table note states which fixed effects are included and that standard errors are clustered at the three-digit zip level.",
+      "pages": [
+        24,
+        28
+      ],
+      "locator": "tables 3-4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction previews the paper's main results in prose before any tables are presented, and closes with an explicit roadmap paragraph naming each subsequent numbered section.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "I. Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "The paper presents the data section, including descriptive statistics and the definition of the supply-side instruments, before the methods section that specifies the estimating equation and identification strategy.",
+      "pages": [
+        8,
+        22
+      ],
+      "locator": "III. Data precedes IV. Methods",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "writing_structure",
+      "tags": [
+        "robustness_separate_section",
+        "contribution_paragraph"
+      ],
+      "statement": "Robustness checks are grouped into their own labeled subsection following the main results rather than interspersed with them, and the conclusion closes with an explicit paragraph enumerating the paper's contributions to distinct literatures.",
+      "pages": [
+        32,
+        41
+      ],
+      "locator": "V.C; VI. Discussion and Conclusions",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "replication_package_cited",
+        "data_restricted"
+      ],
+      "statement": "A dedicated data-availability section states that the underlying insurance-claims data cannot be shared, but that replication code for the tables and figures is deposited in a named public repository with a cited DOI.",
+      "pages": [
+        41,
+        42
+      ],
+      "locator": "Data Availability",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "commercial",
+        "data_access_procedure_described"
+      ],
+      "statement": "The primary data source is described as commercial insurance-claims data obtained through a secure portal from a named industry data-sharing initiative, supplemented by a second commercial prescription database purchasable by qualified researchers, with contact information provided for each.",
+      "pages": [
+        8,
+        15
+      ],
+      "locator": "III. Data; III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Post-Lasso-selected instruments estimated via two-stage least squares (2SLS)",
+      "card_shows": "specifications s1-s3 all record estimator=2sls, command=ivreg2",
+      "status": "agree",
+      "pages": [
+        21,
+        22
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Area (three-digit zip), month and year fixed effects, stated explicitly in the estimating equation and every table note",
+      "card_shows": "s1.fixed_effects is null; the raw ivreg2 formula shows i.zip3 but no visible month/year terms",
+      "status": "paper_only",
+      "pages": [
+        19,
+        20
+      ],
+      "card_ref": "s1.fixed_effects",
+      "note": "Card's structured field was not populated even though the zip fixed effect is visible in the raw formula string; month/year terms are not visible in the captured command at all."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors clustered at the three-digit zip code (area) level",
+      "card_shows": "s1/s2/s3 se.cluster_level = ['zip3']",
+      "status": "agree",
+      "pages": [
+        20,
+        20
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Clustered standard errors throughout",
+      "card_shows": "s1/s2/s3 se.type = 'cluster'",
+      "status": "agree",
+      "pages": [
+        27,
+        28
+      ],
+      "card_ref": "s1.se.type"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Final sample built through a documented multi-step exclusion funnel (coverage, identifiers, diagnosis, follow-up length, diagnosis restriction) down to the analysis sample",
+      "card_shows": "pipeline.sample_restrictions records only one restriction, use of a 24-month-follow-up dataset",
+      "status": "paper_only",
+      "pages": [
+        9,
+        10
+      ],
+      "card_ref": "pipeline.sample_restrictions[0]",
+      "note": "Card captures the final data-load restriction but not the earlier exclusion steps documented in the paper's data section."
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "Explicit nested comparison groups per outcome panel (treated vs untreated; drug vs therapy-only; each drug type vs the other drug types)",
+      "card_shows": "s1/s2/s3 comparison_group is null",
+      "status": "paper_only",
+      "pages": [
+        26,
+        30
+      ],
+      "card_ref": "s1.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Controls include age fixed effects, gender, diagnosis indicators, severity/first-claim-type indicators, neurodevelopmental condition, and recent hospitalization history",
+      "card_shows": "s1/s2/s3 controls_summary is null",
+      "status": "paper_only",
+      "pages": [
+        19,
+        20
+      ],
+      "card_ref": "s1.controls_summary"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Full first-stage coefficient tables are reported in the main text for every treatment margin",
+      "card_shows": "diagnostics x1 and x2 (first_stage) both have status='unknown'",
+      "status": "paper_only",
+      "pages": [
+        23,
+        25
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A weak-instrument effective F-statistic (Montiel Olea-Pflueger) is computed and reported for every specification, in the main first-stage table and an appendix table",
+      "card_shows": "diagnostic x3 (weak_iv) has status='not_found_in_scope', noting the main table does not report F-statistics",
+      "status": "disagree",
+      "pages": [
+        21,
+        26
+      ],
+      "card_ref": "x3",
+      "note": "The paper's table 3 note explicitly labels this statistic 'FEFF' and reports it per column; the code-trace extractor evidently missed the corresponding Stata output line or scored the wrong table region."
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Extensive robustness set: trimmed-sample exclusion of comorbid diagnoses, an alternative-instrument-count restriction, reintroducing supply-count instruments, all synthesized in a coefficient-comparison figure",
+      "card_shows": "top-level robustness array is empty",
+      "status": "paper_only",
+      "pages": [
+        31,
+        38
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Three main numbered regression/first-stage tables (tables 3-5) plus six online-appendix tables and multiple figures",
+      "card_shows": "outputs.tables t1-t3 all point to the same generic results/main_results_FINAL.csv path with no table numbers or labels recorded",
+      "status": "paper_only",
+      "pages": [
+        24,
+        30
+      ],
+      "card_ref": "outputs.tables"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Primary data is restricted-access commercial insurance claims obtained via secure portal, supplemented by a separately purchased commercial prescription database; only replication code, not data, is publicly deposited",
+      "card_shows": "data[0].name='regression_data_final_jpe.dta', access='unknown', source_hint=null",
+      "status": "paper_only",
+      "pages": [
+        8,
+        9
+      ],
+      "card_ref": "data[0].access"
+    }
+  ],
+  "gaps": [
+    "No preregistration, IRB approval, or participant-consent statement appears anywhere in the extracted text.",
+    "No formal heterogeneity analysis (subgroup splits or interaction terms on the outcome equations) is presented; interactions are used only to build the instrument set, not to report heterogeneous treatment effects.",
+    "No explicit mechanism section follows the treatment-effect estimates; a single footnote mentions 'heterogeneous treatment effects' without further elaboration in the visible text.",
+    "No software or package name (e.g., Stata, ivreg2, rlasso) is mentioned anywhere in the main text; such details are only recoverable from the deposited replication code.",
+    "No explicit correction for multiple hypothesis testing is discussed despite many outcome-by-horizon coefficients being reported across several treatment-type panels.",
+    "Online-appendix tables A1-A6 and figure A1 are referenced repeatedly but are hosted separately by the journal and are not included in the extracted text, so their exact contents could not be read directly."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        45
+      ]
+    ],
+    "coverage": "main_text",
+    "note": "Read all 45 pages of the provided extracted text in full: introduction, background, data, methods, results (first-stage and treatment-effect estimates), robustness, discussion/conclusion, data availability, and references. The paper's own online appendix (tables A1-A6, figure A1) is hosted separately by the journal and is not included in the extracted text; its contents are known only from in-text references and captions, never read directly."
+  }
+}

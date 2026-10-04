@@ -1,0 +1,541 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_2026_restud_rdag050",
+  "journal": "ReStud",
+  "year": 2026,
+  "doi": "10.1093/restud/rdag050",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_2026_restud_rdag050.pdf",
+    "pdf_sha256": "f4d847a99273232c815872519033a385770fe93c718490540f659c6a5942ed1b",
+    "text_path": "harness_build/papers/text/restud_2026_restud_rdag050.txt",
+    "text_sha256": "3c9d5c4735d03d34392ca86b81f9c31fa9d4cc72f0c99f37942a274387e5014d",
+    "pages": 34
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T12:00:00Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/restud_2026_restud_rdag050.json",
+    "card_sha256": "c26d441ad81ae7037f0ab4143399650008528d1807bc9cd7c3bfdaec46f50601"
+  },
+  "methods": ["regression", "other:econometric_theory_finite_sample", "other:monte_carlo_simulation"],
+  "structure": [
+    {"id": "sec1", "kind": "introduction", "title": "1. Introduction", "pages": [1, 3]},
+    {"id": "sec2", "kind": "model", "title": "2. Clustered regression and the CRVE", "pages": [3, 5]},
+    {"id": "sec3", "kind": "model", "title": "3. Jackknife variance estimation", "pages": [5, 7]},
+    {"id": "sec4", "kind": "model", "title": "4. Biased versus conservative variance estimation", "pages": [7, 10]},
+    {"id": "sec5", "kind": "model", "title": "5. Cauchy bound", "pages": [10, 13]},
+    {"id": "sec6", "kind": "model", "title": "6. Satterthwaite approximation", "pages": [13, 15]},
+    {"id": "sec7", "kind": "other", "title": "7. Computation", "pages": [15, 16]},
+    {"id": "sec8", "kind": "results", "title": "8. Simulation evidence", "pages": [16, 22]},
+    {"id": "sec9", "kind": "results", "title": "9. Empirical illustration", "pages": [22, 24]},
+    {"id": "sec10", "kind": "conclusion", "title": "10. Conclusion", "pages": [24, 24]},
+    {"id": "sec11", "kind": "appendix", "title": "A. Appendix: technical proofs", "pages": [24, 32]},
+    {"id": "sec12", "kind": "other", "title": "Acknowledgments, Supplementary Data, Data Availability, References", "pages": [33, 34]}
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "estimand_named"],
+      "statement": "The model is stated as a clustered linear regression with mutually independent clusters, fixed regressors and a correctly specified conditional mean; the authors note this excludes the linear projection model. Assumptions are numbered and introduced one at a time as needed by each theorem.",
+      "pages": [3, 4],
+      "locator": "Section 2, Assumption 1",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": ["other:theoretical_contribution_framed", "threats_discussed"],
+      "statement": "The contribution is framed as a theoretical case built on two insights (variance bias and interval coverage), and the scope condition that both results assume correct specification is stated up front in the introduction.",
+      "pages": [2, 2],
+      "locator": "Section 1, paragraphs 2-3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": ["other:worst_case_bound_analysis"],
+      "statement": "Bias and coverage results are stated as infima over explicitly defined model classes (all designs satisfying the assumptions, and a subclass with clusterwise invertibility), holding the number of regressors and clusters fixed while cluster sizes, regressors and covariance matrices vary freely.",
+      "pages": [8, 9],
+      "locator": "Section 4, definition of F and F*, Theorem 2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": ["other:results_positioned_vs_literature"],
+      "statement": "The paper explicitly contrasts its coverage results with impossibility theorems in the literature and states why it does not describe its own results as impossibility results.",
+      "pages": [13, 13],
+      "locator": "Section 5, last paragraph",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o5",
+      "category": "writing_structure",
+      "tags": ["results_previewed_in_intro", "contribution_paragraph", "roadmap_paragraph"],
+      "statement": "The introduction previews the two theoretical findings and the proposed adjustment, situates them in the HC/CRVE literature, gives a section-by-section roadmap, points to a supplementary appendix and a companion paper, and closes with a notation paragraph.",
+      "pages": [1, 3],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o6",
+      "category": "writing_structure",
+      "tags": ["other:theory_before_simulation", "appendix_heavy"],
+      "statement": "The empirical material comes last: theory sections, then a computation section, then simulation evidence, then a single empirical illustration, then a short conclusion. Proofs of the first three theorems are in the print appendix; remaining proofs, asymptotic results and bootstrap implementation details are deferred to the supplementary appendix.",
+      "pages": [3, 32],
+      "locator": "Section 1 roadmap; Sections 7-10; Appendix A",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o7",
+      "category": "presentation_convention",
+      "tags": ["other:software_syntax_in_text", "in_main_text"],
+      "statement": "The exact Stata command syntax for the recommended procedure is printed inline in both the introduction and the computation section, with the software version named.",
+      "pages": [3, 16],
+      "locator": "Section 1; Section 7",
+      "quote": "regress y x, vce(hc3 cvar, dfadjust hansen)",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o8",
+      "category": "presentation_convention",
+      "tags": ["other:procedure_checklist"],
+      "statement": "The recommended procedure is summarised as a numbered step list (variance, standard error, adjustment parameters, critical value, interval, p-value), with a note that adjustment parameters are coefficient-specific and steps must be repeated per coefficient.",
+      "pages": [16, 16],
+      "locator": "Section 7, numbered steps 1-2(f)",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o9",
+      "category": "inference_justification",
+      "tags": ["other:report_unadjusted_se", "other:against_pretest_selection"],
+      "statement": "The author recommends reporting the unadjusted jackknife standard error alongside adjusted intervals and p-values rather than a rescaled standard error, and argues against choosing standard errors after inspecting leverage or cluster imbalance because pre-test selection has poor finite-sample properties.",
+      "pages": [9, 16],
+      "locator": "Section 4 penultimate paragraph; Section 7 after step list",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o10",
+      "category": "inference_justification",
+      "tags": ["other:critical_value_convention_matched_to_software"],
+      "statement": "In the simulations the conventional intervals use the student t critical value with G minus 1 degrees of freedom, justified explicitly as matching the current Stata implementation for cluster-robust inference.",
+      "pages": [17, 17],
+      "locator": "Section 8, paragraph on confidence interval methods",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o11",
+      "category": "inference_justification",
+      "tags": ["other:cluster_level_follows_original_study", "cluster_at_unit_level"],
+      "statement": "In the empirical illustration the clustering level (province) is adopted because the original study and the follow-up study used it; no independent justification is offered.",
+      "pages": [22, 22],
+      "locator": "Section 9, first paragraph",
+      "quote": "Following these authors, we cluster by province.",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o12",
+      "category": "limitation_stated",
+      "tags": ["interpretation_caveat", "other:scope_limitation"],
+      "statement": "The adjusted distributional approximation is stated to apply only to real-valued parameters and not to joint hypothesis tests; this limitation is repeated in the introduction and the methods section and flagged as a useful extension.",
+      "pages": [2, 14],
+      "locator": "Section 1; Section 6 after equation (35)",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o13",
+      "category": "limitation_stated",
+      "tags": ["other:auxiliary_assumption_acknowledged", "identification_caveat"],
+      "statement": "The normality assumption underlying the coverage bound is described as strong and not to be taken literally; the author states it is unclear how the bound extends to other settings or to a many-cluster asymptotic framework, and suggests an alternative asymptotic-normality formulation.",
+      "pages": [10, 11],
+      "locator": "Section 5, discussion of Assumption 4 and Theorem 3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o14",
+      "category": "limitation_stated",
+      "tags": ["other:future_research_flagged"],
+      "statement": "Open questions are explicitly left to future work: bias correction of the jackknife estimator, worst-case bias holding the regressor matrix fixed, and an unexplained pattern in bootstrap interval lengths.",
+      "pages": [9, 19],
+      "locator": "Section 4 end; Section 8 discussion of interval length",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o15",
+      "category": "design_statement",
+      "tags": ["other:simulation_design_enumerated"],
+      "statement": "The Monte Carlo design is fully enumerated: baseline model, three numbered regressor designs, two numbered error designs, the grid of cluster counts, and homogeneous cluster size, with citations explaining why particular designs produce high leverage.",
+      "pages": [16, 17],
+      "locator": "Section 8, first three paragraphs",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": ["other:monte_carlo_se_reported", "other:replication_count_stated"],
+      "statement": "The number of simulation replications is stated and the precision of the coverage estimates is justified by an upper bound on their Monte Carlo standard errors; average interval length is reported only for the methods judged to have reasonable coverage.",
+      "pages": [17, 18],
+      "locator": "Section 8, paragraph before Table 1",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": ["in_footnote", "other:implementation_deviation_explained"],
+      "statement": "The wild cluster bootstrap follows a named implementation from the literature (WCR-V) but deviates in the choice of auxiliary errors; the deviation and its reason are explained in a footnote and the full implementation is described in the supplementary appendix.",
+      "pages": [17, 17],
+      "locator": "Section 8, footnote 15",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o18",
+      "category": "presentation_convention",
+      "tags": ["no_stars", "other:table_blocks_by_design", "notes_state_sample"],
+      "statement": "Simulation tables share one layout: row blocks by number of clusters, rows by regressor and error design, column groups for coverage by standard error and critical value method, then interval length; a one-line note states the nominal level and target coefficient. No significance stars are used anywhere.",
+      "pages": [18, 23],
+      "locator": "Tables 1-5",
+      "basis": "inferred",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o19",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "alt_sample", "in_main_text"],
+      "statement": "Beyond the baseline simulation, separate tables examine a clusterwise non-invertible model with a single treated cluster (both slope and dummy coefficient), heterogeneous cluster sizes, and skewed non-normal errors; each extension is motivated by a specific theoretical assumption being relaxed.",
+      "pages": [19, 21],
+      "locator": "Section 8, Tables 2-5",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o20",
+      "category": "robustness_reported",
+      "tags": ["other:unreported_checks_described"],
+      "statement": "Unreported simulations are described in a paragraph: many extraneous regressors, the pairs cluster bootstrap and alternative wild bootstraps, and alternative reference covariance choices, each with a qualitative statement of the outcome and why it is not tabulated.",
+      "pages": [21, 21],
+      "locator": "Section 8, paragraph beginning 'In unreported simulations'",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": ["in_main_text", "other:theory_bound_vs_simulation"],
+      "statement": "Simulated coverage rates are checked against the theoretical lower bound from the coverage theorem, and the check is discussed as a consistency test of theory and simulation.",
+      "pages": [21, 21],
+      "locator": "Section 8, paragraph after Table 3",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o22",
+      "category": "other",
+      "tags": ["other:effect_decomposition"],
+      "statement": "The simulation discussion separates the contribution of the standard error choice from the contribution of the critical value adjustment by walking through the coverage change in stages for selected designs.",
+      "pages": [19, 19],
+      "locator": "Section 8, paragraph beginning 'It is instructive'",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o23",
+      "category": "writing_structure",
+      "tags": ["other:enumerated_summary"],
+      "statement": "The simulation section closes with an enumerated list of conclusions drawn from the evidence, ending in a methodological recommendation about how invertibility failures should be handled.",
+      "pages": [21, 22],
+      "locator": "Section 8, final paragraph",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o24",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "sample_period_stated", "unit_of_observation_stated", "other:reanalysis_of_published_study"],
+      "statement": "The empirical illustration re-estimates a specific table from a published study, via a second study that used it for bootstrap testing; unit (province-year), sample period, number of clusters and the six specification variants (period, province set, grain measure) are stated in one paragraph.",
+      "pages": [22, 22],
+      "locator": "Section 9, first paragraph",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o25",
+      "category": "variable_construction",
+      "tags": ["outcome_definition", "logs_or_ihs", "other:parameter_is_linear_combination"],
+      "statement": "Outcome and regressors are defined in log form with an interaction with a famine-year indicator; the parameter of interest is stated to be a sum of two coefficients rather than a single coefficient.",
+      "pages": [22, 23],
+      "locator": "Section 9, regression equation",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o26",
+      "category": "specification_reporting",
+      "tags": ["fe_listed_in_table", "cluster_level_in_notes", "se_type_in_notes", "other:multiple_se_types_side_by_side", "no_stars"],
+      "statement": "The empirical table reports the coefficient sum once per column with three standard errors stacked below it in distinct bracket styles, followed by the two adjustment parameters, the adjusted interval, the adjusted p-value and a comparison p-value from the prior study; notes list controls, fixed effects and cluster level.",
+      "pages": [24, 24],
+      "locator": "Table 6 and notes",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o27",
+      "category": "specification_reporting",
+      "tags": ["other:n_not_reported"],
+      "statement": "The empirical table does not report the number of observations, R squared or the mean of the dependent variable; only the cluster count is given in the text.",
+      "pages": [22, 24],
+      "locator": "Section 9; Table 6",
+      "basis": "inferred",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o28",
+      "category": "presentation_convention",
+      "tags": ["other:worked_calculation"],
+      "statement": "The construction of the adjusted confidence interval and p-value is walked through arithmetically in the text for one specification so readers can reproduce the table entries by hand.",
+      "pages": [23, 24],
+      "locator": "Section 9, paragraphs on specification #1",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": ["alt_sample", "alt_specification", "in_main_text", "summarized_in_one_table"],
+      "statement": "Empirical robustness is expressed as the stability of adjusted intervals across the six specifications of the original study, all shown in one table and discussed in a sentence.",
+      "pages": [23, 24],
+      "locator": "Section 9; Table 6",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o30",
+      "category": "magnitude_interpretation",
+      "tags": ["compared_to_literature", "precision_discussed"],
+      "statement": "Differences between standard error estimators are described as proportional discrepancies across specifications; adjusted p-values are compared with those in the original study and with wild bootstrap p-values from the follow-up study, and interval width is discussed as a statement about uncertainty.",
+      "pages": [23, 24],
+      "locator": "Section 9, last three paragraphs",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o31",
+      "category": "magnitude_interpretation",
+      "tags": ["other:practical_relevance_of_bound"],
+      "statement": "A theoretical coverage bound is translated into practical terms by evaluating it at the conventional critical value and explaining why researchers are unlikely to adopt the fully uniform (Cauchy) critical value in practice.",
+      "pages": [12, 12],
+      "locator": "Section 5, paragraphs after Theorem 5",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o32",
+      "category": "replication_statement",
+      "tags": ["code_public", "data_public", "replication_package_cited"],
+      "statement": "A Data Availability statement says full replication code and data are on Zenodo with a DOI; a separate Supplementary Data statement points to the journal website.",
+      "pages": [33, 33],
+      "locator": "Data Availability; Supplementary Data",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o33",
+      "category": "replication_statement",
+      "tags": ["software_named"],
+      "statement": "Stata is named with a specific version for the recommended option, and Stata 18 behaviour is described for the conventional estimators; the empirical section stresses that the intervals can be computed with the built-in regress command without specialised programs.",
+      "pages": [3, 24],
+      "locator": "Sections 1, 2, 3, 7 and 9",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o34",
+      "category": "presentation_convention",
+      "tags": ["in_footnote", "other:software_caveat_footnote"],
+      "statement": "Footnotes carry software implementation caveats, for example a warning about how Stata 18 handles non-invertible clusters when reporting HC2 and HC3 standard errors, with a citation.",
+      "pages": [7, 7],
+      "locator": "Footnote 6",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o35",
+      "category": "presentation_convention",
+      "tags": ["other:numbered_theorems_and_equations"],
+      "statement": "Theorems, assumptions and equations are numbered; each theorem is followed by a plain-language paragraph explaining what it shows and how it relates to prior results.",
+      "pages": [7, 15],
+      "locator": "Sections 4-6",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o36",
+      "category": "external_validity",
+      "tags": ["other:applicability_scope_claimed", "scaling_discussed"],
+      "statement": "The analysis is claimed to apply to all regression contexts, with few-cluster and few-treated-cluster settings singled out as likely beneficiaries; fixed-effect and within-transformed panels are discussed as covered cases with a recommended implementation order.",
+      "pages": [3, 16],
+      "locator": "Section 1; Section 7 last paragraph",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o37",
+      "category": "writing_structure",
+      "tags": ["other:recommendations_for_practice"],
+      "statement": "The conclusion is a single paragraph restating the recommendation for empirical practice and for software defaults rather than summarising results.",
+      "pages": [24, 24],
+      "locator": "Section 10",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o38",
+      "category": "other",
+      "tags": ["other:funding_disclosed", "other:referees_acknowledged"],
+      "statement": "Acknowledgments name the funding sources, the handling editor and the number of referees, and list individual commenters and a research assistant.",
+      "pages": [33, 33],
+      "locator": "Acknowledgments",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o39",
+      "category": "data_access",
+      "tags": ["other:secondary_published_data", "public_use"],
+      "statement": "The empirical data are those of a previously published study; the paper does not describe how they were obtained beyond citing the original and follow-up papers and the Zenodo package.",
+      "pages": [22, 33],
+      "locator": "Section 9; Data Availability",
+      "basis": "inferred",
+      "applies_to": ["regression"]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Least squares with jackknife (and CRVE1, CRVE2) standard errors; computable via Stata regress with vce(hc3 cvar, dfadjust hansen).",
+      "card_shows": "estimator ols via custom command jregress (Stata ado, version from author statement).",
+      "status": "agree",
+      "pages": [16, 24],
+      "card_ref": "s1.estimator",
+      "note": "The code uses a custom jregress command rather than the base Stata option named in the paper; same estimator."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "All regressions include year fixed effects (Table 6 notes).",
+      "card_shows": "fixed_effects ['year'] from i.year in the call.",
+      "status": "agree",
+      "pages": [24, 24],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors clustered by province, following the original authors.",
+      "card_shows": "se.cluster_level ['prov'].",
+      "status": "agree",
+      "pages": [22, 24],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Three standard errors reported side by side (CRVE1, CRVE2, jackknife) plus Satterthwaite adjusted interval and p-value.",
+      "card_shows": "se.type 'cluster' with details null.",
+      "status": "agree",
+      "pages": [23, 24],
+      "card_ref": "s1.se.type",
+      "note": "Card does not record which variance estimators are produced; the jregress command presumably returns them."
+    },
+    {
+      "item": "controls",
+      "paper_says": "Log total population and log urban population as controls (Table 6 notes).",
+      "card_shows": "ltotpop and lurbpop appear in formula_or_call; controls_summary null.",
+      "status": "agree",
+      "pages": [24, 24],
+      "card_ref": "s1.formula_or_call"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Six specifications varying period (1953-82 vs 1953-65), province set (19 vs 23) and grain measure (constructed vs reported).",
+      "card_shows": "One sample restriction (1953-1982 window) tied to a single spec s1; other variants not recorded.",
+      "status": "paper_only",
+      "pages": [22, 24],
+      "card_ref": "pipeline.sample_restrictions[0]",
+      "note": "Card coverage is partial; Table6.do may loop over variants beyond the line traced."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Tables 1-5 (simulation) and Table 6 (empirical).",
+      "card_shows": "outputs.tables empty; master scripts named Table.R and Table6.do.",
+      "status": "paper_only",
+      "pages": [18, 24],
+      "card_ref": "outputs.tables"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Data of Meng, Qian and Yared (2015) as used by Canay, Santos and Shaikh (2021); replication data on Zenodo.",
+      "card_shows": "Data file Meng_2.dta, access unknown, source_hint null; province.dta dependency not located.",
+      "status": "agree",
+      "pages": [22, 33],
+      "card_ref": "data[0]",
+      "note": "File name is consistent with the paper's source; the card could not confirm provenance."
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Simulation variants (non-invertible design, heterogeneous cluster sizes, lognormal errors) and six empirical specifications.",
+      "card_shows": "robustness empty; Table.R only partially read.",
+      "status": "paper_only",
+      "pages": [19, 24],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "other",
+      "paper_says": "Simulation uses a stated number of replications and a wild cluster bootstrap with normal auxiliary errors.",
+      "card_shows": "Seed set in Table.R; no record of replication count or bootstrap implementation.",
+      "status": "paper_only",
+      "pages": [17, 17],
+      "card_ref": "repository.reproducibility"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No weights mentioned for the empirical regressions.",
+      "card_shows": "weights null.",
+      "status": "unknown",
+      "pages": [22, 24],
+      "card_ref": "s1.weights"
+    }
+  ],
+  "gaps": [
+    "No number of observations, R squared or dependent-variable mean in the empirical table",
+    "No summary statistics table for the empirical data",
+    "No independent justification for the clustering level beyond following the original study",
+    "No heterogeneity analysis (not applicable to this paper type)",
+    "No preregistration or ethics statement",
+    "No description of how the original study's data were obtained beyond the Zenodo link",
+    "No coefficient plots or figures; all evidence is tabular"
+  ],
+  "reading": {
+    "pages_read": [[1, 34]],
+    "coverage": "full",
+    "note": "All 34 pages read. Main text (pp. 1-24) read closely; Appendix A proofs (pp. 24-32) skimmed for structure only; acknowledgments, data availability and references (pp. 33-34) read. The supplementary appendix is not part of the text file."
+  }
+}

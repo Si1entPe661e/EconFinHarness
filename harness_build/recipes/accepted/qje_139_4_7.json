@@ -1,0 +1,669 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "qje_139_4_7",
+ "journal": "QJE",
+ "year": 2024,
+ "doi": "10.1093/qje/qjae019",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:35:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/QJE/metadata/articles.csv",
+   "sha256": "8064dd0901f6f3bd3ec9089390b1b88958eda6dbba4e11911b955aeeb46b5d55"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+    "sha256": "f6ddd6c705869bb93167ff0f17e2d4f86f5842643e402597af87b647f8f3619d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      102
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+    "sha256": "fce7491fc539eace44fde066e3e4418717a101e2906f86e3ad50f6de04b57f99",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      70,
+      120
+     ],
+     [
+      705,
+      730
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_prepare.do",
+    "sha256": "ddc758d3a9c6370142614b76e52296c37d14521670248c4ec2cffe7d4926b8d9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package_code_gss_analysis/gss_output.do",
+    "sha256": "bd973b66ab9e14b2a9d8a5f8aa85d6c889310ee6173f0b17044376c3f3353a10",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package_code_gss_analysis/gss_prepare.do",
+    "sha256": "54b2040e0e46011bc3ce55c7bbee7550e66ac760d57f7aed0c1fbdd94e7bd143",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      250,
+      400
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+    "sha256": "0b81adc0e03885f5972338d258a741ee320cb0a22ac6bb5ca0eabcd6103d79e2",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Staggered DID with state curriculum reforms. Main outcomes: evolution knowledge (NAEP), belief (GSS), career choice (ACS). OLS and csdid event studies with honestdid robustness."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Jupyter"
+  ],
+  "master_scripts": [
+   "code/dataverse_HYLZUO/Replication Package/master_file.do"
+  ],
+  "directory_layout": "code/ by analysis branch; data/ raw; output/ tables and figures",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 18,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": [
+   {
+    "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+    "lines": [
+     32,
+     32
+    ],
+    "snippet": "ssc install csdid, replace",
+    "supports": [
+     "languages"
+    ]
+   }
+  ]
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_prepare.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+      "lines": [
+       51,
+       51
+      ],
+      "snippet": "do naep_prepare.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_HYLZUO/Replication Package_code_gss_analysis/gss_prepare.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+      "lines": [
+       58,
+       58
+      ],
+      "snippet": "do gss_prepare.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_prepare.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+      "lines": [
+       65,
+       65
+      ],
+      "snippet": "do acs_prepare.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "NAEP (knowledge) -> GSS (belief) -> ACS (career)",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+     "lines": [
+      32,
+      32
+     ],
+     "snippet": "ssc install csdid, replace",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg evo_correct evo_score i.state i.byear if schtype==1  & sample_naep==1, vce(cluster state) baselevels",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+      "lines": [
+       18,
+       18
+      ],
+      "snippet": "vce(cluster state)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     },
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+      "lines": [
+       18,
+       18
+      ],
+      "snippet": "eststo: reg evo_correct evo_score i.state i.byear if schtype==1  & sample_naep==1, vce(cluster state) baselevels",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "NAEP Panel A Table I",
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "eststo: reg evo_correct evo_score i.state i.byear if schtype==1  & sample_naep==1, vce(cluster state) baselevels",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "esttab using main_table_all.tex",
+     "supports": [
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg evo_correct evo_score $controls  i.state i.year i.byear if schtype==1 & closestate10==1, vce(cluster state) baselevels",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+      "lines": [
+       34,
+       34
+      ],
+      "snippet": "vce(cluster state)",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+      "lines": [
+       34,
+       34
+      ],
+      "snippet": "eststo: reg evo_correct evo_score $controls  i.state i.year i.byear if schtype==1 & closestate10==1, vce(cluster state) baselevels",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "closestate10",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Close elections subsample",
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "reg evo_correct evo_score $controls  i.state i.year i.byear if schtype==1 & closestate10==1, vce(cluster state)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "closestate10==1",
+     "supports": [
+      "role",
+      "sample"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "reghdfe event study with pre-treatment coefficients for parallel trends",
+   "searched_files": [],
+   "note": "Honest DID sensitivity analysis",
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+     "lines": [
+      710,
+      710
+     ],
+     "snippet": "reghdfe lifesciences_conv pre78 pre56 pre34 zero post01 post23 post45 $controls_indiv if less_evolution==1, absorb(bpl highschoolentryyear year)",
+     "supports": [
+      "description",
+      "observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_sample",
+   "description": "closestate10 subsample for close elections robustness",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s2"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Policy endogeneity control",
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "reg evo_correct evo_score $controls  i.state i.year i.byear if schtype==1 & closestate10==1, vce(cluster state)",
+     "supports": [
+      "description"
+     ]
+    },
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "closestate10==1",
+     "supports": [
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "Table I Panel A",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [
+     "s1"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+      "lines": [
+       24,
+       24
+      ],
+      "snippet": "esttab using main_table_all.tex, replace keep(evo_score) b(3) se(3) fragment  nomtitles nonotes  label",
+      "supports": [
+       "output_ref",
+       "spec_ids"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": "Figure A.IX",
+    "path": null,
+    "package": null,
+    "format": "pdf",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+      "lines": [
+       714,
+       714
+      ],
+      "snippet": "graph export \"${path}\\output\\figures\\acs-less-rr.pdf\", replace",
+      "supports": [
+       "output_ref",
+       "format"
+      ]
+     },
+     {
+      "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+      "lines": [
+       713,
+       713
+      ],
+      "snippet": "honestdid, l_vec(l_vec) pre(1/3) post(4/6)",
+      "supports": [
+       "types"
+      ]
+     }
+    ],
+    "types": [
+     "event_study"
+    ]
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "installation_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "ssc install reghdfe, replace",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+     "lines": [
+      710,
+      710
+     ],
+     "snippet": "reghdfe lifesciences_conv pre78 pre56 pre34 zero post01 post23 post45",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "csdid",
+   "kind": "command",
+   "usage": "installation_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "csdid"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+     "lines": [
+      32,
+      32
+     ],
+     "snippet": "ssc install csdid, replace",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+     "lines": [
+      73,
+      73
+     ],
+     "snippet": "csdid lifesciences_conv if less_evolution==1",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "honestdid",
+   "kind": "command",
+   "usage": "installation_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "honestdid"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package/master_file.do",
+     "lines": [
+      38,
+      38
+     ],
+     "snippet": "ssc install honestdid, replace",
+     "supports": [
+      "commands",
+      "name"
+     ]
+    },
+    {
+     "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+     "lines": [
+      713,
+      713
+     ],
+     "snippet": "honestdid, l_vec(l_vec) pre(1/3) post(4/6)",
+     "supports": [
+      "usage"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

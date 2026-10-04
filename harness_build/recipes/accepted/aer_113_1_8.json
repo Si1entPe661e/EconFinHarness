@@ -1,0 +1,594 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_113_1_8",
+ "journal": "AER",
+ "year": 2023,
+ "doi": "10.1257/aer.20201860",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T03:22:04Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/programs/commands/prepfortest.ado",
+    "sha256": "d035b2c68974e6759e716368047165ecc50a2df7a45601ab9aa4d96eeeb3046d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      94
+     ]
+    ]
+   },
+   {
+    "path": "code/programs/commands/testjfe.ado",
+    "sha256": "763cd2025b21750fe9ec968ecf7a3d820c4262c37fcf8f8d3e6863024078c386",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ],
+     [
+      100,
+      200
+     ],
+     [
+      400,
+      446
+     ]
+    ]
+   },
+   {
+    "path": "code/programs/commands/testjfe.m",
+    "sha256": "f1a6c34584ab0d0875aae19ceb8df6ecdcb619345fcf623ef69f86ee4c477c4c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      60
+     ]
+    ]
+   },
+   {
+    "path": "code/programs/empirical/fll_aer_replication.do",
+    "sha256": "22b77a0dd392cef67dd23dcfda08686a56c480b851a5711dc5a889ade790a99a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ],
+     [
+      100,
+      180
+     ],
+     [
+      400,
+      500
+     ],
+     [
+      850,
+      900
+     ],
+     [
+      1200,
+      1245
+     ],
+     [
+      1250,
+      1327
+     ]
+    ]
+   },
+   {
+    "path": "code/programs/simulations/simulatekitagawa3.do",
+    "sha256": "6040e423b028266e1d383bc635bffe54f762c40761692175406bab81ee9f9ce9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      79
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main replication script covers empirical application in NYC. Test implementation in testjfe.ado and testjfe.m performs semiparametric test for exclusion/monotonicity assumptions. Simulations compare test to Kitagawa alternatives. Multiple simulation scripts present; empirical analysis is primary focus."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "MATLAB"
+  ],
+  "master_scripts": [
+   "code/programs/empirical/fll_aer_replication.do"
+  ],
+  "directory_layout": "code/programs/empirical/ contains main replication; code/programs/commands/ contains custom .ado and .m implementations (testjfe, kitagawamany, prepfortest); code/programs/simulations/ contains Monte Carlo simulations.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 21,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      14,
+      17
+     ],
+     "snippet": "global raw_data ../../raw_data\nglobal intermediate_data ../../intermediate_data\nglobal clean_data ../../clean_data\nadopath + \"../commands\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "DCJS and OCA data; Leslie & Pope (2018) extract",
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      2,
+      4
+     ],
+     "snippet": "This program cleans and data from DCJS and OCA in NY and performs analysis for Frandsen, Lefgren, and Leslie (2022). The extract is the same as the one used in Leslie & Pope (2018).",
+     "supports": [
+      "source_hint",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "clean",
+    "scripts": [
+     "code/programs/empirical/fll_aer_replication.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       9,
+       17
+      ],
+      "snippet": "global raw_data ../../raw_data\nglobal intermediate_data ../../intermediate_data",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/programs/empirical/fll_aer_replication.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1205,
+       1245
+      ],
+      "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/programs/empirical/fll_aer_replication.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1250,
+       1273
+      ],
+      "snippet": "testjfe convicted injail fe_judgeid_*, numknots(5) covariates( fe_ori_yr_m*)",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [
+   {
+    "description": "Full sample of cases arraigned in lower court",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1210,
+       1211
+      ],
+      "snippet": "*First stage results (full sample)\nareg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      1234,
+      1234
+     ],
+     "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "ori_part"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "judge"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1211,
+       1211
+      ],
+      "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t1"
+   ],
+   "notes": "First stage estimates instrument strength; bootstrapped s.e. computed over 1000 replications",
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      1211,
+      1230
+     ],
+     "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "output_ids",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreg2",
+   "package": null,
+   "formula_or_call": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "judge"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1234,
+       1234
+      ],
+      "snippet": "qui ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t2"
+   ],
+   "notes": "Main IV estimate of detention effect on conviction",
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      1234,
+      1234
+     ],
+     "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "output_ids",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Specification s1",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "other:monotonicity_exclusion_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Semiparametric test for exclusion and monotonicity assumptions using b-spline fit",
+   "searched_files": [
+    "code/programs/empirical/fll_aer_replication.do",
+    "code/programs/commands/testjfe.ado"
+   ],
+   "note": "Test run with 5, 10, 15, 20 knots; returns chi-squared test statistic, df, p-value",
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      1253,
+      1253
+     ],
+     "snippet": "testjfe convicted injail fe_judgeid_*, numknots(5) covariates( fe_ori_yr_m*) fitweight(.5) generate(eyj pj fit) graph",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": "tex",
+    "spec_ids": [
+     "s1"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1211,
+       1211
+      ],
+      "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+      "supports": [
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": "tex",
+    "spec_ids": [
+     "s2"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1234,
+       1234
+      ],
+      "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+      "supports": [
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": "paper/NYCtests.tex",
+    "package": null,
+    "format": "tex",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+       1270,
+       1273
+      ],
+      "snippet": "esttab test5 test10 test15 test20 using \"../../paper/NYCtests.tex\", replace",
+      "supports": [
+       "path",
+       "format"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/programs/empirical/fll_aer_replication.do",
+     "lines": [
+      1234,
+      1234
+     ],
+     "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

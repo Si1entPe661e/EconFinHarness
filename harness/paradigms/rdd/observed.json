@@ -1,0 +1,2309 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "rdd",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "aer_110_2_5",
+        "sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+        "journal": "AER",
+        "year": 2020,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "aer_112_10_8",
+        "sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+        "journal": "AER",
+        "year": 2022,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      },
+      {
+        "artid": "aer_114_11_1",
+        "sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+        "journal": "AER",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "jpe_2026_740226",
+        "sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+        "journal": "JPE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "qje_2026_qje_qjaf045",
+        "sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+        "journal": "QJE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2025_restud_rdae108",
+        "sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+        "journal": "ReStud",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2025_restud_rdaf004",
+        "sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+        "journal": "ReStud",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag071",
+        "sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_90_1_3",
+        "sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+        "journal": "ReStud",
+        "year": 2023,
+        "coverage": "minimal",
+        "languages": [
+          "Stata",
+          "MATLAB",
+          "R"
+        ]
+      },
+      {
+        "artid": "rfs_2024_rfs_hhae045",
+        "sha256": "07529fc94ce7677b1ce1b9e9ec3d244f38cb35610c27fbb69487fccd94149ec6",
+        "journal": "RFS",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      }
+    ],
+    "excluded": [
+      {
+        "artid": "aer_107_1_5",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "ecta_92_3_6",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "jpe_132_9_2",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "qje_140_1_11",
+        "reason": "held out for evaluation"
+      }
+    ],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 10,
+    "specifications": 32,
+    "designs": 12,
+    "by_language": {
+      "Stata": 10,
+      "Python": 1,
+      "R": 3,
+      "MATLAB": 1
+    },
+    "by_journal": {
+      "AER": 3,
+      "JPE": 1,
+      "QJE": 1,
+      "ReStud": 4,
+      "RFS": 1
+    },
+    "by_year": {
+      "2020": 1,
+      "2022": 1,
+      "2024": 2,
+      "2026": 3,
+      "2025": 2,
+      "2023": 1
+    },
+    "by_coverage": {
+      "partial": 9,
+      "minimal": 1
+    }
+  },
+  "by_variant": {
+    "fuzzy": 4,
+    "kink": 1,
+    "multiple_cutoffs_normalized": 1,
+    "unknown": 4
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "fuzzy",
+      "papers": 4,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 4,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 4
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/aer_replication/dofiles/Table_fuzzy_iv.do",
+          "lines": [
+            55,
+            56
+          ],
+          "snippet": "rdrobust log_rentals_1864 dist_2, fuzzy(death_ind)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            268,
+            268
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off) fuzzy(`f')",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_2_3_table_3.do",
+          "lines": [
+            8,
+            8
+          ],
+          "snippet": "rdrobust diff_m1_chix_econ runvar_alt, fuzzy(treatment_alt) all",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/27_va_2sls.do",
+          "lines": [
+            424,
+            424
+          ],
+          "snippet": "ivreghdfe `out' `x' (schattended_* =comply_*) \tif mark!=1 \t\t\t\t\t\t\t\t\t\t, a(choice_4a sea_cohort choice_gr5 choice_gr6)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "variant",
+      "value": "kink",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 4,
+      "share_of_known": 0.167,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/5_0_Appendix.do",
+          "lines": [
+            1723,
+            1723
+          ],
+          "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "variant",
+      "value": "multiple_cutoffs_normalized",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 4,
+      "share_of_known": 0.167,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/code/main_analysis.do",
+          "lines": [
+            471,
+            471
+          ],
+          "snippet": "local running_var = \"closestpop_1000\"",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "estimator",
+      "value": "local_polynomial_rd",
+      "papers": 5,
+      "specs": 11,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 5
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/5_0_Appendix.do",
+          "lines": [
+            1723,
+            1723
+          ],
+          "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            67,
+            67
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            374,
+            375
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "s11",
+          "field": "estimator",
+          "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+          "lines": [
+            172,
+            172
+          ],
+          "snippet": "rdrobust `var' t , c(-0.000001) vce(cluster cpf) p(0) bwselect(msetwo) kernel(tri)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2024_rfs_hhae045",
+          "card_sha256": "07529fc94ce7677b1ce1b9e9ec3d244f38cb35610c27fbb69487fccd94149ec6",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025) c(0.7) p(1) q(2) all",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "estimator",
+      "value": "local_linear_rd",
+      "papers": 4,
+      "specs": 15,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.4,
+      "by_language": {
+        "Stata": 4
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/aer_replication/dofiles/Table_main_results.do",
+          "lines": [
+            62,
+            62
+          ],
+          "snippet": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) all",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/code/ado/MultiPanelTabRD.ado",
+          "lines": [
+            205,
+            207
+          ],
+          "snippet": "rdrobust `var' `running_var`alph''",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_2_1_table_1.do",
+          "lines": [
+            6,
+            6
+          ],
+          "snippet": "rdrobust diff_m1_chix_econ runvar, all",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/figures/step5_estimates_dayFine_no80.do",
+          "lines": [
+            87,
+            87
+          ],
+          "snippet": "rdrobust trafficCumulative`i' normalized, all vce(cluster cluster_id)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "estimator",
+      "value": "2sls",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/27_va_2sls.do",
+          "lines": [
+            424,
+            424
+          ],
+          "snippet": "ivreghdfe `out' `x' (schattended_* =comply_*) \tif mark!=1 \t\t\t\t\t\t\t\t\t\t, a(choice_4a sea_cohort choice_gr5 choice_gr6)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "s10",
+          "field": "estimator",
+          "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+          "lines": [
+            156,
+            156
+          ],
+          "snippet": "qui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/47_validation.do",
+          "lines": [
+            125,
+            125
+          ],
+          "snippet": "capture rdrobust out`i' neg_score, kernel(uniform) c(0) p(5) covs(year*)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "command",
+      "value": "rdrobust",
+      "papers": 10,
+      "specs": 26,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 10
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/aer_replication/dofiles/Table_main_results.do",
+          "lines": [
+            62,
+            62
+          ],
+          "snippet": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) all",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/5_0_Appendix.do",
+          "lines": [
+            1723,
+            1723
+          ],
+          "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/code/ado/MultiPanelTabRD.ado",
+          "lines": [
+            205,
+            207
+          ],
+          "snippet": "rdrobust `var' `running_var`alph''",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            67,
+            67
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            374,
+            375
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_2_1_table_1.do",
+          "lines": [
+            6,
+            6
+          ],
+          "snippet": "rdrobust diff_m1_chix_econ runvar, all",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "command",
+      "value": "reghdfe",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "s10",
+          "field": "command",
+          "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+          "lines": [
+            156,
+            156
+          ],
+          "snippet": "qui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/figures/step5_estimates_dayFine_no80.do",
+          "lines": [
+            95,
+            97
+          ],
+          "snippet": "reghdfe trafficCumulative`i'  normalized inteNormalized  treatment  [aw=w] ///\n\t\t\tif normalized >= -bw & normalized <= bw, ///\n\t\t\tcluster(shnro) absorb(limit)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "command",
+      "value": "areg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/47_validation.do",
+          "lines": [
+            134,
+            134
+          ],
+          "snippet": "capture areg out`i' ABOVE score* sea_sex sea_religion? sea_religion?? sea_district? if  abs(score)<=`bw', a(sea_cohort)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "command",
+      "value": "ivreghdfe",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/27_va_2sls.do",
+          "lines": [
+            424,
+            424
+          ],
+          "snippet": "ivreghdfe `out' `x' (schattended_* =comply_*) \tif mark!=1 \t\t\t\t\t\t\t\t\t\t, a(choice_4a sea_cohort choice_gr5 choice_gr6)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "package",
+      "value": "rdrobust",
+      "papers": 5,
+      "specs": 10,
+      "denominator_papers": 10,
+      "unknown_papers": 5,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 5
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": "s2",
+          "field": "package",
+          "path": "code/5_0_Appendix.do",
+          "lines": [
+            1723,
+            1723
+          ],
+          "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            67,
+            67
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            374,
+            375
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/figures/step5_estimates_dayFine_no80.do",
+          "lines": [
+            87,
+            87
+          ],
+          "snippet": "rdrobust trafficCumulative`i' normalized, all vce(cluster cluster_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2024_rfs_hhae045",
+          "card_sha256": "07529fc94ce7677b1ce1b9e9ec3d244f38cb35610c27fbb69487fccd94149ec6",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025) c(0.7) p(1) q(2) all",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 5,
+      "specs": 16,
+      "denominator_papers": 10,
+      "unknown_papers": 3,
+      "share_of_known": 0.714,
+      "by_language": {
+        "Stata": 5
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/aer_replication/dofiles/Table_main_results.do",
+          "lines": [
+            62,
+            62
+          ],
+          "snippet": "vce(nncluster block)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/code/ado/MultiPanelTabRD.ado",
+          "lines": [
+            205,
+            205
+          ],
+          "snippet": "rdrobust `var' `running_var`alph'' ///",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            356,
+            357
+          ],
+          "snippet": "vce(cluster $county)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "s10",
+          "field": "se.type",
+          "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+          "lines": [
+            156,
+            156
+          ],
+          "snippet": "\tqui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/figures/step5_estimates_dayFine_no80.do",
+          "lines": [
+            87,
+            87
+          ],
+          "snippet": "rdrobust trafficCumulative`i' normalized, all vce(cluster cluster_id)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "se_type",
+      "value": "robust",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 3,
+      "share_of_known": 0.286,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            67,
+            67
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2024_rfs_hhae045",
+          "card_sha256": "07529fc94ce7677b1ce1b9e9ec3d244f38cb35610c27fbb69487fccd94149ec6",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_ABLKE4/Code/produce_table6_final.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "rdrobust eng_ind_p1 sop_for_iss, h(0.025 0.025) c(0.7)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "cluster_dimensions",
+      "value": "1",
+      "papers": 3,
+      "specs": 8,
+      "denominator_papers": 10,
+      "unknown_papers": 7,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "s2",
+          "field": "se.cluster_level",
+          "path": "code/code/main_analysis.do",
+          "lines": [
+            121,
+            121
+          ],
+          "snippet": ", c(1000) vce( cluster gp_code_jj11_num) // rdrobust has an issue with major outliers, this takes care of it",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "s10",
+          "field": "se.cluster_level",
+          "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+          "lines": [
+            156,
+            156
+          ],
+          "snippet": "\tqui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/figures/step5_estimates_dayFine_no80.do",
+          "lines": [
+            87,
+            87
+          ],
+          "snippet": "rdrobust trafficCumulative`i' normalized, all vce(cluster cluster_id)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "fixed_effects_count",
+      "value": "1",
+      "papers": 3,
+      "specs": 3,
+      "denominator_papers": 10,
+      "unknown_papers": 6,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "s10",
+          "field": "fixed_effects",
+          "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+          "lines": [
+            156,
+            156
+          ],
+          "snippet": "\tqui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "s2",
+          "field": "fixed_effects",
+          "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/figures/step5_estimates_dayFine_no80.do",
+          "lines": [
+            95,
+            97
+          ],
+          "snippet": "reghdfe trafficCumulative`i'  normalized inteNormalized  treatment  [aw=w] ///\n\t\t\tif normalized >= -bw & normalized <= bw, ///\n\t\t\tcluster(shnro) absorb(limit)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s5",
+          "field": "fixed_effects",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/47_validation.do",
+          "lines": [
+            134,
+            134
+          ],
+          "snippet": "capture areg out`i' ABOVE score* sea_sex sea_religion? sea_religion?? sea_district? if  abs(score)<=`bw', a(sea_cohort)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "fixed_effects_count",
+      "value": "2",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 6,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            374,
+            375
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "fixed_effects_count",
+      "value": "3+",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 10,
+      "unknown_papers": 6,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/27_va_2sls.do",
+          "lines": [
+            424,
+            424
+          ],
+          "snippet": "ivreghdfe `out' `x' (schattended_* =comply_*) \tif mark!=1 \t\t\t\t\t\t\t\t\t\t, a(choice_4a sea_cohort choice_gr5 choice_gr6)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "diagnostic",
+      "value": "density_test:unknown",
+      "papers": 4,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "unknown": 4
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "x3",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2024_rfs_hhae045",
+          "card_sha256": "07529fc94ce7677b1ce1b9e9ec3d244f38cb35610c27fbb69487fccd94149ec6",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o21",
+      "facet": "diagnostic",
+      "value": "bandwidth_selection:observed:call_present",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.375,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/aer_replication/dofiles/Table_main_results.do",
+          "lines": [
+            43,
+            45
+          ],
+          "snippet": "rdbwselect `var' temp, vce(nncluster block)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/code/ado/MultiPanelTabRD.ado",
+          "lines": [
+            200,
+            200
+          ],
+          "snippet": "qui rdbwselect `var' `running_var`alph'' if `cond`alph'' !missing(`var'), c(`cutoff`alph'') `bwselect`alph'' `clusterest`alph'' `covs`alph''",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "x3",
+          "field": "status",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            67,
+            67
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o22",
+      "facet": "diagnostic",
+      "value": "balance:unknown",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "unknown": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o23",
+      "facet": "diagnostic",
+      "value": "density_test:not_found_in_scope",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/code/main_analysis.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/0_master_results.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o24",
+      "facet": "diagnostic",
+      "value": "density_test:observed:call_present",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/dataverse_GXY45B/Code_Output/Fig_A1_A2.do",
+          "lines": [
+            24,
+            24
+          ],
+          "snippet": "rddensity running_saber11 if eligible_sisben==1, c(0) vce(plugin) pl plot_range(-60 60) hist_range(-60 60) graph_opt(xline(0, lcolor(black) lpattern(line)) xtitle(Distance to SABER 11 cutoff) legend(o",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_1_3_figure_3.do",
+          "lines": [
+            6,
+            6
+          ],
+          "snippet": "rddensity runvar",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o25",
+      "facet": "diagnostic",
+      "value": "first_stage:observed:call_present",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "x4",
+          "field": "status",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            55,
+            55
+          ],
+          "snippet": "global outcomes beneficiary_spp access_0 access_1 access_2 access_3 access_4 access_5 access_6 access_0_hq access_0_lq access_0_pri access_0_pub access_0_hq_pri access_0_hq_pub access_0_lq_pri access_",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_1_2_figure_2.do",
+          "lines": [
+            19,
+            19
+          ],
+          "snippet": "rdrobust treatment_alt runvar, all",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o26",
+      "facet": "diagnostic",
+      "value": "bandwidth_selection:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": "x4",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o27",
+      "facet": "diagnostic",
+      "value": "multiple_testing:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "x4",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o28",
+      "facet": "diagnostic",
+      "value": "polynomial_order:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "x3",
+          "field": "status",
+          "path": "code/code/main_analysis.do",
+          "lines": [
+            1087,
+            1087
+          ],
+          "snippet": "\"Each specification uses a linear polynomial, triangular kernel, and \" ///",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o29",
+      "facet": "diagnostic",
+      "value": "pretrend_test:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "x3",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o30",
+      "facet": "robustness_type",
+      "value": "alt_bandwidth:confirmed",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            162,
+            164
+          ],
+          "snippet": "rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)\n\tglobal bw_`r' `e(h_r)'\n\tglobal br_`r' `e(b_r)'",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o31",
+      "facet": "robustness_type",
+      "value": "alt_bandwidth:unresolved",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/aer_replication/dofiles/Fig_bandwidth_sensitivity.do",
+          "lines": [
+            24,
+            45
+          ],
+          "snippet": "forvalues i=10(1)100 {",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o32",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 10,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 10
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/aer_replication/dofiles/Table_main_results.do",
+          "lines": [
+            22,
+            26
+          ],
+          "snippet": "gen temp=dist_netw/100",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/5_0_Appendix.do",
+          "lines": [
+            1723,
+            1723
+          ],
+          "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/code/main_analysis.do",
+          "lines": [
+            925,
+            925
+          ],
+          "snippet": "cutoff(1000) ///",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            268,
+            268
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off) fuzzy(`f')",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            356,
+            356
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_2_1_table_1.do",
+          "lines": [
+            6,
+            14
+          ],
+          "snippet": "rdrobust diff_m1_chix_econ runvar, all",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o33",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 9,
+      "specs": 23,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.9,
+      "by_language": {
+        "Stata": 9
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/aer_replication/dofiles/Table_main_results.do",
+          "lines": [
+            62,
+            62
+          ],
+          "snippet": "rdrobust log_rentals_1853 dist_2, vce(nncluster block) all",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/5_0_Appendix.do",
+          "lines": [
+            1723,
+            1723
+          ],
+          "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/code/main_analysis.do",
+          "lines": [
+            120,
+            120
+          ],
+          "snippet": "rdrobust gp_population_`n' pc91_pca_tot_p if pc91_pca_tot_ < 10000  ///",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+          "lines": [
+            67,
+            67
+          ],
+          "snippet": "cap rdrobust `o' running_`r' if ${cond_`r'}, masspoints(off)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            374,
+            375
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_2_1_table_1.do",
+          "lines": [
+            6,
+            6
+          ],
+          "snippet": "rdrobust diff_m1_chix_econ runvar, all",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o34",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 4,
+      "specs": 9,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.4,
+      "by_language": {
+        "Stata": 4
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/code/ado/MultiPanelTabRD.ado",
+          "lines": [
+            205,
+            207
+          ],
+          "snippet": "rdrobust `var' `running_var`alph''",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+          "lines": [
+            478,
+            478
+          ],
+          "snippet": "rdrobust black_lynch_after demloss if South==1 & competitive_med==0, c(0) p(1) all covs($year_fe $state_fe $xy_ctrls) vce(cluster $county)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/zenodo_13314638/electoral_turnovers_replication_package/replication_package/do/3_2_1_table_1.do",
+          "lines": [
+            48,
+            48
+          ],
+          "snippet": "rdrobust `v' runvar, all",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_6456606/WHAT_IS_A_GOOD_SCHOOL/CODE/27_va_2sls.do",
+          "lines": [
+            424,
+            424
+          ],
+          "snippet": "ivreghdfe `out' `x' (schattended_* =comply_*) \tif mark!=1 \t\t\t\t\t\t\t\t\t\t, a(choice_4a sea_cohort choice_gr5 choice_gr6)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o35",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 10,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 10
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_110_2_5",
+          "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_114_11_1",
+          "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jpe_2026_740226",
+          "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "qje_2026_qje_qjaf045",
+          "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2025_restud_rdae108",
+          "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o36",
+      "facet": "language",
+      "value": "R",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.3,
+      "by_language": {
+        "R": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdaf004",
+          "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o37",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_1_3",
+          "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o38",
+      "facet": "language",
+      "value": "Python",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_10_8",
+          "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "aer_110_2_5",
+      "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+      "kind": "sample_restriction",
+      "text": "MSE-optimal bandwidth from rdbwselect",
+      "record_id": null,
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+        42,
+        45
+      ]
+    },
+    {
+      "artid": "aer_110_2_5",
+      "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+      "kind": "sample_restriction",
+      "text": "Fixed 1-meter window for alternative specs",
+      "record_id": null,
+      "path": "code/aer_replication/dofiles/Table_main_results.do",
+      "lines": [
+        91,
+        91
+      ]
+    },
+    {
+      "artid": "aer_110_2_5",
+      "card_sha256": "d32584402688f06c6ec7258215cd8fced11d436dfeb725e0389b5d6ef809103c",
+      "kind": "reading_note",
+      "text": "Geographic boundary RD. Main table via rdrobust (Table 3 panels A-D, 1853-1936). Fuzzy RD with death_ind (Appendix B2). Conley spatial SE for balance. Custom rd plotting via local polynomial.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_112_10_8",
+      "card_sha256": "348eb4eb33a84386c7afd11c1e82c2e7a3fab500a78c69702730d615082dfec8",
+      "kind": "reading_note",
+      "text": "Mixed Stata-Python pipeline for housing market structural estimation",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_114_11_1",
+      "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+      "kind": "convention",
+      "text": "Running variable pc91_pca_tot_p from 1991 census population",
+      "record_id": null,
+      "path": "code/code/main_analysis.do",
+      "lines": [
+        924,
+        924
+      ]
+    },
+    {
+      "artid": "aer_114_11_1",
+      "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+      "kind": "convention",
+      "text": "Cluster ID variables: gp_code_jj11_num (Joshi-Johnson 1995 delimitation), gp_code_lgd21_num (LGD 2021 delimitation)",
+      "record_id": null,
+      "path": "code/code/main_analysis.do",
+      "lines": [
+        972,
+        972
+      ]
+    },
+    {
+      "artid": "aer_114_11_1",
+      "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+      "kind": "convention",
+      "text": "Analysis datasets organized under $analysis_data/ by topic: villagedirectory/, amenities/, financial/, nregs/, mission_antyodaya/, gp_elections/, gp_development_plan/",
+      "record_id": null,
+      "path": "code/code/main_analysis.do",
+      "lines": [
+        76,
+        76
+      ]
+    },
+    {
+      "artid": "aer_114_11_1",
+      "card_sha256": "5b72962dea23b6da9f0ab1c181363829362416e633bdff0a238edf0ea270e50f",
+      "kind": "reading_note",
+      "text": "Main design uses rdrobust-based RDD with sharp cutoff at 1000 village population. MultiPanelTabRD is a custom wrapper that calls rdrobust internally. Tables 1-6 are main results; additional appendix specs omitted due to budget constraints.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "implementation_feature",
+      "text": "Two independent running variables: SABER 11 score and SISBEN index",
+      "record_id": "d1",
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+        268,
+        268
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "implementation_feature",
+      "text": "Sharp discontinuity at each cutoff (cutoff=0)",
+      "record_id": "d1",
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+        268,
+        268
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "implementation_feature",
+      "text": "First stage: beneficiary_spp (receipt of Ser Pilo Paga scholarship)",
+      "record_id": "d1",
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+        268,
+        268
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "implementation_feature",
+      "text": "Bandwidth selection: data-driven (rdrobust default)",
+      "record_id": "d1",
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+        268,
+        268
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "implementation_feature",
+      "text": "Kernel: triangular (rdrobust default)",
+      "record_id": "d1",
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+        268,
+        268
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "convention",
+      "text": "Bandwidth stored in global macro after rdrobust call (${bw_r}, ${br_r}) for reuse in heterogeneous subgroup analysis to ensure consistency",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/Tab_1_2_3_4_A3.do",
+      "lines": [
+        163,
+        164
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "convention",
+      "text": "Sampling conditions stored as global macros: ${cond_saber11} = 'eligible_sisben==1', ${cond_sisben} = 'eligible_saber11==1'",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+        14,
+        15
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "convention",
+      "text": "matrix ry2014 stores rdrobust results for table/figure production",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+        36,
+        36
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "sample_restriction",
+      "text": "keep if icfes_per==20142: sample cohort with ICFES exam date 2014/2",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+        13,
+        13
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "sample_restriction",
+      "text": "eligible_sisben==1 condition for SABER 11 running variable analysis",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+        14,
+        14
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "sample_restriction",
+      "text": "eligible_saber11==1 condition for SISBEN running variable analysis",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+        15,
+        15
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "unresolved_reference",
+      "text": "Data loading source: ${data}/data_RD and ${data2}/PILA_cuatrimestral datasets not publicly available in code",
+      "record_id": null,
+      "path": "code/dataverse_GXY45B/Code_Output/3_Results_years_PILA.do",
+      "lines": [
+        12,
+        12
+      ]
+    },
+    {
+      "artid": "jpe_2026_740226",
+      "card_sha256": "079df41ea9ade35994de161ae3b4cfe8ad22b8eb88f2136e98f297d95e9b4353",
+      "kind": "reading_note",
+      "text": "Entry point: Master.do calls 2 input scripts (3_Results_years_PILA.do, 4_value_added_model.do) then 16 figure/table scripts. Main estimation conducted through rdrobust command (37 hits) with two running variables (running_saber11, running_sisben). Identified 3 specification families: reduced-form RD, fuzzy RD with beneficiary_spp instrument, and value-added model with reghdfe. Budget exhausted at 7 of 32 code files; remaining scripts (Fig_4_5.do, Fig_6.do, Fig_7_8.do, etc.) follow identical rdro",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "qje_2026_qje_qjaf045",
+      "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+      "kind": "sample_restriction",
+      "text": "Restrict to South==1",
+      "record_id": null,
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/3a_main_regressions.do",
+      "lines": [
+        50,
+        50
+      ]
+    },
+    {
+      "artid": "qje_2026_qje_qjaf045",
+      "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+      "kind": "sample_restriction",
+      "text": "Exclude demsecond cases",
+      "record_id": null,
+      "path": "code/dataverse_08YUBP/TW-QJE2025-Replication/TW-QJE2025-Replication/code/1a_main.do",
+      "lines": [
+        112,
+        125
+      ]
+    },
+    {
+      "artid": "qje_2026_qje_qjaf045",
+      "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416",
+      "kind": "reading_note",
+      "text": "Read master script pipeline, main dataset construction (election data merging, lynching data integration, outcome variable definition), main RDD specifications, and placebo/robustness test structure. Budget remained: analyzed rdrobust commands via grep and targeted reads of key regression sections. Specification landscape includes balance tests (p=1,2), main outcomes by polynomial order, alternative outcome measures, competitive subsample, event-study dynamics, temporal placebo tests, and leave-",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2025_restud_rdae108",
+      "card_sha256": "b087f50050bf5978e2627ae0b340e50a93e6d7f19b63618d8736d8a9567d4e0c",
+      "kind": "reading_note",
+      "text": "Master script, 3 main tables, diagnostic figures; omitted appendix tables and data cleaning per budget",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2025_restud_rdaf004",
+      "card_sha256": "344c9dc1ea9614dd6074ddefc4ca6c694f763ac7952c2d4899877d2a8cfbaf8e",
+      "kind": "reading_note",
+      "text": "Focus: master, matching, main DID/event-study/RD specs",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag071",
+      "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+      "kind": "sample_restriction",
+      "text": "Observation years up to 2019 for 6-month follow-up",
+      "record_id": null,
+      "path": "code/zenodo_19662388/package_34964_v2/package/admin_data/code/build/s04_build_analysis_data.do",
+      "lines": [
+        37,
+        37
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag071",
+      "card_sha256": "7dea8313ae4aa90511ae5fa0bf2f5b1387eb53e8689b7f957ec7934a1b95d086",
+      "kind": "reading_note",
+      "text": "RDD at income-based fine threshold. Main outcomes at 6-month and longer horizons. Heterogeneous effects by income quartile are key finding.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_90_1_3",
+      "card_sha256": "9e8f71dbd90dc16dcb9e71ff12e550cb69bc14b1a6c39f3c3786c70cfee33327",
+      "kind": "reading_note",
+      "text": "Fuzzy RD design using school admission cutoffs; 2SLS via ivreghdfe; diagnostic tests (rddensity, rdrobust); data from Trinidad & Tobago education ministry",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2024_rfs_hhae045",
+      "card_sha256": "07529fc94ce7677b1ce1b9e9ec3d244f38cb35610c27fbb69487fccd94149ec6",
+      "kind": "reading_note",
+      "text": "Main RD and diagnostic analysis from table 4-6. Data external.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet package: unknown in 5/10 papers; shares are computed over the 5 known papers only",
+    "facet cluster_dimensions: unknown in 7/10 papers; shares are computed over the 3 known papers only",
+    "facet fixed_effects_count: unknown in 6/10 papers; shares are computed over the 4 known papers only",
+    "9/10 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

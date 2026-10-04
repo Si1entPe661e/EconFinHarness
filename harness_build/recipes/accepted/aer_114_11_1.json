@@ -1,0 +1,1070 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_114_11_1",
+ "journal": "AER",
+ "year": 2024,
+ "doi": "10.1257/aer.20221712",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/code/0.-runall.do",
+    "sha256": "25b48106c0c84f2f5a0c0bf51797e5224d2392a37ee7aeae15edba6c5fb89808",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      83
+     ]
+    ]
+   },
+   {
+    "path": "code/code/ado/MultiPanelTabRD.ado",
+    "sha256": "437bbd32ec6027c01056e9943400e58ddfea0553fac815d765f58c4102e188a4",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      190,
+      250
+     ]
+    ]
+   },
+   {
+    "path": "code/code/cleaning/master_cleaning.do",
+    "sha256": "5098d33e69c99b22acdfe390b02e39fd4d594efb7e79bf4f577e6e82483505db",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      87
+     ]
+    ]
+   },
+   {
+    "path": "code/code/main_analysis.do",
+    "sha256": "e2f297945e307847ac3ac93d3e2c4d4ad971c6dae8b03b15c2f163f956e2e7f1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ],
+     [
+      300,
+      330
+     ],
+     [
+      425,
+      490
+     ],
+     [
+      520,
+      545
+     ],
+     [
+      905,
+      1000
+     ],
+     [
+      1012,
+      1350
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main design uses rdrobust-based RDD with sharp cutoff at 1000 village population. MultiPanelTabRD is a custom wrapper that calls rdrobust internally. Tables 1-6 are main results; additional appendix specs omitted due to budget constraints."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/code/0.-runall.do"
+  ],
+  "directory_layout": "code/code/ contains main do files; code/code/ado/ has custom functions; code/code/cleaning/ has data prep scripts organized by topic",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/code/ado/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 36,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "global data_path = \"[SET MAIN FOLDER PATH HERE]\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "amenities_analysis.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "village",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      909,
+      909
+     ],
+     "snippet": "use \"$analysis_data/amenities/amenities_analysis.dta\", clear",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "village_analysis_cleaned.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": "village",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "use \"$analysis_data/villagedirectory/village_analysis_cleaned.dta\", clear",
+     "supports": [
+      "name",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Runall.do installs packages, sets globals, then calls master_cleaning followed by main_analysis",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "multiple_cutoffs_normalized",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      925,
+      925
+     ],
+     "snippet": "cutoff(1000) ///",
+     "supports": [
+      "method"
+     ]
+    },
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      471,
+      471
+     ],
+     "snippet": "local running_var = \"closestpop_1000\"",
+     "supports": [
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "\t\t\t\t\teststo est_`vc', title(\"`lab'\"): rdrobust `var' `running_var`alph'' ///\n\t\t\t\t\t\t\tif `cond`alph'' !missing(`var') & inrange( `running_var`alph'', `cutoff`alph'' - `fix_issue_range', `cutoff`alph'' + `fix_issue_range'), ///\n\t\t\t\t\t\t\tc(`cutoff`alph'') `bwselect`alph'' `bw`alph'' `clusterest`alph'' `kernel`alph'' `p`alph'' `covs`alph''",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`var'",
+    "`running_var'",
+    "`cond'",
+    "`cutoff'",
+    "`fix_issue_range'",
+    "`bwselect'",
+    "`bw'",
+    "`clusterest'",
+    "`kernel'",
+    "`p'",
+    "`covs'"
+   ],
+   "scope": "family",
+   "family_description": "looped over multiple outcome variables within each table panel",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/ado/MultiPanelTabRD.ado",
+      "lines": [
+       205,
+       205
+      ],
+      "snippet": "rdrobust `var' `running_var`alph'' ///",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Used within MultiPanelTabRD wrapper for Tables 1-3, 5-6; raw rdrobust calls in exploratory figures",
+   "evidence": [
+    {
+     "path": "code/code/ado/MultiPanelTabRD.ado",
+     "lines": [
+      205,
+      207
+     ],
+     "snippet": "rdrobust `var' `running_var`alph''",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust gp_population_`n' pc91_pca_tot_p if pc91_pca_tot_ < 10000  ///",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "forval n = 900(300)5000 { gen gp_population_`n' = inrange(`pop_var', `n', `n'+`step'-1) if !missing(`pop_var') }",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "gp_code_jj11_num"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       121,
+       121
+      ],
+      "snippet": ", c(1000) vce( cluster gp_code_jj11_num) // rdrobust has an issue with major outliers, this takes care of it",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "pc91_pca_tot_ < 10000",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "First-stage effect on likelihood of falling into population bin; sharp RD at 1000-population cutoff",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      120,
+      120
+     ],
+     "snippet": "rdrobust gp_population_`n' pc91_pca_tot_p if pc91_pca_tot_ < 10000  ///",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      120,
+      120
+     ],
+     "snippet": "rdrobust gp_population_`n' pc91_pca_tot_p if pc91_pca_tot_ < 10000  ///",
+     "supports": [
+      "sample"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust `var' pc11_pca_tot_p if  ///",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "`var'",
+    "`n'",
+    "`step'"
+   ],
+   "scope": "family",
+   "family_description": "forval n = 750(750)6000 looped over multiple outcomes within subsample ranges",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "gp_code_lgd21_num"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       316,
+       316
+      ],
+      "snippet": "inrange(pc11_gp_jj11, `n', `n'+`step'-1) , c(1000) vce( cluster gp_code_lgd21_num)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main outcome RD estimation; population subsamples from 2011 delimitation; outcomes vary by table panel",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      315,
+      315
+     ],
+     "snippet": "rdrobust `var' pc11_pca_tot_p if  ///",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 0 , c(1000) vce(cluster gp_code_jj11_num)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "gp_code_jj11_num"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       526,
+       526
+      ],
+      "snippet": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 0 , c(1000) vce(cluster gp_code_jj11_num)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "noncompliant_district_1995 == 0",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Compliant district subsample: test sensitivity to districts that comply with 1995 noncompliance marker",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      526,
+      526
+     ],
+     "snippet": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 0 , c(1000) vce(cluster gp_code_jj11_num)",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "sample"
+     ]
+    },
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      526,
+      526
+     ],
+     "snippet": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 0 , c(1000) vce(cluster gp_code_jj11_num)",
+     "supports": [
+      "role"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "robustness",
+   "estimator": "local_linear_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 1 & pc91_pca_tot_p <10000, c(1000) vce(cluster gp_code_jj11_num)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "gp_code_jj11_num"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       539,
+       539
+      ],
+      "snippet": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 1 & pc91_pca_tot_p <10000, c(1000) vce(cluster gp_code_jj11_num)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "noncompliant_district_1995 == 1",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Noncompliant district subsample for contrast; same outcome and specification as s4",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      539,
+      539
+     ],
+     "snippet": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 1 & pc91_pca_tot_p <10000, c(1000) vce(cluster gp_code_jj11_num)",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "sample"
+     ]
+    },
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      539,
+      539
+     ],
+     "snippet": "rdrobust education_index  pc91_pca_tot_p if noncompliant_district_1995 == 1 & pc91_pca_tot_p <10000, c(1000) vce(cluster gp_code_jj11_num)",
+     "supports": [
+      "role"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "robustness": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "density_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/code/main_analysis.do"
+   ],
+   "note": "rddensity package installed but usage not traced in main tables; likely in appendix",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "bandwidth_selection",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "MSE-optimal bandwidth computed by rdrobust via rdbwselect; applied within MultiPanelTabRD wrapper",
+   "searched_files": [
+    "code/code/ado/MultiPanelTabRD.ado"
+   ],
+   "note": "Bandwidth computed adaptively per outcome variable within each table via rdbwselect call at line 200",
+   "evidence": [
+    {
+     "path": "code/code/ado/MultiPanelTabRD.ado",
+     "lines": [
+      200,
+      200
+     ],
+     "snippet": "qui rdbwselect `var' `running_var`alph'' if `cond`alph'' !missing(`var'), c(`cutoff`alph'') `bwselect`alph'' `clusterest`alph'' `covs`alph''",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x3",
+   "kind": "polynomial_order",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Linear polynomial (p=1) specified in MultiPanelTabRD defaults and tables; verified in notes of Table 1-2",
+   "searched_files": [
+    "code/code/main_analysis.do"
+   ],
+   "note": "p(`p') where p defaults to 1; consistently applied across all tables",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      1087,
+      1087
+     ],
+     "snippet": "\"Each specification uses a linear polynomial, triangular kernel, and \" ///",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [
+     "First stage (effect on GP population) and balance checks for 1991 and 2011 delimitation episodes"
+    ],
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       927,
+       927
+      ],
+      "snippet": "caption(\"First stage and baseline of baseline village characteristics\") ///",
+      "supports": [
+       "spec_ids",
+       "notes_content"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [
+     "Effects on village amenities: education, infrastructure (roads, water), household-level infrastructure"
+    ],
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       970,
+       970
+      ],
+      "snippet": "caption(\"Effects on village amenities\") ///",
+      "supports": [
+       "notes_content"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [
+     "Effects on service delivery: individual welfare programs (BPL, health, pensions, electricity, LPG, PMMVY, housing, Jan Dhan) and NREGS implementation"
+    ],
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       1054,
+       1054
+      ],
+      "snippet": "caption(\"Effect on delivery of services\") ///",
+      "supports": [
+       "notes_content"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "output_ref": null,
+    "path": "$main_tab/table4.tex",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       1198,
+       1198
+      ],
+      "snippet": "esttab using \"$main_tab/table4.tex\", ///",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t5",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [
+     "Electoral outcomes: gram sabha participation, turnout, candidate/winner characteristics; includes rwolf2 multiple testing adjustment"
+    ],
+    "evidence": [
+     {
+      "path": "code/code/main_analysis.do",
+      "lines": [
+       1244,
+       1244
+      ],
+      "snippet": "caption(\"Effects on GP election outcomes\") ///",
+      "supports": [
+       "notes_content"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "rdrobust",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      14,
+      15
+     ],
+     "snippet": "ssc install rdrobust",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      34,
+      34
+     ],
+     "snippet": "ssc install reghdfe",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      11,
+      12
+     ],
+     "snippet": "ssc install estout",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      36,
+      36
+     ],
+     "snippet": "ssc install ivreg2",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "binscatter",
+   "kind": "command",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "binscatter"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      8,
+      9
+     ],
+     "snippet": "ssc install binscatter",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "coefplot",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "coefplot"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      23,
+      24
+     ],
+     "snippet": "ssc install coefplot",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "rwolf2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "rwolf2"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      5,
+      6
+     ],
+     "snippet": "ssc install rwolf2",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "hhi",
+   "kind": "command",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "hhi"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "ssc install hhi",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ranktest",
+   "kind": "command",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ranktest"
+   ],
+   "evidence": [
+    {
+     "path": "code/code/0.-runall.do",
+     "lines": [
+      46,
+      46
+     ],
+     "snippet": "ssc install ranktest",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Running variable pc91_pca_tot_p from 1991 census population",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      924,
+      924
+     ],
+     "snippet": "running_var(\"pc91_pca_tot_p\")",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Cluster ID variables: gp_code_jj11_num (Joshi-Johnson 1995 delimitation), gp_code_lgd21_num (LGD 2021 delimitation)",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      972,
+      972
+     ],
+     "snippet": "cluster(gp_code_jj11_num) ///",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Analysis datasets organized under $analysis_data/ by topic: villagedirectory/, amenities/, financial/, nregs/, mission_antyodaya/, gp_elections/, gp_development_plan/",
+   "evidence": [
+    {
+     "path": "code/code/main_analysis.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "use \"$analysis_data/villagedirectory/village_analysis_cleaned.dta\", clear",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd"
+  ],
+  "fields": []
+ }
+}

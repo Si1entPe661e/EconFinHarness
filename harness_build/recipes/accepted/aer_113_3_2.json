@@ -1,0 +1,658 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_113_3_2",
+ "journal": "AER",
+ "year": 2023,
+ "doi": "10.1257/aer.20191594",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:35:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/README.md",
+    "sha256": "fd1c3696d5de83de2ee15739994f56c2b664035e5e359c0a950c2564ca0a7c52",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      226
+     ]
+    ]
+   },
+   {
+    "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+    "sha256": "a80b81d8e6fa6e80f2f9f0079ad5a92fbffb16c0c3b09c8cc36147c2b3f50e44",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/code/Analysis/regressions_outputs.R",
+    "sha256": "49952a431e92b120eeb3771d752086aed8bd8bb1ce8d6474916212da3f1e33fc",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/code/Analysis/regressions_parcels.R",
+    "sha256": "d7aa2edc3d25e18782383397cebef7379eeb6affc0ab8330521ddbf88bb3164e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/code/functions/crossfit/R/dml.R",
+    "sha256": "54a1f869ba1d6b3b5859c25c483b9dd22d5b17f94d1e1c2e8f65899e638c1266",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/code/functions/load_crossfit.R",
+    "sha256": "4ab1204a68f981b139ea5d087a70e7a944c1b953a0aa0f6792b15c42e9177b5e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      24
+     ]
+    ]
+   },
+   {
+    "path": "code/code/package_installation.R",
+    "sha256": "b9f20d415a1c05f1d4e9f086e5b542a53f5e29fdfb974f0aa709e956557e5b23",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      19
+     ]
+    ]
+   },
+   {
+    "path": "code/code/texas_constants.R",
+    "sha256": "ba941e886b8372522a3d73b2dd81a90e55c00133b635af24671dddf7c88331be",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/makefile",
+    "sha256": "d83f8980b5532c609410d1ead2a14a97278ebda89c161011466ea4445cf23fb9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      200,
+      350
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Main analysis scripts examined: regressions_bonus_raladdenda.R, regressions_outputs.R, regressions_parcels.R for specification extraction. DML implementation in custom crossfit package uses grf (random forest)."
+ },
+ "repository": {
+  "languages": [
+   "R"
+  ],
+  "master_scripts": [
+   "code/makefile"
+  ],
+  "directory_layout": "code/: main code directory; code/code/Data_Cleaning/: data cleaning scripts; code/code/Analysis/: analysis scripts; code/code/functions/: utility and ML functions including custom DML",
+  "readme_present": true,
+  "license": null,
+  "env_files": [
+   "code/makefile"
+  ],
+  "vendored_libraries": [
+   "code/code/functions/crossfit/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 48,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/code/texas_constants.R",
+     "lines": [
+      28,
+      34
+     ],
+     "snippet": "rfseed <- 19310821\nset.seed(rfseed)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": "2004-2016",
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/code/texas_constants.R",
+     "lines": [
+      22,
+      24
+     ],
+     "snippet": "SampleLeaseStart <- make_date(2004,1,1)\nSampleLeaseEnd <- make_date(2016,12,31)",
+     "supports": [
+      "period"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/code/Analysis/final_leases.R"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/makefile",
+      "lines": [
+       268,
+       269
+      ],
+      "snippet": "$(DATA_final) $(DATA_gen)/probfirms_map.Rda: \\\n\t$(RDIR_analysis)/final_leases.R \\",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [
+   {
+    "description": "InSample==1, Censored==0 for output analyses",
+    "spec_ids": [
+     "s4"
+    ],
+    "evidence": [
+     {
+      "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+      "lines": [
+       28,
+       30
+      ],
+      "snippet": "filter(InSample) %>%\n  filter(Year >= 2005)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "panel_fe",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+     "lines": [
+      37,
+      38
+     ],
+     "snippet": "feols(LogBonus ~ Auction + bs(Acres, df = 4) | Grid10Yr + YearQtr,",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "ml_nuisance",
+   "variant": "double machine learning",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/code/functions/crossfit/R/dml.R",
+     "lines": [
+      1,
+      40
+     ],
+     "snippet": "Implements the Double Machine Learning approach (Chernozhukov et al., 2018)",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "feols",
+   "package": null,
+   "formula_or_call": "  feols(LogBonus ~ Auction + bs(Acres, df = 4) | Grid10Yr + YearQtr,\n        reg_data, cluster = ~ Grid10)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "Grid10Yr",
+    "YearQtr"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "Grid10"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+      "lines": [
+       36,
+       38
+      ],
+      "snippet": "cluster = ~ Grid10",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Bonus specification with Grid10Yr + YearQtr FE",
+   "evidence": [
+    {
+     "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+     "lines": [
+      37,
+      38
+     ],
+     "snippet": "feols(LogBonus ~ Auction + bs(Acres, df = 4) | Grid10Yr + YearQtr,\n        reg_data, cluster = ~ Grid10)",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "fixed_effects",
+      "command"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "feols",
+   "package": null,
+   "formula_or_call": "  feols(DBOEPerAcre ~ Auction + bs(Acres, df = 4) | Grid20Yr + YearQtr,\n        filter(reg_data, !Censored), cluster = ~ Grid20)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "Grid20Yr",
+    "YearQtr"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "Grid20"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+      "lines": [
+       51,
+       53
+      ],
+      "snippet": "cluster = ~ Grid20",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": "!Censored",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Output (DBOE) specification with Grid20Yr + YearQtr FE",
+   "evidence": [
+    {
+     "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+     "lines": [
+      52,
+      53
+     ],
+     "snippet": "feols(DBOEPerAcre ~ Auction + bs(Acres, df = 4) | Grid20Yr + YearQtr,\n        filter(reg_data, !Censored), cluster = ~ Grid20)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "sample",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "other:double_ml",
+   "command": "dml",
+   "package": null,
+   "formula_or_call": "dml(LogBonus ~ Auction | Acres + CentLat + CentLong + EffDate,\n      reg_data, \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "iid",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code/functions/crossfit/R/dml.R",
+      "lines": [
+       71,
+       72
+      ],
+      "snippet": "Double/debiased machine learning for treatment and",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "DML with random forest (grf), 101-fold sample splitting",
+   "evidence": [
+    {
+     "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+     "lines": [
+      67,
+      68
+     ],
+     "snippet": "dml(LogBonus ~ Auction | Acres + CentLat + CentLong + EffDate,\n      reg_data, \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "other:double_ml",
+   "command": "dml",
+   "package": null,
+   "formula_or_call": "dml(DBOEPerAcre ~ Auction | Acres + CentLat + CentLong + EffDate,\n      filter(reg_data, !Censored), \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": "!Censored",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "DML output specification with random forest",
+   "evidence": [
+    {
+     "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+     "lines": [
+      82,
+      83
+     ],
+     "snippet": "dml(DBOEPerAcre ~ Auction | Acres + CentLat + CentLong + EffDate,\n      filter(reg_data, !Censored), \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/code/Analysis/regressions_bonus_raladdenda.R",
+    "code/code/Analysis/regressions_outputs.R"
+   ],
+   "note": "No time-varying treatment dynamics or placebo tests found in read sections",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "stacked_regressions_addenda.tex",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/makefile",
+      "lines": [
+       323,
+       324
+      ],
+      "snippet": "$(TDIR)/stacked_regressions_addenda.tex: \\\n\t$(RDIR_analysis)/regressions_bonus_raladdenda.R \\",
+      "supports": [
+       "output_ref"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "R",
+   "name": "fixest",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+     "lines": [
+      1,
+      10
+     ],
+     "snippet": "library(fixest)",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "grf",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/functions/load_crossfit.R",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "library(grf)",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "glmnet",
+   "kind": "command",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/code/functions/load_crossfit.R",
+     "lines": [
+      6,
+      6
+     ],
+     "snippet": "library(glmnet)",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "ml_nuisance",
+   "panel_fe"
+  ],
+  "fields": []
+ }
+}

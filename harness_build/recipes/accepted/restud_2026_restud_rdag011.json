@@ -1,0 +1,1353 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdag011",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdag011",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+    "sha256": "4617feae36830e4d8e53e2ae90cd4489f771efa4816e717a6d8703e1f76ccc27",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      400
+     ],
+     [
+      545,
+      700
+     ],
+     [
+      750,
+      1200
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Process.do",
+    "sha256": "c62825c03042d958d4acd70745d68b48f485ebdbdecc3692f9ef17be280b9e10",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part2Analysis.do",
+    "sha256": "ce8a903b3afd0a4a02b1e0e9b066b7249b1b7c9640ed1e556303d790810b1d7c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part3Analysis.ipynb",
+    "sha256": "cd028ce3318f6431635690a0716f08fd7598bfcd7e19ba60ad08f5f3752ded9f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Data_Files/Raw/",
+    "reason": "out_of_scope",
+    "note": "18 data cleaning/processing .do files; data files not retained per policy"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+    "lines": [
+     1200,
+     1400
+    ],
+    "reason": "robustness tables and appendix specifications (Tables A2-A5)"
+   }
+  ],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Focus on main analysis Part1Analysis1.do (Tables 1-7, Figures 4-5, 7, A4). Part1Process.do shows data pipeline (9 steps); specific data cleaning scripts listed but not deep-read per policy. Part2Analysis.do covers financial market outcomes (Table 4). Part3Analysis.ipynb produces map visualizations (Figures 1b, A3)."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Python"
+  ],
+  "master_scripts": [
+   "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+   "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Process.do",
+   "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part2Analysis.do"
+  ],
+  "directory_layout": "Zenodo archive extracted to code/ with ReplicationCode/Codes/ (analysis scripts) and ReplicationCode/Data_Files/Raw/ (data processing pipeline)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 24,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      63,
+      63
+     ],
+     "snippet": "set seed 1111 // random seed for bootstrap",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "Part1_1.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      69,
+      70
+     ],
+     "snippet": "cd \"$root/Data_Files/Final\"\nuse \"Part1_1.dta\", replace",
+     "supports": [
+      "name",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Part2.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part2Analysis.do",
+     "lines": [
+      57,
+      58
+     ],
+     "snippet": "cd \"$root/Data_Files/Final\"\nuse \"Part2.dta\", clear",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Data_Files/Raw/combineswiftdata.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Process.do",
+      "lines": [
+       73,
+       74
+      ],
+      "snippet": "do combineswiftdata.do  // cannot run without access to proprietary input data",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "build",
+    "scripts": [
+     "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Data_Files/Raw/buildswiftpanel.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Process.do",
+      "lines": [
+       80,
+       81
+      ],
+      "snippet": "do buildswiftpanel.do  // cannot run without access to proprietary input data",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       3,
+       3
+      ],
+      "snippet": "* Replication code for Bahaj and Reis: \"Jumpstarting an International Currency\"",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ],
+    "scripts": [
+     "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do"
+    ]
+   }
+  ],
+  "run_order_source": "mixed",
+  "run_order_notes": "Part1Process.do orchestrates raw data cleaning; Part1Analysis1.do uses Part1_1.dta for main analysis; Part2Analysis.do and Part3Analysis.ipynb independent analyses on separate datasets",
+  "sample_restrictions": [
+   {
+    "description": "Emerging markets sample: restrict to em_tag==1",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       214,
+       214
+      ],
+      "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Exclude Mongolia (Siso3c!=\"MNG\") in robustness checks",
+    "spec_ids": [
+     "s3"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       319,
+       319
+      ],
+      "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1 & Siso3c!=\"MNG\"",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "Signing of PBoC bilateral swap line (first_swap)",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      214,
+      215
+     ],
+     "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry)",
+     "supports": [
+      "method",
+      "treatment"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "event_study",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      758,
+      759
+     ],
+     "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1)",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "did_imputation",
+   "command": "did_imputation",
+   "package": "did_imputation",
+   "formula_or_call": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sourcecountry"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       214,
+       214
+      ],
+      "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 2, Column 1 (Borusyak et al 2024 method, no controls)",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      213,
+      214
+     ],
+     "snippet": "* Col 1: Time and country fixed effects\ndid_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+     "supports": [
+      "estimator",
+      "command",
+      "role",
+      "package"
+     ]
+    },
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      214,
+      214
+     ],
+     "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "did_imputation",
+   "command": "did_imputation",
+   "package": "did_imputation",
+   "formula_or_call": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) controls($Tradecontrols $PolicyControls $NeighbourControls clearingbanks)  minn(0) autosample cluster(sourcecountry) maxit(1000) avgeffectsby(first_swap)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [
+    {
+     "symbol": "Tradecontrols",
+     "value": "Source_exports_CHN_share Source_imports_CHN_share ln_Source_exports_CHN ln_Source_imports_CHN",
+     "evidence": [
+      {
+       "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+       "lines": [
+        119,
+        119
+       ],
+       "snippet": "global Tradecontrols \"Source_exports_CHN_share Source_imports_CHN_share ln_Source_exports_CHN ln_Source_imports_CHN\"",
+       "supports": [
+        "symbol",
+        "value"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "Tradecontrols"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sourcecountry"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       254,
+       254
+      ],
+      "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) controls($Tradecontrols $PolicyControls $NeighbourControls clearingbanks)  minn(0) autosample cluster(sou",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 2, Column 4 (Borusyak et al with full controls)",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      254,
+      254
+     ],
+     "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) controls($Tradecontrols $PolicyControls $NeighbourControls clearingbanks)  minn(0) autosample cluster(sou",
+     "supports": [
+      "role",
+      "estimator",
+      "package",
+      "command",
+      "unresolved_symbols",
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "date",
+    "sourcecountry"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sourcecountry"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       267,
+       267
+      ],
+      "snippet": "reghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 2, Column 5 (OLS benchmark for comparison with did_imputation)",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      266,
+      267
+     ],
+     "snippet": "* Col 5:  OLS estimator\nreghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+     "supports": [
+      "estimator",
+      "role",
+      "package",
+      "fixed_effects",
+      "command",
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      267,
+      267
+     ],
+     "snippet": "reghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "other:ppmlhdfe",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols $PolicyControls $NeighbourControls $LogControls clearingbanks if em_tag==1 & Siso3c!=\"MNG\", absorb(date sourcecountry) cluster(sourcecountry) d",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "date",
+    "sourcecountry"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "sourcecountry"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       551,
+       551
+      ],
+      "snippet": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols $PolicyControls $NeighbourControls $LogControls clearingbanks if em_tag==1 & Siso3c!=\"MNG\", absorb(date sourcecountry) cluster(sourcecountry) d",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 3, Column 11 (PPML Poisson regression for extensive/intensive margin)",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      550,
+      551
+     ],
+     "snippet": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols $PolicyControls $NeighbourControls $LogControls clearingbanks if em_tag==1 & Siso3c!=\"MNG\", absorb(date sourcecountry) cluster(sourcecountry) d",
+     "supports": [
+      "estimator",
+      "package",
+      "fixed_effects",
+      "command",
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "other:sdid",
+   "command": "sdid",
+   "package": "sdid",
+   "formula_or_call": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_Source_exports_CHN ln_S_NGDP) seed(1111)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Table 5, Column 6 (SDID with covariates, 2015Q3 event date)",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      770,
+      770
+     ],
+     "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+     "supports": [
+      "estimator",
+      "package",
+      "command",
+      "formula_or_call"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Pretrend test for 18 months (pretrends(18)) implemented in did_imputation",
+   "searched_files": [
+    "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do"
+   ],
+   "note": "Event plot shows pretrends graphically",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      1097,
+      1097
+     ],
+     "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0) autosample cluster(sourcecountry) hor(0/24) pretrends(18)",
+     "supports": [
+      "status",
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x2",
+   "kind": "event_window",
+   "design_id": "d2",
+   "spec_ids": [
+    "s5"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "searched_files": [
+    "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do"
+   ],
+   "note": "Event study plots (Figures 4a-b, 5a-b) show 48 months around event (−48 to +48)",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      1042,
+      1042
+     ],
+     "snippet": "scatter rmbsharemedia_ex300 zero betweenS if inrange(betweenS,-48,48)",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ],
+   "description": "Event study plot from -48 to +48 months"
+  },
+  {
+   "id": "x3",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do"
+   ],
+   "note": "Covariate balance/pre-treatment equality not explicitly tested",
+   "evidence": []
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_sample",
+   "description": "Excluding Mongolia",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s2"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Table 2 Col 9 excludes Mongolia (Siso3c!=\"MNG\"); results remain similar",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      318,
+      319
+     ],
+     "snippet": "* Col 9: Ex-Mongolia\ndid_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1 & Siso3c!=\"MNG\"",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_estimator",
+   "description": "OLS vs did_imputation (Borusyak et al 2024)",
+   "baseline_spec_ids": [
+    "s2"
+   ],
+   "variant_spec_ids": [
+    "s3"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Table 2 Col 5 uses reghdfe OLS as alternative to did_imputation",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      266,
+      267
+     ],
+     "snippet": "* Col 5:  OLS estimator\nreghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_estimator",
+   "baseline_spec_ids": [
+    "s2"
+   ],
+   "variant_spec_ids": [
+    "s4"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Table 3 Col 11 uses ppmlhdfe for count outcome",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      550,
+      551
+     ],
+     "snippet": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ],
+   "description": "ppmlhdfe Poisson model for extensive margin"
+  },
+  {
+   "type": "alt_estimator",
+   "description": "SDID (synthetic difference-in-differences) vs did_imputation",
+   "baseline_spec_ids": [
+    "s2"
+   ],
+   "variant_spec_ids": [
+    "s5"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Table 5 uses sdid with bootstrap confidence intervals as alternative methodology",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      770,
+      770
+     ],
+     "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "tab1.csv",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       165,
+       166
+      ],
+      "snippet": "cd \"$root/Output\"\nexport delimited Country Date Notional_ baseline using tab1.csv, replace",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "tab2.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": "0.1, 0.05, 0.01",
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       347,
+       347
+      ],
+      "snippet": "esttab tab2col* using tab2.tex, star(\"*\" 0.1 \"**\" 0.05 \"***\" 0.01) b(%10.4f) se(%10.3f) scalars(Ntreated Ncontrol T TimeFE CountryFE TradeControls PolicyControls NeighborControl Method) sfmt(%10.2f) r",
+      "supports": [
+       "path",
+       "package",
+       "stars"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": "tab3.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": "0.1, 0.05, 0.01",
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       585,
+       585
+      ],
+      "snippet": "esttab tab3col* using tab3.tex, star(\"*\" 0.1 \"**\" 0.05 \"***\" 0.01) b(%10.4f) se(%10.3f) scalars(Ntreated Ncontrol T TimeFE CountryFE TradeControls PolicyControls NeighborControl LogControls Method) sf",
+      "supports": [
+       "path",
+       "stars",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "output_ref": null,
+    "path": "tab4.tex",
+    "package": "esttab",
+    "format": "tex",
+    "spec_ids": [],
+    "stars": "0.1, 0.05, 0.01",
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part2Analysis.do",
+      "lines": [
+       113,
+       113
+      ],
+      "snippet": "esttab tab4col* using tab4.tex, star(\"*\" 0.1 \"**\" 0.05 \"***\" 0.01) b(%10.4f) se(%10.3f) scalars(Ntreated T TimeFE CountryFE Method) sfmt(%10.2f) replace keep(tau dum) mtitles",
+      "supports": [
+       "path",
+       "format",
+       "stars",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t5",
+    "output_ref": null,
+    "path": "tab5.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": "0.1, 0.05, 0.01",
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       807,
+       807
+      ],
+      "snippet": "esttab tab5col* using tab5.tex, star(\"*\" 0.1 \"**\" 0.05 \"***\" 0.01) b(%10.4f) se(%10.3f) scalars(Ntreated Ncontrol T TimeFE CountryFE Controls EventDate Method) sfmt(%10.2f) replace keep(treatind treat",
+      "supports": [
+       "path",
+       "stars",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t6",
+    "output_ref": null,
+    "path": "tab6.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": "0.1, 0.05, 0.01",
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       943,
+       943
+      ],
+      "snippet": "esttab tab6col* using tab6.tex, star(\"*\" 0.1 \"**\" 0.05 \"***\" 0.01) b(%10.4f) se(%10.3f) scalars(Ntreated Ncontrol T TimeFE CountryFE TradeControls PolicyControls NeighborControl Method) sfmt(%10.2f) r",
+      "supports": [
+       "path",
+       "stars",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t7",
+    "output_ref": null,
+    "path": "tab7.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": "0.1, 0.05, 0.01",
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       1019,
+       1019
+      ],
+      "snippet": "esttab tab7col* using tab7.tex, star(\"*\" 0.1 \"**\" 0.05 \"***\" 0.01) b(%10.3f) se(%10.2f) scalars(Ntreated Ncontrol T TimeFE CountryFE Method) sfmt(%10.2f) replace keep(tau) mtitles",
+      "supports": [
+       "path",
+       "stars",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t8",
+    "output_ref": null,
+    "path": "tabA1.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       1134,
+       1135
+      ],
+      "snippet": "esttab sumstats1 using \"tabA1.tex\", booktabs ///\n       label nonumbers cells(\"mean p50 min max sd\") replace",
+      "supports": [
+       "path",
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f3",
+    "output_ref": null,
+    "path": "fig5a.pdf",
+    "package": null,
+    "types": [],
+    "format": null,
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       1101,
+       1103
+      ],
+      "snippet": "cd \"$root/Output\"\n** export\ngraph export \"fig5a.pdf\", replace",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "f4",
+    "output_ref": null,
+    "path": "fig5b.pdf",
+    "package": null,
+    "types": [],
+    "format": null,
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       1112,
+       1114
+      ],
+      "snippet": "cd \"$root/Output\"\n** export\ngraph export \"fig5b.pdf\", replace",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "f5",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "types": [],
+    "format": "pdf",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+       684,
+       687
+      ],
+      "snippet": "cd \"$root/Output\"\n** export\ngraph export \"fig7.pdf\", replace\ngraph export \"fig7.png\", replace",
+      "supports": [
+       "format"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "structural": null,
+ "computation": {
+  "parallel": null,
+  "hpc_hints": null,
+  "runtime_hints": null,
+  "seeds": "1111",
+  "evidence": [
+   {
+    "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+    "lines": [
+     63,
+     63
+    ],
+    "snippet": "set seed 1111 // random seed for bootstrap",
+    "supports": [
+     "seeds"
+    ]
+   }
+  ]
+ },
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": "OLS estimation with high-dimensional fixed effects",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      36,
+      37
+     ],
+     "snippet": "** reghdfe for LS with high dimensional fixed effects\n* ssc install reghdfe, replace",
+     "supports": [
+      "name",
+      "kind",
+      "purpose",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "did_imputation",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "did_imputation"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      48,
+      48
+     ],
+     "snippet": "*ssc install did_imputation",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ppmlhdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ppmlhdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      39,
+      40
+     ],
+     "snippet": "** ppmlhdfe estimator for extensive margin effects\n* ssc install ppmlhdfe",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "sdid",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "sdid"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      50,
+      50
+     ],
+     "snippet": "*ssc install sdid, replace",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "event_plot",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "event_plot"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      49,
+      49
+     ],
+     "snippet": "*ssc install event_plot",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Python",
+   "name": "plotly",
+   "kind": "module",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "plotly.graph_objects"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part3Analysis.ipynb",
+     "lines": [
+      54,
+      55
+     ],
+     "snippet": "import plotly.graph_objects as go",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global variables for control specifications ($Tradecontrols, $PolicyControls, $NeighbourControls, $LogControls) used across all did_imputation specifications",
+   "evidence": [
+    {
+     "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+     "lines": [
+      119,
+      120
+     ],
+     "snippet": "global Tradecontrols \"Source_exports_CHN_share Source_imports_CHN_share ln_Source_exports_CHN ln_Source_imports_CHN\"\nglobal PolicyControls \"ChinaInvest_pc ChinaInvest_cum_pc AIIB FTA UNCHINA_diff\"",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did",
+   "event_study"
+  ],
+  "fields": []
+ }
+}

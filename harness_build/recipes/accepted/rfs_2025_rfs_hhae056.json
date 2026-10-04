@@ -1,0 +1,965 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "rfs_2025_rfs_hhae056",
+ "journal": "RFS",
+ "year": 2025,
+ "doi": "10.1093/rfs/hhae056",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/RFS/metadata/articles.csv",
+   "sha256": "9c01e943d18e3d667f1beffa18cf5eaa9cc3fab65663d6cd8d84866ba430560a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_JTU2GF/Figures 1-2.py",
+    "sha256": "1a83c4ba5b1746deda2e8506411d7f63b2e00081c1e44acb3ff62e6e14d529f7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      31
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_JTU2GF/Table 10.do",
+    "sha256": "531eef49a1e73dbf8dadbbccb1f0d44a1e905a9ec7bd087d5869b7eefb05ff1c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_JTU2GF/Table 11.do",
+    "sha256": "e0743ded7bdf5b43e97c932d141a97d7dd7a205c7f44772c03b84633859fcfc6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      820,
+      846
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_JTU2GF/Table 12.do",
+    "sha256": "8f20ea79c9bc9454300076500f1ff0c9853e01eb0caab0351d60d0413a9f4821",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      150,
+      274
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_JTU2GF/Table 13.do",
+    "sha256": "7cda1bd978128e020ef1717e55372d2e1dfdee87160bece0e4eacd13828c4634",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+    "sha256": "0b19c059980af302903d76ad555e7fe53103e50585b6a3a014e0891731aa47d9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_JTU2GF/Table 6_9.do",
+    "sha256": "27169b6de7769fe6482f532365c4b20806b2ac5518e7b06508370cb7e33f9a06",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      350,
+      450
+     ],
+     [
+      600,
+      700
+     ],
+     [
+      730,
+      800
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Stata scripts use globals for paths; data files not included. Entry points are individual table-specific .do files. Portfolio returns computed externally from CRSP/Compustat/Interbrand sources."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Python"
+  ],
+  "master_scripts": [
+   "code/dataverse_JTU2GF/Table 6_9.do",
+   "code/dataverse_JTU2GF/Table 12.do",
+   "code/dataverse_JTU2GF/Table 13.do",
+   "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+   "code/dataverse_JTU2GF/Table 10.do",
+   "code/dataverse_JTU2GF/Table 11.do"
+  ],
+  "directory_layout": "code/dataverse_JTU2GF/ contains 6 Stata .do files (one per table group) and 1 Python visualization script. No README provided in repository.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 7,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "global path = \"C:\\Users\\H_BOUSTANIFAR\\Desktop\\Hamid Dropbox Dropbox\\Hamid Boustanifar\\Nice\\PhD supervision\\Young Dae Kang\\best_brand_paper\\\"\t// set the global path to the folder",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "CRSP",
+   "type": "market_prices",
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      2,
+      2
+     ],
+     "snippet": "CRSP monthly and daily security returns file",
+     "supports": [
+      "type",
+      "access",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "firm_financials",
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      2,
+      2
+     ],
+     "snippet": "crsp-compustat merged file",
+     "supports": [
+      "type",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "survey",
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 10.do",
+     "lines": [
+      1,
+      1
+     ],
+     "snippet": "** I/B/E/S 1yr forecast",
+     "supports": [
+      "type",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Fama-French Factors",
+   "type": "market_prices",
+   "access": "public",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 12.do",
+     "lines": [
+      201,
+      201
+     ],
+     "snippet": "import excel \"Factors.xlsx\", sheet(\"Factors\") firstrow clear",
+     "supports": [
+      "name",
+      "type",
+      "access"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_JTU2GF/Table 13.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 13.do",
+      "lines": [
+       1,
+       1
+      ],
+      "snippet": "CONSTRUCTING THE STOCK OF BRAND CAPITAL based on Perpetual Inventory Method",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_JTU2GF/Table 6_9.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 6_9.do",
+      "lines": [
+       732,
+       732
+      ],
+      "snippet": "*** 7. Save final data set for for Fama-MAcBeth regressions",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p5",
+    "stage": "tables",
+    "scripts": [
+     "code/dataverse_JTU2GF/Figures 1-2.py"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Figures 1-2.py",
+      "lines": [
+       3,
+       3
+      ],
+      "snippet": "import pandas as pd",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "inferred",
+  "run_order_notes": "Pipeline inferred from script dependencies: brand capital must be built before Fama-MacBeth, which must precede factor model tests. Table files load pre-constructed portfolio returns from external sources.",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "portfolio_sorts",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 13.do",
+     "lines": [
+      114,
+      114
+     ],
+     "snippet": "bys year: egen BK_pf = xtile(brandcap), nq(5) //",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "fama_macbeth",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "monthly cross-sectional regressions",
+    "Newey-West lag(1) adjustment",
+    "time-series average of monthly coefficients"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      757,
+      757
+     ],
+     "snippet": "asreg `depvar' `MainVars0',  fmb newey(1)",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "factor_model",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Newey-West HAC standard errors, lag(1)",
+    "monthly portfolio returns regressed on Fama-French factors",
+    "tests: Carhart 4-factor, FF 6-factor, q-factor, q5-factor, AQR factors"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+     "lines": [
+      22,
+      22
+     ],
+     "snippet": "newey excess_ret_rf_EEW MktRF SMB HML MOM, lag(1)",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "role": "unknown",
+   "method": "return_event_study",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "cumulative abnormal return around earnings announcements",
+    "clustered standard errors by permno"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 11.do",
+     "lines": [
+      832,
+      832
+     ],
+     "snippet": "reg CAR bb , vce(cluster permno)",
+     "supports": [
+      "method",
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": null,
+   "command": "collapse",
+   "package": null,
+   "formula_or_call": "collapse (mean) ret , by(t BK_pf)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Portfolio returns computed by collapsing to quintile level",
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 12.do",
+     "lines": [
+      189,
+      189
+     ],
+     "snippet": "collapse (mean) ret , by(t BK_pf)",
+     "supports": [
+      "formula_or_call",
+      "command"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": null,
+   "command": "collapse",
+   "package": null,
+   "formula_or_call": "collapse (sum) ME_L1xret ME_L1_Iret, by(t BK_pf)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Portfolio returns computed using market value weights",
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 12.do",
+     "lines": [
+      178,
+      178
+     ],
+     "snippet": "collapse (sum) ME_L1xret ME_L1_Iret, by(t BK_pf)",
+     "supports": [
+      "formula_or_call",
+      "command"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": null,
+   "command": "collapse",
+   "package": null,
+   "formula_or_call": "collapse (sum) ME_L1xret ME_L1_Iret, by(t BK_pf)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Capped value-weighted to reduce concentration in largest firms",
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 12.do",
+     "lines": [
+      178,
+      178
+     ],
+     "snippet": "collapse (sum) ME_L1xret ME_L1_Iret, by(t BK_pf)",
+     "supports": [
+      "formula_or_call",
+      "command"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "multiple_testing",
+   "design_id": "d2",
+   "spec_ids": [],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/dataverse_JTU2GF/Table 6_9.do",
+    "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+    "code/dataverse_JTU2GF/Table 12.do"
+   ],
+   "note": "No Bonferroni or other multiple-testing adjustment found in code; 5+ factor models tested sequentially",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/dataverse_JTU2GF/Table 13.do",
+    "code/dataverse_JTU2GF/Table 12.do"
+   ],
+   "note": "Code constructs portfolios but no balance/characteristics tables found; audit was unable to locate fund composition tables",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": null,
+    "package": "outreg2",
+    "format": "csv",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+      "lines": [
+       23,
+       23
+      ],
+      "snippet": "outreg2 using Table4, replace dec(2)  stats(coef tstat)",
+      "supports": [
+       "package",
+       "format"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": "outreg2",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+      "lines": [
+       48,
+       48
+      ],
+      "snippet": "outreg2 using Table5, replace dec(2)  stats(coef tstat)",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": null,
+    "package": "outreg2",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 6_9.do",
+      "lines": [
+       758,
+       758
+      ],
+      "snippet": "outreg2 using Table6, replace stats(coef tstat) dec(2)",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "output_ref": null,
+    "path": null,
+    "package": "outreg2",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 6_9.do",
+      "lines": [
+       788,
+       788
+      ],
+      "snippet": "outreg2 using `output_name', replace stats(coef tstat)",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t5",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": "csv",
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 12.do",
+      "lines": [
+       262,
+       262
+      ],
+      "snippet": "esttab using \"top_brands_pf_`weight'.csv\", replace ///",
+      "supports": [
+       "format",
+       "stars",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t6",
+    "output_ref": null,
+    "path": null,
+    "package": "outreg2",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_JTU2GF/Table 11.do",
+      "lines": [
+       833,
+       833
+      ],
+      "snippet": "outreg2 using event_study_ES, replace stats(coef tstat) dec(2) sortvar() drop() label excel",
+      "supports": [
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "asreg",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "asreg"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      389,
+      389
+     ],
+     "snippet": "asreg retrf ewmktrf, window(time_avail_m 60) min(20) by(permno)",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "outreg2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "outreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      758,
+      758
+     ],
+     "snippet": "outreg2 using Table6, replace stats(coef tstat) dec(2)",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "esttab",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 12.do",
+     "lines": [
+      262,
+      264
+     ],
+     "snippet": "esttab using \"top_brands_pf_`weight'.csv\", replace",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "newey",
+   "kind": "builtin",
+   "usage": "called",
+   "purpose": "Newey-West HAC standard errors for time-series data",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "newey"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 4-8_Fig4-5.do",
+     "lines": [
+      22,
+      22
+     ],
+     "snippet": "newey excess_ret_rf_EEW MktRF SMB HML MOM, lag(1)",
+     "supports": [
+      "usage",
+      "purpose",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ffind",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ffind"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Table 6_9.do",
+     "lines": [
+      78,
+      78
+     ],
+     "snippet": "ffind sich, newvar(ffind49) type(49)",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Python",
+   "name": "pandas",
+   "kind": "distribution",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Figures 1-2.py",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "import pandas as pd",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Python",
+   "name": "seaborn",
+   "kind": "distribution",
+   "usage": "loaded_only",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_JTU2GF/Figures 1-2.py",
+     "lines": [
+      6,
+      6
+     ],
+     "snippet": "import seaborn as sns",
+     "supports": [
+      "usage",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "factor_model",
+   "fama_macbeth",
+   "portfolio_sorts",
+   "return_event_study"
+  ],
+  "fields": []
+ }
+}

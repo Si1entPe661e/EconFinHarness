@@ -1,0 +1,1143 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "diff_in_disc",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "jpe_132_9_2",
+      "note_sha256": "81cfda54e6be6f73c317872d8423f351958773f1177402d6c6b7b04e770de6b4",
+      "journal": "JPE",
+      "year": 2024,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "jpe_2026_739821",
+      "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+      "journal": "JPE",
+      "year": 2026,
+      "coverage": "main_text",
+      "card_link": false
+    },
+    {
+      "artid": "restud_2026_restud_rdag037",
+      "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 3,
+    "by_journal": {
+      "JPE": 2,
+      "ReStud": 1
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 2
+    },
+    "with_card": 2,
+    "papers_with_category": {
+      "design_statement": 2,
+      "sample_construction": 1,
+      "variable_construction": 1,
+      "specification_reporting": 2,
+      "inference_justification": 1,
+      "diagnostic_reported": 2,
+      "heterogeneity_reported": 1,
+      "limitation_stated": 1,
+      "presentation_convention": 1,
+      "writing_structure": 1,
+      "replication_statement": 1,
+      "data_access": 1,
+      "external_validity": 1
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "data_access_procedure_described",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o53",
+          "pages": [
+            43,
+            43
+          ],
+          "locator": "Data Availability section",
+          "statement": "States that the Data Availability section provides instructions for how to obtain the individual-level demographic data from the family-reconstitution survey and from the crowdsourced genealogy website, rather than redistributing the underlying individual-level data directly.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_restricted",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o53",
+          "pages": [
+            43,
+            43
+          ],
+          "locator": "Data Availability section",
+          "statement": "States that the Data Availability section provides instructions for how to obtain the individual-level demographic data from the family-reconstitution survey and from the crowdsourced genealogy website, rather than redistributing the underlying individual-level data directly.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "continuity_at_cutoff_argued",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o2",
+          "pages": [
+            29,
+            30
+          ],
+          "locator": "Section V.C, equations (4)-(5)",
+          "statement": "Names a second design, a spatial regression-discontinuity difference-in-differences (RD-DD), comparing women born on opposite sides of historical judicial-district borders with different inheritance rules, before and after the reform harmonized rules across the border.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o3",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, equation (6)",
+          "statement": "For the Supreme Court decision, the author explains why the bunching counterfactual is not credible in that window and switches to a difference-in-discontinuities design in time, comparing the jump at the decision date to jumps at the same calendar date in other years, under a stated continuity assu",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "design_variant_named",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o2",
+          "pages": [
+            29,
+            30
+          ],
+          "locator": "Section V.C, equations (4)-(5)",
+          "statement": "Names a second design, a spatial regression-discontinuity difference-in-differences (RD-DD), comparing women born on opposite sides of historical judicial-district borders with different inheritance rules, before and after the reform harmonized rules across the border.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o3",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, equation (6)",
+          "statement": "For the Supreme Court decision, the author explains why the bunching counterfactual is not credible in that window and switches to a difference-in-discontinuities design in time, comparing the jump at the decision date to jumps at the same calendar date in other years, under a stated continuity assu",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "bandwidth_sensitivity",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o26",
+          "pages": [
+            34,
+            34
+          ],
+          "locator": "Section V.C, robustness discussion (Figure E3, appendix)",
+          "statement": "Reports that RD-DD estimates are checked across a range of bandwidths narrower and wider than the mean-squared-error optimal choice for both linear and quadratic polynomial specifications, with the sensitivity figure placed in the online appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o25",
+          "pages": [
+            23,
+            24
+          ],
+          "locator": "Table 6, Figure A11, Section 5.3",
+          "statement": "The time-discontinuity design reports an optimal bandwidth from Imbens and Kalyanaraman alongside wider and narrower bandwidths in the main table, and polynomial and further bandwidth choices in an appendix figure; a very narrow window is used to separate the court decision from a later policy memo.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o26",
+          "pages": [
+            34,
+            34
+          ],
+          "locator": "Section V.C, robustness discussion (Figure E3, appendix)",
+          "statement": "Reports that RD-DD estimates are checked across a range of bandwidths narrower and wider than the mean-squared-error optimal choice for both linear and quadratic polynomial specifications, with the sensitivity figure placed in the online appendix.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o23",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, Figure A11",
+          "statement": "The paper checks that the pre-reform share of cases in the future bunching bin is stable near zero across years (supporting the counterfactual) and reports the density of cases around the Supreme Court decision date in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "density_test",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o23",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, Figure A11",
+          "statement": "The paper checks that the pre-reform share of cases in the future bunching bin is stable near zero across years (supporting the counterfactual) and reports the density of cases around the Supreme Court decision date in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o23",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, Figure A11",
+          "statement": "The paper checks that the pre-reform share of cases in the future bunching bin is stable near zero across years (supporting the counterfactual) and reports the density of cases around the Supreme Court decision date in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "placebo_cutoffs",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o26",
+          "pages": [
+            23,
+            24
+          ],
+          "locator": "footnote 18, Table A16",
+          "statement": "Placebo dates are checked: no change at the certiorari announcement or oral argument dates, and no change when the related memo is later rescinded, reported in a footnote and an appendix table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "scaling_discussed",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o55",
+          "pages": [
+            42,
+            43
+          ],
+          "locator": "Section VII, Conclusion",
+          "statement": "Discusses whether the finding could generalize beyond France, noting that similar egalitarian inheritance laws were later adopted across much of Europe partly through the spread of French revolutionary legal codes, and states as an open question whether this contributed to those countries' own demog",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o33",
+          "pages": [
+            39,
+            40
+          ],
+          "locator": "Section VI.A (Tables A7-A9, appendix)",
+          "statement": "Reports that the same soil-based heterogeneity pattern is checked using four finer soil-texture categories and using the completed-fertility-of-mothers and childlessness outcomes, and replicated using the RD-DD design and database, with these extensions placed in appendix tables.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "interaction",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o33",
+          "pages": [
+            39,
+            40
+          ],
+          "locator": "Section VI.A (Tables A7-A9, appendix)",
+          "statement": "Reports that the same soil-based heterogeneity pattern is checked using four finer soil-texture categories and using the completed-fertility-of-mothers and childlessness outcomes, and replicated using the RD-DD design and database, with these extensions placed in appendix tables.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "spatial_hac",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o21",
+          "pages": [
+            16,
+            34
+          ],
+          "locator": "Section IV.A; Section V.B 'Spatially adjusted errors'; Section V.C robustness",
+          "statement": "Reports Conley-type spatially adjusted standard errors under several distance cutoffs for both the DD and RD-DD estimates, to allow for spatial correlation in the error term beyond municipality clustering.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "data_coverage",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o43",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Section III.C",
+          "statement": "Acknowledges that the crowdsourced genealogy database has lower data quality than the family-reconstitution database, while noting it offers broader geographic coverage, framing this as a trade-off rather than treating one source as strictly superior.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "binscatter",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o45",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Figure 5",
+          "statement": "Presents RD-DD evidence as binned scatter plots of residualized fertility against distance to the inheritance border, separately for pre- and post-reform subsamples, with a local polynomial fit line and confidence band, using a stated bin-selection rule from a cited method.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "map",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o46",
+          "pages": [
+            12,
+            15
+          ],
+          "locator": "Figures 2 and 3",
+          "statement": "Presents the constructed inheritance-rules atlas and the geographic distribution of sampled observations as maps rather than only as tabulated shares.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "rd_plot",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o45",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Figure 5",
+          "statement": "Presents RD-DD evidence as binned scatter plots of residualized fertility against distance to the inheritance border, separately for pre- and post-reform subsamples, with a local polynomial fit line and confidence band, using a stated bin-selection rule from a cited method.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o52",
+          "pages": [
+            43,
+            43
+          ],
+          "locator": "Data Availability section",
+          "statement": "States in a Data Availability section that code replicating the tables and figures is deposited in a named repository with a citable DOI.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o52",
+          "pages": [
+            43,
+            43
+          ],
+          "locator": "Data Availability section",
+          "statement": "States in a Data Availability section that code replicating the tables and figures is deposited in a named repository with a citable DOI.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o6",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section III.C",
+          "statement": "Names crowdsourced online genealogies from a commercial genealogy website as a second fertility source, and describes reconstructing individual fertility from family links in user-submitted profiles, geocoded and matched to a gazetteer for birth locations.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "exclusions_justified",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o9",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section III.C",
+          "statement": "Describes applying a horizontal sample restriction to the crowdsourced genealogy data, following a cited prior method, keeping a profile only if a preceding generation has more than one recorded offspring, to correct a known bias toward overrepresenting single-child families in user-submitted geneal",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "matching_or_linkage_described",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o6",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section III.C",
+          "statement": "Names crowdsourced online genealogies from a commercial genealogy website as a second fertility source, and describes reconstructing individual fertility from family links in user-submitted profiles, geocoded and matched to a gazetteer for birth locations.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "se_type_in_notes",
+      "papers": 2,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.667,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o17",
+          "pages": [
+            23,
+            33
+          ],
+          "locator": "Table 2 note; Table 4 note",
+          "statement": "States in table notes that standard errors are clustered by municipality for the DD tables and by municipality for the RD-DD tables, with standard errors shown in parentheses beneath coefficients.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o18",
+          "pages": [
+            23,
+            23
+          ],
+          "locator": "Table 6 and notes",
+          "statement": "The Alleyne table reports the pooled discontinuity and the year-specific discontinuity across columns that vary only the bandwidth, with a bandwidth row and observation counts; the notes state clustering at the case-received date and the source of the optimal bandwidth.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "cluster_level_in_notes",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o17",
+          "pages": [
+            23,
+            33
+          ],
+          "locator": "Table 2 note; Table 4 note",
+          "statement": "States in table notes that standard errors are clustered by municipality for the DD tables and by municipality for the RD-DD tables, with standard errors shown in parentheses beneath coefficients.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "controls_progressive_columns",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o18",
+          "pages": [
+            23,
+            23
+          ],
+          "locator": "Table 6 and notes",
+          "statement": "The Alleyne table reports the pooled discontinuity and the year-specific discontinuity across columns that vary only the bandwidth, with a bandwidth row and observation counts; the notes state clustering at the case-received date and the source of the optimal bandwidth.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "mean_of_dependent_reported",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 2,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o18",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Table 4",
+          "statement": "Reports the mean of the dependent variable as a table row for the spatial RD-DD estimates, allowing readers to translate the reported discontinuity into a proportional change without the paper itself stating that percentage in the row.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "running_variable_definition",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o12",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section V.C, equation (4)",
+          "statement": "Defines the RD running variable as the geographic distance from a woman's birth municipality to the nearest inheritance-system border, signed by which side of the border the location falls on.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 1,
+      "denominator_papers": 3,
+      "papers_with_category": 1,
+      "share_of_papers": 0.333,
+      "pointers": [
+        {
+          "artid": "jpe_2026_739821",
+          "note_sha256": "934a3ac79eb2aee5ab4823d5baa4a0de107953ae0d94382b4532bcff2737863c",
+          "observation_id": "o48",
+          "pages": [
+            6,
+            7
+          ],
+          "locator": "Section I, introduction",
+          "statement": "Previews the direction and approximate size of the main DD and RD-DD fertility effects, and the counterfactual contribution to the demographic transition, within the introduction before the results are formally presented later in the paper.",
+          "basis": "stated"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "bandwidth",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "x2",
+          "paper_says": "RD bandwidths are chosen via an MSE-optimal procedure computed separately for each outcome variable, following a specific bandwidth-selection method from the RD",
+          "card_shows": "Diagnostic x2 (bandwidth_selection) records the mserd bandwidth-selection option as an author-stated observation, matching the paper.",
+          "pages": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "s3.se.cluster_level",
+          "paper_says": "DD and DD-IV standard errors are clustered at the district level, the level of RGGVY treatment assignment, with a stated rule for collapsing split-district clus",
+          "card_shows": "s2.se.type = cluster and s3.se.type = cluster, but s2.se.cluster_level and s3.se.cluster_level are both null in the card.",
+          "pages": [
+            19,
+            19
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "No clustering for the main table; state-level clustering for state splits and prosecutor-level clustering for prosecutor regressions.",
+          "card_shows": "cluster_level null for s1 and s2; no prosecutor-level spec recorded.",
+          "pages": [
+            12,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "data[2]",
+          "paper_says": "Analysis combines two censuses, a poverty-targeting census subset, a village expenditure dataset, an economic census of firms, school records, satellite nightti",
+          "card_shows": "The card's data[] array records census, geospatial, NSS household-survey, Economic Census and SECC entries as data types, largely without names, access terms or",
+          "pages": [
+            10,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "d1",
+          "paper_says": "USSC sentencing data plus EOUSA, NIBRS, STRIDE, NSDUH, Florida inmate records, and Stephens-Davidowitz animus index.",
+          "card_shows": "Main script named for USSC; other sources not recorded.",
+          "pages": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "x1",
+          "paper_says": "A first-stage weak-instrument F-statistic is reported for each DD-IV column and compared against both an informal rule-of-thumb and a formal weak-instrument cri",
+          "card_shows": "Diagnostic x1 (first_stage) has status 'unknown' with no recorded observation or evidence in the card.",
+          "pages": [
+            23,
+            25
+          ]
+        },
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "diagnostics",
+          "paper_says": "RD density/manipulation tests and multiple falsification exercises (wrong-cutoff samples, randomized placebo cutoffs, scrambled DD assignment) are reported, mos",
+          "card_shows": "The card's diagnostics list contains only first_stage, bandwidth_selection and polynomial_order entries; no density-test or placebo-test diagnostic is recorded.",
+          "pages": [
+            9,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "x1",
+          "paper_says": "KS test of pre-2010 distributions by race, placebo reassignment exercise, density of cases around the Alleyne date.",
+          "card_shows": "x1 density_test with unknown details.",
+          "pages": [
+            13,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "s1.estimator",
+          "paper_says": "Sharp RD implemented via the rdrobust framework (Calonico-Cattaneo-Titiunik 2014) with a triangular kernel, MSE-optimal bandwidth, and heteroskedasticity-robust",
+          "card_shows": "s1.estimator = local_polynomial_rd, s1.command = rdrobust, s1.package = rdrobust.",
+          "pages": [
+            8,
+            9
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.estimator, s2.estimator",
+          "paper_says": "Linear probability model of a bunching-bin indicator on a post-2010 indicator, and a race-interacted version (equations 1 and 2).",
+          "card_shows": "s1 and s2 are OLS regressions of in280290 on after2010 and on race-by-after interactions.",
+          "pages": [
+            10,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "Main RD specification (equation 1) includes state fixed effects and controls for pre-program covariates including the lagged outcome variable where available.",
+          "card_shows": "s1.fixed_effects is null; the card records no fixed-effects value for this specification.",
+          "pages": [
+            8,
+            8
+          ]
+        },
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "s2.fixed_effects",
+          "paper_says": "Main DD specification (equation 2) includes district and year fixed effects plus three sets of linear trends meant to absorb selection of districts into RGGVY's",
+          "card_shows": "s2.fixed_effects is null; the card records only a bound local-macro value ('pca01_id year#stdt') for one fixed-effects variant, not the full specification descr",
+          "pages": [
+            9,
+            9
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.fe",
+          "paper_says": "No fixed effects in the main specification; district FE and race-specific trends in Table 4; state-by-post and district-by-post FE in appendix robustness.",
+          "card_shows": "fe None for s1 and s2; no other specs recorded.",
+          "pages": [
+            13,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "other",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "packages.rdplot",
+          "paper_says": "RD-style plots of sentence around 280 g and time discontinuity around the Alleyne date.",
+          "card_shows": "Package rdplot listed under Stata with unknown use.",
+          "pages": [
+            23,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "outputs.tables",
+          "paper_says": "The paper presents nine numbered main-text tables and nine main-text figures covering first-stage, reduced-form, rescaled, heterogeneity and welfare results, pl",
+          "card_shows": "outputs.tables records only two table entries (table_rd_vdelec.tex and table_diff_in_disc_vdelec.tex) and no figures, reflecting the card's minimal-coverage rea",
+          "pages": [
+            14,
+            31
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "outputs",
+          "paper_says": "Seven main tables and five main figures plus about twenty-one appendix tables and twelve appendix figures.",
+          "card_shows": "One table and one figure recorded from the files read.",
+          "pages": [
+            8,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "robustness[0]",
+          "paper_says": "DD robustness checks include alternative bandwidths around the eligibility threshold and a heterogeneous-effects specification interacting treatment with baseli",
+          "card_shows": "robustness[0] (alt_bandwidth) and robustness[1] (alt_fixed_effects) are both tied to specification s2 with relationship_status 'unresolved' and no variant speci",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "robustness",
+          "paper_says": "Logit, probit and Poisson estimators, wider bins, alternative SEs, added FE and controls in Tables A3 to A5.",
+          "card_shows": "No robustness records in the card.",
+          "pages": [
+            13,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "pipeline.sample_restrictions[1]",
+          "paper_says": "RD sample is restricted to single-habitation villages in first-wave districts with reliable population and lights measurements, excluding cases with large popul",
+          "card_shows": "pipeline.sample_restrictions records matching restriction logic (single-habitation, first-wave, population/lights quality filters) tied to specification s1.",
+          "pages": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "d1",
+          "paper_says": "Crack-cocaine cases 1999 to 2015 with missing, range-coded, flagged and rejected findings removed and a top weight trim.",
+          "card_shows": "No sample restrictions recorded on d1 or s1.",
+          "pages": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "jpe_132_9_2",
+          "card_ref": "s1.se.type",
+          "paper_says": "RD standard errors are described as heteroskedasticity-robust nearest-neighbor standard errors from the rdrobust default, with no clustering mentioned for this ",
+          "card_shows": "s1.se.type = robust, s1.se.cluster_level = null.",
+          "pages": [
+            9,
+            9
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.se, s2.se",
+          "paper_says": "Robust standard errors in parentheses for Table 2.",
+          "card_shows": "se robust in s1 and s2.",
+          "pages": [
+            12,
+            12
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "No preregistration, IRB approval, or informed-consent statement appears anywhere in the main text; the study relies enti",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification is given in the main text for why RD standard errors are left unclustered while DD standard er",
+      "papers": 1
+    },
+    {
+      "gap": "R-squared is not reported in the main RD or DD regression tables (rdrobust and reghdfe-style output favors bandwidth, cl",
+      "papers": 1
+    },
+    {
+      "gap": "Appendices A, B and C are referenced dozens of times for balance tables, full robustness batteries, falsification tests ",
+      "papers": 1
+    },
+    {
+      "gap": "The main text does not describe a step-by-step access procedure for the restricted low-income SECC subset or the Economi",
+      "papers": 1
+    },
+    {
+      "gap": "No statement about sampling or survey weights anywhere in the main text; none of the reported specifications mention wei",
+      "papers": 1
+    },
+    {
+      "gap": "No formal manipulation/density test (e.g. McCrary-style) for the RD running variable is reported in the read text; ident",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit multiple-hypothesis-testing adjustment is described despite many outcomes, subsamples, and specifications be",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or participant-consent statement of any kind appears in the read text; the study uses ",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit statement of statistical software (e.g., Stata/R and version) appears in the main text.",
+      "papers": 1
+    },
+    {
+      "gap": "The online appendixes A-H, referenced extensively for robustness tables, diagnostic figures, the formal model, and addit",
+      "papers": 1
+    },
+    {
+      "gap": "The introduction contains an explicit contributions paragraph but no separate roadmap paragraph laying out the order of ",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification for using robust (unclustered) standard errors in the main specification.",
+      "papers": 1
+    },
+    {
+      "gap": "No software or package named in the text; only a Zenodo DOI for data and code.",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB or ethics statement.",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix (Tables A1 to A21, Figures A1 to A12) is not included in the text file; appendix content is known only t",
+      "papers": 1
+    },
+    {
+      "gap": "No multiple testing adjustment discussed for the many heterogeneity columns.",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

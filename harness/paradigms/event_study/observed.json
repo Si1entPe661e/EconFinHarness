@@ -1,0 +1,1802 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "event_study",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "ecta_2024_ecta19872",
+        "sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+        "journal": "Econometrica",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "jfe_2025_j_jfineco_2025_104150",
+        "sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+        "journal": "JFE",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "jpe_2026_740222",
+        "sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+        "journal": "JPE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_2025_restud_rdae091",
+        "sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+        "journal": "ReStud",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdaf071",
+        "sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag011",
+        "sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      },
+      {
+        "artid": "restud_90_5_13",
+        "sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+        "journal": "ReStud",
+        "year": 2023,
+        "coverage": "partial",
+        "languages": [
+          "R"
+        ]
+      },
+      {
+        "artid": "rfs_2025_rfs_hhaf065",
+        "sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+        "journal": "RFS",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      }
+    ],
+    "excluded": [
+      {
+        "artid": "qje_139_1_2",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "rfs_2024_rfs_hhae015",
+        "reason": "held out for evaluation"
+      }
+    ],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 8,
+    "specifications": 19,
+    "designs": 8,
+    "by_language": {
+      "Stata": 6,
+      "R": 3,
+      "Python": 1
+    },
+    "by_journal": {
+      "Econometrica": 1,
+      "JFE": 1,
+      "JPE": 1,
+      "ReStud": 4,
+      "RFS": 1
+    },
+    "by_year": {
+      "2024": 1,
+      "2025": 3,
+      "2026": 3,
+      "2023": 1
+    },
+    "by_coverage": {
+      "partial": 8
+    }
+  },
+  "by_variant": {
+    "unknown": 8
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 5,
+      "specs": 5,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.625,
+      "by_language": {
+        "Stata": 3,
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+          "lines": [
+            45,
+            45
+          ],
+          "snippet": "global var1 vatrial_w",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+          "lines": [
+            162,
+            162
+          ],
+          "snippet": "fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+          "lines": [
+            45,
+            45
+          ],
+          "snippet": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/LovenheimWillen-Scripts/LovenheimWillen-EstimateEventStudies.R",
+          "lines": [
+            25,
+            26
+          ],
+          "snippet": "EmploymentMale.es = lfe::felm(emp ~ rtESV13 + rtESV14 + rtESV15 + rtESV16 + rtESV17 + \n                                rtESV18 + rtESV19 + rtESV110 + rtESV111 + # End Pre-periods",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "s20",
+          "field": "estimator",
+          "path": "code/zenodo_10983057/v2/v2/main_figures.do",
+          "lines": [
+            72,
+            72
+          ],
+          "snippet": "eststo: acreg fmortality  rukr_x_19* urbanization_x_* grain",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+          "lines": [
+            33,
+            33
+          ],
+          "snippet": "rmresults <- HonestDiD::createSensitivityResults_relativeMagnitudes(",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "other:sdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            770,
+            770
+          ],
+          "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "estimator",
+      "value": "poisson_ppml",
+      "papers": 1,
+      "specs": 9,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            196,
+            196
+          ],
+          "snippet": "eststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "command",
+      "value": "reghdfe",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+          "lines": [
+            45,
+            45
+          ],
+          "snippet": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "command",
+      "value": "acreg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "s20",
+          "field": "command",
+          "path": "code/zenodo_10983057/v2/v2/main_figures.do",
+          "lines": [
+            72,
+            72
+          ],
+          "snippet": "eststo: acreg fmortality  rukr_x_19* urbanization_x_* grain",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "command",
+      "value": "createSensitivityResults_relativeMagnitudes",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+          "lines": [
+            33,
+            33
+          ],
+          "snippet": "rmresults <- HonestDiD::createSensitivityResults_relativeMagnitudes(",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "command",
+      "value": "did_multiplegt_old",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+          "lines": [
+            55,
+            55
+          ],
+          "snippet": "did_multiplegt_old $var1 co year eligbeforenow, breps(100) trends_lin(nic2) dynamic(12) cluster(co) robust_dynamic  placebo(4)  average_effect longdiff_placebo covariances seed(10101)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "command",
+      "value": "felm",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/LovenheimWillen-Scripts/LovenheimWillen-EstimateEventStudies.R",
+          "lines": [
+            25,
+            26
+          ],
+          "snippet": "EmploymentMale.es = lfe::felm(emp ~ rtESV13 + rtESV14 + rtESV15 + rtESV16 + rtESV17 + \n                                rtESV18 + rtESV19 + rtESV110 + rtESV111 + # End Pre-periods",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "command",
+      "value": "feols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_740222",
+          "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+          "lines": [
+            162,
+            162
+          ],
+          "snippet": "fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "command",
+      "value": "ppmlhdfe",
+      "papers": 1,
+      "specs": 9,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            196,
+            196
+          ],
+          "snippet": "eststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "command",
+      "value": "rmvnorm",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/simulationStudy/simulationStudy_drawEventStudyCoefficients_parallelTrends.R",
+          "lines": [
+            53,
+            53
+          ],
+          "snippet": "sim_eventStudyCoefficients = rmvnorm(n = number_of_sims, mean = trueBeta, sigma = scaledSigma)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "command",
+      "value": "sdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            770,
+            770
+          ],
+          "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "package",
+      "value": "lfe",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 5,
+      "share_of_known": 0.333,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s3",
+          "field": "package",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/LovenheimWillen-Scripts/LovenheimWillen-EstimateEventStudies.R",
+          "lines": [
+            25,
+            26
+          ],
+          "snippet": "EmploymentMale.es = lfe::felm(emp ~ rtESV13 + rtESV14 + rtESV15 + rtESV16 + rtESV17 + \n                                rtESV18 + rtESV19 + rtESV110 + rtESV111 + # End Pre-periods",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "package",
+      "value": "ppmlhdfe",
+      "papers": 1,
+      "specs": 7,
+      "denominator_papers": 8,
+      "unknown_papers": 5,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s2",
+          "field": "package",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            199,
+            199
+          ],
+          "snippet": "eststo `regwindow'_2: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'' & \tdeposits_august_1872 >=100000, a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "package",
+      "value": "sdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 5,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s5",
+          "field": "package",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            770,
+            770
+          ],
+          "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 4,
+      "specs": 12,
+      "denominator_papers": 8,
+      "unknown_papers": 4,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+          "lines": [
+            55,
+            55
+          ],
+          "snippet": "cluster(co) robust_dynamic",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "s2",
+          "field": "se.type",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+          "lines": [
+            162,
+            162
+          ],
+          "snippet": "fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+          "language": "R"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            196,
+            196
+          ],
+          "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "cluster_dimensions",
+      "value": "1",
+      "papers": 3,
+      "specs": 11,
+      "denominator_papers": 8,
+      "unknown_papers": 5,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+          "lines": [
+            55,
+            55
+          ],
+          "snippet": "did_multiplegt_old $var1 co year eligbeforenow, breps(100) trends_lin(nic2) dynamic(12) cluster(co) robust_dynamic  placebo(4)  average_effect longdiff_placebo covariances seed(10101) graphoptions(tit",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "s2",
+          "field": "se.cluster_level",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            196,
+            196
+          ],
+          "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "fixed_effects_count",
+      "value": "1",
+      "papers": 1,
+      "specs": 9,
+      "denominator_papers": 8,
+      "unknown_papers": 6,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            196,
+            196
+          ],
+          "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "fixed_effects_count",
+      "value": "2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 8,
+      "unknown_papers": 6,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "s2",
+          "field": "fixed_effects",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o21",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:not_found_in_scope",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.4,
+      "by_language": {
+        "R": 1,
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-PlotEventStudy.R",
+          "lines": null,
+          "snippet": "",
+          "language": "R"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/dataverse_VX7HYE/rfs_figures.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o22",
+      "facet": "diagnostic",
+      "value": "balance:observed:call_present:unscoped",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/tab5.do",
+          "lines": [
+            27,
+            29
+          ],
+          "snippet": "foreach v in size_1 totdebt_1 roa_1 q_1 {\nclttest `v' if year==sllyear, cluster(id_firmpair) by(sll)\nputexcel B`i'=(r(mu_2)) C`i'=(r(mu_1)) D`i'=(r(mu_2)-r(mu_1)) E`i'=(-r(t))",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o23",
+      "facet": "diagnostic",
+      "value": "event_window:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            1042,
+            1042
+          ],
+          "snippet": "scatter rmbsharemedia_ex300 zero betweenS if inrange(betweenS,-48,48)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o24",
+      "facet": "diagnostic",
+      "value": "heterogeneous_treatment_effects:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o25",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:observed:output_code_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/zenodo_10983057/v2/v2/main_figures.do",
+          "lines": [
+            76,
+            76
+          ],
+          "snippet": "regsave rukr_x_19*, level(95) ci",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o26",
+      "facet": "diagnostic",
+      "value": "pretrend_test:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+          "lines": [
+            20,
+            24
+          ],
+          "snippet": "# Compute F-test for the pre-trends\nprePeriodIndices <- profitsResultsObject$prePeriodIndices",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o27",
+      "facet": "diagnostic",
+      "value": "pretrend_test:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 5,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o28",
+      "facet": "robustness_type",
+      "value": "alt_estimator:confirmed",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "robustness[3]",
+          "field": "type",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            770,
+            770
+          ],
+          "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/LovenheimWillen-Scripts/LovenheimWillen-constructSensitivityPlots.R",
+          "lines": [
+            36,
+            37
+          ],
+          "snippet": "# Construct robust confidence intervals for Delta^{SD}(M) for 15 years of exposure\nDeltaSD_RobustResults_Female = createSensitivityResults(betahat = LWdata_EventStudy_Female$betahat,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o29",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 6,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 4,
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+          "lines": [
+            55,
+            55
+          ],
+          "snippet": "did_multiplegt_old $var1 co year eligbeforenow, breps(100) trends_lin(nic2) dynamic(12) cluster(co) robust_dynamic  placebo(4)  average_effect longdiff_placebo covariances seed(10101) graphoptions(tit",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+          "lines": [
+            161,
+            162
+          ],
+          "snippet": "formula        <- as.formula(paste(outcome, \"~\", names, \"+ treat_all + treat_post + \", controls , \"|\", fixed_var, sep=\"\"))\n    fixed_ols1     <- feols(formula, temp, cluster = c(clus))",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/zenodo_10983057/v2/v2/main_figures.do",
+          "lines": [
+            49,
+            72
+          ],
+          "snippet": "reg f.mortality rukr_famine c.urbanization#i.year c.grainpc_predicted#i.year i.year i.id",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+          "lines": [
+            45,
+            45
+          ],
+          "snippet": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            758,
+            759
+          ],
+          "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+          "lines": [
+            33,
+            33
+          ],
+          "snippet": "rmresults <- HonestDiD::createSensitivityResults_relativeMagnitudes(",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o30",
+      "facet": "classification_basis",
+      "value": "unknown",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            193,
+            193
+          ],
+          "snippet": "local win30 inrange(event_time,-30, 30) & event_time != 0",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o31",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 6,
+      "specs": 8,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 4,
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+          "lines": [
+            55,
+            55
+          ],
+          "snippet": "did_multiplegt_old $var1 co year eligbeforenow, breps(100) trends_lin(nic2) dynamic(12) cluster(co) robust_dynamic  placebo(4)  average_effect longdiff_placebo covariances seed(10101)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/mendeley_zhrnypkcyb_v2/Final_Replication_Package/Final Replication Package/Code and Instructions/fig4.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "reghdfe esg_ref base sllxpre2 sllxpre1 sllxpre0 sllxpost1 sllxpost2 sllxpost3 size_1 totdebt_1 roa_1 q_1, absorb(id_firmpair id_yearpair) cluster(id_firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_740222",
+          "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_GZMO6B/replication/code/5_empirical_analysis/table1_heat_rate.R",
+          "lines": [
+            161,
+            162
+          ],
+          "snippet": "formula        <- as.formula(paste(outcome, \"~\", names, \"+ treat_all + treat_post + \", controls , \"|\", fixed_var, sep=\"\"))",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "s20",
+          "field": "resolution_status",
+          "path": "code/zenodo_10983057/v2/v2/main_figures.do",
+          "lines": [
+            72,
+            72
+          ],
+          "snippet": "eststo: acreg fmortality  rukr_x_19* urbanization_x_* grain",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s5",
+          "field": "resolution_status",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            770,
+            770
+          ],
+          "snippet": "sdid Source_CNYex300_ln country_group quarter treatind if (treated2==1 | control2==1) & (preperiod==1 | postperiod==1), vce(bootstrap) reps(1000) covariates(ln_Source_imports_CHN Source_ex300_ln ln_So",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+          "lines": [
+            33,
+            33
+          ],
+          "snippet": "rmresults <- HonestDiD::createSensitivityResults_relativeMagnitudes(",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o32",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 3,
+      "specs": 11,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.375,
+      "by_language": {
+        "Stata": 2,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/figure2.do",
+          "lines": [
+            45,
+            45
+          ],
+          "snippet": "reghdfe `v' inpresXdec1-inpresXdec3 inpresXdec5-inpresXdec10 , a(id_dec80 est_year i.est_year#c.ch71",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/LovenheimWillen-Scripts/LovenheimWillen-EstimateEventStudies.R",
+          "lines": [
+            25,
+            25
+          ],
+          "snippet": "felm",
+          "language": "R"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_VX7HYE/rfs_tables.do",
+          "lines": [
+            196,
+            196
+          ],
+          "snippet": "eststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o33",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 6,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 6
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2024_ecta19872",
+          "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jfe_2025_j_jfineco_2025_104150",
+          "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2025_rfs_hhaf065",
+          "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o34",
+      "facet": "language",
+      "value": "R",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.375,
+      "by_language": {
+        "R": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_740222",
+          "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_90_5_13",
+          "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o35",
+      "facet": "language",
+      "value": "Python",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "implementation_feature",
+      "text": "Staggered treatment 1992-2009",
+      "record_id": "d1",
+      "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+      "lines": [
+        55,
+        55
+      ]
+    },
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "implementation_feature",
+      "text": "Linear trends by 2-digit sector",
+      "record_id": "d1",
+      "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+      "lines": [
+        55,
+        55
+      ]
+    },
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "implementation_feature",
+      "text": "Dynamic effects: 12 leads/lags",
+      "record_id": "d1",
+      "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+      "lines": [
+        55,
+        55
+      ]
+    },
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "implementation_feature",
+      "text": "Placebo tests: 4 lags",
+      "record_id": "d1",
+      "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+      "lines": [
+        55,
+        55
+      ]
+    },
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "implementation_feature",
+      "text": "Robust SE clustered at firm",
+      "record_id": "d1",
+      "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+      "lines": [
+        55,
+        55
+      ]
+    },
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "sample_restriction",
+      "text": "Balanced panel 1992-2009; positive employment; complete reporting",
+      "record_id": null,
+      "path": "code/zenodo_11431164/Uploaded_4thRound/Uploaded_4thRound/Scripts_Simulated/Main Results/mainreg_eligbefore_sim.do",
+      "lines": [
+        21,
+        21
+      ]
+    },
+    {
+      "artid": "ecta_2024_ecta19872",
+      "card_sha256": "d2542afe3a893310f91956f8859ac81aa7b6a51a10615b5647584beb816512d8",
+      "kind": "reading_note",
+      "text": "Simulated PROWESS data; core pipeline: 3 cleaning scripts, first stage, 4 main outcomes, heterogeneity by baseline dividends/capital, appendix robustness checks. Main estimator: did_multiplegt with staggered adoption, 12-lag dynamic effects, sector trends, robust SE clustered at firm level.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jfe_2025_j_jfineco_2025_104150",
+      "card_sha256": "ae1876f6b30d4a37fa1747aa23da3687d3ded7ed40937a2a534574645db85ec8",
+      "kind": "reading_note",
+      "text": "DID event study of SLL issuance on ESG reference score; propensity score matched sample; ±3 years sample window.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jpe_2026_740222",
+      "card_sha256": "d293619802d10e882077fd420941486dc94cef747ce697bb768d305d3da40537",
+      "kind": "reading_note",
+      "text": "Master pipeline (make.R) sources 4 main analysis files in parallel. Focused on table1_heat_rate.R as primary specification example; other scripts follow similar event-study patterns with different outcomes.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "convention",
+      "text": "Conditional logic on id variable: replace name_en based on id values",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/create_provinces.do",
+      "lines": [
+        12,
+        12
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "convention",
+      "text": "Treatment and control variables interact with famine indicator (famine=1 if year==1932)",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/create_provinces.do",
+      "lines": [
+        6,
+        8
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "convention",
+      "text": "Outcome variable is forward difference: fmortality = f.mortality (captures 1933 outcome from 1932 covariates)",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/create_provinces.do",
+      "lines": [
+        199,
+        200
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "reading_note",
+      "text": "Province and district-level data construction scripts read. Main tables and figures scripts fully read. Appendix robustness scripts skipped due to budget. Both v2 and v3 replication packages present; v2 analyzed.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdaf071",
+      "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+      "kind": "reading_note",
+      "text": "Read master script, 9 main table scripts, event study figure, and IV appendix spec. Skipped data prep (150 lines each), appendix tables/figures, and R scripts due to budget. Primary methods: DID and event_study with reghdfe for sample pooling analyses; individual cohort-level DID for survey data. IV specs present in appendix (tableA22) instrument for intermediate school entry using geographic variation in waqf and rice productivity.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+      "kind": "convention",
+      "text": "Global variables for control specifications ($Tradecontrols, $PolicyControls, $NeighbourControls, $LogControls) used across all did_imputation specifications",
+      "record_id": null,
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+        119,
+        120
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+      "kind": "reading_note",
+      "text": "Focus on main analysis Part1Analysis1.do (Tables 1-7, Figures 4-5, 7, A4). Part1Process.do shows data pipeline (9 steps); specific data cleaning scripts listed but not deep-read per policy. Part2Analysis.do covers financial market outcomes (Table 4). Part3Analysis.ipynb produces map visualizations (Figures 1b, A3).",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_90_5_13",
+      "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+      "kind": "author_stated_assumption",
+      "text": "parallel trends assumption may be violated",
+      "record_id": "d1",
+      "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+      "lines": [
+        20,
+        25
+      ]
+    },
+    {
+      "artid": "restud_90_5_13",
+      "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+      "kind": "author_stated_assumption",
+      "text": "Use createSensitivityResults_relativeMagnitudes to bound post-treatment violations",
+      "record_id": "d1",
+      "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-compareCIs.R",
+      "lines": [
+        33,
+        33
+      ]
+    },
+    {
+      "artid": "restud_90_5_13",
+      "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+      "kind": "convention",
+      "text": "Intermediate results stored as RDS objects in Temp/ for sequential loading",
+      "record_id": null,
+      "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-import.R",
+      "lines": [
+        31,
+        31
+      ]
+    },
+    {
+      "artid": "restud_90_5_13",
+      "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+      "kind": "sample_restriction",
+      "text": "Benzarti-Carloni: extracts event study coefficients matching treatment year pattern",
+      "record_id": null,
+      "path": "code/zenodo_7388015/HonestParallelTrends_RESTUD_ReplicationFiles/HonestParallelTrends_RESTUD_ReplicationFiles/Code/BenzartiCarloni-Scripts/BenzartiCarloni-import.R",
+      "lines": [
+        20,
+        20
+      ]
+    },
+    {
+      "artid": "restud_90_5_13",
+      "card_sha256": "167c1843b5087eea08d88f66bd1b14ed53511d3fdf5d556211279b61c9c16287",
+      "kind": "reading_note",
+      "text": "Focuses on two economic applications (Benzarti-Carloni, Lovenheim-Willen) and simulation study. Main estimator is event-study OLS with high-dimensional fixed effects via lfe::felm. Core methodology implemented in HonestDiD R package for sensitivity analysis under partial identification.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2025_rfs_hhaf065",
+      "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53",
+      "kind": "reading_note",
+      "text": "Event study around Jay Cooke failure (9/18/1873); ppmlhdfe for counts, reghdfe for closures.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet package: unknown in 5/8 papers; shares are computed over the 3 known papers only",
+    "facet se_type: unknown in 4/8 papers; shares are computed over the 4 known papers only",
+    "facet cluster_dimensions: unknown in 5/8 papers; shares are computed over the 3 known papers only",
+    "facet fixed_effects_count: unknown in 6/8 papers; shares are computed over the 2 known papers only",
+    "8/8 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "no design variants recorded; variant-conditional rules cannot be derived from this set"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

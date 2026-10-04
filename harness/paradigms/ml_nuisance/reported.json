@@ -1,0 +1,2795 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "ml_nuisance",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "aer_107_5_51",
+      "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+      "journal": "AER",
+      "year": 2017,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "aer_113_3_2",
+      "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+      "journal": "AER",
+      "year": 2023,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 2,
+    "by_journal": {
+      "AER": 2
+    },
+    "by_year": {
+      "2017": 1,
+      "2023": 1
+    },
+    "with_card": 2,
+    "papers_with_category": {
+      "design_statement": 2,
+      "variable_construction": 2,
+      "specification_reporting": 2,
+      "inference_justification": 2,
+      "diagnostic_reported": 2,
+      "robustness_reported": 2,
+      "limitation_stated": 2,
+      "presentation_convention": 2,
+      "writing_structure": 2,
+      "replication_statement": 2,
+      "data_access": 2,
+      "sample_construction": 1,
+      "heterogeneity_reported": 1,
+      "mechanism_evidence": 1,
+      "magnitude_interpretation": 1,
+      "external_validity": 1
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "administrative",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o57",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section II",
+          "statement": "Describes its primary lease and payment data as obtained directly from a state land-management agency's administrative records covering the full universe of leases on the relevant public-land category.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_access_procedure_described",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o37",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "footnote (dagger)",
+          "statement": "A footnote directs readers to the article's DOI landing page for additional materials and the authors' disclosure statements, rather than describing data access procedures within the note's own text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "linked_records",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o58",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section II",
+          "statement": "Describes constructing its parcel-level dataset by linking the agency's lease records to an independently sourced geographic parcel map obtained from a private mapping contractor.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "other:access_route_unstated",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o39",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "introduction",
+          "statement": "The note does not state whether the underlying illustrative data are public-use, restricted or administrative; that information is not part of the printed text and is left to the supplementary material.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "public_use",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o57",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section II",
+          "statement": "Describes its primary lease and payment data as obtained directly from a state land-management agency's administrative records covering the full universe of leases on the relevant public-land category.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "design_variant_named",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o3",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Section I, para 2",
+          "statement": "Treatment is modeled as entering the outcome equation non-additively-separably, so treatment effects are fully heterogeneous across units, distinguishing this model from an additively separable specification.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o3",
+          "pages": [
+            10,
+            15
+          ],
+          "locator": "Section III",
+          "statement": "Names two parallel design variants used to implement the comparison: fixed-effects regressions with location-by-time bins of varying granularity, and a nonparametric double/debiased machine-learning control for location and time.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "estimand_named",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Section I, para 1",
+          "statement": "The note names the average treatment effect and the average treatment effect on the treated as its two focal parameters, each defined as an expectation of the potential-outcome regression difference under a binary treatment.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o1",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Abstract; Introduction",
+          "statement": "States its goal as directly measuring the gains from a centralized formal mechanism relative to informal decentralized transactions, comparing otherwise similar assets allocated by auction versus by negotiation.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "identifying_assumption_explicit",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o2",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Section I, para 1, eq. (1)-(2)",
+          "statement": "Identification of ATE and ATTE rests on an unconfoundedness assumption attributed to Rosenbaum and Rubin (1983), written as mean-independence conditions on the outcome and treatment equations given the controls.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o2",
+          "pages": [
+            10,
+            11
+          ],
+          "locator": "Section III",
+          "statement": "States its identifying assumption as variation in a parcel's mineral-allocation history within a narrowly defined geographic area being uncorrelated with unobserved geological resource quality, given that this assignment predates knowledge of shale resources.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "threats_discussed",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o4",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section I, discussion after eq. (4)",
+          "statement": "The central identification threat discussed is the estimator's sensitivity to small mistakes in high-dimensional nuisance functions estimated by machine learning, which motivates constructing an orthogonal moment condition.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o4",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section III",
+          "statement": "Discusses as the central threat to identification the possibility that the state or early land buyers had advance knowledge of which parcels would later prove valuable for shale development, and argues this is implausible given that the relevant mineral-ownership assignment predates the discovery of",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "other:neyman_orthogonal_score",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o5",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "introduction and Section I",
+          "statement": "The design variant is named as Neyman-orthogonal moment-condition estimation with cross-fitting, built on doubly robust efficient scores drawn from the prior semiparametric efficiency literature.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o23",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Theorem 1",
+          "statement": "The note's only formal validity check for the estimator is a theorem establishing uniform asymptotic normality and confidence-interval coverage over a class of data-generating processes satisfying the stated conditions, rather than an empirical diagnostic table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o23",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Table 3",
+          "statement": "Reports a formal balance table that regresses proxies for geological resource quality and for surface characteristics known at the time of mechanism assignment onto category indicators with location fixed effects, arguing that the pattern of estimated coefficients supports treating assignment as goo",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "attrition_analysis",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o24",
+          "pages": [
+            23,
+            23
+          ],
+          "locator": "Section VA; Figure 4",
+          "statement": "Presents a quarter-by-quarter comparison, shown as a figure of point estimates with confidence intervals, of the probability that a parcel is under an active lease across the two mechanisms, to check whether the mechanisms differ systematically in how often a transaction is actually completed.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "balance_table",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o23",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Table 3",
+          "statement": "Reports a formal balance table that regresses proxies for geological resource quality and for surface characteristics known at the time of mechanism assignment onto category indicators with location fixed effects, arguing that the pattern of estimated coefficients supports treating assignment as goo",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o24",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section II, closing paragraph before Section III",
+          "statement": "The proof of the main theorem is not given in the printed note but is stated to be deferred to an online appendix relying on a Chebyshev-inequality and central-limit-theorem argument.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "scaling_discussed",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o44",
+          "pages": [
+            32,
+            33
+          ],
+          "locator": "Section VIB",
+          "statement": "Devotes a dedicated subsection to discussing how the results from this specific public-land natural experiment would generalize to the broader population of private mineral leases and to other informally negotiated asset markets, weighing institutional features that would push the gap larger or smal",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "site_specific",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o44",
+          "pages": [
+            32,
+            33
+          ],
+          "locator": "Section VIB",
+          "statement": "Devotes a dedicated subsection to discussing how the results from this specific public-land natural experiment would generalize to the broader population of private mineral leases and to other informally negotiated asset markets, weighing institutional features that would push the gap larger or smal",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "time_period_specific",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o45",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section III",
+          "statement": "Frames its identifying variation as arising because the assignment of mineral rights was completed decades before the shale-development technology and resource locations were known, making the specific historical timing of its natural experiment central to the identification logic rather than incide",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "exploratory_labelled",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o32",
+          "pages": [
+            32,
+            32
+          ],
+          "locator": "Section VIB, footnote referencing online Appendix Table",
+          "statement": "Discusses an appendix table that adds measures of lessor experience and sophistication to its main payment regression, describing the resulting evidence that more sophisticated lessors secure somewhat higher payments as suggestive rather than as a primary finding.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o32",
+          "pages": [
+            32,
+            32
+          ],
+          "locator": "Section VIB, footnote referencing online Appendix Table",
+          "statement": "Discusses an appendix table that adds measures of lessor experience and sophistication to its main payment regression, describing the resulting evidence that more sophisticated lessors secure somewhat higher payments as suggestive rather than as a primary finding.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "mechanism_motivated",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o31",
+          "pages": [
+            26,
+            27
+          ],
+          "locator": "Table 9",
+          "statement": "Tests whether the payment and output differences hold within the same firm by adding firm fixed effects to its main specification, in order to separate a market-composition explanation, different firms winning under each mechanism, from a within-firm matching explanation.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "split_sample",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o31",
+          "pages": [
+            26,
+            27
+          ],
+          "locator": "Table 9",
+          "statement": "Tests whether the payment and output differences hold within the same firm by adding firm fixed effects to its main specification, in order to separate a market-composition explanation, different firms winning under each mechanism, from a within-firm matching explanation.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "no_justification_found",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o17",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section II",
+          "statement": "No clustering of standard errors is proposed or discussed anywhere in the note; the variance formula treats the estimated score as generating the sampling variation without any grouping structure.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o20",
+          "pages": [
+            13,
+            16
+          ],
+          "locator": "Table 3 notes; Table 4 notes",
+          "statement": "Clusters standard errors throughout at the same spatial grid used to define its location fixed effects, but does not include an explicit sentence explaining why that grid, rather than some other level, is the appropriate clustering unit beyond its correspondence to the fixed-effect structure.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "cluster_at_assignment_level",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o20",
+          "pages": [
+            13,
+            16
+          ],
+          "locator": "Table 3 notes; Table 4 notes",
+          "statement": "Clusters standard errors throughout at the same spatial grid used to define its location fixed effects, but does not include an explicit sentence explaining why that grid, rather than some other level, is the appropriate clustering unit beyond its correspondence to the fixed-effect structure.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:analytic_asymptotic_se",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o16",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section II, para after eq. (7)",
+          "statement": "Standard errors are constructed analytically as the square root of the sample average of the squared estimated score divided by the sample size, without appeal to any resampling procedure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:confidence_interval_construction",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o22",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section II, after eq. (7)",
+          "statement": "Confidence intervals are constructed in the standard normal-approximation form, centered at the point estimator plus or minus a normal quantile times the estimated standard error divided by the square root of the sample size.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:mean_vs_median_aggregation",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o20",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section III",
+          "statement": "Two rules for aggregating across repeated splits are proposed, the across-split mean and the across-split median, with the median explicitly described as more robust to any single extreme split-specific estimate.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:repeated_splitting",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o19",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section III, para 2",
+          "statement": "The recommended remedy is to repeat the entire cross-fitting procedure many times over independent random partitions and to summarize the resulting distribution of point estimates rather than relying on a single split.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:sample_splitting_variance",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o18",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section III, para 1",
+          "statement": "The authors argue that the specific random partition used for cross-fitting is itself an additional source of estimation variation in finite samples that should be reflected in reported uncertainty, even though it is asymptotically irrelevant.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:variance_inflation_for_splitting",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o21",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section III, closing paragraphs",
+          "statement": "Two matching standard-error formulas are proposed that add a term for dispersion of the split-specific estimates to the usual sampling-variance estimate, one built around the mean and squared deviations and one around the median with a more outlier-robust deviation measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "identification_caveat",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o27",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Assumption 1, closing remark",
+          "statement": "The authors state their regularity conditions are non-primitive and not the tightest possible, having been chosen for simplicity rather than for the greatest generality across every machine learning method.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o42",
+          "pages": [
+            18,
+            18
+          ],
+          "locator": "Section IVA, footnote",
+          "statement": "States that its attempt to decompose the output effect into an extensive drilling margin and an intensive production-conditional-on-drilling margin does not itself carry a causal interpretation, because no instrument for the decision to drill is available.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "data_coverage",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o43",
+          "pages": [
+            30,
+            30
+          ],
+          "locator": "Section VIA",
+          "statement": "Notes that no record exists of failed or attempted negotiations, or of the process leading up to a completed negotiated transaction, which limits its ability to directly test candidate explanations for why negotiated outcomes underperform.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "external_validity",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o41",
+          "pages": [
+            32,
+            32
+          ],
+          "locator": "Section VIB",
+          "statement": "Acknowledges that its negotiation setting involves a public-agency intermediary that reviews and can improve negotiated terms before final approval, and states that this feature likely means the estimated gap understates what would be found for a fully private negotiation without such oversight.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "back_of_envelope",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o39",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Section VIB",
+          "statement": "Offers an informal cost-benefit comparison between the estimated payment gain from switching to a formal mechanism and the typical fee charged by existing electronic mineral-auction platforms, to argue informally that the net benefit of using such a platform is large.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "cost_benefit",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o39",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Section VIB",
+          "statement": "Offers an informal cost-benefit comparison between the estimated payment gain from switching to a formal mechanism and the typical fee charged by existing electronic mineral-auction platforms, to argue informally that the net benefit of using such a platform is large.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "precision_discussed",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o40",
+          "pages": [
+            24,
+            25
+          ],
+          "locator": "Section VB",
+          "statement": "Explicitly notes where certain specifications, particularly the parcel-level and nonlinear zero-heavy-outcome models, produce noisier and less precisely estimated coefficients than the main lease-level specifications, attributing this to sample composition and additional zeros rather than treating i",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "relative_to_mean",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o37",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Table 4 notes; Section IVA",
+          "statement": "Interprets its estimated payment and output coefficients relative to the average value of the outcome for the omitted negotiated group, reported in the accompanying table notes, translating a log-point difference into an implied revenue gain for a lease of average size.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "ruled_out_alternatives",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o35",
+          "pages": [
+            30,
+            31
+          ],
+          "locator": "Section VIA",
+          "statement": "Considers and partly rules out several alternative explanations for the estimated gap, including that negotiations are simply auctions with fewer bidders or that negotiations follow a formal sequential process, while explicitly labeling parts of this discussion as illustrative rather than as a fully",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "suggestive_labelled",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o35",
+          "pages": [
+            30,
+            31
+          ],
+          "locator": "Section VIA",
+          "statement": "Considers and partly rules out several alternative explanations for the estimated gap, including that negotiations are simply auctions with fewer bidders or that negotiations follow a formal sequential process, while explicitly labeling parts of this discussion as illustrative rather than as a fully",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "survey_evidence",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o36",
+          "pages": [
+            31,
+            31
+          ],
+          "locator": "Section VIA",
+          "statement": "Cites an external survey of private mineral-rights lessors, describing their reported search behavior and use of professional advice, as corroborating evidence that informal negotiators in the broader private market are relatively uninformed rather than merely under-incentivized.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "appendix_tables_numbered_a",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o50",
+          "pages": [
+            12,
+            32
+          ],
+          "locator": "Multiple footnotes citing online Appendix sections A-E",
+          "statement": "Refers throughout to a suite of alphabetically labeled online-appendix tables and figures for supplementary specifications, alternative outcome definitions, and additional robustness checks, none of which are included in the extracted text of the published article.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "coefficient_plot",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o48",
+          "pages": [
+            23,
+            23
+          ],
+          "locator": "Figure 4",
+          "statement": "Presents one figure of quarter-specific point estimates with confidence intervals for its extensive-margin leasing-incidence comparison, adopting an event-study-style visual convention even though the underlying design is a cross-sectional natural experiment rather than a staggered-adoption panel.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "map",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o47",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Figure 3",
+          "statement": "Includes one figure showing the raw geographic overlap of auctioned and negotiated leases within a concentrated study region, illustrating the source of identifying variation visually in addition to presenting it in regression-table form.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "no_stars",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o30",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Theorem 1",
+          "statement": "Because no empirical results table appears in the main text, there is no stars-based significance convention to report; instead the theorem's stated asymptotic coverage property stands in for significance reporting.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_sample",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o49",
+          "pages": [
+            9,
+            29
+          ],
+          "locator": "Table notes throughout",
+          "statement": "Places most interpretive and technical detail, including variable units, sample restrictions, and the standard-error clustering scheme, in the notes beneath each table rather than repeating it in the main prose, keeping the running text focused on results.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_se",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o49",
+          "pages": [
+            9,
+            29
+          ],
+          "locator": "Table notes throughout",
+          "statement": "Places most interpretive and technical detail, including variable units, sample restrictions, and the standard-error clustering scheme, in the notes beneath each table rather than repeating it in the main prose, keeping the running text focused on results.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o50",
+          "pages": [
+            12,
+            32
+          ],
+          "locator": "Multiple footnotes citing online Appendix sections A-E",
+          "statement": "Refers throughout to a suite of alphabetically labeled online-appendix tables and figures for supplementary specifications, alternative outcome definitions, and additional robustness checks, none of which are included in the extracted text of the published article.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:numbered_theorem_and_proof",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o29",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Assumption 1, Theorem 1",
+          "statement": "The paper's central result is presented as a formally numbered theorem preceded by an explicit numbered assumption block, rather than as a results table reporting coefficients and significance stars.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:short_note_format",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o31",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "footnotes and introduction",
+          "statement": "The piece is written in the compact journal proceedings note format, naming discussants and repeatedly cross-referencing a longer companion working paper for full derivations and literature review.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "raw_data_plot",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o47",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Figure 3",
+          "statement": "Includes one figure showing the raw geographic overlap of auctioned and negotiated leases within a concentrated study region, illustrating the source of identifying variation visually in addition to presenting it in regression-table form.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "summary_stats_table",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o46",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Table 1; Table 2",
+          "statement": "Opens its empirical section with descriptive summary-statistics tables comparing auctioned and negotiated leases, and separately auctioned and negotiated parcels, on land characteristics, contract terms and outcomes, reporting means, standard deviations, and simple mean-difference tests.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o36",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "introduction, para 1",
+          "statement": "The introduction states that empirical illustrations and code implementing the method are available as supplementary material to the note itself.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o56",
+          "pages": [
+            1,
+            35
+          ],
+          "locator": "Acknowledgment footnote; References",
+          "statement": "States in an acknowledgment footnote that replication code is available through a cited data-repository identifier, and separately lists a formal replication-data citation for the same package in its reference list.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o36",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "introduction, para 1",
+          "statement": "The introduction states that empirical illustrations and code implementing the method are available as supplementary material to the note itself.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o56",
+          "pages": [
+            1,
+            35
+          ],
+          "locator": "Acknowledgment footnote; References",
+          "statement": "States in an acknowledgment footnote that replication code is available through a cited data-repository identifier, and separately lists a formal replication-data citation for the same package in its reference list.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "software_named",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o38",
+          "pages": [
+            1,
+            4
+          ],
+          "locator": "throughout",
+          "statement": "No specific statistical software or package is named anywhere in the printed note; software choices are left to the supplementary code rather than stated in the methodological text.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o59",
+          "pages": [
+            14,
+            14
+          ],
+          "locator": "Section III, footnote 22",
+          "statement": "Names the specific double/debiased machine-learning framework and estimation procedure it follows, citing the originating econometrics methodology paper and specifying that it uses random forests to estimate the nuisance functions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_estimator",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o25",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section II, para 1",
+          "statement": "Robustness to the choice of first-stage learner is handled generically by stating the method is valid for any machine learning estimator of the nuisance functions, illustrated by naming several flexible learner families as examples rather than comparing them empirically within this note.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o27",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Table 6",
+          "statement": "Reports both a linear per-acre specification and a pseudo-Poisson quasi-maximum-likelihood specification for its output and revenue outcomes side by side in the same table, motivated by the heavily skewed and zero-heavy distribution of those variables.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_main_text",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o25",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section II, para 1",
+          "statement": "Robustness to the choice of first-stage learner is handled generically by stating the method is valid for any machine learning estimator of the nuisance functions, illustrated by naming several flexible learner families as examples rather than comparing them empirically within this note.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o26",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Table 4",
+          "statement": "Reports the same payment regression under alternative sizes and interaction structures of the location and time fixed effects, presenting these as additional columns of the same main table rather than in a separate robustness table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_fixed_effects",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o26",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Table 4",
+          "statement": "Reports the same payment regression under alternative sizes and interaction structures of the location and time fixed effects, presenting these as additional columns of the same main table rather than in a separate robustness table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_sample",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o28",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Table 4 columns restricted to private surface",
+          "statement": "Re-estimates its main payment comparison on a sample restricted to leases where the state does not own the surface rights, to check that the result is not driven by a confound related to surface ownership rather than to the leasing mechanism itself.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_specification",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o29",
+          "pages": [
+            18,
+            18
+          ],
+          "locator": "Section IVA, footnote referencing online Appendix E",
+          "statement": "States that it collected and digitized supplementary lease-contract clause data and re-checks whether unobserved contractual side terms explain the payment difference, describing this exercise as occurring in an online appendix not included in the extracted text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_appendix",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o29",
+          "pages": [
+            18,
+            18
+          ],
+          "locator": "Section IVA, footnote referencing online Appendix E",
+          "statement": "States that it collected and digitized supplementary lease-contract clause data and re-checks whether unobserved contractual side terms explain the payment difference, describing this exercise as occurring in an online appendix not included in the extracted text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "other:robustness_to_sample_split",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o26",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section III heading and content",
+          "statement": "The entire third section is framed as a robustness recommendation for one implementation choice, making inference insensitive to the arbitrary random partition used for cross-fitting by repeating and aggregating estimates over many partitions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "summarized_in_one_table",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o26",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Table 4",
+          "statement": "Reports the same payment regression under alternative sizes and interaction structures of the location and time fixed effects, presenting these as additional columns of the same main table rather than in a separate robustness table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "attrition_reported",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o10",
+          "pages": [
+            20,
+            20
+          ],
+          "locator": "Section IVB",
+          "statement": "Notes that production and royalty data are observed only through a fixed cutoff date, so output and revenue for leases with primary terms extending past that date are right-censored, and addresses this by restricting some analyses to leases whose primary term had already concluded.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_coverage",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o10",
+          "pages": [
+            20,
+            20
+          ],
+          "locator": "Section IVB",
+          "statement": "Notes that production and royalty data are observed only through a fixed cutoff date, so output and revenue for leases with primary terms extending past that date are right-censored, and addresses this by restricting some analyses to leases whose primary term had already concluded.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section II",
+          "statement": "Draws its lease and payment data from a state land-management agency's administrative records, describing this as unusual in the broader mineral-leasing literature because it allows direct observation of the full payment structure rather than only a partial or indirect measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "exclusions_justified",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o8",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section IIA",
+          "statement": "Lists specific sample restrictions, exclusion of leases outside shale formations, of leases outside a defined acreage range, of leases with multiple ownership interests, and of leases with missing or inconsistent information, each justified on institutional or comparability grounds, with the full se",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "matching_or_linkage_described",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o9",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section II",
+          "statement": "Constructs parcel-level outcomes by spatially matching leases to an independently sourced parcel boundary map, allocating a lease's outcomes proportionally across parcels by acreage share whenever a single lease spans more than one parcel.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "restricted_data_used",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section II",
+          "statement": "Draws its lease and payment data from a state land-management agency's administrative records, describing this as unusual in the broader mineral-leasing literature because it allows direct observation of the full payment structure rather than only a partial or indirect measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_period_stated",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o7",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section II; Section IIA",
+          "statement": "Restricts most analyses to leases signed within a defined multi-year window overlapping the shale-development period, using the individual lease as the primary unit of observation and separately constructing an aggregated parcel-level dataset for a companion analysis.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "unit_of_observation_stated",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 1,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o7",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section II; Section IIA",
+          "statement": "Restricts most analyses to leases signed within a defined multi-year window overlapping the shale-development period, using the individual lease as the primary unit of observation and separately constructing an aggregated parcel-level dataset for a companion analysis.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "baseline_then_variants",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o14",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section II, para 1",
+          "statement": "The choice of first-stage machine learning method is treated as an interchangeable input to a single generic estimator rather than as separate competing specifications, with complex learner families named only as illustrative examples.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o15",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Table 4",
+          "statement": "Reports its main payment table as a sequence of columns that vary the granularity and interaction structure of the location and time fixed effects, from coarser to finer spatial grids and from quarter-only to grid-by-year time controls, with one column designated in the text as the main specificatio",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "cluster_level_in_notes",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o18",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Table 4 notes; Table 5 notes",
+          "statement": "States in table notes that standard errors are clustered by grid, matching whichever spatial grid size defines the fixed effects in that column, while giving no comparable clustering statement for the machine-learning columns.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "controls_progressive_columns",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o19",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Table 4 columns for extra controls",
+          "statement": "Adds a further block of surface-quality control variables, shape regularity, a multiple-parcel indicator, land-cover measures, and distance to infrastructure, in later columns of its main tables to check that the baseline result is not driven by omitted surface characteristics.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "fe_listed_in_table",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o15",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Table 4",
+          "statement": "Reports its main payment table as a sequence of columns that vary the granularity and interaction structure of the location and time fixed effects, from coarser to finer spatial grids and from quarter-only to grid-by-year time controls, with one column designated in the text as the main specificatio",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "mean_of_dependent_reported",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o17",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Table 4 notes",
+          "statement": "States the sample mean of the dependent variable for the omitted negotiated group directly in the notes beneath its main payment table, to give readers a benchmark against which to interpret the estimated coefficient.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "n_reported",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o16",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Table 4 notes",
+          "statement": "Reports the number of observations for every column of its fixed-effects and machine-learning tables, and additionally reports R-squared for the fixed-effects columns, while the machine-learning columns omit an R-squared measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "other:algorithm_steps_as_specification",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o13",
+          "pages": [
+            2,
+            3
+          ],
+          "locator": "Section II.A, Steps 1-3",
+          "statement": "The estimator is presented as a three-step K-fold cross-fitting algorithm, partitioning the sample, fitting nuisance functions and a per-fold estimate on each partition, then averaging across folds, rather than as a fitted regression equation in a table.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "other:no_regression_table",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o15",
+          "pages": [
+            3,
+            4
+          ],
+          "locator": "Theorem 1",
+          "statement": "No table reporting point estimates, standard errors, sample sizes or fit statistics for an applied example appears in the main text; the formal content instead is a theorem giving the asymptotic properties of the generic estimator.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "r2_reported",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o16",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Table 4 notes",
+          "statement": "Reports the number of observations for every column of its fixed-effects and machine-learning tables, and additionally reports R-squared for the fixed-effects columns, while the machine-learning columns omit an R-squared measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "se_type_in_notes",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o18",
+          "pages": [
+            16,
+            16
+          ],
+          "locator": "Table 4 notes; Table 5 notes",
+          "statement": "States in table notes that standard errors are clustered by grid, matching whichever spatial grid size defines the fixed effects in that column, while giving no comparable clustering statement for the machine-learning columns.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "measurement_error_discussed",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o12",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Assumption 1(iii) and following discussion",
+          "statement": "Convergence-rate conditions on the nuisance function estimators are stated only as high-level, non-primitive assumptions, with the authors noting the rates needed are method-specific and are not restated in full.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o14",
+          "pages": [
+            20,
+            21
+          ],
+          "locator": "Section IVB",
+          "statement": "Explains that because a large share of leases are never drilled and record exactly zero output and revenue in reality rather than as a selection artifact, it avoids adding a small constant to enable a log transform for these outcomes and instead reports both a per-acre linear specification and a pse",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "outcome_definition",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o7",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "eq. (1)",
+          "statement": "The outcome is modeled as an additively separable function of an unrestricted regression on treatment and controls plus a disturbance with conditional mean zero given the treatment and controls.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o11",
+          "pages": [
+            16,
+            20
+          ],
+          "locator": "Section IVA; Section IVB",
+          "statement": "Defines its primary payment outcome as the natural logarithm of the up-front bonus payment per acre, and defines an output outcome as a discounted sum of oil and gas production converted into a common energy-weighted barrel-of-oil-equivalent unit, alongside a parallel production-revenue measure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "treatment_definition",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o8",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Section I, para 1; eq. (2)",
+          "statement": "Treatment is defined as a binary indicator whose conditional mean given the controls is described as the propensity score, itself treated as an unknown function to be estimated.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o12",
+          "pages": [
+            14,
+            14
+          ],
+          "locator": "Section III, equation (1)",
+          "statement": "Defines its treatment indicator as whether a lease was allocated by auction rather than negotiation, with the value determined by the mineral-rights history of the underlying parcel rather than by any characteristic of the individual lease transaction itself.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:administrative_share_adjustment",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o13",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section II",
+          "statement": "Notes that administrative payment data for one leasing category are recorded only as a fixed statutory half-share of total payments under the relevant statute, and states that these values are doubled throughout the analysis to represent full lease value.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:nuisance_function_definition",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o9",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "Section I, discussion before eq. (5)-(6)",
+          "statement": "Nuisance parameters are defined as the pair of potential-outcome regression functions and the propensity score, each an unknown and potentially complicated function estimated by machine learning rather than specified parametrically.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:overlap_restriction",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o11",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Assumption 1(ii)",
+          "statement": "The formal assumption restricts every estimated propensity score to lie within a fixed interval strictly inside zero and one, an explicit overlap-type restriction on the nuisance parameter space.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:score_function_definition",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o10",
+          "pages": [
+            2,
+            2
+          ],
+          "locator": "eq. (5)-(6)",
+          "statement": "For the ATE the moment score combines an augmented inverse-propensity-weighting-style correction for each treatment arm; for the ATTE the analogous score is reweighted by the propensity score and its complement to target only the treated.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:zero_heavy_outcome_handling",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o14",
+          "pages": [
+            20,
+            21
+          ],
+          "locator": "Section IVB",
+          "statement": "Explains that because a large share of leases are never drilled and record exactly zero output and revenue in reality rather than as a selection artifact, it avoids adding a small constant to enable a log transform for these outcomes and instead reports both a per-acre linear specification and a pse",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "appendix_heavy",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o35",
+          "pages": [
+            4,
+            4
+          ],
+          "locator": "Section II, closing paragraph",
+          "statement": "The note relies on an online appendix for the proof of its only theorem, keeping the printed text limited to model setup, the estimation algorithm, the result statement, and the sample-splitting-variance extension.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o55",
+          "pages": [
+            12,
+            32
+          ],
+          "locator": "Footnotes throughout",
+          "statement": "Frequently defers supporting analyses, including contractual-clause coding, a duration model of unleased spells, alternative outcome definitions, and lessor-sophistication heterogeneity, to an extensive online appendix that is referenced repeatedly but not reproduced in the extracted text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "contribution_paragraph",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o33",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "opening paragraph",
+          "statement": "The opening paragraph frames the note's contribution as illustrating, in the ATE and ATTE setting, a companion general method paper's approach to valid inference after machine-learning estimation of nuisance parameters.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o51",
+          "pages": [
+            1,
+            5
+          ],
+          "locator": "Introduction",
+          "statement": "Its introduction previews the main payment and output findings, situates the paper's contribution against short reviews of a mechanism-comparison literature and an oil-and-gas-leasing literature, and closes with an explicit roadmap paragraph listing the content of each subsequent section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_paragraph",
+      "papers": 2,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 1.0,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o34",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "opening paragraph, last sentence",
+          "statement": "The closing sentence of the introduction points readers to a companion working paper for more general discussion and literature references, functioning as the note's roadmap rather than a within-note section preview.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o51",
+          "pages": [
+            1,
+            5
+          ],
+          "locator": "Introduction",
+          "statement": "Its introduction previews the main payment and output findings, situates the paper's contribution against short reviews of a mechanism-comparison literature and an oil-and-gas-leasing literature, and closes with an explicit roadmap paragraph listing the content of each subsequent section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "data_before_design",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o52",
+          "pages": [
+            5,
+            10
+          ],
+          "locator": "Sections I-III",
+          "statement": "Presents institutional background and the data description before formally stating the empirical strategy and identifying assumptions in their own numbered section.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "design_before_data",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_107_5_51",
+          "note_sha256": "cc00a3a8a6d8adb2268a48b465e9c3a1e03f550ddfd37e9ed1b6abba019d1745",
+          "observation_id": "o32",
+          "pages": [
+            1,
+            4
+          ],
+          "locator": "overall structure",
+          "statement": "The note proceeds directly from the treatment-effect model and identification argument to the estimation algorithm and its asymptotic theory, with no separate data or results section, reflecting its purely methodological purpose.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "in_main_text",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o54",
+          "pages": [
+            16,
+            21
+          ],
+          "locator": "Tables 4-6",
+          "statement": "Folds most robustness checks directly into its main results tables as additional columns rather than collecting them into a separate, clearly labeled robustness section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "main_result_first",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o53",
+          "pages": [
+            15,
+            25
+          ],
+          "locator": "Sections IV-VI",
+          "statement": "Presents its primary payment result before the output and allocative-efficiency results, and defers all discussion of the underlying match-quality mechanism and external validity to a dedicated section following both sets of main results.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "mechanisms_after_main",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o53",
+          "pages": [
+            15,
+            25
+          ],
+          "locator": "Sections IV-VI",
+          "statement": "Presents its primary payment result before the output and allocative-efficiency results, and defers all discussion of the underlying match-quality mechanism and external validity to a dedicated section following both sets of main results.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 1,
+      "denominator_papers": 2,
+      "papers_with_category": 2,
+      "share_of_papers": 0.5,
+      "pointers": [
+        {
+          "artid": "aer_113_3_2",
+          "note_sha256": "5821238a2d4694dc21fcea915680b17ab74197d8c92a0dec1039007b12d06ef5",
+          "observation_id": "o51",
+          "pages": [
+            1,
+            5
+          ],
+          "locator": "Introduction",
+          "statement": "Its introduction previews the main payment and output findings, situates the paper's contribution against short reviews of a mechanism-comparison literature and an oil-and-gas-leasing literature, and closes with an explicit roadmap paragraph listing the content of each subsequent section.",
+          "basis": "stated"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "cluster_level",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "No clustering of standard errors is proposed or discussed anywhere in the note.",
+          "card_shows": "cluster_level is recorded as null for every traced specification.",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s1.se.cluster_level; specifications.s2.se.cluster_level",
+          "paper_says": "States in table notes that standard errors are clustered by grid, matching the spatial grid size used to define the fixed effects in that column.",
+          "card_shows": "specifications.s1.se = {type: cluster, cluster_level: ['Grid10']}; specifications.s2.se = {type: cluster, cluster_level: ['Grid20']}.",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "s1.controls_summary",
+          "paper_says": "Controls enter only as the generic vector Z inside the nuisance functions, without naming or listing specific control variables.",
+          "card_shows": "controls_summary is recorded as null for every traced specification, i.e., not resolved to a concrete list either.",
+          "pages": [
+            1,
+            1
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s1.formula_or_call; specifications.s3.formula_or_call",
+          "paper_says": "States that all specifications control flexibly for lease size, a spline in acres in the fixed-effects models, while the machine-learning specifications include",
+          "card_shows": "specifications.s1 and s2 formula_or_call include bs(Acres, df = 4); specifications.s3 and s4 formula_or_call include Acres inside the covariate set Acres + Cent",
+          "pages": [
+            14,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "data[0] / data[1]",
+          "paper_says": "States only that empirical illustrations and code are available as supplementary material; no dataset, unit, period or access route is named in the note.",
+          "card_shows": "Card records two datasets (sipp1991.dta, penn_jae.dat) but leaves type, unit_of_observation, period and source_hint null or unknown for both.",
+          "pages": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "data.0",
+          "paper_says": "Describes its lease- and royalty-level data as obtained directly from the state land-management agency's administrative records.",
+          "card_shows": "data[0] records access='unknown' and source_hint=null, evidenced in the read code only by sample start and end date constants in texas_constants.R; no data-prov",
+          "pages": [
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "diagnostics",
+          "paper_says": "No empirical diagnostic such as a balance, first-stage, density or placebo test appears; the note's only formal check is the stated asymptotic theorem.",
+          "card_shows": "Card's diagnostics array is empty.",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "diagnostics.x1",
+          "paper_says": "Its stated identification diagnostics are a location-fixed-effect balance regression of quality and surface-characteristic proxies on mechanism-assignment indic",
+          "card_shows": "diagnostics.x1 = {kind: 'pretrend_test', status: 'not_found_in_scope'}, based only on the two regression scripts read for the extraction, with no time-varying t",
+          "pages": [
+            13,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "d1.estimand",
+          "paper_says": "States the ATE (and, separately, the ATTE) as the target parameter.",
+          "card_shows": "Design d1 records its estimand as 'average treatment effect (ATE)'.",
+          "pages": [
+            1,
+            1
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s1; specifications.s3",
+          "paper_says": "Estimates lease-level regressions of log bonus payments on an auction indicator with a flexible acreage spline and location-by-time fixed effects, plus a partia",
+          "card_shows": "designs.d1 (panel_fe): specifications.s1 is a feols call, LogBonus ~ Auction + bs(Acres, df=4) | Grid10Yr + YearQtr; designs.d2 (ml_nuisance): specifications.s3",
+          "pages": [
+            14,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "d1.variant",
+          "paper_says": "Main text presents a fully interactive treatment-effect model in which treatment enters the outcome equation non-additively-separably, giving fully heterogeneou",
+          "card_shows": "Design d1 is classified with variant 'dml_plr' (partial linear regression); the card's reading notes state an interactive-model variant exists in the code but i",
+          "pages": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "The model has no fixed-effects terms; it is a potential-outcomes model built from nuisance regression and propensity functions.",
+          "card_shows": "fixed_effects is recorded as null for every traced specification.",
+          "pages": [
+            1,
+            1
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s1.fixed_effects; specifications.s2.fixed_effects",
+          "paper_says": "States that its bonus regressions include fixed effects for a spatial grid interacted with year plus quarter-of-sample as the main specification, and separately",
+          "card_shows": "specifications.s1.fixed_effects = ['Grid10Yr','YearQtr']; specifications.s2.fixed_effects = ['Grid20Yr','YearQtr'].",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "other",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "s1.command / s2.command / s3.command / s4.command / s5.command / s6.command",
+          "paper_says": "Names boosted, tree, random-forest and ensemble or hybrid methods as examples of the complex flexible learners the design is built to accommodate.",
+          "card_shows": "The six traced specifications implement RLasso, Trees, Forest, Boosting, Nnet and Ensemble as interchangeable first-stage learners.",
+          "pages": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "outputs.tables[0]",
+          "paper_says": "No results table or figure appears in the main text; the estimator's output is a fold-averaged point estimate and analytic standard error given by formula.",
+          "card_shows": "Card records a single unformatted output, a result matrix printed to the console, with no path, format, stars or notes content.",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "outputs.tables.t1",
+          "paper_says": "Presents its bonus and output regression results in numbered in-text tables with several fixed-effects and machine-learning columns each; the specification set ",
+          "card_shows": "outputs.tables has one entry (t1) with output_ref 'stacked_regressions_addenda.tex', built by the same script supplying specifications.s1-s4; outputs.figures is",
+          "pages": [
+            18,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "conventions[2].description",
+          "paper_says": "Section III recommends repeating cross-fitting over many random partitions and aggregating point estimates by their across-split mean or median, with matching m",
+          "card_shows": "A recorded coding convention describes point estimates and standard errors aggregated across iterations via the mean (labeled ATE) and the median (labeled robus",
+          "pages": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "outputs.tables.t1; specifications.s1",
+          "paper_says": "States in the main text that it reruns its bonus specification after adding hand-digitized measures of supplementary lease-contract clauses, describing this as ",
+          "card_shows": "All four recorded specifications come from a script named for lease addenda and populate outputs.tables.t1 (output_ref = 'stacked_regressions_addenda.tex'), mat",
+          "pages": [
+            18,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s2.sample; pipeline.sample_restrictions",
+          "paper_says": "States that its output and production-revenue regressions restrict the sample to leases whose primary term had concluded by the end of the royalty-data window, ",
+          "card_shows": "specifications.s2.sample = '!Censored'; specifications.s4.sample = '!Censored'; pipeline.sample_restrictions records an additional InSample and year filter tied",
+          "pages": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "s1.se.type (representative of s1-s6)",
+          "paper_says": "Reports an analytic asymptotic standard error built from the sample variance of the estimated score, divided by the sample size, without any resampling procedur",
+          "card_shows": "Each traced specification (s1-s6) records se.type as 'robust', computed via a Huber-White HC covariance on the residualized outcome regression.",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s3.se; specifications.s4.se",
+          "paper_says": "Gives no explicit standard-error or clustering description for its double/debiased machine-learning columns anywhere in the main-text tables that were read.",
+          "card_shows": "specifications.s3.se = {type: 'iid', cluster_level: null}; specifications.s4.se = {type: null, cluster_level: null}, i.e. the extracted code likewise shows no s",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_107_5_51",
+          "card_ref": "s1.weights",
+          "paper_says": "The final estimator averages the K fold-specific estimates with equal weights; no other weighting scheme is described.",
+          "card_shows": "weights is recorded as null for every traced specification.",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_ref": "specifications.s1.weights; specifications.s2.weights; specifications.s3.weights; specifications.s4.weights",
+          "paper_says": "Makes no mention of regression weights for any reported specification; all main models read as unweighted.",
+          "card_shows": "specifications.s1 through s4 all record weights as null.",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "No sample_construction observations: the main text never describes the empirical illustration's data source, unit of obs",
+      "papers": 1
+    },
+    {
+      "gap": "No heterogeneity_reported observations: the model is stated to allow fully heterogeneous treatment effects, but no heter",
+      "papers": 1
+    },
+    {
+      "gap": "No mechanism_evidence observations: the note is purely about estimation and inference for a treatment-effect parameter a",
+      "papers": 1
+    },
+    {
+      "gap": "No magnitude_interpretation observations: with no empirical results table in the main text, there are no effect sizes to",
+      "papers": 1
+    },
+    {
+      "gap": "No external_validity observations: generalizability of the ATE/ATTE beyond the (unstated) illustration sample is not dis",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration_or_ethics observations: no preregistration, IRB approval or consent statement appears; only an NSF fu",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit statement that standard errors are or are not clustered; the absence of clustering is inferred from the vari",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit sentence justifies the choice of spatial grid as the clustering level beyond its correspondence to the fixed",
+      "papers": 1
+    },
+    {
+      "gap": "No stated standard-error or clustering description is given anywhere for the double/debiased machine-learning specificat",
+      "papers": 1
+    },
+    {
+      "gap": "No multiple-testing adjustment is described despite many outcome-by-specification combinations being reported and indivi",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or consent statement; not applicable in an obvious sense, as the paper analyzes second",
+      "papers": 1
+    },
+    {
+      "gap": "The paper's several online appendices (additional extensions, alternative outcome definitions, the lease-addenda contrac",
+      "papers": 1
+    },
+    {
+      "gap": "No formal weak-instrument or first-stage statistic is reported anywhere, consistent with the design not using an instrum",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

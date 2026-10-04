@@ -1,0 +1,1094 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_90_5_11",
+ "journal": "ReStud",
+ "year": 2023,
+ "doi": "10.1093/restud/rdad015",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:52:08Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+    "sha256": "8be34f162aff976cde42a1388ea9784a9f249b54bcb65fbbb91168fb24021fa3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      253
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/replicate_analysis.do",
+    "sha256": "eae7af4bf27195e03f8ddf194f5b91fda7288b2f5620855b99c068751d71ca9d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      131
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/robustness_subsample.do",
+    "sha256": "818fe5eb27a3c58340a90a4baaf03e31e8cd663fc11f330104b573ed2cb7f79b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/selection_check.do",
+    "sha256": "966251f4017ee90567914c48b64220aff458671adad421bedef6bf6f429bd8e1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+    "sha256": "921fd263a4db49e06736012cb8320bf2b283179ffdd978be803c3f4cf1342a39",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/modules/README.md",
+    "sha256": "0c4ec0d4e269854e89607d74a52f2cfde200a3f254fea3d28070089326bf72f5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      143
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+    "sha256": "c8a157b4184cb7d66452fe239ce2e2b550e0a3cca47ac0946e171330997c596c",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      102
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/ado/",
+    "reason": "vendored",
+    "note": "Standard Stata packages (reghdfe, ppmlhdfe, ivreghdfe, gcollapse, gegen, maptile, binscatter, gunique)"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Paper on welfare analysis of occupational licensing with reduced-form DID-style regressions and structural general equilibrium estimation using GMM. Read master scripts and main analysis branches; did not fully trace all robustness/heterogeneity specifications or output mapping details due to code length."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Python"
+  ],
+  "master_scripts": [
+   "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/replicate_analysis.do"
+  ],
+  "directory_layout": "REPLICATION/code/{clean,analysis,ado,modules} with REPLICATION/tables/ for outputs",
+  "readme_present": true,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/ado/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 73,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      66,
+      66
+     ],
+     "snippet": "Random seed is set at line 245 of program mc_simulate_measurementerror.do.",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+    "lines": [
+     54,
+     54
+    ],
+    "snippet": "Stata (code was last run with StataSE 16). Dependencies are included in the CODE/ado file and are listed below.",
+    "supports": [
+     "languages"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": "data_cleaned_new.dta",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "IPUMS-CPS derivative",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "|  data_cleaned_new.dta | IPUMS-CPS and authors' analysis. | Derivative product of cps_00039.dat. This is the main analysis file for CPS data used in the paper. | Yes |",
+     "supports": [
+      "name",
+      "source_hint",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "truth_licensing.xlsx",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": "state-occupation",
+   "period": null,
+   "source_hint": "Compilation of IJ, NCSL, Shor & McCarty, and authors' data on occupational licensing policies",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      49,
+      49
+     ],
+     "snippet": "|  truth_licensing.xlsx | NCSL, IJ, others (see Appendix D), authors' analysis | Compilation across sources of state-occupation level licensing policies. | Yes |",
+     "supports": [
+      "name",
+      "source_hint",
+      "type",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "acs_data.dta",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "IPUMS-USA derivative for robustness checks",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      37,
+      37
+     ],
+     "snippet": "|  acs_data.dta    | IPUMS-USA and authors' analysis | Derivative product of usa_00012.dat. This is the ACS analysis dataset. | Yes |",
+     "supports": [
+      "name",
+      "source_hint",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [
+   {
+    "description": "Exclude universally licensed occupations (gt==1)",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4",
+     "s5",
+     "s6"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       28,
+       29
+      ],
+      "snippet": "* Restrict sample to occupations that are not universally licensed\n\treplace sample = 0 if gt == 1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "main",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      3,
+      4
+     ],
+     "snippet": "Main reduced-form analysis file. This code file produces Table 2\nand Figures 2 and 3.",
+     "supports": [
+      "role",
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "main",
+   "method": "structural_estimation",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+     "lines": [
+      3,
+      5
+     ],
+     "snippet": "Table 5, \"Structural Estimates\"\n\n***",
+     "supports": [
+      "role",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe lwage sh_statec if sample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "strata",
+    "statefip",
+    "occ",
+    "ind",
+    "my"
+   ],
+   "controls_summary": null,
+   "weights": "earnwt (CPS earnings weight)",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state_occ"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       42,
+       42
+      ],
+      "snippet": "reghdfe lwage sh_statec if sample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Full specification with stratum, state, occupation, industry, month-year fixed effects",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      40,
+      47
+     ],
+     "snippet": "reghdfe lwage sh_statec if sample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "weights",
+      "se"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe lhours sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "strata",
+    "statefip",
+    "occ",
+    "ind",
+    "my"
+   ],
+   "controls_summary": null,
+   "weights": "aw=wtfinl",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state_occ"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       177,
+       177
+      ],
+      "snippet": "reghdfe lhours sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Hours per worker specification",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      173,
+      177
+     ],
+     "snippet": "* Hours per worker\n\n\t* Log hours per worker\n\n\treghdfe lhours sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "fixed_effects",
+      "command"
+     ]
+    },
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      177,
+      177
+     ],
+     "snippet": "\treghdfe lhours sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": null,
+   "formula_or_call": "ppmlhdfe wtfinl sh_statec, a(statef occ) vce(cluster state_occ)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "statef",
+    "occ"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state_occ"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       214,
+       214
+      ],
+      "snippet": "ppmlhdfe wtfinl sh_statec, a(statef occ) vce(cluster state_occ)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Employment: Poisson specification at state-occupation level (robustness to log-level specification)",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      214,
+      214
+     ],
+     "snippet": "ppmlhdfe wtfinl sh_statec, a(statef occ) vce(cluster state_occ)",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe edyears sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "strata",
+    "statefip",
+    "occ",
+    "ind",
+    "my"
+   ],
+   "controls_summary": null,
+   "weights": "aw=wtfinl",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state_occ"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       58,
+       58
+      ],
+      "snippet": "\treghdfe edyears sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Education years specification",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "reghdfe edyears sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "estimator",
+      "formula_or_call",
+      "fixed_effects",
+      "command"
+     ]
+    },
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "\treghdfe edyears sh_statec if sample == 1 [aw=wtfinl], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe lwage (sh_statec = i.residual_cat) if wagesample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "strata",
+    "statefip",
+    "occ",
+    "ind",
+    "my"
+   ],
+   "controls_summary": null,
+   "weights": "aw=earnwt",
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state_occ"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/robustness_subsample.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "\t\t\tivreghdfe lwage (sh_statec = i.residual_cat) if wagesample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV robustness using residual licensing variation as instrument",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/robustness_subsample.do",
+     "lines": [
+      60,
+      63
+     ],
+     "snippet": "ivreghdfe lwage (sh_statec = i.residual_cat) if wagesample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "fixed_effects"
+     ]
+    },
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/robustness_subsample.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "\t\t\tivreghdfe lwage (sh_statec = i.residual_cat) if wagesample == 1 [aw=earnwt], a(strata statefip occ ind my) cl(state_occ)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "gmm",
+   "command": "gmm",
+   "package": null,
+   "formula_or_call": "gmm",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "Initial parameter values vary by calibration"
+   ],
+   "scope": "family",
+   "family_description": "Multiple GMM estimations with different supply/demand elasticity calibrations",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Structural GE model estimation; 4-equation system (wages, hours, employment, age); multiple calibrations",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+     "lines": [
+      63,
+      63
+     ],
+     "snippet": "eststo sigma3_varepsilon3: gmm",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "command"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+    "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/replicate_analysis.do"
+   ],
+   "note": "No explicit pre-trend tests found in read files; main analysis uses reduced-form with state-occ variation",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "overid",
+   "design_id": "d2",
+   "spec_ids": [
+    "s6"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "File overid_structural.do runs overidentifying restrictions test",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Monte Carlo simulation of measurement error in licensing classification",
+   "evidence": []
+  },
+  {
+   "id": "x4",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Uses estimated occupational transition rates from ASEC module to examine selection",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "tables/rf_ests_subsample_final.tex",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       243,
+       245
+      ],
+      "snippet": "table_from_tpl, t(\"rf.tex\")",
+      "supports": [
+       "package"
+      ]
+     },
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       241,
+       245
+      ],
+      "snippet": "rf_ests_subsample_final.tex",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "tables/structural_ests_subsample.csv",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/structural_subsample.do",
+      "lines": [
+       75,
+       75
+      ],
+      "snippet": "store_est_tpl using structural_ests_subsample.csv",
+      "supports": [
+       "path",
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f2",
+    "output_ref": null,
+    "path": null,
+    "format": "eps",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+      "lines": [
+       106,
+       106
+      ],
+      "snippet": "tw bar coef n, fcolor(black) lwidth(none) horizontal || ///",
+      "supports": [
+       "format"
+      ]
+     }
+    ],
+    "package": null,
+    "types": []
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "5.7.3",
+   "version_basis": "author_statement",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "reghdfe (version 5.7.3, 13nov2019)",
+     "supports": [
+      "version",
+      "version_basis",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ppmlhdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "2.0.1",
+   "version_basis": "author_statement",
+   "commands": [
+    "ppmlhdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      56,
+      56
+     ],
+     "snippet": "ppmlhdfe (version 2.0.1, 05mar2019)",
+     "supports": [
+      "version",
+      "version_basis",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "1.0.0",
+   "version_basis": "author_statement",
+   "commands": [
+    "ivreghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      57,
+      57
+     ],
+     "snippet": "ivreghdfe (version 1.0.0, 07jul2018)",
+     "supports": [
+      "version",
+      "version_basis",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "gcollapse",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "1.3.0",
+   "version_basis": "author_statement",
+   "commands": [
+    "gcollapse"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "gcollapse (version 1.3.0, 11Jun2019)",
+     "supports": [
+      "version",
+      "version_basis",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "gegen",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": "1.4.1",
+   "version_basis": "author_statement",
+   "commands": [
+    "gegen"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/readme.md",
+     "lines": [
+      59,
+      59
+     ],
+     "snippet": "gegen (version 1.4.1, 26Jan2020)",
+     "supports": [
+      "version",
+      "version_basis",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Python",
+   "name": "table_from_tpl",
+   "kind": "module",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      243,
+      245
+     ],
+     "snippet": "table_from_tpl",
+     "supports": [
+      "name",
+      "kind"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Results stored to CSV via store_est_tpl, then templated into LaTeX tables via table_from_tpl.py",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/modules/README.md",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "Stata-tex allows you to separate the LaTeX table template from the",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Data weights used: earnwt (CPS earnings weight), wtfinl (CPS final weight)",
+   "evidence": [
+    {
+     "path": "code/zenodo_7140346/KleinerSoltas_replication3/REPLICATION/code/analysis/analysis_subsample.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "reghdfe lwage sh_statec if sample == 1 [aw=earnwt]",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did",
+   "structural_estimation"
+  ],
+  "fields": []
+ }
+}

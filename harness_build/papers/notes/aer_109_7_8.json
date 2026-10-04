@@ -1,0 +1,1068 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_109_7_8",
+  "journal": "AER",
+  "year": 2019,
+  "doi": "10.1257/aer.20151231",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_109_7_8.pdf",
+    "pdf_sha256": "9225be1c6c114dd74e079c14904b640b2cc06c1456778952f26678c168987e9f",
+    "text_path": "harness_build/papers/text/aer_109_7_8.txt",
+    "text_sha256": "2700ffc3cd02f9fa488ecc1271b93b5a56cd9599c077260b6a49da2044abfdbb",
+    "pages": 42
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:44:35Z"
+  },
+  "card_link": null,
+  "methods": [
+    "iv",
+    "structural_estimation"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "design",
+      "title": "I. Background (institutional detail and research design)",
+      "pages": [
+        5,
+        9
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "II. Data and Background",
+      "pages": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "III. Assessing the Instrument",
+      "pages": [
+        13,
+        17
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "IV. Impacts of DI Allowances on the Appellants",
+      "pages": [
+        17,
+        20
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "V. Household Impacts and Fiscal Costs of DI Allowances",
+      "pages": [
+        20,
+        22
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "heterogeneity",
+      "title": "VI. Heterogeneity in Impacts of DI Allowances by Marital Status",
+      "pages": [
+        22,
+        28
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "model",
+      "title": "VII. Deriving Welfare Implications Using a Structural Model",
+      "pages": [
+        28,
+        39
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "conclusion",
+      "title": "VIII. Conclusion",
+      "pages": [
+        39,
+        41
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        41,
+        42
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "compliers_described"
+      ],
+      "statement": "The paper states its causal target as the local average treatment effect of DI allowance at appeal for compliers, individuals whose appeal outcome would differ across judges of different leniency.",
+      "pages": [
+        17,
+        19
+      ],
+      "locator": "Section IV, discussion after Table 4",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "instrument_exclusion_argued"
+      ],
+      "statement": "The IV equations are written so that the endogenous regressor is the initial appeal decision rather than current DI receipt, which the authors argue relieves concern about the exclusion restriction since later behavior can operate only through that initial outcome.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Section I, equations (1)-(2)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "Monotonicity of the instrument is stated as unverifiable directly, since no appellant can be observed under two judges, and the authors instead describe testable implications used to probe it.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IIIB",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "randomization_described"
+      ],
+      "statement": "Random assignment of appellants to judges is described institutionally, citing the rotation rule and the department head's lack of knowledge of case content, and is said to have been verified with court administrators.",
+      "pages": [
+        6,
+        8
+      ],
+      "locator": "Section I, Assignment of DI Cases to Judges",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "by the drawing of lots"
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The design is presented as a judge (examiner) leniency instrument in the tradition of prior US disability studies, applied here to appeal judges rather than initial examiners.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction, literature paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "restricted_data_used",
+        "matching_or_linkage_described"
+      ],
+      "statement": "The estimation sample is built by linking social security disability registers to hearing office appeal records and to Statistics Norway's longitudinal administrative registers covering the full resident population.",
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "Section IIA, Data and Sample Restrictions",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The baseline sample is defined as appellants whose appeal decision falls in a stated multi-year window, chosen so that each individual can be followed for several years after the decision; judge leniency itself is computed from a longer window of appeal cases.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section IIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Two sample restrictions are explicitly justified: appellants assigned to judges who handled very few cases are dropped to reduce sampling variation in the leniency instrument, and appellants above a stated age cutoff are dropped to avoid confounding with early-retirement substitution.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section IIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "restricted_data_used",
+        "exclusions_justified"
+      ],
+      "statement": "A separate, smaller restricted sample is used for consumption outcomes because the constructed consumption measure requires complete asset and income data, so household consumption results are reported only for the subset with that data available.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section V, panel B of Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "other:selection_into_sample_described"
+      ],
+      "statement": "The paper compares predetermined characteristics of the full applicant pool against the appellant subsample used in estimation, documenting how appellants differ from applicants to make the selection into the analysis sample transparent.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The instrument is a leave-out-mean judge leniency measure, the average allowance rate in a judge's other handled cases, computed using cases that can fall outside the estimation sample itself.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section I, Verifying Random Assignment",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "The treatment variable is a binary indicator for whether an appellant was allowed DI at the initial appeal decision, instrumented rather than treated as exogenous.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Section I, equations (1)-(2)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Household consumption is not directly observed; it is constructed from an accounting identity as income plus capital gains minus the change in wealth, following a cited methodology, with a discussion of why survey-based consumption measures were not used instead.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section IIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "other:per_household_member_normalization"
+      ],
+      "statement": "Household-level outcomes such as income, fiscal cost, and consumption are normalized per household member so that results are comparable across households of different sizes and across marital status subgroups.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section VI introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "other:latent_index_construction"
+      ],
+      "statement": "For the structural model, a disability severity index with a small number of ordered categories is constructed from predicted allowance probabilities based on diagnosis codes, with appellants split into equally sized groups on that predicted probability.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section VIIA, Preference Specification",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table"
+      ],
+      "statement": "All main regressions include fully interacted year-by-department fixed effects, described as the level at which case assignment is randomized, and this is stated explicitly in the table notes of the first-stage and impact tables.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "controls_progressive_columns",
+        "baseline_then_variants"
+      ],
+      "statement": "The first-stage table progresses across panels from no covariates, to individual demographic and health controls, to judge-level processing-time controls, showing the instrument coefficient across these variants rather than in a single specification.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 3, panels A-C",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "mean_of_dependent_reported"
+      ],
+      "statement": "Impact tables report the number of observations and the dependent variable's sample mean alongside each coefficient, allowing readers to gauge relative magnitude without the text repeating the mean in prose.",
+      "pages": [
+        16,
+        18
+      ],
+      "locator": "Tables 3 and 4",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes",
+        "se_type_in_notes"
+      ],
+      "statement": "Every main results table states in its notes that standard errors in parentheses are clustered at the judge level, with the statement repeated identically across the first-stage, appellant-outcome, household, and spousal tables.",
+      "pages": [
+        16,
+        26
+      ],
+      "locator": "Table notes, Tables 3-8",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "no_justification_found"
+      ],
+      "statement": "Clustering at the judge level matches the level at which the leniency instrument is assigned, but the paper does not include a sentence in the main text explaining why judge-level clustering rather than some other level was chosen; it appears only as a recurring table note.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 3 notes and surrounding text",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "other:block_bootstrap"
+      ],
+      "statement": "For the structural model's welfare and counterfactual estimates, inference is performed by re-estimating the full model on a stated number of block bootstrap replicates of the data, with the block defined at the individual level, described in an online appendix section.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "Section VIIB footnote, Table 11 notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "note": "Appendix section B.B3 referenced but not present in the extracted text; basis is the main-text and table-note description."
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "multiple_testing_adjustment"
+      ],
+      "statement": "Several household-level tables report explicit p-values for hypothesis tests comparing an estimated effect to a benchmark quantity (such as the corresponding DI benefit change), rather than only reporting point estimates and standard errors, so hypothesis tests beyond simple significance are made explicit in the tables themselves.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table 5 notes and rows",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "A dedicated balance table regresses predetermined appellant characteristics on case outcome and separately on the leniency instrument, reporting a joint test of whether those characteristics predict judge leniency as evidence for random assignment.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "in_main_text"
+      ],
+      "statement": "The first-stage relationship between judge leniency and appeal allowance is shown twice, in a binned local-linear-regression figure and in a regression table across multiple post-decision years and covariate sets.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Figure 3 and Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:monotonicity_check",
+        "in_appendix"
+      ],
+      "statement": "Monotonicity is probed indirectly by checking that subgroup-specific first stages are never negative and by re-estimating the leniency instrument on complementary subpopulations, with the underlying estimates placed in an online appendix table and only the qualitative conclusion discussed in the main text.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IIIB, online Appendix Table A3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "note": "Referenced appendix table not present in this extracted text."
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:complier_potential_outcome_decomposition",
+        "in_appendix"
+      ],
+      "statement": "The paper decomposes LATE estimates into potential outcomes of compliers under allowance versus denial, a diagnostic-like exercise placed in the online appendix and only summarized narratively in the main text.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IVA, online Appendix Figure A4",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "note": "Referenced appendix figure not present in this extracted text; tag online_appendix_not_available applies."
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_footnote"
+      ],
+      "statement": "A footnote reports the same analysis under an alternative coding rule for remanded appeal cases, which are treated as denials in the main analysis but could instead be coded by their eventual disposition.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Footnote 9",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "The paper states that neither the welfare estimates nor the counterfactual results are materially affected by including a parametric selection correction in the earnings-process equations, with the comparison placed in an online appendix table.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VIIA, online Appendix Table A10",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "note": "Referenced appendix table not present in this extracted text."
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "summarized_in_one_table",
+        "in_main_text"
+      ],
+      "statement": "A dedicated counterfactual table varies three model assumptions in turn, spousal labor supply adjustment, availability of initial savings, and availability of DI reapplication, and reports a hypothesis test of equality against the baseline welfare estimate for each variant.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "Table 11",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Household income and consumption effects are reported separately for married and non-married appellants in parallel tables, motivated by prior evidence on the role of family labor supply in consumption smoothing.",
+      "pages": [
+        22,
+        26
+      ],
+      "locator": "Section VI, Tables 6 and 7",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "exploratory_labelled"
+      ],
+      "statement": "Further heterogeneity of the spousal added-worker effect by spouse sex, education, and prior earnings is explored, but the authors explicitly flag that these subsample estimates are too imprecise to support clear conclusions.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section VIA, closing paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Household income and consumption gains from DI allowance are interpreted as a share of the dependent variable's sample mean rather than only in levels, when summarizing the consumption-insurance finding.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section V, closing paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Estimated labor supply elasticities from the structural model are benchmarked against ranges reported in a cited labor supply survey and against two prior life-cycle studies of joint household labor supply, to argue the estimates are plausible.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section VIIB, Parameter Estimates and Model Fit",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "monetary_terms",
+        "cost_benefit",
+        "back_of_envelope"
+      ],
+      "statement": "Willingness to pay for a DI allowance is expressed per dollar of induced fiscal cost and as a share of household consumption, framing the welfare estimate as a benefit-cost ratio rather than only as a dollar amount.",
+      "pages": [
+        36,
+        37
+      ],
+      "locator": "Section VIIB, Household Valuation of DI Receipt",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "external_validity"
+      ],
+      "statement": "The authors caution that the IV estimates apply to compliers at the margin of the appeal decision and that extrapolating these estimates to inframarginal applicants or to other institutional settings should be done cautiously.",
+      "pages": [
+        40,
+        40
+      ],
+      "locator": "Conclusion, third caveat",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "The authors state that their structural welfare measure captures only the cash-equivalent transfer value of a DI award at the time of appeal and does not capture the ex ante insurance value of the DI system to workers before disability onset.",
+      "pages": [
+        39,
+        40
+      ],
+      "locator": "Conclusion, first caveat",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "scaling_discussed"
+      ],
+      "statement": "The conclusion explicitly discusses how differences between the Norwegian and US disability systems, including replacement rates and the generosity of alternative safety-net transfers, could push generalized effects for a US setting in either direction.",
+      "pages": [
+        40,
+        40
+      ],
+      "locator": "Conclusion, second caveat",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "The paper distinguishes the population for which its causal estimates are informative, appeal compliers, from the broader population of DI applicants or claimants, and argues the marginal population is still policy relevant for screening-criteria reforms.",
+      "pages": [
+        40,
+        40
+      ],
+      "locator": "Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars",
+        "notes_state_se",
+        "notes_state_sample"
+      ],
+      "statement": "Result tables do not use significance stars; instead they report standard errors in parentheses and, for several household and welfare tables, explicit p-values for stated null hypotheses, with table notes describing the sample and clustering.",
+      "pages": [
+        16,
+        38
+      ],
+      "locator": "Tables 3-11 generally",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "A descriptive statistics table reports means, standard deviations, and a test of equal means for predetermined characteristics, comparing the full applicant pool to the appellant estimation sample.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure",
+        "raw_data_plot"
+      ],
+      "statement": "A multi-panel figure plots raw and residualized earnings trajectories over years relative to the initial decision and the appeal decision, comparing Norway and the United States side by side.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Figure 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "presentation_convention",
+      "tags": [
+        "binscatter"
+      ],
+      "statement": "The first-stage relationship is shown as a local linear regression line overlaid on a histogram of the instrument's distribution, a binscatter-style presentation of instrument relevance.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "presentation_convention",
+      "tags": [
+        "other:model_fit_plot"
+      ],
+      "statement": "Model fit is presented visually by overlaying observed and simulated series, for spousal earnings dynamics over time and for average tax rates across the earnings distribution, rather than only through fit statistics in a table.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Figures 5 and 6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph"
+      ],
+      "statement": "The introduction previews the paper's main quantitative findings in ordered bullets before the design and data sections, and contains a separate paragraph explicitly stating the study's two contributions to the literature.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph",
+        "design_before_data"
+      ],
+      "statement": "A roadmap paragraph at the end of the introduction previews each numbered section, and the institutional and identification discussion (Section I) precedes the dedicated data section (Section II).",
+      "pages": [
+        5,
+        9
+      ],
+      "locator": "End of introduction and Section I",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main",
+        "appendix_heavy"
+      ],
+      "statement": "The paper places its mechanism analysis, spousal labor supply heterogeneity by marital status, after the main appellant and household impact results and before the structural welfare model, and repeatedly defers supporting figures and tables described in the text to an online appendix.",
+      "pages": [
+        22,
+        28
+      ],
+      "locator": "Section VI and surrounding online-appendix references",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "note": "Online appendix content is referenced throughout but not present in this extracted text."
+    },
+    {
+      "id": "o47",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism",
+        "intermediate_outcomes"
+      ],
+      "statement": "Spousal labor earnings and transfer payments are examined as an intermediate outcome to explain why married appellants show smaller household income and consumption effects than non-married appellants.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section VIB, Table 8",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "Structural counterfactual simulations that shut down spousal labor supply adjustment, savings, or reapplication are used to quantify how much each channel contributes to buffering household welfare from a DI denial, going beyond descriptive heterogeneity to a model-based decomposition.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "Section VIIB, Table 11",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled"
+      ],
+      "statement": "The interpretation of which side of the appeal decision drives the spousal earnings response, denial-induced added-worker effect versus allowance-induced reduced spousal labor supply, is presented as the paper's own reading of a complier decomposition rather than as a directly tested hypothesis.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section VIB",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "note": "Underlying decomposition figure is in the online appendix, not present in this extracted text."
+    },
+    {
+      "id": "o50",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "data_access_procedure_described"
+      ],
+      "statement": "The paper follows the journal's standard practice of directing readers to the article's online page for additional materials and author disclosure statements, and the reference list separately cites a dataset entry with its own DOI for the paper.",
+      "pages": [
+        1,
+        42
+      ],
+      "locator": "Title-page footnote and reference list",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_restricted",
+        "linked_records"
+      ],
+      "statement": "The underlying data are restricted Norwegian administrative registers accessed with institutional help, and the acknowledgments credit specific individuals at the hearing office and elsewhere for facilitating data access, consistent with a non-public, permissioned data source.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title-page footnote",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "other",
+      "tags": [
+        "other:software_not_named"
+      ],
+      "statement": "The paper does not name the statistical or numerical software used for estimation anywhere in the main text; only the optimization algorithms (a particle swarm method validated locally with BFGS) are named for the structural model's numerical solution.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section VIIA, footnote on estimation procedure",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    }
+  ],
+  "concordance": [],
+  "gaps": [
+    "No explicit sentence justifying judge-level clustering (versus, e.g., department-level or two-way clustering) was found in the main text; the choice is stated only in repeated table notes.",
+    "No formal weak-instrument statistic (such as an F-statistic or Kleibergen-Paap statistic) for the 2SLS first stage is reported in the main text; instrument strength is conveyed via the first-stage coefficient and its standard error.",
+    "No explicit discussion of the small number of clusters (75 judges) as a few-clusters problem, and no wild-cluster-bootstrap or randomization-inference check of the main 2SLS estimates, was found.",
+    "No named statistical software or package (e.g., Stata, R, MATLAB) for either the IV estimation or the structural model estimation was found in the main text.",
+    "No explicit pre-registration or IRB/ethics statement was found in the extracted text.",
+    "The online appendix (tables and figures referenced repeatedly, e.g., A1-A10) is not part of the extracted text, so appendix-only diagnostics and robustness checks could only be recorded as the paper's own main-text description of them, not read directly."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        42
+      ]
+    ],
+    "coverage": "main_text",
+    "note": "Read the full extracted text: title page, introduction, institutional background and IV design, data section, instrument validity, appellant and household results, heterogeneity by marital status, structural model description and estimation, welfare results, conclusion, and the reference list (pages 1-42). The paper repeatedly refers to an online appendix (tables A1-A10, figures A1-A8) that is not included in this extracted text and was not read; its contents are recorded here only as paraphrases of what the main text says about them, each flagged with a note and the online_appendix_not_available consideration where relevant."
+  }
+}

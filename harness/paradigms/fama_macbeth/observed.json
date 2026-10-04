@@ -1,0 +1,877 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "fama_macbeth",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "jfe_2024_j_jfineco_2023_103746",
+        "sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+        "journal": "JFE",
+        "year": 2024,
+        "coverage": "minimal",
+        "languages": [
+          "Stata",
+          "Python",
+          "Jupyter"
+        ]
+      },
+      {
+        "artid": "jfe_2026_j_jfineco_2025_104223",
+        "sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+        "journal": "JFE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "SAS"
+        ]
+      },
+      {
+        "artid": "rfs_2025_rfs_hhae056",
+        "sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+        "journal": "RFS",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      },
+      {
+        "artid": "rfs_2026_rfs_hhag042",
+        "sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+        "journal": "RFS",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Python",
+          "MATLAB"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 4,
+    "specifications": 4,
+    "designs": 4,
+    "by_language": {
+      "Stata": 3,
+      "Python": 3,
+      "Jupyter": 1,
+      "SAS": 1,
+      "MATLAB": 1
+    },
+    "by_journal": {
+      "JFE": 2,
+      "RFS": 2
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 2,
+      "2025": 1
+    },
+    "by_coverage": {
+      "minimal": 1,
+      "partial": 3
+    }
+  },
+  "by_variant": {
+    "two-step cross-sectional": 1,
+    "unknown": 3
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "two-step cross-sectional",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 3,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            3,
+            3
+          ],
+          "snippet": "* This program is an implementation of Fama and MacBeth's (1973)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "other:fama_macbeth",
+      "papers": 3,
+      "specs": 4,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            37,
+            37
+          ],
+          "snippet": "program define xtfmb_mion , eclass sortpreserve byable(recall)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s14",
+          "field": "estimator",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+          "lines": [
+            16,
+            17
+          ],
+          "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/analysis_fama_macbeth.py",
+          "lines": [
+            113,
+            114
+          ],
+          "snippet": "FamaMacBeth(y, x)",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "command",
+      "value": "FamaMacBeth",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/analysis_fama_macbeth.py",
+          "lines": [
+            113,
+            114
+          ],
+          "snippet": "FamaMacBeth(y, x)",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "xtfmb",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s14",
+          "field": "command",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+          "lines": [
+            16,
+            17
+          ],
+          "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "command",
+      "value": "xtfmb_mion",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            37,
+            37
+          ],
+          "snippet": "program define xtfmb_mion , eclass sortpreserve byable(recall)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "se_type",
+      "value": "hac_newey_west",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 3,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s2",
+          "field": "se.type",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            102,
+            102
+          ],
+          "snippet": "newey `var' , lag(`lag') `force'",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s2",
+          "field": "se.type",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/analysis_fama_macbeth.py",
+          "lines": [
+            114,
+            114
+          ],
+          "snippet": "res = mod.fit(cov_type=\"kernel\", kernel=\"newey-west\")",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "se_type",
+      "value": "iid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 1,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            89,
+            89
+          ],
+          "snippet": "qui mvreg `rhsvars' constant = `ones', noconstant",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "diagnostic",
+      "value": "multiple_testing:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 1,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/dataverse_JTU2GF/Table 6_9.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 4,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            3,
+            3
+          ],
+          "snippet": "* This program is an implementation of Fama and MacBeth's (1973)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "d4",
+          "field": "classification_basis",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+          "lines": [
+            16,
+            16
+          ],
+          "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/dataverse_JTU2GF/Table 6_9.do",
+          "lines": [
+            757,
+            757
+          ],
+          "snippet": "asreg `depvar' `MainVars0',  fmb newey(1)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/analysis_fama_macbeth.py",
+          "lines": [
+            36,
+            36
+          ],
+          "snippet": "from linearmodels import FamaMacBeth",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 1,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s14",
+          "field": "resolution_status",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+          "lines": [
+            16,
+            17
+          ],
+          "snippet": "xtfmb percent_im LNbe LNbe_sq profit beta Gat bm if samp , lag(8)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/dataverse_BO8SQ8/programs/programs/02_analysis/analysis_fama_macbeth.py",
+          "lines": [
+            113,
+            114
+          ],
+          "snippet": "FamaMacBeth(y, x)",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/ADOs/xtfmb_mion.ado",
+          "lines": [
+            89,
+            89
+          ],
+          "snippet": "qui mvreg `rhsvars' constant = `ones', noconstant",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "language",
+      "value": "Python",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Python": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "language",
+      "value": "Jupyter",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Jupyter": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2023_103746",
+          "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag042",
+          "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "language",
+      "value": "SAS",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 4,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "SAS": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "convention",
+      "text": "Global macros defined in loops (foreach constructs) to apply factor sets across variable lists",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Combine_All_TimeSeries_Vars.do",
+      "lines": [
+        45,
+        45
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "convention",
+      "text": "Anomaly names shorthand (e.g., AG, NOA, BM) used throughout for sort variables and factors",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        22,
+        22
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "sample_restriction",
+      "text": "All sample group: filter on ret!=. (non-missing returns)",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_1_get_Sortvars_All.do",
+      "lines": [
+        36,
+        37
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "sample_restriction",
+      "text": "Portfolio_Analysis_wOverlap_gt Make_Portf Portf_Ret with overlapping option",
+      "record_id": null,
+      "path": "code/mendeley_tzxtm6ys99_v1/Cooper_Gulen_Ion_Replication_Code_And_Data/07_CODE/Anomalies_2_make_Portfolios.do",
+      "lines": [
+        83,
+        83
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2023_103746",
+      "card_sha256": "57b4f9fa808e507c32d48594ddd285edd586b012bbce2712212bcda1f3fe6faf",
+      "kind": "reading_note",
+      "text": "Master script defines 4 stages: data cleaning, anomaly/factor creation, statistical tests. Focuses on 44 anomalies across 3 frequencies (monthly, quarterly, annual). Key custom ados: xtfmb_mion (Fama-MacBeth), Portfolio_Analysis_wOverlap_gt (portfolio sorts), Barillas_Shanken_maxSR_Test (model comparison). Pipeline emphasizes overlapping portfolio formation and time-series factor model construction.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "lag(8) for time-series averaging",
+      "record_id": "d4",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+      "lines": [
+        16,
+        16
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "controls for multiple firm characteristics",
+      "record_id": "d4",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table1.do",
+      "lines": [
+        16,
+        16
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Fixed effects specification: ab(permno date) notation in reghdfe specifies stock-by-time two-way FE absorption",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        23,
+        23
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Interaction syntax: c.intermediary_shock#c.epsilonit creates fully-interacted term",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        23,
+        23
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Portfolio-level analysis: data aggregated to quintile × date level before ivreg2 estimation",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+        11,
+        11
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Output names: figures exported as .png in Figures/ subdirectory; tables as .tex in Tables/ subdirectory",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        78,
+        78
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "reading_note",
+      "text": "Analyzed master scripts and key analysis/cleaning scripts; found consistent patterns in reghdfe specifications with cluster(permno date) two-way clustering and date/stock FE; xtfmb in Table 1; ivreg2 with Newey-West HAC in portfolio regressions and event study; identified main data sources (CRSP, Compustat, FactSet, FF factors, S34)",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "implementation_feature",
+      "text": "monthly cross-sectional regressions",
+      "record_id": "d2",
+      "path": "code/dataverse_JTU2GF/Table 6_9.do",
+      "lines": [
+        757,
+        757
+      ]
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "implementation_feature",
+      "text": "Newey-West lag(1) adjustment",
+      "record_id": "d2",
+      "path": "code/dataverse_JTU2GF/Table 6_9.do",
+      "lines": [
+        757,
+        757
+      ]
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "implementation_feature",
+      "text": "time-series average of monthly coefficients",
+      "record_id": "d2",
+      "path": "code/dataverse_JTU2GF/Table 6_9.do",
+      "lines": [
+        757,
+        757
+      ]
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "reading_note",
+      "text": "Stata scripts use globals for paths; data files not included. Entry points are individual table-specific .do files. Portfolio returns computed externally from CRSP/Compustat/Interbrand sources.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2026_rfs_hhag042",
+      "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123",
+      "kind": "reading_note",
+      "text": "Pipeline entry orchestrator, main analysis (portfolio sorts, Fama-MacBeth, panel OLS). HAC OLS on portfolio alphas, FamaMacBeth cross-sectional, PanelOLS with two-way clustering traced. MFD constructed as std() of ML forecasts.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet variant: unknown in 3/4 papers; shares are computed over the 1 known papers only",
+    "4/4 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

@@ -1,0 +1,1337 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_114_12_7",
+  "journal": "AER",
+  "year": 2024,
+  "doi": "10.1257/aer.20220908",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_114_12_7.pdf",
+    "pdf_sha256": "500ea5c9fa22ee5dd994be63649c8543f5a529f0e8a880252e1ec5c4d744057b",
+    "text_path": "harness_build/papers/text/aer_114_12_7.txt",
+    "text_sha256": "5c956e606d183b97d87dda7ffe796476fceeac2f2ea5dc63fb31f17fd430c4c4",
+    "pages": 39
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:01:47Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/aer_114_12_7.json",
+    "card_sha256": "eab7125abac719f3ea5d79dc063ffa48e0301ed0028caa90868abd3b469d3270"
+  },
+  "methods": [
+    "rct",
+    "iv"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction and summary of results",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "Section I: Institutional background of Kinshasa's traffic police agency",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "design",
+      "title": "Section II: Experiment design (randomized quota-reduction encouragement)",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "Section III: Data collection branches and data construction",
+      "pages": [
+        9,
+        13
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "Section IV: Descriptive facts on real corruption revenue",
+      "pages": [
+        14,
+        19
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "Section V: Experimental effect of the quota on traffic management and deterrence",
+      "pages": [
+        20,
+        29
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "mechanisms",
+      "title": "Section VI: Rationalizing the quota as an equilibrium corruption contract",
+      "pages": [
+        30,
+        30
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "other",
+      "title": "Section VII: Comparative and historical context for the scheme",
+      "pages": [
+        31,
+        34
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "conclusion",
+      "title": "Section VIII: Conclusion and policy implications",
+      "pages": [
+        35,
+        35
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        36,
+        39
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named"
+      ],
+      "statement": "States the design as a clustered randomized encouragement design at the team-day level, where random assignment to a quota-cap request instruments the realized quota level in a two-stage least squares specification.",
+      "pages": [
+        20,
+        23
+      ],
+      "locator": "Section VB, Estimation",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Discusses three ways bundling the encouragement with a compensating cash transfer to managers could complicate interpretation, and argues each is implausible given how the encouragement was implemented and kept private.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section VB, paragraph before Estimation",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "Frames the empirical exercise around theory-guided testable implications for whether the quota disproportionately induces escorting and false allegations, rather than estimating a driver-compliance elasticity directly.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section VA, Organizing Framework",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "randomization_described"
+      ],
+      "statement": "Describes randomization as independent across teams and stratified by an early versus late day-block within a fixed randomization sample whose horizon was pinned down by a budget-driven stopping rule rather than by observed outcomes.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section IIB, From Random Assignment to the Experiment Sample",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "compliers_described"
+      ],
+      "statement": "Explicitly labels the two-stage least squares coefficient as a local average treatment effect for compliers and distinguishes it from the intention-to-treat coefficient describing the effect of assignment on the full assigned sample.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Section VB, Estimation and Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "States that identification of the quota effect relies on independent randomization of the encouragement at the team-day level and on the encouragement affecting outcomes only through the realized quota, not through other channels.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section VB, Estimation",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Uses a CONSORT-style flow diagram to trace the sample from the initial randomization sample down to the experiment sample, documenting losses due to festivities and a precautionary removal of two teams, and further down to branch-specific analysis samples.",
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "Figure 1, Consort diagram, and Section IIB",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Justifies the removal of two teams from the experiment sample on safety grounds, citing fieldworkers' reports that agents had become fearful of being monitored during a period of heightened scrutiny by a police general.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section IIB, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "States that the unit of assignment and of most outcome regressions is the team-day, while some street-level outcomes in the deterrence analysis are instead measured at the level of individual agent-driver pull-over events.",
+      "pages": [
+        22,
+        27
+      ],
+      "locator": "Section VB Estimation; Table 4 panel B notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "matching_or_linkage_described"
+      ],
+      "statement": "Constructs the analysis data from five independently designed data-collection branches inside stations and street intersections, combining direct observation, self-reported diaries, and station paperwork rather than drawing on a single administrative source.",
+      "pages": [
+        9,
+        13
+      ],
+      "locator": "Section IIIB, The Five Data Collection Branches",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Notes a mild imbalance in encouragement assignment across calendar days despite balance on other pre-treatment characteristics, and states this is addressed in the experiment's estimating equations rather than by dropping observations.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section IIA, Implementation footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Constructs the traffic-outcome dependent variables from street observers' hourly reports as intersection-day-hour indicators, aggregated to an intersection-day count (incidence) and an any-occurrence indicator (occurrence).",
+      "pages": [
+        21,
+        22
+      ],
+      "locator": "Section VB, Estimation",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Defines the team-day quota level as the mode of quota values independently reported across several data branches and daily research-staff meetings rather than reading it off a single administrative record.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section IIIC, Data Construction",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "Constructs the encouragement instrument as an indicator for whether a team-day was randomly selected to receive a quota-cap request, with the cap itself set as a fraction of that team's own pre-study modal quota so the encouragement's magnitude is unit-specific.",
+      "pages": [
+        7,
+        8
+      ],
+      "locator": "Section IIA, The Encouragement to Reduce a Team's Quota for a Day",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Manually classifies open-ended textual descriptions of alleged infractions into a verifiable-versus-unverifiable indicator, and separately hand-codes street pull-over narratives into indicators for use of force, driver dispute, and claim veracity.",
+      "pages": [
+        13,
+        18
+      ],
+      "locator": "Section IIIC, Data Construction; Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "other:predicted_score_construction"
+      ],
+      "statement": "Constructs an out-of-sample predicted station-bribe score and a predicted-fine score for each escorted driver from a regression of realized station bribes on observed driver and vehicle characteristics, then classifies drivers as above or below the median.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section VC, Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported"
+      ],
+      "statement": "Reports first-stage and second-stage panels within the same table, stacking traffic outcomes alongside behavioral-channel outcomes in a shared column structure with fixed effects and observation counts listed for every column.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported",
+        "n_reported"
+      ],
+      "statement": "States the dependent-variable mean for the relevant treatment arm directly above the observation count in each column of the main tables, letting coefficients be benchmarked against a stated baseline level without a separate summary-statistics table.",
+      "pages": [
+        23,
+        31
+      ],
+      "locator": "Tables 3, 4 and 5",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Presents three layered panels for the same outcome set within one table: baseline second-stage IV estimates, the same specification with added temporal and organizational lag controls, and reduced-form intention-to-treat estimates.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Table 3, panels A to C",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes",
+        "se_type_in_notes"
+      ],
+      "statement": "States in table notes that standard errors are shown clustered at two different levels for the same coefficient, with the corresponding number of clusters at each level reported alongside the p-values.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "wild_bootstrap"
+      ],
+      "statement": "Reports standard errors three ways for the same coefficient: unclustered as implied by the assignment procedure, clustered by station-day, and clustered by team using a wild bootstrap score test built for instrumental-variables regressions.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section VB, Estimation",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Uses randomization inference to compute p-values for the intention-to-treat coefficients as an additional inference approach, citing a standard development-economics toolkit reference for the method.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Section VB, Estimates; Table 3 panel C",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "few_clusters_addressed"
+      ],
+      "statement": "Addresses a small number of team clusters by pairing team-level clustered p-values with a wild bootstrap procedure rather than relying on cluster-robust asymptotics alone at that level.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Section VB, Estimation; Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found",
+        "other:multiple_testing_not_addressed"
+      ],
+      "statement": "Does not state any adjustment for multiple testing despite reporting coefficients and p-values for many distinct dependent variables across the traffic-outcome and deterrence tables.",
+      "pages": [
+        23,
+        28
+      ],
+      "locator": "Tables 3 and 4",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "States that several pre-treatment characteristics are balanced across encouragement assignment, pointing to an online appendix balance table rather than reproducing the balance statistics in the main text.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section IIA, Implementation footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "weak_iv_statistic",
+        "first_stage_table"
+      ],
+      "statement": "Reports a weak-instrument-robust effective first-stage F-statistic in the table notes, attributing the statistic to a named econometric method rather than a conventional first-stage F-test.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Table 3 panel A and notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "States that attrition from the target experiment sample is not correlated with potential outcomes, citing an online appendix table rather than presenting the underlying attrition regression in the main text.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section VB, footnote on data construction",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "online_appendix_not_available",
+        "other:spillover_check"
+      ],
+      "statement": "Tests for intertemporal and intrastation spillovers of the encouragement, presenting the underlying estimates only in an online appendix figure and using the check to justify pooling all assigned team-days.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IVC, Validity of the Averages",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:cross_branch_validation"
+      ],
+      "statement": "Validates the reliability of independently collected data branches by reporting, in footnotes, that station-level revenue and escort figures from two separate station-side branches correlate strongly with each other and with an independent street-level branch.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section IIIC, Data Construction, footnotes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:external_validation_check"
+      ],
+      "statement": "Cross-checks the descriptive sample's revenue and quota estimates against independently collected pre-study qualitative proxies and against agents' self-reported income from a post-study exit survey as an informal external validity check.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IVC, Validity of the Averages",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "leave_one_out",
+        "in_appendix"
+      ],
+      "statement": "Reports that the main traffic-outcome estimates are preserved when individual teams, days, or blocks of days are excluded one at a time, with the underlying estimates shown only in an online appendix figure.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section VB, Robustness paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Checks robustness of the traffic-outcome results to alternative measurement sources, including a second handwritten accident record and an alternative external traffic-jam measure collected from public-transport observers passing through the study intersections.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section VB, Robustness paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "Reports the main traffic-outcome and deterrence coefficients both with and without added controls for the lagged treatment indicator and for whether a neighboring team was treated the same day, directly within the main tables.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Table 3 panel B, controlling for temporal and organizational lags",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Checks that the deterrence-related results on escort targeting and allegation type are preserved after controlling for traffic-jam incidence, addressing a concern that congestion-driven visibility rather than the quota itself might explain the pattern.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section VC, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "Narrates robustness checks for the traffic-outcome results as a numbered list of paragraphs within the main results subsection rather than collecting them in a single separate robustness table.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section VB, Robustness paragraph",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Splits escorted drivers by observed and predicted characteristics, such as whether a protector was called and whether predicted station bribe or predicted fine is above or below the sample median, to test a mechanism rather than to describe treatment-effect heterogeneity for its own sake.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Table 4 panel A",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided",
+        "suggestive_labelled"
+      ],
+      "statement": "Frames the escort-targeting and allegation-type results as evidence consistent with an extortion mechanism derived from a simple multitasking framework, explicitly describing them as testable implications rather than as direct proof of the mechanism.",
+      "pages": [
+        20,
+        28
+      ],
+      "locator": "Section VA framework; Section VC results",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "suggestive_labelled"
+      ],
+      "statement": "Qualifies agent absenteeism as only a partial explanation for the effect of the quota on traffic outcomes, drawing on both a behavioral-channel regression and open-ended observer descriptions to suggest other channels are also at play.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Section VB, Behavioral Channels",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives"
+      ],
+      "statement": "Tests an alternative interpretation of the quota as a fiscal instrument for generating fine revenue against a corruption-contract interpretation, using the differential effect on fine versus bribe revenue to argue against the fiscal-instrument account.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Section VI, second subsection; Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "mechanism_evidence",
+      "tags": [
+        "other:qualitative_and_companion_data"
+      ],
+      "statement": "Supports an economic explanation for why driver-agent bargaining over bribes breaks down by combining original qualitative interview quotes with liquidity data drawn from a companion unpublished study of minibus drivers.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VI, first subsection",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "back_of_envelope"
+      ],
+      "statement": "Converts the main IV coefficient into an implied counterfactual change relative to the sample mean of the dependent variable under a hypothetical full removal of the quota, extrapolating outside the range of quota levels actually observed.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section VB, Economic Significance",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "iv"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Benchmarks the implied effect of agent presence on accidents against several published elasticities from a road-safety meta-analysis to judge whether the finding's implied magnitude is plausible relative to existing quantitative estimates.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Section VB, Behavioral Channels, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "monetary_terms",
+        "compared_to_literature"
+      ],
+      "statement": "Interprets descriptive revenue and income findings primarily as ratios, such as bribe revenue as a multiple of official fine revenue and officials' net bribe income as a multiple of official wages and local comparator salaries, rather than through raw currency levels alone.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Section IVD, Interpretation",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "States that the study was not designed to detect changes in driver compliance behavior directly, so deterrence effects are inferred indirectly from agency behavior rather than measured directly in driver outcomes.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section VC, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity"
+      ],
+      "statement": "Notes that the statistically significant traffic-outcome effects are estimated within a small subset of intersections relative to the full city road network, qualifying claims about citywide relevance even as the effect is judged economically large locally.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section VB, Economic Significance",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity"
+      ],
+      "statement": "States in the conclusion that manager-agent schemes documented for this weak-state setting are likely less prevalent, or take a different form, in high-income countries and in low-income countries with stronger state capacity.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Section VIII, Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "scaling_discussed"
+      ],
+      "statement": "Situates the single-city, single-battalion experiment within a broader qualitative and historical review of similar manager-agent schemes documented across countries, sectors, and historical periods, offered as an argument that the underlying mechanism may generalize beyond the study site even though the specific institutional form is context-specific.",
+      "pages": [
+        31,
+        34
+      ],
+      "locator": "Section VII, Corruption Systems in Perspective",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph"
+      ],
+      "statement": "Previews all three main results, the scale of unofficial revenue, the service-degrading effect of the quota, and its rationalization as an equilibrium corruption contract, in the introduction before presenting the data or design.",
+      "pages": [
+        1,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "design_before_data"
+      ],
+      "statement": "Presents the formal experimental design (Section II) before the full data-collection and construction details (Section III), then places a purely descriptive results section (Section IV) between the design and the causal experimental-estimation section (Section V).",
+      "pages": [
+        7,
+        20
+      ],
+      "locator": "Sections II through V headings",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy"
+      ],
+      "statement": "Does not collect robustness checks in a separately labeled robustness section; instead they appear as itemized paragraphs immediately after each main result, with most of the underlying estimates relegated to an online appendix not reproduced in this text.",
+      "pages": [
+        23,
+        28
+      ],
+      "locator": "Section VB and VC, Robustness paragraphs",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph"
+      ],
+      "statement": "Uses short bolded prose labels such as Estimation, Estimates, Economic Significance, Behavioral Channels, and Robustness as internal signposts within the empirical section rather than a single upfront roadmap paragraph.",
+      "pages": [
+        22,
+        26
+      ],
+      "locator": "Section VB",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars",
+        "notes_state_se"
+      ],
+      "statement": "Reports exact clustered and randomization-inference p-values in labeled rows beneath each coefficient in the main tables instead of using conventional significance stars.",
+      "pages": [
+        23,
+        27
+      ],
+      "locator": "Tables 3, 4 and 5",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "States the analysis sample name, the cluster counts at each level, and construction details for each dependent variable directly in the notes beneath the corresponding table.",
+      "pages": [
+        24,
+        31
+      ],
+      "locator": "Table 3, 4 and 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "presentation_convention",
+      "tags": [
+        "other:consort_diagram"
+      ],
+      "statement": "Presents sample attrition from the randomization sample to the analysis sample as a CONSORT trial flow diagram, a reporting convention it explicitly borrows from clinical trial guidelines.",
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "Figure 1",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot"
+      ],
+      "statement": "Combines a frequency bar chart of alleged-infraction types with a paired-bars-and-confidence-interval comparison of station-bribe outcomes across a binary driver characteristic, annotating equality-of-means p-values directly on the plot.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Figure 2",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited"
+      ],
+      "statement": "Cites a dedicated data-and-code deposit for the study, distributed through an academic data repository, as the source for replication materials, without describing in the main text which parts of the underlying micro data are publicly downloadable versus access-restricted.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section III, opening paragraph; References",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "other:multi_branch_data_design"
+      ],
+      "statement": "Categorizes its five data-collection branches into direct observation, self-reported, and administrative-record types, and defends the combined design in a dedicated subsection built around cross-branch correlation checks rather than relying on one canonical source.",
+      "pages": [
+        9,
+        13
+      ],
+      "locator": "Section IIIB and IIIC",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o58",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "irb_stated",
+        "preregistered"
+      ],
+      "statement": "States in the author footnote that IRB approval was obtained from three separate institutions and that the experiment is registered at the AEA RCT Registry, pointing to a dedicated online Ethics Appendix for fuller discussion.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Author footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o59",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "other:compensation_ethics_discussed"
+      ],
+      "statement": "Directly addresses the ethical tension of compensating officials for reducing their own corrupt income, arguing that the encouragement substitutes for illicit revenue rather than legitimizing the underlying scheme, and defers fuller discussion to the online Ethics Appendix.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section IIA, Ethics",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o60",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "other:covert_observation_justified"
+      ],
+      "statement": "States that street observation of agents' publicly visible behavior was conducted without the agents' knowledge, justified on the grounds that there was no reasonable expectation of privacy for conduct occurring in public, with fuller ethics treatment deferred to the online appendix.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Section IIIB, Branch 3",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Baseline specification is two-stage least squares, instrumenting the realized quota level with random assignment to the encouragement.",
+      "card_shows": "Specification s1 uses ivregress 2sls with quota instrumented by itt_quota.",
+      "status": "agree",
+      "pages": [
+        22,
+        23
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Equation (1) includes an intersection (strata) fixed effect and a day fixed effect.",
+      "card_shows": "Specification s1 records fixed_effects int_fe and day_fe.",
+      "status": "agree",
+      "pages": [
+        22,
+        22
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are presented unclustered, clustered by station-day, and clustered by team via wild bootstrap.",
+      "card_shows": "s1 records se cluster_level ps_day; s2 records se type wild_cluster_bootstrap with cluster_level int_fe (team).",
+      "status": "agree",
+      "pages": [
+        22,
+        23
+      ],
+      "card_ref": "s1.se.cluster_level; s2.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Reports cluster-robust, wild bootstrap, and randomization-inference p-values for the same coefficients across the panels.",
+      "card_shows": "s1.se.type is cluster, s2.se.type is wild_cluster_bootstrap, s3.se.type is randomization_inference.",
+      "status": "agree",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "s1.se.type; s2.se.type; s3.se.type"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "States the first stage is strong and reports an effective first-stage F-statistic attributed to a named weak-instrument-robust method.",
+      "card_shows": "Diagnostic x1 (first_stage) status is unknown but its note records that a strong first stage with an F-statistic is reported.",
+      "status": "agree",
+      "pages": [
+        23,
+        24
+      ],
+      "card_ref": "x1",
+      "note": "Card status field is unknown pending code-level verification, but its note text matches the paper's statement."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "States pre-treatment characteristics are balanced across encouragement assignment, apart from a mild imbalance in one dimension addressed in the design.",
+      "card_shows": "Diagnostic x3 (balance) status is unknown; its note records that a balance.do program compares covariates across treatment assignment.",
+      "status": "agree",
+      "pages": [
+        8,
+        8
+      ],
+      "card_ref": "x3"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "The implicit comparison is team-days for the same team not assigned the encouragement, absorbed via intersection and day fixed effects rather than a separate control group.",
+      "card_shows": "Specification s1 records comparison_group as null.",
+      "status": "paper_only",
+      "pages": [
+        22,
+        22
+      ],
+      "card_ref": "s1.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Reports a robustness variant of the main specification that adds the lagged treatment indicator and a neighbor-team treatment indicator as controls.",
+      "card_shows": "Specification s1 records controls_summary as null.",
+      "status": "paper_only",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "s1.controls_summary"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Documents sample construction and exclusions in detail via a Consort diagram, including losses from festivities and a precautionary removal of two teams.",
+      "card_shows": "Pipeline sample_restrictions is an empty list.",
+      "status": "paper_only",
+      "pages": [
+        9,
+        10
+      ],
+      "card_ref": "pipeline.sample_restrictions"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Identifies station reports from Branch 1 (JPOs) and street observations from Branch 3 as the sources feeding the traffic-outcome and deterrence regressions.",
+      "card_shows": "Data entries branch1_descriptive and branch3_daily/branch3_event are recorded as inputs to table-1, table-2 and table-3 scripts.",
+      "status": "agree",
+      "pages": [
+        9,
+        13
+      ],
+      "card_ref": "data[0]; data[2]"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Presents five main numbered tables (Tables 1 through 5) plus two figures in the main text.",
+      "card_shows": "Outputs record only three tables (t1 to t3) as tex outputs, reflecting partial code coverage.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        31
+      ],
+      "card_ref": "outputs.tables"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No weighting scheme is mentioned for the main experimental specifications.",
+      "card_shows": "Specification weights fields are null across s1, s2 and s3.",
+      "status": "agree",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "s1.weights; s2.weights; s3.weights"
+    }
+  ],
+  "gaps": [
+    "No stated adjustment for multiple testing across the many dependent variables tested in Tables 3 through 5.",
+    "No conventional summary-statistics table (variable-level means, standard deviations, min, max) appears in the main text; Table 1 instead reports revenue ratios by data branch.",
+    "Main text does not name the statistical software used for estimation, though the recipe card records Stata and R from the replication code.",
+    "Main text does not describe deviations from a pre-analysis plan or state whether one exists beyond noting AEA RCT registry registration.",
+    "Main text does not state whether the underlying micro data are publicly downloadable or access-restricted; it only cites the archived data-and-code deposit.",
+    "Balance, attrition, and spillover diagnostics referenced in the main text point to online appendix tables and figures not present in this extracted text, so their content could not be directly verified."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        39
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full extracted text page by page, introduction through references. The paper's appendices (Ethics Appendix, Study Documentation, Mathematical Appendix, Qualitative Quotes Appendix, and numbered online Appendix tables/figures A1-A13) are hosted online and are not part of this extracted PDF text, so their content is described only where the main text summarizes it and is otherwise flagged as unavailable."
+  }
+}

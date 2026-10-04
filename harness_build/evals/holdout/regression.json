@@ -1,0 +1,36 @@
+{
+  "method": "regression",
+  "seed": 20260908,
+  "share": 0.25,
+  "generated_at": "2026-09-08T15:13:59Z",
+  "n_cards": 8,
+  "n_groups": 8,
+  "shared_file_groups": [],
+  "holdout": [
+    "jpe_133_5_2",
+    "restud_2026_restud_rdag050"
+  ],
+  "distill": [
+    "aer_112_10_8",
+    "jpe_2025_735509",
+    "restud_2025_restud_rdae072",
+    "restud_2025_restud_rdaf004",
+    "restud_2025_restud_rdaf104",
+    "restud_2026_restud_rdaf027"
+  ],
+  "inputs": [
+    {
+      "path": "Paper/AER/metadata/files.csv",
+      "sha256": "52218942e4b6ead30f5ec42732353d34817347176e48cc91c81f41eef4549054"
+    },
+    {
+      "path": "Paper/JPE/metadata/files.csv",
+      "sha256": "a517101affe38152f98750cacfa46f4eda8b3b94ce15d220e7c0c00f4d13afcb"
+    },
+    {
+      "path": "Paper/ReStud/metadata/files.csv",
+      "sha256": "378f2f022f1e6052479cf489475639a41f43346da5d714217a28284159b68e3e"
+    }
+  ],
+  "rule": "paper-level split; papers sharing identical source-file hashes (files.csv) stay on one side; deterministic per seed+method"
+}

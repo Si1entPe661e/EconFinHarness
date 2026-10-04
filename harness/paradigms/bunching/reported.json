@@ -1,0 +1,4733 @@
+{
+  "schema_version": "paradigm-reported-v1",
+  "method": "bunching",
+  "status": "draft",
+  "generated_at": "2026-09-09T01:06:38Z",
+  "generator": {
+    "name": "fhb papers distill",
+    "version": "fhb-papers-0.1.0",
+    "sha256": "5acc9556a202e203c4d8f7d3590414e788feeeab31cb3320136bec686a6a3e0d",
+    "counting_unit": "paper",
+    "rule": "a tag counts once per paper; denominators are papers whose note lists the method; a missing tag means the note-taker did not record it, not that the paper lacks it"
+  },
+  "inputs": [
+    {
+      "artid": "aer_111_4_3",
+      "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+      "journal": "AER",
+      "year": 2021,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "aer_112_10_8",
+      "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+      "journal": "AER",
+      "year": 2022,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+      "journal": "Econometrica",
+      "year": 2025,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdag037",
+      "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    },
+    {
+      "artid": "restud_2026_restud_rdag071",
+      "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+      "journal": "ReStud",
+      "year": 2026,
+      "coverage": "full",
+      "card_link": true
+    }
+  ],
+  "inputs_excluded": [],
+  "denominators": {
+    "papers": 5,
+    "by_journal": {
+      "AER": 2,
+      "Econometrica": 1,
+      "ReStud": 2
+    },
+    "by_year": {
+      "2021": 1,
+      "2022": 1,
+      "2025": 1,
+      "2026": 2
+    },
+    "with_card": 5,
+    "papers_with_category": {
+      "design_statement": 5,
+      "sample_construction": 4,
+      "variable_construction": 4,
+      "inference_justification": 3,
+      "diagnostic_reported": 4,
+      "robustness_reported": 4,
+      "heterogeneity_reported": 3,
+      "mechanism_evidence": 4,
+      "magnitude_interpretation": 3,
+      "limitation_stated": 3,
+      "presentation_convention": 5,
+      "writing_structure": 4,
+      "replication_statement": 4,
+      "data_access": 3,
+      "specification_reporting": 2,
+      "external_validity": 2
+    }
+  },
+  "observations": [
+    {
+      "category": "data_access",
+      "tag": "administrative",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o54",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "Survey data are merged onto the administrative pension records at an aggregated occupation level to add worker and firm characteristics not available in the administrative source, producing what the paper calls an occupation-matched sample.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o54",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 2.2",
+          "statement": "The underlying data are described as administrative program records assembled during loan underwriting, including income verified against tax records, a credit-bureau report, and an onsite property-damage assessment, rather than survey-collected or purchased commercial data.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o50",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section 3",
+          "statement": "Data are public administrative releases (USSC, EOUSA case files, state inmate records, seizure systems) and national surveys, combined with a published state-level index; no restricted-access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_restricted",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o53",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Title footnote",
+          "statement": "A title-page footnote directs readers to the journal's article page for additional materials and an author disclosure statement, while the underlying administrative dataset is described as obtained through a research data center rather than distributed with the paper.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o54",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 2.2",
+          "statement": "The underlying data are described as administrative program records assembled during loan underwriting, including income verified against tax records, a credit-bureau report, and an onsite property-damage assessment, rather than survey-collected or purchased commercial data.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "linked_records",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o54",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "Survey data are merged onto the administrative pension records at an aggregated occupation level to add worker and firm characteristics not available in the administrative source, producing what the paper calls an occupation-matched sample.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o50",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section 3",
+          "statement": "Data are public administrative releases (USSC, EOUSA case files, state inmate records, seizure systems) and national surveys, combined with a published state-level index; no restricted-access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "data_access_procedure_described",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o53",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Title footnote",
+          "statement": "A title-page footnote directs readers to the journal's article page for additional materials and an author disclosure statement, while the underlying administrative dataset is described as obtained through a research data center rather than distributed with the paper.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "public_use",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o50",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section 3",
+          "statement": "Data are public administrative releases (USSC, EOUSA case files, state inmate records, seizure systems) and national surveys, combined with a published state-level index; no restricted-access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "data_access",
+      "tag": "survey_collected",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o50",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section 3",
+          "statement": "Data are public administrative releases (USSC, EOUSA case files, state inmate records, seizure systems) and national surveys, combined with a published state-level index; no restricted-access procedure is described.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "design_variant_named",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o1",
+          "pages": [
+            13,
+            20
+          ],
+          "locator": "Section II.B and Section III.B, equations (3) and (5)",
+          "statement": "The paper frames its central estimand as the direct behavioral effect of statutory retirement ages on bunching, net of underlying financial incentives, formalized as coefficients on statutory-age type dummies in a discontinuity-level regression.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o1",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section 3.2",
+          "statement": "The paper names its preferred design a difference-in-bunching estimator and explicitly frames it as similar to an individual-level difference-in-differences design that uses covariates.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o1",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Section 4, Section 4.1",
+          "statement": "The empirical strategy is named as the difference-in-bunching method following Kleven; the estimand is the change in the probability a case falls in a narrow bin just above the new threshold, comparing post-reform to pre-reform distributions. The counterfactual assumption (pre-2010 distribution as c",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o5",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section 3",
+          "statement": "The bunching section states the theoretical prediction (excess mass below the notch) and tests it visually with density plots in two data sources rather than with a formal bunching estimator.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "identifying_assumption_explicit",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o2",
+          "pages": [
+            13,
+            14
+          ],
+          "locator": "Section II.B",
+          "statement": "Two explicit, numbered identifying assumptions (labeled Assumption A and Assumption B) are stated, requiring that structural elasticities not vary systematically with the presence of a statutory age, at the pooled and within-group level respectively.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o3",
+          "pages": [
+            9,
+            23
+          ],
+          "locator": "Section I.B footnote; Section III.C Fact 3",
+          "statement": "The reference point for loss aversion is assumed to equal the nominal original purchase price throughout, an assumption the authors call restrictive but defend using the sharp bunching of realized sales at exactly that point as nonparametric supporting evidence.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o2",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Section 3.3",
+          "statement": "Authors state the identifying assumption that, within the bunching region, disaster loss size is plausibly independent of a household's private collateral value conditional on covariates, and describe checking this by regressing distance-to-threshold on observables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o1",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Section 4, Section 4.1",
+          "statement": "The empirical strategy is named as the difference-in-bunching method following Kleven; the estimand is the change in the probability a case falls in a narrow bin just above the new threshold, comparing post-reform to pre-reform distributions. The counterfactual assumption (pre-2010 distribution as c",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "threats_discussed",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o3",
+          "pages": [
+            13,
+            22
+          ],
+          "locator": "Sections II.B and III.C",
+          "statement": "The authors discuss as a threat to identification that observed differences in bunching across discontinuity types could reflect systematic differences in underlying financial-incentive elasticities rather than a genuine statutory-age effect, motivating the stated assumptions.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o2",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Section 3.3",
+          "statement": "Authors state the identifying assumption that, within the bunching region, disaster loss size is plausibly independent of a household's private collateral value conditional on covariates, and describe checking this by regressing distance-to-threshold on observables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o2",
+          "pages": [
+            9,
+            11
+          ],
+          "locator": "Section 4, Section 4.2",
+          "statement": "A second, separately stated assumption is used for the conditional racial disparity: the pre-2010 distribution above the old threshold reflects true drug involvement. The author spells out how each direction of possible bias in pre-2010 charged amounts would change the interpretation of equal distri",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o6",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Section 3.2 and footnote 23",
+          "statement": "The author explicitly discusses that the absence of bunching in camera data could reflect drivers slowing before known cameras, and uses the anonymous full-traffic distributions and one co-located station to address it.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "estimand_named",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o1",
+          "pages": [
+            13,
+            20
+          ],
+          "locator": "Section II.B and Section III.B, equations (3) and (5)",
+          "statement": "The paper frames its central estimand as the direct behavioral effect of statutory retirement ages on bunching, net of underlying financial incentives, formalized as coefficients on statutory-age type dummies in a discontinuity-level regression.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o1",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Section 3.2",
+          "statement": "The paper names its preferred design a difference-in-bunching estimator and explicitly frames it as similar to an individual-level difference-in-differences design that uses covariates.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o1",
+          "pages": [
+            9,
+            10
+          ],
+          "locator": "Section 4, Section 4.1",
+          "statement": "The empirical strategy is named as the difference-in-bunching method following Kleven; the estimand is the change in the probability a case falls in a narrow bin just above the new threshold, comparing post-reform to pre-reform distributions. The counterfactual assumption (pre-2010 distribution as c",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "other:multi_discontinuity_bunching",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o4",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section II.B",
+          "statement": "The approach is named as a multi-discontinuity extension of the standard bunching estimator, distinguishing threshold-specific observed elasticities from structural parameters recovered by pooling many bunching observations in one regression.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "other:smooth_counterfactual_density_argued",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o5",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section II.A, footnote",
+          "statement": "Identification of bunching itself rests on an explicitly stated assumption that the retirement-age density would have been smooth absent the threshold, noted before the excess-mass formula is derived.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "design_statement",
+      "tag": "parallel_trends_argued",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o3",
+          "pages": [
+            15,
+            16
+          ],
+          "locator": "Section 3.2, Figure 6",
+          "statement": "The event-study-style bunching plot is used as an internal placebo check: loan amounts for borrowers whose predicted ideal amount falls below the lower threshold are argued to be unaffected by the collateral rule, serving the same role as a pre-trend test.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_main_text",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o26",
+          "pages": [
+            24,
+            26
+          ],
+          "locator": "Section IV.A-B",
+          "statement": "Two policy reforms are used as quasi-diagnostic checks on the proposed mechanism, examining whether bunching shifts in lockstep with a gradually phased statutory-age change and whether increased information-letter frequency shifts bunching toward the age emphasized in the letters.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o22",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section 2.2, Figure 3",
+          "statement": "A figure showing that loan approval and offered interest rates are smooth through the collateral threshold is reported in the main text as a design diagnostic supporting the claim that collateral provision is not supply-driven.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o23",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, Figure A11",
+          "statement": "The paper checks that the pre-reform share of cases in the future bunching bin is stable near zero across years (supporting the counterfactual) and reports the density of cases around the Supreme Court decision date in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "density_test",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o25",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Figure 6; Section III.C",
+          "statement": "Excess bunching mass at the reference point is quantified against an explicit counterfactual distribution built from potential (rather than realized) gains, with bootstrap-based confidence bands shown directly on the bunching figure, following the bunching-estimator literature.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o23",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, Figure A11",
+          "statement": "The paper checks that the pre-reform share of cases in the future bunching bin is stable near zero across years (supporting the counterfactual) and reports the density of cases around the Supreme Court decision date in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "in_appendix",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o25",
+          "pages": [
+            22,
+            34
+          ],
+          "locator": "text references to online Appendix Figures A5 and A12",
+          "statement": "Additional diagnostic exercises, including density comparisons split by statutory-age type and sensitivity of heterogeneity results to alternative residualization controls, are reported only in the online appendix rather than the main text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o23",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section 5.3, Figure A11",
+          "statement": "The paper checks that the pre-reform share of cases in the future bunching bin is stable near zero across years (supporting the counterfactual) and reports the density of cases around the Supreme Court decision date in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:bunching_counterfactual",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o25",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Figure 6; Section III.C",
+          "statement": "Excess bunching mass at the reference point is quantified against an explicit counterfactual distribution built from potential (rather than realized) gains, with bootstrap-based confidence bands shown directly on the bunching figure, following the bunching-estimator literature.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:reform_based_placebo_check",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o26",
+          "pages": [
+            24,
+            26
+          ],
+          "locator": "Section IV.A-B",
+          "statement": "Two policy reforms are used as quasi-diagnostic checks on the proposed mechanism, examining whether bunching shifts in lockstep with a gradually phased statutory-age change and whether increased information-letter frequency shifts bunching toward the age emphasized in the letters.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "other:smoothness_check",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o22",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section 2.2, Figure 3",
+          "statement": "A figure showing that loan approval and offered interest rates are smooth through the collateral threshold is reported in the main text as a design diagnostic supporting the claim that collateral provision is not supply-driven.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "placebo_outcomes",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o24",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Figure 2a and notes",
+          "statement": "Distributional equality by race in the pre-reform window is tested with a Kolmogorov-Smirnov test, shown as overlaid distributions in a main-text figure with the test result in the notes.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "diagnostic_reported",
+      "tag": "pre_trends_plot",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o23",
+          "pages": [
+            15,
+            16
+          ],
+          "locator": "Section 3.2, Figure 6",
+          "statement": "The difference-in-bunching coefficient plot with confidence intervals is used to display a precisely estimated null response for loss bins below the lower threshold, serving as a pre-trend-style diagnostic in the main text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "scaling_discussed",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o44",
+          "pages": [
+            37,
+            37
+          ],
+          "locator": "Section 6, footnote 36",
+          "statement": "The conclusion explicitly cautions that the specific magnitudes of collateral aversion may not generalize across other consumer credit settings, citing prior evidence that credit demand and default penalties vary with loan product and legal context.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o51",
+          "pages": [
+            12,
+            31
+          ],
+          "locator": "footnote 9, Table A2, Section 5.5.3",
+          "statement": "The author argues the setting is chosen for identification but notes bunching disparities appear for other drugs and that bunching attorneys bunch at other thresholds, and uses this to justify extrapolating to all federal drug cases in the cost exercise.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "external_validity",
+      "tag": "site_specific",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o43",
+          "pages": [
+            5,
+            6
+          ],
+          "locator": "Section 1",
+          "statement": "The authors explicitly discuss that their sample of households who recently experienced a disaster is a distinct environment from the typically studied mortgage-borrowing population, while arguing the underlying secured-versus-unsecured borrowing trade-off is preserved.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o51",
+          "pages": [
+            12,
+            31
+          ],
+          "locator": "footnote 9, Table A2, Section 5.5.3",
+          "statement": "The author argues the setting is chosen for identification but notes bunching disparities appear for other drugs and that bunching attorneys bunch at other thresholds, and uses this to justify extrapolating to all federal drug cases in the cost exercise.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "mechanism_motivated",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o32",
+          "pages": [
+            22,
+            28
+          ],
+          "locator": "Sections III.C and IV.C",
+          "statement": "The heterogeneity analysis is framed as a check on the identifying assumption and on alternative behavioral mechanisms, such as financial sophistication and firm-driven layoffs, rather than as a policy-relevant treatment-effect heterogeneity exercise in its own right.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o31",
+          "pages": [
+            28,
+            30
+          ],
+          "locator": "Section 5.1.2",
+          "statement": "Bunching behavior is examined across bins of an existing-mortgage leverage ratio to argue for a role of nonfinancial factors, and the authors explicitly label a related set of null results for household-composition proxies as inconclusive because of data limitations.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o32",
+          "pages": [
+            24,
+            26
+          ],
+          "locator": "Table 7, Figure 4",
+          "statement": "Heterogeneity is estimated by fully interacting the race model with binary offender or district characteristics, one per column, and used as a test that race is not a proxy for those characteristics; narrower splits by criminal history and predicted-sentence quantiles are shown graphically with with",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "exploratory_labelled",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o33",
+          "pages": [
+            27,
+            27
+          ],
+          "locator": "Section IV.C, footnote",
+          "statement": "Results from heterogeneity by financial-sophistication proxies are explicitly described as sensitive to the choice of control variables used in the residualizing regression, with this caveat stated directly rather than left implicit.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o30",
+          "pages": [
+            26,
+            28
+          ],
+          "locator": "Section 5.1.1",
+          "statement": "Subgroup comparisons around the bunching threshold by ex ante creditworthiness and income are presented as descriptive evidence bearing on a selection mechanism rather than as a pre-specified heterogeneity test.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "interaction",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o31",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section III.C, Figure 5",
+          "statement": "Heterogeneity in observed bunching elasticities is reported by sorting discontinuities into quintiles of residualized worker and occupation characteristics after first partialling out other observables via an auxiliary regression.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o32",
+          "pages": [
+            24,
+            26
+          ],
+          "locator": "Table 7, Figure 4",
+          "statement": "Heterogeneity is estimated by fully interacting the race model with binary offender or district characteristics, one per column, and used as a test that race is not a proxy for those characteristics; narrower splits by criminal history and predicted-sentence quantiles are shown graphically with with",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "split_sample",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o30",
+          "pages": [
+            26,
+            28
+          ],
+          "locator": "Section 5.1.1",
+          "statement": "Subgroup comparisons around the bunching threshold by ex ante creditworthiness and income are presented as descriptive evidence bearing on a selection mechanism rather than as a pre-specified heterogeneity test.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o32",
+          "pages": [
+            24,
+            26
+          ],
+          "locator": "Table 7, Figure 4",
+          "statement": "Heterogeneity is estimated by fully interacting the race model with binary offender or district characteristics, one per column, and used as a test that race is not a proxy for those characteristics; narrower splits by criminal history and predicted-sentence quantiles are shown graphically with with",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "heterogeneity_reported",
+      "tag": "quantile",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o31",
+          "pages": [
+            22,
+            23
+          ],
+          "locator": "Section III.C, Figure 5",
+          "statement": "Heterogeneity in observed bunching elasticities is reported by sorting discontinuities into quintiles of residualized worker and occupation characteristics after first partialling out other observables via an auxiliary regression.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "no_justification_found",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o22",
+          "pages": [
+            15,
+            17
+          ],
+          "locator": "Figure 3 notes",
+          "statement": "For the specific-discontinuity comparison figures earlier in the results section, standard errors shown in parentheses are described only as bootstrapped, with no separate discussion of the inference method for those particular estimates.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o20",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Table 2 notes, Section 5.1.1",
+          "statement": "Robust standard errors are used for the main specification without an explicit rationale in the text; alternative standard error methods are mentioned only as an appendix robustness item.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "cluster_at_assignment_level",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o20",
+          "pages": [
+            15,
+            16
+          ],
+          "locator": "Section 3.2",
+          "statement": "Standard errors for the bunching-based estimates are block-bootstrapped at the disaster level, justified explicitly as the unit at which the collateral threshold (the source of identifying variation) is assigned, citing published methodological guidance on clustering choice.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "cluster_at_unit_level",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o21",
+          "pages": [
+            19,
+            20
+          ],
+          "locator": "Section 5.2.3, Table 5 notes",
+          "statement": "For prosecutor-level regressions, standard errors are clustered at the prosecutor level (the unit whose classification defines the regressor) and the notes report that bootstrapping to account for the estimated classification gives similar results; the share of bunching attorneys gets a stratified b",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "few_clusters_addressed",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o19",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Figure A4a",
+          "statement": "Because the post-reform white subsample is small, the author runs a placebo exercise reassigning white offenders to the bunching bin at the minority rates and compares the actual disparity to the placebo distribution, reporting the exercise in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:bootstrap_for_generated_regressor",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o21",
+          "pages": [
+            19,
+            20
+          ],
+          "locator": "Section 5.2.3, Table 5 notes",
+          "statement": "For prosecutor-level regressions, standard errors are clustered at the prosecutor level (the unit whose classification defines the regressor) and the notes report that bootstrapping to account for the estimated classification gives similar results; the share of bunching attorneys gets a stratified b",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "other:joint_test_over_bins",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o22",
+          "pages": [
+            16,
+            17
+          ],
+          "locator": "Section 5.1.3, Figure 2b notes",
+          "statement": "When many narrow-bin coefficients are individually noisy, the author reports a joint test over the contiguous range rather than relying on single bins, and states which bins are individually significant in the figure notes.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "inference_justification",
+      "tag": "randomization_inference",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o19",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Figure A4a",
+          "statement": "Because the post-reform white subsample is small, the author runs a placebo exercise reassigning white offenders to the bunching bin at the minority rates and compares the actual disparity to the placebo distribution, reporting the exercise in an appendix figure.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "identification_caveat",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o41",
+          "pages": [
+            38,
+            38
+          ],
+          "locator": "Section VII",
+          "statement": "The conclusion explicitly states that the paper remains agnostic about the welfare consequences of policies that manipulate statutory ages, since evaluating welfare would require a normative stance on how reference-point effects should enter welfare calculations.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o40",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Section 3.2",
+          "statement": "The authors state that the difference-in-bunching approach is limited to households whose losses fall below the higher of the two compared thresholds, capping the range of ideal loan amounts for which collateral aversion can be directly estimated by that method.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o41",
+          "pages": [
+            13,
+            21
+          ],
+          "locator": "footnote 10, Section 5.1.2, 5.2.3, 5.2.4",
+          "statement": "The author states that the missing mass cannot be shown with certainty to be where excess-mass cases would have been recorded, that trial status is endogenous, and that case assignment to prosecutors is not random.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "data_coverage",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o42",
+          "pages": [
+            28,
+            28
+          ],
+          "locator": "Section IV.C",
+          "statement": "The authors state that the role of liquidity constraints at the early retirement age cannot be fully verified because no data on individual assets are available, and note this as a reason for narrowing the structural interpretation to later statutory ages.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o42",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section 5.2.2 and 5.2.3, Figure 3 notes",
+          "statement": "Limitations of the prosecutor files are stated: no race field, many missing quantities, and small caseloads per attorney that prevent identifying bad behaviour by individuals.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "interpretation_caveat",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o41",
+          "pages": [
+            38,
+            38
+          ],
+          "locator": "Section VII",
+          "statement": "The conclusion explicitly states that the paper remains agnostic about the welfare consequences of policies that manipulate statutory ages, since evaluating welfare would require a normative stance on how reference-point effects should enter welfare calculations.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o43",
+          "pages": [
+            2,
+            24
+          ],
+          "locator": "Section 1, Section 5.4",
+          "statement": "The paper clarifies it is not an evaluation of the reform, that the results do not imply discretion began after the reform, and that taste-based bias is identified only under the benchmark-test assumptions.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "measurement",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o41",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section 3.4.2",
+          "statement": "The original-request proxy for a household's ideal loan amount is flagged as requiring imputation for early bunchers, and the authors note this could introduce selection if households who bunch immediately differ unobservably (for example in sophistication) from other bunchers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o42",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section 5.2.2 and 5.2.3, Figure 3 notes",
+          "statement": "Limitations of the prosecutor files are stated: no race field, many missing quantities, and small caseloads per attorney that prevent identifying bad behaviour by individuals.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "power",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o42",
+          "pages": [
+            29,
+            30
+          ],
+          "locator": "Section 5.1.2",
+          "statement": "Null results for two proxies intended to capture school-aged-children considerations are explicitly labeled inconclusive by the authors rather than as evidence against a schooling-related mechanism, because the proxies only approximate the underlying construct.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "limitation_stated",
+      "tag": "selection",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o41",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section 3.4.2",
+          "statement": "The original-request proxy for a household's ideal loan amount is flagged as requiring imputation for early bunchers, and the authors note this could introduce selection if households who bunch immediately differ unobservably (for example in sophistication) from other bunchers.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "back_of_envelope",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o36",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section 1, footnote 1",
+          "statement": "The back-of-envelope net-present-value translation of collateral aversion is benchmarked against an independently estimated interest-rate demand elasticity for the same loan program from a companion paper, expressing the response as an equivalent change in the program's interest rate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o39",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Section 5.5.3, Table A21",
+          "statement": "A back-of-envelope exercise converts sentencing effects into sentence-years and dollar costs using a per-year incarceration cost from cited studies, applies the bunching rates to all federal drug cases under an explicitly conservative assumption, and reports alternative assumptions in an appendix ta",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "compared_to_literature",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o38",
+          "pages": [
+            23,
+            23
+          ],
+          "locator": "Section III.A",
+          "statement": "The estimated retirement-age elasticity with respect to financial incentives is explicitly benchmarked against elasticities from prior studies that use different institutional settings and data sources.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o36",
+          "pages": [
+            3,
+            3
+          ],
+          "locator": "Section 1, footnote 1",
+          "statement": "The back-of-envelope net-present-value translation of collateral aversion is benchmarked against an independently estimated interest-rate demand elasticity for the same loan program from a companion paper, expressing the response as an equivalent change in the program's interest rate.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "cost_benefit",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o39",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Section 5.5.3, Table A21",
+          "statement": "A back-of-envelope exercise converts sentencing effects into sentence-years and dollar costs using a per-year incarceration cost from cited studies, applies the bunching rates to all federal drug cases under an explicitly conservative assumption, and reports alternative assumptions in an appendix ta",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "monetary_terms",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o39",
+          "pages": [
+            31,
+            32
+          ],
+          "locator": "Section 5.5.3, Table A21",
+          "statement": "A back-of-envelope exercise converts sentencing effects into sentence-years and dollar costs using a per-year incarceration cost from cited studies, applies the bunching rates to all federal drug cases under an explicitly conservative assumption, and reports alternative assumptions in an appendix ta",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "precision_discussed",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o38",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Section 5.1.1 and 5.1.2",
+          "statement": "Effect sizes are interpreted as ratios of the race-specific coefficients and as the share of the excess mass accounted for by the missing mass below the threshold, with a confidence interval on that share; imprecision for the small white subsample is discussed explicitly.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "magnitude_interpretation",
+      "tag": "relative_to_mean",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 3,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o38",
+          "pages": [
+            12,
+            13
+          ],
+          "locator": "Section 5.1.1 and 5.1.2",
+          "statement": "Effect sizes are interpreted as ratios of the race-specific coefficients and as the share of the excess mass accounted for by the missing mass below the threshold, with a confidence interval on that share; imprecision for the small white subsample is discussed explicitly.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "ruled_out_alternatives",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o36",
+          "pages": [
+            26,
+            27
+          ],
+          "locator": "Section IV.C",
+          "statement": "The authors examine whether employer-driven layoff incentives can explain the statutory-age effect by comparing bunching among self-employed workers and workers in firms exempt from employment-protection rules to the full sample, concluding that firm responses do not appear to be the primary driver.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o34",
+          "pages": [
+            28,
+            29
+          ],
+          "locator": "Section 5.1.2, Figure 10",
+          "statement": "Borrowers with no remaining financial stake in their home (already underwater on an existing mortgage) are examined separately to isolate a nonfinancial home-attachment mechanism from an equity-driven financial mechanism, since the two would otherwise be observationally similar.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o34",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Section 5.2.1, Tables A7 and A8",
+          "statement": "Alternative channels (offender behaviour, state-to-federal case shifting, law enforcement tactics) are each ruled out with a dataset from the corresponding stage of the process before turning to prosecutors, and the absence of bunching in seizure records is used to locate discretion at the prosecuto",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o39",
+          "pages": [
+            15,
+            33
+          ],
+          "locator": "Sections 4 intro and 5; Table 4",
+          "statement": "Two competing frictions (adjustment costs vs information frictions) are set up ex ante with opposing predictions for ex post reactions; a stylized model section and a prediction table map findings to models.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "model_guided",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o34",
+          "pages": [
+            24,
+            25
+          ],
+          "locator": "Section IV.A, Figure 6",
+          "statement": "A gradual, cohort-by-cohort phase-in of a statutory-age reform is used as a natural experiment, showing that the location of bunching tracks the monthly statutory-age schedule throughout the transition period.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o36",
+          "pages": [
+            27,
+            29
+          ],
+          "locator": "Section 5.4.3",
+          "statement": "Statistical versus taste-based discrimination is discussed through a simple model whose implications are checked against within-district prosecutor variation and prosecutor experience measures; the animus correlation is presented as suggestive evidence of taste-based bias.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o39",
+          "pages": [
+            15,
+            33
+          ],
+          "locator": "Sections 4 intro and 5; Table 4",
+          "statement": "Two competing frictions (adjustment costs vs information frictions) are set up ex ante with opposing predictions for ex post reactions; a stylized model section and a prediction table map findings to models.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "intermediate_outcomes",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o34",
+          "pages": [
+            24,
+            25
+          ],
+          "locator": "Section IV.A, Figure 6",
+          "statement": "A gradual, cohort-by-cohort phase-in of a statutory-age reform is used as a natural experiment, showing that the location of bunching tracks the monthly statutory-age schedule throughout the transition period.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o34",
+          "pages": [
+            17,
+            18
+          ],
+          "locator": "Section 5.2.1, Tables A7 and A8",
+          "statement": "Alternative channels (offender behaviour, state-to-federal case shifting, law enforcement tactics) are each ruled out with a dataset from the corresponding stage of the process before turning to prosecutors, and the absence of bunching in seizure records is used to locate discretion at the prosecuto",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "suggestive_labelled",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o35",
+          "pages": [
+            26,
+            26
+          ],
+          "locator": "Section IV.B",
+          "statement": "Evidence on the effect of increased information-letter frequency on bunching at the associated statutory age is explicitly described by the authors as suggestive rather than conclusive.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o35",
+          "pages": [
+            21,
+            21
+          ],
+          "locator": "Section 5.2.5, Tables A11 and A12, Figure A10",
+          "statement": "Persistence of prosecutor bunching across districts, thresholds and time, and spillovers to colleagues after a bunching attorney moves, are used to argue the metric captures prosecutor type; the spillover evidence is labelled highly suggestive.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "mechanism_evidence",
+      "tag": "heterogeneity_as_mechanism",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o33",
+          "pages": [
+            26,
+            28
+          ],
+          "locator": "Section 5.1.1.1, Figure 9",
+          "statement": "Both ex ante credit-quality comparisons and ex post realized-default comparisons around the bunching threshold are presented together as evidence pointing toward an advantageous-selection mechanism rather than the adverse-selection mechanism usually assumed for collateral.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_sample",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o46",
+          "pages": [
+            12,
+            20
+          ],
+          "locator": "Table 2 and Table 4 notes",
+          "statement": "Table and figure notes consistently spell out the estimation sample, the weighting scheme, and the type of standard error underlying the reported numbers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o45",
+          "pages": [
+            8,
+            8
+          ],
+          "locator": "Table I",
+          "statement": "A detailed summary-statistics table reporting the mean, standard deviation, and several percentiles for key borrower variables appears early in the paper, with all variable definitions and the winsorization rule given entirely within the table note rather than in the main prose.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            12
+          ],
+          "locator": "Table 1, Table 2, Figure 1",
+          "statement": "Figures begin with raw density histograms of drug amounts pre and post reform and a yearly share plot by race; tables use three-level significance stars, and notes state the data source, standard error type, the estimating equation, and pointers to appendix variants. A summary statistics table by pe",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o46",
+          "pages": [
+            13,
+            23
+          ],
+          "locator": "Figures 3-9",
+          "statement": "Figures include raw density plots by speed zone and normalized pooled versions, binned outcome-by-running-variable plots, and coefficient-over-horizon plots with shaded bands; notes state clustering and refer to the sample-construction section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "notes_state_se",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o46",
+          "pages": [
+            12,
+            20
+          ],
+          "locator": "Table 2 and Table 4 notes",
+          "statement": "Table and figure notes consistently spell out the estimation sample, the weighting scheme, and the type of standard error underlying the reported numbers.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o39",
+          "pages": [
+            18,
+            26
+          ],
+          "locator": "Figures 2, 4, 6, 7",
+          "statement": "Figures throughout use binned-average plots with polynomial or nonparametric smoothers overlaid, and several explicitly report bootstrap-based confidence bands as dotted lines around the binned averages rather than relying on analytic standard errors.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            12
+          ],
+          "locator": "Table 1, Table 2, Figure 1",
+          "statement": "Figures begin with raw density histograms of drug amounts pre and post reform and a yearly share plot by race; tables use three-level significance stars, and notes state the data source, standard error type, the estimating equation, and pointers to appendix variants. A summary statistics table by pe",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o46",
+          "pages": [
+            13,
+            23
+          ],
+          "locator": "Figures 3-9",
+          "statement": "Figures include raw density plots by speed zone and normalized pooled versions, binned outcome-by-running-variable plots, and coefficient-over-horizon plots with shaded bands; notes state clustering and refer to the sample-construction section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "coefficient_plot",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o47",
+          "pages": [
+            15,
+            16
+          ],
+          "locator": "Section 3.2, Figure 6",
+          "statement": "Coefficient-style plots with confidence intervals, rather than a coefficient table, are the primary device used to present the difference-in-bunching treatment effects across loss bins.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o45",
+          "pages": [
+            17,
+            30
+          ],
+          "locator": "Figure 2b, Figure 5",
+          "statement": "Later figures include a coefficient plot of bin-by-bin race differences scaled by bin share, RD-style binned plots of sentence against drug amount with linear fits on each side, and event-study plots for the FSA; the figure notes carry the estimating equations and key statistics.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o46",
+          "pages": [
+            13,
+            23
+          ],
+          "locator": "Figures 3-9",
+          "statement": "Figures include raw density plots by speed zone and normalized pooled versions, binned outcome-by-running-variable plots, and coefficient-over-horizon plots with shaded bands; notes state clustering and refer to the sample-construction section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "raw_data_plot",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o43",
+          "pages": [
+            1,
+            1
+          ],
+          "locator": "Figure 1, Panel A",
+          "statement": "The paper's opening figure presents a raw, unsmoothed count of job exits by monthly age bin for the full sample as the first piece of descriptive evidence.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            12
+          ],
+          "locator": "Table 1, Table 2, Figure 1",
+          "statement": "Figures begin with raw density histograms of drug amounts pre and post reform and a yearly share plot by race; tables use three-level significance stars, and notes state the data source, standard error type, the estimating equation, and pointers to appendix variants. A summary statistics table by pe",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o46",
+          "pages": [
+            13,
+            23
+          ],
+          "locator": "Figures 3-9",
+          "statement": "Figures include raw density plots by speed zone and normalized pooled versions, binned outcome-by-running-variable plots, and coefficient-over-horizon plots with shaded bands; notes state clustering and refer to the sample-construction section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "summary_stats_table",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o45",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2",
+          "statement": "A dedicated summary statistics table reports means and standard deviations of key variables across the three samples used in the paper, each corresponding to a different unit of observation.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o45",
+          "pages": [
+            8,
+            8
+          ],
+          "locator": "Table I",
+          "statement": "A detailed summary-statistics table reporting the mean, standard deviation, and several percentiles for key borrower variables appears early in the paper, with all variable definitions and the winsorization rule given entirely within the table note rather than in the main prose.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            12
+          ],
+          "locator": "Table 1, Table 2, Figure 1",
+          "statement": "Figures begin with raw density histograms of drug amounts pre and post reform and a yearly share plot by race; tables use three-level significance stars, and notes state the data source, standard error type, the estimating equation, and pointers to appendix variants. A summary statistics table by pe",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "appendix_tables_numbered_a",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o46",
+          "pages": [
+            13,
+            14
+          ],
+          "locator": "Table 3, Tables A1 to A21",
+          "statement": "Appendix tables and figures are numbered with an A prefix and referenced heavily; a table row labelled 'Predicted change' juxtaposes theory predictions with estimates.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o48",
+          "pages": [
+            7,
+            37
+          ],
+          "locator": "throughout; Supplementary Data note",
+          "statement": "Appendix figures are labelled A.x, appendix tables B.x, and theory appendices C.x; the appendix itself is only available as online supplementary material.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "binscatter",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o44",
+          "pages": [
+            19,
+            19
+          ],
+          "locator": "Figure 4",
+          "statement": "A binned-scatterplot format is used to summarize the relationship between excess mass and kink size separately for statutory-age and pure-financial-incentive discontinuities.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o39",
+          "pages": [
+            18,
+            26
+          ],
+          "locator": "Figures 2, 4, 6, 7",
+          "statement": "Figures throughout use binned-average plots with polynomial or nonparametric smoothers overlaid, and several explicitly report bootstrap-based confidence bands as dotted lines around the binned averages rather than relying on analytic standard errors.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "rd_plot",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o45",
+          "pages": [
+            17,
+            30
+          ],
+          "locator": "Figure 2b, Figure 5",
+          "statement": "Later figures include a coefficient plot of bin-by-bin race differences scaled by bin share, RD-style binned plots of sentence against drug amount with linear fits on each side, and event-study plots for the FSA; the figure notes carry the estimating equations and key statistics.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o46",
+          "pages": [
+            13,
+            23
+          ],
+          "locator": "Figures 3-9",
+          "statement": "Figures include raw density plots by speed zone and normalized pooled versions, binned outcome-by-running-variable plots, and coefficient-over-horizon plots with shaded bands; notes state clustering and refer to the sample-construction section.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "event_study_figure",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o45",
+          "pages": [
+            17,
+            30
+          ],
+          "locator": "Figure 2b, Figure 5",
+          "statement": "Later figures include a coefficient plot of bin-by-bin race differences scaled by bin share, RD-style binned plots of sentence against drug amount with linear fits on each side, and event-study plots for the FSA; the figure notes carry the estimating equations and key statistics.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "map",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o46",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section 2.1, Figure 2",
+          "statement": "A choropleth-style map of participating ZIP codes is used to describe the geographic coverage of the sample rather than as an input to a formal spatial regression.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "other:cdf_plot",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o48",
+          "pages": [
+            20,
+            21
+          ],
+          "locator": "Section 3.5, Figure 7",
+          "statement": "Cumulative-distribution-function plots are used to compare the three bunching methods' implied distributions of collateral aversion visually, alongside a small number of summary percentiles reported in text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "presentation_convention",
+      "tag": "stars_used",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 5,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o44",
+          "pages": [
+            8,
+            12
+          ],
+          "locator": "Table 1, Table 2, Figure 1",
+          "statement": "Figures begin with raw density histograms of drug amounts pre and post reform and a yearly share plot by race; tables use three-level significance stars, and notes state the data source, standard error type, the estimating equation, and pointers to appendix variants. A summary statistics table by pe",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "replication_package_cited",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o52",
+          "pages": [
+            40,
+            40
+          ],
+          "locator": "References",
+          "statement": "The reference list includes a formal citation to a deposited replication data package for this paper, hosted through a data archive distinct from the journal itself.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o52",
+          "pages": [
+            41,
+            41
+          ],
+          "locator": "Back matter, replication statement",
+          "statement": "A replication-package DOI is given in the back matter, and the article states that the authors were granted an exemption to withhold parts of the data because access is restricted, while including a synthetic or simulated dataset so the posted code can still be run.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o49",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement gives a Zenodo DOI for the data and code; supplementary material is said to be available online. No software is named in the text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o52",
+          "pages": [
+            37,
+            37
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement says public data and all programs are in a Zenodo repository, confidential data cannot be shared, and the README explains how to obtain them.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "code_public",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o49",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement gives a Zenodo DOI for the data and code; supplementary material is said to be available online. No software is named in the text.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o52",
+          "pages": [
+            37,
+            37
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement says public data and all programs are in a Zenodo repository, confidential data cannot be shared, and the README explains how to obtain them.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_access_procedure_described",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o52",
+          "pages": [
+            41,
+            41
+          ],
+          "locator": "Back matter, replication statement",
+          "statement": "A replication-package DOI is given in the back matter, and the article states that the authors were granted an exemption to withhold parts of the data because access is restricted, while including a synthetic or simulated dataset so the posted code can still be run.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o52",
+          "pages": [
+            37,
+            37
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement says public data and all programs are in a Zenodo repository, confidential data cannot be shared, and the README explains how to obtain them.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_restricted",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o52",
+          "pages": [
+            41,
+            41
+          ],
+          "locator": "Back matter, replication statement",
+          "statement": "A replication-package DOI is given in the back matter, and the article states that the authors were granted an exemption to withhold parts of the data because access is restricted, while including a synthetic or simulated dataset so the posted code can still be run.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o52",
+          "pages": [
+            37,
+            37
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement says public data and all programs are in a Zenodo repository, confidential data cannot be shared, and the README explains how to obtain them.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "data_public",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o49",
+          "pages": [
+            33,
+            33
+          ],
+          "locator": "Data Availability",
+          "statement": "A data availability statement gives a Zenodo DOI for the data and code; supplementary material is said to be available online. No software is named in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "other:journal_verified_reproducibility",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o53",
+          "pages": [
+            41,
+            41
+          ],
+          "locator": "Back matter, replication statement",
+          "statement": "The journal states it checked the submitted code and data for the ability to generate the paper's tables and figures, but notes that because of the heavy computational demands of the algorithms, the reproducibility checks were run on a simplified version of the code.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "replication_statement",
+      "tag": "other:software_not_named",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o54",
+          "pages": [
+            1,
+            39
+          ],
+          "locator": "whole paper",
+          "statement": "No statistical software is named in the main text.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_appendix",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o30",
+          "pages": [
+            24,
+            24
+          ],
+          "locator": "Section III.C footnote, online Appendix Table A1",
+          "statement": "A decomposition exercise is used as an additional robustness check to gauge how much of the difference in bunching across discontinuity types can be attributed to observable worker and firm characteristics versus an unexplained component.",
+          "basis": "stated"
+        },
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o27",
+          "pages": [
+            24,
+            24
+          ],
+          "locator": "Section III.E, Bunching robustness paragraph",
+          "statement": "Robustness of the bunching evidence to round-number effects, to subsamples split by property holding period, and to subsamples split by reference-price quintile is summarized narratively in the main text with pointers to the corresponding online appendix subsection rather than shown as a table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o28",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Tables A3 to A5",
+          "statement": "Main-result robustness is summarised in one paragraph listing sample restrictions, state fixed effects and trends, offender controls, nonlinear estimators, wider bunching bins, inclusion of range-coded cases, and alternative standard errors, with all tables in the appendix; the share of the disparit",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_estimator",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o28",
+          "pages": [
+            18,
+            20
+          ],
+          "locator": "Sections 3.4-3.5",
+          "statement": "Three independently constructed estimators of households' ideal loan amounts and collateral aversion are compared against one another as an implicit cross-method robustness exercise, with the full technical derivation of two of the three approaches deferred to the companion supplement.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o28",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Tables A3 to A5",
+          "statement": "Main-result robustness is summarised in one paragraph listing sample restrictions, state fixed effects and trends, offender controls, nonlinear estimators, wider bunching bins, inclusion of range-coded cases, and alternative standard errors, with all tables in the appendix; the share of the disparit",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_sample",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o27",
+          "pages": [
+            24,
+            24
+          ],
+          "locator": "Section III.E, Bunching robustness paragraph",
+          "statement": "Robustness of the bunching evidence to round-number effects, to subsamples split by property holding period, and to subsamples split by reference-price quintile is summarized narratively in the main text with pointers to the corresponding online appendix subsection rather than shown as a table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o28",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Tables A3 to A5",
+          "statement": "Main-result robustness is summarised in one paragraph listing sample restrictions, state fixed effects and trends, offender controls, nonlinear estimators, wider bunching bins, inclusion of range-coded cases, and alternative standard errors, with all tables in the appendix; the share of the disparit",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "in_main_text",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_112_10_8",
+          "note_sha256": "df1a1baa7d3df02408d681b5066477ae9fc01413c163bace0e9e2d1d9f49e672",
+          "observation_id": "o27",
+          "pages": [
+            24,
+            24
+          ],
+          "locator": "Section III.E, Bunching robustness paragraph",
+          "statement": "Robustness of the bunching evidence to round-number effects, to subsamples split by property holding period, and to subsamples split by reference-price quintile is summarized narratively in the main text with pointers to the corresponding online appendix subsection rather than shown as a table.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o29",
+          "pages": [
+            14,
+            16
+          ],
+          "locator": "Table 4 columns 4 to 6, Section 5.1.2",
+          "statement": "The missing-mass analysis is repeated with a later start year to address secular trends around a prior Supreme Court case, shown as additional columns of the same main-text table, and on trial cases only, reported inline with coefficients and standard errors in the text.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_fixed_effects",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o28",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Tables A3 to A5",
+          "statement": "Main-result robustness is summarised in one paragraph listing sample restrictions, state fixed effects and trends, offender controls, nonlinear estimators, wider bunching bins, inclusion of range-coded cases, and alternative standard errors, with all tables in the appendix; the share of the disparit",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_se",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o28",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Tables A3 to A5",
+          "statement": "Main-result robustness is summarised in one paragraph listing sample restrictions, state fixed effects and trends, offender controls, nonlinear estimators, wider bunching bins, inclusion of range-coded cases, and alternative standard errors, with all tables in the appendix; the share of the disparit",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "alt_specification",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o31",
+          "pages": [
+            29,
+            29
+          ],
+          "locator": "Section 5.4.3, Table A20",
+          "statement": "The animus result is probed in an appendix table by adding individual and district controls interacted with post-by-race, using the continuous animus measure, and substituting an occupation-specific implicit association measure with state-by-post-by-race fixed effects.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o28",
+          "pages": [
+            18,
+            20
+          ],
+          "locator": "Sections 3.4-3.5",
+          "statement": "Three independently constructed estimators of households' ideal loan amounts and collateral aversion are compared against one another as an implicit cross-method robustness exercise, with the full technical derivation of two of the three approaches deferred to the companion supplement.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "other:decomposition_robustness",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o30",
+          "pages": [
+            24,
+            24
+          ],
+          "locator": "Section III.C footnote, online Appendix Table A1",
+          "statement": "A decomposition exercise is used as an additional robustness check to gauge how much of the difference in bunching across discontinuity types can be attributed to observable worker and firm characteristics versus an unexplained component.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "robustness_reported",
+      "tag": "summarized_in_one_table",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o28",
+          "pages": [
+            13,
+            13
+          ],
+          "locator": "Section 5.1.1, Tables A3 to A5",
+          "statement": "Main-result robustness is summarised in one paragraph listing sample restrictions, state fixed effects and trends, offender controls, nonlinear estimators, wider bunching bins, inclusion of range-coded cases, and alternative standard errors, with all tables in the appendix; the share of the disparit",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_source_named",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o6",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "The main data source is named as administrative records from the German State Pension Fund covering the population of pension claimants, supplemented for part of the analysis by a household survey panel providing occupation-level variables.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section 2.2",
+          "statement": "The analysis sample is defined as household applications to the federal disaster loan program over a fixed multi-year window, restricted to homeowners with real-estate losses, with the restriction justified by the need to compare borrowers who can and cannot secure a loan with real estate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 3.1",
+          "statement": "Main data are USSC sentencing records for federal drug cases over a stated multi-year window; the unit is the sentenced case, restricted to crack-cocaine offenses because that is the only drug whose threshold changes over time.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o7",
+          "pages": [
+            8,
+            9
+          ],
+          "locator": "Section 2.3.1",
+          "statement": "Primary data are police speeding tickets over a stated two-year window, linked via personal identifiers to the crime report register, the FOLK population module, accident data and an anonymous traffic monitoring dataset; each source is cited as a data reference.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "exclusions_justified",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o7",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "The birth-cohort window used for the main analysis is stated explicitly, with the justification that only cohorts whose retirement-age distribution is fully observed within the data window are retained.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section 2.2",
+          "statement": "The analysis sample is defined as household applications to the federal disaster loan program over a fixed multi-year window, restricted to homeowners with real-estate losses, with the restriction justified by the need to compare borrowers who can and cannot secure a loan with real estate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o7",
+          "pages": [
+            8,
+            8
+          ],
+          "locator": "Section 3.1, Table 1 notes",
+          "statement": "Exclusions are listed and justified: cases with missing or range-coded drug weights, cases flagged for data problems, cases where the court changed or rejected the findings of fact, and a top trim on drug weight to remove outliers; the author notes that the share excluded does not jump at the reform",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o8",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section 2.3.2",
+          "statement": "Sample restrictions are listed in a dedicated subsection: camera-measured tickets only (officer discretion cited as the reason), dropping the highest speed limit zone for sparse data, requiring personal identifiers and adult age.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_period_stated",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o7",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "The birth-cohort window used for the main analysis is stated explicitly, with the justification that only cohorts whose retirement-age distribution is fully observed within the data window are retained.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section 2.2",
+          "statement": "The analysis sample is defined as household applications to the federal disaster loan program over a fixed multi-year window, restricted to homeowners with real-estate losses, with the restriction justified by the need to compare borrowers who can and cannot secure a loan with real estate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 3.1",
+          "statement": "Main data are USSC sentencing records for federal drug cases over a stated multi-year window; the unit is the sentenced case, restricted to crack-cocaine offenses because that is the only drug whose threshold changes over time.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o7",
+          "pages": [
+            8,
+            9
+          ],
+          "locator": "Section 2.3.1",
+          "statement": "Primary data are police speeding tickets over a stated two-year window, linked via personal identifiers to the crime report register, the FOLK population module, accident data and an anonymous traffic monitoring dataset; each source is cited as a data reference.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "unit_of_observation_stated",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o9",
+          "pages": [
+            11,
+            12
+          ],
+          "locator": "Section I.D, Table 2",
+          "statement": "The paper distinguishes three units of observation used across different parts of the analysis: an individual-level sample, an occupation-matched sample, and a discontinuity-level bunching sample used for the main regressions.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            7
+          ],
+          "locator": "Section 2.2",
+          "statement": "The analysis sample is defined as household applications to the federal disaster loan program over a fixed multi-year window, restricted to homeowners with real-estate losses, with the restriction justified by the need to compare borrowers who can and cannot secure a loan with real estate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o6",
+          "pages": [
+            7,
+            8
+          ],
+          "locator": "Section 3.1",
+          "statement": "Main data are USSC sentencing records for federal drug cases over a stated multi-year window; the unit is the sentenced case, restricted to crack-cocaine offenses because that is the only drug whose threshold changes over time.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "matching_or_linkage_described",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o8",
+          "pages": [
+            7,
+            9
+          ],
+          "locator": "Section 3.2, Figure A1",
+          "statement": "Several auxiliary datasets from different stages of the criminal process are introduced with their purpose: state inmate records, two drug seizure systems, a national drug use survey, EOUSA prosecutor case-management files, and a state-level Google Trends animus measure. A timeline figure in the app",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o7",
+          "pages": [
+            8,
+            9
+          ],
+          "locator": "Section 2.3.1",
+          "statement": "Primary data are police speeding tickets over a stated two-year window, linked via personal identifiers to the crime report register, the FOLK population module, accident data and an anonymous traffic monitoring dataset; each source is cited as a data reference.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "restricted_data_used",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o10",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "The underlying administrative data are described as accessed through a research data center rather than distributed as a public-use file, consistent with restricted-access administrative microdata.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o7",
+          "pages": [
+            8,
+            9
+          ],
+          "locator": "Section 2.3.1",
+          "statement": "Primary data are police speeding tickets over a stated two-year window, linked via personal identifiers to the crime report register, the FOLK population module, accident data and an anonymous traffic monitoring dataset; each source is cited as a data reference.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "sample_size_reported_per_table",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o11",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2",
+          "statement": "The summary statistics table reports the number of observations separately for each of the three samples used, with the discontinuity-level sample reported alongside the two worker-level samples for comparison.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o10",
+          "pages": [
+            8,
+            25
+          ],
+          "locator": "Tables 1 to 7",
+          "statement": "Observation counts are reported in every regression table, including by column when the sample changes, and summary statistics report counts by period.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "sample_construction",
+      "tag": "data_restricted",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o10",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D",
+          "statement": "The underlying administrative data are described as accessed through a research data center rather than distributed as a public-use file, consistent with restricted-access administrative microdata.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "baseline_then_variants",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o17",
+          "pages": [
+            19,
+            19
+          ],
+          "locator": "Table II",
+          "statement": "The table comparing collateral-aversion estimates across estimation approaches reports each method's summary statistic with a bootstrapped standard error in parentheses beneath it, organized into columns by which threshold regime generated the estimate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o15",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2 and notes",
+          "statement": "The main table has two columns, the pooled effect and the race-interacted version, with robust standard errors stated in the notes, a row giving the p-value for equality of the race-specific coefficients, and a pointer to appendix tables for robustness.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "se_type_in_notes",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o17",
+          "pages": [
+            19,
+            19
+          ],
+          "locator": "Table II",
+          "statement": "The table comparing collateral-aversion estimates across estimation approaches reports each method's summary statistic with a bootstrapped standard error in parentheses beneath it, organized into columns by which threshold regime generated the estimate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o15",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2 and notes",
+          "statement": "The main table has two columns, the pooled effect and the race-interacted version, with robust standard errors stated in the notes, a row giving the p-value for equality of the race-specific coefficients, and a pointer to appendix tables for robustness.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "cluster_level_in_notes",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o17",
+          "pages": [
+            25,
+            25
+          ],
+          "locator": "Table 7 notes",
+          "statement": "The heterogeneity table mixes standard error types by column: robust for offender-level splits and clustered at the state level for state-level splits, which the notes state explicitly; two p-value rows test race equality with and without the characteristic.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "fe_listed_in_table",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o16",
+          "pages": [
+            14,
+            15
+          ],
+          "locator": "Table 3 and Table 4 notes",
+          "statement": "Missing-mass tables note that standard errors are estimated jointly across ranges by seemingly unrelated regression so that coefficients can be summed and compared; the race-specific version adds race-specific linear trends and district fixed effects, stated in the title and notes, and reports a sam",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "specification_reporting",
+      "tag": "n_reported",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 2,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o15",
+          "pages": [
+            12,
+            12
+          ],
+          "locator": "Table 2 and notes",
+          "statement": "The main table has two columns, the pooled effect and the race-interacted version, with robust standard errors stated in the notes, a row giving the p-value for equality of the race-specific coefficients, and a pointer to appendix tables for robustness.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "running_variable_definition",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o13",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section I.B",
+          "statement": "The key regressors are indicator variables for the presence of each type of statutory retirement age at a discontinuity and a continuous kink-size variable defined as the local change in the implicit net-of-tax rate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o14",
+          "pages": [
+            15,
+            15
+          ],
+          "locator": "Section 3.2, Equation 6",
+          "statement": "The running/damage variable underlying the bunching analysis is binned into fixed-width increments and used both as the outcome bins in the difference-in-bunching regression and, later, as the basis for constructing the collateral instrument.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o15",
+          "pages": [
+            7,
+            16
+          ],
+          "locator": "Sections 2.2 and 4.1",
+          "statement": "The running variable is police-adjusted speed measured as distance from the income-based fine cutoff, pooled across speed limit zones by normalization; all speeds reported are the police-adjusted ones.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "measurement_error_discussed",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o12",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D, footnote",
+          "statement": "The outcome analyzed throughout is the monthly job-exit (retirement) age, which the authors note is imputed from insurance-status information when the timing of the last pension contribution does not coincide with the last employment spell.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o13",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section 3.4.2",
+          "statement": "An alternative measure of a household's ideal loan amount is constructed from the loan amount originally requested on the initial application, with imputation used for the subset of borrowers who already bunch in their original request, a limitation the authors acknowledge.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "outcome_definition",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o12",
+          "pages": [
+            11,
+            11
+          ],
+          "locator": "Section I.D, footnote",
+          "statement": "The outcome analyzed throughout is the monthly job-exit (retirement) age, which the authors note is imputed from insurance-status information when the timing of the last pension contribution does not coincide with the last employment spell.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o11",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4.1, equations (1) and (2), footnote 7",
+          "statement": "The outcome is a binary indicator that the recorded drug amount falls in a narrow ten-gram bin at and above the new threshold; the treatment indicator is sentencing under post-reform Guidelines amendment years. Race is collapsed into a black-or-Hispanic indicator, with a footnote acknowledging the c",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "treatment_definition",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o13",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section I.B",
+          "statement": "The key regressors are indicator variables for the presence of each type of statutory retirement age at a discontinuity and a continuous kink-size variable defined as the local change in the implicit net-of-tax rate.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o11",
+          "pages": [
+            10,
+            10
+          ],
+          "locator": "Section 4.1, equations (1) and (2), footnote 7",
+          "statement": "The outcome is a binary indicator that the recorded drug amount falls in a narrow ten-gram bin at and above the new threshold; the treatment indicator is sentencing under post-reform Guidelines amendment years. Race is collapsed into a black-or-Hispanic indicator, with a footnote acknowledging the c",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:counterfactual_proxy_construction",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o13",
+          "pages": [
+            18,
+            19
+          ],
+          "locator": "Section 3.4.2",
+          "statement": "An alternative measure of a household's ideal loan amount is constructed from the loan amount originally requested on the initial application, with imputation used for the subset of borrowers who already bunch in their original request, a limitation the authors acknowledge.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:excess_mass_normalization",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o14",
+          "pages": [
+            20,
+            20
+          ],
+          "locator": "Section III.B, equation (5)",
+          "statement": "The dependent variable in the discontinuity-level regressions is excess bunching mass normalized by the threshold retirement age rather than raw excess mass, so that the measure is comparable across discontinuities located at different ages.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:key_construct_definition",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o12",
+          "pages": [
+            13,
+            14
+          ],
+          "locator": "Section 3.1",
+          "statement": "The paper's central outcome construct, collateral aversion, is formally defined within the stylized household model as the loan value at which a household is indifferent between a collateralized and an uncollateralized loan.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "other:nominal_vs_real_discussion",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o11",
+          "pages": [
+            9,
+            9
+          ],
+          "locator": "Section 2.2, footnote 5",
+          "statement": "The paper explicitly discusses using nominal rather than inflation-adjusted dollar values throughout, arguing that time fixed effects address nominal-versus-real comparability given the muted inflation over the sample period.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "standardized_index",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o14",
+          "pages": [
+            24,
+            28
+          ],
+          "locator": "Figure 4b notes, footnote 24",
+          "statement": "A predicted sentence is built by regressing sentence on offender characteristics in pre-reform data and applying the coefficients to post-reform cases, then split into quantiles; a case-complexity index for prosecutors is built from a regression of drug weight on case attributes and averaged over pr",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "variable_construction",
+      "tag": "winsorization",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o10",
+          "pages": [
+            8,
+            8
+          ],
+          "locator": "Table I note",
+          "statement": "Several monetary variables in the main summary-statistics table are winsorized at the extreme tails, with the winsorization levels and affected variables stated only in the table note.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "results_previewed_in_intro",
+      "papers": 4,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.8,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o51",
+          "pages": [
+            2,
+            3
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction previews the paper's main qualitative results, that financial incentives alone cannot explain retirement bunching and that statutory ages have a direct effect, before the corresponding sections are reached.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o49",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the paper's findings separately for each of the three motivating questions it poses, in the same order that the corresponding empirical sections later follow.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Sections 1 to 6",
+          "statement": "The introduction previews all main findings and the sequence of supporting results, followed by a related-literature subsection with numbered contributions; the paper then goes background, data, methodology, results, conclusion. Robustness is a named subsection heading within the main results rather",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o49",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews each main result in order, then gives contribution paragraphs organized by literature, and closes with a roadmap.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "contribution_paragraph",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o48",
+          "pages": [
+            1,
+            2
+          ],
+          "locator": "Introduction",
+          "statement": "The introduction contains an explicit, numbered statement of the paper's main contributions before turning to the literature review.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Sections 1 to 6",
+          "statement": "The introduction previews all main findings and the sequence of supporting results, followed by a related-literature subsection with numbered contributions; the paper then goes background, data, methodology, results, conclusion. Robustness is a named subsection heading within the main results rather",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o49",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews each main result in order, then gives contribution paragraphs organized by literature, and closes with a roadmap.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "roadmap_paragraph",
+      "papers": 3,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.6,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o47",
+          "pages": [
+            6,
+            6
+          ],
+          "locator": "Introduction, penultimate paragraph",
+          "statement": "The introduction closes with an explicit roadmap paragraph naming each numbered section of the paper and describing its content in order.",
+          "basis": "stated"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o49",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews the paper's findings separately for each of the three motivating questions it poses, in the same order that the corresponding empirical sections later follow.",
+          "basis": "stated"
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o49",
+          "pages": [
+            2,
+            5
+          ],
+          "locator": "Section 1",
+          "statement": "The introduction previews each main result in order, then gives contribution paragraphs organized by literature, and closes with a roadmap.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "mechanisms_after_main",
+      "papers": 2,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.4,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o50",
+          "pages": [
+            24,
+            28
+          ],
+          "locator": "Section IV",
+          "statement": "Mechanism evidence is presented in a dedicated section placed after the main reduced-form results and before the structural model, establishing the effect first and investigating why it arises afterward.",
+          "basis": "inferred"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o48",
+          "pages": [
+            9,
+            29
+          ],
+          "locator": "Section 4 opening, Section 5",
+          "statement": "Results open with the headline bunching estimate and its robustness, then progress through missing mass, conditional disparity, prosecutor discretion, the court decision, discrimination mechanisms, and finally sentencing impacts and cost estimates. Methodology for later sections is deferred to those",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "appendix_heavy",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Sections 1 to 6",
+          "statement": "The introduction previews all main findings and the sequence of supporting results, followed by a related-literature subsection with numbered contributions; the paper then goes background, data, methodology, results, conclusion. Robustness is a named subsection heading within the main results rather",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "data_before_design",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "aer_111_4_3",
+          "note_sha256": "500f457d1b91eb52b9232696978efa16f5d7ff27795cc0f7418de03e6f7d139d",
+          "observation_id": "o49",
+          "pages": [
+            7,
+            14
+          ],
+          "locator": "Sections I and II",
+          "statement": "The institutional background and data section is presented before the empirical methodology section, rather than leading with the estimating equation.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "design_before_data",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Sections 1 to 6",
+          "statement": "The introduction previews all main findings and the sequence of supporting results, followed by a related-literature subsection with numbered contributions; the paper then goes background, data, methodology, results, conclusion. Robustness is a named subsection heading within the main results rather",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "main_result_first",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o48",
+          "pages": [
+            9,
+            29
+          ],
+          "locator": "Section 4 opening, Section 5",
+          "statement": "Results open with the headline bunching estimate and its robustness, then progress through missing mass, conditional disparity, prosecutor discretion, the court decision, discrimination mechanisms, and finally sentencing impacts and cost estimates. Methodology for later sections is deferred to those",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "online_appendix_not_available",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o51",
+          "pages": [
+            17,
+            17
+          ],
+          "locator": "Section 3.4, and throughout",
+          "statement": "Substantial technical and robustness detail (full bunching derivations, additional heterogeneity results, and full robustness tables) is repeatedly deferred to a separate companion paper described as the article's supplemental material, rather than to an appendix within this article itself.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:companion_paper_appendix",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o51",
+          "pages": [
+            17,
+            17
+          ],
+          "locator": "Section 3.4, and throughout",
+          "statement": "Substantial technical and robustness detail (full bunching derivations, additional heterogeneity results, and full robustness tables) is repeatedly deferred to a separate companion paper described as the article's supplemental material, rather than to an appendix within this article itself.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:model_after_empirics",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "note_sha256": "99224bf0681d813ce38e3af2d75a303d50a4d66220ac811d81812e2cdf52da85",
+          "observation_id": "o51",
+          "pages": [
+            28,
+            31
+          ],
+          "locator": "Section 5",
+          "statement": "The theoretical model is presented after the empirical results and is explicitly positioned as rationalizing them, with propositions stated in text and proofs deferred to an appendix.",
+          "basis": "stated"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "other:robustness_embedded_in_results",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "note_sha256": "e8342e263d9f3391c0d5f91da548a29f65b0e4a430d8a778d170ca208c4a78e1",
+          "observation_id": "o50",
+          "pages": [
+            18,
+            25
+          ],
+          "locator": "Sections 3.4-3.5 and 4.2",
+          "statement": "Robustness checks for both the default model and the bunching estimates are embedded within the results subsections of their respective empirical sections rather than collected into one separate robustness section of the article.",
+          "basis": "inferred"
+        }
+      ]
+    },
+    {
+      "category": "writing_structure",
+      "tag": "robustness_separate_section",
+      "papers": 1,
+      "denominator_papers": 5,
+      "papers_with_category": 4,
+      "share_of_papers": 0.2,
+      "pointers": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "note_sha256": "23b104741be715c0c0893f5eed8db1565ecfc8e54e5269a4ad7104750e326d53",
+          "observation_id": "o47",
+          "pages": [
+            2,
+            13
+          ],
+          "locator": "Sections 1 to 6",
+          "statement": "The introduction previews all main findings and the sequence of supporting results, followed by a related-literature subsection with numbered contributions; the paper then goes background, data, methodology, results, conclusion. Robustness is a named subsection heading within the main results rather",
+          "basis": "inferred"
+        }
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "bandwidth",
+      "status": "paper_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "d1.implementation_features",
+          "paper_says": "The bunching estimation excludes a region around each threshold when fitting the counterfactual density, described qualitatively as the 'bunching region.'",
+          "card_shows": "No bandwidth or exclusion-window field is populated for design d1 or any specification; the underlying bunching-estimation script (02_bunching.do) was not part ",
+          "pages": [
+            13,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "item": "bandwidth",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s2.sample",
+          "paper_says": "The appendix regression-kink implementation of the listing-premium hockey stick is only briefly described in a main-text footnote, which states a caveat about t",
+          "card_shows": "Card specification s2 shows a formula with a local-polynomial order and derivative but no bandwidth value; s2.sample is null.",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "item": "bandwidth",
+      "status": "code_only",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "s1.notes / x2",
+          "paper_says": "The traditional bunching estimator's counterfactual is described in the main text only qualitatively (a flexible polynomial fit to the region unaffected by the ",
+          "card_shows": "Spec s1's notes record a specific polynomial degree and three cutpoints used in the code, and diagnostic x2 (polynomial_order) is marked status unknown with no ",
+          "pages": [
+            17,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "item": "bandwidth",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s2.sample_restrictions",
+          "paper_says": "CCT optimal bandwidth, reported per horizon in Table 3",
+          "card_shows": "s2 restricts to |normalized| <= bw; bandwidth value not recorded",
+          "pages": [
+            25,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "s2.se.cluster_level",
+          "paper_says": "Standard errors in the default model are stated as clustered at the disaster level, and bunching-model standard errors are block-bootstrapped at the disaster le",
+          "card_shows": "Spec s2's se.type and se.cluster_level fields are both null (unknown), and the same is true for s1 and s3.",
+          "pages": [
+            15,
+            23
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "No clustering for the main table; state-level clustering for state splits and prosecutor-level clustering for prosecutor regressions.",
+          "card_shows": "cluster_level null for s1 and s2; no prosecutor-level spec recorded.",
+          "pages": [
+            12,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s1.se.cluster_level",
+          "paper_says": "The paper does not mention clustering of standard errors at any level.",
+          "card_shows": "s1.se.cluster_level=null for every specification.",
+          "pages": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "cluster_level",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s1.se.cluster_level; s2.se.cluster_level",
+          "paper_says": "Clustered at the individual level",
+          "card_shows": "s1 cluster on cluster_id; s2 cluster on shnro",
+          "pages": [
+            16,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "d1.comparison_group",
+          "paper_says": "The design's comparison is explicit throughout: statutory-age discontinuities versus pure financial-incentive discontinuities (Assumptions A and B).",
+          "card_shows": "d1.comparison_group=null.",
+          "pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "d2.comparison_group",
+          "paper_says": "The paper explicitly names the control/comparison group for the difference-in-bunching design as households who apply when the higher of the two compared thresh",
+          "card_shows": "Design d2's comparison_group field is null (unknown).",
+          "pages": [
+            15,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "comparison_group",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s2.comparison_group",
+          "paper_says": "The appendix regression-kink check is a single-threshold kink design at a zero potential-gains cutoff, with no separate treatment/comparison group beyond the tw",
+          "card_shows": "Card specification s2.comparison_group is null, consistent with a kink design having no distinct comparison-group field.",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s1.controls_summary",
+          "paper_says": "The hedonic model's control set is spelled out in the text: time-varying lot size, interior size, room and bathroom counts, a vacancy dummy, building age, rural",
+          "card_shows": "Card specification s1.controls_summary is null; only the outcome variable and a macro placeholder for the control set appear in the single evidence snippet read",
+          "pages": [
+            16,
+            17
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "s2.controls_summary",
+          "paper_says": "The paper lists the specific borrower and home covariates added across columns of the default table (credit score, income, debt-to-income ratio, self-employment",
+          "card_shows": "Spec s2's controls_summary field is null.",
+          "pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s2.controls",
+          "paper_says": "Controls added as a variant column and in all IV columns",
+          "card_shows": "controls not recorded in s1 or s2",
+          "pages": [
+            26,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "item": "controls",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s3.bindings[0]",
+          "paper_says": "Column 3 adds worker controls including income, education, gender, marital status, career length and sick leave.",
+          "card_shows": "s3 binds global controls_ind to a variable list (schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem) matching the described worker characteri",
+          "pages": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "paper_only",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "data",
+          "paper_says": "The paper names four core administrative data sources plus one commercial listings vendor, each with its own stated coverage period, as the inputs to the merged",
+          "card_shows": "The card's top-level data array is empty; no data sources are recorded in the card at all.",
+          "pages": [
+            14,
+            16
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "data[0].source_hint",
+          "paper_says": "The paper describes the underlying data as administrative federal disaster loan program records, restricted but obtained with a Small Business Administration da",
+          "card_shows": "The card's data records show access as 'unknown' and source_hint as null for the household-level RData files loaded by the scripts.",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "d1",
+          "paper_says": "USSC sentencing data plus EOUSA, NIBRS, STRIDE, NSDUH, Florida inmate records, and Stephens-Davidowitz animus index.",
+          "card_shows": "Main script named for USSC; other sources not recorded.",
+          "pages": [
+            7,
+            9
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "d1.data_source",
+          "paper_says": "Police ticket data linked to Statistics Finland registers and Fintraffic TMS data",
+          "card_shows": "code path admin_data; data source not recorded",
+          "pages": [
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "item": "data_source",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "data[0].name",
+          "paper_says": "The main administrative data are named as coming from the German State Pension Fund (Research Data Centre of the German State Pension Fund), covering the univer",
+          "card_shows": "data[0].name=RTZN, type=admin, source_hint=null; evidence line 'use $datafolder\\RTZN.dta'.",
+          "pages": [
+            11,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "diagnostics",
+          "paper_says": "The paper reports a density-shape comparison test (Figure 8) used to discriminate between the reference-dependence model and a rival behavioral model.",
+          "card_shows": "diagnostics=[] (empty array) at the card level.",
+          "pages": [
+            33,
+            34
+          ]
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "diagnostics",
+          "paper_says": "The paper reports an extensive set of diagnostics: hedonic fit-statistic checks, balance and smoothness checks around thresholds, bunching excess-mass estimates",
+          "card_shows": "The card's diagnostics array is empty.",
+          "pages": [
+            16,
+            25
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "x1; x2",
+          "paper_says": "Graphical density check and covariate balance table plus index plot",
+          "card_shows": "x1 density_test unknown; x2 balance unknown",
+          "pages": [
+            16,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "item": "diagnostic",
+      "status": "unknown",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "x1",
+          "paper_says": "The main text does not report a formal bandwidth-sensitivity check for the traditional bunching estimator's polynomial counterfactual.",
+          "card_shows": "Diagnostic x1 (bandwidth_selection) is recorded with status 'unknown' and a note that no robustness to bandwidth variation was found in the sections of code rea",
+          "pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "x1",
+          "paper_says": "KS test of pre-2010 distributions by race, placebo reassignment exercise, density of cases around the Alleyne date.",
+          "card_shows": "x1 density_test with unknown details.",
+          "pages": [
+            13,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "agree",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s1.estimator",
+          "paper_says": "Reduced-form effects are estimated by OLS on discontinuity-level bunching moments (equation 5).",
+          "card_shows": "s1-s5 all record estimator=ols, command=reg.",
+          "pages": [
+            13,
+            20
+          ]
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s1.formula_or_call",
+          "paper_says": "The hedonic fair-value model is estimated as an OLS regression of log sale price on hedonic characteristics and year-by-municipality fixed effects.",
+          "card_shows": "Card specification s1 records the same command and formula, an OLS regression with the identical fixed-effects structure.",
+          "pages": [
+            16,
+            17
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "d2 / s2.estimator / s2.notes",
+          "paper_says": "The default model is described as two-stage least squares, instrumenting collateral provision with interactions between binned loss amount and the prevailing th",
+          "card_shows": "Design d2 (labeled method 'did') and spec s2 record the estimator generically as fixed-effects OLS via felm, but the spec's own note independently describes the",
+          "pages": [
+            22,
+            24
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.estimator, s2.estimator",
+          "paper_says": "Linear probability model of a bunching-bin indicator on a post-2010 indicator, and a race-interacted version (equations 1 and 2).",
+          "card_shows": "s1 and s2 are OLS regressions of in280290 on after2010 and on race-by-after interactions.",
+          "pages": [
+            10,
+            12
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s1.estimator; s2.estimator",
+          "paper_says": "Local linear RD with triangular kernel, CCT optimal bandwidth, plus CCT robust bias-corrected estimates as a column",
+          "card_shows": "s1 rdrobust local_linear_rd and s2 reghdfe local_linear_rd within bandwidth with analytic weights",
+          "pages": [
+            16,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "item": "estimator",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "specifications",
+          "paper_says": "Section VI.A states that reference-dependence parameters are recovered via a nonlinear least squares estimation at the discontinuity level.",
+          "card_shows": "The specifications array contains only the OLS reduced-form regressions (s1-s5) from 04_bunching_regressions.do; no NLS specification is recorded even though 08",
+          "pages": [
+            35,
+            35
+          ]
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "designs",
+          "paper_says": "The paper's primary estimator for its main claims is a structural model fit by classical minimum distance, matching binned empirical moments to model-implied mo",
+          "card_shows": "The card records only two designs, an OLS hedonic regression (d1/s1) and a local-polynomial RD/kink (d2/s2); no structural or minimum-distance design is recorde",
+          "pages": [
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "agree",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s1.fixed_effects",
+          "paper_says": "The hedonic model's fixed effects are described as year-cross-municipality fixed effects, with the municipality count stated as ninety-eight geographic units.",
+          "card_shows": "Card specification s1 lists fixed_effects as year and komstr, matching the year-by-municipality structure.",
+          "pages": [
+            16,
+            17
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "s2.fixed_effects",
+          "paper_says": "The default equations include disaster fixed effects, years-since-origination fixed effects, and loss-bin fixed effects.",
+          "card_shows": "Spec s2's fixed_effects field lists Disaster_Id, timeInt, and loss_cut, matching disaster, time-since-origination, and loss-bin fixed effects respectively.",
+          "pages": [
+            22,
+            23
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s2.fe",
+          "paper_says": "Speed limit fixed effects in equation (2)",
+          "card_shows": "s2 absorb(limit); s1 rdrobust has no FE",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "item": "fixed_effects",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s3.fixed_effects",
+          "paper_says": "Table 4 lists pathway fixed effects and year-of-birth fixed effects as included from column 3, and their interaction from column 4.",
+          "card_shows": "s3.fixed_effects=null and s4.fixed_effects=null; the underlying formula uses i.leat_el4 i.gbjavs / i.leat_el4#i.gbjavs factor variables that the card did not cl",
+          "pages": [
+            20,
+            20
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.fe",
+          "paper_says": "No fixed effects in the main specification; district FE and race-specific trends in Table 4; state-by-post and district-by-post FE in appendix robustness.",
+          "card_shows": "fe None for s1 and s2; no other specs recorded.",
+          "pages": [
+            13,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "item": "other",
+      "status": "paper_only",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "structural",
+          "paper_says": "The paper documents a fully specified structural model in the main text, including a CARA-utility value function, a second-order Taylor approximation used to so",
+          "card_shows": "The card's dedicated 'structural' field is null; the structural design (d3) is recorded only through a generic code trace with no functional form captured.",
+          "pages": [
+            30,
+            31
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "methods",
+          "paper_says": "IV via 2SLS with crossing the cutoff as instrument for fine amount",
+          "card_shows": "only rdd recorded as method",
+          "pages": [
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "item": "other",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "packages.rdplot",
+          "paper_says": "RD-style plots of sentence around 280 g and time discontinuity around the Alleyne date.",
+          "card_shows": "Package rdplot listed under Stata with unknown use.",
+          "pages": [
+            23,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "paper_only",
+      "count": 4,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s1.output_ids",
+          "paper_says": "The reduced-form regressions are explicitly reported in Table 4 of the paper.",
+          "card_shows": "s1-s5.output_ids are all empty arrays; no table is linked to any specification.",
+          "pages": [
+            20,
+            20
+          ]
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "outputs",
+          "paper_says": "The paper contains four numbered main tables and ten main figures reporting structural estimates, moment fits, and diagnostics.",
+          "card_shows": "The card's outputs.tables and outputs.figures arrays are both empty.",
+          "pages": [
+            10,
+            40
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "outputs",
+          "paper_says": "The paper organizes its findings into six numbered tables and eleven numbered figures referenced throughout the text.",
+          "card_shows": "The card's outputs.tables and outputs.figures arrays are both empty.",
+          "pages": [
+            8,
+            8
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "outputs",
+          "paper_says": "Seven main tables and five main figures plus about twenty-one appendix tables and twelve appendix figures.",
+          "card_shows": "One table and one figure recorded from the files read.",
+          "pages": [
+            8,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "item": "outputs",
+      "status": "disagree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "outputs",
+          "paper_says": "Three main tables and twelve figures plus appendix A/B figures and tables",
+          "card_shows": "tables=1 figures=0",
+          "pages": [
+            10,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "item": "robustness",
+      "status": "paper_only",
+      "count": 5,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "robustness",
+          "paper_says": "The paper references robustness checks for the structural parameters and for heterogeneity results in online appendix tables.",
+          "card_shows": "robustness=[] (empty array) at the card level.",
+          "pages": [
+            22,
+            35
+          ]
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "robustness",
+          "paper_says": "The paper reports a dedicated robustness table re-estimating the full structural parameter vector under alternative hedonic valuation models and an alternative ",
+          "card_shows": "The card's robustness array is empty.",
+          "pages": [
+            33,
+            36
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "robustness",
+          "paper_says": "The paper reports two robustness exercises for the default model in the main text (a regularized nonlinear control specification and a specification-curve analy",
+          "card_shows": "The card's robustness array is empty.",
+          "pages": [
+            25,
+            25
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "robustness",
+          "paper_says": "Logit, probit and Poisson estimators, wider bins, alternative SEs, added FE and controls in Tables A3 to A5.",
+          "card_shows": "No robustness records in the card.",
+          "pages": [
+            13,
+            13
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "robustness",
+          "paper_says": "Polynomial order, honest CIs, bandwidth variation, placebo cutoffs, reweighting",
+          "card_shows": "no robustness records on card",
+          "pages": [
+            25,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "paper_only",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s1.sample",
+          "paper_says": "Section I.D describes the discontinuity-level bunching sample and its construction from pathway/cohort/age-band groups, with restrictions detailed narratively.",
+          "card_shows": "s1-s5.sample is null; the formula shows an unexplained 'if incl==1' filter with no field capturing its definition.",
+          "pages": [
+            11,
+            20
+          ]
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_ref": "s2.sample",
+          "paper_says": "The paper states explicit sample restrictions: the default analysis is capped at a maximum loss amount, and the first-stage instrument is only defined for losse",
+          "card_shows": "Spec s2's sample field is null (unknown); the card's data records for the underlying RData files also leave period and unit_of_observation unrecorded.",
+          "pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "d1",
+          "paper_says": "Crack-cocaine cases 1999 to 2015 with missing, range-coded, flagged and rejected findings removed and a top weight trim.",
+          "card_shows": "No sample restrictions recorded on d1 or s1.",
+          "pages": [
+            8,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "item": "sample",
+      "status": "agree",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s1.source",
+          "paper_says": "80 km/h and 120 km/h limit zones omitted from main RD",
+          "card_shows": "script name step5_estimates_dayFine_no80.do",
+          "pages": [
+            10,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "agree",
+      "count": 2,
+      "examples": [
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s1.se",
+          "paper_says": "The main text does not discuss standard errors or clustering for the hedonic pricing regression itself; it is used purely as a valuation/prediction step feeding",
+          "card_shows": "Card specification s1 records se.type and se.cluster_level as null.",
+          "pages": [
+            16,
+            17
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_ref": "s1.se, s2.se",
+          "paper_says": "Robust standard errors in parentheses for Table 2.",
+          "card_shows": "se robust in s1 and s2.",
+          "pages": [
+            12,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "item": "se_type",
+      "status": "unknown",
+      "count": 1,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s1.se.type",
+          "paper_says": "Table 4 notes state standard errors are obtained by bootstrap, resampling bunching observations, for all columns.",
+          "card_shows": "s1.se.type=robust (vce(r)); s2.se.type=iid (no vce option) at the traced regression lines; no bootstrap wrapper is visible in the read range.",
+          "pages": [
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "item": "weights",
+      "status": "agree",
+      "count": 3,
+      "examples": [
+        {
+          "artid": "aer_111_4_3",
+          "card_ref": "s1.weights",
+          "paper_says": "Table 4 notes state that all regressions are weighted by group size.",
+          "card_shows": "s1-s5 all record weights=aweight=weight.",
+          "pages": [
+            20,
+            20
+          ]
+        },
+        {
+          "artid": "aer_112_10_8",
+          "card_ref": "s1.weights",
+          "paper_says": "No mention of regression weights appears in the discussion of the hedonic pricing model or the appendix RD check in the pages read.",
+          "card_shows": "Card specifications s1.weights and s2.weights are both null.",
+          "pages": [
+            16,
+            24
+          ]
+        },
+        {
+          "artid": "restud_2026_restud_rdag071",
+          "card_ref": "s2.weights",
+          "paper_says": "Triangular weights centred at the cutoff",
+          "card_shows": "s2 uses [aw=w]; s1 weights null",
+          "pages": [
+            16,
+            16
+          ]
+        }
+      ]
+    }
+  ],
+  "gaps_reported": [
+    {
+      "gap": "No explicit McCrary-style density manipulation test is reported for the running variable used in the bunching estimation",
+      "papers": 1
+    },
+    {
+      "gap": "No formal pre-analysis plan, IRB approval, or consent statement is mentioned anywhere in the main text; the setting uses",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit clustering of standard errors by pathway, cohort, or any other group is discussed; only a bootstrap over bun",
+      "papers": 1
+    },
+    {
+      "gap": "The main text does not name the statistical software used to produce the estimates or figures.",
+      "papers": 1
+    },
+    {
+      "gap": "No formal weak-instrument, first-stage, or overidentification diagnostic appears, consistent with the paper not using an",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification found in the main text for choosing the shire level (rather than municipality or another unit)",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or ethics/consent statement found anywhere in the read pages.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit statement in the main text of the software or optimization package used to solve and estimate the structural",
+      "papers": 1
+    },
+    {
+      "gap": "No formal first-stage or weak-instrument statistic reported in the main text for the demand-concavity instrumental varia",
+      "papers": 1
+    },
+    {
+      "gap": "No description in the main text of the procedure for obtaining access to the restricted Danish administrative registers;",
+      "papers": 1
+    },
+    {
+      "gap": "The online appendix (referenced dozens of times, spanning lettered sections A through K) was not included in the supplie",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit statement of a stars/significance-level convention was found in the main-text tables; coefficients are repor",
+      "papers": 1
+    },
+    {
+      "gap": "The specific polynomial degree and bandwidth used for the traditional bunching counterfactual are not given numeric valu",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB approval, or participant-consent statement is present anywhere in the article; this is an admini",
+      "papers": 1
+    },
+    {
+      "gap": "The statistical/programming software used for estimation is not named in the main article text itself (it is only infera",
+      "papers": 1
+    },
+    {
+      "gap": "The companion supplement 'Collier, Ellis, and Keys (2025), Supplement to The Cost of Consumer Collateral' that the artic",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification for using robust (unclustered) standard errors in the main specification.",
+      "papers": 1
+    },
+    {
+      "gap": "No software or package named in the text; only a Zenodo DOI for data and code.",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration, IRB or ethics statement.",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix (Tables A1 to A21, Figures A1 to A12) is not included in the text file; appendix content is known only t",
+      "papers": 1
+    },
+    {
+      "gap": "No multiple testing adjustment discussed for the many heterogeneity columns.",
+      "papers": 1
+    },
+    {
+      "gap": "No explicit justification for clustering at the individual level",
+      "papers": 1
+    },
+    {
+      "gap": "No formal density (McCrary or rddensity) test statistic; manipulation assessed graphically only",
+      "papers": 1
+    },
+    {
+      "gap": "No weak-instrument statistic reported for the IV first stage",
+      "papers": 1
+    },
+    {
+      "gap": "No software named in the main text",
+      "papers": 1
+    },
+    {
+      "gap": "Online appendix (Figures A.x, Tables B.x, Section C) is not in the text file, so appendix practices are recorded only as",
+      "papers": 1
+    },
+    {
+      "gap": "No preregistration or ethics statement",
+      "papers": 1
+    }
+  ],
+  "notes": "Reported practice from paper text (author statements and what the tables show), aggregated per method. Separate from observed.* (code) and recommendations.md (rules)."
+}

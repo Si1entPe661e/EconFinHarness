@@ -1,0 +1,2596 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "iv",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "aer_111_12_2",
+        "sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+        "journal": "AER",
+        "year": 2021,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "aer_112_2_1",
+        "sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+        "journal": "AER",
+        "year": 2022,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "SAS"
+        ]
+      },
+      {
+        "artid": "aer_113_1_8",
+        "sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+        "journal": "AER",
+        "year": 2023,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "MATLAB"
+        ]
+      },
+      {
+        "artid": "aer_115_1_8",
+        "sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+        "journal": "AER",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R",
+          "Mathematica",
+          "Shell"
+        ]
+      },
+      {
+        "artid": "jpe_2026_738249",
+        "sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+        "journal": "JPE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdaf044",
+        "sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag027",
+        "sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag029",
+        "sha256": "48c06e96d03dce746d887cd220d4d68b66eebc505ce81c3cefb9c7ed4277d44d",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "R",
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_90_2_4",
+        "sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+        "journal": "ReStud",
+        "year": 2023,
+        "coverage": "partial",
+        "languages": [
+          "R"
+        ]
+      },
+      {
+        "artid": "rfs_2026_rfs_hhaf079",
+        "sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+        "journal": "RFS",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      }
+    ],
+    "excluded": [
+      {
+        "artid": "aer_112_5_9",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "jpe_132_9_2",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "qje_139_1_2",
+        "reason": "held out for evaluation"
+      }
+    ],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 10,
+    "specifications": 33,
+    "designs": 12,
+    "by_language": {
+      "Stata": 9,
+      "R": 5,
+      "SAS": 1,
+      "MATLAB": 1,
+      "Mathematica": 1,
+      "Shell": 1
+    },
+    "by_journal": {
+      "AER": 4,
+      "JPE": 1,
+      "ReStud": 4,
+      "RFS": 1
+    },
+    "by_year": {
+      "2021": 1,
+      "2022": 1,
+      "2023": 2,
+      "2025": 1,
+      "2026": 5
+    },
+    "by_coverage": {
+      "partial": 10
+    }
+  },
+  "by_variant": {
+    "unknown": 8,
+    "shift_share": 1,
+    "distance_instrument": 1
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "distance_instrument",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 8,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            186,
+            188
+          ],
+          "snippet": "forprofit_05\n    ~\n    blfpdist10_50",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "variant",
+      "value": "shift_share",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 8,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/replication_AER/code/3_instrument.do",
+          "lines": [
+            3,
+            3
+          ],
+          "snippet": "Construct versions of shift-share instrument",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "2sls",
+      "papers": 10,
+      "specs": 22,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 8,
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+          "lines": [
+            498,
+            498
+          ],
+          "snippet": "ivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/replication_AER/code/5_main_figures_tables.do",
+          "lines": [
+            494,
+            494
+          ],
+          "snippet": "qui: ivreg2 perm_res_p25_kr26 ($x_ols = $x_iv )  ${baseline_controls} , first",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1234,
+            1234
+          ],
+          "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            176,
+            192
+          ],
+          "snippet": "iv_regs1 = feols(\n    c(.[, out1])",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": [
+            209,
+            210
+          ],
+          "snippet": "ivreg2",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            786,
+            787
+          ],
+          "snippet": "qui: ivreg2 `y' (removed=jscore) i.courtyearfe , cluster( $clusterop ) small\n\test store m5_`y'",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 3,
+      "specs": 4,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.3,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1230
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            780,
+            781
+          ],
+          "snippet": "reghdfe `y' removed $controls , absorb( $FE ) cluster( $clusterop )\n\test store m2_`y'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "reghdfe",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 3,
+      "specs": 5,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.3,
+      "by_language": {
+        "R": 2,
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            144,
+            157
+          ],
+          "snippet": "ols_regs = feols(\n    sum_mdcr_pmt_05",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            778,
+            779
+          ],
+          "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )\n\test store m1_`y'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+          "lines": [
+            1615,
+            1615
+          ],
+          "snippet": "lm1 <- lm(predictdeltaW~.-1,data = regdata)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "estimator",
+      "value": "mle",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+          "lines": [
+            241,
+            241
+          ],
+          "snippet": "fit1 <- mle2(LL, start = betakappaini0, vecpar = TRUE, hessian.opts = (method.args <- list(eps = 1e-4, d = 0.001, zero.tol = sqrt(.Machine$double.eps / 7e-7), r = 4, v = 2)))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "command",
+      "value": "ivreg2",
+      "papers": 6,
+      "specs": 11,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.6,
+      "by_language": {
+        "Stata": 6
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/replication_AER/code/5_main_figures_tables.do",
+          "lines": [
+            494,
+            494
+          ],
+          "snippet": "qui: ivreg2 perm_res_p25_kr26 ($x_ols = $x_iv )  ${baseline_controls} , first",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1234,
+            1234
+          ],
+          "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": [
+            209,
+            210
+          ],
+          "snippet": "ivreg2",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            786,
+            787
+          ],
+          "snippet": "qui: ivreg2 `y' (removed=jscore) i.courtyearfe , cluster( $clusterop ) small\n\test store m5_`y'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag029",
+          "card_sha256": "48c06e96d03dce746d887cd220d4d68b66eebc505ce81c3cefb9c7ed4277d44d",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+          "lines": [
+            71,
+            73
+          ],
+          "snippet": "ivreg2 `y' (`d' = `z'), `ivreghdfe_se'",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/replication_tables.do",
+          "lines": [
+            466,
+            466
+          ],
+          "snippet": "xi: ivreg2 `y'_post3_w (`endog_`field'' = `instr_`field'') `y'_pre3_w `exog', robust first",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "command",
+      "value": "ivreghdfe",
+      "papers": 3,
+      "specs": 6,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.3,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+          "lines": [
+            498,
+            498
+          ],
+          "snippet": "ivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s6",
+          "field": "command",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            784,
+            784
+          ],
+          "snippet": "ivreghdfe `y' (removed=jscore) $controls , absorb( $FE ) cluster( $clusterop )",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            144,
+            144
+          ],
+          "snippet": "ivreghdfe",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "command",
+      "value": "reghdfe",
+      "papers": 2,
+      "specs": 6,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.2,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            778,
+            779
+          ],
+          "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )\n\test store m1_`y'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "reghdfe",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "command",
+      "value": "areg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1230
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "command",
+      "value": "feols",
+      "papers": 1,
+      "specs": 4,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            176,
+            192
+          ],
+          "snippet": "iv_regs1 = feols(\n    c(.[, out1])",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "command",
+      "value": "glue",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/code/h08c-distributed-lags.R",
+          "lines": [
+            264,
+            264
+          ],
+          "snippet": "    fmla_str = glue(\"{outcome} ~ {rhs_str} {fe_str}\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "command",
+      "value": "ivreg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+          "lines": [
+            1638,
+            1638
+          ],
+          "snippet": "lm2_2SLS<-ivreg(time_FE ~ dmovies | us_dmovies_share , data = regdata_IV)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "command",
+      "value": "lm",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+          "lines": [
+            1615,
+            1615
+          ],
+          "snippet": "lm1 <- lm(predictdeltaW~.-1,data = regdata)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "command",
+      "value": "mle2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+          "lines": [
+            241,
+            241
+          ],
+          "snippet": "fit1 <- mle2(LL, start = betakappaini0, vecpar = TRUE, hessian.opts = (method.args <- list(eps = 1e-4, d = 0.001, zero.tol = sqrt(.Machine$double.eps / 7e-7), r = 4, v = 2)))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "command",
+      "value": "twostepweakiv",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/replication_tables.do",
+          "lines": [
+            442,
+            443
+          ],
+          "snippet": "xi: twostepweakiv 2sls `y'_post3_w (`endog_`field'' = `instr_`field'') `y'_pre3_w `exog', ///\n\t\t\tlevel(95) usegrid citestlist(AR K LC)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "package",
+      "value": "ivreg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 8,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": "s3",
+          "field": "package",
+          "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+          "lines": [
+            1638,
+            1638
+          ],
+          "snippet": "lm2_2SLS<-ivreg(time_FE ~ dmovies | us_dmovies_share , data = regdata_IV)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "package",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 10,
+      "unknown_papers": 8,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": "s2",
+          "field": "package",
+          "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/replication_tables.do",
+          "lines": [
+            466,
+            466
+          ],
+          "snippet": "xi: ivreg2 `y'_post3_w (`endog_`field'' = `instr_`field'') `y'_pre3_w `exog', robust first",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 7,
+      "specs": 21,
+      "denominator_papers": 10,
+      "unknown_papers": 2,
+      "share_of_known": 0.875,
+      "by_language": {
+        "Stata": 6,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s3",
+          "field": "se.type",
+          "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+          "lines": [
+            785,
+            785
+          ],
+          "snippet": "\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1211
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            191,
+            191
+          ],
+          "snippet": "    cluster = ~blzip",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "cluster(zip3)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            778,
+            778
+          ],
+          "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "reghdfe cci_score_1900s pct_Southerners_white $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "se_type",
+      "value": "robust",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 2,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag029",
+          "card_sha256": "48c06e96d03dce746d887cd220d4d68b66eebc505ce81c3cefb9c7ed4277d44d",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+          "lines": [
+            71,
+            71
+          ],
+          "snippet": "ivreg2 `y' (`d' = `z'), `ivreghdfe_se'",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o21",
+      "facet": "cluster_dimensions",
+      "value": "1",
+      "papers": 6,
+      "specs": 16,
+      "denominator_papers": 10,
+      "unknown_papers": 4,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 5,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s3",
+          "field": "se.cluster_level",
+          "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+          "lines": [
+            785,
+            785
+          ],
+          "snippet": "\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1211
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            191,
+            191
+          ],
+          "snippet": "    cluster = ~blzip",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "cluster(zip3)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            778,
+            778
+          ],
+          "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "reghdfe cci_score_1900s pct_Southerners_white $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o22",
+      "facet": "fixed_effects_count",
+      "value": "1",
+      "papers": 3,
+      "specs": 6,
+      "denominator_papers": 10,
+      "unknown_papers": 6,
+      "share_of_known": 0.75,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1230
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s5",
+          "field": "fixed_effects",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            786,
+            787
+          ],
+          "snippet": "qui: ivreg2 `y' (removed=jscore) i.courtyearfe , cluster( $clusterop ) small\n\test store m5_`y'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "reghdfe",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o23",
+      "facet": "fixed_effects_count",
+      "value": "2",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 6,
+      "share_of_known": 0.25,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+          "lines": [
+            498,
+            498
+          ],
+          "snippet": "\t\t\t\t\t\t\tivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o24",
+      "facet": "weights",
+      "value": "weighted",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 10,
+      "unknown_papers": 8,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "s2",
+          "field": "weights",
+          "path": "code/replication_AER/code/5_main_figures_tables.do",
+          "lines": [
+            510,
+            510
+          ],
+          "snippet": "qui: ivreg2 causal_p25_czkr26 ($x_ols = $x_iv )  ${baseline_controls} [aw=1/(causal_p25_czkr26_se^2)], first",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s3",
+          "field": "weights",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            822,
+            822
+          ],
+          "snippet": "\treghdfe `y' removed $controls [aw=SAMP_child18_complier_weight], absorb( $FE ) cluster( $clusterop )",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o25",
+      "facet": "diagnostic",
+      "value": "first_stage:unknown",
+      "papers": 8,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "unknown": 8
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o26",
+      "facet": "diagnostic",
+      "value": "weak_iv:unknown",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.25,
+      "by_language": {
+        "unknown": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o27",
+      "facet": "diagnostic",
+      "value": "balance:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "x4",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o28",
+      "facet": "diagnostic",
+      "value": "heterogeneous_treatment_effects:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "x3",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o29",
+      "facet": "diagnostic",
+      "value": "other:monotonicity_exclusion_test:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1253,
+            1253
+          ],
+          "snippet": "testjfe convicted injail fe_judgeid_*, numknots(5) covariates( fe_ori_yr_m*) fitweight(.5) generate(eyj pj fit) graph",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o30",
+      "facet": "diagnostic",
+      "value": "pretrend_test:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "x3",
+          "field": "status",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o31",
+      "facet": "diagnostic",
+      "value": "pretrend_test:observed:output_code_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/replication_AER/code/5_main_figures_tables.do",
+          "lines": [
+            795,
+            815
+          ],
+          "snippet": "local outcomes \"enrolled_occs1900 enrolled_occs1910 enrolled_occs1920 enrolled_occs1930 enrolled_occs1940  avg_wt_med_educ1940\"",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o32",
+      "facet": "diagnostic",
+      "value": "pretrend_test:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o33",
+      "facet": "diagnostic",
+      "value": "weak_iv:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "x3",
+          "field": "status",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o34",
+      "facet": "diagnostic",
+      "value": "weak_iv:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 8,
+      "unknown_papers": 0,
+      "share_of_known": 0.125,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/replication_tables.do",
+          "lines": [
+            471,
+            471
+          ],
+          "snippet": "local F_paap_`field' = e(widstat)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o35",
+      "facet": "robustness_type",
+      "value": "alt_instrument:confirmed",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/replication_tables.do",
+          "lines": [
+            440,
+            440
+          ],
+          "snippet": "* 1) twostepweakiv (LC Conf Intervals)    *",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o36",
+      "facet": "robustness_type",
+      "value": "alt_sample:unresolved",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "drop if judge_less25cases==1",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o37",
+      "facet": "output_format",
+      "value": "tex",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 9,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "t1",
+          "field": "format",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1211
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o38",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 10,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 8,
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+          "lines": [
+            1,
+            10
+          ],
+          "snippet": "MTO",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/replication_AER/code/3_instrument.do",
+          "lines": [
+            3,
+            3
+          ],
+          "snippet": "Construct versions of shift-share instrument",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1234,
+            1234
+          ],
+          "snippet": "ivreg2 convicted (injail = judgeiv) i.larg_yr i.larg_mo i.larg_dow i.ori_part, cluster(judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            186,
+            188
+          ],
+          "snippet": "forprofit_05\n    ~\n    blfpdist10_50",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": [
+            124,
+            128
+          ],
+          "snippet": "rlasso",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            777,
+            777
+          ],
+          "snippet": "foreach y in dead_byYTURNS19 SOD_dead_byYTURNS19 suicidB_dead_byYTURNS19 OD_dead_byYTURNS19 dead_f_m0_48  SOD_dead_f_m0_48 suicidB_dead_f_m0_48 OD_dead_f_m0_48  {",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o39",
+      "facet": "role_known",
+      "value": "known",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 9,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": "d1",
+          "field": "role",
+          "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/replication_tables.do",
+          "lines": [
+            407,
+            414
+          ],
+          "snippet": "Table 4: Effects of Expectations on Behavior — Instrumental Variables Estimates",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o40",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 7,
+      "specs": 19,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.7,
+      "by_language": {
+        "Stata": 5,
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/Repository/code/analysis/5_1_ETI_estimation_main.do",
+          "lines": [
+            783,
+            785
+          ],
+          "snippet": "ivreghdfe lntincome_chng lntincome lngincome  ///\n\t\t(lnnetmrate_chng  = lnnetmratehat_n_chng) [pw=w1] ///\n\t\tif year<=2009 & mainsamp==1, absorb(year npwp) cluster(npwp) savefirst",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/replication_AER/code/5_main_figures_tables.do",
+          "lines": [
+            494,
+            494
+          ],
+          "snippet": "qui: ivreg2 perm_res_p25_kr26 ($x_ols = $x_iv )  ${baseline_controls} , first",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/programs/empirical/fll_aer_replication.do",
+          "lines": [
+            1211,
+            1230
+          ],
+          "snippet": "areg injail judgeiv i.larg_yr i.larg_mo i.larg_dow, a(ori_part) vce(cluster judgeid)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/code/h08-ivregs.R",
+          "lines": [
+            176,
+            192
+          ],
+          "snippet": "iv_regs1 = feols(\n    c(.[, out1])",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            778,
+            779
+          ],
+          "snippet": "reghdfe `y' removed , noabsorb cluster( $clusterop )\n\test store m1_`y'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag027",
+          "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "reghdfe",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o41",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 7,
+      "specs": 14,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.7,
+      "by_language": {
+        "Stata": 6,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/Repository/code/analysis/3_1_MTO_WDD_regressions_main.do",
+          "lines": [
+            498,
+            498
+          ],
+          "snippet": "ivreghdfe `var'  (inMTO =  inMTOby2008post) [pw=`weight'], absorb(npwp  year) savefirst saverf cluster(`clust')",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/replication_AER/code/5_main_figures_tables.do",
+          "lines": [
+            510,
+            510
+          ],
+          "snippet": "qui: ivreg2 causal_p25_czkr26 ($x_ols = $x_iv )  ${baseline_controls} [aw=1/(causal_p25_czkr26_se^2)], first",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": "s4",
+          "field": "resolution_status",
+          "path": "code/code/h08c-distributed-lags.R",
+          "lines": [
+            264,
+            264
+          ],
+          "snippet": "    fmla_str = glue(\"{outcome} ~ {rhs_str} {fe_str}\")",
+          "language": "R"
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_KXAVHB/table4_5.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "ivreg2 `outcome' i.(`other') i.age i.(`severity') i.(`diagnosis_control') (`var'=`instrument') i.zip3 ,  cluster(zip3) partial(i.zip3)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+          "lines": [
+            822,
+            822
+          ],
+          "snippet": "reghdfe `y' removed $controls [aw=SAMP_child18_complier_weight], absorb( $FE ) cluster( $clusterop )",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag029",
+          "card_sha256": "48c06e96d03dce746d887cd220d4d68b66eebc505ce81c3cefb9c7ed4277d44d",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_17503831/clean_archive/applications/src/run_application.ado",
+          "lines": [
+            71,
+            73
+          ],
+          "snippet": "ivreg2 `y' (`d' = `z'), `ivreghdfe_se'",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o42",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 9,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.9,
+      "by_language": {
+        "Stata": 9
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jpe_2026_738249",
+          "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdaf044",
+          "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o43",
+      "facet": "language",
+      "value": "R",
+      "papers": 5,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 5
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_2",
+          "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag029",
+          "card_sha256": "48c06e96d03dce746d887cd220d4d68b66eebc505ce81c3cefb9c7ed4277d44d",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_90_2_4",
+          "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf079",
+          "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o44",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_8",
+          "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o45",
+      "facet": "language",
+      "value": "Mathematica",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Mathematica": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o46",
+      "facet": "language",
+      "value": "SAS",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "SAS": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_112_2_1",
+          "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o47",
+      "facet": "language",
+      "value": "Shell",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 10,
+      "unknown_papers": 0,
+      "share_of_known": 0.1,
+      "by_language": {
+        "Shell": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_115_1_8",
+          "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "aer_111_12_2",
+      "card_sha256": "521204dfcf290d9eeaabb8207210681f4a8f66624a2224c7ceac858d983d94bd",
+      "kind": "reading_note",
+      "text": "Main analysis files traced: 3_1 (DID/event-study), 5_1 (ETI/IV). Two primary designs identified.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_112_2_1",
+      "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42",
+      "kind": "reading_note",
+      "text": "Main analysis pipeline traced: master→build→lasso→instrument→analysis. Primary focus on IV design with shift-share instrument (GM_hat2). Shift-share construction uses 1935-1940 Black migrant location shares interacted with LASSO-predicted county-level out-migration 1940-1970. Main tables and figures identified; appendix tables omitted. Standard error specification not explicitly documented in main scripts.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_113_1_8",
+      "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+      "kind": "sample_restriction",
+      "text": "Full sample of cases arraigned in lower court",
+      "record_id": null,
+      "path": "code/programs/empirical/fll_aer_replication.do",
+      "lines": [
+        1210,
+        1211
+      ]
+    },
+    {
+      "artid": "aer_113_1_8",
+      "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7",
+      "kind": "reading_note",
+      "text": "Main replication script covers empirical application in NYC. Test implementation in testjfe.ado and testjfe.m performs semiparametric test for exclusion/monotonicity assumptions. Simulations compare test to Kitagawa alternatives. Multiple simulation scripts present; empirical analysis is primary focus.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_115_1_8",
+      "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+      "kind": "sample_restriction",
+      "text": "drop if mi(minadrdyear); drop if num_blyear != 1",
+      "record_id": null,
+      "path": "code/code/h07a-adrd-panel.do",
+      "lines": [
+        35,
+        46
+      ]
+    },
+    {
+      "artid": "aer_115_1_8",
+      "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+      "kind": "sample_restriction",
+      "text": "drop if minhoscyear < minadrdyear",
+      "record_id": null,
+      "path": "code/code/h07a-adrd-panel.do",
+      "lines": [
+        51,
+        51
+      ]
+    },
+    {
+      "artid": "aer_115_1_8",
+      "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179",
+      "kind": "reading_note",
+      "text": "Main analysis uses IV regression (2SLS with distance instrument), Mountjoy three-way IV, and distributed lags event study. No staggered DID with csdid found in analysis code despite package installation.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jpe_2026_738249",
+      "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+      "kind": "convention",
+      "text": "Scripts numbered 1-3 for data pipeline, table*.do for output",
+      "record_id": null,
+      "path": "code/dataverse_KXAVHB/2.regressions.do",
+      "lines": [
+        1,
+        1
+      ]
+    },
+    {
+      "artid": "jpe_2026_738249",
+      "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+      "kind": "sample_restriction",
+      "text": "use final_24after_3mon.dta, 24-month observation period",
+      "record_id": null,
+      "path": "code/dataverse_KXAVHB/3.regression_setup.do",
+      "lines": [
+        15,
+        15
+      ]
+    },
+    {
+      "artid": "jpe_2026_738249",
+      "card_sha256": "85c925194fe2f4e95f5d70e685fe364556f677ed3dbcae0b6f82fdfcbf4e3379",
+      "kind": "reading_note",
+      "text": "Main analysis: IV estimation with post-LASSO covariate selection on nested samples (full → treated → drug-treated)",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "implementation_feature",
+      "text": "Judge assignment is quasi-random source of exogenous variation",
+      "record_id": "d1",
+      "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do",
+      "lines": [
+        22,
+        32
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "implementation_feature",
+      "text": "Judge removal tendency (jscore) is the instrument",
+      "record_id": "d1",
+      "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do",
+      "lines": [
+        22,
+        32
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "implementation_feature",
+      "text": "Complier analysis with reweighting by risk stratification",
+      "record_id": "d1",
+      "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/03data_jscores.do",
+      "lines": [
+        22,
+        32
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "author_stated_assumption",
+      "text": "Judge assignment is as-good-as-random within court-year-case",
+      "record_id": "d1",
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+        727,
+        737
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "convention",
+      "text": "Global macro system for sample, FE, and control sets: $controls, $FE, $clusterop, $SAMP define all model components",
+      "record_id": null,
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+        16,
+        16
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "convention",
+      "text": "Stored model naming: est store m1/m2/m3 by outcome",
+      "record_id": null,
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+        779,
+        779
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "sample_restriction",
+      "text": "Drop judges with fewer than 25 cases",
+      "record_id": null,
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+        56,
+        56
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "sample_restriction",
+      "text": "Exclude court-year cells with fewer than 2 judges",
+      "record_id": null,
+      "path": "code/zenodo_14293584/helensdotter_replication/analysis/code/analysis.do",
+      "lines": [
+        61,
+        63
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "sample_restriction",
+      "text": "Exclude appeals (only first-instance cases)",
+      "record_id": null,
+      "path": "code/zenodo_14293584/helensdotter_replication/cleaning/code/02data_addons.do",
+      "lines": [
+        2246,
+        2250
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf044",
+      "card_sha256": "c3d1500ca93c48cf1c1658e094952ee8c3525c99a5674559cecda6602a3378a8",
+      "kind": "reading_note",
+      "text": "Complete read of master, all cleaning scripts, complier weighting logic, and main analysis specifications for mortality tables. All estimation commands and sample definitions traced.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag027",
+      "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+      "kind": "sample_restriction",
+      "text": "Restrict to year==1900 for main cross-sectional analysis in Table 2",
+      "record_id": null,
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+        38,
+        38
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag027",
+      "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+      "kind": "sample_restriction",
+      "text": "Restrict to non-South counties (North==0) for Table 3 multicohort analysis",
+      "record_id": null,
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table3.do",
+      "lines": [
+        55,
+        55
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag027",
+      "card_sha256": "b7b86b6eff207d4df9b13c00b861a025c89407089e4de82d9bceb47daa88d256",
+      "kind": "reading_note",
+      "text": "Article focuses on Confederate diaspora migration flows and cultural transmission. Master script (0_master-results.do) orchestrates data construction and analysis. Main analysis scripts (3_table2.do, 3_table3.do, etc.) use reghdfe for OLS and ivreghdfe for IV specifications. Custom ado files implement bias-corrected TSLS and spatial HAC standard errors. Server-only files handle restricted datasets (slave schedule, KKK rosters) and large-scale data merging; these prevent complete specification en",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag029",
+      "card_sha256": "48c06e96d03dce746d887cd220d4d68b66eebc505ce81c3cefb9c7ed4277d44d",
+      "kind": "reading_note",
+      "text": "Master.R, 13 applications, saturated specs",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_90_2_4",
+      "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+      "kind": "implementation_feature",
+      "text": "Two-step estimation: first-step ordered probit on adoption choices; second-step nested fixed point",
+      "record_id": "d1",
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+        898,
+        900
+      ]
+    },
+    {
+      "artid": "restud_90_2_4",
+      "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+      "kind": "implementation_feature",
+      "text": "Value function iteration using transition matrix contraction (I - beta*P)^{-1}",
+      "record_id": "d1",
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+        898,
+        900
+      ]
+    },
+    {
+      "artid": "restud_90_2_4",
+      "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+      "kind": "implementation_feature",
+      "text": "Bootstrap procedure (500 replicates) for standard errors",
+      "record_id": "d1",
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+        898,
+        900
+      ]
+    },
+    {
+      "artid": "restud_90_2_4",
+      "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+      "kind": "implementation_feature",
+      "text": "Counterfactual simulations: social planner coordination benchmark, targeted and blanket subsidies",
+      "record_id": "d1",
+      "path": "code/zenodo_6554812/Replication_final_v2/Replication_final_v2/code/estimation.R",
+      "lines": [
+        898,
+        900
+      ]
+    },
+    {
+      "artid": "restud_90_2_4",
+      "card_sha256": "1a5a6f46a7b344086068e8538e7ff7d600292e3c5363b6453c2b45af4cab32af",
+      "kind": "reading_note",
+      "text": "Two-stage structural estimation of dynamic discrete choice game. First stage: ordered probit on adoption decisions (mle2). Second stage: nested fixed point with value function iteration over transition matrices. Counterfactual analyses solve social planner and subsidy scenarios. Bootstrap procedure for SE. Repository lacks README and explicit entry point; execution order inferred from section comments.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf079",
+      "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+      "kind": "convention",
+      "text": "Global macros for paths: ROOT, ADO, data, output",
+      "record_id": null,
+      "path": "code/dataverse_FGXMJE/replication_package/replication_final/Code/setup.do",
+      "lines": [
+        13,
+        16
+      ]
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf079",
+      "card_sha256": "c76372c8d95a33e9f7cec6580e994753e09922fa0ac669baeebb67b2fa1ba1e5",
+      "kind": "reading_note",
+      "text": "Main IV specifications in replication_tables.do lines 442-443 (twostepweakiv) and 466 (ivreg2). Two-treatment design with weak-IV robust inference via twostepweakiv (LC confidence sets, AR and K tests). Complementary survey analysis in R (lm_robust with wave FE). Data preparation in R sources helper scripts for outcome construction.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet variant: unknown in 8/10 papers; shares are computed over the 2 known papers only",
+    "facet package: unknown in 8/10 papers; shares are computed over the 2 known papers only",
+    "facet fixed_effects_count: unknown in 6/10 papers; shares are computed over the 4 known papers only",
+    "facet weights: unknown in 8/10 papers; shares are computed over the 2 known papers only",
+    "facet output_format: unknown in 9/10 papers; shares are computed over the 1 known papers only",
+    "facet role_known: unknown in 9/10 papers; shares are computed over the 1 known papers only",
+    "9/10 cards have no specification-to-output links; output facets cover the remaining cards only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

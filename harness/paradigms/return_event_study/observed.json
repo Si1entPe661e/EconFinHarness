@@ -1,0 +1,742 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "return_event_study",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "jfe_2024_j_jfineco_2024_103809",
+        "sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+        "journal": "JFE",
+        "year": 2024,
+        "coverage": "minimal",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "jfe_2026_j_jfineco_2025_104223",
+        "sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+        "journal": "JFE",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "SAS"
+        ]
+      },
+      {
+        "artid": "rfs_2025_rfs_hhae056",
+        "sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+        "journal": "RFS",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 3,
+    "specifications": 2,
+    "designs": 3,
+    "by_language": {
+      "Stata": 3,
+      "SAS": 1,
+      "Python": 1
+    },
+    "by_journal": {
+      "JFE": 2,
+      "RFS": 1
+    },
+    "by_year": {
+      "2024": 1,
+      "2026": 1,
+      "2025": 1
+    },
+    "by_coverage": {
+      "minimal": 1,
+      "partial": 2
+    }
+  },
+  "by_variant": {
+    "unknown": 3
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "estimator",
+      "value": "2sls",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s18",
+          "field": "estimator",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "eststo diff1: ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0, cluster(datemo) bw(60) ",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+          "lines": [
+            294,
+            294
+          ],
+          "snippet": "eststo: reg car_capm_0to2_1 $jvariable $controls if `event'==1, clus(firm)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "command",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s18",
+          "field": "command",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "eststo diff1: ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0, cluster(datemo) bw(60) ",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "reg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+          "lines": [
+            294,
+            294
+          ],
+          "snippet": "eststo: reg car_capm_0to2_1 $jvariable $controls if `event'==1, clus(firm)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "package",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s18",
+          "field": "package",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "eststo diff1: ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0, cluster(datemo) bw(60) ",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+          "lines": [
+            294,
+            294
+          ],
+          "snippet": "reg car_capm_0to2_1 $jvariable $controls if `event'==1, clus(firm)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "se_type",
+      "value": "hac_newey_west",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s18",
+          "field": "se.type",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "cluster(datemo) bw(60) small nocons",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "cluster_dimensions",
+      "value": "1",
+      "papers": 2,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+          "lines": [
+            294,
+            294
+          ],
+          "snippet": "reg car_capm_0to2_1 $jvariable $controls if `event'==1, clus(firm)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s18",
+          "field": "se.cluster_level",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "cluster(datemo) bw(60) small nocons",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 1,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+          "lines": [
+            106,
+            106
+          ],
+          "snippet": "*Estimating CARs, 1-factor (CAPM) and 3-factor (Fama-French) market models",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "d3",
+          "field": "classification_basis",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": "d4",
+          "field": "classification_basis",
+          "path": "code/dataverse_JTU2GF/Table 11.do",
+          "lines": [
+            832,
+            832
+          ],
+          "snippet": "reg CAR bb , vce(cluster permno)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": "s18",
+          "field": "resolution_status",
+          "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+          "lines": [
+            7,
+            7
+          ],
+          "snippet": "eststo diff1: ivreg2 diffindiff_FF6_2 join if totjoin == 1 & join & reg_nobs_before_FF6 == 30 & reg_nobs_after_FF6 == 30 & samp & sp500_sum_after == 30 & sp500_sum_before == 0, cluster(datemo) bw(60) ",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+          "lines": [
+            294,
+            294
+          ],
+          "snippet": "eststo: reg car_capm_0to2_1 $jvariable $controls if `event'==1, clus(firm)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "language",
+      "value": "Python",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2025_rfs_hhae056",
+          "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "language",
+      "value": "SAS",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "SAS": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "jfe_2026_j_jfineco_2025_104223",
+          "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+      "kind": "implementation_feature",
+      "text": "CAPM 1-factor market model",
+      "record_id": "d1",
+      "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+      "lines": [
+        106,
+        106
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+      "kind": "implementation_feature",
+      "text": "Fama-French 3-factor market model",
+      "record_id": "d1",
+      "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+      "lines": [
+        106,
+        106
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+      "kind": "implementation_feature",
+      "text": "Estimation window: 300 to 60 trading days before event",
+      "record_id": "d1",
+      "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_car.do",
+      "lines": [
+        106,
+        106
+      ]
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+      "kind": "reading_note",
+      "text": "Main analysis files comprehensively read (450+685+300 lines). Appendix partially read (first 100 lines show robustness). Data preparation and key regression calls documented. Market model computations, event windows, DID periods, and synthetic control setup all traced. Vendored tool library skipped per policy.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "30-month window before/after",
+      "record_id": "d3",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+      "lines": [
+        7,
+        7
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "Newey-West HAC inference",
+      "record_id": "d3",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+      "lines": [
+        7,
+        7
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "implementation_feature",
+      "text": "multiple FF6 factor specifications with different control groups",
+      "record_id": "d3",
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table6.do",
+      "lines": [
+        7,
+        7
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Fixed effects specification: ab(permno date) notation in reghdfe specifies stock-by-time two-way FE absorption",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        23,
+        23
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Interaction syntax: c.intermediary_shock#c.epsilonit creates fully-interacted term",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        23,
+        23
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Portfolio-level analysis: data aggregated to quintile × date level before ivreg2 estimation",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table2_and_Table3.do",
+      "lines": [
+        11,
+        11
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "convention",
+      "text": "Output names: figures exported as .png in Figures/ subdirectory; tables as .tex in Tables/ subdirectory",
+      "record_id": null,
+      "path": "code/mendeley_9z43x4c6yr_v2/Code/Analysis/Table7.do",
+      "lines": [
+        78,
+        78
+      ]
+    },
+    {
+      "artid": "jfe_2026_j_jfineco_2025_104223",
+      "card_sha256": "540e3dc7853a4c109ead4a5feaa71a683bb22606fbf4e2f0a4e35df7a47ff513",
+      "kind": "reading_note",
+      "text": "Analyzed master scripts and key analysis/cleaning scripts; found consistent patterns in reghdfe specifications with cluster(permno date) two-way clustering and date/stock FE; xtfmb in Table 1; ivreg2 with Newey-West HAC in portfolio regressions and event study; identified main data sources (CRSP, Compustat, FactSet, FF factors, S34)",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "implementation_feature",
+      "text": "cumulative abnormal return around earnings announcements",
+      "record_id": "d4",
+      "path": "code/dataverse_JTU2GF/Table 11.do",
+      "lines": [
+        832,
+        832
+      ]
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "implementation_feature",
+      "text": "clustered standard errors by permno",
+      "record_id": "d4",
+      "path": "code/dataverse_JTU2GF/Table 11.do",
+      "lines": [
+        832,
+        832
+      ]
+    },
+    {
+      "artid": "rfs_2025_rfs_hhae056",
+      "card_sha256": "49185ccbebf0f5238cf75b1693a3f0491b96d390844f4f7dee0388815cc27d99",
+      "kind": "reading_note",
+      "text": "Stata scripts use globals for paths; data files not included. Entry points are individual table-specific .do files. Portfolio returns computed externally from CRSP/Compustat/Interbrand sources.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet package: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "3/3 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only",
+    "no design variants recorded; variant-conditional rules cannot be derived from this set"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

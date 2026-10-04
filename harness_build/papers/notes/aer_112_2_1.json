@@ -1,0 +1,1344 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_112_2_1",
+  "journal": "AER",
+  "year": 2022,
+  "doi": "10.1257/aer.20200002",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_112_2_1.pdf",
+    "pdf_sha256": "40d7138facb4219977835313f6be8073d18a5b8f3843b3aeb826c6724a167444",
+    "text_path": "harness_build/papers/text/aer_112_2_1.txt",
+    "text_sha256": "24511ef4e5826b9247942c4ea3ffc6dcd6536c8fbd1b54beaaba7a063d9e571c",
+    "pages": 40
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:57:27Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/aer_112_2_1.json",
+    "card_sha256": "b8719e6235434cf2bcead52e9c0536138029bbaec9b063dbae54580653bfdc42"
+  },
+  "methods": [
+    "iv",
+    "shift_share"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "I. Historical Background",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "II. Data and Descriptive Statistics",
+      "pages": [
+        6,
+        11
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "III. Empirical Strategy",
+      "pages": [
+        11,
+        17
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "IV.A-B Impact on Upward Mobility and Race/Gender Heterogeneity",
+      "pages": [
+        17,
+        30
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "robustness",
+      "title": "IV.C Alternative Explanations",
+      "pages": [
+        30,
+        32
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "mechanisms",
+      "title": "V. Evidence on Local Mechanisms",
+      "pages": [
+        32,
+        37
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "conclusion",
+      "title": "VI. Conclusion",
+      "pages": [
+        37,
+        38
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        38,
+        40
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The paper names its design as a shift-share instrumental-variables strategy and states the estimand as the effect of a commuting zone's historical Great Migration inflow shock on later average upward mobility.",
+      "pages": [
+        11,
+        17
+      ],
+      "locator": "Section III, Empirical Strategy",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "The identifying assumption is written out as a formal orthogonality condition between the predicted-migration instrument and the residual of the upward-mobility equation, conditional on baseline controls.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section III, Identifying Assumption and Validity Checks, equation 7",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "instrument_exclusion_argued",
+        "threats_discussed"
+      ],
+      "statement": "Exclusion is argued through a push-versus-pull distinction: southern out-migration shocks are argued to be orthogonal to destination-side pull factors, drawing on the shift-share literature's shares-versus-shifters framing.",
+      "pages": [
+        12,
+        17
+      ],
+      "locator": "Section III",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The paper explicitly discusses that standard geographic clustering could understate standard errors in a shift-share design if southern counties carry correlated importance across several northern destinations.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section III, discussion following equation 7",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The same instrument is applied to two outcome families, raw average location outcomes and an externally sourced location-only causal exposure measure, explicitly framed as two measures used to separate location from family-composition channels.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section IV.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "Data sources named include complete-count historical censuses, a historical statistical compendium of city and county data, publicly released tax-record-based mobility statistics, and a newly assembled database on local government, schooling and crime.",
+      "pages": [
+        6,
+        9
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "The commuting zone is stated as the unit of observation in the main text and repeated in the notes of every regression table.",
+      "pages": [
+        8,
+        21
+      ],
+      "locator": "Section II.B; table notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "exclusions_justified"
+      ],
+      "statement": "The analysis sample is restricted to non-southern commuting zones for which Black population figures are available in both endpoint census years from two named sources, and the authors state this sample covers the large majority of the relevant national population.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section II.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "The observation count is reported as a labeled row in every regression table and stays essentially fixed across specifications within a table family.",
+      "pages": [
+        16,
+        31
+      ],
+      "locator": "Tables 1-9",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "attrition_reported"
+      ],
+      "statement": "A data-privacy suppression rule removes one commuting zone from the race-specific tables, and the authors separately argue that reverse out-migration among study-cohort families is unlikely to threaten the sample given the timing of the birth cohorts studied.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section IV.B, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "The treatment variable is defined as the percentile rank, rather than the raw magnitude, of a commuting zone's Black population-share increase, chosen explicitly because the underlying share-increase measure is right-skewed.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section III, Functional Form",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The instrument is constructed by interacting fixed pre-period migrant location shares with a machine-learning-selected, decade-by-decade prediction of origin-county out-migration driven by named southern push factors.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section III, equations 2-3",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Two outcome families are defined: average adult income rank by childhood commuting zone from tax records, and an externally estimated location-only causal exposure effect on income rank taken from a companion mover-based methodology.",
+      "pages": [
+        18,
+        22
+      ],
+      "locator": "Section IV.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index"
+      ],
+      "statement": "Mechanism-stage outcomes are standardized onto a common scale so that effects on very different local-government, schooling and crime measures can be compared within the same figure.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section V, equation 11",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "The authors note that the causal exposure-effect proxy used for one of the two outcome families is not available separately by race, limiting what that measure alone can say about race-specific channels.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Section IV.A, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "The robustness tables list included fixed effects and control sets as indicator rows beneath the coefficients, adding one alternative control or comparison instrument per column relative to a baseline column.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Tables 8-9",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "r2_reported",
+        "mean_of_dependent_reported"
+      ],
+      "statement": "Each results table reports the observation count, either an R-squared or a first-stage F-statistic, and the dependent variable's mean and standard deviation in labeled rows beneath the coefficient panels.",
+      "pages": [
+        21,
+        31
+      ],
+      "locator": "Tables 2-9",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes"
+      ],
+      "statement": "Table notes state that standard errors are shown in parentheses but do not name a clustering level or a robust versus homoskedastic designation.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "OLS, reduced-form and two-stage-least-squares estimates for the same outcome are stacked as separate panels within a single table rather than spread across separate tables.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table 2, Panels B-D",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "weights_stated"
+      ],
+      "statement": "A subset of specifications is flagged with a labeled 'Precision wt' indicator row denoting that those regressions use inverse-variance weights based on the underlying exposure-effect standard error.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Table 3; footnote on precision weights",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "No sentence in the main text states why a particular clustering level, or the absence of clustering, was chosen for the reported standard errors.",
+      "pages": [
+        15,
+        31
+      ],
+      "locator": "Section III; table notes throughout",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Instead of a clustering argument, the authors address a shift-share-specific inference concern by re-running the instrument construction with randomized origin shocks and reporting how often the resulting placebo coefficient would spuriously appear significant.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section III, discussion following equation 7",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "other:no_multiple_testing_adjustment_stated"
+      ],
+      "statement": "No adjustment for testing across the many mechanism outcomes or subgroup splits is stated when the mechanism and heterogeneity figures are interpreted.",
+      "pages": [
+        25,
+        36
+      ],
+      "locator": "Section IV.B; Section V",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "A first-stage coefficient and an F-statistic for the excluded instrument are reported at the top of every main results table and shown separately in a dedicated binned-scatterplot figure.",
+      "pages": [
+        17,
+        21
+      ],
+      "locator": "Figure 5; Table 2, Panel A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_test",
+        "in_main_text"
+      ],
+      "statement": "A dedicated placebo table regresses the instrument on pre-treatment-period school-attendance and education outcomes across several decades to check for pre-existing trends before the Migration period begins.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "overid_test",
+        "in_main_text"
+      ],
+      "statement": "Two additional instrument constructions are built from alternative sources of origin-county variation, and a formal overidentification test comparing all three versions is reported in the main text, with the full comparison figure placed in the online appendix.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section III; online Appendix Figure D16",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "The mechanism analysis separately plots the instrument's association with pre-1940 values of the same mechanism variables before turning to post-period effects, treating the pre-period panel as a placebo check.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Figure 9, panel A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_main_text"
+      ],
+      "statement": "The text discusses possible sample attrition from reverse migration out of destination commuting zones and argues that the timing of the study cohorts' birth years makes this an unlikely source of bias.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "A footnote states that the instrument also does not predict several other baseline socioeconomic characteristics of destination commuting zones, with the supporting table placed in the online appendix.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III, footnote 13",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "alt_control_group",
+        "summarized_in_one_table"
+      ],
+      "statement": "Two robustness tables each add one alternative control, fixed effect, or comparison instrument at a time relative to the baseline specification, covering deindustrialization, other historical migration flows, and level controls for the Black population share.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Tables 8-9",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_appendix"
+      ],
+      "statement": "A first-differenced version of the main specification is reported as an alternative to the levels specification, with the underlying regression placed in the online appendix.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section IV.C; online Appendix Figure D15",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "leave_one_out"
+      ],
+      "statement": "A figure note reports the same estimation with a specific merged commuting zone dropped from the sample.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Figure 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_control_group"
+      ],
+      "statement": "An entirely separate shift-share instrument for a different historical migrant group is constructed and shown to have no association with the outcome, used to rule out a broader in-migration explanation.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section IV.C, Other Migrations",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "An additional, more conservative childhood-exposure weighting assumption beyond the two reported in the main table is described in a footnote, with its results placed in the online appendix.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 4, footnote 21",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "interaction"
+      ],
+      "statement": "Effects are estimated separately by race, gender, and parent-income group, first summarized in a single coefficient plot before the full regression tables are shown.",
+      "pages": [
+        25,
+        28
+      ],
+      "locator": "Figure 8; Tables 5-6",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "mechanism_motivated"
+      ],
+      "statement": "The gender split in the heterogeneity analysis is explicitly framed as motivated by prior findings that boys' outcomes respond more strongly to family and environmental factors, rather than presented as a purely exploratory cut.",
+      "pages": [
+        28,
+        29
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "A newly assembled panel of local-government spending, private schooling, crime, and incarceration measures is examined as candidate intermediate outcomes for the persistent upward-mobility effect.",
+      "pages": [
+        32,
+        35
+      ],
+      "locator": "Section V",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism"
+      ],
+      "statement": "The contrast between the location-only causal exposure measure and the raw average-outcome measure is used as evidence to separate an environment channel from a family-composition channel.",
+      "pages": [
+        18,
+        20
+      ],
+      "locator": "Section IV.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled"
+      ],
+      "statement": "The authors state that separating the causal contribution of each individual candidate mechanism is beyond what the paper's design can identify, and describe the mechanism evidence as suggestive rather than a decomposition.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Section V.A, Discussion of Local Mechanisms",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ],
+      "quote": "beyond the scope of this paper"
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "sd_units",
+        "compared_to_literature"
+      ],
+      "statement": "The main coefficient is rescaled to a one-standard-deviation shock and set alongside a comparable estimate from a related residential-segregation study to give readers an external benchmark for the magnitude.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "precision_discussed"
+      ],
+      "statement": "A scaling exercise converts the per-year childhood-exposure estimate into a full-childhood magnitude under two different assumptions about the age profile of exposure effects, then compares it with the average-outcome estimate to apportion location versus family-composition channels.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Table 4 and surrounding discussion",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "precision_discussed"
+      ],
+      "statement": "A separate counterfactual exercise recomputes the racial upward-mobility gap under a hypothetical absence of the Migration shock and reports a standard error for the counterfactual gap alongside the point estimate.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Table 7",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors state that the core orthogonality assumption cannot be directly tested and can only be supported indirectly through the pre-trend and placebo-inference exercises.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section III, Identifying Assumption",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat",
+        "external_validity"
+      ],
+      "statement": "The introduction explicitly states that the paper does not speak to the causal effect of the Migration on the migrants' own descendants, distinguishing that question from the location-effect estimate reported in the paper.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage",
+        "measurement"
+      ],
+      "statement": "The authors note several data constraints, including that earlier cohorts cannot be studied because neither a post-1940 complete-count census nor pre-1990s tax records are available, and that the causal exposure-effect proxy is unavailable separately by race.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The conclusion explicitly discusses implications for the scalability of moving-to-opportunity style policies and for migration episodes elsewhere, framing the destination-reaction channel documented here as a scope condition on such policies.",
+      "pages": [
+        37,
+        37
+      ],
+      "locator": "Section VI, Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "binscatter",
+        "raw_data_plot"
+      ],
+      "statement": "The paper's main bivariate relationships, including the first stage, reduced form, exposure effects, and mechanisms, are shown throughout as binned scatterplots with residualized axes and a fixed number of percentile bins.",
+      "pages": [
+        9,
+        34
+      ],
+      "locator": "Figures 3, 5, 6, 7, 9",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "Every table note restates the unit of observation, the outcome definition, the instrument definition, and that standard errors appear in parentheses.",
+      "pages": [
+        21,
+        31
+      ],
+      "locator": "Table notes throughout",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars"
+      ],
+      "statement": "As extracted, the regression tables show coefficients and parenthetical standard errors without significance-star markers; this could reflect the journal's own convention or a loss of formatting during text extraction.",
+      "pages": [
+        21,
+        31
+      ],
+      "locator": "Tables 2-9",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ],
+      "note": "Extraction caveat: stars may have been present in the typeset PDF and lost when the text was extracted; not verified against the PDF itself per the reading instructions."
+    },
+    {
+      "id": "o50",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot"
+      ],
+      "statement": "Subgroup heterogeneity results are summarized visually as a single horizontal coefficient plot with confidence intervals before the corresponding regression tables are presented.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Figure 8",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction previews the paper's main quantitative findings and mechanism results before the formal empirical sections, and closes with an explicit section-by-section roadmap paragraph.",
+      "pages": [
+        2,
+        5
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "The data and descriptive-statistics section is placed before the empirical-strategy section, so descriptive correlations are shown to the reader before the identification argument is presented.",
+      "pages": [
+        6,
+        11
+      ],
+      "locator": "Section II precedes Section III",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "Early introduction paragraphs explicitly position the paper's contribution relative to prior Great Migration and neighborhood-effects literatures.",
+      "pages": [
+        4,
+        5
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "writing_structure",
+      "tags": [
+        "other:robustness_embedded_in_results"
+      ],
+      "statement": "Alternative-explanation and robustness checks are placed as the closing subsection of the results section rather than as an independently numbered section, immediately preceding the separate mechanisms section.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Section IV.C",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "The main text repeatedly defers construction details, additional outcomes, and further robustness results to a cited online appendix that is not part of the extracted text file used for this note.",
+      "pages": [
+        6,
+        36
+      ],
+      "locator": "throughout",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "data_public"
+      ],
+      "statement": "The reference list cites a formal AEA and ICPSR replication-data deposit for the paper, and the title page links to an article page for additional materials and an author disclosure statement.",
+      "pages": [
+        1,
+        39
+      ],
+      "locator": "Title footnote; References",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "public_use"
+      ],
+      "statement": "Historical data are drawn from complete-count decennial censuses and a historical government statistical compendium, both administrative or public-use sources; contemporary outcomes come from federal tax-record tabulations released for public research use.",
+      "pages": [
+        6,
+        8
+      ],
+      "locator": "Section II",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o58",
+      "category": "data_access",
+      "tags": [
+        "linked_records",
+        "data_access_procedure_described"
+      ],
+      "statement": "A newly digitized and harmonized database on local-government finance, private schooling, and crime is described as constructed by the author from multiple historical publications and posted on the author's website for other researchers.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Introduction, data paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "The paper reports OLS, reduced-form, and two-stage-least-squares estimates for the shift-share IV design in every main table.",
+      "card_shows": "Specifications s1-s3 all use the ivreg2 command with estimator field set to 2sls.",
+      "status": "agree",
+      "pages": [
+        14,
+        15
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The text states that baseline controls include census region fixed effects, added to every specification.",
+      "card_shows": "s1.fixed_effects is null; the code trace could not resolve the baseline_controls macro to an explicit fixed-effects list.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        15
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Table notes state only that standard errors are shown in parentheses, without naming a clustering level or robust designation.",
+      "card_shows": "s1.se.type and s1.se.cluster_level are both null, and the card's reading notes flag that the SE specification is not explicitly documented in the main scripts.",
+      "status": "unknown",
+      "pages": [
+        21,
+        21
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "weights",
+      "paper_says": "One family of specifications, the childhood exposure-effect regressions, is estimated with precision weights based on the inverse variance of the underlying exposure-effect estimate.",
+      "card_shows": "s2.weights records an analytic weight expression based on the inverse squared standard error of the exposure measure.",
+      "status": "agree",
+      "pages": [
+        23,
+        24
+      ],
+      "card_ref": "s2.weights"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The text describes a fixed analysis sample of non-southern commuting zones with Black population data available in both endpoint census years.",
+      "card_shows": "s1.sample and the design-level sample fields are null in the card.",
+      "status": "paper_only",
+      "pages": [
+        8,
+        8
+      ],
+      "card_ref": "s1.sample"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "The text describes an alternative shift-share instrument built from a different historical migrant group, used as a placebo comparison for the main instrument.",
+      "card_shows": "d1.comparison_group and s1.comparison_group are both null.",
+      "status": "paper_only",
+      "pages": [
+        31,
+        32
+      ],
+      "card_ref": "d1.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Baseline controls are named explicitly: the recent-migrant population share, educational upward mobility, the manufacturing employment share, plus census region fixed effects.",
+      "card_shows": "s1.controls_summary is null; only the unresolved macro name baseline_controls appears in the formula string.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.controls_summary"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A first-stage coefficient and F-statistic for the excluded instrument are reported in the main text and in a dedicated figure.",
+      "card_shows": "Diagnostic x1 records kind first_stage tied to specification s1, with a note that an F-statistic is computed via a test command, though its pass or fail status is left unknown.",
+      "status": "agree",
+      "pages": [
+        17,
+        18
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Table 1 tests the instrument against pre-1940 school-attendance and education outcomes across five decades as a placebo and pre-trend check.",
+      "card_shows": "Diagnostic x2 records a pretrend_test on pre-1940 enrollment and education outcome variables, matching the same outcome list described in the paper.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "x2"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Two dedicated tables plus additional appendix analyses report alternative-control, alternative-instrument, and first-differenced robustness checks.",
+      "card_shows": "The card's robustness array is empty.",
+      "status": "paper_only",
+      "pages": [
+        30,
+        31
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The main text alone contains nine numbered tables and nine numbered figures, most figures being binned scatterplots.",
+      "card_shows": "outputs.tables lists two table records and outputs.figures lists one binscatter figure record.",
+      "status": "disagree",
+      "pages": [
+        16,
+        34
+      ],
+      "card_ref": "outputs.tables",
+      "note": "The card's coverage is marked partial (about five of roughly sixty code files read), so the low output count likely reflects incomplete code extraction rather than a true conflict with the paper."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Data sources are named explicitly: complete-count IPUMS censuses, a historical city and county statistical compendium, tax-record-based mobility tabulations, and a newly assembled local-government and crime database.",
+      "card_shows": "data[0].source_hint is null; only a dataset filename and unit of observation are recorded.",
+      "status": "paper_only",
+      "pages": [
+        6,
+        9
+      ],
+      "card_ref": "data[0].source_hint"
+    }
+  ],
+  "gaps": [
+    "No stated clustering level or explicit SE-type (robust versus clustered) description in any main-table note; only 'standard errors are in parentheses' is given.",
+    "No preregistration, IRB approval, or human-subjects consent statement anywhere in the text (the study uses historical administrative and public tax-record data).",
+    "No explicit statement of the statistical software or package versions used for estimation anywhere in the main text.",
+    "No single consolidated summary-statistics table; sample means and standard deviations are distributed across the individual results tables instead.",
+    "No explicit few-clusters correction or wild-bootstrap discussion is given despite treatment varying at a commuting-zone level with a limited number of units."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        40
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full extracted text front to back: title, abstract, introduction, all six numbered sections, and the reference list (pages 1-40). The paper's online appendix (appendices A-F, cited extensively throughout for construction details, additional tables and figures) is a separate document not included in this extracted text file and was not read."
+  }
+}

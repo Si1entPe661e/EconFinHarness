@@ -1,0 +1,776 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2025_restud_rdaf004",
+ "journal": "ReStud",
+ "year": 2025,
+ "doi": "10.1093/restud/rdaf004",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T14:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/0_MASTER_ALL.do",
+    "sha256": "05070e2f6db407fb8aea1f84e329598c9afdc58e0a573c0eba55bff1f21fc66e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      289
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/A0_dv.do",
+    "sha256": "739f029c33ef5636bca202d6cd611848eaa58f4cab3e3943235c50f9d74ca176",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/A2_dv_g1_main.do",
+    "sha256": "58ae2cd533c1345e3b63ef9b4d20ccaf7ab6148266b0fe9d831f5b8537cbb1c7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      184
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+    "sha256": "992e83b33e30560794059a4a918b07fd78c2b2288303f9f406437b8f5c3ee402",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      137
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t10_balancing.do",
+    "sha256": "5cdcccf8658aeb0ed9fed51430c293524ab7a3f97c8953df3c6bf9895e2e2ad9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/F3_dv_t1.do",
+    "sha256": "6931855168a5a1dc843a9ce9991b92798c352c97cbda6ef4c2a0799c7795f863",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      50
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+    "sha256": "d6a8b517396a32f46d804509103c799fbeaace4d54049fe3953a60957def7875",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      150,
+      250
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Data/Brazil_registry/Empirical/Do/",
+    "reason": "out_of_budget",
+    "note": "Data construction; focus on analysis"
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/A1_dv*.do",
+    "reason": "out_of_budget",
+    "note": "Data prep and descriptives"
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t2*.do",
+    "reason": "out_of_budget",
+    "note": "Robustness"
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/F*.do",
+    "reason": "out_of_budget",
+    "note": "Female specs parallel to male"
+   },
+   {
+    "path": "code/zenodo_14200854/Replication/Replication/Do/P*.do",
+    "reason": "out_of_budget",
+    "note": "UI prep"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Focus: master, matching, main DID/event-study/RD specs"
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_14200854/Replication/Replication/Do/0_MASTER_ALL.do"
+  ],
+  "directory_layout": "Zenodo archive: Do/ (scripts), Data/ (inputs), Graph/ (output)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 141,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/0_MASTER_ALL.do",
+     "lines": [
+      24,
+      25
+     ],
+     "snippet": "set seed 121342\nset sortseed 421312",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Master orchestrates: data build, then parallel analyses",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "regression",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/0_MASTER_ALL.do",
+     "lines": [
+      41,
+      41
+     ],
+     "snippet": "do \"${pfile}Do/A0_masslayoffcpf\"",
+     "supports": [
+      "treatment",
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/0_MASTER_ALL.do",
+     "lines": [
+      118,
+      124
+     ],
+     "snippet": "do \"${pfile}Do/P0_dvui16m\"",
+     "supports": [
+      "treatment",
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": null,
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A0_dv.do",
+     "lines": [
+      141,
+      144
+     ],
+     "snippet": "*** // *** Exact matching procedure *** // ***\n* merging",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `dep' posttreat treat post if mass==1, cl(identificad)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Loop over outcomes",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "identificad"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "qui eststo: reg `dep' posttreat treat post if mass==1, cl(identificad)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main DID",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "reg `dep' posttreat treat post if mass==1, cl(identificad)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `dep' posttreat treat , cl(identificad) absorb(munindt)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Loop over outcomes",
+   "fixed_effects": [
+    "munindt"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "identificad"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+      "lines": [
+       81,
+       81
+      ],
+      "snippet": "qui eststo: reghdfe `dep' posttreat treat , cl(identificad) absorb(munindt)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "DID with rich FE",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+     "lines": [
+      81,
+      81
+     ],
+     "snippet": "reghdfe `dep' posttreat treat , cl(identificad) absorb(munindt)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+     "lines": [
+      81,
+      81
+     ],
+     "snippet": "qui eststo: reghdfe `dep' posttreat treat , cl(identificad) absorb(munindt)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `dep' posttreat treat post if t<=103 & empcont==1, cl(identificad)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Loop",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "identificad"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+      "lines": [
+       101,
+       101
+      ],
+      "snippet": "qui eststo: reg `dep' posttreat treat post if t<=103 & empcont==1, cl(identificad)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Employ-control sample",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t1.do",
+     "lines": [
+      101,
+      101
+     ],
+     "snippet": "reg `dep' posttreat treat post if t<=103 & empcont==1, cl(identificad)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `var' ${coef} treat time98-time$tr if mass==1, cl(identificad)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Event study",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "identificad"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/A2_dv_g1_main.do",
+      "lines": [
+       76,
+       76
+      ],
+      "snippet": "reg `var' ${coef} treat time98-time$tr if mass==1, cl(identificad)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event-study",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A2_dv_g1_main.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "reg `var' ${coef} treat time98-time$tr if mass==1, cl(identificad)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `dep' posttreat treat post [w=wei], cl(identificad)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "identificad"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t10_balancing.do",
+      "lines": [
+       59,
+       59
+      ],
+      "snippet": "qui eststo: reg `dep' posttreat treat post [w=wei], cl(identificad)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Reweighting",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/A3_dv_t10_balancing.do",
+     "lines": [
+      59,
+      59
+     ],
+     "snippet": "reg `dep' posttreat treat post [w=wei], cl(identificad)",
+     "supports": [
+      "formula_or_call",
+      "weights",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "RD/RK outcomes",
+   "fixed_effects": [
+    "mun"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "cpf"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+      "lines": [
+       156,
+       156
+      ],
+      "snippet": "\tqui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "RD/RK UI",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+     "lines": [
+      156,
+      156
+     ],
+     "snippet": "qui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+     "lines": [
+      156,
+      156
+     ],
+     "snippet": "\tqui eststo: reghdfe `var' k kt t tempempr lnrem school age_dism serv sales construc manu firm_size1 if abs(t)<=${band}, cl(cpf) absorb(mun)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": null,
+   "formula_or_call": "rdrobust `var' t , c(-0.000001) vce(cluster cpf) p(0) bwselect(msetwo) kernel(tri)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "cpf"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+      "lines": [
+       172,
+       172
+      ],
+      "snippet": "\t\tqui eststo: rdrobust `var' t , c(-0.000001) vce(cluster cpf) p(0) bwselect(msetwo) kernel(tri)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Nonparametric RD",
+   "evidence": [
+    {
+     "path": "code/zenodo_14200854/Replication/Replication/Do/Pb2_dvui16m_regall_v2_uidata.do",
+     "lines": [
+      172,
+      172
+     ],
+     "snippet": "rdrobust `var' t , c(-0.000001) vce(cluster cpf) p(0) bwselect(msetwo) kernel(tri)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1",
+    "s2"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "ebalance on covariates",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [
+    "s4"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "t=-2,-1 shown",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "density_test",
+   "design_id": "d2",
+   "spec_ids": [
+    "s10"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Figure D1",
+   "evidence": []
+  },
+  {
+   "id": "x4",
+   "kind": "bandwidth_selection",
+   "design_id": "d2",
+   "spec_ids": [
+    "s11"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "rdrobust",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd",
+   "regression"
+  ],
+  "fields": []
+ }
+}

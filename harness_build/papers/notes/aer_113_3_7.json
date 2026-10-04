@@ -1,0 +1,1202 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_113_3_7",
+  "journal": "AER",
+  "year": 2023,
+  "doi": "10.1257/aer.20211537",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_113_3_7.pdf",
+    "pdf_sha256": "86538e1e7eafe7eb4110248fdbe4f94922557e4976c0c3fa3c7191d2c5c879aa",
+    "text_path": "harness_build/papers/text/aer_113_3_7.txt",
+    "text_sha256": "79293471b446797adcd9d544656f8cd86ff93c35039b407121410e2278d16472",
+    "pages": 36
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:56:21Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/aer_113_3_7.json",
+    "card_sha256": "34fbcc81e40ec2b34d5630306de9be88c16d6d1097f471e5fa186a59589635b5"
+  },
+  "methods": [
+    "did",
+    "iv",
+    "event_study",
+    "shift_share"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "The Ban and Its Effect on AP's Language: Background and Data",
+      "pages": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "results",
+      "title": "AP Language Descriptive and Text-Analysis Results",
+      "pages": [
+        8,
+        12
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "Diffusion: Data and AP-Intensity Construction",
+      "pages": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "Diffusion: Empirical Strategy",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "Diffusion: Main Results",
+      "pages": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "robustness",
+      "title": "Diffusion: Robustness, Reuters Placebo, and Heterogeneity",
+      "pages": [
+        17,
+        20
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "data",
+      "title": "Views on Immigration Policy: Data",
+      "pages": [
+        20,
+        23
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "design",
+      "title": "Views on Immigration Policy: Empirical Strategy",
+      "pages": [
+        23,
+        25
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "results",
+      "title": "Views on Immigration Policy: First Stage and ITT Results",
+      "pages": [
+        25,
+        27
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "robustness",
+      "title": "Views on Immigration Policy: Robustness, Placebo, Falsification, Heterogeneity",
+      "pages": [
+        27,
+        30
+      ]
+    },
+    {
+      "id": "sec12",
+      "kind": "mechanisms",
+      "title": "Magnitudes and Mechanisms",
+      "pages": [
+        31,
+        33
+      ]
+    },
+    {
+      "id": "sec13",
+      "kind": "conclusion",
+      "title": "Conclusion",
+      "pages": [
+        32,
+        33
+      ]
+    },
+    {
+      "id": "sec14",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        33,
+        36
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The paper defines its main estimand as the effect of the AP's ban on use of the banned term, identified from a generalized difference-in-differences design with continuous treatment based on outlets' baseline reliance on AP copy interacted with the timing of the ban.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The introduction explicitly discusses why outlet-specific incentives to slant language are unlikely to confound AP intensity, arguing the ban is a supply-side, cooperative-governed shock orthogonal to any single outlet's audience demand.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "Introduction, paragraphs motivating the natural experiment",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "parallel_trends_argued",
+        "threats_discussed"
+      ],
+      "statement": "For the survey-based stage the paper states the identifying assumption as similar evolution of policy views across counties with different AP intensity absent the ban, and lists possible confounders explicitly.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section III.B, paragraph on the identifying assumption",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "counties with high versus low AP intensity would have evolved similarly in the absence of the ban"
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "instrument_exclusion_argued"
+      ],
+      "statement": "The county-level instrumental-variables step is explicitly named as akin to a shift-share strategy, with the post-ban timing as the aggregate shock and AP intensity as local exposure to that shock.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "compliers_described"
+      ],
+      "statement": "The compliers under the instrumental-variables design are described as newspapers whose language changes only because of the AP's input, contrasted explicitly with always-takers and never-takers.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section III.B, discussion of the LATE interpretation",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated"
+      ],
+      "statement": "The AP-text sample is built from a keyword search of a commercial newswire database restricted to Associated Press Newswires and the term denoting immigrants, described as spanning several years around the ban.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section I.B, Data",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "exclusions_justified"
+      ],
+      "statement": "The diffusion sample of media outlets requires continuous coverage in a commercial news-archive database over the full study window, with a second database used only to add major newspapers missing from the first.",
+      "pages": [
+        12,
+        13
+      ],
+      "locator": "Section II.A, Data",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Outlets that never use the term denoting immigrants are explicitly dropped from the analysis sample, a restriction the authors flag in a footnote rather than in the main text.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section II.A, footnote on outlet inclusion",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "For the county-level stage, counties are retained only when newspapers matched to the content database account for a high share of total county circulation, a threshold whose sensitivity is checked in an appendix table.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section III.A, Aggregation to the County Level",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Observation counts, outlet or county counts are reported at the bottom of every regression table and vary by column as fixed effects and subsamples change.",
+      "pages": [
+        15,
+        25
+      ],
+      "locator": "Tables 2 and 4-7",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "The main diffusion outcome is the number of articles using the banned term relative to the number using the base term, at the outlet-month level, constructed to net out changes in overall coverage volume.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section II.A, Data",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "AP intensity is defined at the outlet level as the pre-ban share of articles sourced from the AP, identified through either an explicit byline credit or a text-similarity plagiarism-detection algorithm.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section II.A, AP Intensity",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs"
+      ],
+      "statement": "Because the distribution of AP intensity is highly skewed with a mass of outlets at zero, the authors apply an inverse hyperbolic sine transformation before using it as the treatment variable.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.A, AP Intensity",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The excluded instrument for the individual-level 2SLS is the interaction of county-level AP intensity with the post-ban indicator, explicitly described as a shift-share style construction.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index"
+      ],
+      "statement": "Indices aggregating multiple survey questions on immigration or on placebo policies are built by standardizing each component response and averaging across them, following a method cited from an earlier applied paper.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section III.A, Views on Immigration Policy",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "r2_reported",
+        "mean_of_dependent_reported"
+      ],
+      "statement": "The main diffusion table lists which fixed effects are included in each column as separate labeled rows and reports observation counts, outlet counts, R-squared, and the mean of the dependent variable beneath the coefficients.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes",
+        "weights_stated"
+      ],
+      "statement": "Table notes for the main results state the unit of observation, the estimator, the weighting scheme, and the clustering level explicitly, rather than leaving these only to the main text.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "fe_listed_in_table"
+      ],
+      "statement": "Survey-based results tables stack a reduced-form OLS panel directly above a 2SLS panel for the same outcome and column set, letting the two estimates be compared column by column.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Table 4",
+      "basis": "inferred",
+      "applies_to": [
+        "did",
+        "iv"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "controls_progressive_columns",
+        "baseline_then_variants"
+      ],
+      "statement": "Successive columns in the main tables progressively add controls and alternative fixed-effects sets, moving from the baseline specification toward a specification with unit-specific linear trends.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Table 2, columns 1-3 and 4-7",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Standard errors in the outlet-level diffusion regressions are clustered at the media-outlet level, matching the level at which the AP-intensity treatment variable is defined.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section II.B, Empirical Strategy",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "For the survey-based regressions, clustering is instead at the county level, again aligned with the level at which the AP-intensity treatment variable is defined in that stage.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section III.B, Empirical Strategy",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "other:alt_cluster_level_check",
+        "in_appendix"
+      ],
+      "statement": "Robustness of the survey-based results to clustering at a coarser geographic level (media market or state instead of county) is checked in an appendix table rather than in the main text.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section III.C, discussion of Online Appendix Table C10",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "Pre-trend behavior is assessed with a dynamic specification interacting AP intensity with half-yearly (or yearly) leads and lags around the ban, shown as coefficient plots with confidence bands for both the diffusion and the survey outcomes.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Figure 5, panel A; Figure 7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "First-stage F-statistics are reported directly beneath each 2SLS coefficient in the results tables, so instrument strength can be read alongside the corresponding second-stage estimate.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Table 4, 2SLS panel",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "A Reuters-intensity placebo treatment, constructed the same way as AP intensity but for a wire service whose style rules did not change, is used to check that the results are not driven by reliance on wire copy in general.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section II.C, Robustness and Reuters Placebo",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "A falsification check applies the identical policy-view specification to an index of non-immigration policy questions, reported as an additional column alongside the main results table.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Table 6, non-immigration questions column",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "summarized_in_one_table",
+        "in_main_text"
+      ],
+      "statement": "The diffusion estimates are checked against several alternative constructions of the AP-intensity variable (credit-only, plagiarism-only, and a version not restricted to articles mentioning immigrants), summarized together in a single robustness table.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Sensitivity to the time window used to measure baseline AP intensity, shifting it further back before the ban, is reported in an appendix table to address concerns about anticipatory changes in AP reliance.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section II.C, discussion of Online Appendix Table B3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "alt_control_group",
+        "in_appendix"
+      ],
+      "statement": "For the survey-based results, robustness checks vary the method of matching respondents to newspapers, the minimum circulation-coverage threshold for county inclusion, and internet- and Craigslist-penetration controls, each in its own appendix table.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section III.C, Robustness and Reuters Placebo",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "iv"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "alt_fixed_effects",
+        "in_main_text"
+      ],
+      "statement": "The unit-specific linear-trend specification is presented as the most demanding robustness check for the parallel-trends assumption, letting each outlet or county follow its own smooth trend so the effect is identified off the sharp change at the ban.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section II.C, discussion of Table 2 linear-trend column",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Diffusion of the ban is examined separately by quartile of outlet ideology using an external newspaper-ideology index, framed as motivated by an ex ante expectation about ideological congruence with the banned term.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Heterogeneity in the survey-based effect is reported by self-reported newspaper readership, respondent ideology, and local immigrant population share, explicitly framed as diagnostic of a persuasion mechanism rather than a separate finding.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Table 7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "iv"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample"
+      ],
+      "statement": "Differences between heterogeneity subgroups are accompanied by an explicit formal test for equality of coefficients, placed in the same table row as the subgroup estimates.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Table 7, test-for-equality row",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "sd_units",
+        "relative_to_mean"
+      ],
+      "statement": "The diffusion effect is expressed in terms of a one-standard-deviation change in the treatment variable and compared against the outcome gap between outlets with maximal versus zero exposure.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section II.C, Diffusion Estimates",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:benchmarked_to_partisan_gap",
+        "sd_units"
+      ],
+      "statement": "The survey-based effect is benchmarked against the gap in policy support between self-identified partisans, expressed as a share of that partisan gap attributable to the ban.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section III.D, Magnitudes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature",
+        "back_of_envelope"
+      ],
+      "statement": "The reduced-form estimate is converted into a persuasion rate using a standard formula from the media-persuasion literature and situated relative to rates reported in other media-effects studies and in framing survey experiments.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section III.D, Magnitudes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "iv"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors caution that because the aggregate ban also affects outlets with zero measured AP intensity, the difference-in-differences design likely understates the true impact of the ban, and frame their estimates as a lower bound.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section II.C, Preliminary Evidence",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity"
+      ],
+      "statement": "External validity is explicitly flagged as limited to the specific setting of unauthorized-immigration language and to exposure to a single term, with an explicit call for further work on other domains of slanted language.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section IV, Conclusion",
+      "basis": "stated",
+      "applies_to": [],
+      "quote": "More work is needed to understand the external validity of slanted language as a mechanism of persuasion."
+    },
+    {
+      "id": "o39",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "data_coverage"
+      ],
+      "statement": "The authors note that coverage in their commercial content databases is not universal, so article-count-based magnitudes should be read as a lower bound on exposure to the treatment.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section III.D, Magnitudes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "notes_state_se"
+      ],
+      "statement": "Figures pair time-series or coefficient plots with confidence bands, and every figure note states the fixed effects, weighting, and clustering used to produce the underlying regression.",
+      "pages": [
+        16,
+        19
+      ],
+      "locator": "Figures 5-7 notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a"
+      ],
+      "statement": "Appendix tables and figures are numbered with a letter prefix tied to the section they support (A for the AP-text analysis, B for diffusion, C for the survey analysis), a convention apparent from the first appendix citation.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section I.C, footnote citing Online Appendix Figure A3",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o42",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars",
+        "notes_state_se"
+      ],
+      "statement": "Regression tables report point estimates with standard errors in parentheses beneath, without significance stars, relying on the reported standard error to convey precision.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Table 2",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o43",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction previews the paper's three empirical parts in order (AP-text effects, diffusion to outlets, effects on survey views) and closes with an explicit roadmap paragraph naming each section.",
+      "pages": [
+        3,
+        6
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main",
+        "robustness_separate_section"
+      ],
+      "statement": "Magnitude interpretation and mechanism discussion are placed in their own labeled subsections at the end of the third empirical section, after the main and robustness results rather than interleaved with the tables.",
+      "pages": [
+        31,
+        33
+      ],
+      "locator": "Section III.D-E",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "Each of the three empirical parts follows the same internal ordering of data, then empirical strategy, then results subsections, giving the paper a repeated substructure across sections.",
+      "pages": [
+        8,
+        31
+      ],
+      "locator": "Sections I-III",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o46",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited"
+      ],
+      "statement": "A starred footnote on the title page directs readers to the article's online page for additional materials and author disclosure statements, without spelling out a data or code availability statement in the body text.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title page footnote",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o47",
+      "category": "data_access",
+      "tags": [
+        "commercial",
+        "survey_collected",
+        "data_access_procedure_described"
+      ],
+      "statement": "The analysis draws on commercial and subscription data sources (a newswire archive, two news-content archives, an audited-circulation database) alongside a public survey, with access and construction procedures described separately in each data subsection.",
+      "pages": [
+        8,
+        22
+      ],
+      "locator": "Sections I.B, II.A, III.A",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o48",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives",
+        "suggestive_labelled"
+      ],
+      "statement": "The authors rule out a social-signaling alternative to persuasion by pointing to the anonymity of the online survey platform and to the low, AP-intensity-uncorrelated media coverage of the ban's own announcement.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section III.E, Persuasion versus Social Signaling",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o49",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided",
+        "suggestive_labelled"
+      ],
+      "statement": "The paper distinguishes two conceptually different treatments bundled in the natural experiment, an equivalence-framing substitute and an emphasis-framing omission of legal-status language, and argues from the relative use of AP-approved substitutes plus prior survey-experimental evidence that emphasis framing is the more likely mechanism.",
+      "pages": [
+        31,
+        33
+      ],
+      "locator": "Section III.E, Equivalence versus Emphasis Framing",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "The instrumental-variables LATE is explicitly described as applying to newspaper compliers rather than to the full readership, distinguished from always-takers and never-takers whose language use would not respond to the ban.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Diffusion is estimated by a generalized difference-in-differences OLS regression with continuous treatment (IHS of AP intensity interacted with a post-ban indicator) and two-way fixed effects (equation 2).",
+      "card_shows": "s1: estimator=hdfe_ols, command=reghdfe, formula reghdfe num_IllimmImm APintI_post [pw=num_imm], absorb(year_month source_code) cluster(source_code).",
+      "status": "agree",
+      "pages": [
+        14,
+        15
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Views on immigration policy are estimated with a 2SLS specification instrumenting exposure to the banned term with the interaction of county AP intensity and the post-ban indicator (equations 6-7).",
+      "card_shows": "s6: estimator=2sls, command=ivreghdfe, formula ivreghdfe immig_border $indiv_controls (num_IllimmImm = APintI_post), absorb(fips year) cluster(fips).",
+      "status": "agree",
+      "pages": [
+        23,
+        24
+      ],
+      "card_ref": "s6.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The baseline diffusion specification (equation 2) includes outlet and year-month fixed effects.",
+      "card_shows": "s1: fixed_effects=['year_month','source_code'].",
+      "status": "agree",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "A robustness column adds state-by-year-month fixed effects to absorb state-level policy changes or newsworthy events (Table 2, column 2).",
+      "card_shows": "s2: fixed_effects=['year_month##state__','source_code','year_month'].",
+      "status": "agree",
+      "pages": [
+        15,
+        15
+      ],
+      "card_ref": "s2.fixed_effects"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The most demanding diffusion specification replaces the additive outlet fixed effect with an outlet-specific linear time trend (Table 2, columns 3 and 7).",
+      "card_shows": "s3: fixed_effects=['c.year_month##i.source_code','source_code','year_month'].",
+      "status": "agree",
+      "pages": [
+        15,
+        16
+      ],
+      "card_ref": "s3.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors in the outlet-level diffusion regressions are clustered by media outlet.",
+      "card_shows": "s1/s2/s3/s4: se.type=cluster, se.cluster_level=['source_code'].",
+      "status": "agree",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors in the county/respondent-level CCES regressions (reduced form and 2SLS) are clustered by county.",
+      "card_shows": "s5/s6: se.type=cluster, se.cluster_level=['fips'].",
+      "status": "agree",
+      "pages": [
+        23,
+        23
+      ],
+      "card_ref": "s5.se.cluster_level"
+    },
+    {
+      "item": "weights",
+      "paper_says": "Diffusion regressions are weighted by the number of articles using the term denoting immigrants, to downweight outlet-months with an imprecisely measured dependent variable.",
+      "card_shows": "s1: weights='num_imm' (pweight).",
+      "status": "agree",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The right-hand panel of the main diffusion table restricts the sample to daily print newspapers rather than the full outlet sample.",
+      "card_shows": "s4: sample='Subset of outlets meeting sample criteria (NPsample==1)'.",
+      "status": "agree",
+      "pages": [
+        15,
+        15
+      ],
+      "card_ref": "s4.sample"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Respondent-level CCES regressions control for age, age squared, gender, and categories for education, race, immigration status, and household income.",
+      "card_shows": "s5/s6: controls_summary=null; unresolved_symbols=['$indiv_controls'], so the card records that a control macro is used but not what it contains.",
+      "status": "paper_only",
+      "pages": [
+        24,
+        24
+      ],
+      "card_ref": "s5.controls_summary",
+      "note": "Card extraction left the $indiv_controls macro unresolved; the paper's list of controls could not be cross-checked against the code."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A dynamic difference-in-differences specification with leads and lags around the ban is reported as evidence on pre-trends for both the diffusion and survey outcomes (Figure 5 panel A, Figure 7).",
+      "card_shows": "diagnostics x1: kind=pretrend_test, status=unknown, spec_ids=['s7'], no description or evidence recorded.",
+      "status": "paper_only",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "x1",
+      "note": "The card flags a pretrend-test diagnostic linked to the event-study spec s7 but records no outcome; the paper reports the check directly."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "First-stage F-statistics are reported in every table with a 2SLS panel to gauge instrument strength.",
+      "card_shows": "diagnostics x2: kind=weak_iv, status=unknown, spec_ids=['s6'], no statistic recorded.",
+      "status": "paper_only",
+      "pages": [
+        25,
+        25
+      ],
+      "card_ref": "x2",
+      "note": "The card notes a weak-IV diagnostic is linked to spec s6 but its status is unknown; the paper reports the F-statistics directly in-table."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Data sources are named explicitly throughout: a newswire full-text database (AP text), two news-content archives plus an audited-circulation database (diffusion and county aggregation), and the CCES for survey outcomes.",
+      "card_shows": "data=[] (the card's data-source list is empty).",
+      "status": "paper_only",
+      "pages": [
+        8,
+        22
+      ],
+      "card_ref": "data",
+      "note": "The card's structured 'data' section was not populated during extraction; data sources are only visible in the paper text and in file paths under code/AP_Replication/Datasets."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The paper presents seven main numbered tables and seven main numbered figures in the body text, each tied to a specific stage of the analysis.",
+      "card_shows": "outputs.tables=[] and outputs.figures=[] (both empty).",
+      "status": "paper_only",
+      "pages": [
+        15,
+        31
+      ],
+      "card_ref": "outputs",
+      "note": "The recipe card did not extract a table/figure output inventory from the code, so it cannot be compared item by item to the paper's own numbering."
+    }
+  ],
+  "gaps": [
+    "No formal covariate balance table comparing outlet or county characteristics across levels of AP intensity appears in the main text; only correlate scatterplots are cited as being in the online appendix.",
+    "No explicit adjustment for multiple hypothesis testing is discussed despite estimating effects for five separate immigration-policy questions plus several aggregate indices and heterogeneity splits.",
+    "No preregistration, IRB approval, or data-collection consent statement is present anywhere in the read text.",
+    "No explicit statement of statistical software version or package citations (e.g., for reghdfe or ivreghdfe) appears in the main text.",
+    "The online appendix is referenced extensively throughout (text-analysis validation, additional figures and tables, robustness checks) but is not part of the supplied text, so those diagnostics could not be read directly."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        36
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full supplied text: abstract, introduction, all three empirical sections (AP text, diffusion, survey views), magnitudes, mechanisms, conclusion and the reference list. The paper's Online Appendix, cited throughout for additional figures/tables (e.g., Online Appendix Figures A3-C16), is not included in this text file and was not read."
+  }
+}

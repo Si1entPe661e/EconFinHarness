@@ -1,0 +1,325 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_112_10_8",
+ "journal": "AER",
+ "year": 2022,
+ "doi": "10.1257/aer.20191766",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T03:50:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/0_0_Main.do",
+    "sha256": "e2514e3dd8d4af3e1964b1d16f129052adb192d2a1cf06253e6bb0cd6630f2d9",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      68
+     ]
+    ]
+   },
+   {
+    "path": "code/0_1_Globals.do",
+    "sha256": "e6453784a4d0c8c38e409bedffd74fd54a92edb8d99e00f1f75c0feb7d97d0f8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      239
+     ]
+    ]
+   },
+   {
+    "path": "code/1_6_EstimateHedonic.do",
+    "sha256": "125bf345a262533427c7c838cddff50550ca223d63b2d51100b84e92408325ab",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      133
+     ]
+    ]
+   },
+   {
+    "path": "code/2_0_Moments.do",
+    "sha256": "0ec5e4b14d823ae08890210f1b7a0cb3175ed5ad79f93aaca6340ed519af4b3b",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      28
+     ]
+    ]
+   },
+   {
+    "path": "code/4_0_Analysis_Paper.do",
+    "sha256": "8054eeaab646b27c6abca1b0af38b0222210f8c20ee5d63929493ed751c4760a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      250
+     ],
+     [
+      450,
+      521
+     ]
+    ]
+   },
+   {
+    "path": "code/4_1_1_Settings.py",
+    "sha256": "bf1b1cefc796c4c79d3b4d5ad1af631d67b7d75eec511d44c50db668690b6e11",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      104
+     ]
+    ]
+   },
+   {
+    "path": "code/4_1_5_Model.py",
+    "sha256": "294b63215290ea1332879173c34d4c21b782db802fafc8c7fc7896a85673377a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      700,
+      895
+     ]
+    ]
+   },
+   {
+    "path": "code/5_0_Appendix.do",
+    "sha256": "9700952eb722bb69bb9cd22838c2094d7ebaca6e3c6b4741bf94eb2e2cd382fc",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1650,
+      1760
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Mixed Stata-Python pipeline for housing market structural estimation"
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "Python"
+  ],
+  "master_scripts": [
+   "code/0_0_Main.do"
+  ],
+  "directory_layout": "code/ contains source",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 56,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "regression",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/1_6_EstimateHedonic.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "reg Lsold_price $Z_hedlog1 i.year##i.komstr if missinginfo == 0",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "rdd",
+   "variant": "kink",
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/5_0_Appendix.do",
+     "lines": [
+      1723,
+      1723
+     ],
+     "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+     "supports": [
+      "method",
+      "variant"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg Lsold_price $Z_hedlog1 i.year##i.komstr if missinginfo == 0",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "year",
+    "komstr"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/1_6_EstimateHedonic.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "reg Lsold_price $Z_hedlog1 i.year##i.komstr if missinginfo == 0",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "local_polynomial_rd",
+   "command": "rdrobust",
+   "package": "rdrobust",
+   "formula_or_call": "rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/5_0_Appendix.do",
+     "lines": [
+      1723,
+      1723
+     ],
+     "snippet": "eststo: rdrobust AMP G, \t\t\t\t\tc(0) deriv(1) covs($ycontrols $hcontrols $pyear) p(1) q(2)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "rdd",
+   "regression"
+  ],
+  "fields": []
+ }
+}

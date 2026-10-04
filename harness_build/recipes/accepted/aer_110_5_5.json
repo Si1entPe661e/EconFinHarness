@@ -1,0 +1,529 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_110_5_5",
+ "journal": "AER",
+ "year": 2020,
+ "doi": "10.1257/aer.20181135",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:35:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/Do-files/Reach-of-Radio---Aggregate-effects--LINEAR-SPECIFICATION-.do",
+    "sha256": "b51ae9c3185b8c7f6b21ccfdfa9269b752ef34094058336c87c3c932882ab9e0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/Do-files/Reach-of-Radio---General-FM-parameters.do",
+    "sha256": "c9d70a936e060cabd8e72f7d46ec7d7ad6f9f2e4c22e4959588f13955cfa83e4",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      222
+     ]
+    ]
+   },
+   {
+    "path": "code/Do-files/Reach-of-Radio---Programs.ado",
+    "sha256": "e28c36e71a2517b64224c7684f73b7ab2b770835f28f6374423a693df828da77",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      200,
+      400
+     ]
+    ]
+   },
+   {
+    "path": "code/Do-files/Reach-of-Radio---Results--CONLEY-.do",
+    "sha256": "076ac99826bc6ab39e7145acaae1057a9b0c61df13ab8114f1599bbde143ad09",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ],
+     [
+      300,
+      500
+     ]
+    ]
+   },
+   {
+    "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+    "sha256": "61f26b0bad442b7c2f6d7cda384f0e34ba2093db3df2f19f1150ee90ac8aa1af",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      200,
+      350
+     ]
+    ]
+   },
+   {
+    "path": "code/Do-files/Reach-of-Radio---Setup.do",
+    "sha256": "a330454f066d96487eea557b782d543de93fc65737a32b10c0de530c67ade62e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      43
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/Do-files/Reach-of-Radio---Aggregate-effects--QUADRATIC-SPECIFICATION-.do",
+    "reason": "out_of_budget",
+    "note": "similar to LINEAR specification"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Setup loads packages; General-FM-parameters prepares radio data; Programs.ado defines spatial estimators; ROBUST.do panel FE with robust SE; CONLEY.do spatial HAC."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+   "code/Do-files/Reach-of-Radio---Results--CONLEY-.do"
+  ],
+  "directory_layout": "code/Do-files/ contains 6 Stata scripts and 1 .ado file",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 7,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---General-FM-parameters.do",
+     "lines": [
+      18,
+      19
+     ],
+     "snippet": "set seed \t\t66062019\n\tset sortseed\t06062019",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "Radio_LRA_DB125.dta",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": "geographic cell",
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+     "lines": [
+      202,
+      202
+     ],
+     "snippet": "use \"$path_DATA/Radio_LRA_DB125.dta\", clear",
+     "supports": [
+      "name",
+      "type",
+      "unit_of_observation"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Radio_GeneralFM_Parameters.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---General-FM-parameters.do",
+     "lines": [
+      46,
+      46
+     ],
+     "snippet": "use \"$path_DATA/FMLIST (version 02032018).dta\", clear",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Setup first, then main estimations",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "panel_fe",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+     "lines": [
+      202,
+      225
+     ],
+     "snippet": "xtreg lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, fe robust",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "main",
+   "estimator": "hdfe_ols",
+   "command": "xtreg",
+   "package": null,
+   "formula_or_call": "xtreg lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, fe robust",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "$trends"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+      "lines": [
+       216,
+       216
+      ],
+      "snippet": "xtreg lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, fe robust",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Benchmark specification, multiple outcomes",
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+     "lines": [
+      216,
+      216
+     ],
+     "snippet": "xtreg lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, fe robust",
+     "supports": [
+      "role",
+      "formula_or_call",
+      "unresolved_symbols",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reg2hdfespatial",
+   "package": null,
+   "formula_or_call": "reg2hdfespatial lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, timevar(year) panelvar(cell_id) lat(POINT_Y) lon(POINT_X) distcutoff($dist) lagcutoff(20)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [],
+   "unresolved_symbols": [
+    "$trends",
+    "$dist"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "conley_spatial",
+    "cluster_level": null,
+    "details": "Conley HAC: 100 km distance cutoff, 20 period lag",
+    "evidence": [
+     {
+      "path": "code/Do-files/Reach-of-Radio---Results--CONLEY-.do",
+      "lines": [
+       344,
+       344
+      ],
+      "snippet": "reg2hdfespatial lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, timevar(year) panelvar(cell_id) lat(POINT_Y) lon(POINT_X) distcutoff($dist) lagcutoff(20)",
+      "supports": [
+       "type",
+       "details"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main paper results; Conley-Hsiang spatial inference",
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--CONLEY-.do",
+     "lines": [
+      344,
+      344
+     ],
+     "snippet": "reg2hdfespatial lnC_LRAfatalities $main $cont_dist $cont_nvis $cont_vis $trends if year > 2007 $geo_sel, timevar(year) panelvar(cell_id) lat(POINT_Y) lon(POINT_X) distcutoff($dist) lagcutoff(20)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "role",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+    "code/Do-files/Reach-of-Radio---Results--CONLEY-.do"
+   ],
+   "note": "Spatial design relies on topographic variation rather than temporal pretrends",
+   "evidence": []
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_se",
+   "description": "Robust vs spatial HAC standard errors",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s2"
+   ],
+   "relationship_status": "confirmed",
+   "note": "ROBUST.do vs CONLEY.do",
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+     "lines": [
+      1,
+      6
+     ],
+     "snippet": "Replication code using robust standard errors",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_functional_form",
+   "description": "Alternative dependent variable specifications: Log(y+0.5), Square root, and Levels",
+   "baseline_spec_ids": [
+    "s2"
+   ],
+   "variant_spec_ids": [],
+   "relationship_status": "unresolved",
+   "note": "Log(y+0.5), sqrt(y), levels tested",
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--CONLEY-.do",
+     "lines": [
+      391,
+      403
+     ],
+     "snippet": "dis as error \"DEPENDENT VARIABLE: Square root of y\"",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "Table 2 (main)",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/Do-files/Reach-of-Radio---Results--CONLEY-.do",
+      "lines": [
+       337,
+       348
+      ],
+      "snippet": "TABLE 2: Effect of defection messaging on fatalities",
+      "supports": [
+       "id",
+       "output_ref"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Setup.do",
+     "lines": [
+      10,
+      10
+     ],
+     "snippet": "local ssc_packages \"estout\" \"lassopack\" \"spgrid\" \"spkde\" \"spmap\" \"sutex\" \"ftools\" \"reghdfe\" \"ppmlhdfe\" \"tmpdir\" \"reg2hdfe\"",
+     "supports": [
+      "name",
+      "kind"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Setup.do",
+     "lines": [
+      10,
+      10
+     ],
+     "snippet": "local ssc_packages \"estout\" \"lassopack\"",
+     "supports": [
+      "name",
+      "ecosystem",
+      "kind"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global macro system for paths and variable lists",
+   "evidence": [
+    {
+     "path": "code/Do-files/Reach-of-Radio---Results--ROBUST-.do",
+     "lines": [
+      70,
+      70
+     ],
+     "snippet": "global path_DATA",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "panel_fe"
+  ],
+  "fields": []
+ }
+}

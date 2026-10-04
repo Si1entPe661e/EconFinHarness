@@ -1,0 +1,1218 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "jpe_133_5_2",
+  "journal": "JPE",
+  "year": 2025,
+  "doi": "10.1086/734133",
+  "source": {
+    "pdf_path": "Paper/PDF/jpe_133_5_2.pdf",
+    "pdf_sha256": "803499f9fac0094c17f3ecba55ba25be69d12fddd2b911b4f86db8edca95c51a",
+    "text_path": "harness_build/papers/text/jpe_133_5_2.txt",
+    "text_sha256": "e6125573845ffcc19cb3be25124b3a88633460d9a730c02a5b13b454fabfa30c",
+    "pages": 37
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:14:57Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/jpe_133_5_2.json",
+    "card_sha256": "429d7912726478cca1a1df1e7d6b3c58903e8b383bb141dba3e8f7eba75ec8c6"
+  },
+  "methods": [
+    "rct",
+    "regression",
+    "other:factorial_design",
+    "other:audit_study"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Title, abstract, and introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "II. Research Setting (mobile money; descriptive motivating facts on misconduct, information frictions, and trust)",
+      "pages": [
+        6,
+        11
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "design",
+      "title": "III. Experiment: Design (interventions, timetable, data collected, treatment assignment, balance, attrition)",
+      "pages": [
+        11,
+        17
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "results",
+      "title": "IV. Experiment: Results (misconduct and beliefs; usage and savings; business revenues; spillovers; shock mitigation)",
+      "pages": [
+        17,
+        31
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "mechanisms",
+      "title": "V. Discussion and Interpretation (discussion, heterogeneity, descriptive reputation model, alternative interpretations, value of information)",
+      "pages": [
+        31,
+        34
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "conclusion",
+      "title": "VI. Conclusion and Data Availability statement",
+      "pages": [
+        34,
+        34
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "other",
+      "title": "References, including the replication-data citation",
+      "pages": [
+        34,
+        37
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "randomization_described"
+      ],
+      "statement": "States the design as a 2x2 factorial field experiment randomizing 130 local markets into price-transparency, monitoring-and-reporting, their combination, and control, stratified by district with misfits resolved by random assignment.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section III, Treatment assignment",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "other:factorial_design"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "Argues identification requires treatment assignment to be independent of market- and household-level characteristics and states the repeated-visit design mitigates Hawthorne effects, since control markets also receive physical research visits.",
+      "pages": [
+        11,
+        17
+      ],
+      "locator": "Section III, Intervention and timetable; Balance and validity of design",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "other:two_sided_information"
+      ],
+      "statement": "Names the intervention as a two-sided information design in which consumers receive the price-transparency and/or monitoring information and vendors are separately told their customers received it, distinguishing it from one-sided disclosure experiments.",
+      "pages": [
+        3,
+        12
+      ],
+      "locator": "Introduction; Section III, Intervention and timetable",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "States the estimand as intent-to-treat effects of the pooled and separate information programs on end line outcomes, from a model relating outcomes to the treatment indicator, district fixed effects, the baseline outcome, and additional controls.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IV, opening equation",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "regression"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated"
+      ],
+      "statement": "Describes the sampling frame as a preexperiment census of the universe of vendor points and nearby households across 130 localities in nine districts of Eastern Ghana, conducted between February and March 2019.",
+      "pages": [
+        7,
+        8
+      ],
+      "locator": "Section II.B, Descriptive Motivating Facts",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "Defines a local market, the unit of randomization, as one randomly selected vendor together with the nearby customers or households within a five-house radius of that vendor.",
+      "pages": [
+        7,
+        15
+      ],
+      "locator": "Section II.B; Section III, Treatment assignment",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Reports the realized allocation across arms as market counts with matched vendor and customer counts for each of the price-transparency, monitoring, combined, and control arms, before any later attrition.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section III, Treatment assignment",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported"
+      ],
+      "statement": "Reports an overall survey attrition rate between baseline and end line and a much lower attrition rate for the administrative audit measurements, stating attrition is nondifferential across arms based on appendix significance tests.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section III, Attrition",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Justifies restricting the customer sample to households within a five-house radius of each vendor as a way to maximize the chance of surveying households likely to transact with the selected vendor while limiting data-collection cost.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section II.B",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "restricted_data_used",
+        "data_source_named"
+      ],
+      "statement": "Notes that supplementary administrative transaction data obtained from the largest mobile-money provider does not cover all experimental localities and offers too little cross-arm variation to be used for formal estimation.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "footnote 12",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines the misconduct outcome from an audit study in which trained local auditors make real transactions at vendor points; the amount charged is compared with provider-approved tariffs to yield an incidence indicator and a severity amount.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section III, Administrative audit data",
+      "basis": "stated",
+      "applies_to": [
+        "other:audit_study"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Defines the treatment variables as a pooled 0-1 indicator for receipt of any information program and separate 0-1 indicators for each of the price-transparency, monitoring-and-reporting, and combined arms, used as pooled and arm-specific regressors.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IV, opening equation",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "regression"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs"
+      ],
+      "statement": "States that the customer transaction-amount outcome, which has zero values, is transformed with an inverse hyperbolic sine before use as a dependent variable rather than log-transformed after adding a constant.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "footnote 11",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "other:belief_updating_measure"
+      ],
+      "statement": "Constructs a belief-updating outcome from the correlation between a consumer's subjective perception of vendor honesty and the objective audit measure of misconduct, interpreted as evidence beliefs move toward the truth rather than as a raw belief level.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section IV.A",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Constructs the poverty outcome by adapting an existing standardized poverty-assessment scorecard developed for Ghana rather than building a bespoke poverty index, citing the source of the scorecard.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section III, Market survey data",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "other:fixed_control_list"
+      ],
+      "statement": "States in table notes that audit-based misconduct regressions include randomization-strata (district) by transaction-type by transaction-date dummies alongside a fixed list of demographic and business controls applied uniformly rather than progressively.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported",
+        "n_reported"
+      ],
+      "statement": "Reports the number of observations and the control-group mean of the dependent variable directly beneath the coefficient rows in every main results table, letting readers convert point estimates into percentage effects without consulting the text.",
+      "pages": [
+        19,
+        30
+      ],
+      "locator": "Tables 2 through 10",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes"
+      ],
+      "statement": "States a general rule that cluster-robust standard errors are used for outcomes with more than one observation per locality and heteroskedasticity-robust standard errors otherwise, and each table's notes then name the specific clustering level used.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IV, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "other:pairwise_wald_tests"
+      ],
+      "statement": "Presents the pooled treatment effect and the three arm-specific effects as separate numbered columns within the same table, followed by a bottom panel of pairwise Wald-test p-values comparing the arms to one another and to their sum.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported"
+      ],
+      "statement": "Varies the reported observation count by table according to the unit of analysis: vendor by transaction-type by transaction-date for audit outcomes, customer level for most survey outcomes, and vendor level for revenue and exit outcomes.",
+      "pages": [
+        19,
+        28
+      ],
+      "locator": "Tables 2, 3, 6",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level"
+      ],
+      "statement": "Clusters standard errors at the vendor level for the primary audit-based misconduct regressions, consistent with treating repeated transactions as nested within a select vendor.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Table 2 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Clusters standard errors at the market (locality) level, the level at which treatment was randomized, for the survey-based customer and vendor outcome regressions.",
+      "pages": [
+        20,
+        30
+      ],
+      "locator": "Tables 3-5, 7, 9, 10 notes",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "wild_bootstrap",
+        "randomization_inference",
+        "multiple_testing_adjustment"
+      ],
+      "statement": "States that appendix robustness checks include wild-bootstrap cluster-t standard errors, randomization inference, and Romano-Wolf step-down adjustment of p-values across families of outcomes, without walking through the results in the main text.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IV, opening paragraph, robustness checks list",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Does not give an explicit substantive argument in the main text for why the vendor level, rather than some other level, is the right clustering unit for the misconduct regressions; the choice is stated but not defended.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Table 2 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "Reports two layers of balance checks: comparing randomly selected markets to the full census population, and comparing treated to control markets on baseline household- and vendor-level statistics, each via a regression on the relevant assignment indicator.",
+      "pages": [
+        15,
+        17
+      ],
+      "locator": "Section III, Balance and validity of design",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_appendix"
+      ],
+      "statement": "Points to appendix tables that formally test whether attrition differs by treatment arm, concluding attrition is nondifferential, while the main text reports only the aggregate attrition rate.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section III, Attrition",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "Uses non-over-the-counter transaction types, judged harder for a vendor to overcharge on, as an internal placebo check, finding consistently lower misconduct there and interpreting this as validating the audit measure rather than reflecting mismeasurement.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Section III, Administrative audit data",
+      "basis": "inferred",
+      "applies_to": [
+        "other:audit_study"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Reports Lee (2009) bounds, Imbens-Manski (2004) confidence sets, and Behaghel et al. (2015) bounds to evaluate potential attrition bias, but these results are relegated to an online appendix not included in the extracted text.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IV, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_se",
+        "in_appendix"
+      ],
+      "statement": "Lists alternative standard-error procedures, wild-bootstrap cluster-t and randomization inference, as part of a battery of robustness checks relegated to an online appendix rather than shown alongside the main tables.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IV, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "States that an alternative specification selects control variables using post-double-selection LASSO instead of the fixed control list, reported as one of several alternative models only in the appendix.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IV, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "in_appendix",
+        "other:combined_index_check"
+      ],
+      "statement": "Combines the usage and savings outcomes into a single index via principal component analysis and reports this combined-index robustness check in two appendix tables rather than as an additional column in the main usage table.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_control_group",
+        "in_main_text"
+      ],
+      "statement": "Treats the comparison between non-selected vendors in treated localities and vendors in pure control localities as a distinct spillover specification, presented as its own table with its own notes rather than folded into the main treatment-effect tables.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section IV.D, Table 7",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "in_appendix"
+      ],
+      "statement": "Examines heterogeneity along five dimensions, vendor competition, seller gender, pre-experiment consumer illiteracy, bundled-store status, and belief updating, reporting the disaggregated results only in an appendix and summarizing directions in a short main-text paragraph.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section V.B, Heterogeneity",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "mechanism_motivated"
+      ],
+      "statement": "Frames the belief-updating heterogeneity split as evidence for the reputation mechanism rather than a purely descriptive cut, noting that quantity effects concentrate in markets where consumers updated their beliefs the most.",
+      "pages": [
+        31,
+        33
+      ],
+      "locator": "Section V.B-C",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "elasticity",
+        "compared_to_literature"
+      ],
+      "statement": "Interprets demand and revenue effects relative to the control-group mean, converts the paired fee-reduction and demand-increase magnitudes into an implied elasticity, and compares that elasticity against related mobile-money tax and subsidy experiments.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section V.A, question 3",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "monetary_terms"
+      ],
+      "statement": "Works through a back-of-envelope calculation of vendor profit under control versus treatment commission rates and sales levels to argue vendors are not made worse off on their m-money business despite the fall in misconduct revenue.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section IV.D",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "cost_benefit",
+        "monetary_terms"
+      ],
+      "statement": "Reports cost-effectiveness ratios relating the per-subject cost of the information programs to the resulting increase in service usage and vendor revenue, describing the underlying approach as deliberately conservative because it ignores broader positive impacts.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section V.E",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "Acknowledges that supplementary administrative transaction data from the largest provider does not cover all experimental localities and offers too little cross-arm variation to be used for formal treatment-effect estimation.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "footnote 12",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "Acknowledges there is no direct counterfactual in which both the upstream provider and the regulator permit full double marginalization, so the vendor-welfare claim relies on two indirect counterfactual comparisons rather than an observed baseline.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "footnote 15",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "external_validity",
+      "tags": [
+        "site_specific"
+      ],
+      "statement": "Frames the setting as a specific rural mobile-money market in Eastern Ghana and repeatedly ties the value of the intervention to the degree of imperfect information present, noting this could differ in other developing-country payment markets.",
+      "pages": [
+        2,
+        34
+      ],
+      "locator": "Introduction; Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "Ties the interpretation of quantity effects to the subgroup of consumers who meaningfully updated their beliefs after treatment, implying the estimated downstream effects are concentrated among belief-compliers rather than uniform across the sample.",
+      "pages": [
+        31,
+        33
+      ],
+      "locator": "Section V.C",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "Uses a consistent table format throughout the results section: a treatment-effect panel with confidence intervals in brackets beneath standard errors, a control-mean row, and a bottom panel of pairwise Wald-test p-values, with the unit of observation stated in every note.",
+      "pages": [
+        19,
+        30
+      ],
+      "locator": "Tables 2-10",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "presentation_convention",
+      "tags": [
+        "other:cdf_plot",
+        "no_stars"
+      ],
+      "statement": "Illustrates two of the main treatment effects with cumulative distribution function plots by arm rather than bar charts, accompanied by Kolmogorov-Smirnov equality-of-distribution p-values in the figure notes; the main tables report confidence intervals rather than significance stars.",
+      "pages": [
+        20,
+        23
+      ],
+      "locator": "Figures 1-2",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "in_appendix"
+      ],
+      "statement": "Places the descriptive summary-statistics table for the market census in an appendix rather than the main text, referring readers to it when discussing baseline facts about vendor and customer characteristics.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section II.B, referencing table B.8",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph",
+        "results_previewed_in_intro"
+      ],
+      "statement": "Ends the introduction with an explicit roadmap paragraph naming each of the six numbered sections, after already previewing all five sets of quantitative results, misconduct and beliefs, usage and savings, revenue, spillovers, and shock mitigation, earlier in the introduction.",
+      "pages": [
+        4,
+        6
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main",
+        "robustness_separate_section"
+      ],
+      "statement": "Places the results section (Section IV) before a separate discussion and interpretation section (Section V) covering mechanisms, heterogeneity, and a descriptive reputation model, with detailed robustness checks relegated to an appendix rather than a dedicated main-text robustness section.",
+      "pages": [
+        17,
+        34
+      ],
+      "locator": "Sections IV-V",
+      "basis": "inferred",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph",
+        "appendix_heavy"
+      ],
+      "statement": "Devotes several paragraphs late in the introduction to three explicitly numbered contributions to distinct literatures, and repeatedly directs readers to online appendices A through D for the model, additional tables, robustness, and instrument details.",
+      "pages": [
+        4,
+        6
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "States in a dedicated data-availability section that the data and code replicating the tables and figures are archived at Harvard Dataverse under a specific DOI, citing the archived replication package as its own reference entry.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Data Availability",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "data_access",
+      "tags": [
+        "survey_collected",
+        "administrative",
+        "linked_records"
+      ],
+      "statement": "Combines newly collected primary data, market census, audit transactions, and phone and in-person surveys, with secondary administrative transaction records obtained from the largest mobile-money provider, linked at the locality level.",
+      "pages": [
+        12,
+        25
+      ],
+      "locator": "Section III, Data collected; footnote 12",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "irb_stated",
+        "preregistered"
+      ],
+      "statement": "States in an acknowledgments footnote that Institutional Review Board approval for the data collection was obtained from Georgia State University and that the project was registered in the American Economic Association RCT Registry under a specific ID.",
+      "pages": [
+        2,
+        2
+      ],
+      "locator": "unnumbered acknowledgments footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ],
+      "quote": "registered in the American Economic Association RCT Registry"
+    },
+    {
+      "id": "o51",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided",
+        "intermediate_outcomes"
+      ],
+      "statement": "Uses a descriptive reputation model, formalized in an online appendix, to organize three specific pieces of evidence as consistent with a reputation channel: the shift in consumer beliefs, the increased correlation of beliefs with audit misconduct, and belief-driven heterogeneity in quantity effects.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section V.C",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives",
+        "suggestive_labelled"
+      ],
+      "statement": "Names five alternative interpretations, Hawthorne, selection, marketing, price, and bargaining effects, and states it finds limited support for them based on appendix evidence not reproduced in the main text.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Section V.D, Alternative Interpretations",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "mechanism_evidence",
+      "tags": [
+        "survey_evidence",
+        "suggestive_labelled"
+      ],
+      "statement": "Elicits vendors' and managers' own predictions of the intervention's price and quantity effects in a DellaVigna-Pope-style forecasting exercise as suggestive evidence on why vendors overcharge and why the provider had not already run a similar program.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section V.A, questions 1-2",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "States the main empirical model as an OLS regression of end line outcomes on the treatment indicator, district (stratification) fixed effects, the baseline value of the outcome, and additional controls, estimated for pooled and arm-specific treatment variables.",
+      "card_shows": "All seven captured specifications (s1-s6, s8, design d1) use Stata's reg command with estimator=ols, matching the paper's stated OLS approach for both audit-based and survey-based outcomes.",
+      "status": "agree",
+      "pages": [
+        17,
+        19
+      ],
+      "card_ref": "d1 (s1, s2, s3, s4, s5, s6, s8)"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "States that regressions include randomization-strata (district) dummies, with audit-based tables additionally interacting these with transaction-type and transaction-date fixed effects (Table 2, 7 notes).",
+      "card_shows": "The fixed_effects field is null (s1, s4, s8) or an empty list (s2, s3, s5, s6) for every captured specification.",
+      "status": "paper_only",
+      "pages": [
+        18,
+        27
+      ],
+      "card_ref": "s1.fixed_effects; s4.fixed_effects; s8.fixed_effects",
+      "note": "The raw formula_or_call strings do show i.distXtrXdateFes and i.districtID terms, but these were not parsed into the structured fixed_effects field, so a null there means unresolved, not absent."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Table 2 notes state vendor-level clustering for the primary misconduct regressions; Tables 3-5, 7, 9, and 10 notes state market (locality)-level clustering for survey-based and spillover regressions.",
+      "card_shows": "s1-s3 (design d1) cluster on uniqueVendorID (vendor level); s4-s6 and s8 cluster on uniqueLocalityID (locality level), matching the paper's stated vendor-level and locality-level clustering respectively.",
+      "status": "agree",
+      "pages": [
+        19,
+        30
+      ],
+      "card_ref": "s1.se.cluster_level; s4.se.cluster_level; s8.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "States that heteroskedasticity-robust standard errors, rather than clustered ones, are used for outcomes with only one observation per locality; Table 6 and Table 8 notes confirm heteroskedasticity-robust standard errors for the vendor-level revenue and exit outcomes.",
+      "card_shows": "No captured specification corresponds to the Revenues.do file; the file was read per provenance (150 lines) but no regression calls from it were extracted into specifications, so the card cannot confirm this claim.",
+      "status": "paper_only",
+      "pages": [
+        17,
+        28
+      ],
+      "card_ref": "specifications (no Revenues.do entries)"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Table notes list a fixed set of demographic and business controls added to every regression (age, marital status, ethnic-group status, employment status, plus education and income for customers or business experience and bundled-store status for vendors).",
+      "card_shows": "The controls_summary field is null for every captured specification; control variable names (e.g., mage mmarried makan mselfemployed) appear only inside the unparsed formula_or_call strings.",
+      "status": "paper_only",
+      "pages": [
+        19,
+        30
+      ],
+      "card_ref": "s1.controls_summary; s8.controls_summary"
+    },
+    {
+      "item": "weights",
+      "paper_says": "The main text and table notes never state whether regressions are weighted or unweighted.",
+      "card_shows": "The weights field is null for every captured specification, and no weight-related evidence entries are present in the card.",
+      "status": "unknown",
+      "pages": [
+        17,
+        30
+      ],
+      "card_ref": "s1.weights; s2.weights; ...; s8.weights (null in all specs)"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Table notes state the exact unit and count of observations per table, for example vendor by transaction-type by transaction-date for audit tables, customer level (N=810) for most survey tables, and vendor level (N=107 or 129) for revenue and exit tables.",
+      "card_shows": "The sample field is null for every captured specification; s4 and s5's formula_or_call strings show an if _merge==1 restriction (the spillover-eligible subsample) that is not reflected in the structured sample field.",
+      "status": "paper_only",
+      "pages": [
+        19,
+        28
+      ],
+      "card_ref": "s4.sample; s5.sample"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Describes running baseline-covariate regressions on the sample-selection and treatment indicators to test balance, reported in appendix Tables B.1-B.4.",
+      "card_shows": "Diagnostic x1 (kind=balance, design d1) is recorded as status=observed with observation=call_present, evidenced by a reg mfemale i.strataFE i.treatment, cluster(ge02) call in the balance-test script, matching the paper's stated balance regressions.",
+      "status": "agree",
+      "pages": [
+        15,
+        17
+      ],
+      "card_ref": "diagnostics.x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Reports an aggregate survey attrition rate and states attrition is nondifferential across arms based on significance tests in appendix Tables B.5-B.7, plus Lee/Imbens-Manski/Behaghel attrition bounds in appendix C.",
+      "card_shows": "Diagnostic x2 (kind=attrition, design d1, linked to specs s1-s3) is recorded with status=unknown and no observation or description field filled in; only a note points to leebounds being called and to Tables C.1, C.2, C.8.",
+      "status": "unknown",
+      "pages": [
+        17,
+        18
+      ],
+      "card_ref": "diagnostics.x2"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "States that robustness checks include wild-bootstrap cluster-t standard errors, randomization inference, and Romano-Wolf multiple-testing adjustment across families of outcomes.",
+      "card_shows": "The structured robustness array is empty, but the packages list records boottest, ritest, and rwolf as Stata commands actually called in 01_programs.do, corroborating that these three procedures exist in code even though the card has no dedicated robustness entries for them.",
+      "status": "agree",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "packages[boottest, ritest, rwolf]; robustness (empty array)"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "States that Lee (2009) bounds are among the reported attrition-bias checks.",
+      "card_shows": "The packages list records leebounds as a called Stata command, corroborating the Lee-bounds portion of the paper's attrition-robustness claim; the card gives no separate evidence for the Imbens-Manski or Behaghel et al. bounds the paper also names.",
+      "status": "agree",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "packages[leebounds]"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "States that an alternative model chooses controls via post-double-selection LASSO following Belloni et al. (2014).",
+      "card_shows": "No package entry for a LASSO-related Stata command (e.g., pdslasso, lasso2) appears in the card's packages list, and files_skipped notes that some data-preparation and demand scripts were not read due to budget, so this specific claim is unconfirmed in the card.",
+      "status": "paper_only",
+      "pages": [
+        18,
+        18
+      ],
+      "card_ref": "packages (no lasso/pdslasso entry); provenance.files_skipped"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Presents ten numbered main-text tables (Tables 1-10) and two main-text figures, plus an extensive lettered appendix of additional tables and figures (B, C, D).",
+      "card_shows": "The outputs.tables array contains a single generic entry (t1, output_ref=Main, no path or notes_content) and outputs.figures is empty, reflecting the card's partial, budget-limited reading rather than the paper's actual table and figure count.",
+      "status": "paper_only",
+      "pages": [
+        13,
+        30
+      ],
+      "card_ref": "outputs.tables[t1]; outputs.figures (empty)"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "States in a dedicated Data Availability section that data and code replicating the tables and figures are archived at Harvard Dataverse under DOI 10.7910/DVN/35WM5H, citing Annan (2024).",
+      "card_shows": "The repository's directory_layout and every specification's evidence paths point to code/dataverse_35WM5H, and provenance.reading_notes describe the same Dataverse-hosted Stata replication package, matching the paper's stated archive location.",
+      "status": "agree",
+      "pages": [
+        34,
+        34
+      ],
+      "card_ref": "repository.directory_layout"
+    }
+  ],
+  "gaps": [
+    "No statistical power calculation or minimum-detectable-effect discussion appears anywhere in the main text for any outcome.",
+    "No explicit statement of software (e.g., Stata) or package version numbers appears in the main text; software use is inferable only from the replication code, not from the paper itself.",
+    "No discussion of deviations from the pre-analysis plan or registered design appears in the main text beyond the single acknowledgments-footnote statement of IRB approval and AEA RCT Registry ID.",
+    "The formal reputation model referenced repeatedly (online appendix A) is not shown in the extracted text, so its assumptions and any structural estimation of its parameters could not be read directly; the main text treats it only as a descriptive, non-estimated organizing device.",
+    "The lettered online appendices B, C, and D, containing most robustness checks, the heterogeneity tables, the alternative-interpretation evidence, and the intervention instrument text, are not part of the extracted text and could not be read directly.",
+    "No formal joint statistical test of covariate balance (e.g., an omnibus F-test across all baseline variables) is reported in the main text; balance is described only qualitatively as 'no difference across those markets selected and those not selected.'",
+    "No discussion of regression weights (sampling or otherwise) appears anywhere in the main text."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        37
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read all 37 pages of the extracted main text in full, including the abstract, introduction, research setting, experimental design, all results subsections (misconduct/beliefs, usage/savings, revenues, spillovers, shock mitigation), the discussion and interpretation section (mechanisms, heterogeneity, descriptive reputation model, alternative interpretations, cost-effectiveness), the conclusion, the data-availability statement, and the reference list. The lettered online appendices A-D (formal model, additional tables B, robustness and mechanism detail C, instrument text D), referenced repeatedly by pointer, are hosted separately from this extracted text and were not read; their contents are recorded only as pointers in the observations and gaps."
+  }
+}

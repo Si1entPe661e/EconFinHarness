@@ -1,0 +1,1109 @@
+{
+ "schema_version": "paper-practice-note-v1",
+ "artid": "aer_111_12_8",
+ "journal": "AER",
+ "year": 2021,
+ "doi": "10.1257/aer.20190159",
+ "source": {
+  "pdf_path": "Paper/PDF/aer_111_12_8.pdf",
+  "pdf_sha256": "692dc01db8ddcc46ad13fa76ea32626654c5e77bbb90f5f6a30193c789df7662",
+  "text_path": "harness_build/papers/text/aer_111_12_8.txt",
+  "text_sha256": "499b07fcfa4aa18db684978889c1e80c5c0541528205753f93d487f6e34f1d2f",
+  "pages": 31
+ },
+ "reader": {
+  "role": "empirical-analyst",
+  "model": "claude-sonnet (Agent tool)",
+  "prompt_version": "paper-practice-v1",
+  "generated_at": "2026-09-08T19:55:05Z"
+ },
+ "card_link": {
+  "path": "harness_build/recipes/accepted/aer_111_12_8.json",
+  "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c"
+ },
+ "methods": [
+  "synthetic_did",
+  "did",
+  "synthetic_control",
+  "other:matrix_completion",
+  "other:demeaned_synthetic_control"
+ ],
+ "structure": [
+  {
+   "id": "sec1",
+   "kind": "introduction",
+   "title": "Introduction and motivation for SDID",
+   "pages": [
+    1,
+    3
+   ]
+  },
+  {
+   "id": "sec2",
+   "kind": "design",
+   "title": "Section I.A: Implementing SDID (estimator, weight optimization)",
+   "pages": [
+    4,
+    6
+   ]
+  },
+  {
+   "id": "sec3",
+   "kind": "results",
+   "title": "Section I.B: California smoking cessation application",
+   "pages": [
+    6,
+    8
+   ]
+  },
+  {
+   "id": "sec4",
+   "kind": "results",
+   "title": "Section II: Placebo simulation studies (CPS and Penn World Table)",
+   "pages": [
+    8,
+    14
+   ]
+  },
+  {
+   "id": "sec5",
+   "kind": "model",
+   "title": "Section III: Formal results (assumptions, asymptotic theory)",
+   "pages": [
+    14,
+    21
+   ]
+  },
+  {
+   "id": "sec6",
+   "kind": "other",
+   "title": "Section IV: Large-sample inference (bootstrap, jackknife, placebo variance)",
+   "pages": [
+    21,
+    25
+   ]
+  },
+  {
+   "id": "sec7",
+   "kind": "background",
+   "title": "Section V: Related work",
+   "pages": [
+    25,
+    27
+   ]
+  },
+  {
+   "id": "sec8",
+   "kind": "appendix",
+   "title": "Appendix: Staggered adoption extension",
+   "pages": [
+    27,
+    29
+   ]
+  },
+  {
+   "id": "sec9",
+   "kind": "other",
+   "title": "References",
+   "pages": [
+    29,
+    31
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "id": "o1",
+   "category": "design_statement",
+   "tags": [
+    "design_variant_named",
+    "estimand_named"
+   ],
+   "statement": "The paper proposes synthetic difference-in-differences as a new estimator combining DID's parallel-trends logic with SC's unit reweighting, and states its objective as a weighted two-way-fixed-effects regression contrasted directly against unweighted DID and time-weight-free SC.",
+   "pages": [
+    1,
+    3
+   ],
+   "locator": "Introduction, equations (1)-(3)",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o2",
+   "category": "design_statement",
+   "tags": [
+    "design_variant_named"
+   ],
+   "statement": "The main analysis is explicitly scoped to the simultaneous 'block' treatment-adoption case; staggered adoption, where units start treatment at different dates, is flagged as a related but separate setting handled only in an appendix extension.",
+   "pages": [
+    1,
+    2
+   ],
+   "locator": "footnote 1",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o3",
+   "category": "design_statement",
+   "tags": [
+    "identifying_assumption_explicit",
+    "parallel_trends_argued"
+   ],
+   "statement": "Unit weights are chosen so unexposed units' pre-period trend is only approximately, not exactly, parallel to the treated units'; the paper states that the added unit fixed effect absorbs the remaining constant level difference, which it presents as the key relaxation of the original synthetic-control weighting.",
+   "pages": [
+    4,
+    5
+   ],
+   "locator": "Section I.A",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o4",
+   "category": "design_statement",
+   "tags": [
+    "identifying_assumption_explicit",
+    "design_variant_named"
+   ],
+   "statement": "Time weights are motivated by analogy to unit weights: they are chosen so a weighted average of pre-period outcomes predicts the post-period average up to a constant, contrasted explicitly with plain DID (equal weight on every pre-period) and event-study designs (all weight on the last pre-period).",
+   "pages": [
+    4,
+    5
+   ],
+   "locator": "Section I.A",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did"
+   ]
+  },
+  {
+   "id": "o5",
+   "category": "design_statement",
+   "tags": [
+    "identifying_assumption_explicit",
+    "threats_discussed"
+   ],
+   "statement": "The formal identification condition is described informally as 'no unexplained confounding': the text explicitly states that the assumption behind the oracle weights generalizing from unexposed to exposed rows or columns has no testable implication.",
+   "pages": [
+    17,
+    18
+   ],
+   "locator": "Section III.B",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ],
+   "quote": "an assumption of no unexplained confounding"
+  },
+  {
+   "id": "o6",
+   "category": "sample_construction",
+   "tags": [
+    "data_source_named",
+    "unit_of_observation_stated",
+    "sample_period_stated"
+   ],
+   "statement": "The California application's data source, state-year unit of observation, and the treated-state policy date that splits the panel into pre- and post-periods are all stated directly in the setup paragraph rather than left to a data appendix.",
+   "pages": [
+    4,
+    4
+   ],
+   "locator": "Section I",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o7",
+   "category": "sample_construction",
+   "tags": [
+    "data_source_named",
+    "unit_of_observation_stated",
+    "sample_period_stated"
+   ],
+   "statement": "The CPS placebo sample is built from average log wages by state-year cell using the outgoing rotation groups, with the specific source extract and the covered years stated directly in the data-generating-process paragraph.",
+   "pages": [
+    9,
+    9
+   ],
+   "locator": "Section II.A, Data Generating Process",
+   "basis": "stated",
+   "applies_to": [
+    "did",
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o8",
+   "category": "sample_construction",
+   "tags": [
+    "data_source_named",
+    "exclusions_justified",
+    "sample_period_stated"
+   ],
+   "statement": "The Penn World Table placebo sample's ending year is deliberately chosen so the treatment period does not coincide with the global recession that followed it, with this exclusion rule stated directly rather than left implicit.",
+   "pages": [
+    12,
+    12
+   ],
+   "locator": "Section II.B",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o9",
+   "category": "sample_construction",
+   "tags": [
+    "sample_size_reported_per_table"
+   ],
+   "statement": "Panel dimensions and the number of treated units and periods for every simulation design variant are stated directly in each table's own notes, so each row of the Monte Carlo tables is self-contained rather than requiring the reader to consult the main text.",
+   "pages": [
+    10,
+    13
+   ],
+   "locator": "Table 2 and Table 3 notes",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o10",
+   "category": "variable_construction",
+   "tags": [
+    "outcome_definition",
+    "logs_or_ihs"
+   ],
+   "statement": "Outcome definitions differ by application and are each stated up front: per-capita consumption for the California case, a log-transformed labor outcome for the CPS placebo, and log real output for the Penn World Table placebo.",
+   "pages": [
+    4,
+    13
+   ],
+   "locator": "Sections I, II.A, II.B",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o11",
+   "category": "variable_construction",
+   "tags": [
+    "other:covariate_residualization"
+   ],
+   "statement": "The paper describes an optional covariate-adjustment step: exogenous time-varying covariates can be incorporated by first residualizing the outcome on those covariates via regression, then applying the estimator to the residuals, rather than adding covariates directly into the weighted regression.",
+   "pages": [
+    4,
+    5
+   ],
+   "locator": "footnote 4",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ],
+   "note": "Described as a general capability; not exercised in the paper's own California/CPS/PWT applications as read."
+  },
+  {
+   "id": "o12",
+   "category": "variable_construction",
+   "tags": [
+    "other:factor_decomposition"
+   ],
+   "statement": "The systematic component of outcomes in the placebo studies is explicitly decomposed into an additive two-way-fixed-effect part and a separate interactive part, and the relative importance of each part is reported to characterize how additive- versus interaction-heavy each dataset is.",
+   "pages": [
+    9,
+    9
+   ],
+   "locator": "Section II.A, equation (12)",
+   "basis": "stated",
+   "applies_to": [
+    "did",
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o13",
+   "category": "variable_construction",
+   "tags": [
+    "treatment_definition"
+   ],
+   "statement": "Treatment assignment in both placebo studies is generated from a fitted model of an actual state or country policy indicator on the latent factors rather than assigned uniformly at random, so the simulated assignment mechanism mimics realistic non-random policy adoption.",
+   "pages": [
+    9,
+    9
+   ],
+   "locator": "Section II.A, equation (13)",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o14",
+   "category": "specification_reporting",
+   "tags": [
+    "se_type_in_notes",
+    "baseline_then_variants"
+   ],
+   "statement": "The California results table reports point estimates and standard errors for five estimators side by side in one compact table, with the note naming the specific variance-estimation method used rather than listing it separately per column.",
+   "pages": [
+    6,
+    6
+   ],
+   "locator": "Table 1 and notes",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o15",
+   "category": "specification_reporting",
+   "tags": [
+    "other:no_r2_reported"
+   ],
+   "statement": "Neither the California table nor the simulation tables report an R-squared or a dependent-variable mean; the tables instead report bias, RMSE, or coverage as the relevant summary statistics for a methods-comparison paper.",
+   "pages": [
+    6,
+    13
+   ],
+   "locator": "Tables 1-4",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o16",
+   "category": "specification_reporting",
+   "tags": [
+    "baseline_then_variants"
+   ],
+   "statement": "Regularization and weight-construction choices are reported as part of each estimator's definition rather than in a separate specification table, since SC, DID, and the demeaned-SC variant are all presented as constrained special cases of one weighted objective.",
+   "pages": [
+    2,
+    5
+   ],
+   "locator": "Section I.A and equations (3)-(6)",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control",
+    "other:demeaned_synthetic_control"
+   ]
+  },
+  {
+   "id": "o17",
+   "category": "inference_justification",
+   "tags": [
+    "randomization_inference",
+    "few_clusters_addressed"
+   ],
+   "statement": "Three distinct standard-error strategies are offered, a unit-level bootstrap, a weighted jackknife, and a placebo/permutation-style estimator, with the text stating explicitly which settings each is suited to: large panels for the first two and few-treated-unit settings for the placebo approach.",
+   "pages": [
+    21,
+    23
+   ],
+   "locator": "Section IV",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o18",
+   "category": "inference_justification",
+   "tags": [
+    "other:jackknife_bias_caveat"
+   ],
+   "statement": "The jackknife variance estimator is proven conservative in general and exact only under an additional stated condition; the authors explicitly state this same jackknife construction is not recommended for the synthetic-control estimator because it is severely biased upward there.",
+   "pages": [
+    22,
+    23
+   ],
+   "locator": "Section IV, Theorem 2",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o19",
+   "category": "inference_justification",
+   "tags": [
+    "other:homoskedasticity_required"
+   ],
+   "statement": "Validity of the placebo variance estimator is stated to rely fundamentally on homoskedasticity of the noise across units; the authors note that with only one treated unit, distribution-free variance estimation is not possible without this assumption.",
+   "pages": [
+    23,
+    24
+   ],
+   "locator": "Section IV",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o20",
+   "category": "inference_justification",
+   "tags": [
+    "cluster_at_unit_level"
+   ],
+   "statement": "No clustering by a named grouping variable is used; instead each unit's full time series is treated as the resampling unit in both the bootstrap and jackknife procedures, which the text relates explicitly to prior recommendations for unit-level resampling under within-unit serial correlation.",
+   "pages": [
+    21,
+    21
+   ],
+   "locator": "Section IV, discussion around Algorithm 2",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did"
+   ]
+  },
+  {
+   "id": "o21",
+   "category": "diagnostic_reported",
+   "tags": [
+    "pre_trends_plot",
+    "in_main_text"
+   ],
+   "statement": "No formal statistical pre-trends test is reported anywhere; pre-treatment fit is instead conveyed only visually, through the top panel of the main comparison figure showing each method's fitted pre-period trend against the raw outcome trajectory.",
+   "pages": [
+    7,
+    7
+   ],
+   "locator": "Figure 1, top panel",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control",
+    "did"
+   ]
+  },
+  {
+   "id": "o22",
+   "category": "diagnostic_reported",
+   "tags": [
+    "balance_table",
+    "in_main_text",
+    "other:influence_diagnostic"
+   ],
+   "statement": "The bottom panel of the same comparison figure functions as an implicit influence diagnostic, plotting each control unit's weighted contribution to the estimate so that unusually influential units are visible by dot size, and explicitly contrasting how concentrated each estimator's influence is.",
+   "pages": [
+    7,
+    7
+   ],
+   "locator": "Figure 1, bottom panel",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control",
+    "did"
+   ]
+  },
+  {
+   "id": "o23",
+   "category": "diagnostic_reported",
+   "tags": [
+    "in_main_text",
+    "other:coverage_simulation"
+   ],
+   "statement": "Coverage of nominal confidence intervals is reported as the paper's primary diagnostic of inference quality, computed by simulation for each variance-estimation method and each estimator/design combination, rather than relying on the asymptotic theorem alone.",
+   "pages": [
+    24,
+    24
+   ],
+   "locator": "Table 4",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control",
+    "did"
+   ]
+  },
+  {
+   "id": "o24",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_specification",
+    "summarized_in_one_table",
+    "in_main_text"
+   ],
+   "statement": "The Monte Carlo comparison table is itself structured as a large set of robustness variants around one baseline design: components of the outcome-generating process are dropped one at a time, and the assignment mechanism, outcome variable, and treated-block size are each varied in turn, all summarized in a single table.",
+   "pages": [
+    10,
+    11
+   ],
+   "locator": "Table 2",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o25",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_specification",
+    "online_appendix_not_available"
+   ],
+   "statement": "A footnote references a further comparison table contrasting more strongly regularized weights against the paper's own minimally regularized default, but this table does not appear in the extracted main text, suggesting supplementary material not captured here.",
+   "pages": [
+    4,
+    4
+   ],
+   "locator": "footnote 5",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_control",
+    "other:demeaned_synthetic_control"
+   ]
+  },
+  {
+   "id": "o26",
+   "category": "robustness_reported",
+   "tags": [
+    "alt_sample",
+    "in_main_text"
+   ],
+   "statement": "The Penn World Table simulation is presented explicitly as a second, independent check of the same method under a different regime, a long panel with few treated units and a stronger interactive component, rather than a mere repetition of the CPS design.",
+   "pages": [
+    12,
+    12
+   ],
+   "locator": "Section II.B",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o27",
+   "category": "mechanism_evidence",
+   "tags": [
+    "model_guided",
+    "intermediate_outcomes"
+   ],
+   "statement": "The component-dropping exercise in the simulation table doubles as an explanation for why the proposed estimator outperforms: the authors trace performance gains to specific structural sources, the additive versus interactive parts of the systematic component and the presence or absence of noise, rather than asserting superiority without explanation.",
+   "pages": [
+    10,
+    11
+   ],
+   "locator": "Table 2 discussion",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o28",
+   "category": "mechanism_evidence",
+   "tags": [
+    "model_guided"
+   ],
+   "statement": "The extra precision gained over plain DID even when the additive fixed-effects model is correctly specified is explicitly attributed to the oracle time weights shrinking toward an autoregressive prediction vector under within-unit serial correlation, giving a stated structural reason for the gain.",
+   "pages": [
+    18,
+    18
+   ],
+   "locator": "Section III.B",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did"
+   ]
+  },
+  {
+   "id": "o29",
+   "category": "magnitude_interpretation",
+   "tags": [
+    "sd_units"
+   ],
+   "statement": "Outcomes in the simulation studies are standardized before reporting bias and RMSE, and the resulting figures are rescaled for readability, so magnitudes are interpreted on a comparable unit-free scale across the different underlying outcome variables rather than in their original units.",
+   "pages": [
+    10,
+    10
+   ],
+   "locator": "Table 2 notes",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o30",
+   "category": "magnitude_interpretation",
+   "tags": [
+    "compared_to_literature",
+    "precision_discussed"
+   ],
+   "statement": "Differences between estimators in the California application are interpreted qualitatively as well as numerically: the authors argue that when the synthetic-control-type and the proposed estimator's point estimates diverge, the latter is generally the more credible one, using the direction of the gap as supporting evidence rather than a formal test.",
+   "pages": [
+    6,
+    6
+   ],
+   "locator": "Section I.B",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o31",
+   "category": "limitation_stated",
+   "tags": [
+    "identification_caveat"
+   ],
+   "statement": "The authors state plainly that homoskedasticity across units, needed for the placebo variance estimator, is a real restriction whose failure would make the variance not learnable from the untreated units alone.",
+   "pages": [
+    23,
+    24
+   ],
+   "locator": "Section IV",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o32",
+   "category": "limitation_stated",
+   "tags": [
+    "identification_caveat",
+    "other:scope_limitation"
+   ],
+   "statement": "The staggered-adoption appendix opens by stating plainly that the core weighted-DID-regression approach does not work directly once units adopt treatment at different times, positioning the two proposed workarounds as approximations rather than a complete extension of the main theory.",
+   "pages": [
+    27,
+    27
+   ],
+   "locator": "Appendix",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o33",
+   "category": "limitation_stated",
+   "tags": [
+    "identification_caveat"
+   ],
+   "statement": "In contrasting their assumptions with the interactive-fixed-effects panel literature, the authors state that their own results still require several conditions, bounds on the signal-to-noise ratio, limited serial correlation, and stability of unit factors through the treatment period, and explicitly describe these as non-trivial.",
+   "pages": [
+    15,
+    15
+   ],
+   "locator": "Section III",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o34",
+   "category": "external_validity",
+   "tags": [
+    "scaling_discussed"
+   ],
+   "statement": "The introduction explicitly frames DID and SC as historically suited to different empirical regimes, many treated units under DID versus a single or few treated units under SC, and positions the proposed estimator as intended to perform well across both regimes rather than only one.",
+   "pages": [
+    1,
+    2
+   ],
+   "locator": "Introduction",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o35",
+   "category": "external_validity",
+   "tags": [
+    "other:small_sample_scope"
+   ],
+   "statement": "The large-panel inference results are explicitly scoped to settings with many treated units and periods, and the authors state that a separate placebo-based procedure is needed specifically because the bootstrap and jackknife become unreliable, or undefined, once only one unit is treated.",
+   "pages": [
+    23,
+    23
+   ],
+   "locator": "Section IV",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o36",
+   "category": "presentation_convention",
+   "tags": [
+    "no_stars"
+   ],
+   "statement": "Every main table reports point estimates and standard errors without significance stars, consistent with the paper's methods-comparison framing where the objects of interest are estimator bias, variance, and coverage rather than the significance of a single treatment effect.",
+   "pages": [
+    6,
+    6
+   ],
+   "locator": "Table 1",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did",
+    "did",
+    "synthetic_control"
+   ]
+  },
+  {
+   "id": "o37",
+   "category": "presentation_convention",
+   "tags": [
+    "raw_data_plot",
+    "other:weight_influence_diagram"
+   ],
+   "statement": "The main comparison figure is a two-row diagram: raw trend lines with weighted control averages on top, paired with a dot-size-weighted influence plot of adjusted outcome gaps below, rather than a conventional event-study coefficient plot.",
+   "pages": [
+    7,
+    7
+   ],
+   "locator": "Figure 1",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control",
+    "did"
+   ]
+  },
+  {
+   "id": "o38",
+   "category": "presentation_convention",
+   "tags": [
+    "other:error_density_plot"
+   ],
+   "statement": "A second figure reports the simulated sampling distribution of estimator errors as overlaid density curves for each estimator and assignment-randomness scenario, rather than only a table of moments, to visualize bias and dispersion jointly.",
+   "pages": [
+    11,
+    12
+   ],
+   "locator": "Figure 2",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did",
+    "synthetic_control",
+    "did"
+   ]
+  },
+  {
+   "id": "o39",
+   "category": "writing_structure",
+   "tags": [
+    "main_result_first"
+   ],
+   "statement": "The paper leads with a fully worked applied example before presenting any Monte Carlo evidence or formal asymptotic theory, using the applied result to build intuition that is only formalized many sections later.",
+   "pages": [
+    4,
+    4
+   ],
+   "locator": "Section I",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o40",
+   "category": "writing_structure",
+   "tags": [
+    "appendix_heavy"
+   ],
+   "statement": "The paper ends with a related-work discussion followed directly by a technical appendix on staggered adoption, with no separate concluding section restating contributions or summarizing implications for practice.",
+   "pages": [
+    25,
+    29
+   ],
+   "locator": "Section V and Appendix",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o41",
+   "category": "writing_structure",
+   "tags": [
+    "contribution_paragraph",
+    "results_previewed_in_intro"
+   ],
+   "statement": "The introduction contains an explicit contribution paragraph naming the new estimator and previewing both its theoretical guarantees and its empirical performance relative to DID and SC, before any formal notation is introduced.",
+   "pages": [
+    1,
+    1
+   ],
+   "locator": "Introduction",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o42",
+   "category": "replication_statement",
+   "tags": [
+    "code_public",
+    "software_named",
+    "replication_package_cited"
+   ],
+   "statement": "An author footnote states that the R package implementing the method is publicly available on a named code-hosting platform along with an accompanying usage vignette, giving the specific repository and documentation links directly rather than describing them only generically.",
+   "pages": [
+    1,
+    1
+   ],
+   "locator": "footnote *",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o43",
+   "category": "replication_statement",
+   "tags": [
+    "data_public",
+    "replication_package_cited"
+   ],
+   "statement": "The reference list separately cites a formal replication-data package for the paper, distributed through a university-consortium data repository under its own DOI, distinct from the author-footnote pointer to the code repository.",
+   "pages": [
+    29,
+    29
+   ],
+   "locator": "References",
+   "basis": "stated",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  },
+  {
+   "id": "o44",
+   "category": "data_access",
+   "tags": [
+    "public_use",
+    "data_public"
+   ],
+   "statement": "All three datasets used, the cigarette-tax panel, the CPS wage extract, and the Penn World Table, are cited to their original public sources rather than described as proprietary or restricted, and no data-use agreement or restricted-access procedure is mentioned anywhere in the text.",
+   "pages": [
+    4,
+    13
+   ],
+   "locator": "Sections I, II.A, II.B and References",
+   "basis": "inferred",
+   "applies_to": [
+    "synthetic_did"
+   ]
+  }
+ ],
+ "concordance": [
+  {
+   "item": "estimator",
+   "paper_says": "SDID is defined by equations (1) and (4)-(6) and summarized as Algorithm 1: solve for regularized unit and time weights, then run a weighted two-way-fixed-effects regression.",
+   "card_shows": "s1 records estimator=synthetic_did, command=synthdid_estimate, called as estimator(setup$Y, setup$N0, setup$T0) in the vignette.",
+   "status": "agree",
+   "pages": [
+    4,
+    6
+   ],
+   "card_ref": "s1"
+  },
+  {
+   "item": "estimator",
+   "paper_says": "The matrix-completion (MC) estimator is described as imputing missing untreated potential outcomes via a low-rank factor model with nuclear-norm regularization, attributed to Athey et al. (2021).",
+   "card_shows": "s4 records estimator=other:matrix_completion, command=mc_estimate, matching the low-rank/nuclear-norm description.",
+   "status": "agree",
+   "pages": [
+    6,
+    6
+   ],
+   "card_ref": "s4"
+  },
+  {
+   "item": "estimator",
+   "paper_says": "The DIFP estimator is attributed to Doudchenko and Imbens (2016) and Ferman and Pinto (2019) and described as synthetic control applied after centering each unit's trajectory by its pre-treatment mean.",
+   "card_shows": "s5 records estimator=other:demeaned_synthetic_control, command=difp_estimate, with notes crediting the same two source papers.",
+   "status": "agree",
+   "pages": [
+    3,
+    3
+   ],
+   "card_ref": "s5"
+  },
+  {
+   "item": "fixed_effects",
+   "paper_says": "The SDID objective (equation 1) explicitly includes a unit fixed effect and a time fixed effect alongside the treatment indicator in the weighted regression.",
+   "card_shows": "s1.fixed_effects is null; the card does not record which fixed effects are included in the estimating equation.",
+   "status": "paper_only",
+   "pages": [
+    1,
+    4
+   ],
+   "card_ref": "s1.fixed_effects"
+  },
+  {
+   "item": "se_type",
+   "paper_says": "The California results table's notes state directly that the 'placebo method' standard-error estimator described in the inference section is the one used for that table.",
+   "card_shows": "s1.se.type is recorded as randomization_inference with details describing a placebo standard error based on resampling control units, matching the paper's own description.",
+   "status": "agree",
+   "pages": [
+    6,
+    6
+   ],
+   "card_ref": "s1.se.type"
+  },
+  {
+   "item": "cluster_level",
+   "paper_says": "The paper's variance estimators (bootstrap, jackknife, placebo) resample or reweight whole units rather than using an analytic cluster-robust formula at a named cluster level.",
+   "card_shows": "s1.se.cluster_level is null across all specifications, consistent with a resampling-based approach rather than a named clustering variable.",
+   "status": "agree",
+   "pages": [
+    21,
+    24
+   ],
+   "card_ref": "s1.se.cluster_level"
+  },
+  {
+   "item": "weights",
+   "paper_says": "SC is defined as the same weighted objective with the time weights fixed at zero (no time weighting) and no intercept; DID uses uniform unit and time weights; DIFP uses uniform time weights with minimal regularization.",
+   "card_shows": "s2.weights, s3.weights, and s5.weights record exactly these constrained weight settings (lambda fixed to zero for SC; uniform lambda and omega for DID; uniform lambda with minimal eta.omega for DIFP).",
+   "status": "agree",
+   "pages": [
+    2,
+    3
+   ],
+   "card_ref": "s2.weights, s3.weights, s5.weights"
+  },
+  {
+   "item": "controls",
+   "paper_says": "A footnote describes an optional covariate-adjustment procedure (residualize the outcome on time-varying covariates, then apply the estimator to the residuals) as a general capability of the method.",
+   "card_shows": "controls_summary is null on every specification, and no specification's evidence mentions a covariate-residualization step being exercised in the traced application code.",
+   "status": "paper_only",
+   "pages": [
+    4,
+    5
+   ],
+   "card_ref": "specifications[].controls_summary"
+  },
+  {
+   "item": "diagnostic",
+   "paper_says": "No formal pre-trend statistical test is reported; pre-treatment fit is conveyed only visually through the top panel of the main comparison figure.",
+   "card_shows": "x1 records kind=pretrend_plot with status=not_found_in_scope, noting that a plotting function exists but no explicit pre-trend test was found in the traced scripts.",
+   "status": "agree",
+   "pages": [
+    7,
+    7
+   ],
+   "card_ref": "x1"
+  },
+  {
+   "item": "robustness",
+   "paper_says": "Table 2 reports an extensive set of robustness-style simulation variants (dropped model components, alternative assignment mechanisms, alternative outcomes, alternative treated-block sizes) all built from one baseline design.",
+   "card_shows": "The card's robustness array is empty, recording no robustness checks for this paper.",
+   "status": "disagree",
+   "pages": [
+    10,
+    11
+   ],
+   "card_ref": "robustness",
+   "note": "The card's file-reading scope evidently did not capture the loop over simulator variants in paper-results.Rmd that generates Table 2's rows."
+  },
+  {
+   "item": "outputs",
+   "paper_says": "The paper presents four main numbered tables (California estimates; CPS point estimates; Penn World Table point estimates; coverage) and two main figures (the trend/weight comparison figure; the error-density figure).",
+   "card_shows": "outputs.tables lists t1-t4 matching the same four tables in the same order, and outputs.figures lists f1-f2 matching the two described figures.",
+   "status": "agree",
+   "pages": [
+    6,
+    24
+   ],
+   "card_ref": "outputs.tables, outputs.figures"
+  },
+  {
+   "item": "data_source",
+   "paper_says": "The California application is sourced from a well-known cigarette-tax historical compilation (Orzechowski and Walker 2005).",
+   "card_shows": "The data entry for california_prop99 records type=admin, access=public, matching the cited public historical-compilation source.",
+   "status": "agree",
+   "pages": [
+    4,
+    4
+   ],
+   "card_ref": "data[0] (california_prop99)"
+  },
+  {
+   "item": "data_source",
+   "paper_says": "The CPS placebo study is built from average log wages in the Current Population Survey outgoing rotation groups, sourced via a National Bureau of Economic Research extract.",
+   "card_shows": "The CPS data entry records type=survey, access=public, unit_of_observation=US state-year, matching the paper's description.",
+   "status": "agree",
+   "pages": [
+    9,
+    9
+   ],
+   "card_ref": "data[1] (CPS)"
+  },
+  {
+   "item": "data_source",
+   "paper_says": "The second placebo study uses the Penn World Table's country-year real GDP series, citing Feenstra, Inklaar, and Timmer (2015).",
+   "card_shows": "The PENN data entry records type=macro_aggregate, access=public, consistent with the paper's citation of the Penn World Table.",
+   "status": "agree",
+   "pages": [
+    12,
+    12
+   ],
+   "card_ref": "data[2] (PENN)"
+  }
+ ],
+ "gaps": [
+  "A footnote (page 4) references a further comparison table ('Table 6') of regularization choices for SC/DIFP; that table does not appear anywhere in the extracted main text, suggesting online-appendix material not captured here.",
+  "No empirical subgroup or heterogeneity analysis of treatment effects is reported; the general model in Section III permits heterogeneous unit-time effects, but only an aggregate average estimand is targeted throughout the paper.",
+  "No preregistration, IRB approval, or research-ethics statement appears anywhere in the text; all analyses use secondary public data and simulations.",
+  "No analytic cluster-robust standard error at a named grouping level is used or discussed anywhere; all variance estimators are resampling-based (bootstrap, jackknife, placebo) rather than cluster-robust in the conventional sense.",
+  "There is no separate concluding section; the paper moves directly from the related-work discussion into a technical appendix on staggered adoption without a closing summary of contributions or practice implications."
+ ],
+ "reading": {
+  "pages_read": [
+   [
+    1,
+    31
+   ]
+  ],
+  "coverage": "full",
+  "note": "Read all 31 pages: introduction, the California application, both placebo simulation studies (CPS and Penn World Table), the formal assumptions and asymptotic theorem, the large-sample inference section (bootstrap/jackknife/placebo algorithms and coverage table), the related-work discussion, and the staggered-adoption appendix. The reference list was scanned only to identify the cited replication-data package, not summarized as separate observations."
+ }
+}

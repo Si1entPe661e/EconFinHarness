@@ -1,0 +1,1590 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_110_9_10",
+ "journal": "AER",
+ "year": 2020,
+ "doi": "10.1257/aer.20181169",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/Enikolopov_et_al.do",
+    "sha256": "179775dcc4579e65b276832c4008e9b28dec487f8c0df707bb6d0204b6125fdc",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      93
+     ]
+    ]
+   },
+   {
+    "path": "code/Gentzkow_et_al.do",
+    "sha256": "52115ca8f5f53660050641ec4434a937ac0b968f8b32401096773891a4932200",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      246
+     ]
+    ]
+   },
+   {
+    "path": "code/code_unions.do",
+    "sha256": "d7b3f59b87684c6e21420419af0024b391fb14c9d3941f38ee8c3ce0e989d1ea",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      277
+     ]
+    ]
+   },
+   {
+    "path": "code/did_multiplegt.ado",
+    "sha256": "22b755420e8cc7d73176f4523f6c368200cebd312663f29f8dea7eca09db4916",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      969,
+      1050
+     ]
+    ]
+   },
+   {
+    "path": "code/twowayfeweights.ado",
+    "sha256": "58573bd1a97b06c9b7eb5c8653d58deac2faa597c5f95bd676886bf8d932c998",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/fuzzydid.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/build_cond_expectation_1.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/build_cond_expectation_2.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/estim_wrapper.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/five_fold_cv.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/late_estim_X.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/late_estim_noX.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/legendrisation.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/lqte_estim_noX.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   },
+   {
+    "path": "code/special_cases.ado",
+    "reason": "out_of_budget",
+    "note": ""
+   }
+  ],
+  "unresolved_references": [
+   {
+    "description": "fuzzydid estimator used but not read",
+    "evidence": [
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       151,
+       152
+      ],
+      "snippet": "fuzzydid prestout G_T",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "omitted_specifications": [
+   {
+    "path": "code/Gentzkow_et_al.do",
+    "lines": [
+     150,
+     240
+    ],
+    "reason": "out_of_budget"
+   }
+  ],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Three main applications fully read; core custom estimators read; helper files skipped."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/Enikolopov_et_al.do",
+   "code/Gentzkow_et_al.do",
+   "code/code_unions.do"
+  ],
+  "directory_layout": "code/ contains three application .do files and 12 supporting .ado files",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [
+   {
+    "name": "did_multiplegt",
+    "path": "code/did_multiplegt.ado",
+    "purpose": null,
+    "evidence": [
+     {
+      "path": "code/did_multiplegt.ado",
+      "lines": [
+       9,
+       10
+      ],
+      "snippet": "capture program drop did_multiplegt\nprogram did_multiplegt, eclass",
+      "supports": [
+       "name",
+       "path"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "twowayfeweights",
+    "path": "code/twowayfeweights.ado",
+    "purpose": null,
+    "evidence": [
+     {
+      "path": "code/twowayfeweights.ado",
+      "lines": [
+       1,
+       2
+      ],
+      "snippet": "capture program drop twowayfeweights\nprogram twowayfeweights, eclass",
+      "supports": [
+       "name",
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "approx_code_files": 15,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "set seed 1",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      54,
+      54
+     ],
+     "snippet": "set seed 1",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/Enikolopov_et_al.do",
+    "lines": [
+     2,
+     2
+    ],
+    "snippet": "ssc install estout, replace",
+    "supports": [
+     "languages"
+    ]
+   }
+  ]
+ },
+ "data": [
+  {
+   "name": "NTV_Aggregate_Data.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      8,
+      8
+     ],
+     "snippet": "NTV_Aggregate_Data.dta",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "voting_cnty_clean.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "voting_cnty_clean.dta",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "wagepan.dta",
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "wagepan.dta",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/Enikolopov_et_al.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Enikolopov_et_al.do",
+      "lines": [
+       1,
+       8
+      ],
+      "snippet": "adopath",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/Gentzkow_et_al.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       1,
+       7
+      ],
+      "snippet": "adopath",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/code_unions.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       1,
+       5
+      ],
+      "snippet": "adopath",
+      "supports": [
+       "order_basis",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "inferred",
+  "run_order_notes": "Three independent applications",
+  "sample_restrictions": [
+   {
+    "description": "keep if _I_j_1995==1|_I_j_1999==1 for years 1995 and 1999",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3"
+    ],
+    "evidence": [
+     {
+      "path": "code/Enikolopov_et_al.do",
+      "lines": [
+       32,
+       32
+      ],
+      "snippet": "keep if _I_j_1995==1|_I_j_1999==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Gentzkow: 1868-1928",
+    "spec_ids": [
+     "s4",
+     "s5",
+     "s6"
+    ],
+    "evidence": [
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       44,
+       45
+      ],
+      "snippet": "keep if year>=1868",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "use wagepan.dta dataset covering 1980-1987 period",
+    "spec_ids": [
+     "s7",
+     "s8",
+     "s9"
+    ],
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       5,
+       5
+      ],
+      "snippet": "use \"<REPLICATION_ROOT>/Unions/statafiles/wagepan.dta\", clear",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [
+    "Votes_SPS_"
+   ],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      36,
+      38
+     ],
+     "snippet": "xtreg Votes_SPS_",
+     "supports": [
+      "method",
+      "outcomes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [
+    "prestout"
+   ],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      50,
+      56
+     ],
+     "snippet": "areg changeprestout",
+     "supports": [
+      "method",
+      "outcomes"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [
+    "lwage"
+   ],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      40,
+      55
+     ],
+     "snippet": "xtreg lwage",
+     "supports": [
+      "method",
+      "outcomes"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "xtreg",
+   "package": null,
+   "formula_or_call": "xtreg Votes_SPS_ Watch_probit_  _I_j_1999  if _j!=2003, fe i(tik_id) ///\ncluster (tik_id)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Enikolopov_et_al.do",
+      "lines": [
+       37,
+       38
+      ],
+      "snippet": "cluster",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      36,
+      40
+     ],
+     "snippet": "xtreg Votes_SPS_",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      37,
+      38
+     ],
+     "snippet": "xtreg Votes_SPS_ Watch_probit_  _I_j_1999  if _j!=2003, fe i(tik_id) ///\ncluster (tik_id)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg Votes_SPS_ _I_j_1999 Watch_probit_ [fweight=population1996], ///\nabsorb(tik_id) cluster (tik_id)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "tik_id"
+   ],
+   "controls_summary": null,
+   "weights": "fweight=population1996",
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Enikolopov_et_al.do",
+      "lines": [
+       43,
+       44
+      ],
+      "snippet": "cluster",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      42,
+      46
+     ],
+     "snippet": "areg Votes_SPS_",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      43,
+      44
+     ],
+     "snippet": "areg Votes_SPS_ _I_j_1999 Watch_probit_ [fweight=population1996], ///\nabsorb(tik_id) cluster (tik_id)",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      43,
+      43
+     ],
+     "snippet": "areg Votes_SPS_ _I_j_1999 Watch_probit_ [fweight=population1996], ///",
+     "supports": [
+      "weights"
+     ]
+    },
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      44,
+      44
+     ],
+     "snippet": "absorb(tik_id) cluster (tik_id)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "twowayfeweights",
+   "package": null,
+   "formula_or_call": "twowayfeweights Votes_SPS_ tik_id _I_j_1999 Watch_probit_, type(feTR) ///\ntest_random_weights(logpop)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      88,
+      91
+     ],
+     "snippet": "twowayfeweights",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      90,
+      91
+     ],
+     "snippet": "twowayfeweights Votes_SPS_ tik_id _I_j_1999 Watch_probit_, type(feTR) ///\ntest_random_weights(logpop)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg prestout i.year numdailies styr1-styr666, absorb(cnty90) cluster(cnty90)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "cnty90"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "cnty90"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       56,
+       56
+      ],
+      "snippet": "cluster",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       56,
+       56
+      ],
+      "snippet": "areg prestout i.year numdailies styr1-styr666, absorb(cnty90) cluster(cnty90)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      55,
+      59
+     ],
+     "snippet": "areg prestout",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      56,
+      56
+     ],
+     "snippet": "areg prestout i.year numdailies styr1-styr666, absorb(cnty90) cluster(cnty90)",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      56,
+      56
+     ],
+     "snippet": "areg prestout i.year numdailies styr1-styr666, absorb(cnty90) cluster(cnty90)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg changeprestout changedailies if mainsample, absorb(styr) cluster(cnty90)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "styr"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "cnty90"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       50,
+       50
+      ],
+      "snippet": "cluster",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/Gentzkow_et_al.do",
+      "lines": [
+       50,
+       50
+      ],
+      "snippet": "areg changeprestout changedailies if mainsample, absorb(styr) cluster(cnty90)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      50,
+      53
+     ],
+     "snippet": "areg changeprestout",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      50,
+      50
+     ],
+     "snippet": "areg changeprestout changedailies if mainsample, absorb(styr) cluster(cnty90)",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      50,
+      50
+     ],
+     "snippet": "areg changeprestout changedailies if mainsample, absorb(styr) cluster(cnty90)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "twowayfeweights",
+   "package": null,
+   "formula_or_call": "twowayfeweights prestout cnty90 year numdailies, type(feTR) controls(styr1-styr666)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      104,
+      106
+     ],
+     "snippet": "twowayfeweights",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      106,
+      106
+     ],
+     "snippet": "twowayfeweights prestout cnty90 year numdailies, type(feTR) controls(styr1-styr666)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "xtreg",
+   "package": null,
+   "formula_or_call": "xtreg lwage d81-d87 union, fe cluster(nr)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "nr"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       40,
+       40
+      ],
+      "snippet": "cluster",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       40,
+       40
+      ],
+      "snippet": "xtreg lwage d81-d87 union, fe cluster(nr)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      39,
+      42
+     ],
+     "snippet": "xtreg lwage",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      40,
+      40
+     ],
+     "snippet": "xtreg lwage d81-d87 union, fe cluster(nr)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg diff_lwage diff_union d82-d87, cluster(nr)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "nr"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       46,
+       46
+      ],
+      "snippet": "cluster",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       46,
+       46
+      ],
+      "snippet": "reg diff_lwage diff_union d82-d87, cluster(nr)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      45,
+      49
+     ],
+     "snippet": "reg diff_lwage",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      46,
+      46
+     ],
+     "snippet": "reg diff_lwage diff_union d82-d87, cluster(nr)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s9",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "gmm",
+   "command": "did_multiplegt",
+   "package": null,
+   "formula_or_call": "did_multiplegt lwage nr year union, placebo(3) breps(200) cluster(nr)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "bootstrap",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       55,
+       55
+      ],
+      "snippet": "breps(200) cluster(nr)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      52,
+      59
+     ],
+     "snippet": "did_multiplegt lwage",
+     "supports": [
+      "estimator",
+      "command"
+     ]
+    },
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "did_multiplegt lwage nr year union, placebo(3) breps(200) cluster(nr)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d3",
+   "spec_ids": [
+    "s9"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "3 placebos",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "twowayfeweights shows negative weights",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d3",
+   "spec_ids": [
+    "s8"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "analyzes heterogeneity by treatment direction",
+   "evidence": []
+  },
+  {
+   "id": "x4",
+   "kind": "balance",
+   "design_id": "d2",
+   "spec_ids": [
+    "s4",
+    "s5",
+    "s6"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/Gentzkow_et_al.do"
+   ],
+   "note": "not assessed",
+   "evidence": []
+  }
+ ],
+ "robustness": [
+  {
+   "type": "alt_estimator",
+   "description": "did_multiplegt vs TWFE",
+   "baseline_spec_ids": [
+    "s7",
+    "s8"
+   ],
+   "variant_spec_ids": [
+    "s9"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Alternative estimator to avoid negative weights",
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      52,
+      55
+     ],
+     "snippet": "did_multiplegt lwage nr year union, placebo(3) breps(200) cluster(nr)",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_se",
+   "description": "fweight population weighting in TWFE",
+   "baseline_spec_ids": [
+    "s1"
+   ],
+   "variant_spec_ids": [
+    "s2"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Population weighting changes coefficients",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      69,
+      70
+     ],
+     "snippet": "areg Votes_SPS_ _I_j_1999 Watch_probit_ [fweight=population1996], ///\nabsorb(tik_id) cluster (tik_id)",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "alt_functional_form",
+   "description": "betafd vs betafe functional form comparison",
+   "baseline_spec_ids": [
+    "s4"
+   ],
+   "variant_spec_ids": [
+    "s5"
+   ],
+   "relationship_status": "confirmed",
+   "note": "Level vs first-difference specifications",
+   "evidence": [
+    {
+     "path": "code/Gentzkow_et_al.do",
+     "lines": [
+      61,
+      63
+     ],
+     "snippet": "scalar diff_fe_fd=betafd-betafe",
+     "supports": [
+      "type",
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "did_multiplegt",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "did_multiplegt"
+   ],
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      55,
+      55
+     ],
+     "snippet": "did_multiplegt",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "twowayfeweights",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "twowayfeweights"
+   ],
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      90,
+      91
+     ],
+     "snippet": "twowayfeweights",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "estout",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      2,
+      2
+     ],
+     "snippet": "estout",
+     "supports": [
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/did_multiplegt.ado",
+     "lines": [
+      1016,
+      1016
+     ],
+     "snippet": "reghdfe",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Seed set to 1 for reproducibility",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "set seed 1",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "adopath to load custom .ado files",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "adopath ++",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [
+  {
+   "description": "Scripts use Dropbox hardcoded paths",
+   "evidence": [
+    {
+     "path": "code/Enikolopov_et_al.do",
+     "lines": [
+      5,
+      8
+     ],
+     "snippet": "<REPLICATION_ROOT>",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Three independent applications with adopath, no master runner script",
+   "evidence": [
+    {
+     "path": "code/code_unions.do",
+     "lines": [
+      1,
+      2
+     ],
+     "snippet": "adopath ++ \"<REPLICATION_ROOT>/Ado files\"",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": [
+   {
+    "name": "wagepan",
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       5,
+       5
+      ],
+      "snippet": "use \"<REPLICATION_ROOT>/Unions/statafiles/wagepan.dta\", clear",
+      "supports": [
+       "name"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "unions",
+    "evidence": [
+     {
+      "path": "code/code_unions.do",
+      "lines": [
+       5,
+       5
+      ],
+      "snippet": "use \"<REPLICATION_ROOT>/Unions/statafiles/wagepan.dta\", clear",
+      "supports": [
+       "name"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

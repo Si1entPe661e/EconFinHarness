@@ -1,0 +1,967 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "ml_prediction",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "ecta_2025_ecta19303",
+        "sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+        "journal": "Econometrica",
+        "year": 2025,
+        "coverage": "minimal",
+        "languages": [
+          "R"
+        ]
+      },
+      {
+        "artid": "qje_140_1_3",
+        "sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+        "journal": "QJE",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Python"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 2,
+    "specifications": 8,
+    "designs": 3,
+    "by_language": {
+      "R": 1,
+      "Python": 1
+    },
+    "by_journal": {
+      "Econometrica": 1,
+      "QJE": 1
+    },
+    "by_year": {
+      "2025": 2
+    },
+    "by_coverage": {
+      "minimal": 1,
+      "partial": 1
+    }
+  },
+  "by_variant": {
+    "unknown": 1,
+    "random_forest_regression": 1
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "random_forest_classification",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            137,
+            138
+          ],
+          "snippet": "elif model_type == 'cls':\n        rf = RandomForestClassifier()",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "variant",
+      "value": "random_forest_regression",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            115,
+            116
+          ],
+          "snippet": "if model_type == 'reg':\n        rf = RandomForestRegressor()",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "random_forest",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            265,
+            265
+          ],
+          "snippet": "fit.yz1      <- suppressWarnings(do.call(caret::train, arg))",
+          "language": "R"
+        },
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            8,
+            8
+          ],
+          "snippet": "from sklearn.ensemble import RandomForestRegressor",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            332,
+            332
+          ],
+          "snippet": "a <- felm(form1, data=dataout, weights=dataout$weight*dataout[,external_weights])",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "estimator",
+      "value": "lasso",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            265,
+            265
+          ],
+          "snippet": "fit.yz1      <- suppressWarnings(do.call(caret::train, arg))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "estimator",
+      "value": "neural_net",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            265,
+            265
+          ],
+          "snippet": "fit.yz1      <- suppressWarnings(do.call(caret::train, arg))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s7",
+          "field": "estimator",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            420,
+            420
+          ],
+          "snippet": "reg   <- lm(form, data=dataout[(dataout$h==1)| (dataout$l==1),] , weights = dataout[(dataout$h==1)| (dataout$l==1),external_weights])",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "command",
+      "value": "RandomForestClassifier",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            9,
+            9
+          ],
+          "snippet": "from sklearn.ensemble import RandomForestClassifier",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "command",
+      "value": "RandomForestRegressor",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            8,
+            8
+          ],
+          "snippet": "from sklearn.ensemble import RandomForestRegressor",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "command",
+      "value": "felm",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            332,
+            332
+          ],
+          "snippet": "a <- felm(form1, data=dataout, weights=dataout$weight*dataout[,external_weights])",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "command",
+      "value": "lm",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s7",
+          "field": "command",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            420,
+            420
+          ],
+          "snippet": "reg   <- lm(form, data=dataout[(dataout$h==1)| (dataout$l==1),] , weights = dataout[(dataout$h==1)| (dataout$l==1),external_weights])",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "command",
+      "value": "train",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            265,
+            265
+          ],
+          "snippet": "fit.yz1      <- suppressWarnings(do.call(caret::train, arg))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "se_type",
+      "value": "robust",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_produce_paper_results/levels_table_lin_a6_bootstrap.py",
+          "lines": [
+            9,
+            9
+          ],
+          "snippet": "model = sm.OLS.from_formula(outcome+' ~ '+pbvarb, data = dataset).fit(cov_type = 'HC1')",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "weights",
+      "value": "weighted",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s5",
+          "field": "weights",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            332,
+            332
+          ],
+          "snippet": "        a <- felm(form1, data=dataout, weights=dataout$weight*dataout[,external_weights]) #AS: external_weights here  ",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "diagnostic",
+      "value": "multiple_testing:observed:output_code_present",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            468,
+            468
+          ],
+          "snippet": "results_all       <- t(sapply(seq(1:nrow(results[,,1])), function(x) colMedians(t(results[x,,]))))",
+          "language": "R"
+        },
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            45,
+            46
+          ],
+          "snippet": "kf = KFold(n_splits=5)\n    df = df.sample(frac=1, random_state=50).reset_index()",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "diagnostic",
+      "value": "pretrend_test:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_produce_paper_results/dual_bootstrap_results_V3.py",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "for i in range(100):",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1,
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            59,
+            61
+          ],
+          "snippet": "sim     <- 250\nK       <- 2       # number of folds\np       <- 5       # number of groups",
+          "language": "R"
+        },
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            115,
+            116
+          ],
+          "snippet": "if model_type == 'reg':\n        rf = RandomForestRegressor()",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+          "lines": [
+            116,
+            116
+          ],
+          "snippet": "rf = RandomForestRegressor()",
+          "language": "Python"
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 6,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+          "lines": [
+            265,
+            265
+          ],
+          "snippet": "fit.yz1      <- suppressWarnings(do.call(caret::train, arg))",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "language",
+      "value": "Python",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Python": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_3",
+          "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o21",
+      "facet": "language",
+      "value": "R",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta19303",
+          "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "implementation_feature",
+      "text": "2-fold sample splitting (train 2/3, test 1/3)",
+      "record_id": "d1",
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+      "lines": [
+        59,
+        61
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "implementation_feature",
+      "text": "250 iterations with quantile aggregation of p-values and CIs",
+      "record_id": "d1",
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+      "lines": [
+        59,
+        61
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "implementation_feature",
+      "text": "ML proxies via caret::train on treatment/control separately",
+      "record_id": "d1",
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+      "lines": [
+        59,
+        61
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "implementation_feature",
+      "text": "3-iteration refinement of S via nnet",
+      "record_id": "d1",
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+      "lines": [
+        59,
+        61
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "convention",
+      "text": "Fixed effects definition: fes = group_indices(data, id_district, created_year, created_month), i.e., unique combinations of district, year, and month",
+      "record_id": null,
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code0.R",
+      "lines": [
+        50,
+        50
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "convention",
+      "text": "Weighting in regressions: felm uses dataout$weight * dataout[,external_weights], where weight = 1/(md_x*(1-md_x)) (inverse propensity weighting) and external_weights = village_population",
+      "record_id": null,
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+      "lines": [
+        324,
+        324
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "convention",
+      "text": "Results structure: 250 simulations × 4 ML methods; results stored in arrays [outcome, method, simulation], then medians across simulations reported",
+      "record_id": null,
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code1.R",
+      "lines": [
+        462,
+        462
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "sample_restriction",
+      "text": "InBaseline == 1 AND first_implementation == 1",
+      "record_id": null,
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code0.R",
+      "lines": [
+        35,
+        50
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "sample_restriction",
+      "text": "Either (slope=0 & SMSblast=0 & commtreat_arm=0) or (slope=1 & SMSblast=1 & gossip=1); complete cases on controls, treatment, outcome, affected, external_weights",
+      "record_id": null,
+      "path": "code/zenodo_10871241/replication_package/replication_package/Code/code0.R",
+      "lines": [
+        44,
+        44
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta19303",
+      "card_sha256": "f08cdaf8de0ac0d74da0e82535fa484b25de504f42396a39a0f4babd4bad6909",
+      "kind": "reading_note",
+      "text": "Core pipeline traced from code0.R (setup) and code1.R (250 iterations, 2-fold splitting, GATES/BLP/CLAN estimation, quantile aggregation of inference). 4 files read, 12 files skipped due to budget. Specifications reference valid calls but evidence snippets truncated due to length constraints.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "RandomForestRegressor with hyperparameter tuning",
+      "record_id": "d1",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        115,
+        116
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "5-fold cross-validation",
+      "record_id": "d1",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        115,
+        116
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "RandomizedSearchCV with n_iter=1000",
+      "record_id": "d1",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        115,
+        116
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "RandomForestClassifier with hyperparameter tuning",
+      "record_id": "d2",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        137,
+        138
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "5-fold cross-validation",
+      "record_id": "d2",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        137,
+        138
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "RandomizedSearchCV with n_iter=1000",
+      "record_id": "d2",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        137,
+        138
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "implementation_feature",
+      "text": "Predictions used as sort variable for audit allocation",
+      "record_id": "d2",
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        137,
+        138
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "convention",
+      "text": "HC1 robust standard errors for all regression specifications",
+      "record_id": null,
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_produce_paper_results/levels_table_lin_a6_bootstrap.py",
+      "lines": [
+        9,
+        9
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "sample_restriction",
+      "text": "EITC claimants (activity code 270 or 271)",
+      "record_id": null,
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_rf/tune_utils.py",
+      "lines": [
+        36,
+        36
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "sample_restriction",
+      "text": "study_year between 2009 and 2015",
+      "record_id": null,
+      "path": "code/dataverse_OF8XAX/redacted_replication_files_rf_scripts_data/clean_data.py",
+      "lines": [
+        57,
+        57
+      ]
+    },
+    {
+      "artid": "qje_140_1_3",
+      "card_sha256": "03816169e45005ae7764e4ce4fcf4f03c06a074a2269dc66ca5eec4eee6d255b",
+      "kind": "reading_note",
+      "text": "Python-only analysis pipeline. Main designs are ML prediction via random forests, disparity measurement via regression and probabilistic estimators, decomposition via oracle vs regression comparison, and counterfactual optimization via linear programming. 5-fold cross-validation for model training.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet variant: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "facet se_type: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "facet weights: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "2/2 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

@@ -1,0 +1,788 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "qje_139_1_2",
+ "journal": "QJE",
+ "year": 2024,
+ "doi": "10.1093/qje/qjad042",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T03:15:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/QJE/metadata/articles.csv",
+   "sha256": "8064dd0901f6f3bd3ec9089390b1b88958eda6dbba4e11911b955aeeb46b5d55"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_1_sumstats_balance_fs/NY_credit_summary_stats_fs.do",
+    "sha256": "3e6847eb74db081ccbd459298225509a875eb4fce7e687caf3a8915022650050",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      67
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_homeless.do",
+    "sha256": "491abb0094570440df94107ae98d65577c359c7e908317fa3ae46f62a4b47e94",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      36
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_labor.do",
+    "sha256": "da4e8129e850ba0320f508f81fd12f971ded0d2cf4f0cb840716c63b79825f20",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      32
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/Cook_experian_regs_iv_ols.do",
+    "sha256": "36e3d4c938cc85caf8179f6a1bcea09081f4921af085fab497aab98b6bfad880",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      72
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+    "sha256": "14b32cc03b949551117d4226da782fcd191466783042619af03d210eb57f53b7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      596
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+    "sha256": "959607ca3c1a458194e42fd35974ad269338ea49c3f4b83e084b830fdf20dc30",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_6_format_output/00_Prepare_results_tables.do",
+    "sha256": "0484dd620a55db6a8aefe8aefa972fea650049ea7305117dfa8882146884d294",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      80
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/dataverse_Y9TZQI/0_Code_5_other_analysis/",
+    "reason": "out_of_budget",
+    "note": "16 files; main specs traced"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Sampled 7 of 78 code files. Traced IV, OLS, reduced form, event study, and DID specifications across NYC and Cook County. Main identification: judge leniency as IV for eviction effects."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+   "code/dataverse_Y9TZQI/0_Code_6_format_output/00_Prepare_results_tables.do"
+  ],
+  "directory_layout": "By stage: 0_Code_1 (summary/balance), 0_Code_2 (event studies), 0_Code_3 (IV/OLS), 0_Code_4 (DID), 0_Code_6 (tables)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 78,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      3,
+      4
+     ],
+     "snippet": "global fe \"courtq\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_Y9TZQI/0_Code_1_sumstats_balance_fs/NY_credit_summary_stats_fs.do"
+    ],
+    "after": [],
+    "order_basis": "documentation",
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_1_sumstats_balance_fs/NY_credit_summary_stats_fs.do",
+      "lines": [
+       2,
+       3
+      ],
+      "snippet": "Fixed Effects",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+      "lines": [
+       1,
+       3
+      ],
+      "snippet": "Set",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_labor.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "inferred",
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_labor.do",
+      "lines": [
+       1,
+       3
+      ],
+      "snippet": "keep",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "inferred",
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+      "lines": [
+       8,
+       8
+      ],
+      "snippet": "cap",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "inferred",
+  "run_order_notes": "First stage and summary stats (p1), main IV/OLS (p2), event studies (p3), DID (p4) in parallel, then table formatting",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      41,
+      43
+     ],
+     "snippet": "ivreghdfe",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+     "lines": [
+      38,
+      39
+     ],
+     "snippet": "areg",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "role": "unknown",
+   "method": "event_study",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_labor.do",
+     "lines": [
+      9,
+      10
+     ],
+     "snippet": "reg",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe `out' evictionorder $controls if samp==1 , absorb($fe) absorb($clusvar)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+      "lines": [
+       37,
+       37
+      ],
+      "snippet": "reghdfe `out' evictionorder $controls if",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "OLS baseline",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      37,
+      37
+     ],
+     "snippet": "reghdfe `out' evictionorder $controls if samp==1",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": "ivreghdfe",
+   "formula_or_call": "ivreghdfe `out' $controls (evictionorder =stringency) if samp==1, absorb($fe) absorb($clusvar)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Multiple outcomes",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+      "lines": [
+       42,
+       42
+      ],
+      "snippet": "ivreghdfe `out' $controls (evictionorder",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main IV",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "ivreghdfe `out' $controls (evictionorder =stringency)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe `out' stringency $controls if samp==1 , absorb($fe) absorb($clusvar)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+      "lines": [
+       47,
+       47
+      ],
+      "snippet": "reghdfe `out' stringency $controls",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Reduced form",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      47,
+      47
+     ],
+     "snippet": "reghdfe `out' stringency $controls if samp==1",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "package",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivregress",
+   "package": null,
+   "formula_or_call": "ivregress 2sls `var'_`rng' i.$fe $controls (evicted=$instrument) if `pop'==`popval' & full_samp_inq_`rng'==1, r cluster($cluster_iv)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Cook County",
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/Cook_experian_regs_iv_ols.do",
+      "lines": [
+       67,
+       67
+      ],
+      "snippet": "ivregress 2sls `var'_`rng' i.$fe",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Cook IV",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/Cook_experian_regs_iv_ols.do",
+     "lines": [
+      67,
+      67
+     ],
+     "snippet": "ivregress 2sls `var'_`rng' i.$fe $controls",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "did_twfe",
+   "command": "areg",
+   "package": null,
+   "formula_or_call": "areg  `var' evicted qdum1-qdum12 qdum17 qdum18_21 qdum22-qdum41 evictXq1-evictXq12  evictXq17 evictXq18_21 evictXq22-evictXq41  `controls' i.lehd_yq, a(pik) cluster(pik) robust",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "pik"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "pik"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+      "lines": [
+       38,
+       38
+      ],
+      "snippet": "areg  `var' evicted qdum1-qdum12",
+      "supports": [
+       "type"
+      ]
+     },
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+      "lines": [
+       38,
+       38
+      ],
+      "snippet": "\t\t\t\t\t\tareg  `var' evicted qdum1-qdum12 qdum17 qdum18_21 qdum22-qdum41 evictXq1-evictXq12  evictXq17 evictXq18_21 evictXq22-evictXq41  `controls' i.lehd_yq, a(pik) cluster(pik) robust",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "DID",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+     "lines": [
+      38,
+      38
+     ],
+     "snippet": "areg  `var' evicted qdum1-qdum12 qdum17 qdum18_21",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+     "lines": [
+      38,
+      38
+     ],
+     "snippet": "\t\t\t\t\t\tareg  `var' evicted qdum1-qdum12 qdum17 qdum18_21 qdum22-qdum41 evictXq1-evictXq12  evictXq17 evictXq18_21 evictXq22-evictXq41  `controls' i.lehd_yq, a(pik) cluster(pik) robust",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d3",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `var' evictionorder qdum2-qdum41 evictXq2-evictXq41 i.courttime i.courtq",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "iid",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_labor.do",
+      "lines": [
+       9,
+       9
+      ],
+      "snippet": "reg `var' evictionorder qdum2-qdum41",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study",
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_2_regressions_eventstudy/NY_eventstudy_labor.do",
+     "lines": [
+      9,
+      9
+     ],
+     "snippet": "reg `var' evictionorder qdum2-qdum41 evictXq2",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s2"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "First stage found",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      37,
+      37
+     ],
+     "snippet": "reghdfe",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreghdfe",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_Y9TZQI/0_Code_3_regressions_ivols/NY_main_regs_iv_ols.do",
+     "lines": [
+      42,
+      42
+     ],
+     "snippet": "ivreghdfe",
+     "supports": [
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did",
+   "event_study",
+   "iv"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,674 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "shift_share",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "qje_140_1_10",
+        "sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+        "journal": "QJE",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_89_1_6",
+        "sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+        "journal": "ReStud",
+        "year": 2022,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "rfs_2026_rfs_hhaf080",
+        "sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+        "journal": "RFS",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 3,
+    "specifications": 8,
+    "designs": 3,
+    "by_language": {
+      "Stata": 3,
+      "R": 1
+    },
+    "by_journal": {
+      "QJE": 1,
+      "ReStud": 1,
+      "RFS": 1
+    },
+    "by_year": {
+      "2025": 1,
+      "2022": 1,
+      "2026": 1
+    },
+    "by_coverage": {
+      "partial": 3
+    }
+  },
+  "by_variant": {
+    "unknown": 3
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "estimator",
+      "value": "2sls",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 1,
+      "specs": 4,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "estimator",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "command",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "reghdfe",
+      "papers": 1,
+      "specs": 4,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "command",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "command",
+      "value": "ssiv_null_imposed",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            59,
+            60
+          ],
+          "snippet": "if (`r'!=7) ssiv_null_imposed `iff', range(-4 4) vce(cluster(sic3))",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "package",
+      "value": "ivreg2",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "qui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 2,
+      "specs": 8,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "se.type",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code) ",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "\t\tqui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus) partial(`controls`r'')",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "cluster_dimensions",
+      "value": "1",
+      "papers": 2,
+      "specs": 8,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "se.cluster_level",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code) ",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "\t\tqui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus) partial(`controls`r'')",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "fixed_effects_count",
+      "value": "3+",
+      "papers": 1,
+      "specs": 4,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "fixed_effects",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "weights",
+      "value": "weighted",
+      "papers": 2,
+      "specs": 4,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "weights",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code) ",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "weights",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "\t\tqui ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus) partial(`controls`r'')",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "diagnostic",
+      "value": "first_stage:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 1,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "d3",
+          "field": "classification_basis",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            75,
+            85
+          ],
+          "snippet": "bartik_standardized",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Transformation.do",
+          "lines": [
+            27,
+            28
+          ],
+          "snippet": "ssaggregate `outcomes' z x x90_ x00_ zAUS-zNZL [aw=wei], ///",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/dataverse_1E0GUZ/replication package_codes/24_table_8a.do",
+          "lines": [
+            315,
+            315
+          ],
+          "snippet": "eststo second: ivreghdfe lloan (p2pqtrcapturing=scoredeltapost) post volloanv $control_0  if deltaqdummy, cl(siren) a(qdate siren)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 2,
+      "specs": 8,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s7",
+          "field": "resolution_status",
+          "path": "code/dataverse_XABPWK/Replication package/muni_analysis.do",
+          "lines": [
+            192,
+            192
+          ],
+          "snippet": "reghdfe `x' `repaflexible1' [aw=wei] ,a(year#laani50 $baseline2 year#city  year#town code)  vce(cluster code)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table4_C1_C2_C4.do",
+          "lines": [
+            41,
+            41
+          ],
+          "snippet": "ivreg2 `v' (x=z) `controls`r'' [aw=wei], cluster(clus)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "language",
+      "value": "R",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_89_1_6",
+          "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "qje_140_1_10",
+      "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+      "kind": "reading_note",
+      "text": "Focused on pipeline structure and key DID/DDD/shift-share specifications across industry, municipality, and individual levels.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_89_1_6",
+      "card_sha256": "79a81680604403c753f3edc257d0b328c07058b32378a49d8d3a66dd0d67fc07",
+      "kind": "reading_note",
+      "text": "ADH main application. Traced master entry, data build, Transformation (equivalence via ssaggregate), Table4_C1_C2_C4 (main IV). 11 control variants, 4 outcomes.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf080",
+      "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+      "kind": "implementation_feature",
+      "text": "Shift-share instrument",
+      "record_id": "d2",
+      "path": "code/dataverse_1E0GUZ/replication package_codes/24_table_8a.do",
+      "lines": [
+        315,
+        315
+      ]
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf080",
+      "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+      "kind": "implementation_feature",
+      "text": "Secured loan ratio exposure",
+      "record_id": "d2",
+      "path": "code/dataverse_1E0GUZ/replication package_codes/24_table_8a.do",
+      "lines": [
+        315,
+        315
+      ]
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf080",
+      "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+      "kind": "implementation_feature",
+      "text": "Post-entry timing shift",
+      "record_id": "d2",
+      "path": "code/dataverse_1E0GUZ/replication package_codes/24_table_8a.do",
+      "lines": [
+        315,
+        315
+      ]
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf080",
+      "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+      "kind": "reading_note",
+      "text": "Focused on entry point (master script), main estimation stages, and key specification tables (4, 6, 8). Propensity score matching stage (scripts 3-6) and sensitivity robustness tables (8b, Internet Appendix) skipped due to budget constraints. Shift-share instrument (scoredeltapost) identified but full construction details not fully traced.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet package: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "facet fixed_effects_count: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "2/3 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only",
+    "no design variants recorded; variant-conditional rules cannot be derived from this set"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

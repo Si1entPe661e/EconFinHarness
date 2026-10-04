@@ -1,0 +1,745 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "aer_111_4_3",
+ "journal": "AER",
+ "year": 2021,
+ "doi": "10.1257/aer.20191136",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/AER/metadata/articles.csv",
+   "sha256": "551e68842fb4a9efc3f237b16ad2dc1f3a79d92a9d04c6cbc76dba0526f35d8a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/Codes/Bunching-estimation/02_bunching.do",
+    "sha256": "dd5a129c678df774f9c13c3763de1065b8ca2ef08d07cc24df20e093cf711149",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Bunching-estimation/_master_bunching.do",
+    "sha256": "2cc5b8330f21b23d5a5754fadc3f79e44b85925abc516360da622108dfbe6d4d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      14
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Data-construction/03_main_data.do",
+    "sha256": "cadec3eedcc6a79657fba0983a1733c8b7302f45923b76148ab80a40843c7d77",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Data-construction/_master_data.do",
+    "sha256": "39ae7d0d263d601ee4b124d41564e95d4903647e08895b66b9b1e43e3dacc190",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      35
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Results/04_bunching_regressions.do",
+    "sha256": "dddd1d220f3882a9994b83887d000f644c281757cace8d87b4d137d17f50fae1",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Results/08_structural.do",
+    "sha256": "1b964b35732c1e558d1182808e43313007b77bd14888f6c6b26dda9633b1b12a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Results/09_policy_simulation.do",
+    "sha256": "db6a6aa33ef980b8150ffcaa053bfe541777f6ab2ce985c41720d833b9323cd2",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/Codes/Results/_master_results.do",
+    "sha256": "1482bd410103b21234f98fdb2bcacc3c8db4f02b979ae7eda684ec08702a1abd",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      44
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Examined data construction pipeline, bunching estimation at 644 discontinuities, reduced-form regressions, structural reference-dependence model, and policy simulation."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/Codes/Data-construction/_master_data.do",
+   "code/Codes/Bunching-estimation/_master_bunching.do",
+   "code/Codes/Results/_master_results.do"
+  ],
+  "directory_layout": "Organized by pipeline stage: data construction, bunching estimation, results production. 46 Stata .do files total.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 46,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/Codes/Data-construction/03_main_data.do",
+     "lines": [
+      20,
+      20
+     ],
+     "snippet": "set seed 123456789",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "RTZN",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/Codes/Data-construction/03_main_data.do",
+     "lines": [
+      24,
+      24
+     ],
+     "snippet": "use \"$datafolder\\RTZN.dta\"",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/Codes/Data-construction/_master_data.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Codes/Data-construction/_master_data.do",
+      "lines": [
+       7,
+       8
+      ],
+      "snippet": "do 01_pension_rules.do",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/Codes/Bunching-estimation/_master_bunching.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Codes/Bunching-estimation/_master_bunching.do",
+      "lines": [
+       11,
+       11
+      ],
+      "snippet": "do 02_bunching.do",
+      "supports": [
+       "scripts",
+       "after"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "tables",
+    "scripts": [
+     "code/Codes/Results/_master_results.do"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/Codes/Results/_master_results.do",
+      "lines": [
+       8,
+       8
+      ],
+      "snippet": "do 01_bunching_graphs.do",
+      "supports": [
+       "scripts",
+       "after"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Sequential execution via three master scripts.",
+  "sample_restrictions": [
+   {
+    "description": "Discontinuity-level sample with incl==1 filter",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4",
+     "s5"
+    ],
+    "evidence": [
+     {
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+       39,
+       39
+      ],
+      "snippet": "if incl==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "bunching",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/Codes/Bunching-estimation/02_bunching.do",
+     "lines": [
+      1,
+      11
+     ],
+     "snippet": "THIS CODE RUNS THE BUNCHING ESTIMATION AT ALL DISCONTINUITIES",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aweight=weight",
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+       39,
+       39
+      ],
+      "snippet": "reg",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      39,
+      39
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      39,
+      39
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra if incl==1 [aweight=weight], noc",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aweight=weight",
+   "se": {
+    "type": "iid",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+       49,
+       49
+      ],
+      "snippet": "reg",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      49,
+      49
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra if incl==1 [aweight=weight], noc",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      49,
+      49
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra if incl==1 [aweight=weight], noc",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4 i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [
+    {
+     "symbol": "controls_ind",
+     "value": "schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem",
+     "evidence": [
+      {
+       "path": "code/Codes/Results/04_bunching_regressions.do",
+       "lines": [
+        35,
+        35
+       ],
+       "snippet": "global controls_ind \"schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem\"",
+       "supports": [
+        "value",
+        "symbol"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "controls_ind"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aweight=weight",
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+       58,
+       58
+      ],
+      "snippet": "reg",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4 i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "unresolved_symbols"
+     ]
+    },
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      58,
+      58
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4 i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4#i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [
+    {
+     "symbol": "controls_ind",
+     "value": "schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem",
+     "evidence": [
+      {
+       "path": "code/Codes/Results/04_bunching_regressions.do",
+       "lines": [
+        35,
+        35
+       ],
+       "snippet": "global controls_ind \"schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem\"",
+       "supports": [
+        "value",
+        "symbol"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "controls_ind"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aweight=weight",
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+       67,
+       67
+      ],
+      "snippet": "reg",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      67,
+      67
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4#i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "unresolved_symbols"
+     ]
+    },
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      67,
+      67
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4#i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} ${controls_occ} i.leat_el4#i.gbjavs if incl==1 & gbjavs>=1937 [aweight=weight], noc vce(r)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "bindings": [
+    {
+     "symbol": "controls_ind",
+     "value": "schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem",
+     "evidence": [
+      {
+       "path": "code/Codes/Results/04_bunching_regressions.do",
+       "lines": [
+        35,
+        35
+       ],
+       "snippet": "global controls_ind \"schooly2 lifeearn llinc2 gevs married east careery sicky kidsy jeagem\"",
+       "supports": [
+        "value",
+        "symbol"
+       ]
+      }
+     ]
+    },
+    {
+     "symbol": "controls_occ",
+     "value": "mean_firmsize_index2 mean_union mean_tenure mean_unlimit mean_union_active mean_severance_d mean_term_reason_d3",
+     "evidence": [
+      {
+       "path": "code/Codes/Results/04_bunching_regressions.do",
+       "lines": [
+        36,
+        36
+       ],
+       "snippet": "global controls_occ \"mean_firmsize_index2 mean_union mean_tenure mean_unlimit mean_union_active mean_severance_d mean_term_reason_d3\"",
+       "supports": [
+        "value",
+        "symbol"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [
+    "controls_ind",
+    "controls_occ"
+   ],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": "aweight=weight",
+   "se": {
+    "type": "robust",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+       76,
+       76
+      ],
+      "snippet": "reg",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "",
+   "evidence": [
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} ${controls_occ} i.leat_el4#i.gbjavs if incl==1 & gbjavs>=1937 [aweight=weight], noc vce(r)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator",
+      "unresolved_symbols"
+     ]
+    },
+    {
+     "path": "code/Codes/Results/04_bunching_regressions.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} ${controls_occ} i.leat_el4#i.gbjavs if incl==1 & gbjavs>=1937 [aweight=weight], noc vce(r)",
+     "supports": [
+      "weights"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "bunching"
+  ],
+  "fields": []
+ }
+}

@@ -1,0 +1,873 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "bunching",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "aer_111_4_3",
+        "sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+        "journal": "AER",
+        "year": 2021,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "ecta_2025_ecta22303",
+        "sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+        "journal": "Econometrica",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "R",
+          "MATLAB",
+          "C",
+          "Shell"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag037",
+        "sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R",
+          "MATLAB"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 3,
+    "specifications": 8,
+    "designs": 3,
+    "by_language": {
+      "Stata": 2,
+      "R": 2,
+      "MATLAB": 2,
+      "C": 1,
+      "Shell": 1
+    },
+    "by_journal": {
+      "AER": 1,
+      "Econometrica": 1,
+      "ReStud": 1
+    },
+    "by_year": {
+      "2021": 1,
+      "2025": 1,
+      "2026": 1
+    },
+    "by_coverage": {
+      "partial": 3
+    }
+  },
+  "by_variant": {
+    "unknown": 3
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 2,
+      "specs": 7,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            39,
+            39
+          ],
+          "snippet": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+          "lines": [
+            58,
+            58
+          ],
+          "snippet": "reg in280290 after2010, r",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "estimator",
+      "value": "other:bunching_polynomial_counterfactual",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+          "lines": [
+            86,
+            86
+          ],
+          "snippet": "estimates_25 <- get_bunching(cutEst = 25000,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "command",
+      "value": "reg",
+      "papers": 2,
+      "specs": 7,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            39,
+            39
+          ],
+          "snippet": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+          "lines": [
+            58,
+            58
+          ],
+          "snippet": "reg in280290 after2010, r",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "get_bunching",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+          "lines": [
+            86,
+            86
+          ],
+          "snippet": "estimates_25 <- get_bunching(cutEst = 25000,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "package",
+      "value": "bunching",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 2,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+          "lines": [
+            10,
+            10
+          ],
+          "snippet": "library(bunching)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "se_type",
+      "value": "robust",
+      "papers": 2,
+      "specs": 6,
+      "denominator_papers": 3,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            39,
+            39
+          ],
+          "snippet": "reg",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+          "lines": [
+            58,
+            58
+          ],
+          "snippet": "reg in280290 after2010, r",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "se_type",
+      "value": "iid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 3,
+      "unknown_papers": 1,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s2",
+          "field": "se.type",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            49,
+            49
+          ],
+          "snippet": "reg",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "weights",
+      "value": "weighted",
+      "papers": 1,
+      "specs": 5,
+      "denominator_papers": 3,
+      "unknown_papers": 2,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s1",
+          "field": "weights",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            39,
+            39
+          ],
+          "snippet": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "diagnostic",
+      "value": "bandwidth_selection:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "diagnostic",
+      "value": "density_test:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "diagnostic",
+      "value": "polynomial_order:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/Codes/Bunching-estimation/02_bunching.do",
+          "lines": [
+            1,
+            11
+          ],
+          "snippet": "THIS CODE RUNS THE BUNCHING ESTIMATION AT ALL DISCONTINUITIES",
+          "language": "Stata"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+          "lines": [
+            140,
+            154
+          ],
+          "snippet": "Implements traditional bunching estimation and generates related figures\nsource(file = \"./scripts/estimate_notch_updated.R\", echo = TRUE)",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+          "lines": [
+            56,
+            59
+          ],
+          "snippet": "reg in280290 after2010, r",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "role_known",
+      "value": "known",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 2,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "d1",
+          "field": "role",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+          "lines": [
+            140,
+            154
+          ],
+          "snippet": "Implements traditional bunching estimation and generates related figures\nsource(file = \"./scripts/estimate_notch_updated.R\", echo = TRUE)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 3,
+      "specs": 5,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "Stata": 2,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            39,
+            39
+          ],
+          "snippet": "reg excess_age lkink d_era d_nra d_sra if incl==1 [aweight=weight], noc vce(r)",
+          "language": "Stata"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+          "lines": [
+            86,
+            86
+          ],
+          "snippet": "estimates_25 <- get_bunching(cutEst = 25000,",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+          "lines": [
+            58,
+            58
+          ],
+          "snippet": "reg in280290 after2010, r",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/Codes/Results/04_bunching_regressions.do",
+          "lines": [
+            58,
+            58
+          ],
+          "snippet": "reg excess_age lkink d_era d_nra d_sra d_era_nra d_nra_sra ${controls_ind} i.leat_el4 i.gbjavs if incl==1 [aweight=weight], noc vce(r)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.667,
+      "by_language": {
+        "MATLAB": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "language",
+      "value": "R",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.667,
+      "by_language": {
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_4_3",
+          "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag037",
+          "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "language",
+      "value": "C",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "C": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "language",
+      "value": "Shell",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 3,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Shell": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "aer_111_4_3",
+      "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+      "kind": "sample_restriction",
+      "text": "Discontinuity-level sample with incl==1 filter",
+      "record_id": null,
+      "path": "code/Codes/Results/04_bunching_regressions.do",
+      "lines": [
+        39,
+        39
+      ]
+    },
+    {
+      "artid": "aer_111_4_3",
+      "card_sha256": "9b23cbbd13f82bfded92a5a848d752640241e27a82d17cf55eed3bbfccc9e5f4",
+      "kind": "reading_note",
+      "text": "Examined data construction pipeline, bunching estimation at 644 discontinuities, reduced-form regressions, structural reference-dependence model, and policy simulation.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "convention",
+      "text": "Relative file paths throughout (./data/, ./figures/, ./tables/, ./scripts/); working directory set to analysis - Replication/",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+      "lines": [
+        42,
+        42
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "sample_restriction",
+      "text": "Loan amount must be positive (Phys_Amount_Disbursed > 0)",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+      "lines": [
+        28,
+        28
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "sample_restriction",
+      "text": "Must have verified loss amount (non-missing Current_Verified_Loss)",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+      "lines": [
+        31,
+        31
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "reading_note",
+      "text": "Focused on pipeline architecture (Master.R), bunching estimation calls and thresholds, DIB specification, moral hazard DID model, and structural model initialization. Skipped robustness checks, heterogeneity analysis, and complete structural model details due to budget constraints. Renv and stargazer packages are vendored dependencies.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag037",
+      "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+      "kind": "convention",
+      "text": "All reg specifications use robust standard errors",
+      "record_id": null,
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/2_001_main_ussc.do",
+      "lines": [
+        58,
+        58
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag037",
+      "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+      "kind": "sample_restriction",
+      "text": "Keep if sources==1 and key variables non-missing",
+      "record_id": null,
+      "path": "code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/9_001_ussc_setup.do",
+      "lines": [
+        367,
+        367
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag037",
+      "card_sha256": "e2811a0c479d6d326e68097ac64636aa774ba5375686d38b8525b6733d23e029",
+      "kind": "reading_note",
+      "text": "Main pipeline and three analysis branches traced. Core specifications extracted from bunching, missing mass, and heterogeneity analyses.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet package: unknown in 2/3 papers; shares are computed over the 1 known papers only",
+    "facet weights: unknown in 2/3 papers; shares are computed over the 1 known papers only",
+    "facet role_known: unknown in 2/3 papers; shares are computed over the 1 known papers only",
+    "3/3 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only",
+    "no design variants recorded; variant-conditional rules cannot be derived from this set"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

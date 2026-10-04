@@ -1,0 +1,1293 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_2026_restud_rdag011",
+  "journal": "ReStud",
+  "year": 2026,
+  "doi": "10.1093/restud/rdag011",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_2026_restud_rdag011.pdf",
+    "pdf_sha256": "5f33bf449b62ad54323d60ec7e866302a13946e94e9c8bb6e0ac8accaa6a20cf",
+    "text_path": "harness_build/papers/text/restud_2026_restud_rdag011.txt",
+    "text_sha256": "c13eaf9c6688fc979116f9d6e780fe4b6291d87fd008b38fd565cc8edc5d056b",
+    "pages": 32
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:34:27Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/restud_2026_restud_rdag011.json",
+    "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796"
+  },
+  "methods": [
+    "did",
+    "event_study",
+    "synthetic_control",
+    "other:ppml"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "1. Introduction (with related literature)",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "data",
+      "title": "2. Data on RMB payments and swap lines",
+      "pages": [
+        5,
+        9
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "results",
+      "title": "3. The impact of swap lines on RMB payments (3.1 evolution, 3.2 specification, 3.3 estimates)",
+      "pages": [
+        9,
+        16
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "model",
+      "title": "4. A model of currency choices",
+      "pages": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "mechanisms",
+      "title": "5. Evidence on four mechanisms in the model",
+      "pages": [
+        23,
+        29
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "conclusion",
+      "title": "6. Conclusion, acknowledgments, data availability",
+      "pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        30,
+        32
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named",
+        "in_main_text"
+      ],
+      "statement": "The baseline is described as a panel linear probability regression with country and time fixed effects, framed explicitly as a difference-in-differences with a staggered, absorbing, binary treatment; the coefficient of interest is stated as an association at the extensive margin.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.2, equation (3.1)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "a difference-in-differences model with a staggered, absorbing, binary treatment"
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed",
+        "in_main_text"
+      ],
+      "statement": "Causal interpretation is tied to a conditional independence condition (similar trends absent treatment, conditional on controls). The authors name the key confound (rising integration with China) and say none of their remedies is watertight, so results are to be read as associations.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "none of these are watertight identification strategies"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "in_main_text"
+      ],
+      "statement": "Anecdotal argument that the timing of agreements was driven by political rather than economic forces is offered as support for quasi-random timing, alongside a map showing no obvious fundamentals pattern.",
+      "pages": [
+        5,
+        11
+      ],
+      "locator": "Section 2 (Figure 1b discussion); Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "in_main_text"
+      ],
+      "statement": "Cross-border spillovers are flagged as a SUTVA violation; the authors note such spillovers would reject the null but violate stable unit treatment value, and defer a spillover model to an appendix.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 3.2, end of Covariates",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "note": "Retained after the 2026-09-09 outcome-claim sweep: the clause is the authors' hypothetical about what a SUTVA violation would imply, not a result they report."
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "in_main_text"
+      ],
+      "statement": "The estimator choice is motivated by the heterogeneous-treatment-effect bias literature: the imputation estimator of Borusyak et al. is used, with effects averaged by cohort, and two-way FE OLS kept as a comparison column.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section 3.2; footnote 16",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "in_footnote"
+      ],
+      "statement": "A footnote explains why TWFE and imputation deliver similar results in this setting: few treated units and a large never-treated control group limit forbidden comparisons.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Footnote 16",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "matching_or_linkage_described",
+        "in_main_text"
+      ],
+      "statement": "Two data sources are described: hand-collected swap-line agreements compiled from PBoC news releases and validated against counterparty communications, and SWIFT monthly cross-border message values by currency and message type. Formal definitions are deferred to Appendix B.",
+      "pages": [
+        5,
+        6
+      ],
+      "locator": "Section 2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated",
+        "sample_period_stated",
+        "in_main_text"
+      ],
+      "statement": "Unit is country by month in a balanced panel over a stated eight-year window; within-country messages are excluded and country pairs are aggregated because no bank or client identifiers are available.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section 2, SWIFT data",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "in_main_text"
+      ],
+      "statement": "Sample selection is justified step by step: financial hubs consolidated or dropped to avoid double counting of routed payments, a sanctioned country dropped, developed economies excluded by a PPP income threshold, pre-sample treated countries, tiny populations and countries with missing controls excluded to keep a balanced panel.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section 2, Sample selection; footnote 12",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "in_main_text"
+      ],
+      "statement": "Regression tables report the number of treated countries, control countries and time periods separately in each column rather than a single N.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Tables 2, 3, 5, 6, 7",
+      "basis": "inferred",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "restricted_data_used",
+        "in_main_text"
+      ],
+      "statement": "SWIFT microdata are proprietary; the acknowledgments state they are published with SWIFT's permission and carry a disclaimer that SWIFT statistics are not complete market statistics.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Acknowledgments",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "in_main_text"
+      ],
+      "statement": "A table lists every treated country with a check mark for inclusion in the baseline sample and cross-references the table column that relaxes the income filter, making the sample membership transparent.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 1 and notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "in_main_text"
+      ],
+      "statement": "Treatment is an absorbing indicator equal to one from the month of first signing; lapsed agreements are kept as treated on the argument that renewal potential preserves the insurance value.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section 2, The PBoC swap lines",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "in_main_text"
+      ],
+      "statement": "Outcomes are defined in stages: an extensive-margin indicator for any RMB payment in a month, then the RMB share of payments scaled in percentage points, then log(1+value) and raw values for intensive-margin models; trade-finance message types are analysed separately.",
+      "pages": [
+        8,
+        14
+      ],
+      "locator": "Section 2 (p. 8); Table 3 header",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs",
+        "measurement_error_discussed",
+        "in_footnote"
+      ],
+      "statement": "The log(1+x) transformation is justified as handling zeros and outliers, but a footnote acknowledges the Chen and Roth critique that it is not scale invariant, and a Poisson model is added; interpretation of Poisson coefficients follows Chen and Roth.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 3.3; footnotes 18 and 19",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed",
+        "in_footnote"
+      ],
+      "statement": "A footnote documents a data censoring rule (SWIFT reports zero for country pairs with very few messages) and explains how this can create zeros that are either accurate or masked.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Footnote 11",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "in_main_text"
+      ],
+      "statement": "Controls are grouped into three named blocks mapped to three confounds (trade with China, Chinese policy packages, regional trends); the neighbour-use control is defined by a distance rule with a formula in a footnote and a remark that alternative thresholds give similar results.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section 3.2, Covariates; footnote 15",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "in_main_text"
+      ],
+      "statement": "A proxy for RMB borrowing costs is constructed as synthetic borrowing via FX spot plus swap, taking the minimum over four routes; the authors state the measurement is a lower bound and that the proxy is banks' funding cost rather than firms' trade finance cost.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section 5.1; footnotes 29 and 30",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index",
+        "in_main_text"
+      ],
+      "statement": "Heterogeneity splits use constructed country measures: intermediate import share from BEC classification and an export-weighted working-capital reliance index built from ISIC industries matched to Compustat inventory-to-sales ratios, following Manova et al.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section 5.3; footnote 31",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "controls_progressive_columns",
+        "baseline_then_variants",
+        "in_main_text"
+      ],
+      "statement": "The main table has columns adding control blocks one at a time, then variant columns (OLS, sent vs received, anticipation shift, outlier exclusion, relaxed sample); rows list which FE and control blocks are on and a Method row names the estimator.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes",
+        "in_main_text"
+      ],
+      "statement": "Every regression table's note states that standard errors are clustered by country and gives the star thresholds; the notes also restate the outcome, treatment, sample period and column-by-column changes.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Notes to Tables 2 to 7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "in_main_text"
+      ],
+      "statement": "The intensive-margin table varies the outcome transformation across column groups (share, log(1+x), level) and pairs each with imputation, synthetic DiD or PPML estimators, with and without controls.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "specification_reporting",
+      "tags": [
+        "other:no_r2_reported",
+        "other:no_mean_dependent_reported"
+      ],
+      "statement": "Regression tables do not report R-squared or the mean of the dependent variable; descriptive levels are instead conveyed through figures and an appendix summary table.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Tables 2 to 7",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level",
+        "no_justification_found",
+        "in_main_text"
+      ],
+      "statement": "Standard errors are clustered at the country level, which coincides with the treatment assignment unit, but the text gives no explicit justification for that choice; bootstrapped SEs are reported for synthetic DiD.",
+      "pages": [
+        11,
+        14
+      ],
+      "locator": "Section 3.2; Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": [
+        "other:few_treated_units_noted",
+        "in_main_text"
+      ],
+      "statement": "The small number of treated units is acknowledged and motivates synthetic DiD as a method suited to few treated units, and the tiny cross-section in the crisis analysis is again cited as a reason to repeat with SDID.",
+      "pages": [
+        15,
+        25
+      ],
+      "locator": "Section 3.3; Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "pre_trends_test",
+        "in_main_text"
+      ],
+      "statement": "Pre-trends are examined in three ways: raw event-time means and medians for treated versus never-treated countries, imputation-based event-study plots with confidence bands, and the formal Borusyak et al. pre-trend test with the rejection horizon reported.",
+      "pages": [
+        9,
+        15
+      ],
+      "locator": "Figure 4; Figure 5; Section 3.3",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_appendix"
+      ],
+      "statement": "The short pre-treatment uptick is attributed to one outlier country; a figure excluding it is placed in the appendix, and anticipation is discussed as a plausible explanation given public negotiations.",
+      "pages": [
+        9,
+        12
+      ],
+      "locator": "Section 3.1; Figure A4; Section 3.3",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "pre_trends_test",
+        "in_main_text"
+      ],
+      "statement": "For the crisis-episode DiD, parallel pre-trends are asserted both visually (fitted linear trend lines over the pre-period in the figure) and via the formal test.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Figure 7; Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "No balance table is presented; only a summary statistics table for the baseline variables is referenced in the appendix.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 2 end; Appendix Table A1",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "alt_specification",
+        "alt_estimator",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "Robustness is folded into the main tables under a labelled 'Robustness' column group rather than a separate section: anticipation shift of treatment timing, outlier exclusion, relaxed income filter, and TWFE versus imputation.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 2, columns 5 and 8 to 10",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_main_text"
+      ],
+      "statement": "Estimator robustness is shown by re-running with synthetic DiD (motivated as reweighting to match pre-trends) and PPML, with a footnote explaining why SDID is not applied to the binary outcome.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 3.3; footnote 17",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Inclusion of the outlier country is treated as a robustness check reported in an appendix table, with the direction of the change described in text.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 3.3; Appendix Table A5",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "The borrowing-cost table runs alternative outcome definition (spread over Chinese rate), alternative tenor, OLS comparison, and an emerging-markets subsample; the OLS discrepancy is explained by the absence of a never-treated group.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 4; Section 5.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "For the crisis DiD, the event date is shifted back a quarter to address possible contamination of the pre-period, and each specification is repeated with SDID.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Table 5; Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Additional checks placed in Appendix C are summarised in text as a numbered list: non-Chinese counterparties, Belt and Road membership, no effect on trade with China, and neighbour spillovers.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 3.3, Additional results",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated",
+        "in_main_text"
+      ],
+      "statement": "Heterogeneity is model-driven: samples are split at the median of three country characteristics derived from the theory, treatment effects are averaged by group, and a difference-in-coefficients row with its SE is reported.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section 5.3; Table 6 columns 4 to 9",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "in_main_text"
+      ],
+      "statement": "Payments sent versus received are estimated separately and mapped to imports versus exports, with the asymmetry linked to a second-round effect in the model.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Table 2 columns 6 and 7",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided",
+        "intermediate_outcomes",
+        "in_main_text"
+      ],
+      "statement": "A dedicated section tests four model predictions in turn: borrowing costs, a natural-experiment episode, trade-finance messages, and currency substitution; each subsection opens by stating the prediction before the evidence.",
+      "pages": [
+        23,
+        29
+      ],
+      "locator": "Section 5",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives",
+        "in_main_text"
+      ],
+      "statement": "Currency substitution is tested by decomposing the change in the RMB share of payments with China into declines in each other currency's share, noting the shares must sum to zero by construction.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Table 7",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "mechanism_evidence",
+      "tags": [
+        "other:natural_experiment_episode",
+        "in_main_text"
+      ],
+      "statement": "The 2015 offshore RMB shock is used as a quasi-experiment; four features (financial not real, China-sourced, unanticipated, small swap drawings) are listed to argue it is an exogenous shift in borrowing-cost distribution.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "compared_to_literature",
+        "in_main_text"
+      ],
+      "statement": "Intensive-margin effects are benchmarked against the overall rise in RMB payments over the sample; Poisson coefficients are converted to proportional differences following Chen and Roth; borrowing-cost effects are expressed in basis points and compared to cross-sectional dispersion.",
+      "pages": [
+        15,
+        24
+      ],
+      "locator": "Section 3.3; Section 5.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "precision_discussed",
+        "in_main_text"
+      ],
+      "statement": "Where a main-table coefficient is imprecisely estimated, the text discusses alternative specifications and points to the appendix table reporting them.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 3.3, payments received",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "in_main_text"
+      ],
+      "statement": "Authors explicitly frame all results as associations rather than causal estimates and list confounds they cannot fully exclude.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "data_coverage",
+        "in_main_text"
+      ],
+      "statement": "Trade-finance message types are described as having incomplete coverage and possibly unrepresentative; the proxy for borrowing costs is flagged as a bank-level measure dependent on passthrough.",
+      "pages": [
+        6,
+        23
+      ],
+      "locator": "Section 2; footnote 29",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "in_footnote"
+      ],
+      "statement": "Caveats on the Poisson specification are stated in a footnote: restricted control group, incidental parameters with country FE, and unstudied staggered-adoption issues in Poisson DiD.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Footnote 19",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "in_main_text"
+      ],
+      "statement": "The conclusion notes that too few currencies have risen to international status to know whether results generalise, and offers a historical analogy rather than a statistical argument.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section 6",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure",
+        "raw_data_plot",
+        "stars_used",
+        "notes_state_se",
+        "notes_state_sample"
+      ],
+      "statement": "Figures include descriptive time series, a map, a scatter against a 45-degree line, raw event-time means, and imputation event-study plots with shaded confidence bands; tables use three-level stars and long notes restating sample, outcome, treatment and each column.",
+      "pages": [
+        6,
+        15
+      ],
+      "locator": "Figures 1 to 5; table notes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "appendix_tables_numbered_a",
+        "in_appendix"
+      ],
+      "statement": "Summary statistics are relegated to an appendix table numbered with an A prefix; appendix figures and tables are cited by A-numbers throughout.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Appendix Table A1 reference",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "in_main_text"
+      ],
+      "statement": "Event-study plots are described with their exact horizon window and the table column they correspond to, and the figure notes state the confidence level.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Figure 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph",
+        "roadmap_paragraph",
+        "data_before_design"
+      ],
+      "statement": "The introduction states two contributions with section pointers, previews the main empirical patterns and the model's predictions, then a related-literature block; the empirical part goes data section, then descriptive figures, then specification, then estimates.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "main_result_first",
+        "mechanisms_after_main",
+        "appendix_heavy"
+      ],
+      "statement": "Order is reduced-form results (Section 3), then theory (Section 4), then mechanism tests (Section 5); many empirical checks and all formal proofs are pushed to appendices A to F which are cited frequently.",
+      "pages": [
+        9,
+        29
+      ],
+      "locator": "Sections 3 to 5",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "other:descriptive_first"
+      ],
+      "statement": "A 'first look at the data' subsection and a descriptive event-time figure precede any regression, with the text explicitly stating the regression's job is to test significance and observables.",
+      "pages": [
+        7,
+        10
+      ],
+      "locator": "Section 2 (A first look); Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "replication_statement",
+      "tags": [
+        "data_public",
+        "replication_package_cited",
+        "in_main_text"
+      ],
+      "statement": "A Data Availability paragraph gives a Zenodo DOI for the underlying data; a Supplementary Data line points to online appendices.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Data Availability; Supplementary Data",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "replication_statement",
+      "tags": [
+        "other:software_not_named"
+      ],
+      "statement": "No statistical software or package is named in the text; estimators are cited by method paper only.",
+      "pages": [
+        11,
+        16
+      ],
+      "locator": "Sections 3.2 and 3.3",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "data_access",
+      "tags": [
+        "commercial",
+        "administrative",
+        "data_restricted"
+      ],
+      "statement": "Data are proprietary SWIFT messaging microdata used with permission, hand-collected central bank releases, Datastream rates, IMF direction of trade, and public SWIFT aggregates for recent years.",
+      "pages": [
+        5,
+        23
+      ],
+      "locator": "Section 2; Figure 3 notes; Section 5.1; Acknowledgments",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "other",
+      "tags": [
+        "other:funding_disclosed"
+      ],
+      "statement": "Funding source and host institutions are disclosed, along with a disclaimer that views are not those of the named central banks.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Acknowledgments",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Baseline uses Borusyak et al. imputation with cohort-averaged effects; TWFE OLS, SDID and PPML as alternatives",
+      "card_shows": "s1/s2 did_imputation with avgeffectsby, s3 reghdfe, s4 ppmlhdfe, s5 sdid",
+      "status": "agree",
+      "pages": [
+        11,
+        16
+      ],
+      "card_ref": "s1.estimator; s3; s4; s5"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Country and time fixed effects in all specifications",
+      "card_shows": "s1 fe(t sourcecountry); s3/s4 absorb(date sourcecountry)",
+      "status": "agree",
+      "pages": [
+        11,
+        13
+      ],
+      "card_ref": "s1.fe; s3.fe"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors clustered by country",
+      "card_shows": "cluster(sourcecountry) in s1 to s4",
+      "status": "agree",
+      "pages": [
+        11,
+        13
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "SDID reports bootstrapped standard errors",
+      "card_shows": "s5 vce(bootstrap) reps(1000); card se field null",
+      "status": "agree",
+      "pages": [
+        14,
+        14
+      ],
+      "card_ref": "s5.se",
+      "note": "card se recorded as None but the command string shows bootstrap"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Developing economies below an income threshold; Iran dropped; Mongolia excluded for intensive margin",
+      "card_shows": "if em_tag==1 filter; s4 excludes MNG",
+      "status": "agree",
+      "pages": [
+        8,
+        15
+      ],
+      "card_ref": "s1.sample; s4.sample"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Three blocks: trade, policy, neighbour use; log controls added for log-like outcomes",
+      "card_shows": "$Tradecontrols $PolicyControls $NeighbourControls clearingbanks; $LogControls in ppml",
+      "status": "agree",
+      "pages": [
+        11,
+        14
+      ],
+      "card_ref": "s2.controls; s4.controls"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Formal pre-trend test rejects only up to two months prior; event-study horizons -18/+24 in figure",
+      "card_shows": "pretrends(18) and event plot -48 to +48 months",
+      "status": "agree",
+      "pages": [
+        12,
+        15
+      ],
+      "card_ref": "x1; x2",
+      "note": "plotted window in the code is wider than the published figure window"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "No balance table; summary stats only in appendix",
+      "card_shows": "balance not_found_in_scope",
+      "status": "agree",
+      "pages": [
+        9,
+        9
+      ],
+      "card_ref": "x3"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No regression weights mentioned",
+      "card_shows": "w=None for all specs",
+      "status": "unknown",
+      "pages": [
+        11,
+        14
+      ],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Anticipation shift of six months, relaxed income filter, sent vs received, tenor and spread variants",
+      "card_shows": "only alt_sample and alt_estimator robustness records",
+      "status": "paper_only",
+      "pages": [
+        12,
+        24
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Seven main tables and seven main figures plus appendix tables A1 to A5 and figures",
+      "card_shows": "tables=8 figures=3",
+      "status": "unknown",
+      "pages": [
+        6,
+        29
+      ],
+      "card_ref": "outputs",
+      "note": "card counts cover files read, not the full package"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "SWIFT microdata with permission; Zenodo DOI for data",
+      "card_shows": "code in zenodo_15675543 package",
+      "status": "agree",
+      "pages": [
+        30,
+        30
+      ],
+      "card_ref": "card_link.path"
+    }
+  ],
+  "gaps": [
+    "No explicit justification for clustering at the country level beyond stating it.",
+    "No balance table or covariate comparison between treated and control countries in the main text.",
+    "No software or package named for the estimators.",
+    "No R-squared or dependent-variable means in regression tables.",
+    "Appendices A to F are online supplementary material and are not included in the text file, so appendix practices are known only through in-text references.",
+    "No preregistration or ethics statement (not expected for this design)."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        32
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 32 pages of the published text were read, including the theory section and references. Appendices A to F (data definitions, additional empirics, proofs) are online supplementary material not present in the text file and were not read; observations about appendix content rely on in-text references."
+  }
+}

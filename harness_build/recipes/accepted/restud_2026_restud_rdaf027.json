@@ -1,0 +1,449 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdaf027",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdaf027",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A0_MASTER.do",
+    "sha256": "ec35cd3151a93522246cd36ca55f3b22d8ba07c201a859e5c842838c476a7223",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      115
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A5_0_Matching.do",
+    "sha256": "07088e5638f8411b9566612123aa42ac955b30da95e867abfeed30d342f3bbaa",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      58
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A5_1_Prepare_data_for_matching.do",
+    "sha256": "af2104d2b10e331944251a51cb7806d254454d024b2971447319459c8b752aa5",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A5_2_Identify_nearest_two_control_schools.do",
+    "sha256": "bd718ccbe351ebea13753cf98354158bed9c719ce160f4b79f5b741d60827ce7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      250
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A6_2_Construct_short_run_analysis_sample.do",
+    "sha256": "2e56b957d9bea0195792717a24dd5d5b40a5d16517753d3e8db72106d546a16e",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      504
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B1_Short_run_analysis_baseline.do",
+    "sha256": "c3061ef45fe23433a83a24ba1056c7c488c8217477a067d642860541598522b0",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      170
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B3_Long_run_analysis_baseline.do",
+    "sha256": "07abe2b76b35982598f9a90f08e31438206af1ea12367e3bc781bdb4af1e9a17",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      359
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/C10_Honest_DiD.do",
+    "sha256": "1d22eaf7dca434dddd98197e0933a7ff4a01c7c541c9618a6f74a189baa70d4a",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      92
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/C3_Attrition_analysis.do",
+    "sha256": "78eab391fb9418f2486c9eaf89dacddcbb7fdc7477a9969eb713dee9551430d3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      250
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Traced main design: 1:2 matched event study with reghdfe. Short-run sample: event window -3 to +2, students grades 3-10 at shooting. Long-run sample: cohorts by grade at exposure. Comprehensive robustness with honestdid, alternative matching specifications. Did not read full long-run construction (A6_4) or all 51 files due to scope limits."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A0_MASTER.do"
+  ],
+  "directory_layout": "Single code/ directory with 51 Stata .do files organized by data cleaning (A1-A4), matching (A5), analysis sample construction (A6), robustness (C), organized as: A* for data cleaning/matching/sample, B* for main analysis, C* for robustness/diagnostics.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 51,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A0_MASTER.do",
+     "lines": [
+      34,
+      38
+     ],
+     "snippet": "global input",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A0_MASTER.do",
+    "lines": [
+     65,
+     65
+    ],
+    "snippet": "* Data cleaning",
+    "supports": [
+     "directory_layout"
+    ]
+   }
+  ]
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "regression",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [
+    "Event study specification with event indicators event1-event6 for years -3 to +2",
+    "DID specification with shootingXpost interaction",
+    "Fixed effects: id1_n (student), match_shid x event_t_pos (match-group by event time)",
+    "Clustered inference at unique_id level (school match-group)"
+   ],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A5_0_Matching.do",
+     "lines": [
+      33,
+      33
+     ],
+     "snippet": "local fuzzy_vars \"enrollment  share_female  share_white share_black share_hispanic  share_lunch\"",
+     "supports": [
+      "implementation_features",
+      "method"
+     ]
+    },
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B1_Short_run_analysis_baseline.do",
+     "lines": [
+      75,
+      76
+     ],
+     "snippet": "qui reghdfe `var' event1 event2 zero event4 event5 event6 i.match_shid#i.event_t_pos, ///\n\ta(id1_n) cluster(unique_id)",
+     "supports": [
+      "implementation_features"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "\tqui reghdfe `var' event1 event2 zero event4 event5 event6 i.match_shid#i.event_t_pos, ///\n\ta(id1_n) cluster(unique_id)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Event study regressions for five short-run outcomes",
+   "fixed_effects": [
+    "id1_n"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "unique_id"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B1_Short_run_analysis_baseline.do",
+      "lines": [
+       75,
+       76
+      ],
+      "snippet": "cluster(unique_id)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "Balanced panel with event_t from -3 to +2",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event time t=-1 is omitted (zero=0). Event indicators are coded: event1=-3, event2=-2, event3=-1(omitted), zero=-1, event4=0, event5=1, event6=2. Maps to balanced panel analysis_sample_balanced_panel_-3to+2.",
+   "evidence": [
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B1_Short_run_analysis_baseline.do",
+     "lines": [
+      71,
+      76
+     ],
+     "snippet": "use \"$cleaned/matching/baseline/analysis_sample_balanced_panel_-3to+2\"",
+     "supports": [
+      "sample"
+     ]
+    },
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B1_Short_run_analysis_baseline.do",
+     "lines": [
+      75,
+      76
+     ],
+     "snippet": "qui reghdfe `var' event1 event2 zero event4 event5 event6",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B1_Short_run_analysis_baseline.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "\ta(id1_n) cluster(unique_id)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x2",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Pre-period (event_t<0) trends appear flat for both treated and control groups across five outcomes (absence_rate, chronic_abs, grade_rep, days_disc, switch_schools).",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B3_Long_run_analysis_baseline.do",
+      "lines": [
+       252,
+       252
+      ],
+      "snippet": "esttab hsgrad_m2 anycol_m2 col4_m2 ba_m2 ///",
+      "supports": [
+       "spec_ids",
+       "package"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": null,
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/B3_Long_run_analysis_baseline.do",
+      "lines": [
+       265,
+       265
+      ],
+      "snippet": "esttab employed_m2 stable_emp_m2 wages_m2 pos_wages_m2 ///",
+      "supports": [
+       "spec_ids",
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A0_MASTER.do",
+     "lines": [
+      52,
+      52
+     ],
+     "snippet": "foreach package in isvar unique reghdfe estout coefplot shp2dta spmap grc1leg honestdid{",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "teffects",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "teffects nnmatch"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_14630153/Trauma_at_School_Replication_Package/code/A5_2_Identify_nearest_two_control_schools.do",
+     "lines": [
+      109,
+      110
+     ],
+     "snippet": "cap n teffects nnmatch (random `fuzzy_vars') (shooting), vce(iid) ///\n\tematch(`exact_vars') nn(1) gen(match_number)  osample(violate)",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "regression"
+  ],
+  "fields": []
+ }
+}

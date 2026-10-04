@@ -1,0 +1,787 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdag027",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdag027",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:15:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/0_master-results.do",
+    "sha256": "e6fad01fbe25950e724f66acb68debbe0117a64f19fba669989f7bb84ab3a485",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      286
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/1c_lasso_tablea1_tablea2_tableb8.do",
+    "sha256": "ff133bf1fef4ba9aaf1535670d74af81bccb8f9f46ae2fc24f00204bd2b128f7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      200,
+      350
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+    "sha256": "166a38d6d56069be269ebe060677220425376f942dfe41039ebeae813f30f5e6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      273
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table3.do",
+    "sha256": "16ec94616ca93aa8bedf6056a2646d56cb71b94539d76099fc20a0b50aee23cd",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      120
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/ado files/btsls.ado",
+    "sha256": "082877bf57d58bd5c72a5e334e3aa0dc3989735050385cdd762dfa9aafe61ffc",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      152
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/ado files/ols_spatial_HAC.ado",
+    "sha256": "4c25e0d8d67bd1f32f0fd81ebd9e9c266ad69cef5c6bcbdae3e3074827f60172",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/server_files/",
+    "reason": "out_of_scope",
+    "note": "Server-only files requiring restricted datasets (slave schedule, KKK rosters, newspaper panel, graveyard data)"
+   },
+   {
+    "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/server_files/data/raw/abe_algorithm_code_july2020/",
+    "reason": "vendored",
+    "note": "ABE matching algorithm vendored library"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Article focuses on Confederate diaspora migration flows and cultural transmission. Master script (0_master-results.do) orchestrates data construction and analysis. Main analysis scripts (3_table2.do, 3_table3.do, etc.) use reghdfe for OLS and ivreghdfe for IV specifications. Custom ado files implement bias-corrected TSLS and spatial HAC standard errors. Server-only files handle restricted datasets (slave schedule, KKK rosters) and large-scale data merging; these prevent complete specification enumeration but main published results in Tables 2-10 appear in local code."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/zenodo_17361408/BFFPT_RESTUD_replication/code/0_master-results.do"
+  ],
+  "directory_layout": "Zenodo archive structure: code/ contains .do scripts and ado/ subdirectory with custom functions. Data construction scripts (1_*), analysis scripts (3_*), and custom ado files (btsls.ado, ols_spatial_HAC.ado, etc.) organized by stage.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/zenodo_17361408/BFFPT_RESTUD_replication/server_files/data/raw/abe_algorithm_code_july2020/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 64,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/1c_lasso_tablea1_tablea2_tableb8.do",
+     "lines": [
+      6,
+      6
+     ],
+     "snippet": "set seed 1234",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": "census",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/1c_lasso_tablea1_tablea2_tableb8.do",
+     "lines": [
+      43,
+      44
+     ],
+     "snippet": "use \"$path/data/clean_data/census_county_data/Unharmonized/1850_1940_county_controls.dta\"",
+     "supports": [
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": "census",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/1c_lasso_tablea1_tablea2_tableb8.do",
+     "lines": [
+      203,
+      203
+     ],
+     "snippet": "merge 1:1 gisjoin year using \"$path/data/clean_data/migration/push_factor/outmigration_1870_1900_2010b_census_tree_men_women.dta\"",
+     "supports": [
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "0_master-results.do calls scripts sequentially with qui prefix. Data construction (1_*) → variable/instrument creation (1c_lasso, 1d-1h) → table/figure generation (3_*).",
+  "sample_restrictions": [
+   {
+    "description": "Restrict to year==1900 for main cross-sectional analysis in Table 2",
+    "spec_ids": [
+     "s1",
+     "s2",
+     "s3",
+     "s4"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       38,
+       38
+      ],
+      "snippet": "reghdfe cci_score_1900s pct_Southerners_white $demo_ctrls pct_Southerners_white1870 if year==1900",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Restrict to non-South counties (North==0) for Table 3 multicohort analysis",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table3.do",
+      "lines": [
+       55,
+       55
+      ],
+      "snippet": "ivreghdfe cci_score_1900s pct_Southerners_white pct_Northerners_white pct_Northerners_white1870 pct_Southerners_white1870 $all_ctrls  if year==1900 & North==0, cluster(km_grid) a(statefip) ffirst",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "iv",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      144,
+      144
+     ],
+     "snippet": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $demo_ctrls pct_Southerners_white1870",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe cci_score_1900s pct_Southerners_white $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "statefip"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "km_grid"
+    ],
+    "details": "Cluster robust standard errors by spatial grid (km_grid) and state FE",
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       38,
+       38
+      ],
+      "snippet": "cluster(km_grid)",
+      "supports": [
+       "details"
+      ]
+     },
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       38,
+       38
+      ],
+      "snippet": "reghdfe cci_score_1900s pct_Southerners_white $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Baseline OLS with minimal controls",
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      38,
+      38
+     ],
+     "snippet": "reghdfe",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "fixed_effects"
+     ]
+    },
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      38,
+      38
+     ],
+     "snippet": "reghdfe cci_score_1900s pct_Southerners_white $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe cci_score_1900s pct_Southerners_white $all_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "statefip"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "km_grid"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       46,
+       46
+      ],
+      "snippet": "reghdfe cci_score_1900s pct_Southerners_white $all_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "OLS with full control set including sorting confounds",
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      46,
+      46
+     ],
+     "snippet": "reghdfe",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      46,
+      46
+     ],
+     "snippet": "reghdfe cci_score_1900s pct_Southerners_white $all_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip) ffirst",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "statefip"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "km_grid"
+    ],
+    "details": "Cluster robust standard errors by spatial grid (km_grid) and state FE",
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       144,
+       144
+      ],
+      "snippet": "cluster(km_grid)",
+      "supports": [
+       "details"
+      ]
+     },
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       144,
+       144
+      ],
+      "snippet": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip) ffirst",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV baseline: instruments Southern migrant share with LASSO-selected push factors",
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      144,
+      144
+     ],
+     "snippet": "ivreghdfe",
+     "supports": [
+      "estimator",
+      "command",
+      "formula_or_call",
+      "fixed_effects"
+     ]
+    },
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      144,
+      144
+     ],
+     "snippet": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $demo_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip) ffirst",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "2sls",
+   "command": "ivreghdfe",
+   "package": null,
+   "formula_or_call": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $all_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip) ffirst",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "statefip"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "km_grid"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       154,
+       154
+      ],
+      "snippet": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $all_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip) ffirst",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "IV with full control set",
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      154,
+      154
+     ],
+     "snippet": "ivreghdfe",
+     "supports": [
+      "command",
+      "formula_or_call",
+      "fixed_effects",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      154,
+      154
+     ],
+     "snippet": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $all_ctrls pct_Southerners_white1870 if year==1900, cluster(km_grid) a(statefip) ffirst",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "first_stage",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3",
+    "s4"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Weak identification test (Anderson-Rubin) computed via ivreg2 partial option",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "weak_iv",
+   "design_id": "d1",
+   "spec_ids": [
+    "s3",
+    "s4"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "AR test stored in scalar e(estatp); Kleibergen-Paap underidentification test also computed",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "tabfig/tables/table2a.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       124,
+       125
+      ],
+      "snippet": "esttab regR* using \"$path/tabfig/tables/table2a.tex\",\t\t\n\t\t   replace star(* 0.10 ** 0.05 *** 0.01)",
+      "supports": [
+       "path",
+       "package",
+       "stars"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": "tabfig/tables/table2b.tex",
+    "package": "esttab",
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+      "lines": [
+       251,
+       251
+      ],
+      "snippet": "esttab regR* using \"$path/tabfig/tables/table2b.tex\",",
+      "supports": [
+       "path",
+       "spec_ids",
+       "package"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/0_master-results.do",
+     "lines": [
+      18,
+      18
+     ],
+     "snippet": "foreach pkg in btsls ch_weak acreg boottest semipar estout unique confirmdir asgen statastates confirmdir reghdfe ftools ivreg2 ranktest ivreghdfe",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      144,
+      144
+     ],
+     "snippet": "ivreghdfe cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $demo_ctrls pct_Southerners_white1870 if year==1900",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "ivreg2",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ivreg2"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      145,
+      145
+     ],
+     "snippet": "qui ivreg2 cci_score_1900s (pct_Southerners_white = iv_mig_hat1_00) $demo_ctrls pct_Southerners_white1870 i.statefip if year==1900, cluster(km_grid) endog(pct_Southerners_white )",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "esttab",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "esttab"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_17361408/BFFPT_RESTUD_replication/code/3_table2.do",
+     "lines": [
+      124,
+      124
+     ],
+     "snippet": "esttab regR* using \"$path/tabfig/tables/table2a.tex\"",
+     "supports": [
+      "usage",
+      "name",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "iv"
+  ],
+  "fields": []
+ }
+}

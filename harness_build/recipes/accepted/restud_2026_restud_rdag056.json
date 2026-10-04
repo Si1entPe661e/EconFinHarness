@@ -1,0 +1,1596 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "restud_2026_restud_rdag056",
+ "journal": "ReStud",
+ "year": 2026,
+ "doi": "10.1093/restud/rdag056",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/ReStud/metadata/articles.csv",
+   "sha256": "0ff697dd417832f37df8f0b928841452ec08f060496e64d1a76d7b233a20b7c4"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+    "sha256": "b29044a623d922d2c133180cd40342efc02819ae4e68cfc7d7cc30e43a603c96",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      234,
+      260
+     ],
+     [
+      450,
+      470
+     ],
+     [
+      640,
+      655
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+    "sha256": "8491320e2f5ee8eefd7b4cd06b279a67a30d8ed7dcb43b0cf43849f339978d80",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ],
+     [
+      200,
+      464
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+    "sha256": "cf436685b31420a16537380eaafcc054d7c09c5b4ae0ec5c6723c1d5a263548d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      350
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+    "sha256": "3b1a6e61d0b6efb77f32e52e159a62873cf7118ce72c62d1a91e921b925f62bf",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/master.do",
+    "sha256": "ea12a80b1253e2fb14ade3d7986191b3fb1793e1a5c6f35105c4736022adad97",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      74
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/1 create EEO-1 panel.do",
+    "reason": "out_of_scope",
+    "note": "Creates EEO-1 establishment panel from confidential EEOC data not included in public archive"
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/9 Glassdoor salaries analysis.do",
+    "reason": "out_of_scope",
+    "note": "Requires proprietary Glassdoor salary data not included in public archive"
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/10 create BGT panel.do",
+    "reason": "out_of_scope",
+    "note": "Creates BGT analysis panel from proprietary Burning Glass Technologies data not included in archive"
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/12 build summary stats tables.do",
+    "reason": "out_of_scope",
+    "note": "Builds final summary tables using outputs from confidential analysis programs"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+    "lines": [
+     261,
+     500
+    ],
+    "reason": "large_file_budget_exhausted"
+   },
+   {
+    "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+    "lines": [
+     151,
+     1915
+    ],
+    "reason": "large_file_budget_exhausted"
+   }
+  ],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Master do-file organizes analysis into publicly runnable programs (2-7 using CPS/DOL data) and confidential programs (1,8-12 using EEO-1/Glassdoor/BGT data). Reading focused on estimation specifications from programs 2, 5, 8, 11 which represent main analyses for employment (EEO-1) and posted wages (BGT) with supporting CPS analyses. Two main research designs identified: (1) NC sharp DiD post July 2013 vs Southern/Midwestern controls; (2) Staggered DiD with 6 moderate reform states (FL/GA/KS/MI/MO/SC) with state-specific reform dates."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/master.do"
+  ],
+  "directory_layout": "Monolithic do-files in single directory (code/zenodo_20014224/.../do-files/); no separate data or script subdirectories in archive. Outputs written to $FIGSTABSDIR and $OUTPUTDATADIR globals.",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 13,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+     "lines": [
+      16,
+      16
+     ],
+     "snippet": "// Run-time = 10 minutes",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      149,
+      149
+     ],
+     "snippet": "seed(515)",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "cps_00003.dta from https://cps.ipums.org/cps/",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      14,
+      26
+     ],
+     "snippet": "IPUMS CPS Basic Monthly",
+     "supports": [
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "CEPR CPS ORG Uniform Extracts Version 2.5 from https://ceprdata.org/",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      18,
+      26
+     ],
+     "snippet": "CEPR CPS ORG",
+     "supports": [
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "ar5159.csv from DOL",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+     "lines": [
+      82,
+      82
+     ],
+     "snippet": "ar5159.csv",
+     "supports": [
+      "source_hint"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+     "lines": [
+      14,
+      33
+     ],
+     "snippet": "confidential EEO-1",
+     "supports": [
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      14,
+      22
+     ],
+     "snippet": "BGT",
+     "supports": [
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "restricted",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/master.do",
+     "lines": [
+      35,
+      42
+     ],
+     "snippet": "Glassdoor",
+     "supports": [
+      "access"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/master.do",
+      "lines": [
+       15,
+       16
+      ],
+      "snippet": "*PROGRAM 2*\ndo \"$BASEDIR/do-files/2 short-term UI recipiency analysis.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/3 UI benefit takeup analysis.do"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/master.do",
+      "lines": [
+       18,
+       19
+      ],
+      "snippet": "*PROGRAM 3*\ndo \"$BASEDIR/do-files/3 UI benefit takeup analysis.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do"
+    ],
+    "after": [
+     "p1",
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/master.do",
+      "lines": [
+       24,
+       25
+      ],
+      "snippet": "*PROGRAM 5*\ndo \"$BASEDIR/do-files/5 CPS outcomes analysis.do\"",
+      "supports": [
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Master.do runs programs 2-7 with public data; programs 1,8-12 use confidential data and are commented out. Programs 4 and 6-7 not examined (out of budget).",
+  "sample_restrictions": [
+   {
+    "description": "Multi-state firm sample",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       53,
+       53
+      ],
+      "snippet": "* --- Multi-state-firm sample logic ---",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Southern and Midwestern states only (NC analysis)",
+    "spec_ids": [
+     "s1"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+      "lines": [
+       245,
+       245
+      ],
+      "snippet": "*** STEP 7: FILTER TO SOUTHERN AND MIDWESTERN STATES",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Treatment states (NC,FL,GA,KS,MI,MO,SC) plus Southern/Midwestern controls (CPS analysis)",
+    "spec_ids": [
+     "s6"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       128,
+       129
+      ],
+      "snippet": "keep if reformstates==1 | Southern==1 | Midwestern==1\nkeep if year >= 2008 & year <= 2018",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "New hire sample (job tenure < 1 year) for CPS starting salary analysis",
+    "spec_ids": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       301,
+       307
+      ],
+      "snippet": "& jtyears<1 & personid!=. & empl==1",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": [
+   {
+    "description": "CPS Basic Monthly + CPS ORG + CPS Job Tenure Supplement for starting salary analysis",
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       289,
+       289
+      ],
+      "snippet": "* Step 7: Merge with Job Tenure supplement",
+      "supports": [
+       "description"
+      ]
+     }
+    ],
+    "spec_ids": [
+     "s6"
+    ]
+   }
+  ]
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "did",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "UI benefit reduction 30-64% in reform states on staggered dates: NC Jul 2013, MO/SC Feb 2012, MI/FL Jul 2012, GA Feb 2013, KS Jul 2014",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      63,
+      64
+     ],
+     "snippet": "gen post   = (qdate >= 214)\ngen postNC = post * NC",
+     "supports": [
+      "treatment",
+      "method"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+     "lines": [
+      63,
+      64
+     ],
+     "snippet": "gen post     = (year>=2013)\ngen postNC   = post*NC",
+     "supports": [
+      "treatment"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "qui reghdfe lwage postNC if nc_main_sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "emp"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       117,
+       118
+      ],
+      "snippet": "qui reghdfe lwage postNC if nc_main_sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": "Multi-state firms with same estab-job in NC and other states (nc_main_sample==1)",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Baseline specification defining sample for BGT analysis (s1 defines e(sample) for all subsequent regressions). Outcome is log posted wage (lwage) in BGT job postings.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      117,
+      118
+     ],
+     "snippet": "qui reghdfe lwage postNC if nc_main_sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      111,
+      111
+     ],
+     "snippet": "** STEP 1.1: BASELINE NC REGRESSION → DEFINES e(sample)",
+     "supports": [
+      "sample",
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo nc_t8_att: reghdfe lwage postNC if sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "emp"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       247,
+       248
+      ],
+      "snippet": "eststo nc_t8_att: reghdfe lwage postNC if sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "ATT specification for Table 8 using baseline sample. Estimates treatment effect of NC reform on posted wages.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      247,
+      248
+     ],
+     "snippet": "eststo nc_t8_att: reghdfe lwage postNC if sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      247,
+      247
+     ],
+     "snippet": "eststo nc_t8_att:",
+     "supports": [
+      "output_ids"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "eststo nc_t8_es: reghdfe lwage NClead4 NClead3 NClead2 NClead1 NClag* if sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "emp"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       242,
+       243
+      ],
+      "snippet": "eststo nc_t8_es: reghdfe lwage NClead4 NClead3 NClead2 NClead1 NClag* if sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event-study specification with 4-quarter binned leads and lags relative to reform (NClead4/3/2/1 = -4,-3,-2,-1 quarters; NClag0/1/2/3/4 = 0,1,2,3,4 quarters). Reference period is t=-1 (NClead1 collinear).",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      242,
+      243
+     ],
+     "snippet": "eststo nc_t8_es: reghdfe lwage NClead4 NClead3 NClead2 NClead1 NClag* if sample==1, ///\n    absorb(st qdate estab_job_ jobh firm#year) vce(cluster emp)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "other:did_multiplegt",
+   "command": "did_multiplegt",
+   "package": null,
+   "formula_or_call": "did_multiplegt employed State year treat, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(6) placebo(4) breps(100) seed(515) ///\n    weight(wtfinl) cluster(State)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "State"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       147,
+       147
+      ],
+      "snippet": "did_multiplegt employed State year treat, ///",
+      "supports": [
+       "cluster_level",
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "De Chaisemartin & d'Haultfoeuille (2020) staggered DiD estimator for employment using CPS data. Estimates dynamic effects for 6 years post-reform and 4 placebo periods pre-reform.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      147,
+      150
+     ],
+     "snippet": "did_multiplegt employed State year treat, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(6) placebo(4) breps(100) seed(515) ///\n    weight(wtfinl) cluster(State)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "other:did_multiplegt",
+   "command": "did_multiplegt",
+   "package": null,
+   "formula_or_call": "did_multiplegt durunemp State year treat, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(6) placebo(4) breps(100) seed(575) ///\n    weight(wtfinl) cluster(State)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "State"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       179,
+       179
+      ],
+      "snippet": "    weight(wtfinl) cluster(State)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t5"
+   ],
+   "notes": "Staggered DiD for weeks unemployed. Uses different seed (575) than employment specification.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      172,
+      172
+     ],
+     "snippet": "*** Column 3: Weeks Unemployed",
+     "supports": [
+      "output_ids"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      176,
+      179
+     ],
+     "snippet": "did_multiplegt durunemp State year treat, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(6) placebo(4) breps(100) seed(575) ///\n    weight(wtfinl) cluster(State)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "other:did_multiplegt",
+   "command": "did_multiplegt",
+   "package": null,
+   "formula_or_call": "did_multiplegt lwage4 state year treat ///\n    if (Midwestern==1 | Southern==1 | reformstates==1) ///\n    & jtyears<1 & personid!=. & empl==1, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(5) placebo(3) breps(100) seed(515) ///\n    controls(jtyears metro hoh age age2 somecollege college female) ///\n    cluster(state)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "state"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       307,
+       307
+      ],
+      "snippet": "    cluster(state)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "CPS new hires (job tenure < 1 year), employed, 2008-2018, reform states + Southern/Midwestern controls",
+   "comparison_group": null,
+   "output_ids": [
+    "t6"
+   ],
+   "notes": "Starting salary specification (lwage4 = log wage4, CPS ORG earnings in week 4 of rotation) for new hires. Table 10 column 2. Uses different seed (515) and fewer dynamic/placebo periods than employment/unemployment specs.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      300,
+      300
+     ],
+     "snippet": "* Step 9: did_multiplegt with controls()",
+     "supports": [
+      "sample",
+      "output_ids",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      301,
+      307
+     ],
+     "snippet": "did_multiplegt lwage4 state year treat ///\n    if (Midwestern==1 | Southern==1 | reformstates==1) ///\n    & jtyears<1 & personid!=. & empl==1, ///\n    jointtestplacebo average_effect covariances robus",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe raw_strr NClead3 NClead2 NClead1 NClag* if yr>=-3&yr<=4, absorb(yr statefip)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "yr",
+    "statefip"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t7"
+   ],
+   "notes": "UI recipiency rates Figure B.1 event-study specification. Outcome is short-term UI recipiency rate (raw_strr).",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+     "lines": [
+      369,
+      369
+     ],
+     "snippet": "reghdfe raw_strr NClead3 NClead2 NClead1 NClag* if yr>=-3&yr<=4, absorb(yr statefip)",
+     "supports": [
+      "output_ids",
+      "unresolved_symbols",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+     "lines": [
+      369,
+      369
+     ],
+     "snippet": "reghdfe raw_strr NClead3 NClead2 NClead1 NClag* if yr>=-3&yr<=4, absorb(yr statefip)",
+     "supports": [
+      "formula_or_call"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe exit postNC if numstates_!=1 & year>=2010 & includesNC>0 & includesNC!=., ///\n    absorb(i.st i.year) vce(cluster company)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "i.st",
+    "i.year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "company"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+      "lines": [
+       128,
+       128
+      ],
+      "snippet": "    absorb(i.st i.year) vce(cluster company)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [
+    "t8"
+   ],
+   "notes": "Establishment exit regression (FN32). Exit defined as observed in 2010-2012 but not in balanced 2010-2015 panel.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+     "lines": [
+      119,
+      119
+     ],
+     "snippet": "** STEP 1.0c: ESTABLISHMENT EXIT REGRESSION FOR FN32 (NC)    **",
+     "supports": [
+      "output_ids"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+     "lines": [
+      127,
+      128
+     ],
+     "snippet": "reghdfe exit postNC if numstates_!=1 & year>=2010 & includesNC>0 & includesNC!=., ///\n    absorb(i.st i.year) vce(cluster company)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+     "lines": [
+      128,
+      128
+     ],
+     "snippet": "    absorb(i.st i.year) vce(cluster company)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s2",
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "call_present",
+   "description": "Event-study specification (s3) includes NClead4 (t=-4), NClead3 (t=-3), NClead2 (t=-2) to test parallel trends before reform",
+   "searched_files": [
+    "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do"
+   ],
+   "note": "NClead1 set collinear with NClead4 as reference period (t=-1). Event-study coefplot visually displays pretrends.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      74,
+      77
+     ],
+     "snippet": "gen NClead1 = (qdate>=210 & qdate<=213) * NC\ngen NClead2 = (qdate>=206 & qdate<=209) * NC\ngen NClead3 = (qdate>=202 & qdate<=205) * NC\ngen NClead4 = (qdate>=200 & qdate<=201) * NC",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x2",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [
+    "s2",
+    "s3"
+   ],
+   "status": "observed",
+   "observation": "output_code_present",
+   "description": "Event-study coefplot for BGT wages displays coefficients and 95% CI for pretrend and post-reform periods",
+   "searched_files": [
+    "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do"
+   ],
+   "note": "Figure 4 panel (b) displays NC event-study results",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      453,
+      460
+     ],
+     "snippet": "coefplot, keep(NClead4 NClead3 NClead2 NClead1 NClag0 NClag1 NClag2 NClag3 NClag4) ///",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x3",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [
+    "s7"
+   ],
+   "status": "observed",
+   "observation": "output_code_present",
+   "description": "UI recipiency rate event-study plot (Figure B.1b) using coefplot with leads/lags",
+   "searched_files": [
+    "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do"
+   ],
+   "note": "Moderate reform states analysis also includes placebo event-study using did_multiplegt (Figure B.1c)",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+     "lines": [
+      371,
+      380
+     ],
+     "snippet": "coefplot, keep(NClead3 NClead2 NClead1 NClag0 NClag1 NClag2 NClag3 NClag4 NClag5) ///",
+     "supports": [
+      "observation",
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "x4",
+   "kind": "pretrend_test",
+   "design_id": "d1",
+   "spec_ids": [
+    "s4",
+    "s5",
+    "s6"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Placebo periods before treatment test parallel trends assumption",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": "Table 8",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       237,
+       240
+      ],
+      "snippet": "** STEP 1.3: TABLE 8 COL 1 (NC)",
+      "supports": [
+       "output_ref"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       242,
+       245
+      ],
+      "snippet": "eststo nc_t8_es: reghdfe lwage NClead4 NClead3 NClead2 NClead1 NClag* if sample==1,",
+      "supports": [
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t3",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       301,
+       301
+      ],
+      "snippet": "did_multiplegt lwage4 state year treat ///",
+      "supports": [
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t4",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       147,
+       147
+      ],
+      "snippet": "did_multiplegt employed State year treat, ///",
+      "supports": [
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t5",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [
+     "s5"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       176,
+       176
+      ],
+      "snippet": "did_multiplegt durunemp State year treat, ///",
+      "supports": [
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t6",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [
+     "s6"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+       300,
+       300
+      ],
+      "snippet": "* Step 9: did_multiplegt with controls()",
+      "supports": [
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t7",
+    "output_ref": null,
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [
+     "s7"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+      "lines": [
+       369,
+       369
+      ],
+      "snippet": "reghdfe raw_strr NClead3 NClead2 NClead1 NClag* if yr>=-3&yr<=4, absorb(yr statefip)",
+      "supports": [
+       "spec_ids"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "t8",
+    "output_ref": "FN32 (Establishment Exit)",
+    "path": null,
+    "package": null,
+    "format": null,
+    "spec_ids": [
+     "s8"
+    ],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/8 EEO-1 employment analysis.do",
+      "lines": [
+       119,
+       119
+      ],
+      "snippet": "** STEP 1.0c: ESTABLISHMENT EXIT REGRESSION FOR FN32 (NC)    **",
+      "supports": [
+       "output_ref"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": [
+   {
+    "id": "f1",
+    "output_ref": "Figure 4 (Panel a-b): BGT Wages in Multi-State Firms",
+    "path": null,
+    "spec_ids": [],
+    "format": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+       9,
+       9
+      ],
+      "snippet": "**   - FIGURE 4: POSTED SALARIES IN MULTI-STATE FIRMS       **",
+      "supports": [
+       "output_ref",
+       "spec_ids"
+      ]
+     }
+    ],
+    "types": [],
+    "package": null
+   },
+   {
+    "id": "f2",
+    "output_ref": "Figure B.1 (a-c): UI Recipiency Rates",
+    "path": null,
+    "spec_ids": [],
+    "format": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+      "lines": [
+       310,
+       310
+      ],
+      "snippet": "*** STEP 9: CREATE FIGURE B.1 (a)                 ***",
+      "supports": [
+       "output_ref"
+      ]
+     }
+    ],
+    "types": [],
+    "package": null
+   }
+  ]
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": "High-dimensional fixed effects estimation (main specification command for BGT/EEO-1 analyses)",
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      117,
+      117
+     ],
+     "snippet": "qui reghdfe lwage postNC if nc_main_sample==1, ///",
+     "supports": [
+      "usage",
+      "purpose",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "did_multiplegt",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "did_multiplegt"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      147,
+      147
+     ],
+     "snippet": "did_multiplegt employed State year treat, ///",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "coefplot",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "coefplot"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      453,
+      460
+     ],
+     "snippet": "coefplot, keep(NClead4 NClead3 NClead2 NClead1 NClag0 NClag1 NClag2 NClag3 NClag4) ///",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "event_plot",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "event_plot"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+     "lines": [
+      453,
+      457
+     ],
+     "snippet": "event_plot dcdh_b#dcdh_v, ///\nstub_lag(Effect_#) stub_lead(Placebo_#) plottype(scatter) ciplottype(rcap)",
+     "supports": [
+      "usage",
+      "commands",
+      "name"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Multi-state firm design: treatment varies by geography within same firm; exploits geographic variation to control for firm-level shocks",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      106,
+      106
+     ],
+     "snippet": "* Headline NC sample: firms that have the same estab-job in NC AND elsewhere",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "4-quarter binned event-study leads/lags with reference period t=-1 (collinear). Lags: 0,1,2,3,4 years post-reform. Leads: -4,-3,-2 years pre-reform.",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+     "lines": [
+      66,
+      66
+     ],
+     "snippet": "* --- NC event-time leads/lags (4-quarter binned) ---",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  },
+  {
+   "description": "Treatment indicator variable (treat) set to 0 initially, then equals 1 for reform states MO/SC/MI/FL/GA/KS/NC post-reform",
+   "evidence": [
+    {
+     "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+     "lines": [
+      134,
+      138
+     ],
+     "snippet": "gen treat = 0\nreplace treat = 1 if (MO==1 | SC==1) & year >= 2012",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did"
+  ],
+  "fields": []
+ }
+}

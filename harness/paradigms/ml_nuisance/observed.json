@@ -1,0 +1,623 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "ml_nuisance",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "aer_107_5_51",
+        "sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+        "journal": "AER",
+        "year": 2017,
+        "coverage": "minimal",
+        "languages": [
+          "R"
+        ]
+      },
+      {
+        "artid": "aer_113_3_2",
+        "sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+        "journal": "AER",
+        "year": 2023,
+        "coverage": "partial",
+        "languages": [
+          "R"
+        ]
+      }
+    ],
+    "excluded": [],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 2,
+    "specifications": 8,
+    "designs": 2,
+    "by_language": {
+      "R": 2
+    },
+    "by_journal": {
+      "AER": 2
+    },
+    "by_year": {
+      "2017": 1,
+      "2023": 1
+    },
+    "by_coverage": {
+      "minimal": 1,
+      "partial": 1
+    }
+  },
+  "by_variant": {
+    "dml_plr": 1,
+    "double machine learning": 1
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "dml_plr",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            2,
+            2
+          ],
+          "snippet": "#  This is an example of ATE estimation of 401(k) eligibility on accumulated assets using Double Machine Learning Methods",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "variant",
+      "value": "double machine learning",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": "d2",
+          "field": "variant",
+          "path": "code/code/functions/crossfit/R/dml.R",
+          "lines": [
+            1,
+            40
+          ],
+          "snippet": "Implements the Double Machine Learning approach (Chernozhukov et al., 2018)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "other:double_ml",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 1,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+          "lines": [
+            67,
+            68
+          ],
+          "snippet": "dml(LogBonus ~ Auction | Acres + CentLat + CentLong + EffDate,\n      reg_data, \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "command",
+      "value": "Boosting",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "methods      <- c(\"RLasso\",\"Trees\", \"Forest\", \"Boosting\", \"Nnet\", \"Ensemble\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "command",
+      "value": "Ensemble",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s6",
+          "field": "command",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "methods      <- c(\"RLasso\",\"Trees\", \"Forest\", \"Boosting\", \"Nnet\", \"Ensemble\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "command",
+      "value": "Forest",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "methods      <- c(\"RLasso\",\"Trees\", \"Forest\", \"Boosting\", \"Nnet\", \"Ensemble\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "command",
+      "value": "Nnet",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "methods      <- c(\"RLasso\",\"Trees\", \"Forest\", \"Boosting\", \"Nnet\", \"Ensemble\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "command",
+      "value": "RLasso",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "methods      <- c(\"RLasso\",\"Trees\", \"Forest\", \"Boosting\", \"Nnet\", \"Ensemble\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "command",
+      "value": "Trees",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "methods      <- c(\"RLasso\",\"Trees\", \"Forest\", \"Boosting\", \"Nnet\", \"Ensemble\")",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "command",
+      "value": "dml",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+          "lines": [
+            67,
+            68
+          ],
+          "snippet": "dml(LogBonus ~ Auction | Acres + CentLat + CentLong + EffDate,\n      reg_data, \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "se_type",
+      "value": "iid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": "s3",
+          "field": "se.type",
+          "path": "code/code/functions/crossfit/R/dml.R",
+          "lines": [
+            71,
+            72
+          ],
+          "snippet": "Double/debiased machine learning for treatment and",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "se_type",
+      "value": "robust",
+      "papers": 1,
+      "specs": 6,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/P2017_1038_data/401K/Moment_Functions.R",
+          "lines": [
+            79,
+            81
+          ],
+          "snippet": "lm.fit.ry              <- lm(as.matrix(cond.comp[[k,j]]$ry) ~ as.matrix(cond.comp[[k,j]]$rz)-1);\n        ate                    <- lm.fit.ry$coef;\n        HCV.coefs              <- vcovHC(lm.fit.ry, t",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/P2017_1038_data/401K/Master.R",
+          "lines": [
+            2,
+            2
+          ],
+          "snippet": "#  This is an example of ATE estimation of 401(k) eligibility on accumulated assets using Double Machine Learning Methods",
+          "language": "R"
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/code/functions/crossfit/R/dml.R",
+          "lines": [
+            1,
+            40
+          ],
+          "snippet": "Implements the Double Machine Learning approach (Chernozhukov et al., 2018)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+          "lines": [
+            67,
+            68
+          ],
+          "snippet": "dml(LogBonus ~ Auction | Acres + CentLat + CentLong + EffDate,\n      reg_data, \"linear\", n = dml_n, ml = \"rf\", workers = 8)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 1,
+      "specs": 6,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/P2017_1038_data/401K/Moment_Functions.R",
+          "lines": [
+            289,
+            289
+          ],
+          "snippet": "fit.y          <- rlassoF(datause=datause, dataout=dataout,  form_x, form_y, post, arg=arg)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "language",
+      "value": "R",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 2,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_107_5_51",
+          "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_113_3_2",
+          "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "aer_107_5_51",
+      "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+      "kind": "convention",
+      "text": "Data frame construction: foreach combines fold results via .combine='rbind', stacking each iteration's point estimate and SE into wide matrix r",
+      "record_id": null,
+      "path": "code/P2017_1038_data/401K/Master.R",
+      "lines": [
+        85,
+        85
+      ]
+    },
+    {
+      "artid": "aer_107_5_51",
+      "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+      "kind": "convention",
+      "text": "Cross-fitting: K-fold split via runif() and quantile-based assignment ensures random and balanced splits without replacement",
+      "record_id": null,
+      "path": "code/P2017_1038_data/401K/Moment_Functions.R",
+      "lines": [
+        24,
+        25
+      ]
+    },
+    {
+      "artid": "aer_107_5_51",
+      "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+      "kind": "convention",
+      "text": "Aggregation: point estimates and SEs combined using 1/K weighting per fold, then aggregated across iterations via mean (ATE) and median (robustness)",
+      "record_id": null,
+      "path": "code/P2017_1038_data/401K/Moment_Functions.R",
+      "lines": [
+        68,
+        68
+      ]
+    },
+    {
+      "artid": "aer_107_5_51",
+      "card_sha256": "1e456660c4d893e0fb2ed5449203792ee56fcb723f189777effe10c42a13b830",
+      "kind": "reading_note",
+      "text": "Two parallel applications (401K and Bonus) with identical methodology but different data. Both implement DML with partial linear model (est='plinear'). Interactive model variant commented out. Analysis fully traced from master scripts through ML functions to moment calculations. Data files not read per policy (sipp1991.dta, penn_jae.dat).",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_113_3_2",
+      "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+      "kind": "sample_restriction",
+      "text": "InSample==1, Censored==0 for output analyses",
+      "record_id": null,
+      "path": "code/code/Analysis/regressions_bonus_raladdenda.R",
+      "lines": [
+        28,
+        30
+      ]
+    },
+    {
+      "artid": "aer_113_3_2",
+      "card_sha256": "fe9bb9699a002e902c1a6cff1d31c211d6509a6366e26bc815a0699aa656b793",
+      "kind": "reading_note",
+      "text": "Main analysis scripts examined: regressions_bonus_raladdenda.R, regressions_outputs.R, regressions_parcels.R for specification extraction. DML implementation in custom crossfit package uses grf (random forest).",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet estimator: unknown in 1/2 papers; shares are computed over the 1 known papers only",
+    "2/2 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only",
+    "fewer than 5 papers: shares are not meaningful; use as pointers only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

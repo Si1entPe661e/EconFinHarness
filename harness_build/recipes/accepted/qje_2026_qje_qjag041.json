@@ -1,0 +1,700 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "qje_2026_qje_qjag041",
+ "journal": "QJE",
+ "year": 2026,
+ "doi": "10.1093/qje/qjag041",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-07T22:30:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/QJE/metadata/articles.csv",
+   "sha256": "8064dd0901f6f3bd3ec9089390b1b88958eda6dbba4e11911b955aeeb46b5d55"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/README.md",
+    "sha256": "aa27ba0006d8966449528011cd17fe1e222aaca909184bdd3b4c800112487c75",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      223
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+    "sha256": "15ebaf673783614448e9704756576fb0e656e175a0ec3b03998e3b361920a3d8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      141
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/exhibit_source_map.md",
+    "sha256": "cd7a495d41da51b1436c45e0ca69b67d3c53597b82c698e07f6152ed702ad624",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/programs/code/script_economy31main.m",
+    "sha256": "b65f0155e06fe761edc0f04bfd49b1f20081a6f0cde522a277508d32199f90cf",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      200
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/programs/code/economy_ces_6.m",
+    "sha256": "7142d979d025b13ea3f127e417626f1c92e5ff8135ad73f1ce57f4f999176b62",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+    "sha256": "0a03f0228d7f444ed8ab32219e93e77477f8520eae300d06dd7c1e11dba15739",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      219
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Inventory-first survey of master script, README, programs_desc.md, and exhibit_source_map.md; sampled 6 key files (README, data/program descriptions, one Stata analysis, two MATLAB model scripts). Trade model structure and data sources fully traced; model calibrations (5 variants) and shock scenarios (uniform, autarky, revealed 1997->2007) identified; main output tables/figures mapped to source programs. Estimation details and local robustness robustness scripts not fully covered due to budget."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "MATLAB",
+   "Shell"
+  ],
+  "master_scripts": [
+   "code/dataverse_8P3S0V/replication_ding26/programs/run_all.sh"
+  ],
+  "directory_layout": "Stage-based pipeline: Stage 0 (concordances), Stage 1 (capital I-O network), Stage 2 (robustness datasets), Stage 3 (validation), Stage 4 (local robustness), Stage 5 (decompositions), Stage 6 (quantitative model, concurrent), Stage 7 (welfare and tables). Code split: Stata for data construction and validation (.do); MATLAB for model solving (.m)",
+  "readme_present": true,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 43,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/README.md",
+     "lines": [
+      132,
+      133
+     ],
+     "snippet": "the script exports it as the `BEAROOT`",
+     "supports": [
+      "path_handling"
+     ]
+    },
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs/code/script_economy31main.m",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "rng(881);",
+     "supports": [
+      "seeds_set"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": null,
+   "type": null,
+   "access": "public",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+     "lines": [
+      21,
+      22
+     ],
+     "snippet": "`wiot_9511/wiot_full.dta` — World Input-Output",
+     "supports": [
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "public",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "stats.oecd.org; accessed Feb 2023",
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+     "lines": [
+      33,
+      35
+     ],
+     "snippet": "- `capitalformation1950to2022.dta` — OECD SNA Table 8A, Gross Fixed Capital Formation by",
+     "supports": [
+      "source_hint",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "public",
+   "unit_of_observation": null,
+   "period": "1997",
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+     "lines": [
+      29,
+      30
+     ],
+     "snippet": "- `beax_ioflow_1997_full.dta` — combined 1997 benchmark I-O table and capital flow",
+     "supports": [
+      "period",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "public",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "National statistical agencies (IE-UFRJ, MOSPI, BPS, KOSIS, INEGI); accessed 2023-2025",
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+     "lines": [
+      46,
+      47
+     ],
+     "snippet": "- `mexico/total.dta` — INEGI origin-destination matrices of GFCF",
+     "supports": [
+      "source_hint",
+      "access"
+     ]
+    }
+   ]
+  },
+  {
+   "name": null,
+   "type": null,
+   "access": "public",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": "macrohistory.net; shipped as JSTdatasetR6.dta",
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+     "lines": [
+      57,
+      58
+     ],
+     "snippet": "- `JSTdatasetR6.dta` — Jorda-Schularick-Taylor Macrohistory Database, Release 6",
+     "supports": [
+      "source_hint",
+      "access"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/00_concord_v08.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       70,
+       70
+      ],
+      "snippet": "00_concord_v08.do",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p2",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/code/script_make_IOK_06.m"
+    ],
+    "after": [
+     "p1"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       78,
+       78
+      ],
+      "snippet": "script_make_IOK_06.m",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p3",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/code/script_make_IOK_robust_03.m"
+    ],
+    "after": [
+     "p2"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       84,
+       84
+      ],
+      "snippet": "script_make_IOK_robust_03.m",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/12_validate_02.do"
+    ],
+    "after": [
+     "p3"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       90,
+       90
+      ],
+      "snippet": "12_validate_02.do",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p5",
+    "stage": "estimation",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/code/script_local_03.m"
+    ],
+    "after": [
+     "p4"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       97,
+       97
+      ],
+      "snippet": "script_local_03.m",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p6",
+    "stage": "analysis",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/23_decompositions.do"
+    ],
+    "after": [
+     "p5"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       103,
+       103
+      ],
+      "snippet": "23_decompositions.do",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p7",
+    "stage": "estimation",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/code/script_economy31main.m"
+    ],
+    "after": [
+     "p6"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       107,
+       107
+      ],
+      "snippet": "script_economy31main.m",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p8",
+    "stage": "tables",
+    "scripts": [
+     "code/dataverse_8P3S0V/replication_ding26/programs/30_welfare_v03.do"
+    ],
+    "after": [
+     "p7"
+    ],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs_desc.md",
+      "lines": [
+       114,
+       115
+      ],
+      "snippet": "30_welfare_v03.do",
+      "supports": [
+       "stage",
+       "scripts"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": "Master script run_all.sh stages program execution; three long MATLAB jobs (Stage 6) run concurrently, each single-threaded, bounded by ~48-hour transition_a job",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "general_equilibrium",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": null,
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs/code/economy_ces_6.m",
+     "lines": [
+      1,
+      1
+     ],
+     "snippet": "economy_ces_6.m — General-equilibrium economy class.",
+     "supports": [
+      "method"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "role": "secondary",
+   "method": "panel_fe",
+   "variant": null,
+   "classification_basis": "code_trace",
+   "treatment": "Variance decomposition of capital-service expenditure shares across nj, jk, nk fixed effects",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+     "lines": [
+      3,
+      3
+     ],
+     "snippet": "Decomposes the variance of capital-service expenditure shares",
+     "supports": [
+      "role",
+      "treatment",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s2",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe gamma_K, absorb(fe_nj fe_nk fe_jk, savefe) residuals(gamma_K_njnkjk)",
+   "resolved_call": "reghdfe gamma_K, absorb(fe_nj fe_nk fe_jk, savefe) residuals(gamma_K_njnkjk)",
+   "resolution_status": "resolved",
+   "bindings": [
+    {
+     "symbol": "gamma_K",
+     "value": "capital-service expenditure share",
+     "evidence": [
+      {
+       "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+       "lines": [
+        57,
+        57
+       ],
+       "snippet": "gen gamma_K = beta_K / totbeta_K",
+       "supports": [
+        "symbol"
+       ]
+      },
+      {
+       "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+       "lines": [
+        3,
+        3
+       ],
+       "snippet": "capital-service expenditure share",
+       "supports": [
+        "value"
+       ]
+      }
+     ]
+    }
+   ],
+   "unresolved_symbols": [],
+   "scope": "single",
+   "family_description": null,
+   "fixed_effects": [
+    "fe_nj",
+    "fe_nk",
+    "fe_jk"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "iid",
+    "cluster_level": null,
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+      "lines": [
+       76,
+       76
+      ],
+      "snippet": "reghdfe gamma_K, absorb(fe_nj fe_nk fe_jk, savefe) residuals(gamma_K_njnkjk)",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Variance decomposition with FE combinations",
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "reghdfe gamma_K, absorb(fe_nj fe_nk fe_jk, savefe)",
+     "supports": [
+      "formula_or_call",
+      "resolved_call",
+      "fixed_effects",
+      "command",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [
+   {
+    "id": "t1",
+    "output_ref": null,
+    "path": "output/table3_main_estimates.txt",
+    "package": null,
+    "format": null,
+    "spec_ids": [],
+    "stars": null,
+    "notes_content": [],
+    "evidence": [
+     {
+      "path": "code/dataverse_8P3S0V/replication_ding26/exhibit_source_map.md",
+      "lines": [
+       42,
+       47
+      ],
+      "snippet": "- **Source file(s):** output/table3_main_estimates.txt; output/table3_conf_intervals.txt;",
+      "supports": [
+       "path"
+      ]
+     }
+    ]
+   }
+  ],
+  "figures": []
+ },
+ "structural": {
+  "model_class": "other:general_equilibrium_trade",
+  "solution_method": null,
+  "estimation_method": null,
+  "moments_targeted": [],
+  "optimizer": null,
+  "counterfactuals": [],
+  "evidence": [
+   {
+    "path": "code/dataverse_8P3S0V/replication_ding26/programs/code/economy_ces_6.m",
+    "lines": [
+     1,
+     1
+    ],
+    "snippet": "General-equilibrium economy class.",
+    "supports": [
+     "model_class"
+    ]
+   }
+  ]
+ },
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "reghdfe",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "reghdfe"
+   ],
+   "evidence": [
+    {
+     "path": "code/dataverse_8P3S0V/replication_ding26/programs/21_heterogeneity_02.do",
+     "lines": [
+      76,
+      76
+     ],
+     "snippet": "reghdfe gamma_K, absorb(fe_nj fe_nk fe_jk, savefe)",
+     "supports": [
+      "name",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "general_equilibrium",
+   "panel_fe"
+  ],
+  "fields": []
+ }
+}

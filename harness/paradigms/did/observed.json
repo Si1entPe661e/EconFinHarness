@@ -1,0 +1,4213 @@
+{
+  "schema_version": "paradigm-observed-v1",
+  "method": "did",
+  "status": "draft",
+  "generated_at": "2026-09-08T18:37:31Z",
+  "generator": {
+    "name": "fhb distill",
+    "version": "fh-distill-0.1.0",
+    "sha256": "6d7c0f67518a8e73f99884545589650cfe8ea35fce1caa0faba6cd1b09e8538a",
+    "counting_unit": "paper",
+    "dedup_rule": "one artid counts once per facet value regardless of how many specifications use it; specification counts are reported separately as specs"
+  },
+  "inputs": {
+    "cards": [
+      {
+        "artid": "aer_111_12_8",
+        "sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+        "journal": "AER",
+        "year": 2021,
+        "coverage": "partial",
+        "languages": [
+          "R"
+        ]
+      },
+      {
+        "artid": "aer_113_1_1",
+        "sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+        "journal": "AER",
+        "year": 2023,
+        "coverage": "partial",
+        "languages": [
+          "R",
+          "Stata"
+        ]
+      },
+      {
+        "artid": "aer_114_11_7",
+        "sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+        "journal": "AER",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "aer_114_7_10",
+        "sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+        "journal": "AER",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "ecta_2025_ecta22303",
+        "sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+        "journal": "Econometrica",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "R",
+          "MATLAB",
+          "C",
+          "Shell"
+        ]
+      },
+      {
+        "artid": "jfe_2024_j_jfineco_2024_103809",
+        "sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+        "journal": "JFE",
+        "year": 2024,
+        "coverage": "minimal",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "qje_139_1_2",
+        "sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+        "journal": "QJE",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "qje_139_4_7",
+        "sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+        "journal": "QJE",
+        "year": 2024,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Jupyter"
+        ]
+      },
+      {
+        "artid": "qje_140_1_10",
+        "sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+        "journal": "QJE",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2025_restud_rdae091",
+        "sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+        "journal": "ReStud",
+        "year": 2025,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdaf071",
+        "sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdaf080",
+        "sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag011",
+        "sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "Python"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag056",
+        "sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "restud_2026_restud_rdag080",
+        "sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+        "journal": "ReStud",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "R",
+          "Stata",
+          "Shell",
+          "Python"
+        ]
+      },
+      {
+        "artid": "rfs_2026_rfs_hhaf080",
+        "sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+        "journal": "RFS",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata"
+        ]
+      },
+      {
+        "artid": "rfs_2026_rfs_hhag045",
+        "sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+        "journal": "RFS",
+        "year": 2026,
+        "coverage": "partial",
+        "languages": [
+          "Stata",
+          "R",
+          "Jupyter"
+        ]
+      }
+    ],
+    "excluded": [
+      {
+        "artid": "aer_110_9_10",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "aer_113_3_7",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "aer_114_6_6",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "aer_115_3_8",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "restud_90_5_11",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "restud_92_2_14",
+        "reason": "held out for evaluation"
+      },
+      {
+        "artid": "rfs_2025_rfs_hhaf065",
+        "reason": "held out for evaluation"
+      }
+    ],
+    "schema_sha256": "0e5770a6b84e6ff4b57b838ffd5eefa1d6763b3a606d6f76270b5b6c93cf74b5"
+  },
+  "denominators": {
+    "papers": 17,
+    "specifications": 63,
+    "designs": 23,
+    "by_language": {
+      "R": 9,
+      "Stata": 15,
+      "MATLAB": 1,
+      "C": 1,
+      "Shell": 2,
+      "Jupyter": 2,
+      "Python": 2
+    },
+    "by_journal": {
+      "AER": 4,
+      "Econometrica": 1,
+      "JFE": 1,
+      "QJE": 3,
+      "ReStud": 6,
+      "RFS": 2
+    },
+    "by_year": {
+      "2021": 1,
+      "2023": 1,
+      "2024": 5,
+      "2025": 3,
+      "2026": 7
+    },
+    "by_coverage": {
+      "partial": 16,
+      "minimal": 1
+    }
+  },
+  "by_variant": {
+    "synthetic_did": 1,
+    "unknown": 15,
+    "staggered": 1
+  },
+  "observations": [
+    {
+      "id": "o1",
+      "facet": "variant",
+      "value": "staggered",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 15,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/Data-and-Code/source/clean_hospital_sample.do",
+          "lines": [
+            164,
+            173
+          ],
+          "snippet": "gen post_st = 0\nby hos_id: replace post_st = 1 if str_test[_n-1] == 1 & _n > 1\nby hos_id: replace post_st = 1 if post_st[_n-1] == 1 & _n > 1",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o2",
+      "facet": "variant",
+      "value": "synthetic_did",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 15,
+      "share_of_known": 0.5,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "d1",
+          "field": "variant",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            6,
+            6
+          ],
+          "snippet": "#' Computes the synthetic diff-in-diff estimate for an average treatment effect on a treated block.",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o3",
+      "facet": "estimator",
+      "value": "hdfe_ols",
+      "papers": 12,
+      "specs": 30,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.706,
+      "by_language": {
+        "R": 3,
+        "Stata": 9
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            65
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP, data=d)",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            208
+          ],
+          "snippet": "eststo: qui reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "reghdfe `depvar' b0.treated, absorb(fips year)",
+          "language": "Stata"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_moral_hazard_did.R",
+          "lines": [
+            110,
+            110
+          ],
+          "snippet": "modIV <- felm(yfill ~",
+          "language": "R"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_did.do",
+          "lines": [
+            385,
+            385
+          ],
+          "snippet": "eststo: reghdfe `y' treat1 treat2, a(firmn daten i.sectorn##i.period1 i.sectorn##i.period2 /*i.firmn##c.daten*/) cluster(firmn)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+          "lines": [
+            131,
+            146
+          ],
+          "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o4",
+      "facet": "estimator",
+      "value": "did_group_time_att",
+      "papers": 3,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.176,
+      "by_language": {
+        "Stata": 2,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+          "lines": [
+            522,
+            525
+          ],
+          "snippet": "csdid `depvar'",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/4_CS_small.R",
+          "lines": [
+            382,
+            385
+          ],
+          "snippet": "att_gt(yname = \"greenness\",\n                        tname = \"year\",\n                        idname = \"uniqueid\",\n                        gname = \"foundationCS\",",
+          "language": "R"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+          "lines": [
+            154,
+            156
+          ],
+          "snippet": "jwdid exportrevenue i.large, ivar(bvd_id) tvar(year) gvar(first_treat) ///\n      method(ppmlhdfe) fevar(i.country_num#i.year) ///\n      cluster(BankID)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o5",
+      "facet": "estimator",
+      "value": "did_imputation",
+      "papers": 3,
+      "specs": 5,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.176,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+          "lines": [
+            97,
+            97
+          ],
+          "snippet": "did_imputation `outcome' uniqueid year mtreat_year if year>=1960 & year<=1999, fe(uniqueid year) timecontrols(SDpre1959 islpre1959) autosample",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            213,
+            214
+          ],
+          "snippet": "* Col 1: Time and country fixed effects\ndid_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+          "lines": [
+            131,
+            133
+          ],
+          "snippet": "did_imputation trade bvd_id year Ei, ///\n               fe(bvd_id year year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o6",
+      "facet": "estimator",
+      "value": "did_twfe",
+      "papers": 3,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.176,
+      "by_language": {
+        "R": 2,
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s3",
+          "field": "estimator",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            134,
+            138
+          ],
+          "snippet": "did_estimate = function(Y, N0, T0, ...) {\n  estimate = synthdid_estimate(Y, N0, T0, weights = list(lambda = rep(1 / T0, T0), omega = rep(1 / N0, N0)), ...)",
+          "language": "R"
+        },
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "areg  `var' evicted qdum1-qdum12 qdum17 qdum18_21",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/4_CS_small.R",
+          "lines": [
+            113,
+            114
+          ],
+          "snippet": "raw.twfe = feols(greenness ~ i(evt, ref = c(-2, -9999)) | uniqueid + cddaid + year,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o7",
+      "facet": "estimator",
+      "value": "ols",
+      "papers": 3,
+      "specs": 12,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.176,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/Code/Code_Analysis/Table4.do",
+          "lines": [
+            8,
+            14
+          ],
+          "snippet": "reg units post_independent independent Post, vce(cluster zip)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+          "lines": [
+            18,
+            18
+          ],
+          "snippet": "eststo: reg evo_correct evo_score i.state i.byear if schtype==1  & sample_naep==1, vce(cluster state) baselevels",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "eststo: acreg fmortality rukr_famine urbanization urbanization_famine grainpc_mnq",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o8",
+      "facet": "estimator",
+      "value": "synthetic_did",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.118,
+      "by_language": {
+        "R": 1,
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s1",
+          "field": "estimator",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            109,
+            109
+          ],
+          "snippet": "sdid=synthdid_estimate,",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+          "lines": [
+            577,
+            577
+          ],
+          "snippet": "eststo sdid`m': sdid `var' $fixedeffects PostXConflict23 $cond, vce(jackknife) seed(1989)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o9",
+      "facet": "estimator",
+      "value": "other:demeaned_synthetic_control",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s5",
+          "field": "estimator",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            95,
+            97
+          ],
+          "snippet": "difp_estimate = function(Y, N0, T0) {\n    synthdid_estimate(Y, N0, T0, weights=list(lambda=rep(1/T0, T0)), eta.omega=1e-6)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "facet": "estimator",
+      "value": "other:did_multiplegt",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag056",
+          "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+          "lines": [
+            147,
+            150
+          ],
+          "snippet": "did_multiplegt employed State year treat, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(6) placebo(4) breps(100) seed(515) ///\n    weight(wtfinl) cluster(State)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "facet": "estimator",
+      "value": "other:matrix_completion",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "mc_estimate = function(Y, N0, T0) {",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "facet": "estimator",
+      "value": "other:ppmlhdfe",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s4",
+          "field": "estimator",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            550,
+            551
+          ],
+          "snippet": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols $PolicyControls $NeighbourControls $LogControls clearingbanks if em_tag==1 & Siso3c!=\"MNG\", absorb(date sourcecountry) cluster(sourcecountry) d",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "facet": "estimator",
+      "value": "synthetic_control",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s2",
+          "field": "estimator",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            119,
+            121
+          ],
+          "snippet": "sc_estimate = function(Y, N0, T0, eta.omega = 1e-6, ...) {\n  estimate = synthdid_estimate(Y, N0, T0, eta.omega = eta.omega,\n\t\t\t       weights = list(lambda = rep(0, T0)), omega.intercept = FALSE, ...)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "facet": "command",
+      "value": "reghdfe",
+      "papers": 10,
+      "specs": 26,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.588,
+      "by_language": {
+        "Stata": 10
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/Code/Code_Analysis/FigureE1E2E3E4.do",
+          "lines": [
+            35,
+            35
+          ],
+          "snippet": "reghdfe allunits F*event base L*event, absorb(dea1 Date) cluster(BUYER_ZIP)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            208
+          ],
+          "snippet": "eststo: qui reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "reghdfe `depvar' b0.treated, absorb(fips year)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_did.do",
+          "lines": [
+            385,
+            385
+          ],
+          "snippet": "eststo: reghdfe `y' treat1 treat2, a(firmn daten i.sectorn##i.period1 i.sectorn##i.period2 /*i.firmn##c.daten*/) cluster(firmn)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+          "lines": [
+            131,
+            146
+          ],
+          "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+          "lines": [
+            18,
+            18
+          ],
+          "snippet": "reghdfe `outc' *Xpost73 if est_year>=1960 & est_year<=1999, a(id_dec80 est_year i.est_year#c.ch71",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "facet": "command",
+      "value": "did_imputation",
+      "papers": 3,
+      "specs": 5,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.176,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+          "lines": [
+            97,
+            97
+          ],
+          "snippet": "did_imputation `outcome' uniqueid year mtreat_year if year>=1960 & year<=1999, fe(uniqueid year) timecontrols(SDpre1959 islpre1959) autosample",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            213,
+            214
+          ],
+          "snippet": "* Col 1: Time and country fixed effects\ndid_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+          "lines": [
+            131,
+            133
+          ],
+          "snippet": "did_imputation trade bvd_id year Ei, ///\n               fe(bvd_id year year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "facet": "command",
+      "value": "felm",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.118,
+      "by_language": {
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            65
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP, data=d)",
+          "language": "R"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_moral_hazard_did.R",
+          "lines": [
+            110,
+            110
+          ],
+          "snippet": "modIV <- felm(yfill ~",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o17",
+      "facet": "command",
+      "value": "reg",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.118,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/Code/Code_Analysis/Table4.do",
+          "lines": [
+            8,
+            14
+          ],
+          "snippet": "reg units post_independent independent Post, vce(cluster zip)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+          "lines": [
+            18,
+            18
+          ],
+          "snippet": "eststo: reg evo_correct evo_score i.state i.byear if schtype==1  & sample_naep==1, vce(cluster state) baselevels",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o18",
+      "facet": "command",
+      "value": "acreg",
+      "papers": 1,
+      "specs": 9,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+          "lines": [
+            15,
+            15
+          ],
+          "snippet": "eststo: acreg fmortality rukr_famine urbanization urbanization_famine grainpc_mnq",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o19",
+      "facet": "command",
+      "value": "areg",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "areg  `var' evicted qdum1-qdum12 qdum17 qdum18_21",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o20",
+      "facet": "command",
+      "value": "att_gt",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/4_CS_small.R",
+          "lines": [
+            382,
+            385
+          ],
+          "snippet": "att_gt(yname = \"greenness\",\n                        tname = \"year\",\n                        idname = \"uniqueid\",\n                        gname = \"foundationCS\",",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o21",
+      "facet": "command",
+      "value": "csdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+          "lines": [
+            522,
+            525
+          ],
+          "snippet": "csdid `depvar'",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o22",
+      "facet": "command",
+      "value": "did_estimate",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s3",
+          "field": "command",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            134,
+            138
+          ],
+          "snippet": "did_estimate = function(Y, N0, T0, ...) {\n  estimate = synthdid_estimate(Y, N0, T0, weights = list(lambda = rep(1 / T0, T0), omega = rep(1 / N0, N0)), ...)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o23",
+      "facet": "command",
+      "value": "did_multiplegt",
+      "papers": 1,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag056",
+          "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+          "lines": [
+            147,
+            150
+          ],
+          "snippet": "did_multiplegt employed State year treat, ///\n    jointtestplacebo average_effect covariances robust_dynamic ///\n    dynamic(6) placebo(4) breps(100) seed(515) ///\n    weight(wtfinl) cluster(State)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o24",
+      "facet": "command",
+      "value": "difp_estimate",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s5",
+          "field": "command",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            95,
+            97
+          ],
+          "snippet": "difp_estimate = function(Y, N0, T0) {\n    synthdid_estimate(Y, N0, T0, weights=list(lambda=rep(1/T0, T0)), eta.omega=1e-6)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o25",
+      "facet": "command",
+      "value": "feols",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/4_CS_small.R",
+          "lines": [
+            113,
+            114
+          ],
+          "snippet": "raw.twfe = feols(greenness ~ i(evt, ref = c(-2, -9999)) | uniqueid + cddaid + year,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o26",
+      "facet": "command",
+      "value": "jwdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+          "lines": [
+            154,
+            156
+          ],
+          "snippet": "jwdid exportrevenue i.large, ivar(bvd_id) tvar(year) gvar(first_treat) ///\n      method(ppmlhdfe) fevar(i.country_num#i.year) ///\n      cluster(BankID)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o27",
+      "facet": "command",
+      "value": "mc_estimate",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            80,
+            80
+          ],
+          "snippet": "mc_estimate = function(Y, N0, T0) {",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o28",
+      "facet": "command",
+      "value": "ppmlhdfe",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            550,
+            551
+          ],
+          "snippet": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols $PolicyControls $NeighbourControls $LogControls clearingbanks if em_tag==1 & Siso3c!=\"MNG\", absorb(date sourcecountry) cluster(sourcecountry) d",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o29",
+      "facet": "command",
+      "value": "sc_estimate",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s2",
+          "field": "command",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            119,
+            121
+          ],
+          "snippet": "sc_estimate = function(Y, N0, T0, eta.omega = 1e-6, ...) {\n  estimate = synthdid_estimate(Y, N0, T0, eta.omega = eta.omega,\n\t\t\t       weights = list(lambda = rep(0, T0)), omega.intercept = FALSE, ...)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o30",
+      "facet": "command",
+      "value": "sdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "s4",
+          "field": "command",
+          "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+          "lines": [
+            577,
+            577
+          ],
+          "snippet": "eststo sdid`m': sdid `var' $fixedeffects PostXConflict23 $cond, vce(jackknife) seed(1989)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o31",
+      "facet": "command",
+      "value": "synthdid_estimate",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s1",
+          "field": "command",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            109,
+            109
+          ],
+          "snippet": "sdid=synthdid_estimate,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o32",
+      "facet": "package",
+      "value": "reghdfe",
+      "papers": 5,
+      "specs": 8,
+      "denominator_papers": 17,
+      "unknown_papers": 10,
+      "share_of_known": 0.714,
+      "by_language": {
+        "Stata": 5
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s3",
+          "field": "package",
+          "path": "code/Code/Code_Analysis/FigureE1E2E3E4.do",
+          "lines": [
+            35,
+            35
+          ],
+          "snippet": "reghdfe allunits F*event base L*event, absorb(dea1 Date) cluster(BUYER_ZIP)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            208
+          ],
+          "snippet": "eststo: qui reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "reghdfe `depvar' b0.treated, absorb(fips year)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s3",
+          "field": "package",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            266,
+            267
+          ],
+          "snippet": "* Col 5:  OLS estimator\nreghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/dataverse_1E0GUZ/replication package_codes/17_regressions_PSM_fin_bank.do",
+          "lines": [
+            52,
+            52
+          ],
+          "snippet": "reghdfe lloan i1.p2p##i1.post [pweight=weight], a(i.siren#i.year mdate) cluster(siren)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o33",
+      "facet": "package",
+      "value": "did_imputation",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 10,
+      "share_of_known": 0.286,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            213,
+            214
+          ],
+          "snippet": "* Col 1: Time and country fixed effects\ndid_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0)  cluster(sourcecountry) avgeffectsby(first_swap)",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": "s2",
+          "field": "package",
+          "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+          "lines": [
+            131,
+            133
+          ],
+          "snippet": "did_imputation trade bvd_id year Ei, ///\n               fe(bvd_id year year#country_num) ///\n               autosample cluster(BankID_num) tol(0.1)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o34",
+      "facet": "package",
+      "value": "csdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 10,
+      "share_of_known": 0.143,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s2",
+          "field": "package",
+          "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+          "lines": [
+            522,
+            525
+          ],
+          "snippet": "csdid `depvar'",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o35",
+      "facet": "package",
+      "value": "jwdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 10,
+      "share_of_known": 0.143,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": "s1",
+          "field": "package",
+          "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+          "lines": [
+            154,
+            156
+          ],
+          "snippet": "jwdid exportrevenue i.large, ivar(bvd_id) tvar(year) gvar(first_treat) ///\n      method(ppmlhdfe) fevar(i.country_num#i.year) ///\n      cluster(BankID)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o36",
+      "facet": "package",
+      "value": "ppmlhdfe",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 10,
+      "share_of_known": 0.143,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s4",
+          "field": "package",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            550,
+            551
+          ],
+          "snippet": "ppmlhdfe Source_CNYex300 Sswapever $Tradecontrols $PolicyControls $NeighbourControls $LogControls clearingbanks if em_tag==1 & Siso3c!=\"MNG\", absorb(date sourcecountry) cluster(sourcecountry) d",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o37",
+      "facet": "package",
+      "value": "sdid",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 10,
+      "share_of_known": 0.143,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "s4",
+          "field": "package",
+          "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+          "lines": [
+            577,
+            577
+          ],
+          "snippet": "eststo sdid`m': sdid `var' $fixedeffects PostXConflict23 $cond, vce(jackknife) seed(1989)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o38",
+      "facet": "se_type",
+      "value": "cluster",
+      "papers": 14,
+      "specs": 40,
+      "denominator_papers": 17,
+      "unknown_papers": 2,
+      "share_of_known": 0.933,
+      "by_language": {
+        "R": 2,
+        "Stata": 12
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            64
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP, data=d)",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            189
+          ],
+          "snippet": "reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "\teststo c_c_1 :reghdfe `depvar' b0.treated, absorb(fips year) vce(cluster fips)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s2",
+          "field": "se.type",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_did.do",
+          "lines": [
+            385,
+            385
+          ],
+          "snippet": "reghdfe `y' treat1 treat2, a(firmn daten i.sectorn##i.period1 i.sectorn##i.period2 /*i.firmn##c.daten*/) cluster(firmn)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": "s5",
+          "field": "se.type",
+          "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "areg  `var' evicted qdum1-qdum12",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+          "lines": [
+            18,
+            18
+          ],
+          "snippet": "vce(cluster state)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o39",
+      "facet": "se_type",
+      "value": "bootstrap",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 2,
+      "share_of_known": 0.067,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s6",
+          "field": "se.type",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            307,
+            307
+          ],
+          "snippet": "se.methods = c('bootstrap', 'jackknife', 'placebo')",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o40",
+      "facet": "se_type",
+      "value": "randomization_inference",
+      "papers": 1,
+      "specs": 2,
+      "denominator_papers": 17,
+      "unknown_papers": 2,
+      "share_of_known": 0.067,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s1",
+          "field": "se.type",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            123,
+            123
+          ],
+          "snippet": "standard.errors = mapply(function(estimate, name) {",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o41",
+      "facet": "cluster_dimensions",
+      "value": "1",
+      "papers": 14,
+      "specs": 40,
+      "denominator_papers": 17,
+      "unknown_papers": 3,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 2,
+        "Stata": 12
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            64
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP, data=d)",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            189
+          ],
+          "snippet": "reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "\teststo c_c_1 :reghdfe `depvar' b0.treated, absorb(fips year) vce(cluster fips)",
+          "language": "Stata"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s2",
+          "field": "se.cluster_level",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_did.do",
+          "lines": [
+            385,
+            385
+          ],
+          "snippet": "reghdfe `y' treat1 treat2, a(firmn daten i.sectorn##i.period1 i.sectorn##i.period2 /*i.firmn##c.daten*/) cluster(firmn)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": "s5",
+          "field": "se.cluster_level",
+          "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "\t\t\t\t\t\tareg  `var' evicted qdum1-qdum12 qdum17 qdum18_21 qdum22-qdum41 evictXq1-evictXq12  evictXq17 evictXq18_21 evictXq22-evictXq41  `controls' i.lehd_yq, a(pik) cluster(pik) robust",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": "s1",
+          "field": "se.cluster_level",
+          "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+          "lines": [
+            18,
+            18
+          ],
+          "snippet": "vce(cluster state)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o42",
+      "facet": "fixed_effects_count",
+      "value": "2",
+      "papers": 6,
+      "specs": 16,
+      "denominator_papers": 17,
+      "unknown_papers": 8,
+      "share_of_known": 0.667,
+      "by_language": {
+        "R": 1,
+        "Stata": 5
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            65
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP, data=d)",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            208
+          ],
+          "snippet": "eststo: qui reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "reghdfe `depvar' b0.treated, absorb(fips year)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s1",
+          "field": "fixed_effects",
+          "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+          "lines": [
+            131,
+            146
+          ],
+          "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "s3",
+          "field": "fixed_effects",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            266,
+            267
+          ],
+          "snippet": "* Col 5:  OLS estimator\nreghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag056",
+          "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+          "record_id": "s7",
+          "field": "fixed_effects",
+          "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+          "lines": [
+            369,
+            369
+          ],
+          "snippet": "reghdfe raw_strr NClead3 NClead2 NClead1 NClag* if yr>=-3&yr<=4, absorb(yr statefip)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o43",
+      "facet": "fixed_effects_count",
+      "value": "3+",
+      "papers": 2,
+      "specs": 3,
+      "denominator_papers": 17,
+      "unknown_papers": 8,
+      "share_of_known": 0.222,
+      "by_language": {
+        "R": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s2",
+          "field": "fixed_effects",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_moral_hazard_did.R",
+          "lines": [
+            112,
+            112
+          ],
+          "snippet": "timeInt + loss_cut + Disaster_Id|",
+          "language": "R"
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "s2",
+          "field": "fixed_effects",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/4_CS_small.R",
+          "lines": [
+            113,
+            114
+          ],
+          "snippet": "raw.twfe = feols(greenness ~ i(evt, ref = c(-2, -9999)) | uniqueid + cddaid + year,",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o44",
+      "facet": "fixed_effects_count",
+      "value": "1",
+      "papers": 1,
+      "specs": 1,
+      "denominator_papers": 17,
+      "unknown_papers": 8,
+      "share_of_known": 0.111,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": "s5",
+          "field": "fixed_effects",
+          "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "\t\t\t\t\t\tareg  `var' evicted qdum1-qdum12 qdum17 qdum18_21 qdum22-qdum41 evictXq1-evictXq12  evictXq17 evictXq18_21 evictXq22-evictXq41  `controls' i.lehd_yq, a(pik) cluster(pik) robust",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o45",
+      "facet": "weights",
+      "value": "weighted",
+      "papers": 2,
+      "specs": 5,
+      "denominator_papers": 17,
+      "unknown_papers": 15,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1,
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s2",
+          "field": "weights",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            119,
+            121
+          ],
+          "snippet": "sc_estimate = function(Y, N0, T0, eta.omega = 1e-6, ...) {\n  estimate = synthdid_estimate(Y, N0, T0, eta.omega = eta.omega,\n\t\t\t       weights = list(lambda = rep(0, T0)), omega.intercept = FALSE, ...)",
+          "language": "R"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+          "record_id": "s1",
+          "field": "weights",
+          "path": "code/dataverse_1E0GUZ/replication package_codes/17_regressions_PSM_fin_bank.do",
+          "lines": [
+            52,
+            52
+          ],
+          "snippet": "qui eststo reg2: reghdfe lloan i1.p2p##i1.post [pweight=weight], a(i.siren#i.year mdate) cluster(siren) ",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o46",
+      "facet": "diagnostic",
+      "value": "pretrend_test:observed:call_present",
+      "papers": 4,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.444,
+      "by_language": {
+        "Stata": 4
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            667,
+            667
+          ],
+          "snippet": "qui test _b[str_test_ind_b3] = _b[str_test_ind_b2] = _b[str_test_ind_b1] //test pre-trends for Table b2",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/dataverse_HYLZUO/Replication Package_code_acs_analysis/acs_output.do",
+          "lines": [
+            710,
+            710
+          ],
+          "snippet": "reghdfe lifesciences_conv pre78 pre56 pre34 zero post01 post23 post45 $controls_indiv if less_evolution==1, absorb(bpl highschoolentryyear year)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            1097,
+            1097
+          ],
+          "snippet": "did_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1, fe(t sourcecountry) minn(0) autosample cluster(sourcecountry) hor(0/24) pretrends(18)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag056",
+          "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+          "lines": [
+            74,
+            77
+          ],
+          "snippet": "gen NClead1 = (qdate>=210 & qdate<=213) * NC\ngen NClead2 = (qdate>=206 & qdate<=209) * NC\ngen NClead3 = (qdate>=202 & qdate<=205) * NC\ngen NClead4 = (qdate>=200 & qdate<=201) * NC",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o47",
+      "facet": "diagnostic",
+      "value": "balance:not_found_in_scope",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.222,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "x3",
+          "field": "status",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o48",
+      "facet": "diagnostic",
+      "value": "heterogeneous_treatment_effects:observed:call_present",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.222,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "x3",
+          "field": "status",
+          "path": "code/Data-and-Code/source/appendix.do",
+          "lines": [
+            853,
+            869
+          ],
+          "snippet": "csdid margin if $year_range & year <= 2016, ivar(hos_id) time(year) gvar(first_shock) method(dripw) wboot rseed(1)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            1170,
+            1171
+          ],
+          "snippet": "test _b[1.treated#2.race]",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o49",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:unknown",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.222,
+      "by_language": {
+        "unknown": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "x2",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "x1",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o50",
+      "facet": "diagnostic",
+      "value": "heterogeneous_treatment_effects:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.111,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "x3",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o51",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.111,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": null,
+          "snippet": "",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o52",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:observed:call_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.111,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            680,
+            689
+          ],
+          "snippet": "coefplot (matrix(progdebt_ta[,1]), ci((2 3))), bylabel(Liabilities/TA)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o53",
+      "facet": "diagnostic",
+      "value": "pretrend_plot:observed:output_code_present",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.111,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag056",
+          "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+          "record_id": "x2",
+          "field": "status",
+          "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+          "lines": [
+            453,
+            460
+          ],
+          "snippet": "coefplot, keep(NClead4 NClead3 NClead2 NClead1 NClag0 NClag1 NClag2 NClag3 NClag4) ///",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o54",
+      "facet": "diagnostic",
+      "value": "pretrend_test:not_found_in_scope",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.111,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "x1",
+          "field": "status",
+          "path": "code/Code/Code_Analysis/FigureE1E2E3E4.do",
+          "lines": null,
+          "snippet": "",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o55",
+      "facet": "diagnostic",
+      "value": "pretrend_test:unknown",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 9,
+      "unknown_papers": 0,
+      "share_of_known": 0.111,
+      "by_language": {
+        "unknown": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag056",
+          "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+          "record_id": "x4",
+          "field": "status",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o56",
+      "facet": "robustness_type",
+      "value": "alt_estimator:confirmed",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 2,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "robustness[2]",
+          "field": "type",
+          "path": "code/Code/Code_Analysis/Table4.do",
+          "lines": [
+            8,
+            32
+          ],
+          "snippet": "reg units post_independent",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "robustness[1]",
+          "field": "type",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            266,
+            267
+          ],
+          "snippet": "* Col 5:  OLS estimator\nreghdfe Source_CNYex300yes Sswapever $Tradecontrols $PolicyControls $NeighbourControls clearingbanks if em_tag==1, absorb(date sourcecountry) cluster(sourcecountry)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/4_CS_small.R",
+          "lines": [
+            192,
+            194
+          ],
+          "snippet": "plt1 = edf %>%\n  ggplot() + \n  geom_point(aes(x = evt, y = att, group = method, color = method), position = position_dodge(1)) +",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o57",
+      "facet": "robustness_type",
+      "value": "alt_estimator:unresolved",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 2,
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/Data-and-Code/source/appendix.do",
+          "lines": [
+            852,
+            871
+          ],
+          "snippet": "csdid margin if $year_range & year <= 2016, ivar(hos_id) time(year) gvar(first_shock) method(dripw) wboot rseed(1)\nestat simple, estore(margin)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "robustness[2]",
+          "field": "type",
+          "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+          "lines": [
+            262,
+            262
+          ],
+          "snippet": "eststo: areg mortality rukr_famine urbanization urbanization_famine grain_suitability_famine mtemp",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": "robustness[1]",
+          "field": "type",
+          "path": "code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/10_Robustness.r",
+          "lines": [
+            95,
+            96
+          ],
+          "snippet": "if(robustness == 'first_difference'){\n  cleandat[order(year), greenness := greenness - data.table::shift(greenness, 1), by = uniqueid]",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o58",
+      "facet": "robustness_type",
+      "value": "alt_sample:confirmed",
+      "papers": 3,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.5,
+      "by_language": {
+        "Stata": 3
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/dataverse_HYLZUO/Replication Package_code_naep_analysis/naep_output.do",
+          "lines": [
+            34,
+            34
+          ],
+          "snippet": "reg evo_correct evo_score $controls  i.state i.year i.byear if schtype==1 & closestate10==1, vce(cluster state)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+          "lines": [
+            88,
+            88
+          ],
+          "snippet": "if main_sample & year >= 1922 & year <= 1940 & id != 26",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+          "lines": [
+            318,
+            319
+          ],
+          "snippet": "* Col 9: Ex-Mongolia\ndid_imputation Source_CNYex300yes sourcecountry t first_swap if em_tag==1 & Siso3c!=\"MNG\"",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o59",
+      "facet": "robustness_type",
+      "value": "alt_sample:unresolved",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "robustness[1]",
+          "field": "type",
+          "path": "code/Code/Code_Analysis/Table4.do",
+          "lines": [
+            41,
+            42
+          ],
+          "snippet": "if Date >= mdy(1,1,2008)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "robustness[2]",
+          "field": "type",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            157,
+            183
+          ],
+          "snippet": "qui probit treat patrev_ta cash_ta log_bedday est_pn_mort_rate if year == 2011",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o60",
+      "facet": "robustness_type",
+      "value": "alt_control_group:unresolved",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.167,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2025_restud_rdae091",
+          "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+          "record_id": "robustness[1]",
+          "field": "type",
+          "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+          "lines": [
+            102,
+            102
+          ],
+          "snippet": "eststo: acreg fmortality rukr_famine rother0_famine $dd_controls",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o61",
+      "facet": "robustness_type",
+      "value": "alt_fixed_effects:confirmed",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.167,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "robustness[0]",
+          "field": "type",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            79
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o62",
+      "facet": "robustness_type",
+      "value": "sensitivity_bounds:unresolved",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 6,
+      "unknown_papers": 0,
+      "share_of_known": 0.167,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "robustness[1]",
+          "field": "type",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            698,
+            717
+          ],
+          "snippet": "honestdid, pre(1 2 3) post(4) mvec(0(`delta')`upper') delta(sd)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o63",
+      "facet": "table_package",
+      "value": "esttab",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 14,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "t1",
+          "field": "package",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "esttab using \"$dir/output/table_4a.csv\", replace keep(post_st) b(%10.3f) se(3) ar(2) scalar(ymean ystd) ///",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+          "record_id": "t1",
+          "field": "package",
+          "path": "code/dataverse_1E0GUZ/replication package_codes/17_regressions_PSM_fin_bank.do",
+          "lines": [
+            119,
+            126
+          ],
+          "snippet": "esttab reg4 reg5 using \"$tables/Table_4_fin_bank.tex\", replace",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o64",
+      "facet": "table_package",
+      "value": "estout",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 14,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "t1",
+          "field": "package",
+          "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+          "lines": [
+            498,
+            498
+          ],
+          "snippet": "estout model0_1 model0_2 model1_1 model1_2 model2_1 model2_2 using \"$REPLICATION/Tables_MainText/table1.tex\"",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o65",
+      "facet": "output_format",
+      "value": "tex",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 14,
+      "share_of_known": 0.667,
+      "by_language": {
+        "Stata": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "t1",
+          "field": "format",
+          "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+          "lines": [
+            498,
+            498
+          ],
+          "snippet": "estout model0_1 model0_2 model1_1 model1_2 model2_1 model2_2 using \"$REPLICATION/Tables_MainText/table1.tex\"",
+          "language": "Stata"
+        },
+        {
+          "artid": "rfs_2026_rfs_hhaf080",
+          "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+          "record_id": "t1",
+          "field": "format",
+          "path": "code/dataverse_1E0GUZ/replication package_codes/17_regressions_PSM_fin_bank.do",
+          "lines": [
+            119,
+            126
+          ],
+          "snippet": "esttab reg4 reg5 using \"$tables/Table_4_fin_bank.tex\", replace",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o66",
+      "facet": "output_format",
+      "value": "csv",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 14,
+      "share_of_known": 0.333,
+      "by_language": {
+        "Stata": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "t1",
+          "field": "format",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            210,
+            210
+          ],
+          "snippet": "esttab using \"$dir/output/table_4a.csv\", replace keep(post_st) b(%10.3f) se(3) ar(2) scalar(ymean ystd) ///",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o67",
+      "facet": "classification_basis",
+      "value": "code_trace",
+      "papers": 17,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 4,
+        "Stata": 13
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/synthdid-sdid-paper/R/synthdid.R",
+          "lines": [
+            6,
+            6
+          ],
+          "snippet": "#' Computes the synthetic diff-in-diff estimate for an average treatment effect on a treated block.",
+          "language": "R"
+        },
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/Code/Code_DataCreation/2_OwnershipChange.R",
+          "lines": [
+            178,
+            178
+          ],
+          "snippet": "du1<-du1 %>% group_by(lat,lon) %>% mutate(Chain=ifelse(Before==0&After==0&buyer_type==1,1,0)) %>% ungroup",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/Data-and-Code/source/clean_hospital_sample.do",
+          "lines": [
+            164,
+            173
+          ],
+          "snippet": "gen post_st = 0\nby hos_id: replace post_st = 1 if str_test[_n-1] == 1 & _n > 1\nby hos_id: replace post_st = 1 if post_st[_n-1] == 1 & _n > 1",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "d1",
+          "field": "classification_basis",
+          "path": "code/duke-replication/analysis/scripts/programs/duketreat.ado",
+          "lines": [
+            23,
+            34
+          ],
+          "snippet": "treated = 1 if post == 1",
+          "language": "Stata"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+          "lines": [
+            186,
+            198
+          ],
+          "snippet": "Estimates moral hazard effects using difference-in-differences approach\nsource(file = \"./scripts/estimate_moral_hazard_did.R\", echo = TRUE)",
+          "language": "R"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "d2",
+          "field": "classification_basis",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_did.do",
+          "lines": [
+            299,
+            299
+          ],
+          "snippet": "gen treat1=$jvariable*(daten>-23736 & daten<-22632)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o68",
+      "facet": "role_known",
+      "value": "known",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 16,
+      "share_of_known": 1.0,
+      "by_language": {
+        "R": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "d2",
+          "field": "role",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+          "lines": [
+            186,
+            198
+          ],
+          "snippet": "Estimates moral hazard effects using difference-in-differences approach\nsource(file = \"./scripts/estimate_moral_hazard_did.R\", echo = TRUE)",
+          "language": "R"
+        }
+      ]
+    },
+    {
+      "id": "o69",
+      "facet": "resolution_status",
+      "value": "direct",
+      "papers": 15,
+      "specs": 43,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.882,
+      "by_language": {
+        "R": 3,
+        "Stata": 12
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/Code/Code_Analysis/Table3.R",
+          "lines": [
+            64,
+            65
+          ],
+          "snippet": "fe3 = felm(allunits~Before+After+Chain|as.factor(BUYER_ZIP)+as.factor(Date)|0|BUYER_ZIP, data=d)",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s3",
+          "field": "resolution_status",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            698,
+            698
+          ],
+          "snippet": "reghdfe bed_utl_rate str_test_ind_b3 - str_test_ind_p4 $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+          "lines": [
+            56,
+            56
+          ],
+          "snippet": "reghdfe `depvar' b0.treated, absorb(fips year)",
+          "language": "Stata"
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_moral_hazard_did.R",
+          "lines": [
+            110,
+            110
+          ],
+          "snippet": "modIV <- felm(yfill ~",
+          "language": "R"
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_did.do",
+          "lines": [
+            385,
+            385
+          ],
+          "snippet": "eststo: reghdfe `y' treat1 treat2, a(firmn daten i.sectorn##i.period1 i.sectorn##i.period2 /*i.firmn##c.daten*/) cluster(firmn)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": "s5",
+          "field": "resolution_status",
+          "path": "code/dataverse_Y9TZQI/0_Code_4_regressions_did/Cook_lehd_regs_did.do",
+          "lines": [
+            38,
+            38
+          ],
+          "snippet": "areg  `var' evicted qdum1-qdum12 qdum17 qdum18_21",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o70",
+      "facet": "resolution_status",
+      "value": "partial",
+      "papers": 7,
+      "specs": 20,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.412,
+      "by_language": {
+        "R": 1,
+        "Stata": 6
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+          "lines": [
+            122,
+            122
+          ],
+          "snippet": "estimates = lapply(estimators, function(estimator) { estimator(setup$Y, setup$N0, setup$T0) }",
+          "language": "R"
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/Data-and-Code/source/hospital.do",
+          "lines": [
+            189,
+            208
+          ],
+          "snippet": "eststo: qui reghdfe margin post_st $control_var if $year_range & year <= 2016, absorb(hos_id year) cluster(hos_id)",
+          "language": "Stata"
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": "s2",
+          "field": "resolution_status",
+          "path": "code/duke-replication/analysis/scripts/code/5_figures.do",
+          "lines": [
+            522,
+            522
+          ],
+          "snippet": "csdid `depvar' [iw = `weightvar'], ivar(fips) time(year) gvar(time_treated_2) agg(event)",
+          "language": "Stata"
+        },
+        {
+          "artid": "qje_140_1_10",
+          "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/dataverse_XABPWK/Replication package/industry_analysis.do",
+          "lines": [
+            131,
+            146
+          ],
+          "snippet": "reghdfe `var' scaledpost , absorb(year isic $sharecontrols) vce(cluster isic)",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_16539681/Replication/Replication/code/do/2_analysis/main/table2.do",
+          "lines": [
+            18,
+            18
+          ],
+          "snippet": "reghdfe `outc' *Xpost73 if est_year>=1960 & est_year<=1999, a(id_dec80 est_year i.est_year#c.ch71",
+          "language": "Stata"
+        },
+        {
+          "artid": "restud_2026_restud_rdaf080",
+          "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+          "record_id": "s1",
+          "field": "resolution_status",
+          "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+          "lines": [
+            474,
+            474
+          ],
+          "snippet": "xi: reghdfe `var' PostXConflict23 z w $controls $cond, a( $fixedeffects ) cl(OKPO_n)",
+          "language": "Stata"
+        }
+      ]
+    },
+    {
+      "id": "o71",
+      "facet": "language",
+      "value": "Stata",
+      "papers": 15,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.882,
+      "by_language": {
+        "Stata": 15
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_114_11_7",
+          "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "jfe_2024_j_jfineco_2024_103809",
+          "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o72",
+      "facet": "language",
+      "value": "R",
+      "papers": 9,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.529,
+      "by_language": {
+        "R": 9
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "aer_111_12_8",
+          "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_113_1_1",
+          "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "aer_114_7_10",
+          "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "qje_139_1_2",
+          "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdaf071",
+          "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o73",
+      "facet": "language",
+      "value": "Jupyter",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.118,
+      "by_language": {
+        "Jupyter": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "qje_139_4_7",
+          "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "rfs_2026_rfs_hhag045",
+          "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o74",
+      "facet": "language",
+      "value": "Python",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.118,
+      "by_language": {
+        "Python": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "restud_2026_restud_rdag011",
+          "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o75",
+      "facet": "language",
+      "value": "Shell",
+      "papers": 2,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.118,
+      "by_language": {
+        "Shell": 2
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        },
+        {
+          "artid": "restud_2026_restud_rdag080",
+          "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o76",
+      "facet": "language",
+      "value": "C",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "C": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    },
+    {
+      "id": "o77",
+      "facet": "language",
+      "value": "MATLAB",
+      "papers": 1,
+      "specs": 0,
+      "denominator_papers": 17,
+      "unknown_papers": 0,
+      "share_of_known": 0.059,
+      "by_language": {
+        "MATLAB": 1
+      },
+      "status_note": null,
+      "evidence": [
+        {
+          "artid": "ecta_2025_ecta22303",
+          "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+          "record_id": null,
+          "field": "languages",
+          "path": null,
+          "lines": null,
+          "snippet": null,
+          "language": null
+        }
+      ]
+    }
+  ],
+  "free_text": [
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "implementation_feature",
+      "text": "1000 replications for point estimates (RMSE, bias)",
+      "record_id": "d2",
+      "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+      "lines": [
+        245,
+        273
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "implementation_feature",
+      "text": "400 replications for variance/coverage (slow)",
+      "record_id": "d2",
+      "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+      "lines": [
+        245,
+        273
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "implementation_feature",
+      "text": "Multiple simulator variants: baseline, no.corr, no.M, no.F, only.noise, no.noise, gun.law, abortion, random, hours, urate, T1.is.one, N1.is.one, blocksize.is.one, resample.200, resample.400, penn.democracy, penn.education, penn.random",
+      "record_id": "d2",
+      "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+      "lines": [
+        245,
+        273
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "implementation_feature",
+      "text": "DGP parameters estimated via estimate_dgp from CPS/PENN baseline data",
+      "record_id": "d2",
+      "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+      "lines": [
+        245,
+        273
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "implementation_feature",
+      "text": "RNG seeding via RNGseq (L'Ecuyer-CMRG) for reproducibility",
+      "record_id": "d2",
+      "path": "code/synthdid-sdid-paper/vignettes/paper-results.Rmd",
+      "lines": [
+        245,
+        273
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "convention",
+      "text": "Y matrix: rows are units (N=N0+N1), columns are time periods (T=T0+T1); treatment is simultaneous block: W[1:N0,] = 0, W[(N0+1):N,] = 0 for pre-treatment, W[(N0+1):N, (T0+1):T] = 1",
+      "record_id": null,
+      "path": "code/synthdid-sdid-paper/R/utils.R",
+      "lines": [
+        98,
+        99
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "convention",
+      "text": "Noise level estimated from first differences of pre-treatment control outcomes: sd(apply(Y[1:N0,1:T0], 1, diff))",
+      "record_id": null,
+      "path": "code/synthdid-sdid-paper/R/synthdid.R",
+      "lines": [
+        39,
+        39
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "convention",
+      "text": "Ridge tuning parameters: zeta.omega = eta.omega * noise.level; default eta.omega = (N1 * T1)^(1/4); eta.lambda = 1e-6",
+      "record_id": null,
+      "path": "code/synthdid-sdid-paper/R/synthdid.R",
+      "lines": [
+        40,
+        41
+      ]
+    },
+    {
+      "artid": "aer_111_12_8",
+      "card_sha256": "8fcabbff089763fbc387bf5cd80e44c78c48b874def707a31daa0afd68e7646c",
+      "kind": "reading_note",
+      "text": "Full reading of main estimator functions, data loading, California application, and placebo simulation vignette (paper-results.Rmd). All code paths traced from data setup through estimator calls to variance computation and output generation.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_113_1_1",
+      "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+      "kind": "sample_restriction",
+      "text": "Require 6-month pre-acquisition period; acquisition date after 2006-06-01",
+      "record_id": null,
+      "path": "code/Code/Code_DataCreation/2_OwnershipChange.R",
+      "lines": [
+        164,
+        165
+      ]
+    },
+    {
+      "artid": "aer_113_1_1",
+      "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+      "kind": "sample_restriction",
+      "text": "OxyContin reformulation analysis uses 2008-2012 subset",
+      "record_id": null,
+      "path": "code/Code/Code_Analysis/Table4.do",
+      "lines": [
+        41,
+        42
+      ]
+    },
+    {
+      "artid": "aer_113_1_1",
+      "card_sha256": "b54cc3cfa56d2e3c280f0eb56ecf62b6804469d1983d818c282662fadfc98a4e",
+      "kind": "reading_note",
+      "text": "Traced entry points, data construction pipeline, main estimators (felm OLS with FE), and event-study specifications. Skipped data-cleaning detail once main analysis dataset identified. Multiple specifications estimated; focused on core method branches.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_114_11_7",
+      "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+      "kind": "sample_restriction",
+      "text": "Sample restricted to year_range year >= 2010",
+      "record_id": null,
+      "path": "code/Data-and-Code/source/hospital.do",
+      "lines": [
+        5,
+        6
+      ]
+    },
+    {
+      "artid": "aer_114_11_7",
+      "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+      "kind": "sample_restriction",
+      "text": "Year <= 2016 for most financial/utilization outcomes",
+      "record_id": null,
+      "path": "code/Data-and-Code/source/hospital.do",
+      "lines": [
+        189,
+        189
+      ]
+    },
+    {
+      "artid": "aer_114_11_7",
+      "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+      "kind": "sample_restriction",
+      "text": "Year <= 2017 for readmission and mortality outcomes",
+      "record_id": null,
+      "path": "code/Data-and-Code/source/hospital.do",
+      "lines": [
+        305,
+        305
+      ]
+    },
+    {
+      "artid": "aer_114_11_7",
+      "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+      "kind": "sample_restriction",
+      "text": "Propensity score match_sample indicator from 2011",
+      "record_id": null,
+      "path": "code/Data-and-Code/source/hospital.do",
+      "lines": [
+        237,
+        237
+      ]
+    },
+    {
+      "artid": "aer_114_11_7",
+      "card_sha256": "1a84b34ebcab13df24845798d87ac770002ea596236f86991e7b1ccc88059de1",
+      "kind": "reading_note",
+      "text": "Read main pipeline and key analysis branches; data cleaning scripts not fully traced; 14 Stata do-files total",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "aer_114_7_10",
+      "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+      "kind": "sample_restriction",
+      "text": "statefip=37 (North Carolina) births, 1922-1942",
+      "record_id": null,
+      "path": "code/duke-replication/analysis/scripts/code/5_tables.do",
+      "lines": [
+        593,
+        593
+      ]
+    },
+    {
+      "artid": "aer_114_7_10",
+      "card_sha256": "5d6aade37f42141600215caf56972bd84c2d35024dd9c9feb6ecae632077b4ec",
+      "kind": "reading_note",
+      "text": "Focused on main tables/figures and estimation design. Data pipeline (build stage) not read; appendices sampled.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "convention",
+      "text": "Relative file paths throughout (./data/, ./figures/, ./tables/, ./scripts/); working directory set to analysis - Replication/",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/Master.R",
+      "lines": [
+        42,
+        42
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "sample_restriction",
+      "text": "Loan amount must be positive (Phys_Amount_Disbursed > 0)",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+      "lines": [
+        28,
+        28
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "sample_restriction",
+      "text": "Must have verified loss amount (non-missing Current_Verified_Loss)",
+      "record_id": null,
+      "path": "code/zenodo_14871772/analysis_-_Replication_2_/analysis - Replication/scripts/estimate_notch_updated.R",
+      "lines": [
+        31,
+        31
+      ]
+    },
+    {
+      "artid": "ecta_2025_ecta22303",
+      "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5",
+      "kind": "reading_note",
+      "text": "Focused on pipeline architecture (Master.R), bunching estimation calls and thresholds, DIB specification, moral hazard DID model, and structural model initialization. Skipped robustness checks, heterogeneity analysis, and complete structural model details due to budget constraints. Renv and stargazer packages are vendored dependencies.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "jfe_2024_j_jfineco_2024_103809",
+      "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413",
+      "kind": "reading_note",
+      "text": "Main analysis files comprehensively read (450+685+300 lines). Appendix partially read (first 100 lines show robustness). Data preparation and key regression calls documented. Market model computations, event windows, DID periods, and synthetic control setup all traced. Vendored tool library skipped per policy.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "qje_139_1_2",
+      "card_sha256": "a1cfaa3252046eec32b57459142ec522f020912ad5b45870cca73f0fd4017414",
+      "kind": "reading_note",
+      "text": "Sampled 7 of 78 code files. Traced IV, OLS, reduced form, event study, and DID specifications across NYC and Cook County. Main identification: judge leniency as IV for eviction effects.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "qje_139_4_7",
+      "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc",
+      "kind": "reading_note",
+      "text": "Staggered DID with state curriculum reforms. Main outcomes: evolution knowledge (NAEP), belief (GSS), career choice (ACS). OLS and csdid event studies with honestdid robustness.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "qje_140_1_10",
+      "card_sha256": "01eb612954c3f1b6f4b6a3426dfcb3beb5091962e7dc7df8f121ec4eacc75ef9",
+      "kind": "reading_note",
+      "text": "Focused on pipeline structure and key DID/DDD/shift-share specifications across industry, municipality, and individual levels.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "convention",
+      "text": "Conditional logic on id variable: replace name_en based on id values",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/create_provinces.do",
+      "lines": [
+        12,
+        12
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "convention",
+      "text": "Treatment and control variables interact with famine indicator (famine=1 if year==1932)",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/create_provinces.do",
+      "lines": [
+        6,
+        8
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "convention",
+      "text": "Outcome variable is forward difference: fmortality = f.mortality (captures 1933 outcome from 1932 covariates)",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/create_provinces.do",
+      "lines": [
+        199,
+        200
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "sample_restriction",
+      "text": "Main sample indicator: main_sample == 1",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+      "lines": [
+        15,
+        15
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "sample_restriction",
+      "text": "Year range: 1922-1940 for province-level, 1926-1939 for district-level",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+      "lines": [
+        15,
+        15
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "sample_restriction",
+      "text": "District sample: cnt == 2 (two-canton districts)",
+      "record_id": null,
+      "path": "code/zenodo_10983057/v2/v2/main_tables.do",
+      "lines": [
+        174,
+        174
+      ]
+    },
+    {
+      "artid": "restud_2025_restud_rdae091",
+      "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409",
+      "kind": "reading_note",
+      "text": "Province and district-level data construction scripts read. Main tables and figures scripts fully read. Appendix robustness scripts skipped due to budget. Both v2 and v3 replication packages present; v2 analyzed.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdaf071",
+      "card_sha256": "9296fd2f202a631a698587f16208b948e5175792ae53161d53e77a4d559e64e0",
+      "kind": "reading_note",
+      "text": "Read master script, 9 main table scripts, event study figure, and IV appendix spec. Skipped data prep (150 lines each), appendix tables/figures, and R scripts due to budget. Primary methods: DID and event_study with reghdfe for sample pooling analyses; individual cohort-level DID for survey data. IV specs present in appendix (tableA22) instrument for intermediate school entry using geographic variation in waqf and rice productivity.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdaf080",
+      "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+      "kind": "convention",
+      "text": "Global macro variables for paths using include pathnames",
+      "record_id": null,
+      "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Master_file.do",
+      "lines": [
+        2,
+        2
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf080",
+      "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+      "kind": "convention",
+      "text": "Seed setting at beginning of both Stata and R workflows (seed 10101 in Stata, seed 123 in R)",
+      "record_id": null,
+      "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Data_Preparation/Master_file_data_prep.do",
+      "lines": [
+        4,
+        4
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf080",
+      "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+      "kind": "sample_restriction",
+      "text": "Exclude firms in conflict-affected areas (conflict_gis_ind==0)",
+      "record_id": null,
+      "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+      "lines": [
+        4,
+        4
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf080",
+      "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+      "kind": "sample_restriction",
+      "text": "Balanced sample: firms with 9-year panel (2010-2018) in robustness check",
+      "record_id": null,
+      "path": "code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do",
+      "lines": [
+        556,
+        558
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdaf080",
+      "card_sha256": "af7df6176109ecfe2b49aa1c3acbac5288dbdba4418b6e26ceeb05a77064dd91",
+      "kind": "reading_note",
+      "text": "Focus on master and main analysis scripts (Stata reduced form + R structural model). Skipped detailed data-prep and helper functions due to budget. Pipeline: firm-year balance-sheet+trade data → DID/event-study reduced-form; parallel: calibrated network model with endogenous link formation → counterfactual simulation.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+      "kind": "convention",
+      "text": "Global variables for control specifications ($Tradecontrols, $PolicyControls, $NeighbourControls, $LogControls) used across all did_imputation specifications",
+      "record_id": null,
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+        119,
+        120
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+      "kind": "sample_restriction",
+      "text": "Emerging markets sample: restrict to em_tag==1",
+      "record_id": null,
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+        214,
+        214
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+      "kind": "sample_restriction",
+      "text": "Exclude Mongolia (Siso3c!=\"MNG\") in robustness checks",
+      "record_id": null,
+      "path": "code/zenodo_15675543/Replication_package_for_Jumpstarting_an_International_Currency/Replication package for Jumpstarting an International Currency/ReplicationCode/Codes/Part1Analysis1.do",
+      "lines": [
+        319,
+        319
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag011",
+      "card_sha256": "99f324f7e405c6c86ffdb07e6733368696810adb1e70c4793d61080fb23c5796",
+      "kind": "reading_note",
+      "text": "Focus on main analysis Part1Analysis1.do (Tables 1-7, Figures 4-5, 7, A4). Part1Process.do shows data pipeline (9 steps); specific data cleaning scripts listed but not deep-read per policy. Part2Analysis.do covers financial market outcomes (Table 4). Part3Analysis.ipynb produces map visualizations (Figures 1b, A3).",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "convention",
+      "text": "Multi-state firm design: treatment varies by geography within same firm; exploits geographic variation to control for firm-level shocks",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+        106,
+        106
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "convention",
+      "text": "4-quarter binned event-study leads/lags with reference period t=-1 (collinear). Lags: 0,1,2,3,4 years post-reform. Leads: -4,-3,-2 years pre-reform.",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+        66,
+        66
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "convention",
+      "text": "Treatment indicator variable (treat) set to 0 initially, then equals 1 for reform states MO/SC/MI/FL/GA/KS/NC post-reform",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+        134,
+        138
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "sample_restriction",
+      "text": "Multi-state firm sample",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/11 BGT wages analysis.do",
+      "lines": [
+        53,
+        53
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "sample_restriction",
+      "text": "Southern and Midwestern states only (NC analysis)",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/2 short-term UI recipiency analysis.do",
+      "lines": [
+        245,
+        245
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "sample_restriction",
+      "text": "Treatment states (NC,FL,GA,KS,MI,MO,SC) plus Southern/Midwestern controls (CPS analysis)",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+        128,
+        129
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "sample_restriction",
+      "text": "New hire sample (job tenure < 1 year) for CPS starting salary analysis",
+      "record_id": null,
+      "path": "code/zenodo_20014224/REStud_replication_files/REStud replication files/do-files/5 CPS outcomes analysis.do",
+      "lines": [
+        301,
+        307
+      ]
+    },
+    {
+      "artid": "restud_2026_restud_rdag056",
+      "card_sha256": "3a7eaf16f78181017a1a86d1754107643e548ea2e3b8d1fd4ae640974fd4eafe",
+      "kind": "reading_note",
+      "text": "Master do-file organizes analysis into publicly runnable programs (2-7 using CPS/DOL data) and confidential programs (1,8-12 using EEO-1/Glassdoor/BGT data). Reading focused on estimation specifications from programs 2, 5, 8, 11 which represent main analyses for employment (EEO-1) and posted wages (BGT) with supporting CPS analyses. Two main research designs identified: (1) NC sharp DiD post July 2013 vs Southern/Midwestern controls; (2) Staggered DiD with 6 moderate reform states (FL/GA/KS/MI/M",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "restud_2026_restud_rdag080",
+      "card_sha256": "759037d43cb62cbc1210a3313284eef0da4626648c01c13e5395c4ee0d9c6a29",
+      "kind": "reading_note",
+      "text": "Analyzed setup, main Callaway & Sant'anna and TWFE specs (scripts 4_CS_small, 5_CS_large), heterogeneity (8_grf), pipeline (make.sh). Evidence sourced from code reads 1-300, 380-430 lines. Data availability documented but not fully grounded. Coverage limited by reading budget.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2026_rfs_hhaf080",
+      "card_sha256": "18234753334da6bbb8708e0e2d2047ac9fc095ed9f79a8035fcb0b066d1c5e7b",
+      "kind": "reading_note",
+      "text": "Focused on entry point (master script), main estimation stages, and key specification tables (4, 6, 8). Propensity score matching stage (scripts 3-6) and sensitivity robustness tables (8b, Internet Appendix) skipped due to budget constraints. Shift-share instrument (scoredeltapost) identified but full construction details not fully traced.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    },
+    {
+      "artid": "rfs_2026_rfs_hhag045",
+      "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+      "kind": "sample_restriction",
+      "text": "Regression sample for firm-level analyses: trade dummy non-missing",
+      "record_id": null,
+      "path": "code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do",
+      "lines": [
+        131,
+        132
+      ]
+    },
+    {
+      "artid": "rfs_2026_rfs_hhag045",
+      "card_sha256": "fa59b15fe66dba40df48be3ea8d5a9f16d6022112ee37e8f87a81c5ab1199356",
+      "kind": "reading_note",
+      "text": "Master and main-analysis scripts read; data construction (1_x, 2_x) skipped per budget; city-level robustness (4_2) deferred. Bilateral-level design (4_3) fully read. Three main designs identified: (d1) firm-level DID with bank-level treatment; (d2) firm-level DID with city-level treatment (city_level_treatment.do not read); (d3) bilateral product-level DID with country-level treatment.",
+      "record_id": null,
+      "path": null,
+      "lines": null
+    }
+  ],
+  "gaps": [
+    "facet variant: unknown in 15/17 papers; shares are computed over the 2 known papers only",
+    "facet package: unknown in 10/17 papers; shares are computed over the 7 known papers only",
+    "facet weights: unknown in 15/17 papers; shares are computed over the 2 known papers only",
+    "facet table_package: unknown in 14/17 papers; shares are computed over the 3 known papers only",
+    "facet output_format: unknown in 14/17 papers; shares are computed over the 3 known papers only",
+    "facet role_known: unknown in 16/17 papers; shares are computed over the 1 known papers only",
+    "12/17 cards have no specification-to-output links; output facets cover the remaining cards only",
+    "1 minimal-coverage cards contribute positive findings only"
+  ],
+  "notes": "Observed practices only. Shares are among papers whose card records a known value; null/unknown/not_found_in_scope are never counted as absence. Recommendations live in recommendations.md and require method sources and review."
+}

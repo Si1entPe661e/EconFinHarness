@@ -1,0 +1,1067 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "jpe_2026_742424",
+  "journal": "JPE",
+  "year": 2026,
+  "doi": "10.1086/742424",
+  "source": {
+    "pdf_path": "Paper/PDF/jpe_2026_742424.pdf",
+    "pdf_sha256": "b53e5c8761f959e72029f2cfc062bdd0a17de81d25cc34bf4c9a7df5a3ccb1e7",
+    "text_path": "harness_build/papers/text/jpe_2026_742424.txt",
+    "text_sha256": "79ef0d75ae499c8182ff7a3eeb12d770ffc7d882065b5c1185fe043c91c6398d",
+    "pages": 38
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:20:10Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/jpe_2026_742424.json",
+    "card_sha256": "b558e191a8f5f206e324efaf2959acf7e5072cee204ae99acfd73b6e44eb60df"
+  },
+  "methods": [
+    "synthetic_control"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "I. Introduction (incl. A. Related Literature, B. Notation)",
+      "pages": [
+        1,
+        8
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "design",
+      "title": "II. Debiasing and t-Tests for SC Inference on the ATT",
+      "pages": [
+        9,
+        12
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "model",
+      "title": "III. Theoretical Properties with Stationary Data",
+      "pages": [
+        13,
+        20
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "model",
+      "title": "IV. Theoretical Properties with Nonstationary Data",
+      "pages": [
+        21,
+        23
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "model",
+      "title": "V. Main Extensions",
+      "pages": [
+        24,
+        26
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "VI. Application-Based Simulations",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "VII. Estimating the Impact of Carbon Taxes on Emissions",
+      "pages": [
+        29,
+        33
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "other",
+      "title": "VIII. Recommendations for Practice",
+      "pages": [
+        33,
+        35
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "Data Availability and References",
+      "pages": [
+        35,
+        38
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The paper names its target parameter precisely as the average treatment effect on the treated over the post-treatment period for a single treated unit, distinguishing it from per-period effects and sharp-null tests used elsewhere in the synthetic control literature.",
+      "pages": [
+        1,
+        2
+      ],
+      "locator": "Abstract / Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "The introduction states two inferential threats motivating the method: the synthetic control estimator is biased because the weights are estimated in a setting with many controls relative to the pre-period length, and the long-run variance needed for standard errors is hard to estimate reliably in small samples.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The proposed design variant combines a K-fold cross-fitting procedure that debiases the synthetic control estimator with a self-normalized test statistic that has a pivotal t-distribution, avoiding direct estimation of the long-run variance.",
+      "pages": [
+        2,
+        12
+      ],
+      "locator": "Introduction; Section II",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The authors state that they deliberately avoid assumptions on the exact form of nonstationarity (e.g., unit root versus near-unit-root), arguing that even slight misspecification of the nonstationarity type is known to invalidate inference in related settings.",
+      "pages": [
+        3,
+        21
+      ],
+      "locator": "Introduction; Section IV",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "parallel_trends_argued"
+      ],
+      "statement": "The paper formally argues that the debiased synthetic control estimator is asymptotically at least as efficient as difference-in-differences and remains valid when the common-trends assumption underlying difference-in-differences fails, framing this as a design advantage over the leading alternative.",
+      "pages": [
+        3,
+        24
+      ],
+      "locator": "Section III.C; Section IV.B Remark",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "The identifying condition for the debiasing argument is stated as approximate independence between the estimated weights on each cross-fitting fold and the data in the held-out block and post-treatment period, which the authors say holds under weak temporal dependence.",
+      "pages": [
+        9,
+        15
+      ],
+      "locator": "Section II.B; Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The empirical illustration reuses a previously published country-panel dataset on transport carbon emissions with one treated country and a fixed set of OECD comparison countries, citing the original study as the data source rather than assembling a new sample.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "exclusions_justified"
+      ],
+      "statement": "The sample period is justified by an external institutional cutoff: the post-treatment window ends at the year the original study also stops, because a separate EU-wide emissions trading system began that year and would confound the treatment being studied.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "Simulation calibration in the application-based Monte Carlo study draws its persistence and factor-model parameters directly from residuals and comparison-country data fitted to the same empirical application, rather than from an independent or purely theoretical design.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "The outcome variable is defined as the treated country's per-capita emissions from a specific sector, matching the definition used in the original study being revisited rather than proposing a new outcome measure.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "The predictor set used to construct synthetic control weights in the reanalysis is stated to differ from the original study: the paper uses the full history of past outcomes as predictors, while the original study used a subset of past outcomes plus additional covariates.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section VII, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ],
+      "quote": "our SC specification differs from Andersson (2019a)"
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "The paper interprets its underlying prediction model as a statistical approximation rather than a structural model, explicitly allowing the fitted weights to diverge from any notion of 'true' synthetic control weights and treating this divergence as ordinary misspecification rather than measurement error.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "The main application table reports the proposed estimator as the primary panel and then presents three alternative inference methods (an equal-weight comparison, a subsampling approach, and a synthetic-difference-in-differences approach) as separate panels of the same table rather than as later robustness columns.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes"
+      ],
+      "statement": "Table notes describe how each panel's interval was constructed (e.g., that one panel's interval is asymmetric because it is based on a percentile method), giving readers the specific inferential procedure behind each row rather than a single uniform standard-error convention.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Table 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table"
+      ],
+      "statement": "The Monte Carlo results table organizes rows by data-generating process and by the number of cross-fitting folds used, so the reported bias, coverage, and interval length can be read as a function of the estimator's tuning choice rather than of covariate sets or fixed effects, which are not part of the design.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "inference_justification",
+      "tags": [
+        "other:self_normalized_pivotal_statistic"
+      ],
+      "statement": "Inference is justified by constructing a scale-free, self-normalized statistic whose asymptotic distribution is a pivotal Student-t, which the authors motivate as a way to sidestep the difficult and unreliable estimation of the long-run variance in small samples.",
+      "pages": [
+        11,
+        16
+      ],
+      "locator": "Section II.B; Theorem 2",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "inference_justification",
+      "tags": [
+        "other:cross_fitting_blocks"
+      ],
+      "statement": "The degrees of freedom of the inferential t-distribution are tied directly to the number of cross-fitting blocks chosen by the researcher, so the paper frames the block count as an explicit, user-set inferential tuning parameter rather than a nuisance choice.",
+      "pages": [
+        11,
+        18
+      ],
+      "locator": "Section II.B; Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "other:accuracy_length_tradeoff"
+      ],
+      "statement": "Choosing the number of cross-fitting blocks is explicitly justified as a trade-off between the accuracy of the coverage and the expected width of the confidence interval, with a formula for relative asymptotic efficiency offered to help researchers navigate that trade-off.",
+      "pages": [
+        18,
+        20
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "other:newey_west_critiqued"
+      ],
+      "statement": "The authors justify avoiding classical long-run-variance estimators by pointing to simulation evidence, cited from their own prior work, that a popular heteroskedasticity- and autocorrelation-consistent estimator produces substantial undercoverage in the small-sample regime typical of this literature.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "Introduction, Figure 2",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "other:persistence_diagnostic_for_block_choice"
+      ],
+      "statement": "The paper recommends that researchers gauge the persistence of prediction errors by fitting a simple autoregressive model to pre-treatment residuals, and use that persistence estimate together with application-based simulations to select the number of cross-fitting blocks.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:placebo_in_time_test",
+        "in_main_text"
+      ],
+      "statement": "A placebo-in-time procedure is proposed and applied: the pre-treatment period is split into a placebo pre- and post-period, the test is applied within that placebo window, and rejection is interpreted as evidence against the assumptions underlying the method, including possible structural breaks or unstable weights.",
+      "pages": [
+        26,
+        33
+      ],
+      "locator": "Section V.A; Section VII, Table 4",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:ar1_residual_persistence_check",
+        "in_main_text"
+      ],
+      "statement": "Persistence in the pre-treatment prediction errors is diagnosed by fitting an autoregressive model to the synthetic-control residuals, which the paper treats as an input both to choosing the cross-fitting block count and to calibrating the application-based simulations.",
+      "pages": [
+        19,
+        27
+      ],
+      "locator": "Section III.B; Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "An extended simulation exercise with a much longer pre-treatment period is described as reported in the online appendix to check whether the theoretical requirement that the pre-period be much longer than the post-period materially affects performance; this appendix material was not part of the extracted text.",
+      "pages": [
+        27,
+        29
+      ],
+      "locator": "Section VI, appendix reference",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "A comparison against the widely used permutation-based inference approach from the foundational synthetic control paper is stated to be reported in an online appendix section rather than in the main simulation table.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section VI, appendix reference",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "Robustness to the choice of estimator is addressed by comparing the proposed method against a difference-in-differences cross-fitting variant, a subsampling procedure from prior literature, and a synthetic-difference-in-differences estimator, all summarized together in one simulation table across multiple data-generating processes.",
+      "pages": [
+        27,
+        30
+      ],
+      "locator": "Section VI, Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_main_text"
+      ],
+      "statement": "The same four-method comparison used in the simulation study is repeated on the real application data, letting the paper describe whether the qualitative conclusions from simulations (e.g., about relative interval width) carry over to the empirical illustration.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section VII, Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "Sensitivity of the method to its own tuning parameter is reported through a figure showing the coverage-versus-length trade-off across a range of block counts under one calibrated design, alongside a table of relative asymptotic efficiency for a range of block-count choices.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.B, Figure 3 and Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "The main Monte Carlo table itself functions as a stress test of the design: it deliberately includes both correctly specified and misspecified data-generating processes, and both common and unit-specific forms of nonstationarity, to show where the guarantees hold and where they degrade.",
+      "pages": [
+        27,
+        30
+      ],
+      "locator": "Section VI, Table 2 and Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Robustness of the method to a different kind of instability, namely time-varying synthetic control weights that follow a persistent regime-switching process, is investigated through simulation evidence that the paper states is reported in an online appendix section.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section V.A, appendix reference",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "mechanism_motivated"
+      ],
+      "statement": "Heterogeneity across data-generating processes rather than across observational units is the paper's main lens: several simulation designs deliberately introduce heterogeneous trends or heterogeneous drift terms across comparison units to probe how much the method's guarantees depend on unit homogeneity.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section VI, Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The empirical illustration's inferential conclusion is explicitly framed as corroborating a specific published finding from the original study, which used a different, permutation-based inference procedure, rather than as a free-standing new empirical claim.",
+      "pages": [
+        6,
+        32
+      ],
+      "locator": "Introduction; Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "precision_discussed"
+      ],
+      "statement": "Differences in the width of confidence intervals across the four compared methods in the empirical application are explained by appeal to the simulation evidence, attributing wider intervals from one competing method to its reliance on cross-sectional homoskedasticity, which the paper argues is less plausible given the heterogeneous comparison units used.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The recommendations section states explicitly that the method should not be used when there are too few post-treatment periods, such as when data are limited or when comparison units also become treated shortly after the focal unit, since the underlying asymptotic requirement is violated.",
+      "pages": [
+        2,
+        34
+      ],
+      "locator": "Introduction; Section VIII.A",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "A caveat is stated that when comparison units are homogeneous enough to justify cross-sectional homoskedasticity, an alternative method exploiting cross-sectional rather than time-series variation may be preferable to the proposed approach, acknowledging that the paper's method is not uniformly the recommended choice.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section VIII.A",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The paper acknowledges that its theoretical guarantees under deviations from common nonstationarity require correct specification of the prediction model and a pre-treatment period that is much longer than the post-treatment period, and that simulation evidence shows some undercoverage outside that regime.",
+      "pages": [
+        22,
+        29
+      ],
+      "locator": "Section IV.B; Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars",
+        "notes_state_se"
+      ],
+      "statement": "Result tables in both the simulation study and the empirical application report point estimates together with confidence intervals rather than using significance stars, and table notes state the nominal coverage level and the inference procedure used to construct each interval.",
+      "pages": [
+        30,
+        33
+      ],
+      "locator": "Table 3; Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot"
+      ],
+      "statement": "The empirical application opens with a raw time-series plot of the outcome for the treated unit before any modeling, which the authors use to motivate visually that something changes in the outcome path around the treatment date before turning to formal inference.",
+      "pages": [
+        29,
+        32
+      ],
+      "locator": "Section VII, Figure 4",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "presentation_convention",
+      "tags": [
+        "other:simulation_distribution_figure"
+      ],
+      "statement": "Simulation results are also conveyed graphically rather than only in tables: one figure overlays the sampling distribution of the estimator with and without debiasing against the true parameter value, and another plots empirical coverage of a competing variance estimator across a design parameter.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Introduction, Figures 1-2",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "A dedicated table enumerates each Monte Carlo data-generating process by name, its parameter settings, and the theoretical section of the paper it is designed to satisfy or violate, functioning as a design summary table rather than a summary-statistics table of real data.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "The direction and significance of the empirical application's main finding is previewed in the introduction, well before the formal application section, alongside a statement that the result corroborates the original published study.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "writing_structure",
+      "tags": [
+        "design_before_data"
+      ],
+      "statement": "The paper's overall structure develops the estimator and its theoretical guarantees under stationary and then nonstationary data across several sections before presenting any simulation or real-data evidence, so design and theory precede data and application by a wide margin.",
+      "pages": [
+        9,
+        27
+      ],
+      "locator": "Sections II-IV precede Sections VI-VII",
+      "basis": "inferred",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph",
+        "contribution_paragraph"
+      ],
+      "statement": "The introduction closes with an explicit roadmap sentence pointing readers to the practical-recommendations section, following an earlier paragraph in the same introduction that states the paper's contribution relative to the two closest prior papers.",
+      "pages": [
+        3,
+        6
+      ],
+      "locator": "Introduction; Section I.A",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main",
+        "robustness_separate_section"
+      ],
+      "statement": "Simulation evidence assessing when the method works well or poorly is placed in its own section immediately before, and explicitly calibrated to, the real-data application that follows it, so the robustness-style evidence precedes rather than follows the main empirical result.",
+      "pages": [
+        27,
+        29
+      ],
+      "locator": "Section VI precedes Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The practical-recommendations section discusses how the method should be adapted when there are multiple treated units, noting that applying it separately unit by unit is reasonable for a small number of treated units but that other methods designed for many simultaneously treated units may be preferable at larger scale.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Section VIII.A",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "A dedicated data-availability statement cites a deposited replication package containing both the code and data for the paper, and states that the package was checked by the journal for its ability to reproduce the paper's results.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Data Availability statement",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "replication_statement",
+      "tags": [
+        "software_named",
+        "code_public"
+      ],
+      "statement": "The main inferential method is stated to be implemented in a named, publicly hosted R package, and the paper reports that all computations in both the simulation study and the empirical application were carried out in R.",
+      "pages": [
+        2,
+        32
+      ],
+      "locator": "Introduction footnote; Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "data_access",
+      "tags": [
+        "public_use",
+        "administrative"
+      ],
+      "statement": "The country-panel emissions data reanalyzed in the empirical application are described as originating from an existing, separately deposited replication package for the original published study rather than from a new or restricted-access source.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section VII, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Main estimator is a K-fold cross-fitted, debiased synthetic control estimator ('t-DISCo') with a self-normalized t-test, applied in the empirical application with the block count fixed at the paper's recommended benchmark value.",
+      "card_shows": "Design d1 method=synthetic_control; specification s1 calls the scinference package with estimation_method='sc' and inference_method='ttest', matching the debiased SC + t-test procedure and its recommended fold count.",
+      "status": "agree",
+      "pages": [
+        9,
+        33
+      ],
+      "card_ref": "designs[0,0].method; specifications[0,0].formula_or_call"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "The paper reports three named alternative estimators for comparison in both the simulation study and the application: a cross-fitted difference-in-differences variant, a subsampling-based synthetic control estimator from prior literature, and synthetic difference-in-differences.",
+      "card_shows": "Specifications s2 (estimator=did_twfe via scinference 'did'), s3 (estimator=synthetic_did via synthdid_estimate), and s4 (estimator=synthetic_control via the li2020 function) correspond to the same three comparison methods.",
+      "status": "agree",
+      "pages": [
+        27,
+        33
+      ],
+      "card_ref": "specifications[1:4]"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Inference for the main estimator is described as a self-normalized t-statistic with degrees of freedom equal to the number of cross-fitting blocks minus one; the paper explicitly frames this as distinct from clustering or classical long-run-variance-based standard errors.",
+      "card_shows": "Specification s1's se.type field is recorded as 'cluster' with cluster_level null, and se.details describes 't-test with K blocks, df=K-1'.",
+      "status": "disagree",
+      "pages": [
+        11,
+        12
+      ],
+      "card_ref": "s1.se.type",
+      "note": "The card's rule-based extractor labeled the block-based statistic as a clustered SE, but the paper explicitly distinguishes its self-normalized construction from conventional clustering."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "The paper does not cluster standard errors at any group level; the relevant tuning parameter is the number of cross-fitting time blocks, not a cluster identifier, and no cluster level (e.g., unit or state) is referenced anywhere in the inference discussion.",
+      "card_shows": "s1.se.cluster_level is null.",
+      "status": "unknown",
+      "pages": [
+        11,
+        12
+      ],
+      "card_ref": "s1.se.cluster_level",
+      "note": "Card correctly leaves cluster_level unset, but this is because the concept does not apply, not because it is unobserved."
+    },
+    {
+      "item": "sample",
+      "paper_says": "The paper states the pre-treatment period is a specific multiple of the post-treatment period's length in the application, describes the comparison group as a named, fixed set of OECD member countries, and reports the exact panel year range used.",
+      "card_shows": "The data record gives only the overall panel period and leaves unit_of_observation and source_hint null; it does not record the pre/post split, the size of the comparison group, or the list of comparison countries.",
+      "status": "paper_only",
+      "pages": [
+        29,
+        30
+      ],
+      "card_ref": "data[0,0].period; data[0,0].unit_of_observation"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "The set of comparison units is explicitly named in a footnote as a specific list of OECD member countries used to construct the synthetic control.",
+      "card_shows": "No comparison_group field is populated in any specification (comparison_group is null for s1-s4).",
+      "status": "paper_only",
+      "pages": [
+        29,
+        29
+      ],
+      "card_ref": "specifications[0,0].comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "A footnote states that the reanalysis uses the full history of past outcomes as predictors for the synthetic control weights, explicitly noting this differs from the original study's use of a subset of past outcomes plus additional covariates.",
+      "card_shows": "controls_summary is null for every specification in the card; the predictor set used to build the weights is not recorded.",
+      "status": "paper_only",
+      "pages": [
+        31,
+        31
+      ],
+      "card_ref": "specifications[0,0].controls_summary"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "The paper reports a placebo-in-time validity test, splitting the pre-treatment period into placebo pre- and post-periods and checking whether the estimated placebo effect and its interval are consistent with no effect, both as a general procedure and applied to the empirical application.",
+      "card_shows": "The card's diagnostics array is empty; no placebo or specification-check procedure is recorded from the code.",
+      "status": "paper_only",
+      "pages": [
+        26,
+        33
+      ],
+      "card_ref": "diagnostics"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "The paper frames its comparison to difference-in-differences, subsampling, and synthetic difference-in-differences, run on the same simulation designs and the same application data, as the core robustness evidence for when its method can and cannot be trusted.",
+      "card_shows": "The card's top-level robustness array is empty, but the same three comparison methods are captured as separate specifications, each annotated in its own notes field as a 'Robustness specification'.",
+      "status": "agree",
+      "pages": [
+        27,
+        33
+      ],
+      "card_ref": "specifications[1,1].notes; specifications[2,2].notes; specifications[3,3].notes",
+      "note": "Robustness content exists in the card but under specifications rather than the dedicated robustness array."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The paper contains a small number of numbered tables and figures presenting the theoretical efficiency calculation, the Monte Carlo design and results, and the empirical application's placebo and main results.",
+      "card_shows": "outputs.tables and outputs.figures are both empty arrays.",
+      "status": "paper_only",
+      "pages": [
+        1,
+        35
+      ],
+      "card_ref": "outputs.tables; outputs.figures"
+    }
+  ],
+  "gaps": [
+    "No heterogeneous-treatment-effect analysis across sub-populations or interaction terms is reported; the only heterogeneity explored is across simulated data-generating processes, not across empirical units or subgroups.",
+    "No mechanism evidence (intermediate outcomes, survey evidence, or model-guided channel tests) is reported; the paper is a methodological contribution illustrated by one application, not a study of why the estimated effect arises.",
+    "No preregistration, institutional review board statement, or consent statement is present or expected, consistent with a theoretical/methodological paper using previously collected, publicly available panel data.",
+    "No multiple-testing adjustment or randomization-inference procedure is discussed as an alternative inferential safeguard, beyond the sign-based randomization test mentioned as a theoretical alternative in a remark.",
+    "The online appendix sections (labeled A through H in the text) that contain the full random-treatment-status proofs, additional simulation designs, and further robustness checks are referenced repeatedly but are not part of the extracted text or PDF and could not be read.",
+    "No formal balance table, density test, or attrition analysis is reported, consistent with a single-treated-unit aggregate panel design rather than a design with many individually assigned units."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        38
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full extracted text (pages 1-38 of 39; page 39 is blank). Sections I, II, VI, VII, VIII and the data-availability statement were read closely; the dense theorem/lemma/assumption statements in Sections III-V were read in full but skimmed at the level of algebraic detail rather than re-derived. The paper's online appendix sections (A-H), which are referenced throughout but not included in this PDF/text extraction, were not read."
+  }
+}

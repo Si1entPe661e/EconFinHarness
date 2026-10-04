@@ -1,0 +1,1174 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "rfs_2025_rfs_hhaf065",
+ "journal": "RFS",
+ "year": 2025,
+ "doi": "10.1093/rfs/hhaf065",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T03:15:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/RFS/metadata/articles.csv",
+   "sha256": "9c01e943d18e3d667f1beffa18cf5eaa9cc3fab65663d6cd8d84866ba430560a"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/dataverse_VX7HYE/README.md",
+    "sha256": "0c458252fe886c55ef79e1cb7a3d11a9e66c6d971012fb6b00a6f54aaaac55e8",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      56
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_VX7HYE/categorize_demographic_info.do",
+    "sha256": "f1c1e03cd30cd03811ceb0a3a662c6c6e3f05b76ee93768118ecfd9ed8a058a7",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_VX7HYE/rfs_data_assembly.do",
+    "sha256": "bb0e7e4b37ab18682325bda3ffb819221a7a475bf88f1b06b678367fb16b6915",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      94
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_VX7HYE/rfs_figures.do",
+    "sha256": "1ab16a4145971f862fa765d660bcf257c7a9fcb657d1be121ade87ff99470f87",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_VX7HYE/rfs_jay_cooke_window_demographics.do",
+    "sha256": "621a008be3da7a68966c495d24247974dc0026517957884e573dccbbf7e738a2",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      103
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_VX7HYE/rfs_master.do",
+    "sha256": "951f2ca5bd01cd0fc0a9162c1ac4ca2d2046e18693413c329f2856ce47769377",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      17
+     ]
+    ]
+   },
+   {
+    "path": "code/dataverse_VX7HYE/rfs_tables.do",
+    "sha256": "4cbfb005df3d2103b55d53492f7eaf7ad6b709fd943a880ef7b2478f47d4d675",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      150,
+      250
+     ],
+     [
+      300,
+      484
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [
+   {
+    "path": "code/dataverse_VX7HYE/libraries_stata_f/",
+    "reason": "vendored",
+    "note": "ftools family"
+   },
+   {
+    "path": "code/dataverse_VX7HYE/libraries_stata_p/",
+    "reason": "vendored",
+    "note": "ppmlhdfe"
+   },
+   {
+    "path": "code/dataverse_VX7HYE/libraries_stata_r/",
+    "reason": "vendored",
+    "note": "reghdfe"
+   }
+  ],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Event study around Jay Cooke failure (9/18/1873); ppmlhdfe for counts, reghdfe for closures."
+ },
+ "repository": {
+  "languages": [
+   "Stata"
+  ],
+  "master_scripts": [
+   "code/dataverse_VX7HYE/rfs_master.do"
+  ],
+  "directory_layout": "code/dataverse_VX7HYE with libraries_stata_* subdirs",
+  "readme_present": true,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [
+   "code/dataverse_VX7HYE/libraries_stata_f/",
+   "code/dataverse_VX7HYE/libraries_stata_p/",
+   "code/dataverse_VX7HYE/libraries_stata_r/"
+  ],
+  "custom_estimators": [],
+  "approx_code_files": 12,
+  "reproducibility": {
+   "seeds_set": null,
+   "container": null,
+   "path_handling": null,
+   "evidence": []
+  },
+  "evidence": []
+ },
+ "data": [],
+ "pipeline": {
+  "stages": [],
+  "run_order_source": "master",
+  "run_order_notes": "Sequential via rfs_master.do",
+  "sample_restrictions": [],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "method": "event_study",
+   "treatment": null,
+   "outcomes": [],
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      193,
+      193
+     ],
+     "snippet": "local win30 inrange(event_time,-30, 30) & event_time != 0",
+     "supports": [
+      "method"
+     ]
+    }
+   ],
+   "role": "unknown",
+   "variant": null,
+   "classification_basis": "unknown",
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": []
+  },
+  {
+   "id": "d2",
+   "method": "did",
+   "treatment": "post_event indicator × white race indicator",
+   "outcomes": [
+    "closed_account"
+   ],
+   "comparison_group": "non-white depositors",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      472,
+      472
+     ],
+     "snippet": "eststo: reghdfe closed_account  post_event##white if inrange(date, mdy(8,19,1873),mdy(10,19,1873)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age miss",
+     "supports": [
+      "method",
+      "treatment",
+      "outcomes",
+      "comparison_group"
+     ]
+    }
+   ],
+   "role": "unknown",
+   "variant": null,
+   "classification_basis": "unknown",
+   "unit_time": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": []
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": null,
+   "formula_or_call": "ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "post_event",
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       196,
+       196
+      ],
+      "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Main specification for 30-day window",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      196,
+      196
+     ],
+     "snippet": "eststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "estimator",
+      "command",
+      "unresolved_symbols"
+     ]
+    },
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      196,
+      196
+     ],
+     "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_accounts i1.post_event_date if ``regwindow'' & \tdeposits_august_1872 >=100000, a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       199,
+       199
+      ],
+      "snippet": "\teststo `regwindow'_2: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'' & \tdeposits_august_1872 >=100000, a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Subset to larger banks only",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      199,
+      199
+     ],
+     "snippet": "eststo `regwindow'_2: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'' & \tdeposits_august_1872 >=100000, a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "package",
+      "command",
+      "fixed_effects",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s3",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_white_account i1.post_event_date  if ``regwindow'', a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       202,
+       202
+      ],
+      "snippet": "\teststo `regwindow'_3: qui ppmlhdfe new_white_account i1.post_event_date  if ``regwindow'', a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Outcome: white depositor accounts only",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      202,
+      202
+     ],
+     "snippet": "eststo `regwindow'_3: qui ppmlhdfe new_white_account i1.post_event_date  if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "package",
+      "command",
+      "fixed_effects",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s4",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_accounts i1.post_event_date##i1.ny if ``regwindow'', a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": "Interaction by NY bank indicator",
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       208,
+       208
+      ],
+      "snippet": "\teststo `regwindow'_5: qui ppmlhdfe new_accounts i1.post_event_date##i1.ny if ``regwindow'', a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Tests heterogeneous effects by NY location",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      208,
+      208
+     ],
+     "snippet": "eststo `regwindow'_5: qui ppmlhdfe new_accounts i1.post_event_date##i1.ny if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "controls_summary",
+      "package",
+      "command",
+      "fixed_effects",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s5",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_accounts i1.post_event_date##c.dtnyc1000 if ``regwindow'', a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       211,
+       211
+      ],
+      "snippet": "\teststo `regwindow'_6: qui ppmlhdfe new_accounts i1.post_event_date##c.dtnyc1000 if ``regwindow'', a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Tests distance decay in event effects",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      211,
+      211
+     ],
+     "snippet": "eststo `regwindow'_6: qui ppmlhdfe new_accounts i1.post_event_date##c.dtnyc1000 if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "package",
+      "command",
+      "fixed_effects",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s6",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_accounts i1.post_event_date##bank_failure_state  if ``regwindow'', a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": "Interaction by bank failure state",
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       214,
+       214
+      ],
+      "snippet": "\teststo `regwindow'_7: qui ppmlhdfe new_accounts i1.post_event_date##bank_failure_state  if ``regwindow'', a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Tests exposure to bank failures in own state",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      214,
+      214
+     ],
+     "snippet": "eststo `regwindow'_7: qui ppmlhdfe new_accounts i1.post_event_date##bank_failure_state  if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "controls_summary",
+      "package",
+      "command",
+      "fixed_effects",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s7",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": null,
+   "formula_or_call": "ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regwindow"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       196,
+       196
+      ],
+      "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Narrower 15-day window specification",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      196,
+      196
+     ],
+     "snippet": "ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "command",
+      "unresolved_symbols",
+      "estimator"
+     ]
+    },
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      196,
+      196
+     ],
+     "snippet": "\teststo `regwindow'_1: qui ppmlhdfe new_accounts i1.post_event_date if ``regwindow'', a(bank) vce(cluster bank)",
+     "supports": [
+      "fixed_effects"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s8",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_account post_event_date##type if inrange(date,mdy(12,31,1873)-30,mdy(12,31,1873)) & inlist(type,2,3), a(bank#type) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "type"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank#type"
+   ],
+   "controls_summary": "Interaction by account type; subset to types 2,3; excl Philadelphia",
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       325,
+       325
+      ],
+      "snippet": "eststo: ppmlhdfe new_account post_event_date##type if inrange(date,mdy(12,31,1873)-30,mdy(12,31,1873)) & inlist(type,2,3), a(bank#type) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Hetero effects by account type around winter crisis",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      325,
+      325
+     ],
+     "snippet": "eststo: ppmlhdfe new_account post_event_date##type if inrange(date,mdy(12,31,1873)-30,mdy(12,31,1873)) & inlist(type,2,3), a(bank#type) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "controls_summary",
+      "unresolved_symbols",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s9",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "poisson_ppml",
+   "command": "ppmlhdfe",
+   "package": "ppmlhdfe",
+   "formula_or_call": "ppmlhdfe new_account post_event_date##type if inrange(date,mdy(12,31,1873)-30,mdy(12,31,1873)) & inlist(type,2,3) & city!=\"New York\", a(bank#type) vce(cluster bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "type"
+   ],
+   "bindings": [],
+   "fixed_effects": [
+    "bank#type"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       326,
+       326
+      ],
+      "snippet": "eststo: ppmlhdfe new_account post_event_date##type if inrange(date,mdy(12,31,1873)-30,mdy(12,31,1873)) & inlist(type,2,3) & city!=\"New York\", a(bank#type) vce(cluster bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Account type hetero excluding NYC banks",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      326,
+      326
+     ],
+     "snippet": "eststo: ppmlhdfe new_account post_event_date##type if inrange(date,mdy(12,31,1873)-30,mdy(12,31,1873)) & inlist(type,2,3) & city!=\"New York\", a(bank#type) vce(cluster bank)",
+     "supports": [
+      "formula_or_call",
+      "unresolved_symbols",
+      "package",
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s10",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe closed_account organization in_org white local in_town io(0 2).age_range io(0 3).job_education , a(missing_in_town missing_job_info missing_age missing_local bank#yearm) cluster(bank)",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "unresolved_symbols": [],
+   "bindings": [],
+   "fixed_effects": [
+    "missing_in_town",
+    "missing_job_info",
+    "missing_age",
+    "missing_local",
+    "bank#yearm"
+   ],
+   "controls_summary": "organization, in_org, white, local, in_town, age_range (io 0-2), job_education (io 0-3)",
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       428,
+       428
+      ],
+      "snippet": "eststo: reghdfe closed_account organization in_org white local in_town io(0 2).age_range io(0 3).job_education , a(missing_in_town missing_job_info missing_age missing_local bank#yearm) cluster(bank)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Pooled account closure regression (outcome: closed_account)",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      428,
+      428
+     ],
+     "snippet": "reghdfe closed_account organization in_org white local in_town io(0 2).age_range io(0 3).job_education , a(missing_in_town missing_job_info missing_age missing_local bank#yearm) cluster(bank)",
+     "supports": [
+      "formula_or_call",
+      "fixed_effects",
+      "controls_summary",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s11",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe closed_account organization in_org white local in_town io(0 2).age_range io(0 3).job_education if regime ==0, a(missing_in_town missing_job_info missing_age missing_local bank#yearm) cluster(bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "regime"
+   ],
+   "bindings": [],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "cluster",
+    "cluster_level": [
+     "bank"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/dataverse_VX7HYE/rfs_tables.do",
+      "lines": [
+       430,
+       430
+      ],
+      "snippet": "eststo: reghdfe closed_account organization in_org white local in_town io(0 2).age_range io(0 3).job_education if regime ==0, a(missing_in_town missing_job_info missing_age missing_local bank#yearm) c",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": "regime==0 & year>=1873",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Regime 1 subsample (pre-crisis period)",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      430,
+      430
+     ],
+     "snippet": "reghdfe closed_account organization in_org white local in_town io(0 2).age_range io(0 3).job_education if regime ==0",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "unresolved_symbols",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s12",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe closed_account  post_event if inrange(date, mdy(8,19,1873),mdy(10,19,1873)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age missing_local bank) cluster(bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "post_event"
+   ],
+   "bindings": [],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": "date in [Aug 19 - Oct 19, 1873]",
+   "comparison_group": "pre-event period (Aug 19 1873)",
+   "output_ids": [],
+   "notes": "Event study: short window around Jay Cooke failure",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      455,
+      455
+     ],
+     "snippet": "reghdfe closed_account  post_event if inrange(date, mdy(8,19,1873),mdy(10,19,1873)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age missing_local bank)",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "comparison_group",
+      "unresolved_symbols",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s13",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": null,
+   "formula_or_call": "reghdfe closed_account  post_event if inrange(date, mdy(12,1,1873),mdy(1,31,1874)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age missing_local bank) cluster(bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "post_event"
+   ],
+   "bindings": [],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": "date in [Dec 1 1873 - Jan 31 1874]",
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Event study: winter crisis window",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      459,
+      459
+     ],
+     "snippet": "reghdfe closed_account  post_event if inrange(date, mdy(12,1,1873),mdy(1,31,1874)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age missing_local bank) ",
+     "supports": [
+      "formula_or_call",
+      "sample",
+      "unresolved_symbols",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  },
+  {
+   "id": "s14",
+   "design_id": "d2",
+   "role": "unknown",
+   "estimator": "hdfe_ols",
+   "command": "reghdfe",
+   "package": "reghdfe",
+   "formula_or_call": "reghdfe closed_account  post_event##white if inrange(date, mdy(8,19,1873),mdy(10,19,1873)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age missing_local bank) cluster(bank)",
+   "resolved_call": null,
+   "resolution_status": "partial",
+   "unresolved_symbols": [
+    "post_event",
+    "white"
+   ],
+   "bindings": [],
+   "fixed_effects": null,
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": null,
+    "cluster_level": null,
+    "details": null,
+    "evidence": []
+   },
+   "sample": null,
+   "comparison_group": "white vs non-white depositors",
+   "output_ids": [],
+   "notes": "DiD test for differential closure rates by race",
+   "evidence": [
+    {
+     "path": "code/dataverse_VX7HYE/rfs_tables.do",
+     "lines": [
+      472,
+      472
+     ],
+     "snippet": "eststo: reghdfe closed_account  post_event##white if inrange(date, mdy(8,19,1873),mdy(10,19,1873)), a(organization white local missing_in_town age_range job_education missing_job_info missing_age miss",
+     "supports": [
+      "formula_or_call",
+      "comparison_group",
+      "unresolved_symbols",
+      "package",
+      "command",
+      "estimator"
+     ]
+    }
+   ],
+   "scope": "single",
+   "family_description": null
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "pretrend_plot",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "not_found_in_scope",
+   "observation": null,
+   "description": null,
+   "searched_files": [
+    "code/dataverse_VX7HYE/rfs_figures.do"
+   ],
+   "note": "Figures 3a-3b referenced in paper",
+   "evidence": []
+  },
+  {
+   "id": "x2",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d1",
+   "spec_ids": [
+    "s4",
+    "s5",
+    "s6"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Specifications s4-s6 test interaction heterogeneity",
+   "evidence": []
+  },
+  {
+   "id": "x3",
+   "kind": "heterogeneous_treatment_effects",
+   "design_id": "d2",
+   "spec_ids": [
+    "s14"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "Specification s14 main race heterogeneity test",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [],
+ "conventions": [],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "did",
+   "event_study"
+  ],
+  "fields": []
+ }
+}

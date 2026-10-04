@@ -1,0 +1,1216 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "jfe_2024_j_jfineco_2024_103809",
+  "journal": "JFE",
+  "year": 2024,
+  "doi": "10.1016/j.jfineco.2024.103809",
+  "source": {
+    "pdf_path": "Paper/PDF/jfe_2024_j_jfineco_2024_103809.pdf",
+    "pdf_sha256": "ef90bb6526868182151fede37dfed650c836281cbaf847d7eb6bc82359c57a16",
+    "text_path": "harness_build/papers/text/jfe_2024_j_jfineco_2024_103809.txt",
+    "text_sha256": "f99c7e9400b66d18c3daa7f465048f29a270cbbcc514882425d0edb44dbc9909",
+    "pages": 17
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:09:30Z"
+  },
+  "card_link": {
+    "path": "harness_build/recipes/accepted/jfe_2024_j_jfineco_2024_103809.json",
+    "card_sha256": "6da2e7ba75a8ffdf9de4e715d973e4b64c1121ce8ceeeda713fb6fb439436413"
+  },
+  "methods": [
+    "did",
+    "return_event_study",
+    "synthetic_control",
+    "matching"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Title, abstract and introduction",
+      "pages": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "The Dreyfus Affair: political and social context, timeline",
+      "pages": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "Data: financial records and Jewish board membership",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "Empirical framework: event study and difference-in-differences",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "Results: short-term effects and time-varying effects of the Affair",
+      "pages": [
+        7,
+        12
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "mechanisms",
+      "title": "Interpretation: expected fundamentals and media coverage",
+      "pages": [
+        13,
+        15
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "model",
+      "title": "Model of antisemitic traders with incorrect, noisy beliefs",
+      "pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "conclusion",
+      "title": "Conclusion",
+      "pages": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "CRediT statement, declarations, data availability, references",
+      "pages": [
+        16,
+        17
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "in_main_text"
+      ],
+      "statement": "The paper names three complementary designs for the main analysis: a firm and day fixed-effects difference-in-differences comparing two phases of the Affair, a synthetic difference-in-differences, and Coarsened Exact Matching.",
+      "pages": [
+        2,
+        7
+      ],
+      "locator": "Section 1 (introduction) and Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "synthetic_control",
+        "matching"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "parallel_trends_argued"
+      ],
+      "statement": "The identifying assumption for the difference-in-differences is stated explicitly: conditional on firm and day fixed effects and time-varying controls, connected and unconnected firms should not have had differential returns absent the Affair.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 4.2, equation (2)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "parallel trends assumption"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The authors discuss the threat that unobserved shocks correlated with Jewish connections, rather than the Affair itself, could drive differential returns, and describe how firm-level covariates interacted with period dummies are meant to absorb such shocks.",
+      "pages": [
+        5,
+        7
+      ],
+      "locator": "Section 3.2 and Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "Synthetic difference-in-differences is introduced as an additional strategy specifically to address concerns that pre-trends between connected and unconnected firms might not be exactly parallel under the baseline design.",
+      "pages": [
+        2,
+        7
+      ],
+      "locator": "Section 1 and Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named"
+      ],
+      "statement": "Coarsened Exact Matching is introduced as a strategy to select a comparison sample that minimizes covariate imbalance between connected and unconnected firms before differencing returns across the phases of the Affair.",
+      "pages": [
+        7,
+        10
+      ],
+      "locator": "Section 4.2 and Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "matching"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "The short-run analysis is framed as a standard event-study design estimating cumulative abnormal returns around discrete, dated episodes rather than around a single treatment date.",
+      "pages": [
+        6,
+        7
+      ],
+      "locator": "Section 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "The financial and board-membership data are described as hand-collected from several archival sources, including a stockbroker yearbook, a daily price bulletin, and corporate registries, rather than drawn from an existing commercial database.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The sample period and unit of observation are stated precisely: firms listed on the official Paris market across the study decade, organized as firm-day panels for daily returns and collapsed to firm-month and firm-year panels for other outcomes.",
+      "pages": [
+        5,
+        13
+      ],
+      "locator": "Section 3.1 and Table 3, Table 7 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "A liquidity-based sample restriction is justified explicitly: stocks trading on too small a share of days are dropped because trading frequency is used as a proxy for liquidity in this pre-modern market, with a robustness check confirming the restriction does not drive the results.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section 3.1, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "proxy for its liquidity"
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described"
+      ],
+      "statement": "Board members are linked to Jewish family status by exact matching of first and last names against an external genealogical registry of prominent families, rather than by self-reported religion or a name-sounds-Jewish heuristic.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported"
+      ],
+      "statement": "The paper reports separately, as a design check rather than as a limitation, that firms rarely change board composition during the Affair and that Jewish-connected firms are no more likely to do so, which the authors treat as evidence against reverse causality in treatment status.",
+      "pages": [
+        5,
+        12
+      ],
+      "locator": "Section 3.2 and discussion of Appendix Table A.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Every main regression table reports the firm count and observation count directly beneath the coefficients, alongside R-squared and the dependent-variable mean, so sample composition is visible table by table rather than only in a separate data section.",
+      "pages": [
+        8,
+        14
+      ],
+      "locator": "Tables 2-8",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Jewish connection is operationalized two ways: a continuous measure equal to the share of Jewish board members, and a binary indicator for whether the firm's chairman is Jewish, with the continuous measure averaged over the whole period as the baseline right-hand-side variable.",
+      "pages": [
+        5,
+        6
+      ],
+      "locator": "Section 3.2 and Section 4.1, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Cumulative abnormal returns for the event-study tables are constructed from a one-factor market-model residual summed over a narrow post-event window, with an alternative three-factor model and alternative windows relegated to appendix robustness checks.",
+      "pages": [
+        6,
+        8
+      ],
+      "locator": "Section 4.1 and Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "For the difference-in-differences tables, the outcome is defined as simple proportional daily or monthly price growth, with a note that log returns are used as an alternative specification elsewhere.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 3 notes and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "The authors address possible measurement error in the Jewish-connection variable by recomputing it from an independent historical name registry and reporting the correlation between the two measures, treating this as evidence against both over- and under-counting.",
+      "pages": [
+        5,
+        12
+      ],
+      "locator": "Section 3.2 footnote and discussion of Appendix Table A.16",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs"
+      ],
+      "statement": "Firm size enters the controls as log market capitalization at the start of the sample, and one of the dividend outcomes is defined as log dividends, while the paper notes that its main return variables are proportional rather than log-transformed by default.",
+      "pages": [
+        6,
+        13
+      ],
+      "locator": "Section 4.2 and Table 7 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Volatility and risk-adjusted returns are constructed as secondary outcomes from the same daily-return series, defined respectively as squared demeaned returns and returns scaled by each firm's own return standard deviation.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Table 6 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "controls_progressive_columns"
+      ],
+      "statement": "Main tables follow a paired-column layout in which fixed effects are held fixed across columns while a full set of interacted firm-level controls is added only in the even-numbered columns, letting the reader see the coefficient move (or not) when controls enter.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 3 and notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported",
+        "r2_reported"
+      ],
+      "statement": "Regression tables report the mean of the dependent variable and R-squared directly under the coefficients, giving a built-in benchmark for interpreting the magnitude of estimated effects without cross-referencing a separate summary-statistics table.",
+      "pages": [
+        9,
+        12
+      ],
+      "locator": "Tables 3, 6, 7 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes",
+        "se_type_in_notes"
+      ],
+      "statement": "Table notes state the standard-error type and clustering level directly beneath each table rather than only in the main text, and this varies deliberately by table depending on the data structure of that regression.",
+      "pages": [
+        8,
+        15
+      ],
+      "locator": "Notes to Tables 2, 3, 6, 7, 8",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": [
+        "weights_stated",
+        "baseline_then_variants"
+      ],
+      "statement": "The matching table states explicitly that observations are equally weighted in the reported specification, with matching-derived weights relegated to an appendix table as a variant check rather than the baseline.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section 5.2, discussion around Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "matching"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level"
+      ],
+      "statement": "The baseline panel regressions cluster standard errors at the firm level, matching the unit at which the Jewish-connection treatment variable is defined and does not vary over time within firm.",
+      "pages": [
+        7,
+        9
+      ],
+      "locator": "Section 4.2 and Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "twoway_cluster"
+      ],
+      "statement": "Two regressions that depart from the firm-day panel structure move to two-way clustering: the firm-year dividend regressions cluster by firm and trading day, and the media-coverage regression clusters by firm and day because the coverage regressor is common to all firms on a given day.",
+      "pages": [
+        13,
+        15
+      ],
+      "locator": "Table 7 notes and Section 6.2, equation (3)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Synthetic difference-in-differences standard errors are computed with the placebo-based inference method associated with that estimator rather than with a cluster-robust formula.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Beyond noting that errors are heteroskedasticity-robust and clustered by firm, the paper does not separately argue why firm is the appropriate clustering unit (for example, discussing within-firm serial correlation or the number of clusters), treating the choice as a default rather than a justified design decision.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 4.2",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "A time-varying-coefficient figure interacting the treatment measure with year dummies is presented as the main pre-trends diagnostic, shown in the main text rather than relegated to an appendix.",
+      "pages": [
+        7,
+        9
+      ],
+      "locator": "Figure 1 and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "A balance-style table reports correlations between the Jewish-connection measures and firm observables (sector, size, foreign operations, and similar), which the authors use to motivate the covariate interactions included in the main specification rather than to argue the sample is fully balanced.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 1, panel (b)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix"
+      ],
+      "statement": "The paper reports a placebo-style check across other cabinet changes during the period, most of which the text says did not move returns for connected firms, to argue that the one significant cabinet-appointment result is not a generic reaction to any government reshuffle.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Discussion around Table 2 and Appendix Table A.7",
+      "basis": "stated",
+      "applies_to": [
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix"
+      ],
+      "statement": "A separate diagnostic examines whether board composition itself responds to the unfolding Affair, which the authors present as necessary support for reading the difference-in-differences coefficients as causal rather than as picking up compositional change in the treatment variable.",
+      "pages": [
+        7,
+        12
+      ],
+      "locator": "Section 4.2 and discussion of Appendix Table A.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix"
+      ],
+      "statement": "Robustness of the event-study point estimates is also checked by comparing the full cumulative distributions of abnormal returns for connected versus unconnected firms, described as showing the results are not driven by a small number of outlier firms.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Discussion of Appendix Fig. A.4",
+      "basis": "stated",
+      "applies_to": [
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "The three-estimator strategy (difference-in-differences, synthetic difference-in-differences, matching) functions as the paper's central robustness argument rather than an afterthought, with each alternative estimator given its own main-text table and figure.",
+      "pages": [
+        9,
+        11
+      ],
+      "locator": "Tables 3-5 and Figures 1-2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "synthetic_control",
+        "matching"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "A subsample restricted to firms operating entirely abroad is analyzed in a dedicated main-text table, used to argue the core result is not explained by an expected domestic political or regulatory backlash against connected firms.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Table 8 and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Further subsample checks restricting to state-guaranteed firms and to firms without substantial retail exposure are described in the text but reported only in appendix tables.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section 6.1 and discussion of Appendix Tables A.20-A.21",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "alt_estimator",
+        "in_appendix"
+      ],
+      "statement": "A long list of appendix specification checks is summarized in the text, covering alternative return transformations, alternative event-study windows and factor models, exclusion of dividend-date and recapitalization observations, and inclusion of firm betas as a control.",
+      "pages": [
+        8,
+        12
+      ],
+      "locator": "Discussion of Appendix Tables A.3, A.9, A.13-A.15, A.17-A.18",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_control_group",
+        "in_appendix"
+      ],
+      "statement": "The paper recomputes the treatment variable using an alternative historical Jewish-names registry rather than the primary genealogical source, and discusses the resulting appendix table in the main text.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Discussion of Appendix Table A.16",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Subsample splits by liquidity, foreign exposure, state guarantee, and retail exposure are framed explicitly as mechanism tests aimed at ruling out competing explanations, not as an exploration of which firms respond most.",
+      "pages": [
+        12,
+        14
+      ],
+      "locator": "Section 5.2 and Section 6.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "back_of_envelope"
+      ],
+      "statement": "The main return effect is translated into an implied investor rent expressed as a share of the value of connected firms and of the whole market, with the calculation steps (multiplying the coefficient by elapsed trading time and firm market values) spelled out in a footnote.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section 1 and footnote to Table 3 discussion",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "sd_units"
+      ],
+      "statement": "Effect sizes are also expressed in standard-deviation terms, both to compare the Jewish-CEO indicator's effect to the continuous board-share measure and to describe the size of the estimated effect on risk-adjusted returns relative to the return distribution.",
+      "pages": [
+        10,
+        12
+      ],
+      "locator": "Section 5.2 discussion",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The short-run reaction around the single most surprising episode is explicitly compared to a behavioral-finance study of a non-informative stock-price event, used to argue that part of the immediate reaction may be emotional rather than purely information-driven.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section 5.1 discussion of Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors explicitly acknowledge, after presenting their robustness checks, that investors could still have held expectations about the Affair's future course that are not observable in the data and so cannot be fully ruled out as a channel.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 6.2, end",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "Dividends are used as the profitability proxy with an explicit caveat that dividends respond only imperfectly to underlying profitability and are adopted mainly because balance-sheet data for these firms do not survive.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 6.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "The media-coverage evidence linking press coverage to returns is explicitly labelled suggestive rather than a clean causal test of the media channel.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 6.2, end",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "A combined descriptive table reports both sector-level counts of Jewish connections and correlations between connection measures and firm characteristics in a single two-panel table rather than splitting these into separate tables.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_se"
+      ],
+      "statement": "All regression tables use a conventional three-tier significance-star convention and state the standard-error construction in the note beneath the table, applied consistently from the first results table through the mechanism tables.",
+      "pages": [
+        8,
+        14
+      ],
+      "locator": "Notes to Tables 2-8",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "return_event_study"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "event_study_figure"
+      ],
+      "statement": "Both the standard and synthetic difference-in-differences results are visualized as coefficient-over-time figures with confidence bands and vertical markers at the two key historical dates, giving a common visual template across the two estimators.",
+      "pages": [
+        9,
+        11
+      ],
+      "locator": "Figures 1 and 2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "synthetic_control"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction closes with an explicit roadmap paragraph listing the section-by-section organization of the rest of the paper.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "End of Section 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "main_result_first"
+      ],
+      "statement": "The introduction previews the main quantitative pattern and the robustness of that pattern to the alternative estimators before the results section is reached, so the reader encounters the headline finding twice.",
+      "pages": [
+        1,
+        2
+      ],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main",
+        "data_before_design"
+      ],
+      "statement": "The paper follows a data-then-design-then-results-then-mechanisms ordering, with a separate numbered Interpretation section, including the formal theoretical model, placed after all empirical results rather than interleaved with them.",
+      "pages": [
+        5,
+        16
+      ],
+      "locator": "Overall structure, Sections 3-6",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy"
+      ],
+      "statement": "Robustness material is heavily concentrated in an online appendix referenced by table number throughout the results and mechanism sections, so the main text summarizes findings from more than twenty appendix tables without reproducing them.",
+      "pages": [
+        8,
+        14
+      ],
+      "locator": "Sections 5-6",
+      "basis": "inferred",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "A dedicated Data availability statement gives a single repository link where both the code and data for the article are said to be available, placed in a standard end-of-article section alongside the competing-interest declaration.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Data availability section",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "The codes and data of the article can be found"
+    },
+    {
+      "id": "o52",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "public_use"
+      ],
+      "statement": "The underlying financial and board data are described as compiled from public archival and registry sources (stock-exchange yearbooks, a national library price bulletin, corporate registries) rather than from a restricted or commercial vendor.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Difference-in-differences with firm and trading-day fixed effects, estimated on the balanced firm panel (Section 4.2, equation 2).",
+      "card_shows": "Specification s2 (design d2, method did) records estimator hdfe_ols via reghdfe.",
+      "status": "agree",
+      "pages": [
+        7,
+        9
+      ],
+      "card_ref": "s2.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Event-study cumulative abnormal returns from a one-factor market model regressed on the Jewish-connection measure and controls (Section 4.1, equation 1, Table 2).",
+      "card_shows": "Specification s1 (design d1, method return_event_study) records estimator ols via reg with clus(firm).",
+      "status": "agree",
+      "pages": [
+        6,
+        8
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Synthetic difference-in-differences following Arkhangelsky et al. (2021) as a third strategy to relax the parallel-trends requirement (Section 4.2, Table 4, Figure 2).",
+      "card_shows": "Specification s3 (design d3, method synthetic_control) records estimator synthetic_did via the sdid command.",
+      "status": "agree",
+      "pages": [
+        7,
+        11
+      ],
+      "card_ref": "s3.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Coarsened Exact Matching (Iacus et al., 2012) is described as a fourth main empirical strategy, with its own main-text table of matched-sample estimates.",
+      "card_shows": "The card's designs and specifications list only d1/d2/d3 (return_event_study, did, synthetic_control); no design or specification entry corresponds to matching, even though the appendix.do file was read and the vendored ado list names a cem package.",
+      "status": "paper_only",
+      "pages": [
+        7,
+        10
+      ],
+      "card_ref": "designs",
+      "note": "The extraction reading notes list appendix.do among files read, and files_skipped names a cem package among vendored libraries, but no matching design was captured in this minimal-coverage card."
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Baseline panel regressions (returns, volatility, risk-adjusted returns) report standard errors clustered by firm (Table 3, Table 6 notes).",
+      "card_shows": "s2.se.type is cluster with cluster_level firm.",
+      "status": "agree",
+      "pages": [
+        7,
+        12
+      ],
+      "card_ref": "s2.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "The event-study table (Table 2) note states only that standard errors are robust, without naming a cluster level, even though each firm contributes a single cross-sectional observation to that regression.",
+      "card_shows": "s1.se.type is cluster with cluster_level firm, taken from the clus(firm) option in the underlying Stata call.",
+      "status": "agree",
+      "pages": [
+        8,
+        8
+      ],
+      "card_ref": "s1.se",
+      "note": "Robust and firm-clustered standard errors coincide when each firm appears once, so the paper's simpler wording and the card's literal code trace describe the same computation."
+    },
+    {
+      "item": "se_type",
+      "paper_says": "The firm-year dividend regressions and the media-coverage regression are reported with standard errors two-way clustered by firm and by trading day (or year), not simple firm clustering (Table 7 notes; Section 6.2, equation 3).",
+      "card_shows": "No specification in the card corresponds to the dividend regression or the media-coverage regression; only s1, s2 and s3 are recorded, and none uses two-way clustering.",
+      "status": "paper_only",
+      "pages": [
+        13,
+        15
+      ],
+      "card_ref": "specifications"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Synthetic difference-in-differences standard errors are computed with the placebo method of Arkhangelsky et al. (2021) rather than a cluster formula (Table 4 notes).",
+      "card_shows": "s3.se.type is randomization_inference, cluster_level null.",
+      "status": "agree",
+      "pages": [
+        11,
+        11
+      ],
+      "card_ref": "s3.se.type"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The difference-in-differences specification includes firm fixed effects, trading-day fixed effects, and sector-by-period interactions (Section 4.2, equation 2; Table 3 notes).",
+      "card_shows": "s2.fixed_effects is null in the card's structured fields, even though the formula_or_call field for s2 shows a(firmn daten i.sectorn##i.period1 i.sectorn##i.period2) in the underlying reghdfe call.",
+      "status": "paper_only",
+      "pages": [
+        7,
+        9
+      ],
+      "card_ref": "s2.fixed_effects",
+      "note": "The fixed-effects structure is present in the raw command string recorded as evidence but was not parsed into the card's structured fixed_effects field."
+    },
+    {
+      "item": "controls",
+      "paper_says": "Even-numbered columns of the main tables add a stated set of firm-level controls (sector, admission type, state guarantee, foreign operations, political connections, initial log market capitalization) interacted with the two period dummies.",
+      "card_shows": "s2.controls_summary is null.",
+      "status": "paper_only",
+      "pages": [
+        9,
+        9
+      ],
+      "card_ref": "s2.controls_summary"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The difference-in-differences analysis is run on a balanced panel of firms listed throughout the study period, after excluding firms below a stated liquidity threshold (Section 3.1, Section 4.2).",
+      "card_shows": "pipeline.sample_restrictions is an empty list and s1/s2/s3 sample fields are null.",
+      "status": "paper_only",
+      "pages": [
+        5,
+        7
+      ],
+      "card_ref": "pipeline.sample_restrictions"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "The paper reports a pre-trends figure, a covariate-balance table, and a board-composition stability check as design diagnostics supporting the causal reading of the difference-in-differences estimates.",
+      "card_shows": "diagnostics is an empty list in the card.",
+      "status": "paper_only",
+      "pages": [
+        6,
+        9
+      ],
+      "card_ref": "diagnostics"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "The paper describes an extensive robustness program spanning alternative return definitions, alternative event windows and factor models, alternative treatment measures, and several subsample restrictions, referenced across more than twenty appendix tables.",
+      "card_shows": "robustness is an empty list in the card.",
+      "status": "paper_only",
+      "pages": [
+        8,
+        14
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Financial and board data are described as hand-collected from named archival sources (a stockbroker yearbook, a national-library price bulletin, corporate registries).",
+      "card_shows": "data[0].source_hint and data[1].source_hint are null; the card records only generic dataset file names (dataset9199, data_car) with type and access unknown.",
+      "status": "paper_only",
+      "pages": [
+        5,
+        5
+      ],
+      "card_ref": "data[0].source_hint"
+    }
+  ],
+  "gaps": [
+    "The paper does not name the statistical software or packages used for estimation anywhere in the main text (the CRediT statement's 'Software' entries are contribution-role labels, not a software citation), even though the underlying replication code is written in Stata and uses named packages such as reghdfe and sdid.",
+    "No explicit justification is given for choosing firm-level clustering as opposed to, for example, addressing serial correlation across trading days within firm or the small number of Jewish-connected firms as a few-clusters problem.",
+    "No preregistration, pre-analysis plan, IRB approval, or consent statement is present or expected, consistent with this being a historical archival study rather than a study involving live human subjects.",
+    "The recipe card (coverage: minimal) does not record a design or specification for the Coarsened Exact Matching strategy, nor any diagnostics or robustness entries, even though the paper treats CEM as a core estimator and reports diagnostics and a long robustness program in the text."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        17
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 17 pages of the extracted main text were read in full, including introduction, background, data, design, results, mechanisms/interpretation, the theoretical model, conclusion and end matter. The paper's own online appendix (tables A.1-A.22, Appendix B derivations, Appendix C data notes), referenced throughout the main text, is not part of this extracted text and was not read; observations about appendix content rely only on how the main text describes and summarizes it."
+  }
+}

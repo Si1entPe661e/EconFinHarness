@@ -1,0 +1,748 @@
+{
+ "schema_version": "recipe-card-v2",
+ "record_kind": "corpus",
+ "artid": "ecta_92_2_2",
+ "journal": "Econometrica",
+ "year": 2024,
+ "doi": "10.3982/ecta19127",
+ "provenance": {
+  "model": "claude-haiku-4-5-20251001",
+  "generated_at": "2026-09-08T02:15:00Z",
+  "prompt_version": "reading-protocol-v2",
+  "metadata_source": {
+   "path": "Paper/Econometrica/metadata/articles.csv",
+   "sha256": "2c8b1723bc2637f1fb33a71083f6c2f9a3858d9cdd98ecd328ac57df6dbb0419"
+  },
+  "scope": "paper",
+  "target_outputs": [],
+  "files_read": [
+   {
+    "path": "code/zenodo_8408320/replication/replication/Master.do",
+    "sha256": "e2a914cff851d6bcb376365933ebf4203c5d1834b19a4a66589c3b5ce6f523c6",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      43
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/code/baseline_balance.do",
+    "sha256": "abc95cfb81fa51483f4c651db5a5518b709237ddfcc3c579e6d7ba95bb79842d",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/code/baseline_prepare.do",
+    "sha256": "fcf3d623a0cce0ec2319dcf8d6368bf3424c88bf0f097f1d2b55c1661bb62d10",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/code/endline_2_prepare.do",
+    "sha256": "4d7d7aaa5fa7465556191d6c05d907a1d9251b66cf9d97eaba9acafb83a7ab4f",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      570,
+      650
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/code/endline_prepare.do",
+    "sha256": "b9309ac02c08ca952a4aa3351b5b0ebbd715372db92e040a1165f82c137894d3",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ],
+     [
+      500,
+      626
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+    "sha256": "20138c1e6a40f3ff141a72484d9c66912e3b204ff6a28ef6c6588f0f9c437b87",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      150
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/loan_analysis.R",
+    "sha256": "17daae15be510474c0f60b96b7f66b5c8b50f4da63e3cd08374ab185f02f25bd",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   },
+   {
+    "path": "code/zenodo_8408320/replication/replication/three_period_sim.R",
+    "sha256": "fa5ed3eff6a39237c37c3c96aab84adf357fd73c0e50caaaedbfff8e06902c26",
+    "encoding": "utf-8",
+    "read_ranges": [
+     [
+      1,
+      100
+     ]
+    ]
+   }
+  ],
+  "files_skipped": [],
+  "unresolved_references": [],
+  "omitted_specifications": [],
+  "coverage": "partial",
+  "overall_confidence": null,
+  "execution_status": "not_run",
+  "reading_notes": "Read entry script (Master.do), build pipeline (baseline_prepare, endline_prepare, endline_2_prepare), analysis scripts (survey_analysis.do, loan_analysis.R, three_period_sim.R), and balance test script. Covered treatment assignment, main specifications with randomization inference, outcomes, and structural model setup. Did not read full outcome table construction or detailed R simulation implementation due to file size."
+ },
+ "repository": {
+  "languages": [
+   "Stata",
+   "R"
+  ],
+  "master_scripts": [
+   "code/zenodo_8408320/replication/replication/Master.do"
+  ],
+  "directory_layout": "code/zenodo_8408320/replication/replication/ contains Master.do, three R files (loan_analysis.R, three_period_sim.R, map_sample.R), and subdirectory code/ containing Stata do-files (baseline_prepare.do, endline_prepare.do, endline_2_prepare.do, baseline_balance.do, survey_analysis.do, randomization.do)",
+  "readme_present": false,
+  "license": null,
+  "env_files": [],
+  "vendored_libraries": [],
+  "custom_estimators": [],
+  "approx_code_files": 10,
+  "reproducibility": {
+   "seeds_set": true,
+   "container": null,
+   "path_handling": "globals",
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      52,
+      52
+     ],
+     "snippet": "set seed 123088",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/zenodo_8408320/replication/replication/loan_analysis.R",
+     "lines": [
+      47,
+      47
+     ],
+     "snippet": "set.seed(123)",
+     "supports": [
+      "seeds_set"
+     ]
+    },
+    {
+     "path": "code/zenodo_8408320/replication/replication/Master.do",
+     "lines": [
+      10,
+      10
+     ],
+     "snippet": "global dropbox \"~/Dropbox/Berkeley/Bangladesh/Papers/JMP/Submissions/Metrica/Conditional Accept/replication\"",
+     "supports": [
+      "path_handling"
+     ]
+    }
+   ]
+  },
+  "evidence": []
+ },
+ "data": [
+  {
+   "name": "baseline.csv",
+   "type": "survey",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/baseline_prepare.do",
+     "lines": [
+      5,
+      5
+     ],
+     "snippet": "import delimited \"$data/baseline.csv\", clear",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "endline_1.csv",
+   "type": "survey",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/endline_prepare.do",
+     "lines": [
+      8,
+      8
+     ],
+     "snippet": "import delimited \"$data/endline_1.csv\", clear",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "endline_2.csv",
+   "type": "survey",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/endline_2_prepare.do",
+     "lines": [
+      7,
+      7
+     ],
+     "snippet": "import delimited \"$data/endline_2.csv\", clear",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "em_loans.csv",
+   "type": "admin",
+   "access": "unknown",
+   "unit_of_observation": null,
+   "period": null,
+   "source_hint": null,
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/endline_2_prepare.do",
+     "lines": [
+      590,
+      590
+     ],
+     "snippet": "import delimited \"$data/em_loans.csv\", clear",
+     "supports": [
+      "name",
+      "type"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline": {
+  "stages": [
+   {
+    "id": "p1",
+    "stage": "build",
+    "scripts": [
+     "code/zenodo_8408320/replication/replication/code/baseline_prepare.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_8408320/replication/replication/Master.do",
+      "lines": [
+       31,
+       36
+      ],
+      "snippet": "if `build' {\n\n\tdo \"$code/baseline_prepare.do\"\n\tdo \"$code/endline_prepare.do\"\n\tdo \"$code/endline_2_prepare.do\"\n}",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "p4",
+    "stage": "analysis",
+    "scripts": [
+     "code/zenodo_8408320/replication/replication/code/baseline_balance.do"
+    ],
+    "after": [],
+    "order_basis": "explicit_calls",
+    "evidence": [
+     {
+      "path": "code/zenodo_8408320/replication/replication/Master.do",
+      "lines": [
+       40,
+       42
+      ],
+      "snippet": "if `analysis' {\n\tdo \"$code/baseline_balance.do\"\n\tdo \"$code/survey_analysis.do\"",
+      "supports": [
+       "scripts",
+       "order_basis"
+      ]
+     }
+    ]
+   }
+  ],
+  "run_order_source": "master",
+  "run_order_notes": null,
+  "sample_restrictions": [
+   {
+    "description": "Eligible borrowers: type==1 borrowers in baseline and 2016 endline, or eligible_2017==1 in 2017 endline",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_8408320/replication/replication/code/endline_2_prepare.do",
+      "lines": [
+       579,
+       579
+      ],
+      "snippet": "gen el_eligible = (type==1 & year==2016) | (eligible_2017==1 & year==2017)",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   },
+   {
+    "description": "Analysis restricted to el_eligible==1 sample",
+    "spec_ids": [
+     "s1",
+     "s2"
+    ],
+    "evidence": [
+     {
+      "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "ritest treat_borr _b[treat_borr] if el_eligible==1, cluster(hchyid) strata(district) reps(1000): reg `var' treat_borr year i.district",
+      "supports": [
+       "description"
+      ]
+     }
+    ]
+   }
+  ],
+  "key_merges": []
+ },
+ "designs": [
+  {
+   "id": "d1",
+   "role": "unknown",
+   "method": "panel_fe",
+   "variant": null,
+   "classification_basis": "author_statement",
+   "treatment": "Access to Emergency Loan (guaranteed credit) for eligible (type==1) borrowers in treatment branches",
+   "outcomes": [],
+   "unit_time": null,
+   "comparison_group": null,
+   "estimand": null,
+   "implementation_features": [],
+   "author_stated_assumptions": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/endline_2_prepare.do",
+     "lines": [
+      579,
+      581
+     ],
+     "snippet": "gen el_eligible = (type==1 & year==2016) | (eligible_2017==1 & year==2017)\ngen treat_borr_2016 = type==1 & treat_branch==1",
+     "supports": [
+      "treatment",
+      "classification_basis",
+      "method"
+     ]
+    }
+   ]
+  }
+ ],
+ "specifications": [
+  {
+   "id": "s1",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `var' treat_borr year i.district",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Main effect of treatment on ex-ante investment and ex-post outcomes, outcome-specific loop",
+   "fixed_effects": [
+    "district",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "randomization_inference",
+    "cluster_level": [
+     "hchyid"
+    ],
+    "details": "ritest with 1000 replications, stratified by district",
+    "evidence": [
+     {
+      "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "ritest treat_borr _b[treat_borr] if el_eligible==1, cluster(hchyid) strata(district)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     },
+     {
+      "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "ritest treat_borr _b[treat_borr] if el_eligible==1, cluster(hchyid) strata(district) reps(1000):",
+      "supports": [
+       "type",
+       "details"
+      ]
+     },
+     {
+      "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+      "lines": [
+       62,
+       62
+      ],
+      "snippet": "ritest treat_borr _b[treat_borr] if el_eligible==1, cluster(hchyid) strata(district) reps(1000): reg `var' treat_borr year i.district",
+      "supports": [
+       "type"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Windsorized outcomes at 0.5-99.5 percentiles. Treatment effect computed on outcomes for ex-ante investment variables (land, fertilizer, pesticide, input costs) and ex-post outcomes (income, production, consumption)",
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "ritest treat_borr _b[treat_borr] if el_eligible==1, cluster(hchyid) strata(district) reps(1000): reg `var' treat_borr year i.district",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "reg `var' treat_borr year i.district",
+     "supports": [
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "design_id": "d1",
+   "role": "unknown",
+   "estimator": "ols",
+   "command": "reg",
+   "package": null,
+   "formula_or_call": "reg `var' treat_borr##active_branch year i.district",
+   "resolved_call": null,
+   "resolution_status": "direct",
+   "bindings": [],
+   "unresolved_symbols": [],
+   "scope": "family",
+   "family_description": "Heterogeneous treatment effects by flood occurrence (active_branch), outcome-specific loop",
+   "fixed_effects": [
+    "district",
+    "year"
+   ],
+   "controls_summary": null,
+   "weights": null,
+   "se": {
+    "type": "randomization_inference",
+    "cluster_level": [
+     "hchyid"
+    ],
+    "details": null,
+    "evidence": [
+     {
+      "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+      "lines": [
+       148,
+       148
+      ],
+      "snippet": "ritest treat_borr _b[1.treat_borr] _b[1.treat_borr#1.active_branch] if el_eligible==1, cluster(hchyid) strata(district)",
+      "supports": [
+       "type",
+       "cluster_level"
+      ]
+     }
+    ]
+   },
+   "sample": null,
+   "comparison_group": null,
+   "output_ids": [],
+   "notes": "Tests whether treatment effects vary by flood exposure in branches",
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      148,
+      148
+     ],
+     "snippet": "ritest treat_borr _b[1.treat_borr] _b[1.treat_borr#1.active_branch] if el_eligible==1, cluster(hchyid) strata(district) rep(1000): reg `var' treat_borr##active_branch year i.district",
+     "supports": [
+      "formula_or_call"
+     ]
+    },
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      148,
+      148
+     ],
+     "snippet": "reg `var' treat_borr##active_branch year i.district",
+     "supports": [
+      "command",
+      "fixed_effects",
+      "estimator"
+     ]
+    }
+   ]
+  }
+ ],
+ "variable_construction": [],
+ "diagnostics": [
+  {
+   "id": "x1",
+   "kind": "balance",
+   "design_id": "d1",
+   "spec_ids": [
+    "s1"
+   ],
+   "status": "unknown",
+   "observation": null,
+   "description": null,
+   "searched_files": [],
+   "note": "orth_out test of 21 baseline variables (household size, age, education, marriage, land holdings, income, assets, risk/time preferences) with clustering at household level",
+   "evidence": []
+  }
+ ],
+ "robustness": [],
+ "heterogeneity": [],
+ "outputs": {
+  "tables": [],
+  "figures": []
+ },
+ "structural": null,
+ "computation": null,
+ "packages": [
+  {
+   "ecosystem": "Stata",
+   "name": "ritest",
+   "kind": "command",
+   "usage": "called",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "ritest"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      62,
+      62
+     ],
+     "snippet": "ritest treat_borr _b[treat_borr] if el_eligible==1, cluster(hchyid) strata(district) reps(1000):",
+     "supports": [
+      "name",
+      "kind",
+      "usage",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "winsor2",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "winsor2"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/survey_analysis.do",
+     "lines": [
+      49,
+      49
+     ],
+     "snippet": "winsor2($inputs), cuts(0.5 99.5) replace",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "Stata",
+   "name": "orth_out",
+   "kind": "command",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [
+    "orth_out"
+   ],
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/code/baseline_balance.do",
+     "lines": [
+      73,
+      75
+     ],
+     "snippet": "orth_out $tests ///\n\tusing \"${tables}balance_table_elig.tex\" if type==1, ///\n\tby(bl_treat) se test latex vce(cluster hchyid)",
+     "supports": [
+      "name",
+      "kind",
+      "commands"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "lfe",
+   "kind": "module",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/loan_analysis.R",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "p_load(data.table, foreign, tidyverse, magrittr, readxl, lfe, psych, stargazer, pander, ggthemes, ggplot2)",
+     "supports": [
+      "name",
+      "kind"
+     ]
+    }
+   ]
+  },
+  {
+   "ecosystem": "R",
+   "name": "tidyverse",
+   "kind": "module",
+   "usage": "unknown",
+   "purpose": null,
+   "version": null,
+   "version_basis": "unknown",
+   "commands": [],
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/loan_analysis.R",
+     "lines": [
+      11,
+      11
+     ],
+     "snippet": "p_load(data.table, foreign, tidyverse, magrittr, readxl, lfe, psych, stargazer, pander, ggthemes, ggplot2)",
+     "supports": [
+      "name",
+      "kind"
+     ]
+    }
+   ]
+  }
+ ],
+ "conventions": [
+  {
+   "description": "Global macros for data, code, tables, figures directories (${dropbox}, ${data}, ${code}, ${temp_data}, ${tables}, ${figures})",
+   "evidence": [
+    {
+     "path": "code/zenodo_8408320/replication/replication/Master.do",
+     "lines": [
+      10,
+      10
+     ],
+     "snippet": "global dropbox \"~/Dropbox/Berkeley/Bangladesh/Papers/JMP/Submissions/Metrica/Conditional Accept/replication\"",
+     "supports": [
+      "description"
+     ]
+    }
+   ]
+  }
+ ],
+ "gotchas": [],
+ "tags": {
+  "methods": [
+   "panel_fe"
+  ],
+  "fields": []
+ }
+}
