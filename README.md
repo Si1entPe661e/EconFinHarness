@@ -27,22 +27,22 @@ Reading the guides requires no software installation. The small CLI uses Python 
 | Implement an empirical analysis | [Analysis workflow](harness/workflows/empirical-analysis.md) |
 | Export tables and scientific figures | [Presentation workflow](harness/workflows/present-results.md) |
 | Read estimation commands | [Skills and methods](harness/README.md) |
-| Study recorded research practice | [Method materials](harness/paradigms/README.md), `harness_build/recipes/accepted/`, `harness_build/papers/notes/` |
+| Study recorded research practice | [Method materials](harness/paradigms/README.md), `examples/code-cards/`, `examples/paper-notes/` |
 | Start from a reusable task prompt | [Task prompts](harness/presets/README.md) |
 
 Optional CLI commands work with the material included in a fresh clone:
 
 ```bash
-python3 harness_build/cli/fh.py skills list
-python3 harness_build/cli/fh.py workflows show empirical-analysis
-python3 harness_build/cli/fh.py exemplars did --limit 3
-python3 harness_build/cli/fh.py status
+python3 tools/fh.py skills list
+python3 tools/fh.py workflows show empirical-analysis
+python3 tools/fh.py exemplars did --limit 3
+python3 tools/fh.py status
 ```
 
-Edit source roles and skills under `harness/` or `harness_build/agents/` and `harness_build/skills/`. To refresh the included host copies:
+All source roles and skills are under `harness/agents/` and `harness/skills/`. To refresh the included host copies:
 
 ```bash
-python3 harness_build/cli/fh.py sync-adapters
+python3 tools/fh.py sync-adapters
 ```
 
 ## Included material and local corpus
@@ -51,6 +51,6 @@ The public repository contains method guides, operational skills, role configura
 
 The full article catalog, original replication source trees, paper PDFs, extracted full text and local search databases are not distributed. References to `Paper/<Journal>/articles/<artid>/` identify the original source location; those files are not present in a fresh clone. Use the recorded DOI or repository link to locate the original publication or code under its own access and license terms.
 
-The `search` command is optional and requires an existing local index at `harness_build/index/fh_index.sqlite`. It is not part of the fresh-clone quick start. Skills, cards and notes remain usable without that index or the full corpus.
+The `search` command is optional and requires an existing local SQLite index supplied with `--index <path>`, or placed at `local/fh_index.sqlite`. It is not part of the fresh-clone quick start. Skills, cards and notes remain usable without that index or the full corpus.
 
 Version: [harness/VERSION](harness/VERSION). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). License and third-party attribution: [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).

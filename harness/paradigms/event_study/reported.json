@@ -256,12 +256,12 @@
     {
       "artid": "qje_139_1_2",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/event_study.json"
+      "list": "examples/exclusions/event_study.json"
     },
     {
       "artid": "rfs_2024_rfs_hhae015",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/event_study.json"
+      "list": "examples/exclusions/event_study.json"
     }
   ],
   "denominators": {

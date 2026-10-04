@@ -1,6 +1,6 @@
 # <<< fh-managed <<<
 
-# >>> fh-managed (harness_build/cli/fh_adapters.py) >>>
+# >>> fh-managed (tools/fh_adapters.py) >>>
 # Generated role descriptions; edit source roles and sync again.
 [features]
 multi_agent = true

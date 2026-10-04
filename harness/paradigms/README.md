@@ -11,3 +11,5 @@ Counts refer to papers. Unknown means insufficient recorded information. A commo
 The collection covers 20 methods. Code observations cover 16 methods; paper-practice summaries cover 20 methods and include an `_all/` aggregate. Existing denominators, exclusions and references describe how these summaries were constructed. They do not require regeneration before use.
 
 Historical draft and evaluation fields describe the existing material. Assess whether a particular source or recommendation applies to the current research question.
+
+Operational guidance is maintained in the skills. Historical build/review notes in recommendation drafts describe their original context; build records are not distributed or needed to use the public package.

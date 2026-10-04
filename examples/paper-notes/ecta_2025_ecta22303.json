@@ -1,0 +1,1278 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "ecta_2025_ecta22303",
+  "journal": "Econometrica",
+  "year": 2025,
+  "doi": "10.3982/ecta22303",
+  "source": {
+    "pdf_path": "Paper/PDF/ecta_2025_ecta22303.pdf",
+    "pdf_sha256": "dc5c66ad45baacaf838604897b240a2f4047b77663ab2164750f409c09adf402",
+    "text_path": "harness_build/papers/text/ecta_2025_ecta22303.txt",
+    "text_sha256": "2f05ed74d853d468ffbe3f22165e0f9300a85c4fe16383387b259cd3e4326d25",
+    "pages": 41
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:05:27Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/ecta_2025_ecta22303.json",
+    "card_sha256": "582eabfeb41e8c2bbfba8df30d05114cbe294c744fadded9e16524c23a3784e5"
+  },
+  "methods": [
+    "bunching",
+    "did",
+    "iv",
+    "structural_estimation"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "1. Introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "data",
+      "title": "2. Data and Setting",
+      "pages": [
+        6,
+        12
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "model",
+      "title": "3.1 Household Problem (stylized model)",
+      "pages": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "3.2 Difference-in-Bunching Estimation",
+      "pages": [
+        14,
+        16
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "3.3-3.5 Collateral Aversion Distribution and Alternative Bunching Estimators",
+      "pages": [
+        16,
+        20
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "design",
+      "title": "4.1 Identification and Estimation (2SLS for Default)",
+      "pages": [
+        20,
+        23
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "4.2 Results (Moral Hazard Estimation)",
+      "pages": [
+        23,
+        26
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "heterogeneity",
+      "title": "5.1 Descriptive Evidence (Selection and Nonfinancial Considerations)",
+      "pages": [
+        26,
+        30
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "model",
+      "title": "5.2-5.3 Structural Estimation and Counterfactuals",
+      "pages": [
+        30,
+        36
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "conclusion",
+      "title": "6. Conclusion",
+      "pages": [
+        36,
+        37
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "other",
+      "title": "References and Data/Code Availability Statement",
+      "pages": [
+        37,
+        41
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named"
+      ],
+      "statement": "The paper names its preferred design a difference-in-bunching estimator and explicitly frames it as similar to an individual-level difference-in-differences design that uses covariates.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "did"
+      ],
+      "quote": "similar to a traditional difference-in-differences design using individual-level data, including covariates"
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "Authors state the identifying assumption that, within the bunching region, disaster loss size is plausibly independent of a household's private collateral value conditional on covariates, and describe checking this by regressing distance-to-threshold on observables.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section 3.3",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "parallel_trends_argued",
+        "threats_discussed"
+      ],
+      "statement": "The event-study-style bunching plot is used as an internal placebo check: loan amounts for borrowers whose predicted ideal amount falls below the lower threshold are argued to be unaffected by the collateral rule, serving the same role as a pre-trend test.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 3.2, Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "did"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "instrument_exclusion_argued",
+        "compliers_described"
+      ],
+      "statement": "For the collateral-default instrument, the paper states the exclusion restriction directly (the threshold-based instruments should affect default only through collateral provision, given controls) and separately argues a monotonicity condition needed for a LATE interpretation.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "otherwise unrelated to the likelihood of default"
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "A potential supply-side confound (that approval or pricing itself could depend on collateral) is addressed by showing that loan approval and offered interest rates are smooth around the collateral threshold, functioning like a continuity check even though the design is not framed as an RD.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 2.2, Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated",
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The analysis sample is defined as household applications to the federal disaster loan program over a fixed multi-year window, restricted to homeowners with real-estate losses, with the restriction justified by the need to compare borrowers who can and cannot secure a loan with real estate.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 2.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "The default/moral-hazard analysis further restricts the estimation sample by an upper loss cutoff, stated as a table note rather than in the surrounding prose.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table III note",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "The difference-in-bunching estimation restricts comparison to households facing one of two specific threshold regimes and to losses below the higher of the two thresholds, justified by the fact that the loss amount caps the loan amount so higher-loss borrowers under the low threshold cannot serve as a valid comparison.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "did"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "The first-stage/second-stage default sample is further limited to households with losses above the lower threshold, justified because the identifying variation used in the first stage only applies to that subgroup.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section 4.1, footnote 19",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "winsorization"
+      ],
+      "statement": "Several monetary variables in the main summary-statistics table are winsorized at the extreme tails, with the winsorization levels and affected variables stated only in the table note.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Table I note",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "other:nominal_vs_real_discussion"
+      ],
+      "statement": "The paper explicitly discusses using nominal rather than inflation-adjusted dollar values throughout, arguing that time fixed effects address nominal-versus-real comparability given the muted inflation over the sample period.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 2.2, footnote 5",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "other:key_construct_definition"
+      ],
+      "statement": "The paper's central outcome construct, collateral aversion, is formally defined within the stylized household model as the loan value at which a household is indifferent between a collateralized and an uncollateralized loan.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "other:counterfactual_proxy_construction",
+        "measurement_error_discussed"
+      ],
+      "statement": "An alternative measure of a household's ideal loan amount is constructed from the loan amount originally requested on the initial application, with imputation used for the subset of borrowers who already bunch in their original request, a limitation the authors acknowledge.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section 3.4.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "running_variable_definition"
+      ],
+      "statement": "The running/damage variable underlying the bunching analysis is binned into fixed-width increments and used both as the outcome bins in the difference-in-bunching regression and, later, as the basis for constructing the collateral instrument.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 3.2, Equation 6",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "did"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The collateral instrument is constructed as interactions between the household's binned loss amount and indicators for which threshold regime the household faced, capturing how the same loss level implies different collateral requirements across regimes.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section 4.1, Equation 8",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "controls_progressive_columns",
+        "n_reported"
+      ],
+      "statement": "The main moral-hazard table reports a progression of columns adding borrower and home covariates to the same instrumented specification, with fixed effects, the sample, and observation counts listed at the foot of the table alongside a footnote naming the preferred column.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Table IV",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "baseline_then_variants"
+      ],
+      "statement": "The table comparing collateral-aversion estimates across estimation approaches reports each method's summary statistic with a bootstrapped standard error in parentheses beneath it, organized into columns by which threshold regime generated the estimate.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Table II",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "The structural sensitivity table reports the same central estimate recomputed under a series of alternative parameter assumptions (one assumption varied at a time relative to a stated base case), rather than a nested-controls layout.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Table V",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "The counterfactual table reports several outcome metrics per scenario row (amount given up, average loan, predicted default, share of borrowers) rather than regression coefficients, organized into panels comparing the base case, policy counterfactuals, and behavioral counterfactuals.",
+      "pages": [
+        34,
+        35
+      ],
+      "locator": "Table VI",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Standard errors for the bunching-based estimates are block-bootstrapped at the disaster level, justified explicitly as the unit at which the collateral threshold (the source of identifying variation) is assigned, citing published methodological guidance on clustering choice.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Standard errors in the default/moral-hazard regressions are clustered at the disaster level for the same stated reason (it is the source of the identifying variation), with a footnote noting that the significance pattern is unchanged under an alternative cluster level.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section 4.1, footnote 20",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:smoothness_check"
+      ],
+      "statement": "A figure showing that loan approval and offered interest rates are smooth through the collateral threshold is reported in the main text as a design diagnostic supporting the claim that collateral provision is not supply-driven.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 2.2, Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "The difference-in-bunching coefficient plot with confidence intervals is used to display a precisely estimated null response for loss bins below the lower threshold, serving as a pre-trend-style diagnostic in the main text.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 3.2, Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "did"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "First-stage instrument-strength statistics are reported for every column of the main default table in the main text, described narratively as indicating a strong instrument across specifications.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Table IV",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:monotonicity_check"
+      ],
+      "statement": "A companion figure showing that the probability of collateralizing declines as the threshold rises, holding losses fixed, is offered in the main text as support for the monotonicity assumption underlying the instrumental-variables interpretation.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section 4.1, Figure 8 panel B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "online_appendix_not_available"
+      ],
+      "statement": "A regularized regression approach is used to allow substantial nonlinearity in the control variables as a robustness check on functional form, with the full results reported only in the companion online supplement rather than in this article.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "use a Lasso regression to allow for a high degree of nonlinearity in our control variables"
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "A specification-curve exercise across many alternative modeling choices for the default hazard model is summarized narratively in the main text, describing the sign and approximate range of the resulting distribution of estimates rather than presenting a full specification-curve figure.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "online_appendix_not_available"
+      ],
+      "statement": "Three independently constructed estimators of households' ideal loan amounts and collateral aversion are compared against one another as an implicit cross-method robustness exercise, with the full technical derivation of two of the three approaches deferred to the companion supplement.",
+      "pages": [
+        18,
+        20
+      ],
+      "locator": "Sections 3.4-3.5",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "in_main_text"
+      ],
+      "statement": "The structural home-attachment estimate's sensitivity to several assumed parameters (risk aversion, outside borrowing cost, savings return, noncollateral default cost) is tabulated explicitly, varying one assumption at a time relative to a stated base case.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Table V",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "exploratory_labelled"
+      ],
+      "statement": "Subgroup comparisons around the bunching threshold by ex ante creditworthiness and income are presented as descriptive evidence bearing on a selection mechanism rather than as a pre-specified heterogeneity test.",
+      "pages": [
+        26,
+        28
+      ],
+      "locator": "Section 5.1.1",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Bunching behavior is examined across bins of an existing-mortgage leverage ratio to argue for a role of nonfinancial factors, and the authors explicitly label a related set of null results for household-composition proxies as inconclusive because of data limitations.",
+      "pages": [
+        28,
+        30
+      ],
+      "locator": "Section 5.1.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Bunching responsiveness to the program's offered interest rate is examined using a comparison of borrowers on either side of a quarterly rate update, exploiting a discrete jump in the program rate against smoothly evolving private market rates.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section 5.1.1.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism"
+      ],
+      "statement": "Both ex ante credit-quality comparisons and ex post realized-default comparisons around the bunching threshold are presented together as evidence pointing toward an advantageous-selection mechanism rather than the adverse-selection mechanism usually assumed for collateral.",
+      "pages": [
+        26,
+        28
+      ],
+      "locator": "Section 5.1.1.1, Figure 9",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism",
+        "ruled_out_alternatives"
+      ],
+      "statement": "Borrowers with no remaining financial stake in their home (already underwater on an existing mortgage) are examined separately to isolate a nonfinancial home-attachment mechanism from an equity-driven financial mechanism, since the two would otherwise be observationally similar.",
+      "pages": [
+        28,
+        29
+      ],
+      "locator": "Section 5.1.2, Figure 10",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "A structural model is used explicitly to decompose the overall collateral-aversion mechanism into a financial equity-loss component and a separate nonfinancial home-attachment component, described by the authors as the paper's main tool for separating the two channels.",
+      "pages": [
+        30,
+        31
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature",
+        "back_of_envelope"
+      ],
+      "statement": "The back-of-envelope net-present-value translation of collateral aversion is benchmarked against an independently estimated interest-rate demand elasticity for the same loan program from a companion paper, expressing the response as an equivalent change in the program's interest rate.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "Section 1, footnote 1",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The causal effect of collateral on default is interpreted partly by comparison to an equivalent change in a familiar underwriting metric (a shift in the borrower's credit score) rather than reported only as a rate change.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The structural home-attachment estimate is placed against the wide range of prior estimates of nonmonetary or psychic moving costs in the literature, with the authors attributing the difference in magnitude to differences in elicitation method and in the underlying sample studied.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "precision_discussed"
+      ],
+      "statement": "The structural attachment estimate is additionally cross-checked against an independent back-of-envelope calculation built from the descriptive net-present-value figures, and the authors explain conceptually why the two need not coincide exactly (richer covariates and nonlinearity in the structural approach).",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors state that the difference-in-bunching approach is limited to households whose losses fall below the higher of the two compared thresholds, capping the range of ideal loan amounts for which collateral aversion can be directly estimated by that method.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": [
+        "selection",
+        "measurement"
+      ],
+      "statement": "The original-request proxy for a household's ideal loan amount is flagged as requiring imputation for early bunchers, and the authors note this could introduce selection if households who bunch immediately differ unobservably (for example in sophistication) from other bunchers.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section 3.4.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "power"
+      ],
+      "statement": "Null results for two proxies intended to capture school-aged-children considerations are explicitly labeled inconclusive by the authors rather than as evidence against a schooling-related mechanism, because the proxies only approximate the underlying construct.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section 5.1.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "external_validity",
+      "tags": [
+        "site_specific"
+      ],
+      "statement": "The authors explicitly discuss that their sample of households who recently experienced a disaster is a distinct environment from the typically studied mortgage-borrowing population, while arguing the underlying secured-versus-unsecured borrowing trade-off is preserved.",
+      "pages": [
+        5,
+        6
+      ],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The conclusion explicitly cautions that the specific magnitudes of collateral aversion may not generalize across other consumer credit settings, citing prior evidence that credit demand and default penalties vary with loan product and legal context.",
+      "pages": [
+        37,
+        37
+      ],
+      "locator": "Section 6, footnote 36",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "notes_state_sample"
+      ],
+      "statement": "A detailed summary-statistics table reporting the mean, standard deviation, and several percentiles for key borrower variables appears early in the paper, with all variable definitions and the winsorization rule given entirely within the table note rather than in the main prose.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Table I",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "map"
+      ],
+      "statement": "A choropleth-style map of participating ZIP codes is used to describe the geographic coverage of the sample rather than as an input to a formal spatial regression.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 2.1, Figure 2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ],
+      "note": "Applies broadly to the whole-sample descriptive presentation rather than to one specific method."
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot"
+      ],
+      "statement": "Coefficient-style plots with confidence intervals, rather than a coefficient table, are the primary device used to present the difference-in-bunching treatment effects across loss bins.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 3.2, Figure 6",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "did"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "other:cdf_plot"
+      ],
+      "statement": "Cumulative-distribution-function plots are used to compare the three bunching methods' implied distributions of collateral aversion visually, alongside a small number of summary percentiles reported in text.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section 3.5, Figure 7",
+      "basis": "stated",
+      "applies_to": [
+        "bunching"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction previews the paper's findings separately for each of the three motivating questions it poses, in the same order that the corresponding empirical sections later follow.",
+      "pages": [
+        2,
+        5
+      ],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "other:robustness_embedded_in_results"
+      ],
+      "statement": "Robustness checks for both the default model and the bunching estimates are embedded within the results subsections of their respective empirical sections rather than collected into one separate robustness section of the article.",
+      "pages": [
+        18,
+        25
+      ],
+      "locator": "Sections 3.4-3.5 and 4.2",
+      "basis": "inferred",
+      "applies_to": [
+        "bunching",
+        "iv"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "online_appendix_not_available",
+        "other:companion_paper_appendix"
+      ],
+      "statement": "Substantial technical and robustness detail (full bunching derivations, additional heterogeneity results, and full robustness tables) is repeatedly deferred to a separate companion paper described as the article's supplemental material, rather than to an appendix within this article itself.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section 3.4, and throughout",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "data_restricted",
+        "data_access_procedure_described"
+      ],
+      "statement": "A replication-package DOI is given in the back matter, and the article states that the authors were granted an exemption to withhold parts of the data because access is restricted, while including a synthetic or simulated dataset so the posted code can still be run.",
+      "pages": [
+        41,
+        41
+      ],
+      "locator": "Back matter, replication statement",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ],
+      "quote": "granted an exemption to publish parts of their data because access to these data is restricted"
+    },
+    {
+      "id": "o53",
+      "category": "replication_statement",
+      "tags": [
+        "other:journal_verified_reproducibility"
+      ],
+      "statement": "The journal states it checked the submitted code and data for the ability to generate the paper's tables and figures, but notes that because of the heavy computational demands of the algorithms, the reproducibility checks were run on a simplified version of the code.",
+      "pages": [
+        41,
+        41
+      ],
+      "locator": "Back matter, replication statement",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_restricted"
+      ],
+      "statement": "The underlying data are described as administrative program records assembled during loan underwriting, including income verified against tax records, a credit-bureau report, and an onsite property-damage assessment, rather than survey-collected or purchased commercial data.",
+      "pages": [
+        7,
+        8
+      ],
+      "locator": "Section 2.2",
+      "basis": "stated",
+      "applies_to": [
+        "bunching",
+        "iv",
+        "structural_estimation"
+      ],
+      "note": "Applies broadly to the whole-sample descriptive presentation rather than to one specific method."
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "The default model is described as two-stage least squares, instrumenting collateral provision with interactions between binned loss amount and the prevailing threshold regime.",
+      "card_shows": "Design d2 (labeled method 'did') and spec s2 record the estimator generically as fixed-effects OLS via felm, but the spec's own note independently describes the same loss-bin-by-cutoff interaction as an IV strategy.",
+      "status": "agree",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "d2 / s2.estimator / s2.notes",
+      "note": "Card's formal method label ('did') and estimator field ('hdfe_ols') are generic, but its free-text note matches the paper's stated 2SLS/IV design."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The default equations include disaster fixed effects, years-since-origination fixed effects, and loss-bin fixed effects.",
+      "card_shows": "Spec s2's fixed_effects field lists Disaster_Id, timeInt, and loss_cut, matching disaster, time-since-origination, and loss-bin fixed effects respectively.",
+      "status": "agree",
+      "pages": [
+        22,
+        23
+      ],
+      "card_ref": "s2.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors in the default model are stated as clustered at the disaster level, and bunching-model standard errors are block-bootstrapped at the disaster level.",
+      "card_shows": "Spec s2's se.type and se.cluster_level fields are both null (unknown), and the same is true for s1 and s3.",
+      "status": "paper_only",
+      "pages": [
+        15,
+        23
+      ],
+      "card_ref": "s2.se.cluster_level"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The paper states explicit sample restrictions: the default analysis is capped at a maximum loss amount, and the first-stage instrument is only defined for losses above the lower threshold.",
+      "card_shows": "Spec s2's sample field is null (unknown); the card's data records for the underlying RData files also leave period and unit_of_observation unrecorded.",
+      "status": "paper_only",
+      "pages": [
+        21,
+        22
+      ],
+      "card_ref": "s2.sample"
+    },
+    {
+      "item": "bandwidth",
+      "paper_says": "The traditional bunching estimator's counterfactual is described in the main text only qualitatively (a flexible polynomial fit to the region unaffected by the threshold); no specific polynomial degree or bandwidth is stated in the main article text.",
+      "card_shows": "Spec s1's notes record a specific polynomial degree and three cutpoints used in the code, and diagnostic x2 (polynomial_order) is marked status unknown with no further detail captured.",
+      "status": "code_only",
+      "pages": [
+        17,
+        18
+      ],
+      "card_ref": "s1.notes / x2",
+      "note": "The numeric polynomial degree appears only in the code-derived card note, not in this article's main text; the paper defers this technical detail to the companion supplement."
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "The paper explicitly names the control/comparison group for the difference-in-bunching design as households who apply when the higher of the two compared thresholds is in effect, since they cannot bunch at the lower amount.",
+      "card_shows": "Design d2's comparison_group field is null (unknown).",
+      "status": "paper_only",
+      "pages": [
+        15,
+        15
+      ],
+      "card_ref": "d2.comparison_group"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "The paper reports two robustness exercises for the default model in the main text (a regularized nonlinear control specification and a specification-curve analysis across design choices).",
+      "card_shows": "The card's robustness array is empty.",
+      "status": "paper_only",
+      "pages": [
+        25,
+        25
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The paper organizes its findings into six numbered tables and eleven numbered figures referenced throughout the text.",
+      "card_shows": "The card's outputs.tables and outputs.figures arrays are both empty.",
+      "status": "paper_only",
+      "pages": [
+        8,
+        8
+      ],
+      "card_ref": "outputs"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The paper describes the underlying data as administrative federal disaster loan program records, restricted but obtained with a Small Business Administration data-sharing arrangement acknowledged in the text.",
+      "card_shows": "The card's data records show access as 'unknown' and source_hint as null for the household-level RData files loaded by the scripts.",
+      "status": "paper_only",
+      "pages": [
+        7,
+        8
+      ],
+      "card_ref": "data[0].source_hint"
+    },
+    {
+      "item": "other",
+      "paper_says": "The paper documents a fully specified structural model in the main text, including a CARA-utility value function, a second-order Taylor approximation used to solve for each household's attachment parameter, and a latent-variable regression used to recover individual estimates.",
+      "card_shows": "The card's dedicated 'structural' field is null; the structural design (d3) is recorded only through a generic code trace with no functional form captured.",
+      "status": "paper_only",
+      "pages": [
+        30,
+        31
+      ],
+      "card_ref": "structural"
+    },
+    {
+      "item": "controls",
+      "paper_says": "The paper lists the specific borrower and home covariates added across columns of the default table (credit score, income, debt-to-income ratio, self-employment, age, loan-to-value, and home equity).",
+      "card_shows": "Spec s2's controls_summary field is null.",
+      "status": "paper_only",
+      "pages": [
+        23,
+        24
+      ],
+      "card_ref": "s2.controls_summary"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "The main text does not report a formal bandwidth-sensitivity check for the traditional bunching estimator's polynomial counterfactual.",
+      "card_shows": "Diagnostic x1 (bandwidth_selection) is recorded with status 'unknown' and a note that no robustness to bandwidth variation was found in the sections of code read.",
+      "status": "unknown",
+      "pages": [
+        17,
+        18
+      ],
+      "card_ref": "x1"
+    }
+  ],
+  "gaps": [
+    "No explicit statement of a stars/significance-level convention was found in the main-text tables; coefficients are reported with standard errors in parentheses without a stated stars policy.",
+    "The specific polynomial degree and bandwidth used for the traditional bunching counterfactual are not given numeric values in the main article text; this detail is deferred to the companion online supplement.",
+    "No preregistration, IRB approval, or participant-consent statement is present anywhere in the article; this is an administrative-records study with no stated human-subjects procedure.",
+    "The statistical/programming software used for estimation is not named in the main article text itself (it is only inferable from the separately supplied replication package).",
+    "The companion supplement 'Collier, Ellis, and Keys (2025), Supplement to The Cost of Consumer Collateral' that the article repeatedly cites for full technical, robustness, and heterogeneity detail is a separate document and was not part of the text or PDF read for this note."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        41
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the entire extracted text of the published article (introduction through references and the back-matter replication statement), pages 779-819. The paper repeatedly defers full technical and robustness detail to a companion online supplement, 'Collier, Ellis, and Keys (2025), Supplement to The Cost of Consumer Collateral', which is a separate document and was not part of the text or PDF provided for this note."
+  }
+}

@@ -1,4 +1,4 @@
-# Public root allowlist. Local corpus and workstation material stay outside Git.
+# Public root allowlist. Corpus and build-workstation material stay local.
 /*
 !/.gitignore
 !/.gitattributes
@@ -10,38 +10,34 @@
 !/LICENSE
 !/NOTICE.md
 !/harness/
-!/harness_build/
+!/tools/
+!/examples/
 !/.agents/
 !/.claude/
 !/.codex/
+/harness_build/
 
-# Include only reusable materials from the build workstation.
-/harness_build/*
-!/harness_build/README.md
-!/harness_build/cli/
-!/harness_build/agents/
-!/harness_build/skills/
-!/harness_build/recipes/
-!/harness_build/papers/
-!/harness_build/evals/
-/harness_build/cli/*
-!/harness_build/cli/README.md
-!/harness_build/cli/fh.py
-!/harness_build/cli/fh_common.py
-!/harness_build/cli/fh_adapters.py
-!/harness_build/cli/fh_cards.py
-!/harness_build/cli/fh_index.py
-!/harness_build/cli/fhb.py
-/harness_build/agents/*
-!/harness_build/agents/*.md
-/harness_build/recipes/*
-!/harness_build/recipes/accepted/
-/harness_build/papers/*
-!/harness_build/papers/notes/
-/harness_build/evals/*
-!/harness_build/evals/holdout/
-/harness_build/evals/holdout/*
-!/harness_build/evals/holdout/*.json
+# Public tools only.
+/tools/*
+!/tools/README.md
+!/tools/fh.py
+!/tools/fh_common.py
+!/tools/fh_adapters.py
+!/tools/fh_cards.py
+!/tools/fh_index.py
+
+# Selected research examples only.
+/examples/*
+!/examples/README.md
+!/examples/code-cards/
+!/examples/paper-notes/
+!/examples/exclusions/
+/examples/code-cards/*
+!/examples/code-cards/*.json
+/examples/paper-notes/*
+!/examples/paper-notes/*.json
+/examples/exclusions/*
+!/examples/exclusions/*.json
 
 # Host configuration allowlists.
 /.agents/*

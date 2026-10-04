@@ -1,0 +1,1111 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "rfs_2025_rfs_hhaf065",
+  "journal": "RFS",
+  "year": 2025,
+  "doi": "10.1093/rfs/hhaf065",
+  "source": {
+    "pdf_path": "Paper/PDF/rfs_2025_rfs_hhaf065.pdf",
+    "pdf_sha256": "9434977ce90d0cf049c1a821ad069a98dc6cf0999df1a17ed2bd92c6041597ba",
+    "text_path": "harness_build/papers/text/rfs_2025_rfs_hhaf065.txt",
+    "text_sha256": "5e203c2b3088d65013cbe7f574dea34cef2fd40acd9373f90f377f13f1cfd1dd",
+    "pages": 37
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:39:33Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/rfs_2025_rfs_hhaf065.json",
+    "card_sha256": "f29ba4a87d9c77faff0413ba45dd75c1cdfbc4887affd2d36cbe2794fa3fbd53"
+  },
+  "methods": [
+    "event_study",
+    "did",
+    "panel_fe",
+    "other:structural_break",
+    "other:poisson_pseudo_ml"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "1. Historical Background and Data",
+      "pages": [
+        6,
+        9
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "results",
+      "title": "2. Arrival of New Depositors before the Panic of 1873",
+      "pages": [
+        9,
+        18
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "results",
+      "title": "3. Postcrisis Depositor Behavior",
+      "pages": [
+        18,
+        28
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "4. Account Closure Behavior",
+      "pages": [
+        28,
+        34
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "conclusion",
+      "title": "5. Conclusion and Code Availability",
+      "pages": [
+        34,
+        35
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        35,
+        37
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named",
+        "in_main_text"
+      ],
+      "statement": "The first empirical design is a pre/post comparison of daily new-account arrival rates at branches in a narrow window around an external bank failure, estimated as a fixed-effects Poisson via pseudo-ML with branch-level interactions capturing cross-sectional exposure.",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Section 2.2, Equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "in_main_text"
+      ],
+      "statement": "The authors argue the initial run was not information-based by noting the bank had little direct exposure to the failing institution, and they use geographic dispersion of branches to test whether information diffusion from the panic's origin drove arrival changes.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section 2.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "in_main_text"
+      ],
+      "statement": "Regime dates are not imposed from the historical narrative but estimated from the data with a multiple structural break procedure on the mean daily arrival rate, citing the Bai and Perron dynamic program and a Stata implementation.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_break"
+      ],
+      "quote": "let the data itself inform our understanding of the timeline of events"
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed",
+        "in_main_text"
+      ],
+      "statement": "For closure analysis the authors explain that linkage reveals whether but not when an account closed, so they adopt two strategies: branch by opening year-month fixed effects to absorb the time trend, and short-window comparisons of cohorts opening just before and after events.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section 4",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "in_main_text"
+      ],
+      "statement": "The lead-lag test stacks daily white and non-white arrivals per branch as separate observations and interacts a post-break indicator with a non-white group indicator, defining the window relative to the later group's estimated break date.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Section 3.1, Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "matching_or_linkage_described",
+        "in_main_text"
+      ],
+      "statement": "Three archival sources are named: new depositor registers, a selected sample of passbooks submitted to the resolution authority, and dividend payment ledgers; account numbers are used to link ledgers to registers to infer pre-failure closure.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Section 1.2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "in_footnote"
+      ],
+      "statement": "The New York branch is excluded from the descriptive white-share series because its records are not contiguous; the footnote explains that including it would create a misleading spike that would ostensibly support the claim.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Footnote 8",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "sample_period_stated",
+        "in_main_text"
+      ],
+      "statement": "The closure analysis is restricted to accounts opened from 1873 onward and to branches where dividend ledgers allow accurate closure construction; the authors compare the retained subsample with the full sample on branch size, white share and geography.",
+      "pages": [
+        28,
+        29
+      ],
+      "locator": "Section 4",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "unit_of_observation_stated",
+        "in_main_text"
+      ],
+      "statement": "For structural break tests a balanced panel of daily branch arrivals from January 1873 to failure is used because records are complete for every available branch over that period.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_break"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "in_main_text"
+      ],
+      "statement": "Passbook statistics use only books with balances large enough to earn interest, separately listed payments, and a final balance that reconciles with the transaction history.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "in_main_text"
+      ],
+      "statement": "Observation counts are reported in every regression table; the Sunday closure of the bank is noted as the reason one weekday is omitted from daily panels.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Footnote 14, Tables 3, 5, 6, 7",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "in_main_text"
+      ],
+      "statement": "The main outcome for arrival analyses is the daily count of new accounts per branch, sometimes restricted to white or local depositors; the closure outcome is an indicator that the account was closed before the failure date.",
+      "pages": [
+        16,
+        31
+      ],
+      "locator": "Sections 2.2 and 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "in_main_text"
+      ],
+      "statement": "Branch exposure measures are defined in table notes: a New York branch dummy, distance to New York in thousands of miles, and an indicator for a national bank failure in the branch's state in the panic year.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "measurement_error_discussed",
+        "in_main_text"
+      ],
+      "statement": "Interest payout rules are reconstructed by computing running balances from hand-entered passbook transactions and realigning claimed payment dates; footnotes attribute rate dispersion to cashier errors and rule application differences.",
+      "pages": [
+        11,
+        12
+      ],
+      "locator": "Section 2.1, Table 2, footnote 11",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "standardized_index",
+        "in_main_text"
+      ],
+      "statement": "Depositor characteristics are hand-coded from registers: organization membership traced through officer listings, local status from birthplace or upbringing, in-town residence from address descriptions, occupations grouped into categories with an assigned education level, and age bins.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "other:scaling_by_account_mean",
+        "in_main_text"
+      ],
+      "statement": "Month-end passbook balances are scaled by the mean balance over the account's life so that accounts of different sizes can be averaged within opening cohorts.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section 3.3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "se_type_in_notes",
+        "cluster_level_in_notes",
+        "baseline_then_variants"
+      ],
+      "statement": "The main arrival table shows a baseline column, then sample restrictions (large branches, white only, local only), then interaction columns; notes list branch fixed effects, branch clustering, exponentiated coefficients and t-statistics in parentheses.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "other:exponentiated_coefficients",
+        "in_main_text"
+      ],
+      "statement": "Poisson coefficients are reported exponentiated so they read as proportional changes in the arrival rate; the text explains that total effects with interactions are products of exponentiated coefficients.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section 2.2, Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "r2_reported",
+        "n_reported",
+        "cluster_level_in_notes"
+      ],
+      "statement": "The closure table reports a pooled column followed by one column per regime, with adjusted R-squared, observations, branch by year-month fixed effects, and a note that dummies for missing indicators are included.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "controls_progressive_columns",
+        "fe_listed_in_table"
+      ],
+      "statement": "Short-window closure tests are laid out as two stacked panels: post-event alone, then post-event interacted with white, with the same controls as the main closure table and branch fixed effects but no time fixed effects.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Table 7",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "other:estimator_choice_justified",
+        "in_main_text"
+      ],
+      "statement": "The choice of Poisson pseudo-ML over alternatives is justified by count data, branch size heterogeneity and incidental-parameter concerns, with a citation, and negative binomial is said to give similar results.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 2.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level",
+        "few_clusters_addressed",
+        "alt_se",
+        "in_footnote",
+        "in_appendix"
+      ],
+      "statement": "Standard errors are clustered by branch; a footnote acknowledges the small number of clusters, cites Abadie et al. on when to cluster, and states that robust versions of all models are in the Internet Appendix with a summary of how they compare.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Footnote 15",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study",
+        "panel_fe"
+      ],
+      "quote": "the small number of clusters may make this approach undesirable"
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix",
+        "in_footnote"
+      ],
+      "statement": "A placebo event, the earlier public audit release, is examined by plotting cumulative arrivals and a formal test in the Internet Appendix; the main text notes the absence of a response.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Footnote 13, Section 2.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "A placebo short-window closure comparison around the same calendar date one year earlier is discussed in text to contrast with the recovery-period result.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section 4.2",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "Cumulative arrival plots before and after the external failure, raw and scaled by pre-event accounts, are used to show the timing and heterogeneity of the response before any regression.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:break_fit_plot",
+        "in_main_text"
+      ],
+      "statement": "Structural break estimates are illustrated by overlaying piecewise linear trend fits on cumulative daily accounts within each regime, following a cited AER paper's visual approach.",
+      "pages": [
+        21,
+        22
+      ],
+      "locator": "Figure 5",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_break"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Lead-lag Poisson tests are repeated omitting the New York branch because of its disproportionately white depositor base.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 5, models (2) and (4)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_se",
+        "in_appendix"
+      ],
+      "statement": "Alternative clustering for the main tables is relegated to the Internet Appendix and flagged in table notes.",
+      "pages": [
+        17,
+        32
+      ],
+      "locator": "Table 3 and Table 6 notes",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_footnote"
+      ],
+      "statement": "A footnote states that closure estimates from earlier periods are similar but less reliable because of record gaps.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Footnote 17",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Cross-branch heterogeneity at each break is examined by interacting post-break with three branch indicators (formal lending, above-median deposit decline, state bank failure), with full coefficients placed in the Internet Appendix and only a narrative summary in text.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "in_main_text"
+      ],
+      "statement": "Structural breaks and closure regressions are estimated separately by race, local status, organization status and by regime, with each split presented as a panel of the same table.",
+      "pages": [
+        21,
+        32
+      ],
+      "locator": "Tables 4 and 6",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_break",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism",
+        "intermediate_outcomes",
+        "suggestive_labelled"
+      ],
+      "statement": "Attachment and sophistication mechanisms are proxied by covariates (organization membership, local birth, urban residence, occupation education) in the closure regression and interpreted as suggestive of community ties and information access.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives",
+        "in_main_text"
+      ],
+      "statement": "Information diffusion from the panic's origin is tested and argued against using distance and New York interactions, while regional contagion is offered as a competing explanation with caution about data limits.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 2.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "in_main_text"
+      ],
+      "statement": "Closure effects are interpreted relative to the baseline closure probability given by the constant, and Poisson effects as proportional changes in arrival rates.",
+      "pages": [
+        16,
+        31
+      ],
+      "locator": "Sections 2.2 and 4.1",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:timing_in_days",
+        "in_main_text"
+      ],
+      "statement": "Lead-lag differences between depositor groups are expressed as numbers of days between estimated break dates rather than as coefficients.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_break"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage",
+        "selection",
+        "identification_caveat",
+        "in_main_text"
+      ],
+      "statement": "The introduction has a dedicated paragraph on data limitations: closure timing is unobserved, passbooks and balances are only observed for accounts not closed, and some estimates must be read as conditional on non-closure.",
+      "pages": [
+        3,
+        3
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [],
+      "quote": "certain quantitative estimates must therefore be interpreted as conditional on closure"
+    },
+    {
+      "id": "o37",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "interpretation_caveat",
+        "in_main_text"
+      ],
+      "statement": "Results using state bank failure indicators are cautioned because failure data cover only nationally chartered banks and the number of failures is small.",
+      "pages": [
+        18,
+        26
+      ],
+      "locator": "Sections 2.2 and 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "limitation_stated",
+      "tags": [
+        "selection",
+        "in_main_text"
+      ],
+      "statement": "When comparing ending balances by race the authors state they do not claim an unbiased estimate of inflows and argue the direction of the selection bias.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 2.1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o39",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot",
+        "summary_stats_table",
+        "stars_used",
+        "notes_state_se",
+        "notes_state_sample"
+      ],
+      "statement": "Figures are mainly raw time series (monthly averages, rolling seven-day averages, cumulative counts) with error bars from binomial or SD calculations; tables use three-level stars, t-statistics in parentheses and notes that define every variable and the sample.",
+      "pages": [
+        10,
+        33
+      ],
+      "locator": "Figures 1 to 8, Tables 3 to 7",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "other:descriptive_table_of_policy_terms"
+      ],
+      "statement": "A descriptive table documents implied interest rates and minimum balances per dividend payment reconstructed from passbooks, serving as institutional evidence rather than summary statistics of regression variables.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": [
+        "other:regime_list"
+      ],
+      "statement": "The estimated regimes are summarised as a numbered list of four narrative periods after the formal tests.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "other:structural_break"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph",
+        "data_before_design"
+      ],
+      "statement": "The introduction previews two main findings, then positions the paper against bank-run, financial participation and Freedman's Bank literatures; historical background and data precede the empirical sections, and each empirical section introduces its own design.",
+      "pages": [
+        2,
+        9
+      ],
+      "locator": "Introduction, Section 1",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o43",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "Data collection details, variable construction, alternative clustering and full heterogeneity coefficients are delegated to an Internet Appendix hosted by the publisher, not included in the article PDF.",
+      "pages": [
+        1,
+        25
+      ],
+      "locator": "Title page note, Sections 1.2, 3.2, 4.1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": [
+        "main_result_first",
+        "mechanisms_after_main"
+      ],
+      "statement": "No separate robustness section exists; robustness is handled in footnotes, table notes and the appendix, and empirical sections follow the chronological narrative of the bank (growth, panic, post-crisis regimes, closure).",
+      "pages": [
+        9,
+        34
+      ],
+      "locator": "Sections 2 to 4",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o45",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "replication_package_cited",
+        "software_named"
+      ],
+      "statement": "A code availability line at the end of the conclusion cites a Harvard Dataverse DOI for replication code; Stata is implied through the cited structural break implementation.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Code Availability",
+      "basis": "stated",
+      "applies_to": [],
+      "quote": "The replication code is available in the Harvard Dataverse"
+    },
+    {
+      "id": "o46",
+      "category": "data_access",
+      "tags": [
+        "other:archival_transcription",
+        "administrative"
+      ],
+      "statement": "Data are hand-transcribed from historical archival records (registers, passbooks, resolution ledgers); a transcriber is acknowledged and the Internet Appendix is said to document the collection process.",
+      "pages": [
+        1,
+        9
+      ],
+      "locator": "Acknowledgements, Section 1.2",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Fixed effects Poisson via pseudo-MLE for daily new accounts",
+      "card_shows": "ppmlhdfe (poisson_ppml) in s1 to s9",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Linear probability model for closure",
+      "card_shows": "reghdfe hdfe_ols in s10 to s14",
+      "status": "agree",
+      "pages": [
+        31,
+        31
+      ],
+      "card_ref": "s10.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Branch fixed effects in Table 3",
+      "card_shows": "fe=['bank'] in s1",
+      "status": "agree",
+      "pages": [
+        17,
+        17
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Branch by race fixed effects in Table 5",
+      "card_shows": "fe=['bank#type'] in s8",
+      "status": "agree",
+      "pages": [
+        24,
+        24
+      ],
+      "card_ref": "s8.fixed_effects"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Branch by year-month fixed effects in Table 6 plus missing-indicator dummies",
+      "card_shows": "a(missing_* bank#yearm) in s10",
+      "status": "agree",
+      "pages": [
+        32,
+        32
+      ],
+      "card_ref": "s10.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Clustered at branch level in all tables",
+      "card_shows": "cluster bank in s1 to s11; s12 to s14 record se None though the command has cluster(bank)",
+      "status": "agree",
+      "pages": [
+        16,
+        33
+      ],
+      "card_ref": "s12.se",
+      "note": "card se field null for s12-s14 is an extraction gap, the code string shows cluster(bank)"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Table 3 model (2) restricts to large branches over a deposit threshold",
+      "card_shows": "s2 condition deposits_august_1872 >= threshold",
+      "status": "agree",
+      "pages": [
+        17,
+        17
+      ],
+      "card_ref": "s2.sample"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Table 5 omits New York in models (2) and (4)",
+      "card_shows": "s9 condition city != New York",
+      "status": "agree",
+      "pages": [
+        24,
+        24
+      ],
+      "card_ref": "s9.sample"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Table 3 interactions with New York dummy, distance to NY, bank failure in state",
+      "card_shows": "s4 ny, s5 dtnyc1000, s6 bank_failure_state interactions",
+      "status": "agree",
+      "pages": [
+        17,
+        17
+      ],
+      "card_ref": "s4.controls"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Robust SE versions and placebo audit test in Internet Appendix",
+      "card_shows": "diag x1 pretrend_plot not_found_in_scope; no robust SE spec recorded",
+      "status": "paper_only",
+      "pages": [
+        14,
+        16
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Negative binomial gives similar results",
+      "card_shows": "no nbreg spec in card",
+      "status": "paper_only",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specs"
+    },
+    {
+      "item": "other",
+      "paper_says": "Structural break estimation with Bai-Perron via Ditzen et al. Stata command",
+      "card_shows": "methods list only did and event_study; no break spec recorded",
+      "status": "paper_only",
+      "pages": [
+        19,
+        19
+      ],
+      "card_ref": "methods"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Tables 3 to 7 and Figures 1 to 8",
+      "card_shows": "tables=0 figures=0",
+      "status": "unknown",
+      "pages": [
+        10,
+        33
+      ],
+      "card_ref": "outputs"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Hand-transcribed archival registers, passbooks and dividend ledgers",
+      "card_shows": "dataverse_VX7HYE package; data source not recorded in specs output",
+      "status": "unknown",
+      "pages": [
+        8,
+        9
+      ],
+      "card_ref": "data_source"
+    }
+  ],
+  "gaps": [
+    "No formal parallel-trends or pre-trend test for the pre/post Poisson designs; only visual cumulative plots",
+    "No summary statistics table of regression variables in the main text",
+    "No discussion of multiple testing across many structural break subsamples and short-window tests",
+    "Data availability beyond code is not stated; the Internet Appendix is not in the PDF so its contents could not be verified",
+    "No external validity discussion beyond the historical framing"
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        37
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 37 pages read, including references. The paper has no in-PDF appendix; the Internet Appendix is hosted separately and was not available."
+  }
+}

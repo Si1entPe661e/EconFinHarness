@@ -272,37 +272,37 @@
     {
       "artid": "aer_110_9_10",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     },
     {
       "artid": "aer_113_3_7",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     },
     {
       "artid": "aer_114_6_6",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     },
     {
       "artid": "aer_115_3_8",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     },
     {
       "artid": "restud_90_5_11",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     },
     {
       "artid": "restud_92_2_14",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     },
     {
       "artid": "rfs_2025_rfs_hhaf065",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/did.json"
+      "list": "examples/exclusions/did.json"
     }
   ],
   "denominators": {

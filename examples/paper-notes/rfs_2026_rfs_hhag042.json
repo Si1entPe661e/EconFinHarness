@@ -1,0 +1,598 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "rfs_2026_rfs_hhag042",
+  "journal": "RFS",
+  "year": 2026,
+  "doi": "10.1093/rfs/hhag042",
+  "source": {
+    "pdf_path": "Paper/PDF/rfs_2026_rfs_hhag042.pdf",
+    "pdf_sha256": "1f2d502af32f95670fa9ba8258415120b36356d489aa9598c7f94748de6a352d",
+    "text_path": "harness_build/papers/text/rfs_2026_rfs_hhag042.txt",
+    "text_sha256": "046b02ec880c4cd908349565e82f1706b7987cd433c8ac2429b1237d8673be74",
+    "pages": 51
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:38:22Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/rfs_2026_rfs_hhag042.json",
+    "card_sha256": "5a303477da950963dbffb31498a7d9b24a894d6748901ce863c04f60bc004123"
+  },
+  "methods": [
+    "portfolio_sorts",
+    "fama_macbeth",
+    "predictive_regression",
+    "panel_fe",
+    "ml_prediction",
+    "other:hou_loh_decomposition"
+  ],
+  "structure": [
+    {"id": "sec1", "kind": "introduction", "title": "Introduction (untitled)", "pages": [2, 5]},
+    {"id": "sec2", "kind": "model", "title": "1. An Empirical Model of Disagreement", "pages": [6, 11]},
+    {"id": "sec3", "kind": "data", "title": "2. Data and Variables", "pages": [11, 13]},
+    {"id": "sec4", "kind": "results", "title": "3. Empirical Results", "pages": [13, 20]},
+    {"id": "sec5", "kind": "robustness", "title": "4. Robustness Checks", "pages": [20, 22]},
+    {"id": "sec6", "kind": "results", "title": "5. MFD as a Measure of Disagreement", "pages": [22, 35]},
+    {"id": "sec7", "kind": "mechanisms", "title": "6. Sources of Return Predictability", "pages": [35, 43]},
+    {"id": "sec8", "kind": "conclusion", "title": "7. Conclusion", "pages": [43, 44]},
+    {"id": "sec9", "kind": "appendix", "title": "Appendix A Control Variables; B MFD Construction; C Different MFD parameterizations", "pages": [44, 46]},
+    {"id": "sec10", "kind": "other", "title": "References", "pages": [47, 51]}
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": ["estimand_named", "design_variant_named", "in_main_text"],
+      "statement": "The empirical object is a cross-sectional return-prediction test: whether a simulated disagreement measure (dispersion of forecasts across randomly specified machine learning investor-models) predicts next-month stock returns. The design is stated as nonparametric portfolio sorts plus parametric Fama-MacBeth regressions.",
+      "pages": [2, 13],
+      "locator": "Introduction; Section 3 opening paragraph",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "fama_macbeth"]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "threats_discussed", "in_main_text"],
+      "statement": "A dedicated subsection motivates each modeling assumption of the belief simulator (sophisticated optimizing investors, high-dimensional information sets, tree ensembles) by citing prior empirical and experimental evidence, and the authors flag that the plausibility of the simulation distribution is a key question addressed by robustness to alternative distributions.",
+      "pages": [3, 9],
+      "locator": "Introduction; Section 1.2 Motivation for modeling choices",
+      "basis": "stated",
+      "applies_to": ["ml_prediction"]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "in_main_text"],
+      "statement": "The authors anticipate the objection that their distribution of model specifications may be biased in other ways than analyst surveys, and answer it by framing the method as a modifiable, complete methodology that other researchers can re-specify.",
+      "pages": [4, 10],
+      "locator": "Introduction; Section 1.3 Benefits",
+      "basis": "stated",
+      "applies_to": ["ml_prediction"]
+    },
+    {
+      "id": "o4",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "data_public", "in_main_text", "in_footnote"],
+      "statement": "Stock characteristics and returns come from a publicly available replication dataset (Jensen, Kelly, Pedersen), with underlying CRSP and Compustat sources named; a footnote gives the GitHub location of that dataset and its code.",
+      "pages": [11, 11],
+      "locator": "Section 2; footnote 7",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "fama_macbeth"]
+    },
+    {
+      "id": "o5",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "unit_of_observation_stated", "in_main_text"],
+      "statement": "Sample is common stocks on NYSE, AMEX and NASDAQ; financial and utility firms are excluded, and low-priced stocks are dropped with the stated justification of reducing the influence of small and illiquid stocks. Table notes repeat the SIC-based exclusion definitions.",
+      "pages": [11, 13],
+      "locator": "Section 2; Table 1 notes",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "fama_macbeth"]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": ["sample_period_stated", "in_main_text"],
+      "statement": "The full data period and the shorter out-of-sample test period are stated separately; the gap is explained by the rolling estimation window used to train the investor models. Table notes restate the sample period, including shortened windows when a factor model or proxy is available only for part of the period.",
+      "pages": [11, 15],
+      "locator": "Section 2; Table 3 notes",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "ml_prediction"]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": ["sample_size_reported_per_table", "in_main_text"],
+      "statement": "Observation counts are printed per column in the Fama-MacBeth table and in the panel regression table, but not in portfolio-sort tables.",
+      "pages": [21, 33],
+      "locator": "Table 6; Table 11",
+      "basis": "inferred",
+      "applies_to": ["fama_macbeth", "panel_fe"]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": ["restricted_data_used", "data_source_named", "in_main_text", "in_footnote"],
+      "statement": "Mechanism tests use proprietary short-lending fee data from IHS Markit and 13F institutional holdings from Thomson Reuters, each with its own shorter availability window noted in the text or footnote.",
+      "pages": [39, 41],
+      "locator": "Section 6.2; footnote 17; Table 15 notes",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o9",
+      "category": "variable_construction",
+      "tags": ["treatment_definition", "standardized_index", "in_main_text", "in_appendix"],
+      "statement": "The key variable is defined by equation as the cross-investor standard deviation of forecasts; the construction (number of investors, size of each information subset, random forest hyperparameters, rolling window, refit frequency, in-sample winsorization) is laid out in an appendix table, with a footnote noting the equal-weighted formulation differs from a related paper.",
+      "pages": [7, 45],
+      "locator": "Equation (4); footnote 4; Section 2.1; Appendix B Table B1",
+      "basis": "stated",
+      "applies_to": ["ml_prediction"]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": ["standardized_index", "in_main_text"],
+      "statement": "All predictor characteristics are cross-sectionally rank-transformed each period and mapped to a bounded interval, following cited machine learning asset pricing papers.",
+      "pages": [11, 11],
+      "locator": "Section 2",
+      "basis": "stated",
+      "applies_to": ["ml_prediction"]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": ["winsorization", "in_main_text"],
+      "statement": "Winsorization thresholds differ by use: summary statistics winsorize both tails at one level, regression controls at a tighter level and are standardized, and in-sample training returns are winsorized only in-sample, never out-of-sample.",
+      "pages": [13, 45],
+      "locator": "Table 1 notes; Table 6 notes; Table 11 notes; Table B1 notes",
+      "basis": "stated",
+      "applies_to": ["fama_macbeth", "panel_fe", "ml_prediction"]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": ["outcome_definition", "in_main_text"],
+      "statement": "Control variable definitions and their source papers are given in the Table 1 notes and again in an appendix table; alternative dependent variables (industry-adjusted and DGTW characteristic-adjusted returns) are defined in the text when introduced.",
+      "pages": [13, 44],
+      "locator": "Table 1 notes; Section 3.4; Appendix A Table A1",
+      "basis": "stated",
+      "applies_to": ["fama_macbeth"]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": ["standardized_index", "in_main_text"],
+      "statement": "Composite indices (a disagreement index and a limits-to-arbitrage index) are built by averaging or summing decile ranks of component proxies, following cited papers; the text and table note for the arbitrage index differ on the number of components.",
+      "pages": [27, 43],
+      "locator": "Section 5.3; Figure 4 notes; Section 6.3; Table 16 notes",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"],
+      "note": "Section 6.3 text lists three components; Table 16 notes list four including firm age."
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": ["baseline_then_variants", "stars_used", "se_type_in_notes", "in_main_text"],
+      "statement": "The main portfolio table reports each decile and the high-minus-low spread with raw excess return and alphas from five factor models in adjacent columns, in separate equal-weighted and value-weighted panels, with Newey-West t-statistics in parentheses and significance stars.",
+      "pages": [14, 15],
+      "locator": "Section 3.1; Table 3",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": ["controls_progressive_columns", "n_reported", "se_type_in_notes", "in_main_text"],
+      "statement": "The Fama-MacBeth table adds controls progressively across three columns, then swaps the dependent variable for industry-adjusted and characteristic-adjusted returns in two further columns; R-squared is not reported.",
+      "pages": [19, 21],
+      "locator": "Section 3.4; Table 6",
+      "basis": "stated",
+      "applies_to": ["fama_macbeth"]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": ["fe_listed_in_table", "n_reported", "r2_reported", "cluster_level_in_notes", "in_main_text"],
+      "statement": "The panel regression table lists controls, entity and time fixed effects as Yes rows, reports observations and R-squared per column, and its note states the estimating equation, the clustering dimensions, and standardization of variables.",
+      "pages": [32, 33],
+      "locator": "Section 5.5; Equation (5); Table 11",
+      "basis": "stated",
+      "applies_to": ["panel_fe", "predictive_regression"]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": ["weights_stated", "in_main_text"],
+      "statement": "Portfolio weighting is stated for every sort: the headline sort reports both equal and value weights, while conditional sorts used for mechanisms are equal-weighted and the market-phase test is value-weighted.",
+      "pages": [14, 43],
+      "locator": "Tables 3, 5, 10, 13, 15, 16 notes",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": ["newey_west", "in_footnote"],
+      "statement": "A footnote states that all reported t-statistics are Newey-West adjusted with a fixed lag count to address heteroskedasticity and autocorrelation; the lag choice itself is not further justified.",
+      "pages": [16, 20],
+      "locator": "footnote 9; Section 3.4",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "fama_macbeth"]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": ["twoway_cluster", "no_justification_found", "in_main_text"],
+      "statement": "Panel regressions for volume and volatility double-cluster by month and firm, and the earnings-announcement daily panel clusters by day following the cited source paper; no explicit reasoning for these cluster choices is given.",
+      "pages": [33, 39],
+      "locator": "Section 5.5; Section 6.1; Table 14 notes",
+      "basis": "stated",
+      "applies_to": ["panel_fe"]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": ["other:one_sided_test", "in_main_text"],
+      "statement": "Differences in the return spread between high and low uncertainty states are tested with a one-sided t-test, stated in the table note, consistent with the directional hypothesis.",
+      "pages": [31, 32],
+      "locator": "Table 10 notes; Section 5.4",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": ["in_main_text", "other:portfolio_characteristics_table"],
+      "statement": "Before controlling for characteristics, the paper reports time-series averages of cross-sectional medians of firm characteristics across sorted deciles, using the pattern to motivate which controls are needed next.",
+      "pages": [16, 18],
+      "locator": "Section 3.2; Table 4",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": ["in_main_text", "other:measure_validation"],
+      "statement": "A long section validates the new measure against existing proxies: distribution of monthly rank correlations with analyst dispersion (density figure), parallel Fama-MacBeth regressions of both measures on firm characteristics (bar figure), rank correlations with many other proxies, and a decomposition of a composite index.",
+      "pages": [22, 30],
+      "locator": "Section 5.1 to 5.3; Figures 2, 3, 4; Tables 7, 8, 9",
+      "basis": "stated",
+      "applies_to": ["fama_macbeth", "portfolio_sorts"]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": ["in_main_text", "other:state_dependence"],
+      "statement": "Time-variation checks split the sample at the median of many aggregate uncertainty, sentiment and factor-density proxies and report the spread in each state and its difference in one table; a LASSO count of selected characteristics defines factor density.",
+      "pages": [29, 32],
+      "locator": "Section 5.4; Table 10",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o24",
+      "category": "robustness_reported",
+      "tags": ["in_appendix", "alt_specification", "alt_sample", "alt_estimator", "online_appendix_not_available"],
+      "statement": "A short robustness section summarizes in prose a battery of checks that live entirely in the Internet Appendix: persistence over horizons, extended bivariate sorts, a three-pass estimator robust to omitted factors, nonlinear SDF pricing errors, alternative ML architectures and hyperparameters, easy-to-predict stocks, international markets, and an earnings-based version of the measure.",
+      "pages": [20, 22],
+      "locator": "Section 4; Internet Appendix A to H",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "fama_macbeth", "ml_prediction"]
+    },
+    {
+      "id": "o25",
+      "category": "robustness_reported",
+      "tags": ["in_main_text", "alt_specification", "summarized_in_one_table"],
+      "statement": "Robustness of the measure to its own construction is shown in the main text by re-running sorts with four hyperparameter sets or four different learner types, tabulated as one row per configuration with configuration IDs keyed to an appendix table.",
+      "pages": [33, 46],
+      "locator": "Section 5.6; Table 12; Appendix C Table C1",
+      "basis": "stated",
+      "applies_to": ["ml_prediction", "portfolio_sorts"]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": ["in_main_text", "alt_specification"],
+      "statement": "Bivariate dependent double sorts on each of twelve characteristics are compressed into a single table reporting only the spread and its alpha per control, with the note explaining that the full grid of portfolios is omitted for brevity.",
+      "pages": [18, 19],
+      "locator": "Section 3.3; Table 5",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o27",
+      "category": "heterogeneity_reported",
+      "tags": ["split_sample", "mechanism_motivated", "in_main_text"],
+      "statement": "Heterogeneity is delivered through conditional (dependent) tercile-by-quintile sorts on mispricing score, borrowing fee, institutional ownership and an arbitrage-cost index, each table pairing an average-characteristic panel with a spread panel and a difference-in-spreads row.",
+      "pages": [35, 43],
+      "locator": "Tables 13, 15, 16",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o28",
+      "category": "mechanism_evidence",
+      "tags": ["ruled_out_alternatives", "intermediate_outcomes", "in_main_text"],
+      "statement": "Mispricing versus risk is adjudicated by three steps: alphas across factor models, correlation with an existing mispricing score, and concentration of returns in earnings-announcement windows using a daily panel with an interaction term, following a cited protocol for locating announcement days by scaled volume.",
+      "pages": [35, 39],
+      "locator": "Section 6.1; Tables 13, 14",
+      "basis": "stated",
+      "applies_to": ["panel_fe", "portfolio_sorts"]
+    },
+    {
+      "id": "o29",
+      "category": "mechanism_evidence",
+      "tags": ["model_guided", "in_main_text"],
+      "statement": "The measure is decomposed into a model-disagreement part and an information-set part by re-expressing the belief equations with separate indices for model and information subset, then sorting on each component.",
+      "pages": [33, 35],
+      "locator": "Section 5.6; Equations (6) to (8); Table 12",
+      "basis": "stated",
+      "applies_to": ["ml_prediction", "portfolio_sorts"]
+    },
+    {
+      "id": "o30",
+      "category": "mechanism_evidence",
+      "tags": ["intermediate_outcomes", "in_main_text"],
+      "statement": "Panel regressions link the measure to contemporaneous and next-month trading volume and volatility as theory-implied consequences of disagreement, with the lagged dependent variable included for persistence.",
+      "pages": [32, 33],
+      "locator": "Section 5.5; Table 11",
+      "basis": "stated",
+      "applies_to": ["panel_fe", "predictive_regression"]
+    },
+    {
+      "id": "o31",
+      "category": "magnitude_interpretation",
+      "tags": ["sd_units", "compared_to_literature", "in_main_text"],
+      "statement": "Economic magnitude of the regression slope is translated by multiplying the average slope by the decile spread in the standardized regressor; panel coefficients are read in standard deviation units because both sides are standardized; the annualized spread and a comparison with the analyst-based measure anchor the headline.",
+      "pages": [16, 33],
+      "locator": "Section 3.1; Section 3.4; Section 5.5",
+      "basis": "stated",
+      "applies_to": ["fama_macbeth", "panel_fe"]
+    },
+    {
+      "id": "o32",
+      "category": "magnitude_interpretation",
+      "tags": ["relative_to_mean", "in_main_text"],
+      "statement": "The announcement-window effect is expressed as a percentage increase of the strategy spread relative to nonannouncement days, and state-dependent spreads are compared to the unconditional average from the main table.",
+      "pages": [32, 38],
+      "locator": "Section 5.4; Section 6.1",
+      "basis": "stated",
+      "applies_to": ["panel_fe", "portfolio_sorts"]
+    },
+    {
+      "id": "o33",
+      "category": "limitation_stated",
+      "tags": ["interpretation_caveat", "in_main_text"],
+      "statement": "The authors acknowledge that the simulated belief distribution may lack features other researchers deem important and present the framework as modifiable rather than definitive; they also note the measure is only as broad as the characteristics data available.",
+      "pages": [4, 10],
+      "locator": "Introduction; Section 1.3",
+      "basis": "stated",
+      "applies_to": ["ml_prediction"]
+    },
+    {
+      "id": "o34",
+      "category": "external_validity",
+      "tags": ["scaling_discussed", "in_main_text"],
+      "statement": "International replication across developed and emerging markets is presented explicitly as evidence of external validity, and the method is described as applicable to any asset class with characteristics data.",
+      "pages": [10, 22],
+      "locator": "Section 1.3; Section 4",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts"]
+    },
+    {
+      "id": "o35",
+      "category": "presentation_convention",
+      "tags": ["summary_stats_table", "stars_used", "notes_state_sample", "notes_state_se", "in_main_text"],
+      "statement": "Tables use three-level significance stars with t-statistics in parentheses; every table note restates sample period, sort procedure, weighting and the standard-error adjustment; a summary statistics table and a rank-correlation table open the empirical part.",
+      "pages": [13, 43],
+      "locator": "Tables 1 to 16 notes",
+      "basis": "stated",
+      "applies_to": ["portfolio_sorts", "fama_macbeth"]
+    },
+    {
+      "id": "o36",
+      "category": "presentation_convention",
+      "tags": ["raw_data_plot", "coefficient_plot", "in_main_text"],
+      "statement": "Figures include a rolling-average time-series plot of the aggregate measure against other aggregates, a density plot of monthly rank correlations with mean marked by dashed lines, an annotated bar chart of Fama-MacBeth slopes with t-statistics, and yearly median index ranks by portfolio rank.",
+      "pages": [12, 29],
+      "locator": "Figures 1 to 4",
+      "basis": "stated",
+      "applies_to": ["fama_macbeth"]
+    },
+    {
+      "id": "o37",
+      "category": "presentation_convention",
+      "tags": ["appendix_tables_numbered_a", "in_appendix"],
+      "statement": "Print appendices are lettered A to C with tables numbered A1, B1, C1; Internet Appendix material is referenced by letter sections and by I-prefixed figure and table numbers.",
+      "pages": [21, 46],
+      "locator": "Section 4; Appendices A to C",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o38",
+      "category": "writing_structure",
+      "tags": ["results_previewed_in_intro", "contribution_paragraph", "in_main_text"],
+      "statement": "The introduction previews headline results with numbers and organizes the paper around three enumerated contributions (new measure, predictive power, economic underpinnings); there is no separate roadmap paragraph, but Section 5 opens with a subsection-by-subsection roadmap.",
+      "pages": [2, 22],
+      "locator": "Introduction; Section 5 opening",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o39",
+      "category": "writing_structure",
+      "tags": ["design_before_data", "main_result_first", "robustness_separate_section", "mechanisms_after_main", "appendix_heavy", "in_main_text"],
+      "statement": "Order is model of beliefs, then data, then main sorts and regressions, then a short robustness section pointing to the Internet Appendix, then measure validation, then mechanisms, then conclusion; the print paper keeps only three small appendices and relies heavily on the Internet Appendix.",
+      "pages": [6, 46],
+      "locator": "Sections 1 to 7",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o40",
+      "category": "writing_structure",
+      "tags": ["in_footnote"],
+      "statement": "Footnotes carry substantive supplementary analyses (an earnings-announcement test for the long leg, definitions of the mispricing score and institutional ownership) rather than only citations.",
+      "pages": [16, 41],
+      "locator": "footnotes 11, 16, 17",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o41",
+      "category": "replication_statement",
+      "tags": ["code_public", "data_public", "replication_package_cited", "in_main_text"],
+      "statement": "A Code and Data Availability statement after the conclusion gives a Harvard Dataverse DOI for replication code and data; a footnote separately points to the public GitHub source of the input characteristics dataset. No software is named in the text.",
+      "pages": [11, 44],
+      "locator": "Code and Data Availability; footnote 7",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o42",
+      "category": "data_access",
+      "tags": ["public_use", "commercial", "data_restricted", "in_main_text"],
+      "statement": "Core inputs are public-use (published characteristics dataset built on CRSP and Compustat); mechanism tests draw on commercial sources (IHS Markit fees, Thomson Reuters 13F, StockTwits, option data) and a third-party-provided mispricing score acknowledged in the front matter.",
+      "pages": [1, 41],
+      "locator": "Acknowledgements; Section 6.2; Table 8 notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o43",
+      "category": "other",
+      "tags": ["other:conflict_disclosure", "in_main_text"],
+      "statement": "The front matter carries a disclaimer for an author's affiliation with an investment management firm, stating views are the authors' own.",
+      "pages": [1, 1],
+      "locator": "Acknowledgements",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Decile and conditional portfolio sorts with time-series alpha regressions on factor models",
+      "card_shows": "d1 portfolio_sorts; s1 OLS of excess return on a constant (helper.py do_strategy_overview)",
+      "status": "agree",
+      "pages": [14, 15],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Newey-West adjusted t-statistics with six lags for all tables (footnote 9)",
+      "card_shows": "s1.se hac_newey_west, kernel=bartlett, maxlags=6",
+      "status": "agree",
+      "pages": [16, 16],
+      "card_ref": "s1.se"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Monthly cross-sectional Fama-MacBeth regressions with Newey-West corrected average slopes",
+      "card_shows": "s2 linearmodels FamaMacBeth with kernel newey-west covariance",
+      "status": "agree",
+      "pages": [19, 20],
+      "card_ref": "s2"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Table 6 adds controls in three steps (4, 6, then 12 characteristics) before changing the dependent variable",
+      "card_shows": "s2 family of 3 specifications with increasing controls (5, 7, 12 characteristics)",
+      "status": "agree",
+      "pages": [20, 21],
+      "card_ref": "s2.family_description",
+      "note": "Card count may include the constant or MFD itself; column structure matches."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Volume and volatility panel regressions include stock and time fixed effects (Equation 5, Table 11)",
+      "card_shows": "s3 PanelOLS entity_effects=True, time_effects=True; fixed_effects field null",
+      "status": "agree",
+      "pages": [32, 33],
+      "card_ref": "s3.formula_or_call"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors double-clustered by month and firm in Table 11",
+      "card_shows": "s3.se twoway_cluster with cluster_entity=True; cluster_level null",
+      "status": "agree",
+      "pages": [33, 33],
+      "card_ref": "s3.se"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Six panel columns: SUV, turnover, historical volatility at t and t+1",
+      "card_shows": "s3 family: six outcomes SUV, turnover, realized volatility (current and next month)",
+      "status": "agree",
+      "pages": [33, 33],
+      "card_ref": "s3.family_description"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Common stocks on NYSE/AMEX/NASDAQ, excluding financials, utilities and stocks under $5; August 1976 to December 2022 test window",
+      "card_shows": "pipeline.sample_restrictions empty; s1 to s3 sample null",
+      "status": "paper_only",
+      "pages": [11, 11],
+      "card_ref": "pipeline.sample_restrictions"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Jensen, Kelly, Pedersen characteristics dataset (CRSP/Compustat), plus IHS Markit and 13F for mechanisms",
+      "card_shows": "data array empty",
+      "status": "paper_only",
+      "pages": [11, 39],
+      "card_ref": "data"
+    },
+    {
+      "item": "other",
+      "paper_says": "Investor models are random forests; robustness uses gradient boosted trees, Lasso and Ridge (Table C1)",
+      "card_shows": "packages include scikit-learn and xgboost with usage unknown; no design records the ML construction",
+      "status": "paper_only",
+      "pages": [7, 46],
+      "card_ref": "packages"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Earnings-announcement daily panel clusters standard errors by day (Table 14)",
+      "card_shows": "No specification for the daily announcement panel in the card",
+      "status": "paper_only",
+      "pages": [38, 39],
+      "card_ref": "specifications"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Robustness battery in Internet Appendix A to H (three-pass, nonlinear SDF, alternative ML models, international)",
+      "card_shows": "robustness array empty; run_analysis.py runs 16 analysis scripts in sequence",
+      "status": "paper_only",
+      "pages": [20, 22],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "weights",
+      "paper_says": "Both equal- and value-weighted sorts reported in Table 3; conditional sorts equal-weighted",
+      "card_shows": "s1.weights null; helper function takes a weighting argument",
+      "status": "unknown",
+      "pages": [14, 15],
+      "card_ref": "s1.weights"
+    }
+  ],
+  "gaps": [
+    "No justification given for the Newey-West lag length beyond citing the correction",
+    "No reasoning offered for the clustering dimensions in panel regressions (month and firm; day)",
+    "No multiple-testing adjustment discussed despite many sorts, proxies and market-phase splits",
+    "No software or package versions named in the paper text",
+    "R-squared and mean of the dependent variable not reported for Fama-MacBeth tables",
+    "Number of stocks per decile or per month not reported",
+    "Internet Appendix not available in the text file; its contents are known only from the prose summary in Section 4"
+  ],
+  "reading": {
+    "pages_read": [[1, 46], [47, 51]],
+    "coverage": "full",
+    "note": "Pages 1 to 46 read in full (main text, Tables 1 to 16, Figures 1 to 4, print Appendices A to C). Pages 47 to 51 are the reference list and were only skimmed for headings. The Internet Appendix is not part of the text file."
+  }
+}

@@ -168,12 +168,12 @@
     {
       "artid": "aer_113_3_2",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/panel_fe.json"
+      "list": "examples/exclusions/panel_fe.json"
     },
     {
       "artid": "rfs_2026_rfs_hhaf081",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/panel_fe.json"
+      "list": "examples/exclusions/panel_fe.json"
     }
   ],
   "denominators": {

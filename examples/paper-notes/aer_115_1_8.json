@@ -1,0 +1,1418 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_115_1_8",
+  "journal": "AER",
+  "year": 2025,
+  "doi": "10.1257/aer.20230328",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_115_1_8.pdf",
+    "pdf_sha256": "b338231f512259dfa563e55d4c14269cd662bd91f3ca43e61319a5c2afea4950",
+    "text_path": "harness_build/papers/text/aer_115_1_8.txt",
+    "text_sha256": "b4884291c98a0edbc259577d0b90add05d091e20080a250f40c02e2d69a1f751",
+    "pages": 32
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:06:27Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/aer_115_1_8.json",
+    "card_sha256": "25c0be6df2c713ffcde06d839ab8f4c82e83d83ab610940443a85099916d1179"
+  },
+  "methods": [
+    "iv",
+    "event_study",
+    "did",
+    "panel_fe",
+    "other:marginal_treatment_effects_decomposition"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Title, abstract and introduction",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "I. Background: The Medicare Hospice Program",
+      "pages": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "II. Data and Descriptive Statistics",
+      "pages": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "III.A Empirical Design (distance IV)",
+      "pages": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "III.B Spending Results",
+      "pages": [
+        10,
+        13
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "III.C Patient Care and Health Effects",
+      "pages": [
+        13,
+        16
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "III.D Decomposing Treatment Margins",
+      "pages": [
+        16,
+        19
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "robustness",
+      "title": "III.E Robustness",
+      "pages": [
+        19,
+        21
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "III.F Discussion (welfare bound)",
+      "pages": [
+        21,
+        21
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "design",
+      "title": "IV.A The Hospice Cap: Cap and Firm Profit Status",
+      "pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "results",
+      "title": "IV.B Effects of Cap on Spending and Patient Care",
+      "pages": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "sec12",
+      "kind": "design",
+      "title": "V.A Antifraud Lawsuits: Effect of Litigation on Firm Behavior",
+      "pages": [
+        25,
+        28
+      ]
+    },
+    {
+      "id": "sec13",
+      "kind": "other",
+      "title": "V.B Discussion",
+      "pages": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "sec14",
+      "kind": "conclusion",
+      "title": "VI. Conclusion",
+      "pages": [
+        29,
+        29
+      ]
+    },
+    {
+      "id": "sec15",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        29,
+        32
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The paper names a distance based instrumental variables design with zip code fixed effects as its main empirical strategy for the for-profit hospice analysis, describing it as a standard approach used elsewhere in health economics.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section III.A, Empirical Design",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "distance-based IV strategy to address selection into for-profit hospice"
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "instrument_exclusion_argued",
+        "compliers_described"
+      ],
+      "statement": "The design is stated to identify a local average treatment effect for a complier population under standard IV monotonicity and exclusion assumptions, with the exclusion argument phrased as distance affecting outcomes only through enrollment once zip and nonprofit-distance controls are included.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "instrument_exclusion_argued"
+      ],
+      "statement": "The paper flags endogeneity of provider location as a specific threat to the distance instrument and states that zip code fixed effects are included precisely to net out fixed-area selection by entering for-profit hospices.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "A decomposition method from a prior paper is adopted by name to split the pooled IV estimate into two marginal treatment effects, stated to rely on a linearity assumption and on an explicit comparable compliers assumption across the two margins.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.D",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:marginal_treatment_effects_decomposition"
+      ],
+      "quote": "comparable compliers assumption"
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The litigation analysis is framed explicitly as a difference-in-differences design built around dynamic coefficients indexed to years relative to a lawsuit, with a separate static specification presented alongside it.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section V.A, equation (5)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated"
+      ],
+      "statement": "The main analysis draws on full-population Medicare fee-for-service claims spanning two decades, combining hospice claims, enrollment files, chronic-conditions indicators, inpatient claims, and cost and use files, while noting that Medicare Advantage enrollees are unobserved and that some claim types are only a fraction of the full population.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section II.A, Data",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated",
+        "exclusions_justified"
+      ],
+      "statement": "The main cohort is restricted to beneficiaries ever diagnosed with the chronic condition group of interest, justified as the population most relevant to policy concerns about uncertain eligibility, and structured as a cohort study following each patient over a fixed post-diagnosis window.",
+      "pages": [
+        8,
+        8
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "data_source_named"
+      ],
+      "statement": "A dedicated descriptive statistics table reports patient counts, demographic shares, and comorbidity rates for the main analysis cohort, stated to be measured in the period before diagnosis.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "The cap analysis excludes hospice-years with a very small average patient census and excludes a firm's entry and exit years, justified as periods that lack a full cap year over which revenues can be computed.",
+      "pages": [
+        21,
+        22
+      ],
+      "locator": "Section IV.A",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described",
+        "data_source_named"
+      ],
+      "statement": "The litigation analysis links a self-collected government records request dataset of lawsuits to Medicare provider files by firm name, supplemented with case documents and interviews with government attorneys, described as the basis for identifying which providers were sued.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "exclusions_justified"
+      ],
+      "statement": "The litigation panel restricts sued firms to a fixed window of years before and after their lawsuit while retaining the full available panel for never-sued firms, described as the estimation sample for the event-time design.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section V.A",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "instrument_construction"
+      ],
+      "statement": "For-profit hospice enrollment within the post-diagnosis window is the endogenous treatment, instrumented by the patient's distance to the nearest for-profit hospice, with a parallel distance-to-nonprofit-hospice variable constructed for the same patients as a control.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section III.A, equations (1)-(2)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Spending outcomes are constructed as cumulative Medicare payments by category of care over a fixed window of years following diagnosis, and mortality outcomes are defined as cumulative indicators measured at several horizons after diagnosis.",
+      "pages": [
+        12,
+        14
+      ],
+      "locator": "Tables 2-3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Quality of life outcomes are constructed from clinical categories such as surgery counts, a pressure ulcer indicator, and diagnosis or drug class level spending groupings, stated to proxy for the intensity and appropriateness of end of life care.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Table 4 and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "For the cap analysis, treatment is defined as a hospice's predicted probability of exceeding its annual revenue cap in a given month, generated from a separate statistical model rather than observed directly from the cap rule.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "Section IV.B, equation (4)",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The nonprofit hospice distance measure used in the margin decomposition is constructed as a second instrument alongside the for-profit distance measure, exploiting within-zip-code changes in nonprofit distance created by entry and exit.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section III.D",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:marginal_treatment_effects_decomposition"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "r2_reported",
+        "mean_of_dependent_reported",
+        "se_type_in_notes"
+      ],
+      "statement": "The main spending and mortality tables report fixed effect indicators, observation counts, overall and within R-squared, the dependent variable mean, and the first-stage Wald statistic as a fixed block beneath the coefficient row, with the clustering level stated in the table notes rather than the column headers.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "The main spending table places an ordinary least squares column alongside the two-stage least squares columns explicitly for contrast, described in the notes as illustrating the direction of selection bias rather than as a preferred estimate.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Table 2, column 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes",
+        "se_type_in_notes"
+      ],
+      "statement": "Each outcome table across the three separate empirical analyses (for-profit entry, the cap, and litigation) restates in its own notes which fixed effects, sample, endogenous or treatment variable, and clustering level apply to that table.",
+      "pages": [
+        12,
+        24
+      ],
+      "locator": "Table notes throughout",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Standard errors in the individual-level IV tables are clustered at the zip code level, matching the level at which the distance instrument and zip fixed effects are defined, though the text does not separately argue for this choice beyond stating it in the notes.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "The cap regression clusters standard errors at the hospice firm level, matching the level of the cap-pressure treatment variable, again documented only in the table notes rather than argued for in the main text.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 6 notes",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "other:block_bootstrap"
+      ],
+      "statement": "Confidence intervals for the margin decomposition estimates are computed by a block bootstrap at the zip code level rather than by an analytic clustered standard error, described briefly in the accompanying table notes.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Table 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:marginal_treatment_effects_decomposition"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Beyond naming the clustering level in each table's notes, the text gives no explicit discussion of why zip code, hospice firm, or provider is the appropriate cluster level, and does not discuss a small-number-of-clusters concern for any specification.",
+      "pages": [
+        12,
+        24
+      ],
+      "locator": "Tables 2, 3, 6 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "weak_iv_statistic",
+        "in_main_text",
+        "in_appendix"
+      ],
+      "statement": "A first-stage table showing the effect of distance on for-profit hospice use is placed in the online appendix, while the corresponding first-stage Wald statistic for each specification is reported directly in the main-text outcome tables.",
+      "pages": [
+        10,
+        12
+      ],
+      "locator": "Section III.B; Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "other:complier_characterization"
+      ],
+      "statement": "An appendix table characterizes the complier population induced by the instrument, comparing them to the full diagnosed cohort and to all for-profit enrollees, and is summarized narratively in the main text.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section III.B; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_appendix"
+      ],
+      "statement": "An event-study figure built for a continuous treatment serves as a pre-trends check around the timing of for-profit hospice entry, placed in the online appendix and summarized in the main text as showing no pre-trend.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section III.B; online appendix figure",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "A covariate balance check compares patient characteristics for those living nearer versus farther from a for-profit hospice at a chosen distance cutoff, placed in an appendix table and summarized as showing broadly similar means with one noted exception by race.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.E; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "other:instrument_exogeneity_check",
+        "in_appendix"
+      ],
+      "statement": "An instrument exogeneity check regresses local prevalence and severity of the diagnosed condition on distance to a for-profit hospice at the zip-year level, placed in an appendix table and interpreted in the main text as evidence against endogenous hospice entry.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.E; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "For the litigation difference-in-differences design, a dynamic event-study figure in the main text is used explicitly as a pre-trend check around the lawsuit-filing year, with the coefficient at the reference year normalized to zero.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "A shorter post-diagnosis outcome window is run as an alternative to the main window, placed in an appendix table and summarized in the main text as yielding a similar pattern of spending and mortality conclusions.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.E; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "The main specification is repeated on a subsample restricted to patients who did not change zip codes, placed in an appendix table to address possible measurement error in the pre-diagnosis distance measure.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.E; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "The same cohort design and instrumental variables strategy are re-run on a separate diagnosis group defined by a different set of qualifying conditions, reported directly in the main text as showing a similar direction and pattern of effects.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section III.E",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_appendix",
+        "summarized_in_one_table"
+      ],
+      "statement": "The static difference-in-differences version of the litigation design is presented as a complement to the dynamic event-study specification, placed in an appendix table alongside a further split by pre-lawsuit spending group.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section V.A; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "summarized_in_one_table",
+        "in_main_text"
+      ],
+      "statement": "Robustness checks for the individual-level IV design are grouped together under a single labeled subsection separate from the main results subsections, each described in a short paragraph pointing to its supporting appendix table or figure.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.E",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "The margin decomposition results are further broken out by demographic group and by chronic-condition category to show which patient groups sit on the diverted-from-nonprofit versus induced-from-no-hospice margins, placed in an appendix table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section III.D; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:marginal_treatment_effects_decomposition"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "exploratory_labelled"
+      ],
+      "statement": "The litigation analysis reports a heterogeneity check that groups patients by their pre-admission spending level to test whether lawsuits deter admissions only among the least cost-saving patients, presented as a secondary panel of an appendix table.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section V.A; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "Category-level spending shifts away from skilled nursing, home health, inpatient, and drug spending are presented as the mechanism through which for-profit hospice enrollment lowers overall spending, decomposed category by category in the main results table.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section III.B; Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism",
+        "in_appendix"
+      ],
+      "statement": "A supplementary hospital discharge regression comparing destinations for patients concurrently in hospice versus not is used as corroborating evidence for the mechanism behind reduced skilled-nursing and home-health spending, placed in an appendix table.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section III.B; online appendix table",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled"
+      ],
+      "statement": "Discharge-then-return patterns following cap-induced live discharge are described as suggestive evidence that cap pressure disrupts continuity of care rather than only shifting spending, drawn from a supplementary before-after comparison in an appendix section.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section IV.B; online appendix section",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Every reported spending and mortality effect in the main tables is paired with the corresponding baseline dependent-variable mean so that magnitudes can be read as a share of the average, both within the table and restated in the surrounding text.",
+      "pages": [
+        12,
+        14
+      ],
+      "locator": "Tables 2-3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The first-stage relationship between distance and enrollment is interpreted as a marginal effect of a fixed distance increment on for-profit uptake, benchmarked against the analogous distance-based design used in a cited health economics paper.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "cost_benefit"
+      ],
+      "statement": "The paper builds an explicit back-of-envelope trade-off condition comparing the estimated spending savings for induced patients against an assumed value of a life-year scaled by the estimated survival loss and an unknown share of misinformed patients, presented as an inequality rather than a point welfare estimate.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Section III.F, equation (3)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "the efficiency of for-profit hospice inducement of patients is governed by the trade-off"
+    },
+    {
+      "id": "o43",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "precision_discussed"
+      ],
+      "statement": "For the margin decomposition results, the text explicitly distinguishes which subgroup effects can reject a null of no savings using the bootstrap intervals from those that cannot, rather than only reporting point estimates.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section III.D",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:marginal_treatment_effects_decomposition"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "data_coverage"
+      ],
+      "statement": "The authors state that hospices may dispense some drugs to patients directly without submitting the claims used to measure prescription spending, limiting their ability to fully observe prescribing behavior in that outcome category.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.C",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "limits our ability to observe prescribing behavior"
+    },
+    {
+      "id": "o45",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors caveat their spending-based heterogeneity check for the litigation analysis, noting that pre-admission spending may be only a weak proxy for a patient's true life expectancy, so the result should be read cautiously.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section V.B",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "limitation_stated",
+      "tags": [
+        "selection",
+        "other:general_deterrence"
+      ],
+      "statement": "The litigation results are explicitly stated not to capture spillover adjustment by firms sued previously nor general deterrence among never-sued firms, described as reasons the estimated litigation effect could understate the true policy effect.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section V.B",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "The authors state that a full treatment of the ethical questions raised by trading mortality against spending savings is beyond the paper's scope, leaving further quantification of quality-of-life effects to future work.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section VI, Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "Descriptive statistics for the main analysis cohort are collected in a single early table reporting means and standard deviations for continuous variables and counts with shares for categorical variables, split into panels by variable type.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_se",
+        "notes_state_sample"
+      ],
+      "statement": "Every regression table's notes state which fixed effects, controls, sample, endogenous or treatment variable, and clustering level apply, following a consistent format across the spending, mortality, quality-of-life, and cap tables.",
+      "pages": [
+        12,
+        24
+      ],
+      "locator": "Table notes throughout",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure",
+        "coefficient_plot"
+      ],
+      "statement": "Dynamic treatment-effect estimates for the litigation design are shown as an event-study style coefficient plot with error bars around each year-relative-to-lawsuit point estimate, rather than as a table of coefficients.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a",
+        "online_appendix_not_available"
+      ],
+      "statement": "Nearly all diagnostic and robustness material is placed in a lettered online appendix, with tables and figures carrying an A-prefix that is referenced by number throughout the main text but is not included in the extracted text read for this note.",
+      "pages": [
+        10,
+        28
+      ],
+      "locator": "throughout",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "did"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction previews the paper's main spending, mortality, and policy-relevant findings before the empirical design is described, and closes with an explicit roadmap paragraph naming each numbered section of the paper.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "did"
+      ],
+      "quote": "This paper proceeds as follows"
+    },
+    {
+      "id": "o53",
+      "category": "writing_structure",
+      "tags": [
+        "design_before_data",
+        "contribution_paragraph"
+      ],
+      "statement": "Institutional background and a review of prior literature are presented as a distinct first section before the data section, and a dedicated introduction paragraph situates the paper against prior hospice-spending studies by contrasting its intent-to-treat design with approaches that condition on eventual decedents.",
+      "pages": [
+        4,
+        8
+      ],
+      "locator": "Sections I-III.A; Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy"
+      ],
+      "statement": "The paper is organized around three separate empirical analyses, for-profit entry, the revenue cap, and antifraud litigation, each given its own numbered section with parallel design-then-results-then-discussion subsections and each leaning heavily on a lettered online appendix for supporting tables and figures.",
+      "pages": [
+        7,
+        29
+      ],
+      "locator": "Sections III-V",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "panel_fe",
+        "did"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "code_public"
+      ],
+      "statement": "A data and code citation for the paper is listed in the reference list, pointing to a repository distributed through an inter-university research data consortium, indicating a public replication package exists for the analysis.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "References",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_restricted"
+      ],
+      "statement": "The core Medicare claims data are described as full-population administrative files, with an explicit note that Medicare Advantage enrollees cannot be observed and that some claim types are available only as partial samples.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "other:foia_request"
+      ],
+      "statement": "The litigation dataset is described as originating from a government records request the authors filed with the federal agency, supplemented by publicly available court records and interviews with government attorneys.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section II.A",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o58",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "irb_stated"
+      ],
+      "statement": "The paper states in an acknowledgments footnote that the project was reviewed by an institutional review board and determined to be exempt, without describing any pre-registered analysis plan.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Footnote, title page",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "reviewed by the NBER IRB and determined to be exempt"
+    },
+    {
+      "id": "o59",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "The paper explicitly frames its headline estimates as local average treatment effects for the complier population induced by distance to a for-profit hospice, distinguishing this population from the full diagnosed cohort when discussing interpretation.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o60",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The conclusion explicitly generalizes beyond the specific program studied, framing the for-profit hospice finding as a broader lesson about when for-profit provision of a substitute service can reduce total spending in other health care settings.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section VI, Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Two-stage least squares (2SLS) IV is the paper's main estimator for the for-profit entry analysis, with OLS shown alongside for contrast.",
+      "card_shows": "feols with 2SLS is recorded for s1, s2, and s3; feols OLS is recorded for s5.",
+      "status": "agree",
+      "pages": [
+        10,
+        12
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The text states that regressions include zip code, diagnosis-year cohort, demographic, and chronic-condition controls.",
+      "card_shows": "The traced formula for s1 includes zip and cohort variables and demographic/chronic-condition variable groups, but the card's structured fe field is recorded as null.",
+      "status": "paper_only",
+      "pages": [
+        10,
+        10
+      ],
+      "card_ref": "s1.fe",
+      "note": "The controls appear in the traced R formula but the card's summary fe field was not populated."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are stated to be clustered at the zip code level for the individual-level IV tables.",
+      "card_shows": "cluster is recorded as blzip (zip code) for s1, s2, s3, and s5.",
+      "status": "agree",
+      "pages": [
+        12,
+        12
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors for the cap regression are stated to be clustered at the hospice firm or provider level.",
+      "card_shows": "s4, traced from a distributed-lags script, records cluster as a generic unit variable rather than one explicitly identified as hospice or provider.",
+      "status": "unknown",
+      "pages": [
+        24,
+        24
+      ],
+      "card_ref": "s4.se.cluster_level"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "The litigation analysis is described as a difference-in-differences design with dynamic and static event-time specifications.",
+      "card_shows": "No card specification is labeled as the litigation difference-in-differences model; s4 in the distributed-lags script appears to correspond instead to the continuous-treatment event-study robustness check.",
+      "status": "paper_only",
+      "pages": [
+        26,
+        28
+      ],
+      "card_ref": "s4"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The text describes the main IV sample as a cohort of diagnosed beneficiaries followed for a fixed window after diagnosis, restricted to a stated range of diagnosis years.",
+      "card_shows": "The card's specification summary does not include a sample-restriction or sample-size field for d1 or s1.",
+      "status": "paper_only",
+      "pages": [
+        8,
+        8
+      ],
+      "card_ref": "d1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A first-stage Wald statistic is reported in the main tables as the diagnostic for instrument strength.",
+      "card_shows": "Diagnostic x1 is recorded as first_stage with status unknown, meaning no detail was captured beyond the diagnostic type.",
+      "status": "agree",
+      "pages": [
+        10,
+        12
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "An event-study or distributed-lag analysis is described as the pre-trend check for the for-profit entry design and, separately, for the litigation design.",
+      "card_shows": "Diagnostic x2 is recorded as pretrend_test with status unknown.",
+      "status": "agree",
+      "pages": [
+        13,
+        27
+      ],
+      "card_ref": "x2"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A marginal treatment effect decomposition into induced-from-no-hospice and diverted-from-nonprofit margins is presented as a dedicated table.",
+      "card_shows": "Diagnostic x3 is recorded as heterogeneous_treatment_effects with status unknown, and s3 traced from a separate script implements a Mountjoy-style decomposition regression.",
+      "status": "agree",
+      "pages": [
+        16,
+        18
+      ],
+      "card_ref": "x3"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The text names full-population Medicare claims, a government records request dataset on lawsuits, and supplementary state-level data as the data sources.",
+      "card_shows": "The card's specification summary does not include a data_source field for d1 or the traced specs.",
+      "status": "paper_only",
+      "pages": [
+        5,
+        6
+      ],
+      "card_ref": "d1"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The main text reports six numbered tables and three numbered figures, plus numerous appendix tables and figures.",
+      "card_shows": "The card records no table or figure output artifacts (tables and figures counts are both empty).",
+      "status": "paper_only",
+      "pages": [
+        9,
+        27
+      ],
+      "card_ref": "outputs"
+    },
+    {
+      "item": "controls",
+      "paper_says": "The text states that regressions control for age, sex, race, and chronic-condition indicators at baseline plus distance to the nearest nonprofit hospice.",
+      "card_shows": "The traced formula for s1 includes demographic and chronic-condition variable groups consistent with this description.",
+      "status": "agree",
+      "pages": [
+        10,
+        10
+      ],
+      "card_ref": "s1.formula"
+    },
+    {
+      "item": "weights",
+      "paper_says": "The main text and table notes do not describe any sample weighting scheme for the reported regressions.",
+      "card_shows": "Weights are recorded as null for s1 through s5.",
+      "status": "agree",
+      "pages": [
+        12,
+        24
+      ],
+      "card_ref": "s1.weights"
+    }
+  ],
+  "gaps": [
+    "No explicit pre-analysis plan or preregistration is mentioned anywhere in the main text; only an IRB exemption is stated.",
+    "No explicit multiple-testing adjustment is discussed despite many outcome categories being tested within the same tables.",
+    "No weak-instrument-robust inference procedure is reported alongside the first-stage Wald statistics in the main text.",
+    "The main text does not name a statistical software package or version used for estimation.",
+    "No table or passage explicitly states whether sample weights are or are not used; the tables' notes are silent on weighting.",
+    "The content behind the online appendix tables and figures (balance table, first-stage table, complier table, event-study figures) could not be verified because the online appendix is not part of the extracted text; only what the main text states about them is recorded."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        32
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the entire extracted text page by page, from the title and abstract through the reference list (pages 1-32). The paper's online Appendix A-G is referenced throughout but is not part of the extracted text and was not read; observations that cite an online appendix location record only what the main text states about that appendix content."
+  }
+}

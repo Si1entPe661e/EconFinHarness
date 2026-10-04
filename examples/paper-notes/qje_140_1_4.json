@@ -1,0 +1,1322 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "qje_140_1_4",
+  "journal": "QJE",
+  "year": 2025,
+  "doi": "10.1093/qje/qjae040",
+  "source": {
+    "pdf_path": "Paper/PDF/qje_140_1_4.pdf",
+    "pdf_sha256": "3577b60e2a1b942567efda4bcc3f5d8caec1337be62346efd000485d1718ab8c",
+    "text_path": "harness_build/papers/text/qje_140_1_4.txt",
+    "text_sha256": "e31b8da03475f79b5fbaef6dcd626de8a7521111f58ea4519d964032e6e200f7",
+    "pages": 75
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T00:00:00Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/qje_140_1_4.json",
+    "card_sha256": "ba34ab8244c37782cf3385741fd1b0f28de103790467d51c02c4ec6acdb5c04b"
+  },
+  "methods": [
+    "did",
+    "event_study",
+    "matching",
+    "iv",
+    "shift_share",
+    "panel_fe",
+    "structural_estimation"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "I. Introduction and I.A Related Literature",
+      "pages": [
+        1,
+        10
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "model",
+      "title": "II. Model (closed economy, two-country setup, taxation and migration policies)",
+      "pages": [
+        10,
+        31
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "III.A Data",
+      "pages": [
+        31,
+        35
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "results",
+      "title": "III.B Empirical Findings",
+      "pages": [
+        35,
+        46
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "model",
+      "title": "IV.A Calibration",
+      "pages": [
+        46,
+        52
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "IV.B-C Quantitative Results and Policy Exercises",
+      "pages": [
+        52,
+        68
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "conclusion",
+      "title": "V. Conclusion",
+      "pages": [
+        68,
+        69
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "other",
+      "title": "Supplementary Material, Data Availability, and References",
+      "pages": [
+        69,
+        75
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "threats_discussed"
+      ],
+      "statement": "The migrant event study is explicitly framed as descriptive of productivity dynamics around migration rather than as a causal migration effect, because the migration decision itself responds to opportunities that also shape productivity.",
+      "pages": [
+        36,
+        36
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ],
+      "quote": "does not aim to identify the causal effect of migration"
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "instrument_exclusion_argued"
+      ],
+      "statement": "For the co-inventor spillover result the paper names a shift-share instrumental-variables strategy built on immigrant enclaves as its causal-identification device, described in one sentence with construction details left to the online appendix.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Section III.B.4",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ],
+      "quote": "a shift-share instrument based on immigrant enclaves"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The theoretical model is presented before the empirical section and the empirical section is framed as motivating the model's ingredients and supplying calibration targets, rather than as a stand-alone causal exercise judged on its own terms.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section III introduction",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "parallel_trends_argued"
+      ],
+      "statement": "Credibility of both event studies (migrants and their local co-inventors) is argued mainly through the visual absence of a pre-migration trend in the matched comparison, described in prose as bolstering the exercise.",
+      "pages": [
+        37,
+        44
+      ],
+      "locator": "Section III.B.2 and III.B.4, Figures III and V",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The paper names its main identification threat directly: productivity trajectories could diverge between movers and non-movers for reasons unrelated to migration, which motivates the placebo-matched control-group design rather than a simple before/after comparison.",
+      "pages": [
+        36,
+        37
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "matching",
+        "did"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated"
+      ],
+      "statement": "Two complementary datasets are combined: an aggregate cross-country patent-application dataset used to measure migration flows, and a disambiguated inventor-level dataset from one patent office spanning several decades, chosen because neither source alone supplies both aggregate flows and individual trajectories.",
+      "pages": [
+        31,
+        33
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated",
+        "exclusions_justified"
+      ],
+      "statement": "Migrants are identified from a change of country in the inventor's recorded address across successive patent applications, with the migration date set to the first application filed from the new country; the paper states this procedure can only classify inventors who filed more than one patent, which undercounts total migrants.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section III.A.1",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described"
+      ],
+      "statement": "Because the disambiguated inventor data record residence but not nationality, the country of origin is imputed separately using a name-based classification, treated as a distinct step from the address-based residence measure used to date migration.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Section III.A.1",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "matching_or_linkage_described",
+        "exclusions_justified"
+      ],
+      "statement": "The comparison group for the migrant event study is built by one-to-one exact matching on origin country, first sample year, cumulative patent count at the time of migration, and experience, with the added requirement that matched controls also file a patent in the first post-migration year, mirroring how the migrant sample itself is constructed.",
+      "pages": [
+        36,
+        37
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "matching",
+        "did"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table",
+        "exclusions_justified"
+      ],
+      "statement": "The paper reports how many migrants find an exact match under the matching procedure separately for EU-origin and U.S.-origin migrants, and states that unmatched individuals are dropped, so the analysis sample is smaller than the full identified migrant population.",
+      "pages": [
+        36,
+        37
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "matching"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The local co-inventor sample for the spillover analysis excludes co-inventors who are themselves migrants and excludes individuals linked to both a migrant and a placebo inventor, explicitly to avoid contaminating the comparison between the treated and control groups.",
+      "pages": [
+        43,
+        43
+      ],
+      "locator": "Section III.B.4",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "The benchmark outcome is the count of patent applications per inventor-year; forward-citation-based measures are constructed as secondary outcomes but are flagged as less reliable for comparing migrants across the two patent offices because citation-recording practices differ by filing jurisdiction.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Section III.A.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "A truncation-adjusted citation measure is constructed with a fixed post-application citation window to correct for older patents mechanically accumulating more citations over time, following a cited prior methodological source.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section III.A.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Interaction variables are built from the roster of co-inventors listed on an individual's patent applications in a given year, with a co-inventor pair counted once per shared patent rather than deduplicated across the whole sample; the paper reports in a footnote a check that de-duplicates pairs.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section III.A.2, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Treatment timing in the event-study specification is defined at the individual level as leads and lags around each inventor's own migration year, plus a second set of leads and lags common to migrants and controls, separating individual-specific dynamics from cohort-wide dynamics around the event window.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "Section III.B.2, equation (20)",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "In the structural model, a country-specific productivity differential faced by migrants is introduced specifically because both directions of migration show a productivity increase after moving in the data, a pattern the paper states a learning-only specification without this term could not generate.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section II.B.1, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The shift-share instrument for local exposure to emigration is described only at a high level in the main text, as built from immigrant-enclave shares, with the construction of the shift and share components left to the online appendix.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Section III.B.4",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "r2_reported"
+      ],
+      "statement": "The three main migrant and co-inventor regression tables report fixed-effect checkmarks, the observation count, and R-squared directly beneath the coefficient of interest, following one consistent table layout across all three.",
+      "pages": [
+        39,
+        46
+      ],
+      "locator": "Tables I, II, III",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Each main regression table presents a pooled column alongside two origin-specific subsample columns for EU-origin and U.S.-origin migrants or their co-inventors, rather than presenting the heterogeneity through an interaction term in a single pooled column.",
+      "pages": [
+        39,
+        46
+      ],
+      "locator": "Tables I, II, III",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes"
+      ],
+      "statement": "Table notes state the standard-error clustering level and the significance-star convention beneath every regression table, but the tables themselves do not report the mean of the dependent variable, which instead appears later in the surrounding prose when the coefficient is translated into a relative magnitude.",
+      "pages": [
+        39,
+        46
+      ],
+      "locator": "Tables I, II, III and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table"
+      ],
+      "statement": "The main event-study summary table lists only inventor and year fixed-effect rows, even though the specification described in the surrounding text also includes an experience fixed effect, which is not shown as a separate row in the table.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "Table I versus equation (20) description",
+      "basis": "inferred",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": [
+        "weights_stated"
+      ],
+      "statement": "None of the reported regression specifications mentions sampling or analytic weights; all appear to be estimated unweighted at the inventor-year level.",
+      "pages": [
+        37,
+        46
+      ],
+      "locator": "Section III.B",
+      "basis": "inferred",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "The calibration parameter table separates externally calibrated parameters, parameters matched directly to microdata moments, and parameters estimated jointly by simulated method of moments into three panels of one table, reporting standard errors only for the jointly estimated panel.",
+      "pages": [
+        48,
+        48
+      ],
+      "locator": "Table IV",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": [
+        "twoway_cluster"
+      ],
+      "statement": "Standard errors in the migrant productivity and interaction-network tables are clustered two-way at the inventor and year level, stated in the table notes without a separate justification paragraph elsewhere in the main text.",
+      "pages": [
+        39,
+        43
+      ],
+      "locator": "Tables I and II notes",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": [
+        "twoway_cluster",
+        "other:cluster_by_linked_unit"
+      ],
+      "statement": "For the co-inventor spillover regressions, the paper gives an explicit reason for clustering at the level of the associated migrant inventor rather than the co-inventor's own identity, citing serial correlation in outcomes over time and correlation across co-inventors tied to the same migrant, with a citation to a prior study using the same clustering choice.",
+      "pages": [
+        44,
+        44
+      ],
+      "locator": "Section III.B.4, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "inference_justification",
+      "tags": [
+        "other:bootstrap_se"
+      ],
+      "statement": "Standard errors for the simulated-method-of-moments calibrated parameters are described as computed by a bootstrap procedure in a single table note, without stating the number of replications or the resampling scheme in the main text.",
+      "pages": [
+        48,
+        48
+      ],
+      "locator": "Table IV notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "in_main_text"
+      ],
+      "statement": "Pre-trends for the migrant productivity event study are assessed visually through the leads coefficients and their confidence bands in a main-text figure, rather than through a separate reported joint-significance test of the pre-period coefficients.",
+      "pages": [
+        38,
+        38
+      ],
+      "locator": "Figure III, Panel B",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": [
+        "weak_iv_statistic",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "The main text names the shift-share IV strategy for the local spillover result but does not present a first-stage coefficient, F-statistic, or any weak-instrument diagnostic anywhere in the extracted main text; these are pointed to the online appendix, which is not part of the extracted text.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Section III.B.4",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "shift_share"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:non_targeted_moment_check"
+      ],
+      "statement": "The model-versus-data validation exercise reports moments that were not calibration targets as an additional diagnostic of model fit, comparing simulated event-study coefficients and the distribution of migrants' experience at first migration to their empirical counterparts in dedicated figures.",
+      "pages": [
+        53,
+        55
+      ],
+      "locator": "Section IV.B.2, Figures VI-VIII",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Balance between migrants and their matched placebo controls is asserted qualitatively in the main text through the closeness of raw pre-period means, but the formal balance table for the matching procedure is placed in the online appendix rather than shown in the main text.",
+      "pages": [
+        36,
+        37
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "matching"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "A robustness paragraph following the main productivity table states that results hold under alternative estimators addressing known limitations of two-way fixed-effects difference-in-differences designs, without naming the specific alternative estimator or showing its output in the main text.",
+      "pages": [
+        40,
+        40
+      ],
+      "locator": "Section III.B.2, after Table I",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Robustness checks for the migrant productivity result include restricting to migrants who switch employer at migration, to rule out within-firm reorganization as the driver, and using citation-based outcome measures; both are summarized in one prose paragraph pointing to the online appendix rather than shown as tables in the main text.",
+      "pages": [
+        40,
+        40
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "leave_one_out",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Robustness checks for the co-inventor spillover result include excluding patents co-invented directly with the migrant and restricting to co-inventors of return migrants, again summarized narratively with the results deferred to the online appendix.",
+      "pages": [
+        45,
+        45
+      ],
+      "locator": "Section III.B.4",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "The calibration section references a robustness exercise on the parameter governing crowding out between inventors and firms, with alternative parameter values worked out in the online appendix and only the qualitative conclusion stated in the main text.",
+      "pages": [
+        48,
+        66
+      ],
+      "locator": "Sections IV.A, IV.C.2-3",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Robustness to allowing unequal population sizes across the two model economies is mentioned as available in the online appendix, motivated in the main text by a stated concern that market-size differences would affect a smaller country's ability to attract migrants.",
+      "pages": [
+        47,
+        47
+      ],
+      "locator": "Section IV.A, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Heterogeneity by origin country, comparing EU-origin and U.S.-origin migrants and their co-inventors, is reported as separate table columns for every main empirical result rather than through an interaction term, and is treated as substantively linked to the asymmetric direction of the brain drain rather than as an exploratory cut.",
+      "pages": [
+        39,
+        46
+      ],
+      "locator": "Tables I, II, III",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Dynamic (event-time) heterogeneity by origin subsample is mentioned as reported in the online appendix rather than shown in the main-text event-study figures, which display only the pooled dynamic path.",
+      "pages": [
+        39,
+        45
+      ],
+      "locator": "Section III.B.2 and III.B.4, footnotes",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Coefficient magnitudes throughout the empirical section are converted into a relative percentage change against the sample mean of the outcome, computed in the prose immediately after each headline coefficient rather than reported as a ratio inside the table itself.",
+      "pages": [
+        39,
+        46
+      ],
+      "locator": "Section III.B, following each table",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Quantitative policy counterfactuals are reported both as a percentage change relative to the baseline balanced growth path and in percentage points of the annual growth rate, with the two units explicitly translated into one another in the surrounding prose.",
+      "pages": [
+        59,
+        67
+      ],
+      "locator": "Section IV.C",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "A model-implied elasticity of the number of domestic inventors to the tax rate, generated by a counterfactual exercise rather than targeted in calibration, is compared in a footnote against elasticity estimates from a separate published study of inventor taxation, as an external check on the model's mechanism.",
+      "pages": [
+        62,
+        62
+      ],
+      "locator": "Section IV.C.2, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The paper explicitly limits the interpretation of the migrant event study to descriptive productivity dynamics rather than a causal migration effect, citing the endogeneity of the migration decision to changing opportunities as the reason for the caveat.",
+      "pages": [
+        36,
+        36
+      ],
+      "locator": "Section III.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "The paper states that solving for the fully efficient allocation implied by the model, accounting for migration's externalities on innovation and knowledge spillovers, is outside the scope of the article and left to future research.",
+      "pages": [
+        56,
+        56
+      ],
+      "locator": "Section IV.C.1, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity",
+        "data_coverage"
+      ],
+      "statement": "The paper flags that the quantitative results depend on the calibration assumption that the EU and United States have comparable population scale, and notes explicitly that the mechanism would operate differently if the destination were compared against a much smaller country.",
+      "pages": [
+        47,
+        47
+      ],
+      "locator": "Section IV.A, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure",
+        "coefficient_plot"
+      ],
+      "statement": "Event-study figures consistently present two panels, raw group means around the event time and regression-based coefficient paths with both pointwise and uniform confidence bands, applied with the same layout to both the migrant and the co-inventor analyses.",
+      "pages": [
+        37,
+        44
+      ],
+      "locator": "Figures III and V",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "did"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_se"
+      ],
+      "statement": "All main regression tables use a common three-tier significance-star convention with the threshold levels defined once in each table's notes rather than restated in the column headers or body.",
+      "pages": [
+        39,
+        46
+      ],
+      "locator": "Tables I, II, III",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Summary statistics for the underlying inventor population are placed in an online appendix table rather than the main text, so the main text itself carries no dedicated summary-statistics table for the full analysis sample.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Section III.A.1",
+      "basis": "stated",
+      "applies_to": [
+        "event_study"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "raw_data_plot"
+      ],
+      "statement": "Model-fit figures in the quantitative section adopt one consistent visual convention, overlaying data-based estimates against model-simulated estimates with a distinct marker or line style and a separate confidence band for each, used across every model-validation figure.",
+      "pages": [
+        53,
+        55
+      ],
+      "locator": "Figures VI, VII, VIII",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "The introduction previews all of the paper's main empirical findings and its main quantitative findings before the reader reaches the corresponding sections, including an explicit numbered list of the empirical results.",
+      "pages": [
+        4,
+        6
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "event_study",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "A dedicated related-literature subsection immediately follows the introduction and organizes prior work into several numbered strands, with each strand explicitly mapped to how the paper's contribution differs from or builds on it.",
+      "pages": [
+        8,
+        10
+      ],
+      "locator": "Section I.A",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "design_before_data"
+      ],
+      "statement": "The article places the full theoretical model before the empirical section, and the empirical section before the calibration and quantitative section; the introduction justifies this ordering by explaining that the empirical results are used afterward as calibration targets for the model presented first.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph",
+        "appendix_heavy"
+      ],
+      "statement": "A short roadmap paragraph at the end of the introduction states the section order for the rest of the article, and robustness checks are not given their own section but are instead folded into brief paragraphs at the end of each empirical subsection, each pointing onward to the online appendix.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section I, end",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o52",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided",
+        "intermediate_outcomes"
+      ],
+      "statement": "The change in co-inventors' share of local collaborators after a colleague emigrates is treated as direct evidence for the knowledge-transfer mechanism built into the structural model, with the interaction-network regression explicitly linked to that specific mechanism rather than presented as a free-standing stylized fact.",
+      "pages": [
+        41,
+        43
+      ],
+      "locator": "Section III.B.3, Table II",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled",
+        "model_guided"
+      ],
+      "statement": "The productivity spillover to local co-inventors is described as helping to quantify the magnitude of the knowledge-transfer channel rather than as free-standing proof of a causal channel, with the paper noting that the stronger causal claim rests on the IV strategy detailed only in the online appendix.",
+      "pages": [
+        45,
+        46
+      ],
+      "locator": "Section III.B.4",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "iv"
+      ],
+      "quote": "helps quantify the magnitude of the knowledge-transfer channel"
+    },
+    {
+      "id": "o54",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The paper explicitly generalizes its inventor-specific findings to other categories of high-skilled workers, naming students, engineers, scientists, and STEM workers as groups the mechanism should plausibly extend to, while noting that the empirical analysis itself is restricted to inventors because of patent-data availability.",
+      "pages": [
+        6,
+        7
+      ],
+      "locator": "Section I, end",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o55",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed",
+        "site_specific"
+      ],
+      "statement": "The quantitative counterfactuals are explicitly scoped to the calibrated EU-U.S. corridor, and the paper flags that the results would differ under different relative country sizes or a different assignment of which country is the technology frontier, rather than claiming the policy magnitudes generalize to other country pairs.",
+      "pages": [
+        47,
+        60
+      ],
+      "locator": "Sections IV.A and IV.C",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o56",
+      "category": "replication_statement",
+      "tags": [
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "A dedicated data-availability statement at the end of the article names the public repository and identifier where the replication data are deposited, placed separately from the acknowledgments and the reference list.",
+      "pages": [
+        69,
+        69
+      ],
+      "locator": "Data Availability statement",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o57",
+      "category": "replication_statement",
+      "tags": [
+        "software_named"
+      ],
+      "statement": "A commercial third-party software product is named and described for one specific analysis step, inferring an inventor's country of origin from their name, and it is the only piece of analysis software the main text names explicitly anywhere in the paper.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Section III.A.1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o58",
+      "category": "replication_statement",
+      "tags": [
+        "online_appendix_not_available"
+      ],
+      "statement": "The article repeatedly refers throughout the main text to an Online Appendix published separately at the journal's website for proofs, additional data description, robustness tables, and model derivations; that appendix content is not part of the extracted main-text file used for this note.",
+      "pages": [
+        69,
+        69
+      ],
+      "locator": "Supplementary Material statement",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o59",
+      "category": "data_access",
+      "tags": [
+        "administrative"
+      ],
+      "statement": "The empirical analysis is built from two named external academic data products rather than data collected by the author, with no discussion in the main text of a restricted-access or licensing procedure for either source.",
+      "pages": [
+        31,
+        32
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Migrant productivity dynamics are summarized with an OLS post-migration indicator regression with individual, year, and experience fixed effects (equation 21), reported in Table I.",
+      "card_shows": "Card records the summary specification as an hdfe_ols regression (reghdfe) of patent applications on post-migration indicators, absorbing inventor, year, and experience fixed effects, noted as corresponding to Table 1.",
+      "status": "agree",
+      "pages": [
+        37,
+        39
+      ],
+      "card_ref": "s2.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "The main text describes the leads-and-lags event-study specification (equation 20) as including individual, year, and experience fixed effects only.",
+      "card_shows": "The card's leads-and-lags specification (s1) additionally absorbs a technology-class fixed effect that is not mentioned in the main-text description of the specification.",
+      "status": "disagree",
+      "pages": [
+        37,
+        38
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors for the migrant productivity and interaction tables are stated in the table notes to be clustered at the inventor and year level.",
+      "card_shows": "The card records two-way clustering at the same two levels (inventor identifier and year) for the corresponding specifications.",
+      "status": "agree",
+      "pages": [
+        39,
+        39
+      ],
+      "card_ref": "s2.se.cluster_level"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "For the co-inventor spillover regression (Table III) the text separately justifies clustering at the level of the associated migrant inventor and year, citing correlation across co-inventors linked to the same migrant.",
+      "card_shows": "No specification extracted in the card corresponds to the co-inventor spillover regression; the card's extracted specifications cover only the migrant-level event study and a separate regional IV regression.",
+      "status": "paper_only",
+      "pages": [
+        44,
+        46
+      ],
+      "card_ref": "specifications"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The migrant event-study sample is built by one-to-one exact matching on origin, first sample year, cumulative patents at migration, and experience, with match rates reported separately for EU-origin and U.S.-origin migrants.",
+      "card_shows": "The card leaves the sample field unset (null) for both event-study specifications extracted from the code.",
+      "status": "paper_only",
+      "pages": [
+        36,
+        37
+      ],
+      "card_ref": "s2.sample"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "The text names a shift-share instrumental-variables strategy based on immigrant enclaves for the co-inventor exposure result, without stating the unit of observation or time aggregation used in the main text.",
+      "card_shows": "The card's IV specification (s3) is a two-stage-least-squares regression of a regional average patenting outcome on an emigration share, run at a region-by-decade level well above the individual co-inventor level implied by the main-text description.",
+      "status": "code_only",
+      "pages": [
+        46,
+        46
+      ],
+      "card_ref": "s3.formula_or_call"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "The main text does not state a cluster level for the shift-share IV regression.",
+      "card_shows": "The card records two-way clustering at the region and decade level for the IV specification.",
+      "status": "code_only",
+      "pages": [
+        46,
+        46
+      ],
+      "card_ref": "s3.se.cluster_level"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "The main text names the shift-share IV strategy but reports no first-stage coefficient or weak-instrument statistic for it anywhere in the extracted text.",
+      "card_shows": "The card's single diagnostic record for a first-stage check has status unknown, with no supporting evidence located in the code files that were read.",
+      "status": "agree",
+      "pages": [
+        46,
+        46
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "controls",
+      "paper_says": "The migrant event-study and interaction specifications are described as including only fixed effects and the leads/lags indicators, with no separate control variables mentioned.",
+      "card_shows": "The card's controls_summary field is unset (null) for the extracted specifications, consistent with no additional controls.",
+      "status": "agree",
+      "pages": [
+        37,
+        39
+      ],
+      "card_ref": "s2.controls_summary"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No specification in the empirical section is described as weighted.",
+      "card_shows": "The card's weights field is unset (null) for every extracted specification.",
+      "status": "agree",
+      "pages": [
+        37,
+        46
+      ],
+      "card_ref": "s2.weights"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The empirical analysis is built from two named external data products, an international patent-application migration dataset and a disambiguated single-office inventor dataset, both cited to their original compiling studies.",
+      "card_shows": "The card's data array is empty; no data-source records were extracted from the code files that were read.",
+      "status": "paper_only",
+      "pages": [
+        31,
+        33
+      ],
+      "card_ref": "data"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The paper presents a numbered sequence of main-text tables and figures for both the empirical and the quantitative results.",
+      "card_shows": "The card's outputs object lists no tables or figures for either specification extracted from the code.",
+      "status": "paper_only",
+      "pages": [
+        39,
+        63
+      ],
+      "card_ref": "outputs.tables"
+    }
+  ],
+  "gaps": [
+    "No explicit multiple-testing adjustment is discussed anywhere in the empirical section despite every main table reporting a pooled estimate plus two origin subsamples.",
+    "No preregistration, pre-analysis plan, or IRB/consent statement is present; the paper uses secondary administrative patent data and does not discuss a human-subjects protocol.",
+    "No first-stage or weak-instrument statistic for the shift-share IV strategy appears in the extracted main text; the recipe card also could not resolve this diagnostic's status from the code it read.",
+    "The formal balance table for the migrant/placebo matching procedure is not in the main text; the paper points to the online appendix, which is not part of the extracted text used for this note.",
+    "No explicit discussion of attrition in the underlying patent samples beyond the general undercount caveat for the address-based migrant-identification procedure."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        75
+      ]
+    ],
+    "coverage": "partial",
+    "note": "Read the abstract, introduction, full theoretical model (Section II), the data and empirical-findings section (Section III) and the calibration and quantitative-exercises section (Section IV) in full, page by page. Read the conclusion (Section V) in full. Skimmed the Data Availability and Supplementary Material statements (captured in full) and scanned rather than line-by-line read the alphabetical reference list (bibliography, roughly pages 70-75) via targeted keyword search, since it carries no empirical-practice content beyond citations. There is no appendix within this extracted text; the paper's Online Appendix is published separately by the journal and was not available to read, which is noted on every observation that depends on appendix-only material."
+  }
+}

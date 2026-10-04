@@ -6,7 +6,7 @@ model: inherit
 effort: low
 ---
 
-<!-- Generated from harness_build/agents/paper-note-reader.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/paper-note-reader.md by fh sync-adapters. Edit the source. -->
 
 Follow AGENTS.md.
 

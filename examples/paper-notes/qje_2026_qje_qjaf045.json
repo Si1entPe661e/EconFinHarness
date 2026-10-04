@@ -1,0 +1,1347 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "qje_2026_qje_qjaf045",
+  "journal": "QJE",
+  "year": 2026,
+  "doi": "10.1093/qje/qjaf045",
+  "source": {
+    "pdf_path": "Paper/PDF/qje_2026_qje_qjaf045.pdf",
+    "pdf_sha256": "ed403e0ca688a02573bb0225cb3cb29031d678a190465533459ba9bf0b8841b8",
+    "text_path": "harness_build/papers/text/qje_2026_qje_qjaf045.txt",
+    "text_sha256": "af90da6c6c9390927b5490828adaada744b5fc2e9ee6a3325c247d584b30250e",
+    "pages": 63
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:27:15Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/qje_2026_qje_qjaf045.json",
+    "card_sha256": "b986edf0b8c600881a31a78d9e2d3226942acb705c7308cd13d96c4acaa9f416"
+  },
+  "methods": [
+    "rdd",
+    "other:causal_mediation_analysis"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "I. Introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "II. Historical and Conceptual Background",
+      "pages": [
+        7,
+        13
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "III.A Data",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "III.B Identification Strategy, threats and balance/density diagnostics",
+      "pages": [
+        16,
+        21
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "III.C Main Results and Robustness Checks",
+      "pages": [
+        22,
+        31
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "mechanisms",
+      "title": "IV. Mechanisms: Elections, Information, and Elite Strategy",
+      "pages": [
+        32,
+        50
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "V. Solidifying the South: Lynching and Electoral Reversal",
+      "pages": [
+        51,
+        54
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "conclusion",
+      "title": "VI. Conclusion and Data Availability",
+      "pages": [
+        54,
+        55
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        55,
+        62
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "identifying_assumption_explicit"
+      ],
+      "statement": "The paper states its estimand as the county-level effect of a Democratic presidential loss on the probability of a Black lynching, identified under the assumption that counties where the Democrat barely lost are otherwise similar to those where he barely won.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.B, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "similar in all other ways to those where he barely won"
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Two main threats to identification are explicitly named: nonrandom sorting of the running variable around the loss threshold, and spatial correlation in unobservables that could be correlated with both election outcomes and lynching.",
+      "pages": [
+        16,
+        19
+      ],
+      "locator": "Section III.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The design is named as a regression discontinuity based on close presidential vote-share margins, with a linear running polynomial as the baseline and other polynomial orders reported as robustness, plus a data-driven MSE-optimal bandwidth rule attributed to a specific bias-correction method.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "continuity_at_cutoff_argued"
+      ],
+      "statement": "Continuity at the cutoff is argued using both a formal test on the density of the running variable and a battery of RD balance regressions on pretreatment county characteristics, with the argument reinforced by showing the main result is unchanged when these characteristics are added as controls.",
+      "pages": [
+        16,
+        21
+      ],
+      "locator": "Section III.B.1, Table I",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "The paper names several primary data sources for its main analysis: a historical lynching project and a companion lynching dataset for two states, a county-level presidential vote series, officeholder and racial-composition datasets, and a commercial newspaper archive for the secondary media analysis.",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated"
+      ],
+      "statement": "The core sample covers presidential elections from 1880 through 1900 in the states of the former Confederacy, a period the authors describe as one of meaningful local Democratic competition before Jim Crow entrenchment.",
+      "pages": [
+        16,
+        32
+      ],
+      "locator": "Section III.B; Section III.C.6",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "The main design excludes congressional elections and years after 1900 on the grounds that presidential results carry more informational signal and less direct policy effect; a separate robustness check additionally excludes county-elections with contemporaneous state or local races.",
+      "pages": [
+        16,
+        29
+      ],
+      "locator": "Section III.B; Table III, Panel D",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "The unit of observation is a county in a given presidential-election period, and the authors state that counties are treated as different administrative units across periods whenever boundaries changed, which affects both the estimation sample and the clustering of standard errors.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.B.1, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Every regression table reports the number of observations underlying each column, which varies across outcomes, bandwidths and specifications, and the introduction notes explicitly that the RD-effective estimation sample is much smaller than the full county-election panel.",
+      "pages": [
+        22,
+        26
+      ],
+      "locator": "Table II; Section III.C.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "The primary outcome is a binary indicator for whether at least one lynching of a Black person, or separately a white person, occurred in a county during the four-year period following a presidential election, with continuous count and rate versions used only in secondary checks.",
+      "pages": [
+        14,
+        29
+      ],
+      "locator": "Section III.A.1; Section III.C.7",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "running_variable_definition"
+      ],
+      "statement": "Treatment is defined as the Democratic presidential candidate losing the popular vote in a county in a given election, interacted with a continuous running variable for the margin of that loss or win.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.B, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs"
+      ],
+      "statement": "For the skewed, zero-heavy count and rate outcomes used in an appendix check, the authors apply an inverse hyperbolic sine transformation rather than an ordinary log, explaining that many observed values are zero.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section III.C.7, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "The authors acknowledge that the historical lynching record is incomplete and reason explicitly about how this affects interpretation of their estimate, translating it into an approximate count of additional events near the threshold to contextualize its reliability.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section III.C.3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "For the secondary newspaper analysis the treatment measure is unchanged, but the outcome is redefined as a rate of anti-Black crime-accusation mentions per newspaper-year, constructed from keyword searches of digitized newspaper pages and scaled by a generic word count to form a rate.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "Section IV.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "controls_progressive_columns"
+      ],
+      "statement": "The main results table explicitly lists, row by row, which fixed effects and spatial controls enter each column, with election-period fixed effects in every column and state fixed effects plus longitude/latitude polynomials only in alternating columns, so the reader can see the effect of adding spatial controls.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Table II",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported"
+      ],
+      "statement": "Regression tables report the number of observations and the selected bandwidth per column but do not report an R-squared or other overall fit statistic in any table, consistent with the nonparametric local-polynomial estimator used throughout.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Table II notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported"
+      ],
+      "statement": "Every regression table reports the control-group outcome mean directly beneath the fixed-effects and bandwidth rows, letting the reader read the estimated effect as a share of the baseline mean straight from the table.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Table II",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes",
+        "stars_used"
+      ],
+      "statement": "Table notes state, for every main results table, that standard errors in parentheses are clustered at the county level unless otherwise noted, and give the conventional three-tier significance-star thresholds.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table II notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "The main results table moves from a bare linear-polynomial specification to a preferred quadratic-and-spatial-controls specification within its own columns, and a separate numbered-row robustness table then stacks alternative choices against the same two baseline columns.",
+      "pages": [
+        22,
+        29
+      ],
+      "locator": "Table II; Table III",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level"
+      ],
+      "statement": "Clustering standard errors at the county level is justified as accounting for local serial correlation in unobservables, motivated by the concern that both election outcomes and violent conflict may repeat or spread within the same county over time.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section III.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "other:cluster_level_robustness_check"
+      ],
+      "statement": "Robustness of inference to the choice of cluster level is shown, not as the primary justification, by re-clustering at a county-decade level and at a state-by-election-period level and reporting that standard errors are little changed.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Table III, Panel A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found",
+        "multiple_testing_adjustment"
+      ],
+      "statement": "Despite reporting many specifications, subsamples and heterogeneity splits across several tables, the text does not describe any correction for multiple hypothesis testing.",
+      "pages": [
+        22,
+        50
+      ],
+      "locator": "Sections III.C and IV",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_main_text"
+      ],
+      "statement": "A dedicated balance table reports RD estimates for a set of pretreatment county characteristics, including population density, prior Black population share, and agricultural potential measures, and states that none of these differences are statistically significant at the loss threshold.",
+      "pages": [
+        18,
+        21
+      ],
+      "locator": "Table I",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "density_test",
+        "in_main_text"
+      ],
+      "statement": "A formal density test on the running variable is reported in the main text, with the authors stating they fail to reject continuity of the running variable's density at the loss threshold and pointing to a companion appendix figure.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section III.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "bandwidth_sensitivity",
+        "in_main_text",
+        "in_appendix"
+      ],
+      "statement": "Bandwidth sensitivity is reported both in the main robustness table, which re-estimates at fractions and multiples of the optimal bandwidth, and in an appendix table that repeats the full analysis at a single fixed bandwidth across all outcomes.",
+      "pages": [
+        25,
+        29
+      ],
+      "locator": "Table III, Panel C; Online Appendix",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_cutoffs",
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "A placebo figure re-estimates the main specification at a wide range of counterfactual thresholds shifted away from the true loss/win cutoff, and a companion panel shifts the outcome's effect window earlier and later in time, with both showing no discontinuity away from the true threshold and true election window.",
+      "pages": [
+        29,
+        31
+      ],
+      "locator": "Figure VI",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "diagnostic_reported",
+      "tags": [
+        "leave_one_out",
+        "in_appendix"
+      ],
+      "statement": "A leave-one-out exercise, described in the main text with results plotted in the appendix, drops sample observations one at a time and reports the resulting distribution of RD point estimates and associated p-values as a check on inference.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section III.C.3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "alt_fixed_effects",
+        "summarized_in_one_table",
+        "in_main_text"
+      ],
+      "statement": "A single consolidated, numbered-row robustness table varies the control set from none to progressively richer sets, including county fixed effects, matched county-pair fixed effects, controls for prior Black population share, and interactions with a pre-Jim-Crow-law indicator.",
+      "pages": [
+        25,
+        29
+      ],
+      "locator": "Table III, Panel B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "alt_bandwidth",
+        "in_main_text"
+      ],
+      "statement": "Separate rows of the same robustness table vary the running-variable polynomial order from linear through quartic and the bandwidth by fixed multiples, stating that estimates for Black lynchings remain significant at conventional levels across all of these choices.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Table III, Panel C",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix",
+        "summarized_in_figure"
+      ],
+      "statement": "Sample sensitivity is summarized in an appendix figure rather than a table, dropping each sample state and each election period one at a time and reporting that no single state or period drives the main result.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section III.C.6; Online Appendix Figure C.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "summarized_in_figure",
+        "in_appendix"
+      ],
+      "statement": "An alternative-outcome-measurement check, summarized narratively rather than in a full table, re-estimates effects using logged counts, per-population rates, and a finer one-year temporal unit instead of the four-year election-period indicator.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Section III.C.7",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "The newspaper-based accusation analysis is shown to be robust to a fixed bandwidth, alternative clustering, alternative covariate sets, alternative RD specifications, and sensitivity to individual search-term choices and outlying observations, organized into lettered panels in an appendix table.",
+      "pages": [
+        44,
+        44
+      ],
+      "locator": "Section IV.B.3; Online Appendix Table D.2",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "prespecified"
+      ],
+      "statement": "The paper splits the sample by whether a county was Democrat-won or electorally uncompetitive in the prior election, reporting a formal split-sample p-value for the difference in the treatment coefficient across subsamples in each heterogeneity table.",
+      "pages": [
+        24,
+        33
+      ],
+      "locator": "Table II, Panel B; Table IV",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "mechanism_motivated"
+      ],
+      "statement": "A further heterogeneity table interacts the treatment with indicators for an all-Democrat or all-white local elite and for an above-median prior Black population share, again reporting split-sample p-values for each comparison.",
+      "pages": [
+        47,
+        49
+      ],
+      "locator": "Table VII",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "mechanism_motivated",
+        "prespecified"
+      ],
+      "statement": "The heterogeneity analysis is explicitly framed as testing observable implications of the paper's conceptual framework about informative election signals, with the expected pattern of effects stated before the corresponding table rather than presented as an exploratory search.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section IV.A.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes"
+      ],
+      "statement": "Newspaper coverage of anti-Black crime accusations and of election results themselves are treated as intermediate outcomes, estimated with the same RD design applied at the newspaper-year level rather than only at the county-lynching level.",
+      "pages": [
+        37,
+        44
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "mechanism_evidence",
+      "tags": [
+        "ruled_out_alternatives"
+      ],
+      "statement": "A general-violence explanation is partly addressed by estimating the same RD specification for white lynchings as a placebo outcome throughout the paper, reported alongside the Black-lynching estimates in the main table.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Table II, columns 5-8",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "mechanism_evidence",
+      "tags": [
+        "model_guided"
+      ],
+      "statement": "The mechanisms section is explicitly organized around two channels drawn from the stated conceptual framework, an informational channel and an elite-strategy channel, with each subsection framed as a direct test of one channel.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section IV, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled"
+      ],
+      "statement": "The final section linking lynching to later Democratic electoral gains is explicitly characterized by the authors as suggestive rather than fully causal, even though it also reports a formal causal-mediation estimate.",
+      "pages": [
+        51,
+        54
+      ],
+      "locator": "Section V",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "Although somewhat suggestive, these results further clarify the motives underlying elite efforts"
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Throughout the paper, RD point estimates are converted into a percentage change relative to the control-group outcome mean, both in the running text and in table notes, rather than being left in raw levels.",
+      "pages": [
+        2,
+        44
+      ],
+      "locator": "Introduction; Table II notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The introduction explicitly contrasts its close-election design with a related study on lynching and voter turnout that relies on much larger vote-share differences, arguing this difference in design is why that study did not detect a similar political motivation.",
+      "pages": [
+        5,
+        6
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "precision_discussed"
+      ],
+      "statement": "The authors compute an implied number of additional lynching events attributable to the estimated local average treatment effect within a narrow band around the threshold, using this back-of-envelope translation to contextualize the reliability of inference given the modest effective sample.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section III.C.3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity"
+      ],
+      "statement": "The paper is explicit that its RD estimate is a local average treatment effect concentrated among counties with close elections, and separately shows that the analogous effect for congressional-district elections is substantially smaller and less precisely estimated, limiting generalization across election types.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Section IV.A.3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors acknowledge documented instances of historical election manipulation elsewhere in U.S. history before arguing, based on the nature of disenfranchisement in this setting, why such manipulation would be unlikely to generate sorting around their specific threshold.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section III.B.1, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "The paper caveats that its final electoral-reversal analysis rests partly on correlational patterns even where a causal-mediation estimator is applied, and explicitly labels the resulting conclusions as suggestive.",
+      "pages": [
+        51,
+        54
+      ],
+      "locator": "Section V",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage"
+      ],
+      "statement": "The authors note that the underlying historical lynching record is incomplete and discuss possible selective-reporting concerns for their outcome data, directing readers to a fuller discussion in the online appendix.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section III.A.1, footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "presentation_convention",
+      "tags": [
+        "rd_plot",
+        "binscatter",
+        "in_main_text"
+      ],
+      "statement": "The paper presents binned-scatter RD plots of the outcome against the loss margin, separately for Black and white lynchings, with the fitted discontinuity displayed on the same axes as the underlying bins.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Figure V",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "in_main_text"
+      ],
+      "statement": "The placebo analysis is presented as coefficient plots with confidence-interval error bars across a range of counterfactual thresholds and effect windows, rather than as a single additional row of a robustness table.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Figure VI",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_se",
+        "notes_state_sample"
+      ],
+      "statement": "Every regression table uses conventional significance stars at three thresholds and states in its own notes which fixed effects, controls, sample restriction and clustering choice apply specifically to that table.",
+      "pages": [
+        21,
+        50
+      ],
+      "locator": "Table notes throughout",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "online_appendix_not_available"
+      ],
+      "statement": "Detailed summary statistics for the sample variables are deferred entirely to a lettered online-appendix section rather than being included as a table in the main text.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "The introduction previews the relative magnitude of the main point estimate, the placebo result for white lynchings, and the list of robustness dimensions before the reader reaches the formal results section.",
+      "pages": [
+        2,
+        3
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "The introduction closes with several paragraphs situating the paper against related literatures on lynching, media and elite influence, and election-based quasi-experiments, functioning as a contribution statement rather than a numbered roadmap paragraph.",
+      "pages": [
+        3,
+        6
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "writing_structure",
+      "tags": [
+        "robustness_separate_section",
+        "mechanisms_after_main"
+      ],
+      "statement": "Robustness checks for the core lynching result are grouped into their own numbered subsection and table immediately after the main results, and only after that does the paper move to a separate mechanisms section.",
+      "pages": [
+        25,
+        32
+      ],
+      "locator": "Sections III.C.2-III.C.8; Section IV",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o54",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "The main text repeatedly defers alternative outcome codings, fixed-bandwidth replications, additional inference checks and detailed sensitivity analyses to a lettered online appendix, referenced many times across the empirical sections.",
+      "pages": [
+        14,
+        50
+      ],
+      "locator": "Sections III-V",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o55",
+      "category": "replication_statement",
+      "tags": [
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "The article includes a short Data Availability statement citing a Harvard Dataverse deposit as the location of the underlying data, placed immediately before the author affiliations and the reference list.",
+      "pages": [
+        54,
+        55
+      ],
+      "locator": "Data Availability statement",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "The data underlying this article are available in the Harvard Dataverse"
+    },
+    {
+      "id": "o56",
+      "category": "replication_statement",
+      "tags": [
+        "software_named"
+      ],
+      "statement": "RD estimation throughout the paper is attributed to a specific named statistical package associated with bias-corrected inference and automated bandwidth selection, cited to its original methodological source.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o57",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "public_use"
+      ],
+      "statement": "Political and demographic covariates are drawn from aggregate historical census publications and linked genealogical administrative records, described as public-use sources rather than as requiring a data-use agreement.",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Section III.A.3",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o58",
+      "category": "data_access",
+      "tags": [
+        "commercial"
+      ],
+      "statement": "The secondary newspaper analysis is built from a commercial, subscription-based newspaper archive service, with the authors stating the specific access date on which their searches were run.",
+      "pages": [
+        37,
+        38
+      ],
+      "locator": "Section IV.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o59",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "time_period_specific"
+      ],
+      "statement": "The paper frames its finding as specific to the pre-Jim-Crow U.S. South and treats contemporary parallels with anti-immigrant rhetoric only as a motivating analogy in the conclusion, not as a claim of direct transportability.",
+      "pages": [
+        6,
+        54
+      ],
+      "locator": "Section I; Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o60",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population"
+      ],
+      "statement": "The authors distinguish their close-election local average treatment effect from the broader population of counties, noting explicitly that places with perennially competitive or already-losing prior elections show a small and statistically insignificant version of the same effect.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section IV.A.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Bias-corrected local-polynomial RD estimates via a named rdrobust-style package, linear running polynomial baseline, MSE-optimal bandwidth from Calonico-Cattaneo-Titiunik (2014).",
+      "card_shows": "specifications.s1/s2 use estimator=local_polynomial_rd via the rdrobust command, with p(1) as the baseline and p(2) as a polynomial-order robustness check.",
+      "status": "agree",
+      "pages": [
+        16,
+        24
+      ],
+      "card_ref": "specifications.s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Election-period fixed effects in all main-table columns; state fixed effects and quadratic longitude/latitude polynomials added only in the spatial-control columns.",
+      "card_shows": "specifications.s1.fixed_effects lists [year, state], with longitude/latitude terms appearing only inside the covs() call as the xy_ctrls macro, not as a listed fixed effect.",
+      "status": "agree",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "specifications.s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are clustered at the county level, with counties treated as distinct units whenever boundaries changed across election periods.",
+      "card_shows": "specifications.s1.se.type is cluster and cluster_level is recorded as null, but the evidence snippet for s1 shows vce(cluster $county) in the underlying Stata call.",
+      "status": "agree",
+      "pages": [
+        19,
+        19
+      ],
+      "card_ref": "specifications.s1.se.cluster_level"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Core sample restricted to the eleven states of the former Confederacy across presidential elections from 1880 to 1900.",
+      "card_shows": "All extracted specifications (s1-s4) condition on South==1 in the rdrobust call, matching the paper's stated regional restriction.",
+      "status": "agree",
+      "pages": [
+        16,
+        29
+      ],
+      "card_ref": "specifications.s1.formula_or_call"
+    },
+    {
+      "item": "bandwidth",
+      "paper_says": "Bandwidth is chosen by a data-driven MSE-optimal rule from a cited methodological source, with fixed-bandwidth and bandwidth-multiple versions reported only as robustness.",
+      "card_shows": "None of specifications.s1/s2/s3 pass an explicit h() bandwidth argument to rdrobust, consistent with reliance on the package's default data-driven bandwidth, but no bandwidth value or citation is recorded in the card.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specifications.s1.formula_or_call"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "A secondary comparison restricts to counties that were electorally uncompetitive in the prior election, using the sample median vote margin among Democratic losses as the competitiveness cutoff.",
+      "card_shows": "specifications.s3 filters on an unresolved symbol competitive_med==0 with comparison_group left null and no definition of the underlying variable recovered from the files read.",
+      "status": "paper_only",
+      "pages": [
+        22,
+        33
+      ],
+      "card_ref": "specifications.s3.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Robustness rows progressively add county fixed effects, county-pair fixed effects matched on spatial proximity, controls for prior Black population share, and interactions with a pre-Jim-Crow-law indicator, on top of the baseline spatial controls.",
+      "card_shows": "specifications.s1.controls_summary is null, and the extracted specifications do not include separate records for the county-fixed-effect, county-pair, or Jim-Crow-interaction robustness rows described in the paper's robustness table.",
+      "status": "paper_only",
+      "pages": [
+        25,
+        29
+      ],
+      "card_ref": "specifications.s1.controls_summary"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No mention of regression weights appears anywhere in the description of the main specification.",
+      "card_shows": "specifications.s1/s2/s3 all record weights as null.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "specifications.s1.weights"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A dedicated balance table (Table I) reports RD estimates for several pretreatment county characteristics and states that none differ significantly at the loss threshold.",
+      "card_shows": "diagnostics.x1 records kind=balance with status=unknown and no observation, evidence or searched_files populated.",
+      "status": "paper_only",
+      "pages": [
+        18,
+        21
+      ],
+      "card_ref": "diagnostics.x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A formal density test on the running variable is reported in the main text with a stated failure to reject continuity at the threshold.",
+      "card_shows": "diagnostics.x2 records kind=density_test with status=not_found_in_scope, noting that a density-test package appears installed in the repository but was not observed being called in the files read.",
+      "status": "paper_only",
+      "pages": [
+        18,
+        19
+      ],
+      "card_ref": "diagnostics.x2"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "An extensive numbered-row robustness table covers alternative clustering, control sets, RD polynomials and bandwidths, and samples, alongside separate leave-one-out and placebo-threshold and placebo-window analyses.",
+      "card_shows": "The robustness array in the card is empty, with no robustness records extracted from the four files read.",
+      "status": "paper_only",
+      "pages": [
+        25,
+        32
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The main text contains nine numbered tables and eight numbered figures, each with descriptive titles and detailed notes tied to specific equations and samples.",
+      "card_shows": "outputs.tables lists exported table files by LaTeX path, such as table2_a.tex and table2_b.tex, without a mapping from those paths to the paper's numbered tables or to specification ids.",
+      "status": "paper_only",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "outputs.tables"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Lynching outcomes come from a historical lynching project and a companion dataset, vote tabulations from an ICPSR county-election series, and covariates from census, genealogical, agro-ecological and officeholder sources.",
+      "card_shows": "data[0-4] record source_hint file names for election data, two lynching data files, census geographic data and crop-suitability data, matching the paper's description for these five sources.",
+      "status": "agree",
+      "pages": [
+        14,
+        16
+      ],
+      "card_ref": "data"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The secondary analysis draws newspaper text and metadata from a commercial newspaper archive service, linked to historical city-county boundaries, to build anti-Black accusation and election-reporting measures.",
+      "card_shows": "The newspaper/signaling construction script was listed among files skipped for reading due to budget limits, so no newspaper data source appears anywhere in the card's data array.",
+      "status": "paper_only",
+      "pages": [
+        37,
+        39
+      ],
+      "card_ref": "provenance.files_skipped"
+    }
+  ],
+  "gaps": [
+    "No preregistration, pre-analysis plan, IRB approval or ethics statement is mentioned anywhere in the text; the study relies entirely on historical archival and administrative records rather than human-subjects data collection.",
+    "No explicit correction for multiple hypothesis testing is described despite the paper reporting results across many tables, subsamples and heterogeneity splits.",
+    "No summary-statistics table for the sample variables appears in the main text; it is deferred entirely to the online appendix, which is not part of the extracted text.",
+    "No R-squared or other overall model-fit statistic is reported in any regression table, consistent with the nonparametric local-polynomial RD estimator, but the paper does not comment on this omission.",
+    "The paper's Online Appendix, referenced dozens of times for additional tables, figures and robustness checks, is a separate document not included in the provided PDF/text, so its specific contents could not be verified."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        63
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full extracted text page by page (pages 1-63), covering title/abstract, introduction, historical and conceptual background, data, identification strategy, main results, robustness, mechanisms, the electoral-reversal section, conclusion, data-availability statement and references. Page 63 is an unrelated journal call-for-nominations notice, not part of the article. The paper's Online Appendix (referenced dozens of times for additional tables and figures) is a separate document hosted by the journal and is not included in this PDF/text, so its contents could not be read; all statements about appendix material are inferred from in-text references to it."
+  }
+}

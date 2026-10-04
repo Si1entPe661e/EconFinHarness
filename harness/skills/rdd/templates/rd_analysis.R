@@ -1,11 +1,11 @@
-# rd_analysis.R -- regression discontinuity template (FinEconHarness skill `rdd`, version 0.2.3)
+# rd_analysis.R -- regression discontinuity template (EconFinHarness skill `rdd`, version 0.2.3)
 #
 # Backend: R with rdrobust (local polynomial point estimates, bias-corrected robust inference,
 # MSE-optimal bandwidths) and rddensity (manipulation test). Nothing here copies corpus code; the
 # structure follows the rdd skill procedure. Every function returns plain lists so the caller can
 # write JSON and a reviewer can trace each reported number to a call and its options.
 #
-# Version 0.2.0 responds to the independent audit in harness_build/pilot/runs/pilot-audit-code/reviews/
+# Version 0.2.0 addresses earlier implementation findings:
 # (findings r1-r20): within-bandwidth cluster and support-point counts, a first stage estimated at
 # the cutoff (also used for the cutoff-side guard), package warnings captured and the variance
 # estimator actually used recorded, weights and covariates carried into every diagnostic and into
@@ -20,7 +20,7 @@
 # estimand; no policy-kink scaling and no fuzzy kink).
 # Version 0.2.3: header corrected after the second re-check (r28); no behavioural change.
 #
-# Usage (see harness_build/evals/tests/run_rdd_tests.R for tested calls):
+# Usage:
 #   source("harness/skills/rdd/templates/rd_analysis.R")
 #   prep <- rd_prepare(df, y = "y", x = "x", cutoff = 0, treatment = "d", cluster = "cl", design = "sharp")
 #   est  <- rd_estimate(prep)                      # vce defaults to "cluster" when a cluster variable is given, else "nn"

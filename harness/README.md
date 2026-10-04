@@ -5,8 +5,8 @@ Start with the [composition guide](skill-composition.md) to select a method and 
 | Directory | Contents |
 |---|---|
 | `paradigms/` | Recommendations, code observations and paper practices for 20 methods |
-| `skills/` | 29 operational guides: 20 methods and nine shared research skills |
-| `agents/` | Seven research roles; two reading roles are under `harness_build/agents/` |
+| `skills/` | 31 operational guides: 20 methods, nine shared research skills and two reading skills |
+| `agents/` | Nine roles, including paper and code reading |
 | `workflows/` | 11 optional task workflows |
 | `presets/` | 12 reusable task prompts |
 
@@ -24,6 +24,6 @@ Panel event studies describe dynamic treatment responses. Return event studies d
 
 For methodological advice, read `paradigms/<method>/recommendations.md`. For recorded practice, read the corresponding `observed.md` and `reported.md`. These layers have different evidentiary roles. Existing draft labels and historical evaluation references do not make a review or rebuilding step a prerequisite for use.
 
-Use checklists and templates when they help. An [R template for RD](skills/rdd/templates/rd_analysis.R) is available. The two reading skills under `harness_build/skills/` support a requested new reading of a paper or its code.
+Use checklists and templates when they help. An [R template for RD](skills/rdd/templates/rd_analysis.R) is available. [Paper-practice notes](skills/paper-practice-notes/SKILL.md) and [code-card extraction](skills/recipe-card-extraction/SKILL.md) support a requested new reading of a paper or its code.
 
-Refresh generated host copies with `python3 harness_build/cli/fh.py sync-adapters` after editing source skills or roles. Shared repository guidance is in [AGENTS.md](../AGENTS.md).
+Refresh generated host copies with `python3 tools/fh.py sync-adapters` after editing source skills or roles. Shared repository guidance is in [AGENTS.md](../AGENTS.md).

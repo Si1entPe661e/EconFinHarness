@@ -1,0 +1,1160 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "qje_140_1_11",
+  "journal": "QJE",
+  "year": 2025,
+  "doi": "10.1093/qje/qjae029",
+  "source": {
+    "pdf_path": "Paper/PDF/qje_140_1_11.pdf",
+    "pdf_sha256": "999b5510569c2a8586a3454316b77a9024b29de7223a17691bd429dd98d27308",
+    "text_path": "harness_build/papers/text/qje_140_1_11.txt",
+    "text_sha256": "7db5abb8354d2ae98342492e0ad9102cf12a544b4272488effb9303fa709551e",
+    "pages": 50
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:26:30Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/qje_140_1_11.json",
+    "card_sha256": "acf96cadfed639b5cdf58d139a7e556ee97b48b238c8dcdf927a0fa41c589983"
+  },
+  "methods": [
+    "rdd",
+    "iv",
+    "panel_fe",
+    "other:two_sample_iv"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Title, Abstract, and I. Introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "model",
+      "title": "II. Conceptual Framework",
+      "pages": [
+        7,
+        13
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "III. Institutional Setting and Data",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "results",
+      "title": "IV.A. Estimating the Effect of MN Using an RD Design",
+      "pages": [
+        16,
+        27
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "IV.B. Separating the Effects of AN and Severance",
+      "pages": [
+        28,
+        30
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "mechanisms",
+      "title": "V. Search Effectiveness by Employment Status",
+      "pages": [
+        31,
+        36
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "VI. Costs of Mandatory Notice",
+      "pages": [
+        37,
+        43
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "results",
+      "title": "VII. Production Efficiency",
+      "pages": [
+        44,
+        45
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "conclusion",
+      "title": "VIII. Concluding Remarks",
+      "pages": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "Data Availability, Supplementary Material, and References",
+      "pages": [
+        47,
+        49
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The RD estimand is defined via a single equation as the effect of crossing the age-55 eligibility threshold on outcomes, with the coefficient interpreted as the causal effect of longer mandatory notice.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section IV.A, equation (6)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "The authors state that RD identification requires the absence of other age-55-linked laws creating a discontinuity and the absence of manipulation of the age-at-notification running variable, naming both explicitly as the design's threats.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section IV.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "instrument_exclusion_argued",
+        "design_variant_named"
+      ],
+      "statement": "A second identifying variation, the share of laid-off coworkers above age 55 within the same layoff event, is argued to be quasi-randomly assigned conditional on observables and to satisfy exclusion because it should affect an individual only through the bargained layoff package.",
+      "pages": [
+        28,
+        29
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "other:kink_design"
+      ],
+      "statement": "For the unemployed comparison group, the paper adopts a regression-kink design around the cap in the unemployment-insurance benefit schedule, and credits the code implementing this design to a named collaborator.",
+      "pages": [
+        36,
+        36
+      ],
+      "locator": "Section V, footnote 28",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ],
+      "quote": "Miika Paallysaho kindly provided the code implementing the RKD design."
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "threats_discussed"
+      ],
+      "statement": "The productivity-loss analysis instruments actual months on notice with a simulated seniority-rule-based notice duration that holds the share of notified workers fixed, arguing this isolates mandate-driven variation in notice length from firm-driven timing choices.",
+      "pages": [
+        41,
+        42
+      ],
+      "locator": "Section VI.A, equations (9)-(10)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated"
+      ],
+      "statement": "The main data source is an administrative register of all layoff notifications reported to the public employment service, merged with six additional government registers covering employment spells, individual characteristics, wages, unemployment spells, firm financials, and a labor force survey.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd",
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The baseline RD estimation sample is restricted to white-collar private-sector workers within a symmetric age band around the threshold, and workers laid off in bankruptcy events are dropped because collective agreements do not apply in those cases.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section III.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "The paper notes that observation counts differ across specifications for closely related outcomes depending on data-source coverage, for example because the wage survey covers only part of the private sector, and it reports these differing counts alongside each column.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table III notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "restricted_data_used",
+        "data_source_named"
+      ],
+      "statement": "The underlying microdata are individual-level Swedish government administrative registers rather than public-use survey data, matched across agencies at the person level.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section III.B",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Severance pay is not directly observed in the tax-based earnings data, so it is imputed as annual earnings net of a predicted regular-wage component, and the imputed measure is validated against firm-reported severance from a separate survey.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Section IV.A.1",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "running_variable_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "The running variable is age at notification relative to the threshold, measured only to the month because exact birth date is unobserved, and observations exactly at the cutoff are dropped because their side of the threshold cannot be determined.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IV.A, footnote 16",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "logs_or_ihs"
+      ],
+      "statement": "Job search intensity is constructed with an inverse hyperbolic sine transformation of counts, either the number of search channels used or the number of caseworker contacts, applied consistently across the survey-based and administrative search measures.",
+      "pages": [
+        32,
+        33
+      ],
+      "locator": "Section V, Figure V notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "deflated_or_real_terms"
+      ],
+      "statement": "Monetary variables such as earnings, wages, and severance are deflated to a common base year, and the paper reports the currency conversion rates used for translating Swedish kronor.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IV.A.1, footnote 18",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": [
+        "n_reported",
+        "mean_of_dependent_reported",
+        "cluster_level_in_notes"
+      ],
+      "statement": "Regression tables report the control-group mean of the dependent variable alongside the point estimate, plus both the number of clusters and the number of observations at the foot of each column.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table II",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "The set of controls, an age control function, baseline individual covariates, and month-by-year fixed effects, is held fixed and spelled out in the notes of every RD table rather than varied progressively across columns within a single table.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table III notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "The 2-IV table separates first-stage, reduced-form, and IV panels within one table, letting readers see the instrument-relevance and reduced-form pattern that underlies each structural estimate.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Table IV",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "no_justification_found"
+      ],
+      "statement": "Standard errors are clustered at the level of the notification event throughout the main RD and 2-IV tables, stated in every table's notes without a separate paragraph arguing for that particular clustering level.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table II notes",
+      "basis": "stated",
+      "applies_to": [
+        "rdd",
+        "iv"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level"
+      ],
+      "statement": "For the survey-panel regressions relating search to job finding, standard errors are instead clustered at the individual level, matching the repeated-measurement structure of that sample.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Table V notes",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "other:delta_method"
+      ],
+      "statement": "The two-sample instrumental-variables estimate of the relative return to search reports a standard error computed via the delta method, applied to the ratio of two separately estimated coefficients.",
+      "pages": [
+        36,
+        36
+      ],
+      "locator": "Table VI notes",
+      "basis": "stated",
+      "applies_to": [
+        "other:two_sample_iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level"
+      ],
+      "statement": "The firm-level productivity regressions cluster standard errors at the firm level to allow for correlation across repeated layoff events at the same establishment.",
+      "pages": [
+        42,
+        42
+      ],
+      "locator": "Section VI.A, footnote 35",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "density_test",
+        "balance_table",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Smoothness of the running-variable density and balance of predetermined covariates around the threshold are reported, but placed in the Online Appendix rather than the main text.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section IV.A, referencing Online Appendix II.A",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "bandwidth_sensitivity",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Sensitivity of the discontinuity estimate to the order of the age polynomial is discussed narratively, attributing attenuation under a more flexible control function to measurement error in notification dates rather than genuine nonlinearity.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section IV.A.1, footnote 17",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_cutoffs",
+        "in_footnote",
+        "online_appendix_not_available"
+      ],
+      "statement": "A permutation test that varies the location of the age threshold is run to gauge how unusual the estimate at age 55 is relative to alternative candidate cutoffs, reported only in a footnote pointing to an appendix figure.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IV.A.1, footnote 18",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "A falsification check shows that the coworker-share instrument used in the 2-IV design predicts severance only for workers below the age threshold and not for those above it, supporting the paper's exclusion argument.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Section IV.B, referencing Online Appendix Figure 14",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_main_text"
+      ],
+      "statement": "The productivity IV specification includes checks using pre-period outcomes, lagged productivity measures, to argue the instrument is unrelated to prior firm performance trends, reported directly in the results table rather than the appendix.",
+      "pages": [
+        41,
+        41
+      ],
+      "locator": "Table VII, Panel B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "Instrument strength is reported via a joint first-stage F-statistic in the 2-IV table and a first-stage F-statistic in the productivity IV table, with the latter table also contrasting the F-statistic from a less flexible alternative first stage.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Table IV; Table VII",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Two alternative constructions of the first-new-job outcome are compared, one from the wage survey alone and one further restricted using matched employer-employee spell indicators, with the paper noting the wage effect holds up despite the more restrictive sample being considerably smaller.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table III, columns (1)-(3)",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Controlling for baseline covariates and displacement-event fixed effects is shown to leave the main notice-duration estimate largely unchanged, with the fuller robustness table placed in the Online Appendix.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IV.A.1, referencing Online Appendix Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_footnote"
+      ],
+      "statement": "A footnote reports that adding individual fixed effects that vary by employment status to the search-hazard regression does not materially change the estimated relative return to search, offered to argue the composition-holding strategy is not driving the result.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section V, footnote 27",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "alt_bandwidth",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "The Online Appendix reports nonparametric and donut-RD variants of the main discontinuity estimate as robustness to the parametric linear specification, discussed narratively in a footnote rather than reproduced in the main tables.",
+      "pages": [
+        18,
+        19
+      ],
+      "locator": "Section IV.A.1, footnote 17",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "The relative effectiveness of job search is compared across employment status, employed versus unemployed, using three separate research designs, with that split treated as the key subgroup comparison motivating the paper's central mechanism claim.",
+      "pages": [
+        31,
+        36
+      ],
+      "locator": "Section V; Figure VI",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o32",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The estimated wage effect of advance notice is benchmarked against wage effects of unemployment-insurance duration from prior literature, framed as an order-of-magnitude comparison rather than left as a raw coefficient.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "monetary_terms",
+        "back_of_envelope",
+        "cost_benefit"
+      ],
+      "statement": "The paper's headline net-production-efficiency figure is expressed in units of a monthly wage and then translated into an aggregate labor-income back-of-envelope calculation and a fiscal-externality calculation, rather than left as a raw regression coefficient.",
+      "pages": [
+        44,
+        46
+      ],
+      "locator": "Section VII, equations (11)-(12)",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature",
+        "precision_discussed"
+      ],
+      "statement": "Estimates of the relative return to job search obtained from three distinct designs are compared to each other and to a survey-based estimate from prior literature, with the paper noting its own estimates are consistently smaller than that survey-based benchmark.",
+      "pages": [
+        37,
+        37
+      ],
+      "locator": "Section V, end",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o35",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "A footnote clarifies that the RD design cannot capture general-equilibrium wage adjustments because it identifies a partial-equilibrium, individual-level effect.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section II.C, footnote 11",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity",
+        "data_coverage"
+      ],
+      "statement": "The authors flag that their cost-side production-efficiency estimate applies to a specific high-age, long-tenured subpopulation, noting this may limit generalizing the estimated net production gain to the full workforce.",
+      "pages": [
+        45,
+        45
+      ],
+      "locator": "Section VII",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o37",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat",
+        "external_validity"
+      ],
+      "statement": "The concluding back-of-envelope fiscal calculations are explicitly qualified as indicative, citing unaddressed general-equilibrium hiring responses and the external-validity concerns raised earlier in the section.",
+      "pages": [
+        46,
+        46
+      ],
+      "locator": "Section VII, end",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o38",
+      "category": "presentation_convention",
+      "tags": [
+        "rd_plot",
+        "binscatter",
+        "coefficient_plot"
+      ],
+      "statement": "Effects are shown as binned-scatter figures with a fitted regression line at the threshold, paired with dynamic panels that plot the RD coefficient over time with confidence bands for each post-notification horizon.",
+      "pages": [
+        19,
+        27
+      ],
+      "locator": "Figures I, III, IV",
+      "basis": "stated",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used",
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "All regression tables use a common three-tier significance-star convention and notes that restate the sample restriction, the fixed effects and covariates included, and the clustering level used for inference.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Table II, III notes",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table",
+        "notes_state_sample"
+      ],
+      "statement": "A single descriptive-statistics table opens the empirical section, contrasting the notified population, the RD estimation sample, and two constructed comparison groups drawn from the broader employed population.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Table I",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o41",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "model_guided"
+      ],
+      "statement": "The claim that on-the-job search is more effective than search while unemployed is tested with three separate empirical strategies, the 2-IV design, an individual-fixed-effects panel comparison, and exogenous shifters of search for each employment state, with convergence across the three offered as the evidentiary basis for the mechanism.",
+      "pages": [
+        31,
+        37
+      ],
+      "locator": "Section V; Figure VI",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o42",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "model_guided"
+      ],
+      "statement": "The overall wage effect of longer notice is decomposed algebraically, following the conceptual framework's channels, into a component tied to the increased chance of an employer-to-employer transition and a residual component, presented as a simple back-of-envelope multiplication rather than a separate regression.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section IV.A.3, equation (7)",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o43",
+      "category": "external_validity",
+      "tags": [
+        "compliers_vs_population",
+        "site_specific"
+      ],
+      "statement": "The paper distinguishes the complier population identified by each instrument, noting that the age-based and severance-based instruments isolate different subpopulations whose gains from advance notice or severance may not represent the full notified population.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section IV.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited"
+      ],
+      "statement": "A dedicated Data Availability statement directs readers to a Harvard Dataverse deposit with a DOI, placed just before the reference list.",
+      "pages": [
+        47,
+        47
+      ],
+      "locator": "Data Availability statement",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o45",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "linked_records"
+      ],
+      "statement": "The paper describes its individual-level data as coming from linked Swedish government administrative registers spanning employment, earnings, wages, unemployment spells, firm accounts, and a labor force survey, rather than from a single source or a public-use extract.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o46",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction closes with a roadmap paragraph naming each numbered section in order and previews the paper's main qualitative findings before the conceptual framework is presented.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section I, end",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "The institutional-setting and data section precedes the section that formally states the RD equation, so the empirical design is introduced only after the data sources and sample construction are described.",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Sections III-IV",
+      "basis": "inferred",
+      "applies_to": [
+        "rdd"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main"
+      ],
+      "statement": "The mechanism section on relative search effectiveness is placed after, and explicitly motivated by, the main benefit results, framed as following up on features of the earlier results the authors describe as striking.",
+      "pages": [
+        24,
+        31
+      ],
+      "locator": "Sections IV-V",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o49",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "Many robustness and diagnostic results are summarized narratively in the main text with the full tables and figures relegated to an Online Appendix, which is repeatedly cross-referenced but not included in this extracted document.",
+      "pages": [
+        18,
+        20
+      ],
+      "locator": "Section IV.A.1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "The introduction contains an explicit paragraph positioning the paper's theoretical contribution relative to prior work on mandatory notice and Coasian side payments before turning to the empirical contribution.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": []
+    }
+  ],
+  "concordance": [
+    {
+      "item": "other",
+      "paper_says": "Primary design is a sharp RD at the age-55 mandatory-notice eligibility threshold, estimated with a linear age control function interacted with the threshold indicator (equation (6)).",
+      "card_shows": "Design d1 is classified as rdd with treatment defined as age >= 55 interacted with the mandatory-notice policy; the card leaves the sharp/fuzzy/kink variant field null.",
+      "status": "agree",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "d1.variant",
+      "note": "Card correctly traces the age-55 discontinuity and treatment definition from the data-prep script; it just does not label the variant explicitly as sharp."
+    },
+    {
+      "item": "estimator",
+      "paper_says": "The kink-design search regression (Section V, Table VI column 2) is estimated as a linear OLS regression of the outcome on the running variable, a kink term, and a jump indicator.",
+      "card_shows": "Specification s9 records estimator = ols via a Stata reg command on the same running-variable/kink/jump structure.",
+      "status": "agree",
+      "pages": [
+        35,
+        36
+      ],
+      "card_ref": "s9.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "RD and RKD tables state that regressions include month-by-year fixed effects and, in the 2-IV table, age-bracket and two-digit industry fixed effects.",
+      "card_shows": "Specification s9 has fixed_effects = null; the underlying code line the card traced does not show a fixed-effects clause.",
+      "status": "paper_only",
+      "pages": [
+        24,
+        24
+      ],
+      "card_ref": "s9.fixed_effects",
+      "note": "The card's read_ranges for D7_analysis_v2.do stopped short of any global-macro fixed-effects setup that may precede the traced regression line."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "For the individual-level, survey-based search-and-hazard analysis (Table V, VI) the paper states standard errors are clustered at the individual level.",
+      "card_shows": "Specification s9 records se.cluster_level = ['lopnr'], the person identifier in the Swedish registers, matching an individual-level cluster.",
+      "status": "agree",
+      "pages": [
+        35,
+        36
+      ],
+      "card_ref": "s9.se.cluster_level"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The paper states the RKD-based unemployed search analysis covers all UI-eligible unemployed workers over a multi-year window ending in 2015.",
+      "card_shows": "The card's sample_restrictions entry for the RKD sample records a notification-date window ending in September 2015, linked to spec s9.",
+      "status": "agree",
+      "pages": [
+        36,
+        36
+      ],
+      "card_ref": "pipeline.sample_restrictions[1]"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The main text does not state a specific numeric bandwidth for the wage variable used in the RKD design around the benefit cap.",
+      "card_shows": "The card's RKD sample restriction records a daily-wage variable normalized and bounded to a fixed symmetric window around the kink.",
+      "status": "code_only",
+      "pages": [
+        35,
+        36
+      ],
+      "card_ref": "pipeline.sample_restrictions[1]"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "For the unemployed RKD design, the implicit comparison is between workers just below and just above the benefit-cap kink in the UI replacement schedule.",
+      "card_shows": "Design d2's comparison_group field is null in the card.",
+      "status": "paper_only",
+      "pages": [
+        35,
+        36
+      ],
+      "card_ref": "d2.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "The paper states that the RKD search regression includes individual-level baseline covariates and month-by-year fixed effects.",
+      "card_shows": "Specification s9's controls_summary field is null in the card.",
+      "status": "paper_only",
+      "pages": [
+        36,
+        36
+      ],
+      "card_ref": "s9.controls_summary"
+    },
+    {
+      "item": "weights",
+      "paper_says": "The main text does not mention any observation weighting for the RKD search-and-hazard regressions.",
+      "card_shows": "Specification s9's weights field is null in the card.",
+      "status": "unknown",
+      "pages": [
+        36,
+        36
+      ],
+      "card_ref": "s9.weights"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "A footnote states that a reduced-form plot for the RKD design is shown in an Online Appendix figure.",
+      "card_shows": "The card's top-level diagnostics array is empty for this paper, reflecting partial code coverage rather than an explicit absence of diagnostics in the code.",
+      "status": "paper_only",
+      "pages": [
+        36,
+        36
+      ],
+      "card_ref": "diagnostics"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "The main text does not describe an alternative-specification robustness check specific to the RKD search design beyond a footnote about limited statistical power.",
+      "card_shows": "The card's top-level robustness array is empty, consistent with no robustness block being captured from the partially read code.",
+      "status": "unknown",
+      "pages": [
+        33,
+        33
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The RKD design's estimates are reported in Table VI, column (2), with a companion figure in the Online Appendix.",
+      "card_shows": "The card's outputs.tables and outputs.figures arrays are both empty, reflecting that the extraction did not reach any output-labeling code.",
+      "status": "paper_only",
+      "pages": [
+        35,
+        36
+      ],
+      "card_ref": "outputs.tables"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The paper names the Unemployment Spell Register and the Labor Force Survey as the data sources underlying the search-and-hazard analysis.",
+      "card_shows": "The card's top-level data array is empty; no dataset records were captured for this paper.",
+      "status": "paper_only",
+      "pages": [
+        15,
+        15
+      ],
+      "card_ref": "data"
+    }
+  ],
+  "gaps": [
+    "No explicit pre-registration, IRB, or ethics statement was found in the main text for either the RD design or the productivity analysis.",
+    "No paragraph explicitly justifying the choice of clustering level (notification event, versus firm or individual) was found beyond its statement in table notes.",
+    "No discussion of a few-clusters correction (e.g., wild bootstrap) was found for the firm-level productivity regressions despite a moderate cluster count.",
+    "No explicit multiple-testing adjustment is discussed across the many outcome families and tables reported.",
+    "The Online Appendix, referenced throughout for balance tests, density tests, additional robustness tables, and further model derivations, is not included in the extracted text, so its exact contents could not be read directly."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        50
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the entire 50-page extracted document across four large Read calls covering line ranges 1-600, 601-1200, 1201-1800, and 1801-2527 (printed pages 585-633: Sections I-VIII, the Data Availability statement, the Supplementary Material note, and the full reference list on page 49), plus the unrelated journal back-matter announcement on page 50 (a Call for Nominations notice, not part of the article). No numbered print appendix exists in this extraction; the article repeatedly cross-references an Online Appendix (Appendix A-D and numbered Online Appendix tables and figures) hosted separately by QJE that is not included here, so those materials could not be read directly (see gaps)."
+  }
+}

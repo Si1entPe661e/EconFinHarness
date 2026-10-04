@@ -272,17 +272,17 @@
     {
       "artid": "aer_112_5_9",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/iv.json"
+      "list": "examples/exclusions/iv.json"
     },
     {
       "artid": "jpe_132_9_2",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/iv.json"
+      "list": "examples/exclusions/iv.json"
     },
     {
       "artid": "qje_139_1_2",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/iv.json"
+      "list": "examples/exclusions/iv.json"
     }
   ],
   "denominators": {

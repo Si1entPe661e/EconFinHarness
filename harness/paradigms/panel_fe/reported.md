@@ -34,7 +34,7 @@ Generated 2026-09-09T01:06:38Z by fhb papers distill fhb-papers-0.1.0 from 19 pa
 | rfs_2025_rfs_hhaf065 | RFS | 2025 | full | yes | 81ac783c5036 |
 | rfs_2026_rfs_hhag042 | RFS | 2026 | full | yes | d63dc3bb1fac |
 
-Excluded (paper-level hold-out `harness_build/evals/holdout/panel_fe.json`, not used for this method's skill evidence): aer_113_3_2, rfs_2026_rfs_hhaf081. Their notes still count in `_all`.
+Excluded (paper-level hold-out `examples/exclusions/panel_fe.json`, not used for this method's skill evidence): aer_113_3_2, rfs_2026_rfs_hhaf081. Their notes still count in `_all`.
 
 ## Practices by category and tag
 

@@ -1,0 +1,836 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_2025_restud_rdae091",
+  "journal": "ReStud",
+  "year": 2025,
+  "doi": "10.1093/restud/rdae091",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_2025_restud_rdae091.pdf",
+    "pdf_sha256": "40ddb536cdbf89dabc1f861bac348c781e576a2dccc6a40d6ecec579e925217a",
+    "text_path": "harness_build/papers/text/restud_2025_restud_rdae091.txt",
+    "text_sha256": "b4815bfc020ac5cb7e46d788419e0f911dbea300296f3f197728de39ce01a6bb",
+    "pages": 30
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:31:02Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/restud_2025_restud_rdae091.json",
+    "card_sha256": "66cf5a7ba4333ea22320c85f1330676c121500b82f534eaa13514d700e27a409"
+  },
+  "methods": [
+    "did",
+    "event_study",
+    "panel_fe",
+    "regression",
+    "other:republic-level food accounting exercise",
+    "other:descriptive border discontinuity plot"
+  ],
+  "structure": [
+    {"id": "sec1", "kind": "introduction", "title": "1. Introduction (with Related Literature and roadmap)", "pages": [1, 5]},
+    {"id": "sec2", "kind": "background", "title": "2. Background (ethnicity, Soviet economic policy and the famine)", "pages": [5, 8]},
+    {"id": "sec3", "kind": "other", "title": "3. Food accounting (republic-level accounting exercise, Table 1)", "pages": [8, 10]},
+    {"id": "sec4", "kind": "data", "title": "4.1 Ukrainian bias, production fall, and other factors: data description, equation (1), Figure 1", "pages": [10, 13]},
+    {"id": "sec5", "kind": "results", "title": "4.1 continued: Table 2 main estimates, dynamic estimates, back-of-envelope; 4.2 outside Ukraine and other minorities", "pages": [13, 16]},
+    {"id": "sec6", "kind": "robustness", "title": "4.3 Robustness (1892 famine, alternative famine severity measures, appendix pointer)", "pages": [16, 17]},
+    {"id": "sec7", "kind": "results", "title": "4.4 Within-province patterns (district-level, Table 3); 4.5 Administrative vs ethnic boundaries (Figure 2)", "pages": [17, 20]},
+    {"id": "sec8", "kind": "mechanisms", "title": "5. Government policy: realized procurement and retention (Table 4), quantification, targets, motivation (Table 5)", "pages": [20, 26]},
+    {"id": "sec9", "kind": "results", "title": "6. Rural population and grain production after the famine (Figure 3)", "pages": [26, 27]},
+    {"id": "sec10", "kind": "conclusion", "title": "7. Conclusion, acknowledgments", "pages": [28, 28]},
+    {"id": "sec11", "kind": "other", "title": "Supplementary data note, data availability statement, references", "pages": [29, 30]}
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": ["estimand_named", "design_variant_named", "in_main_text"],
+      "statement": "The coefficient of interest is defined as the difference in the correlation between pre-famine ethnic share and mortality between famine and nonfamine years; the sign predictions of the two competing hypotheses (ethnic bias versus production fall) are mapped onto the two interaction coefficients in equation (1) before results are shown.",
+      "pages": [12, 13],
+      "locator": "Section 4.1, equation (1) and surrounding text",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "design_variant_named", "in_main_text"],
+      "statement": "The design interacts a time-invariant census ethnic share with a famine-year dummy; province fixed effects absorb the uninteracted share and year fixed effects absorb common shocks. The famine-dummy year is justified by the assumption that production in year t sustains the population in t+1, and an alternative timing is said to give similar results.",
+      "pages": [12, 12],
+      "locator": "Section 4.1, equation (1) paragraph",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "in_main_text"],
+      "statement": "The interpretation assumptions are written out explicitly: the estimate must not be confounded by factors correlated with pre-famine ethnic share and famine mortality but unrelated to policy, and policy bias must lead to mortality. Omitted variables are named as the key concern at the start of the robustness subsection, and the paper promises the later evidence that addresses each assumption.",
+      "pages": [16, 16],
+      "locator": "Section 4.1 closing paragraph; Section 4.3 opening",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "other:ecological_inference", "in_main_text"],
+      "statement": "Because ethnic-specific mortality is not observed, ethnic mortality is inferred from the cross-region gradient in the pre-famine ethnic share. The ecological-fallacy concern is named explicitly and addressed later with post-famine census ethnic shares from the long-run section.",
+      "pages": [3, 26],
+      "locator": "Introduction; Section 6, Figure 3b discussion",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": ["other:multi_level_replication", "in_main_text"],
+      "statement": "Replicating the gradient across districts within provinces is presented as a test of the policy interpretation: centrally planned, top-down policies should produce the same pattern at each administrative level, so within-province estimates with province-year fixed effects are used as corroborating design evidence rather than as a robustness afterthought.",
+      "pages": [17, 18],
+      "locator": "Section 4.4, Table 3 columns (2) onward",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": ["design_variant_named", "other:border_discontinuity_plot", "in_main_text"],
+      "statement": "A border analysis plots district famine mortality (the 1933 minus 1928 difference) against distance to the Ukraine-Russia border with fitted lines and confidence bands on each side, argues from a hypothetical free-mobility scenario, and then repeats the plot on residuals after controlling for district ethnic share. Magnitudes are relegated to an appendix table.",
+      "pages": [19, 20],
+      "locator": "Section 4.5, Figure 2a-c, Appendix Table A.9",
+      "basis": "stated",
+      "applies_to": ["other:descriptive border discontinuity plot"]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "sample_period_stated", "unit_of_observation_stated", "in_main_text"],
+      "statement": "The main unit is the province-year panel for the three most populous republics over the interwar period, mostly hand-digitized from archival sources released after the fall of the USSR; all data are mapped to a single year's province borders. The number of provinces and the share of Soviet population and grain production covered are stated to justify treating the three republics as the USSR.",
+      "pages": [2, 10],
+      "locator": "Introduction; Section 4.1 first paragraphs",
+      "basis": "stated",
+      "applies_to": ["did", "event_study"]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": ["unit_of_observation_stated", "sample_period_stated", "exclusions_justified", "in_main_text"],
+      "statement": "The district-level panel has only two years (a pre-famine and the famine year), covers only two republics because district mortality exists only there, and lacks production and procurement variables; these limits are stated when the panel is introduced and drive the use of suitability and weather controls instead of production.",
+      "pages": [17, 18],
+      "locator": "Section 4.4; Table 3 notes",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "in_footnote"],
+      "statement": "A republic with substantial famine mortality is excluded from the study because no reliable mortality data exist for the famine era; the exclusion is explained in a footnote to the first page.",
+      "pages": [2, 2],
+      "locator": "Footnote 1",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": ["sample_period_stated", "sample_size_reported_per_table", "in_main_text"],
+      "statement": "Sample periods differ across table columns (a short window for the archival-corrected production measure, a longer window for the predicted measure, a Tsarist-era window for the placebo famine, and a different end year for the cohort outcome); each is spelled out in the table notes, and observation counts are reported in every column.",
+      "pages": [14, 14],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o11",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "sample_size_reported_per_table", "in_main_text"],
+      "statement": "The procurement and retention regressions use a smaller sample than the mortality regressions; the reduction is attributed explicitly to limited availability of production and procurement data, and the text says the predicted-grain measure is preferred elsewhere to maximize sample size.",
+      "pages": [13, 20],
+      "locator": "Section 4.1 (Table 2 discussion); Section 5.1 opening",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o12",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "other:conservative_data_choice", "in_footnote"],
+      "statement": "Official population estimates are used for the accounting exercise despite a known critique that they are exaggerated, on two stated grounds: the alternative series lacks the needed disaggregation, and the bias works against the authors' conclusion.",
+      "pages": [8, 8],
+      "locator": "Footnote 5",
+      "basis": "stated",
+      "applies_to": ["other:republic-level food accounting exercise"]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": ["outcome_definition", "in_main_text"],
+      "statement": "The main outcome is the crude mortality rate (deaths over total population) in the year after the production year. Two alternative famine-severity outcomes are natality and a synthetic panel of birth-cohort sizes from a later census, built following a cited method; the cohort measure is normalized by later census population because annual population is unavailable for the smaller units.",
+      "pages": [12, 17],
+      "locator": "Section 4.1; Section 4.3 Alternative Measures paragraph; Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": ["treatment_definition", "measurement_error_discussed", "in_main_text", "in_footnote"],
+      "statement": "The treatment intensity variable is the rural ethnic share from the last pre-famine census. The paper argues the census is of high quality and that ethnicity was self-reported with little incentive to misreport, and defers alternative ethnicity measures to the appendix.",
+      "pages": [12, 12],
+      "locator": "Section 4.1; footnotes 7 and 8",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": ["measurement_error_discussed", "other:archival_correction", "in_main_text", "in_appendix"],
+      "statement": "Official grain production is treated as manipulated; a corrected series is backed out from previously classified procurement ratios and observed procurement stocks. The identifying assumption of the correction (ratio changes reflect production, not procurement ability) is stated, the corrected series is benchmarked against an earlier study's range, and details go to Appendix Section A.",
+      "pages": [9, 9],
+      "locator": "Section 3, row (3) discussion",
+      "basis": "stated",
+      "applies_to": ["other:republic-level food accounting exercise", "did"]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": ["measurement_error_discussed", "other:predicted_regressor", "in_main_text", "in_appendix"],
+      "statement": "A second production measure predicts output from weather and geography (Appendix Section B) and is described as a parsimonious control for those inputs. The paper discusses classical noise and nonrandom error in the predicted regressor and addresses the latter by adding controls for two pre-famine policies that could have changed the input-output relationship.",
+      "pages": [13, 15],
+      "locator": "Section 4.1, Table 2 columns (1) to (4) discussion",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o17",
+      "category": "variable_construction",
+      "tags": ["outcome_definition", "other:subsistence_benchmark", "in_main_text"],
+      "statement": "Retention is defined as production minus procurement and expressed in kilograms per person per day because the authors find this unit intuitive for subsistence comparisons. A food-needs benchmark is built from official caloric guidelines by sex, age and occupation, weighted by census demographic composition, with the calorie-to-grain conversion sourced in a footnote.",
+      "pages": [8, 9],
+      "locator": "Section 3, Table 1 rows (5) to (8); footnote 6",
+      "basis": "stated",
+      "applies_to": ["other:republic-level food accounting exercise"]
+    },
+    {
+      "id": "o18",
+      "category": "variable_construction",
+      "tags": ["standardized_index", "in_main_text", "in_appendix"],
+      "statement": "Administrative capacity and political zealousness are summarized by the first principal component of three political variables; the components are also examined one at a time in the appendix.",
+      "pages": [24, 25],
+      "locator": "Section 5.3; Table 5 column (2) and notes",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o19",
+      "category": "variable_construction",
+      "tags": ["logs_or_ihs", "in_main_text"],
+      "statement": "Long-run outcomes (rural population, total grain production) enter in logs; mechanization is measured as tractor horsepower per hectare of a fixed base-year sown area, and the text explains why tractors are read as a broad proxy for advanced inputs.",
+      "pages": [26, 27],
+      "locator": "Section 6; Figure 3 notes",
+      "basis": "stated",
+      "applies_to": ["event_study"]
+    },
+    {
+      "id": "o20",
+      "category": "specification_reporting",
+      "tags": ["baseline_then_variants", "n_reported", "r2_reported", "mean_of_dependent_reported", "se_type_in_notes", "in_main_text"],
+      "statement": "The main table puts the archival-corrected measure first, the baseline second, then variants (policy controls, no province FE, omit Ukraine, other minorities, placebo famine, alternative outcomes). Each column reports N, R-squared, dependent-variable means for nonfamine and famine years, and standardized coefficients in italics; notes list sample, definitions, controls, FE and SE type.",
+      "pages": [14, 14],
+      "locator": "Table 2 and notes",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o21",
+      "category": "specification_reporting",
+      "tags": ["fe_listed_in_table", "se_type_in_notes", "cluster_level_in_notes", "mean_of_dependent_reported", "in_main_text"],
+      "statement": "The district-level table lists fixed effects as Y/N rows (district, year, province-year), reports two standard errors per coefficient (spatially adjusted in parentheses, district-clustered in brackets), the mean and standard deviation of the treatment share, dependent-variable means by year, and states the count of weather controls in the notes.",
+      "pages": [18, 18],
+      "locator": "Table 3 and notes",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o22",
+      "category": "specification_reporting",
+      "tags": ["se_type_in_notes", "baseline_then_variants", "in_main_text"],
+      "statement": "The policy table has two panels with different designs and inference: Panel A (realized amounts) uses province and year fixed effects with spatial standard errors, Panel B (planned targets) uses only year fixed effects with Huber-White robust errors. The text explains that province fixed effects are dropped in Panel B because a five-year plan panel has too little within-province variation.",
+      "pages": [21, 23],
+      "locator": "Table 4 notes; Section 5.2",
+      "basis": "stated",
+      "applies_to": ["did", "regression"]
+    },
+    {
+      "id": "o23",
+      "category": "specification_reporting",
+      "tags": ["controls_progressive_columns", "in_main_text"],
+      "statement": "Controls are added column by column and each addition is named in the column header (for example the policy control and the heading of the additional control row); the text walks through columns one at a time and states what each isolates.",
+      "pages": [13, 16],
+      "locator": "Table 2 column headers; Section 4.1 and 4.2 text",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o24",
+      "category": "inference_justification",
+      "tags": ["spatial_hac", "cluster_at_unit_level", "other:two_se_types_reported", "in_main_text", "in_appendix"],
+      "statement": "Standard errors are allowed to decay with distance, justified by the movement of people, information and other factors across space; distance cutoffs are stated in table notes and differ for provinces and districts. For district regressions both spatial and district-clustered errors are shown, and alternative inference is deferred to Appendix Section C.",
+      "pages": [13, 18],
+      "locator": "Section 4.1 paragraph after equation (1); Table 2 and Table 3 notes",
+      "basis": "stated",
+      "applies_to": ["did", "event_study"]
+    },
+    {
+      "id": "o25",
+      "category": "inference_justification",
+      "tags": ["other:generated_regressor_se", "in_footnote"],
+      "statement": "The possibility that a predicted regressor biases standard errors is acknowledged in a footnote and dismissed by pointing to similar results with the non-predicted production measure rather than by a formal correction.",
+      "pages": [15, 15],
+      "locator": "Footnote 9",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o26",
+      "category": "inference_justification",
+      "tags": ["other:few_clusters_not_addressed", "in_main_text"],
+      "statement": "The province panel has a small number of cross-sectional units, but the text does not discuss small-sample or few-cluster inference and no wild bootstrap or randomization inference is mentioned in the main text.",
+      "pages": [10, 14],
+      "locator": "Section 4.1; Table 2",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o27",
+      "category": "inference_justification",
+      "tags": ["other:significance_stated_in_text", "in_main_text"],
+      "statement": "Significance levels are reported in prose (significant at a stated level, marginally significant, statistically zero) rather than with stars; a p-value for a sum of coefficients appears as a table row and a p-value for a slope difference appears in a footnote.",
+      "pages": [13, 24],
+      "locator": "Section 4.1 text; Table 2 bottom rows; footnote 10",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o28",
+      "category": "diagnostic_reported",
+      "tags": ["pre_trends_plot", "in_main_text", "in_appendix"],
+      "statement": "Dynamic estimates replace the famine dummy with year-dummy interactions (fixed reference year) and are plotted with confidence bands in the main figure; the coefficients and standard errors behind the plot are in an appendix table. The plot is presented as evidence against spurious correlation and as support for the chosen famine timing.",
+      "pages": [15, 15],
+      "locator": "Section 4.1; Figure 1d; Appendix Table A.6",
+      "basis": "stated",
+      "applies_to": ["event_study", "did"]
+    },
+    {
+      "id": "o29",
+      "category": "diagnostic_reported",
+      "tags": ["other:placebo_period", "in_main_text"],
+      "statement": "A placebo uses an earlier famine under the previous regime with a historical mortality series shared by another researcher, to test whether the ethnic-mortality gradient is specific to the Soviet famine rather than to slow-moving features of the group or its locations.",
+      "pages": [16, 17],
+      "locator": "Section 4.3, 1892 Famine paragraph; Table 2 column (8)",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o30",
+      "category": "diagnostic_reported",
+      "tags": ["balance_table", "in_appendix", "in_footnote"],
+      "statement": "A table of correlates of the pre-famine ethnic share with political, social and economic variables is provided in the appendix and referenced only in a footnote; no balance table appears in the main text.",
+      "pages": [12, 12],
+      "locator": "Footnote 7; Appendix Table A.3",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o31",
+      "category": "diagnostic_reported",
+      "tags": ["other:stability_check", "in_main_text"],
+      "statement": "A regression adding famine interactions to the retention-mortality relation is labelled a sanity check: the interactions are expected to be zero because the biological link between food and mortality should be stable over time.",
+      "pages": [20, 20],
+      "locator": "Section 5.1; Table 4 columns (3) and (4)",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o32",
+      "category": "diagnostic_reported",
+      "tags": ["raw_data_plot", "binscatter", "in_main_text"],
+      "statement": "Before any regression, the paper shows raw mortality time series by region and binned scatterplots of mortality against the percentile of ethnic share, separately for nonfamine years and the famine year, so the reader sees the sign reversal in the raw data.",
+      "pages": [10, 12],
+      "locator": "Figure 1a-c and notes; Section 4.1",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o33",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "alt_fixed_effects", "alt_sample", "summarized_in_one_table", "in_main_text"],
+      "statement": "Main-text robustness lives in the columns of the main table: two policy controls interacted with the famine dummy, replacing province fixed effects by the uninteracted share, omitting the treated republic, adding an other-minorities interaction, a placebo famine and two alternative outcomes. Each column is discussed in a short paragraph that says what concern it addresses.",
+      "pages": [15, 17],
+      "locator": "Section 4.1 to 4.3; Table 2 columns (3) to (10)",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o34",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "in_appendix"],
+      "statement": "Additional checks (direct weather controls, alternative ethnic-share measures, other crops, demographic structure, administrative capacity, political zealousness, social norms) are listed in one sentence and placed in Appendix Section D; the text then states the joint implication for what kind of confounder would remain.",
+      "pages": [17, 17],
+      "locator": "Section 4.3 final paragraph; Appendix Section D",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o35",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "alt_sample", "in_main_text", "in_appendix"],
+      "statement": "District-level estimates get their own robustness: an alternative weather measure (deviations from long-run means) in the main table, omitting the treated republic, an other-minorities test, and a statement that the full set of province-level sensitivity checks was repeated at the district level in an appendix table.",
+      "pages": [18, 19],
+      "locator": "Section 4.4; Table 3 columns (3) to (5); Appendix Table A.8",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o36",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "in_main_text", "in_appendix"],
+      "statement": "The step-function retention-mortality estimates used in the quantification exercise are said to be robust to adding urbanization and base-year production interacted with the famine dummy, with the evidence in an appendix figure and table.",
+      "pages": [22, 22],
+      "locator": "Section 5.1, equation (2) paragraph; Appendix Figure A.3 and Table A.10",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o37",
+      "category": "heterogeneity_reported",
+      "tags": ["interaction", "mechanism_motivated", "in_main_text"],
+      "statement": "Heterogeneity is a triple interaction of ethnic share, famine dummy and a state-perceived measure of agricultural importance (official base-year production at the province level, grain suitability at the district level), motivated by the political-economy hypothesis; a competing triple interaction with an administrative-capacity index is added as a foil.",
+      "pages": [24, 25],
+      "locator": "Section 5.3; Table 5",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o38",
+      "category": "heterogeneity_reported",
+      "tags": ["split_sample", "in_footnote", "in_appendix"],
+      "statement": "A split at the sample median of ethnic share compares the slope of resistance on collectivization between the two groups of provinces; the fitted lines and residuals are in appendix figures and the p-value for the slope difference is given in a footnote.",
+      "pages": [24, 24],
+      "locator": "Section 5.3; footnote 10; Appendix Figures A.4a-b",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o39",
+      "category": "heterogeneity_reported",
+      "tags": ["interaction", "in_main_text"],
+      "statement": "To test whether bias is specific to one group, an interaction of the pre-famine share of all other minorities with the famine dummy is added, with the composition of the omitted category stated in the notes; the coefficient is interpreted jointly across the province and district tables.",
+      "pages": [16, 18],
+      "locator": "Section 4.2; Table 2 column (7); Table 3 column (5)",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o40",
+      "category": "magnitude_interpretation",
+      "tags": ["relative_to_mean", "sd_units", "in_main_text"],
+      "statement": "Magnitudes are read literally as the difference between a hypothetical all-Ukrainian and a no-Ukrainian province, set against the dependent-variable means in nonfamine and famine years, and restated as standardized coefficients printed in italics beneath the main coefficient.",
+      "pages": [13, 14],
+      "locator": "Section 4.1; Table 2 Standardized Coef. rows",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o41",
+      "category": "magnitude_interpretation",
+      "tags": ["precision_discussed", "in_main_text"],
+      "statement": "A coefficient whose sign contradicts the null hypothesis is not over-read: because its precision and size vary across production measures and samples, the authors declare they will treat it as a null result.",
+      "pages": [13, 13],
+      "locator": "Section 4.1, Table 2 columns (1) and (2) discussion",
+      "quote": "we will cautiously interpret it as a null result",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o42",
+      "category": "magnitude_interpretation",
+      "tags": ["back_of_envelope", "in_main_text"],
+      "statement": "A back-of-the-envelope calculation sets the interaction coefficient to zero, predicts deaths in famine and nonfamine years, and expresses the share of excess deaths attributable to bias; it is repeated for the treated republic alone and for the natality and cohort-size outcomes, with the arithmetic shown inline.",
+      "pages": [16, 17],
+      "locator": "Section 4.1 (after Figure 1d discussion); Section 4.3",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o43",
+      "category": "magnitude_interpretation",
+      "tags": ["back_of_envelope", "other:counterfactual_decomposition", "in_main_text"],
+      "statement": "A three-step quantification decomposes the policy channel: estimate a step-function relation between retention and mortality (equation 2), predict counterfactual retention by zeroing the famine-year event-study coefficient, then compare predicted excess deaths with and without bias; the result is expressed as a fraction of the total bias effect.",
+      "pages": [22, 22],
+      "locator": "Section 5.1, equation (2) and following paragraphs",
+      "basis": "stated",
+      "applies_to": ["event_study", "regression"]
+    },
+    {
+      "id": "o44",
+      "category": "magnitude_interpretation",
+      "tags": ["other:benchmark_to_subsistence", "in_main_text"],
+      "statement": "The planned retention gap is benchmarked against the official food requirement computed in the accounting section, so a regression coefficient is interpreted in the same physical units as the subsistence threshold.",
+      "pages": [23, 23],
+      "locator": "Section 5.2, Table 4 column (8) discussion",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o45",
+      "category": "mechanism_evidence",
+      "tags": ["intermediate_outcomes", "in_main_text"],
+      "statement": "Mechanism evidence replaces the outcome with policy variables: realized procurement share, realized retention, and pre-famine planned production, procurement and retention targets, with the timing of retention bias shown by an event-study figure. Procurement-share regressions drop the production controls because production is the denominator.",
+      "pages": [20, 23],
+      "locator": "Section 5.1 and 5.2; Table 4; Figure 1e",
+      "basis": "stated",
+      "applies_to": ["did", "event_study"]
+    },
+    {
+      "id": "o46",
+      "category": "mechanism_evidence",
+      "tags": ["suggestive_labelled", "in_main_text"],
+      "statement": "The subsection on the regime's motivation is explicitly framed as speculative and beyond the paper's scope, offering two stylized facts as clues for future research, and the additional mechanisms are presented as non-exclusive hypotheses with a comparison to another centrally planned famine.",
+      "pages": [24, 26],
+      "locator": "Section 5.3 and Additional Mechanisms paragraphs",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o47",
+      "category": "mechanism_evidence",
+      "tags": ["intermediate_outcomes", "suggestive_labelled", "in_main_text"],
+      "statement": "Long-run census and archival series (rural population, ethnic shares, grain production, tractor allocation) are analysed with year-interaction plots to document recovery timing and input reallocation; the ethnic-share estimates are flagged as imprecise and suggestive while still being used to address the ecological-fallacy concern.",
+      "pages": [26, 27],
+      "locator": "Section 6; Figure 3a-d",
+      "basis": "stated",
+      "applies_to": ["event_study"]
+    },
+    {
+      "id": "o48",
+      "category": "mechanism_evidence",
+      "tags": ["other:alternative_scenarios_enumerated", "in_main_text"],
+      "statement": "When plan targets show bias, the paper enumerates several scenarios for the timing and intent of the decision (ex ante, ex post, or intermediate) and states what the data can and cannot distinguish rather than picking one.",
+      "pages": [23, 24],
+      "locator": "Section 5.2 closing paragraphs",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o49",
+      "category": "limitation_stated",
+      "tags": ["data_coverage", "measurement", "in_main_text"],
+      "statement": "The accounting exercise lists its omissions in one paragraph (grain only, no transport or storage losses, no back-distribution, no relief data, ethnic composition ignored) and for each explains why the omission is unlikely to overturn the result or how a later section handles it.",
+      "pages": [10, 10],
+      "locator": "Section 3, interpretation paragraph",
+      "basis": "stated",
+      "applies_to": ["other:republic-level food accounting exercise"]
+    },
+    {
+      "id": "o50",
+      "category": "limitation_stated",
+      "tags": ["data_coverage", "identification_caveat", "in_main_text"],
+      "statement": "Missing ethnic-specific mortality, missing district-level production and procurement, and the short availability window of the archival-corrected production series are each stated where they bind and used to motivate the fallback measure or design.",
+      "pages": [7, 17],
+      "locator": "Section 2.2; Section 4.1; Section 4.4",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o51",
+      "category": "limitation_stated",
+      "tags": ["interpretation_caveat", "in_main_text"],
+      "statement": "The authors caution that biased plan targets do not by themselves imply an intent to kill, because targets exceeded actual production everywhere and the implied gap would not cause famine at high retention; the open question is stated as one of timing.",
+      "pages": [23, 24],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o52",
+      "category": "presentation_convention",
+      "tags": ["event_study_figure", "coefficient_plot", "binscatter", "raw_data_plot", "map", "in_main_text", "in_appendix"],
+      "statement": "Figures are grouped into multi-panel exhibits: one figure combines raw time series, two binned scatters and two event-study coefficient plots; another combines the border plots; a third has four year-interaction plots for long-run outcomes. Maps of the ethnic share and mortality are in the appendix, and every coefficient plot points to an appendix table with the numbers.",
+      "pages": [11, 27],
+      "locator": "Figures 1, 2, 3 and notes; Appendix Figure A.1",
+      "basis": "stated",
+      "applies_to": ["did", "event_study"]
+    },
+    {
+      "id": "o53",
+      "category": "presentation_convention",
+      "tags": ["no_stars", "notes_state_sample", "notes_state_se", "in_main_text"],
+      "statement": "Tables carry no significance stars; standard errors sit in parentheses (and brackets for the second type), standardized coefficients in italics, and the notes restate the sample, the definition of each variable, which columns control for what, the fixed effects and the spatial cutoff for the standard errors.",
+      "pages": [14, 25],
+      "locator": "Tables 2 to 5 notes",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o54",
+      "category": "presentation_convention",
+      "tags": ["appendix_tables_numbered_a", "in_appendix", "online_appendix_not_available"],
+      "statement": "Appendix material is cited as Supplementary Material with lettered sections (A to D) and tables and figures numbered A.x; the main text points to them for data construction, alternative inference, robustness and the numbers behind figures. The supplement is not part of the text file read for this note.",
+      "pages": [9, 29],
+      "locator": "Throughout; Supplementary Data note",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o55",
+      "category": "presentation_convention",
+      "tags": ["other:accounting_table_with_row_numbers", "in_main_text"],
+      "statement": "The accounting table numbers its rows and the text walks through them by row number; the notes distinguish which rows are official statistics and which are author-revised, and point to the appendix for the revision method.",
+      "pages": [8, 9],
+      "locator": "Table 1 and notes; Section 3",
+      "basis": "stated",
+      "applies_to": ["other:republic-level food accounting exercise"]
+    },
+    {
+      "id": "o56",
+      "category": "presentation_convention",
+      "tags": ["other:no_summary_stats_table_in_main_text", "in_appendix"],
+      "statement": "There is no stand-alone summary statistics table in the main text; descriptive information is delivered through dependent-variable mean rows in regression tables, the treatment mean and SD rows in the district table, an ethnic-composition appendix table and the raw-data figure.",
+      "pages": [12, 18],
+      "locator": "Footnote 8; Table 2; Table 3; Appendix Table A.1",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o57",
+      "category": "writing_structure",
+      "tags": ["results_previewed_in_intro", "contribution_paragraph", "roadmap_paragraph", "in_main_text"],
+      "statement": "The introduction previews every result as a numbered sequence mirroring the abstract, states the primary contribution as the dataset, includes a labelled Related Literature paragraph, and closes with a section-by-section roadmap.",
+      "pages": [2, 5],
+      "locator": "Section 1",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o58",
+      "category": "writing_structure",
+      "tags": ["data_before_design", "main_result_first", "robustness_separate_section", "mechanisms_after_main", "appendix_heavy", "in_main_text"],
+      "statement": "There is no separate data section: sources and variables are described inside the results section immediately before the equation. The order is background, accounting, main estimates, a robustness subsection, within-province and border evidence, then policy mechanisms, long-run outcomes and conclusion; many details, alternative inference and extra checks are pushed to the supplement.",
+      "pages": [5, 28],
+      "locator": "Sections 2 to 7",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o59",
+      "category": "writing_structure",
+      "tags": ["other:run_in_paragraph_headings", "in_main_text"],
+      "statement": "Within subsections, italic run-in headings (for example a placebo famine, alternative severity measures, additional mechanisms) label each check or argument, so the robustness subsection reads as a sequence of named paragraphs rather than a table walk-through.",
+      "pages": [16, 25],
+      "locator": "Sections 4.3 and 5.3",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o60",
+      "category": "writing_structure",
+      "tags": ["other:hypotheses_stated_before_estimates", "in_main_text"],
+      "statement": "Each empirical block opens by stating what pattern a hypothesis would predict (for example what a general anti-minority policy would imply for the minority interaction, or what free mobility would imply at a border) before reporting the estimate.",
+      "pages": [16, 20],
+      "locator": "Sections 4.2, 4.4, 4.5",
+      "basis": "inferred",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o61",
+      "category": "replication_statement",
+      "tags": ["code_public", "data_public", "replication_package_cited", "in_main_text"],
+      "statement": "A data availability statement says the data and code are in a replication package on Zenodo with a DOI; supplementary data are said to be available at the journal online. No software is named in the text.",
+      "pages": [29, 29],
+      "locator": "Data Availability Statement; Supplementary Data",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o62",
+      "category": "data_access",
+      "tags": ["administrative", "other:archival_digitized", "other:shared_by_other_researcher", "public_use", "in_main_text"],
+      "statement": "Data come from manual digitization of former Soviet archives (including declassified planning reports and secret police reports), population censuses, a public crop-suitability database, gridded weather, and a historical mortality series obtained from another researcher who is cited for it.",
+      "pages": [2, 24],
+      "locator": "Introduction; Sections 3, 4.3, 4.4, 5.3",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o63",
+      "category": "external_validity",
+      "tags": ["site_specific", "in_main_text"],
+      "statement": "Generalization is discussed by contrast: the absence of a production-mortality link is set against market-economy famines and another centrally planned famine, and the political and economic differences between the two planned-economy contexts are spelled out.",
+      "pages": [4, 26],
+      "locator": "Related Literature; Section 5.3 Additional Mechanisms",
+      "basis": "stated",
+      "applies_to": ["did"]
+    },
+    {
+      "id": "o64",
+      "category": "sample_construction",
+      "tags": ["other:reference_group_naming", "in_main_text"],
+      "statement": "Because most non-treated population in the sample belongs to one group, the paper announces it will sometimes refer to the reference group by that group's name; the exact composition of the residual category is spelled out in table notes.",
+      "pages": [12, 14],
+      "locator": "Section 4.1; Table 2 notes on column (7)",
+      "basis": "stated",
+      "applies_to": ["did"]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "OLS of mortality in t+1 on ethnic share x famine dummy and grain x famine with province and year fixed effects (equation 1).",
+      "card_shows": "s2: acreg, est=ols, treatment 'Ukrainian population share (1927) interacted with famine year (1932)'.",
+      "status": "agree",
+      "pages": [12, 13],
+      "card_ref": "s2.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Province and year fixed effects in the baseline; year FE only in Table 2 column (5) and Table 4 Panel B.",
+      "card_shows": "fe=None on all specs; absorb options live in the $acreg_options macro that the card did not resolve.",
+      "status": "paper_only",
+      "pages": [12, 14],
+      "card_ref": "s2.fixed_effects",
+      "note": "s5 uses $acreg_options_noprovfe, consistent with the paper's column (5), but the card records no FE."
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Standard errors adjusted for spatial correlation within 1,500 km (provinces) and 400 km (districts); district-clustered SEs also shown; Huber-White for plan targets.",
+      "card_shows": "se=None/None on all specs; acreg is the estimator, spatial options unresolved in macro.",
+      "status": "paper_only",
+      "pages": [13, 21],
+      "card_ref": "s2.se"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "District-level table reports district-clustered SEs in brackets alongside spatial SEs.",
+      "card_shows": "s10/s11 use $acreg_options_districts; cluster level null.",
+      "status": "paper_only",
+      "pages": [18, 18],
+      "card_ref": "s10.se.cluster_level"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Three republics; Table 2 columns (2) to (7) and (9) use years 1922 to 1939 (production year, mortality in t+1).",
+      "card_shows": "s2: if main_sample & year >= 1922 & year <= 1940.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s2.sample",
+      "note": "Code upper bound is one year later than the table note; forward mortality is the outcome so the last usable year is the same in effect."
+    },
+    {
+      "item": "controls",
+      "paper_says": "Column (1): archival-corrected grain, grain x famine, urbanization, urbanization x famine.",
+      "card_shows": "s1: urbanization urbanization_famine grainpc_mnq grainpc_mnq_famine.",
+      "status": "agree",
+      "pages": [13, 14],
+      "card_ref": "s1.controls"
+    },
+    {
+      "item": "controls",
+      "paper_says": "District table: grain suitability x famine, urbanization, urbanization x famine, 48 monthly temperature and precipitation controls for t and t-1.",
+      "card_shows": "s10: urbanization urbanization_famine grain_suitability_famine mtemp* mprecip* lag_mtemp* lag_mprecip*.",
+      "status": "agree",
+      "pages": [18, 18],
+      "card_ref": "s10.controls"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Table 2 column (6) omits Ukraine.",
+      "card_shows": "s6 with id != 26, recorded as alt_sample confirmed against base s2.",
+      "status": "agree",
+      "pages": [16, 16],
+      "card_ref": "robustness.alt_sample (s6)"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Column (3) adds exiled kulak households x famine; column (4) adds livestock drop x famine.",
+      "card_shows": "s3 adds kulakspc_dwam_famine; s4 adds drop_livestockpc_famine.",
+      "status": "agree",
+      "pages": [15, 15],
+      "card_ref": "s3, s4"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Figure 1d plots ethnic share x year-dummy coefficients with reference year 1923 as a pre-trend / dynamic check.",
+      "card_shows": "x1 pretrend_plot observed; s20 regresses fmortality on rukr_x_19* with urbanization and predicted-grain year interactions.",
+      "status": "agree",
+      "pages": [15, 15],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Correlates of 1926 Ukrainian share with political, social and economic variables in Appendix Table A.3 (footnote 7).",
+      "card_shows": "x2 balance not_found_in_scope.",
+      "status": "paper_only",
+      "pages": [12, 12],
+      "card_ref": "x2"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "Reference group is non-Ukrainian population, mostly ethnic Russians, within the same province across famine and nonfamine years.",
+      "card_shows": "d1 role=unknown, comparison group not recorded.",
+      "status": "paper_only",
+      "pages": [12, 12],
+      "card_ref": "d1"
+    },
+    {
+      "item": "other",
+      "paper_says": "Table 5 triple interaction of ethnic share, official 1928 grain production and famine, with an admin-capacity triple interaction in column (2).",
+      "card_shows": "s30 includes ukr_grainpc28_famine, grainpc28_famine, ukr_pc1loyalty5_famine, pc1loyalty5_famine with $ddd_controls.",
+      "status": "agree",
+      "pages": [24, 25],
+      "card_ref": "s30"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Five main-text tables and three multi-panel figures, plus appendix tables A.1 to A.11 and figures A.1 to A.4.",
+      "card_shows": "tables=4 figures=2 from four files read; card coverage is partial.",
+      "status": "unknown",
+      "pages": [8, 27],
+      "card_ref": "outputs",
+      "note": "Card read a subset of the package, so the count difference is not evidence of disagreement."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Replication package on Zenodo, DOI 10.5281/zenodo.10983057.",
+      "card_shows": "Code paths under code/zenodo_10983057/v2/v2/.",
+      "status": "agree",
+      "pages": [29, 29],
+      "card_ref": "source path (main_tables.do, main_figures.do)"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No weighting is mentioned anywhere in the text.",
+      "card_shows": "w=None on all specs.",
+      "status": "unknown",
+      "pages": [14, 14],
+      "card_ref": "s2.weights",
+      "note": "Both sides silent; unweighted is inferred, not confirmed."
+    }
+  ],
+  "gaps": [
+    "No discussion of few-cluster or small-sample inference despite a small number of provinces; alternative inference is only referenced to Appendix Section C, which is not in the text file.",
+    "No multiple-testing adjustment mentioned for the many columns and outcomes.",
+    "Software and packages are not named in the text.",
+    "No preregistration, IRB or ethics statement (historical archival data).",
+    "No summary statistics table in the main text; ethnic composition is in Appendix Table A.1.",
+    "Supplementary Material (Appendix Sections A to D, Tables A.1 to A.11, Figures A.1 to A.4) is referenced throughout but is not part of the extracted text and was not read.",
+    "No attrition or data-quality diagnostic for mortality registration beyond a footnote on estimate ranges."
+  ],
+  "reading": {
+    "pages_read": [[1, 30]],
+    "coverage": "full",
+    "note": "All 30 pages of the article text were read in three chunks (lines 1-600, 601-1200, 1201-1639), including Table 1 to Table 5, Figure notes, footnotes, the conclusion, the data availability statement and the reference list. The online Supplementary Material is not part of the text file and is only known through in-text pointers; observations tagged in_appendix rely on those pointers."
+  }
+}

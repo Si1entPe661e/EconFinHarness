@@ -43,7 +43,7 @@ The existing [checklist.md](checklist.md) is optional.
 
 ## Evidence
 
-Observed practice is generated into `harness/paradigms/iv/observed.md` (distillation set: 10 cards, AER 4, ReStud 4, JPE 1, RFS 1; Stata code in 9, R in 5) with pointers. Three papers are held out (`harness_build/evals/holdout/iv.json`: aer_112_5_9, jpe_132_9_2, qje_139_1_2). Headline observations:
+Observed practice is generated into `harness/paradigms/iv/observed.md` (distillation set: 10 cards, AER 4, ReStud 4, JPE 1, RFS 1; Stata code in 9, R in 5) with pointers. Three papers are held out (`examples/exclusions/iv.json`: aer_112_5_9, jpe_132_9_2, qje_139_1_2). Headline observations:
 
 - 2SLS is the recorded estimator in all 10 cards; commands are `ivreg2` (6), `ivreghdfe` (3), `reghdfe` for reduced forms (2), `feols` (1), `ivreg` (1), `twostepweakiv` (1).
 - Standard errors are clustered in 7 of 10 cards, robust in 1, unknown in 2; clustering dimensions are unknown in 4.

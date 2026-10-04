@@ -68,7 +68,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 
 ## Evidence
 
-Observed practice is generated into `harness/paradigms/did/observed.md` (distillation set: 17 cards, ReStud 6, AER 4, QJE 3, RFS 2, Econometrica 1, JFE 1; Stata code in 15, R in 9) and `harness/paradigms/event_study/observed.md`. Seven papers are held out (`harness_build/evals/holdout/did.json`: aer_110_9_10, aer_113_3_7, aer_114_6_6, aer_115_3_8, restud_90_5_11, restud_92_2_14, rfs_2025_rfs_hhaf065) and are not used here. Headline observations with pointers in `observed.md`:
+Observed practice is generated into `harness/paradigms/did/observed.md` (distillation set: 17 cards, ReStud 6, AER 4, QJE 3, RFS 2, Econometrica 1, JFE 1; Stata code in 15, R in 9) and `harness/paradigms/event_study/observed.md`. Seven papers are held out (`examples/exclusions/did.json`: aer_110_9_10, aer_113_3_7, aer_114_6_6, aer_115_3_8, restud_90_5_11, restud_92_2_14, rfs_2025_rfs_hhaf065) and are not used here. Headline observations with pointers in `observed.md`:
 
 - Two-way fixed-effects OLS (`hdfe_ols`, mostly `reghdfe`) is the recorded estimator in 12 of 17 cards; heterogeneity-robust estimators appear as `did_group_time_att` (3: `csdid`, `att_gt`, `jwdid`), `did_imputation` (3), `did_multiplegt` (1), synthetic DID (2, one of them the method paper's own code).
 - Standard errors are clustered in 14 of 17 cards (one dimension in all 14); bootstrap in 1 and randomization inference in 1; unknown in 2.

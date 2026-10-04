@@ -1,0 +1,1215 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "restud_2026_restud_rdag013",
+  "journal": "ReStud",
+  "year": 2026,
+  "doi": "10.1093/restud/rdag013",
+  "source": {
+    "pdf_path": "Paper/PDF/restud_2026_restud_rdag013.pdf",
+    "pdf_sha256": "f0a56653fe216c2fe5e9ff6d72b07635754b3e35872dd7f717a03c75f44c249f",
+    "text_path": "harness_build/papers/text/restud_2026_restud_rdag013.txt",
+    "text_sha256": "6d0c6f08441c62118702d13933a9f2ee2d03fcb006213bf5dae5113d20d4c82c",
+    "pages": 29
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-fable-5-1 (Agent tool, low effort)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:34:32Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/restud_2026_restud_rdag013.json",
+    "card_sha256": "83ade0c22dcc4f1e5bf59dcc2c955ecea6b0d2daf609568025dea31d1a398634"
+  },
+  "methods": [
+    "structural_estimation",
+    "gmm",
+    "panel_fe",
+    "regression"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "1. Introduction (with 1.1 Contributions, 1.2 Related literature)",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "2. Context (agents, scoring, enforcement)",
+      "pages": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "data",
+      "title": "2.3 Data",
+      "pages": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "results",
+      "title": "3. Descriptive analysis",
+      "pages": [
+        9,
+        12
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "model",
+      "title": "4. Model",
+      "pages": [
+        12,
+        18
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "design",
+      "title": "5. Estimation and identification",
+      "pages": [
+        18,
+        21
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "6. Results and model fit",
+      "pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "mechanisms",
+      "title": "7. Counterfactuals (7.1 to 7.3)",
+      "pages": [
+        23,
+        27
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "robustness",
+      "title": "7.4 Robustness and additional results",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "conclusion",
+      "title": "8. Conclusion, acknowledgments, data availability",
+      "pages": [
+        28,
+        28
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        28,
+        29
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named",
+        "in_main_text"
+      ],
+      "statement": "The paper states its question as the effectiveness of linked regulation and answers it by building and estimating a dynamic moral hazard framework with a regulator, then simulating counterfactual inspection allocations; the descriptive regressions are explicitly framed as suggestive, not causal.",
+      "pages": [
+        2,
+        4
+      ],
+      "locator": "Section 1 (Introduction)",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "identification_caveat"
+      ],
+      "statement": "After the descriptive deterrence regressions the authors state that a causal relationship cannot be ascertained because violations are only observed when inspected, expectations drive actions and inspections are targeted on scores; this motivates the structural model.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 3.3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "structural_estimation"
+      ],
+      "quote": "we cannot ascertain a causal relationship from this analysis"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "in_main_text"
+      ],
+      "statement": "Modelling assumptions are collected in dedicated 'Discussion of assumptions' subsections for both the firm's problem and the regulator's problem, each assumption paired with an institutional justification and a pointer to an appendix robustness test.",
+      "pages": [
+        15,
+        18
+      ],
+      "locator": "Sections 4.2.1 and 4.3.1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "design_variant_named"
+      ],
+      "statement": "The curse of dimensionality is handled by a named assumption (continuation value sufficiency) attributed to an analogous assumption in prior literature; the reduced state space and AR(1) belief transitions are stated in the main text with the formal derivation deferred to the online appendix.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 4.2.2 and 4.2.3",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "quote": "continuation value sufficiency"
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "Identification of the second-stage parameters is exposited informally through a simplified one-period, single-plant version of the firm's problem, whose closed-form solution is used to motivate the choice of moments; a variance decomposition of detected violations is used to motivate the moments for the type variances.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section 5.3.1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation",
+        "gmm"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "Regulator social harm parameters are identified from the regulator's first-order conditions across sectors; the authors note that a binding budget constraint means only relative harms are identified and normalise one sector's harm.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Section 5.3.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "sample_period_stated",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Data are described as an unbalanced panel of the universe of plants regulated by the Texas regulator under two federal acts over a stated multi-year window, aggregated to the plant-year level; plants and firms are defined by the regulator's site and owner identifiers.",
+      "pages": [
+        3,
+        9
+      ],
+      "locator": "Sections 1, 2.1.1, 2.1.2, 2.3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "in_appendix"
+      ],
+      "statement": "The small share of inspections conducted by the federal EPA rather than the state regulator is retained in the sample with a stated rationale, and an online appendix section is cited showing the choice has minimal effect on descriptive, estimation and counterfactual results.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 2.3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated",
+        "in_footnote"
+      ],
+      "statement": "The panel year is defined to start on the date scores are updated rather than the calendar year, stated in a footnote.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Footnote 8",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Sample sizes are reported per column in the descriptive regression tables and per variable in the summary statistics table; the deterrence table shows N changing with the fixed-effect structure and the inspected-only restriction.",
+      "pages": [
+        9,
+        11
+      ],
+      "locator": "Tables 1 to 3",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "logs_or_ihs"
+      ],
+      "statement": "Plant and firm scores are transformed with log(1+x) because of a long right tail; the authors explain that zero corresponds to a clean compliance history.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 2.3 and Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "The outcome for the deterrence regressions is the count of violations uncovered at a plant, and the key regressor is the predicted inspection probability from the first inspection logit specification.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 3.3 and Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "in_appendix"
+      ],
+      "statement": "The firm score is defined by an explicit formula (a complexity-point weighted average of plant scores), and the regulator's exact plant-score algorithm is reproduced in the online appendix rather than in the main text.",
+      "pages": [
+        7,
+        8
+      ],
+      "locator": "Section 2.2, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "in_appendix"
+      ],
+      "statement": "Violations are mapped to a pollution index used as an alternative welfare measure; the construction steps and alternative constructions are placed in the online appendix.",
+      "pages": [
+        9,
+        25
+      ],
+      "locator": "Section 2.3 and Table 6 notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "The number of violations per inspection is used as a proxy for the gravity of bad management, justified by an appendix table showing penalties scale approximately linearly in detected violations.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 2.1.4",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "variable_construction",
+      "tags": [
+        "other:observable_heterogeneity_by_sector"
+      ],
+      "statement": "Observable plant heterogeneity is proxied by six NAICS-based sectors; unobserved heterogeneity is modelled as private types within sector; alternative observables (region, environmental justice index) are tested for relevance in the inspection regressions before being dropped from the model.",
+      "pages": [
+        6,
+        10
+      ],
+      "locator": "Sections 2.1.1 and 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "controls_progressive_columns",
+        "other:log_likelihood_reported"
+      ],
+      "statement": "The inspection-probability table reports three logit columns with fixed effects listed as Yes/No rows, N and log-likelihood per column; controls (environmental justice index, region FE) are added progressively and the parsimonious column is chosen as the policy function.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Table 2 and Section 3.2",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "regression"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "n_reported",
+        "baseline_then_variants"
+      ],
+      "statement": "The deterrence table lists year FE and a 'Unit FEs' row naming category and firm FE versus plant FE, plus an 'Only Inspected' row for the sample restriction; the text walks through why each column change is made (sorting versus detection).",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Table 3 and Section 3.3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes"
+      ],
+      "statement": "The structural estimates table reports parameter estimates with standard errors and a note describing how they are computed and the normalisation applied.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "The descriptive tables report standard errors in parentheses but the text and table notes do not state the standard error type or clustering level for the logit and deterrence regressions.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Tables 2 and 3",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe",
+        "regression"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "other:bootstrap_at_firm_level"
+      ],
+      "statement": "Standard errors for the structural parameters are obtained by a bootstrap that resamples with replacement at the firm level, with the number of iterations stated in the table note.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 4 notes",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ],
+      "quote": "sampling with replacement at the firm level"
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_main_text",
+        "other:model_fit_moments_table"
+      ],
+      "statement": "Model fit is assessed by a table listing each estimation moment with its simulated and empirical value, followed by a binscatter of estimated plant types against the leave-one-out mean of co-owned plants' types.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Table 5, Figure 4, Section 6.1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation",
+        "gmm"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "other:first_stage_estimates_in_appendix"
+      ],
+      "statement": "First-stage (offline) estimates are relegated to an online appendix table while second- and third-stage estimates appear in the main text.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section 6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "in_appendix",
+        "other:heterogeneous_responsiveness_check"
+      ],
+      "statement": "An appendix table is cited to support a modelling assumption (increasing differences) by showing that high-violation plants are more responsive to inspection probability.",
+      "pages": [
+        11,
+        18
+      ],
+      "locator": "Sections 3.3 and 5.1.1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Two behavioural threats (strategic avoidance and production reallocation) are tested in the online appendix; the avoidance test exploits firms with plants in multiple regulator regions and the local sourcing of inspectors.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 3.3.1",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix",
+        "in_main_text"
+      ],
+      "statement": "The counterfactual section has a dedicated robustness subsection that summarises appendix checks in prose: within-industry type correlation, regulator internalising compliance costs, longer score histories via AR(1) persistence, and random crackdowns.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section 7.4",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_main_text"
+      ],
+      "statement": "Robustness to the regulator's objective is provided by re-expressing counterfactual gains with a pollution-index measure in the main table and by disaggregated sector results in the appendix.",
+      "pages": [
+        23,
+        26
+      ],
+      "locator": "Section 7.1, 7.3.4, Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Robustness of the binscatter correlation to controls for observable plant characteristics is placed in an appendix table.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "Counterfactual results are reported separately for multi-plant firms, single-plant firms and all firms, with the single-plant rows used to rule out reallocation of enforcement across firm types.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Table 6 and Section 7.3.1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "quantile",
+        "mechanism_motivated"
+      ],
+      "statement": "Targeting heterogeneity is shown by a LOWESS-smoothed plot of the change in inspection probability across plant-type quantiles.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section 7.3.5 and Figure 5",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "mechanism_evidence",
+      "tags": [
+        "other:counterfactual_decomposition"
+      ],
+      "statement": "Mechanisms are separated by a numerical decomposition: one channel is isolated by holding the score-to-action policy fixed and re-simulating the stationary distribution, the remainder is attributed to the second channel; a stylised two-period model in the appendix justifies additivity.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section 7.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "mechanism_evidence",
+      "tags": [
+        "other:descriptive_evidence_sequence"
+      ],
+      "statement": "Before the model, three descriptive facts are presented in sequence (within-firm correlation of violations, targeting on scores, deterrence conditional on plant FE) to motivate the model's ingredients.",
+      "pages": [
+        9,
+        12
+      ],
+      "locator": "Section 3",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "regression"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "other:percentage_change_due_to_scale_normalisation"
+      ],
+      "statement": "Because social costs are identified only up to scale, counterfactual effectiveness is reported as percentage changes relative to an untargeted budget increase; the table note reports the baseline mean violations per plant as a reference.",
+      "pages": [
+        23,
+        25
+      ],
+      "locator": "Section 7.1 and Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "other:implied_effects_from_combined_regressions"
+      ],
+      "statement": "Descriptive coefficients are translated into implied inspection probabilities and deterrence effects for a 'clean' versus 'bad' plant by chaining the logit and deterrence regressions, and plotted in a figure.",
+      "pages": [
+        10,
+        12
+      ],
+      "locator": "Sections 3.2, 3.3 and Figure 2",
+      "basis": "stated",
+      "applies_to": [
+        "panel_fe",
+        "regression"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Unlinked-regulation counterfactual results are explicitly benchmarked against the closest prior structural paper.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section 7.3.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "interpretation_caveat"
+      ],
+      "statement": "The commitment assumption is flagged as maintained throughout; the authors state that characterising self-enforcing policies is outside scope and use the mechanism decomposition to argue which channel survives without commitment.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section 7.3.6",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement"
+      ],
+      "statement": "Compliance costs are unobserved, so the correlation in actions is acknowledged to attenuate the correlation in costs under the deterrence regime.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section 3.1",
+      "basis": "stated",
+      "applies_to": [
+        "regression"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat",
+        "in_footnote"
+      ],
+      "statement": "The authors note that ruling out production shifting makes their linked-regulation conclusions conservative, in a footnote.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Footnote 14",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "external_validity",
+      "tags": [
+        "other:mechanism_decomposition_for_portability"
+      ],
+      "statement": "External validity is argued through the mechanism decomposition: which channel dominates is said to determine how the policy would fare in settings with or without regulator commitment or cross-state ownership.",
+      "pages": [
+        2,
+        5
+      ],
+      "locator": "Sections 1 and 1.1",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "summary_stats_table"
+      ],
+      "statement": "A summary statistics table reports N, mean, standard deviation and the 1st and 99th percentiles for key variables.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": [
+        "binscatter",
+        "no_stars",
+        "notes_state_se"
+      ],
+      "statement": "Binscatters with confidence bands are used for raw correlations; regression tables show standard errors in parentheses without significance stars.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Figure 1, Tables 2 and 3",
+      "basis": "inferred",
+      "applies_to": [
+        "panel_fe",
+        "regression"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "presentation_convention",
+      "tags": [
+        "other:timing_diagram"
+      ],
+      "statement": "The model timing is summarised in a numbered timeline and a timing diagram figure.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section 4.1.4 and Figure 3",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a"
+      ],
+      "statement": "Online appendix tables are referenced with an A- prefix and appendix sections by number throughout the main text.",
+      "pages": [
+        7,
+        28
+      ],
+      "locator": "various",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o44",
+      "category": "presentation_convention",
+      "tags": [
+        "other:equation_terms_annotated"
+      ],
+      "statement": "Key equations are annotated with under-braces labelling each economic component (flow benefit, inspection, expected penalty, continuation values).",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Equations (3) and (5)",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "contribution_paragraph",
+        "roadmap_absent"
+      ],
+      "statement": "The introduction previews the counterfactual findings, the mechanism decomposition and additional counterfactuals, then has a numbered contributions subsection and a related-literature subsection; no explicit roadmap paragraph.",
+      "pages": [
+        2,
+        6
+      ],
+      "locator": "Sections 1, 1.1, 1.2",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o46",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design",
+        "other:context_section_with_definitional_subsections"
+      ],
+      "statement": "Institutional context precedes data, and the context section is organised as short definitional subsections (what is a plant, a firm, an inspection, a violation) before the scoring rules.",
+      "pages": [
+        6,
+        8
+      ],
+      "locator": "Section 2",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o47",
+      "category": "writing_structure",
+      "tags": [
+        "descriptive_before_model",
+        "robustness_separate_section"
+      ],
+      "statement": "Order is context, data, descriptive analysis, model, estimation and identification, results and fit, counterfactuals, then a robustness subsection; robustness appears in a separate subsection at the end of both descriptive and counterfactual sections.",
+      "pages": [
+        6,
+        28
+      ],
+      "locator": "Sections 2 to 7",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_reliance"
+      ],
+      "statement": "The main text repeatedly defers derivations, algorithms, calibration details, decomposition implementation and most robustness to numbered online appendix sections.",
+      "pages": [
+        16,
+        28
+      ],
+      "locator": "Sections 4 to 7",
+      "basis": "inferred",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "data_public",
+        "replication_package_cited"
+      ],
+      "statement": "A Data Availability paragraph states that data and code are on Zenodo with a DOI.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Data Availability",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o50",
+      "category": "replication_statement",
+      "tags": [
+        "other:software_not_named"
+      ],
+      "statement": "No software or package is named in the main text for estimation or regressions.",
+      "pages": [
+        1,
+        29
+      ],
+      "locator": "whole paper",
+      "basis": "inferred",
+      "applies_to": []
+    },
+    {
+      "id": "o51",
+      "category": "data_access",
+      "tags": [
+        "other:regulator_administrative_data"
+      ],
+      "statement": "Data come from the state environmental regulator's administrative records (identifiers, scores, inspections, violations, penalties) combined with an EPA environmental justice index; no access restrictions are mentioned.",
+      "pages": [
+        8,
+        9
+      ],
+      "locator": "Section 2.3",
+      "basis": "stated",
+      "applies_to": []
+    },
+    {
+      "id": "o52",
+      "category": "other",
+      "tags": [
+        "other:calibration_from_statute"
+      ],
+      "statement": "Several model parameters are calibrated directly from the regulator's published rules (penalty escalations, score decay), and the discount factor is fixed; a footnote quotes the administrative code decay rule.",
+      "pages": [
+        19,
+        20
+      ],
+      "locator": "Sections 5.1.4, 5.2 and footnote 19",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "other",
+      "tags": [
+        "other:multi_step_estimation_described"
+      ],
+      "statement": "Estimation is laid out as three explicit steps (offline calibration, simulated method of moments for firms with nested inner and outer loops, analytic inversion of regulator first-order conditions) with each step's parameters named.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section 5.2",
+      "basis": "stated",
+      "applies_to": [
+        "structural_estimation",
+        "gmm"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Table 2 uses logit regressions for inspection with year and NAICS sector FE (Section 3.2).",
+      "card_shows": "s4: logit inspection on log scores with i.year and i.naics_cat_fe.",
+      "status": "agree",
+      "pages": [
+        10,
+        11
+      ],
+      "card_ref": "s4.estimator"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Table 3 deterrence regressions are described only as regressions of violation counts on predicted inspection probability; no estimator named.",
+      "card_shows": "s1 to s3 use ppmlhdfe (Poisson PPML) for n_violations.",
+      "status": "code_only",
+      "pages": [
+        11,
+        11
+      ],
+      "card_ref": "s1.estimator",
+      "note": "Paper does not state the count model; code shows Poisson."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Table 3 column (1) lists year FE and unit FE 'Category, Firm'.",
+      "card_shows": "s1 absorbs year, naics_2, c_fe, region_fe.",
+      "status": "disagree",
+      "pages": [
+        11,
+        11
+      ],
+      "card_ref": "s1.fixed_effects",
+      "note": "Card includes region FE not listed in the table row; may be a labelling difference."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Table 3 columns (2) and (3) use year and plant FE.",
+      "card_shows": "s2 and s3 absorb year and c_re_fe (plant identifier).",
+      "status": "agree",
+      "pages": [
+        11,
+        11
+      ],
+      "card_ref": "s2.fixed_effects"
+    },
+    {
+      "item": "sample",
+      "paper_says": "Column (3) of Table 3 restricts to plant-years with an inspection.",
+      "card_shows": "s3 conditions on inspection==1.",
+      "status": "agree",
+      "pages": [
+        11,
+        11
+      ],
+      "card_ref": "s3.sample"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "No SE type or cluster level stated for Tables 2 and 3.",
+      "card_shows": "se null for all specs.",
+      "status": "unknown",
+      "pages": [
+        10,
+        11
+      ],
+      "card_ref": "s1.se"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Structural SEs from firm-level bootstrap (Table 4 notes).",
+      "card_shows": "No structural estimation spec recorded in the card.",
+      "status": "paper_only",
+      "pages": [
+        22,
+        22
+      ],
+      "card_ref": "d2"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Table 2 adds environmental justice index and region FE in columns (2) and (3).",
+      "card_shows": "s4 records only the baseline logit with scores and year/NAICS FE.",
+      "status": "paper_only",
+      "pages": [
+        10,
+        11
+      ],
+      "card_ref": "s4.controls"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Model fit reported as moment comparison table and type-correlation binscatter.",
+      "card_shows": "Diagnostics x1 balance and x2 first_stage marked unknown.",
+      "status": "paper_only",
+      "pages": [
+        22,
+        23
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Tables 1 to 6 and Figures 1 to 5 in the main text.",
+      "card_shows": "Card records zero tables and figures.",
+      "status": "paper_only",
+      "pages": [
+        9,
+        27
+      ],
+      "card_ref": "outputs"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Data and code on Zenodo (DOI 10.5281/zenodo.16987699).",
+      "card_shows": "Card file paths are under code/zenodo_16987699.",
+      "status": "agree",
+      "pages": [
+        28,
+        28
+      ],
+      "card_ref": "s1.source"
+    }
+  ],
+  "gaps": [
+    "No statement of standard error type or clustering level for the descriptive logit and deterrence regressions (Tables 2 and 3).",
+    "No software or package named for estimation.",
+    "No preregistration or ethics statement (administrative data, none expected).",
+    "Online appendix not included in the text file; appendix robustness is known only through main-text references.",
+    "No explicit roadmap paragraph in the introduction."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        29
+      ]
+    ],
+    "coverage": "full",
+    "note": "All 29 pages of the main article read, including references. The online appendix is a separate supplementary file not included in the text and was not read; appendix content is recorded only as cited by the main text."
+  }
+}

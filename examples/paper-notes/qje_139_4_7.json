@@ -1,0 +1,1155 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "qje_139_4_7",
+  "journal": "QJE",
+  "year": 2024,
+  "doi": "10.1093/qje/qjae019",
+  "source": {
+    "pdf_path": "Paper/PDF/qje_139_4_7.pdf",
+    "pdf_sha256": "b50076c048358745f5993f8072a8c4797983542e29e4e58b0f725999d68cd80d",
+    "text_path": "harness_build/papers/text/qje_139_4_7.txt",
+    "text_sha256": "e954e68d73c209bb49df5206041d99a571a7658d1512263e5112e36987fb1fc8",
+    "pages": 46
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:39:21Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/qje_139_4_7.json",
+    "card_sha256": "b3a97952279ce2445514d98c6c2aaa64bf063902a7cf89f2df37bb7378b7decc"
+  },
+  "methods": [
+    "did",
+    "event_study"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "other",
+      "title": "Title, abstract, JEL codes, author note",
+      "pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "introduction",
+      "title": "I. Introduction",
+      "pages": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "background",
+      "title": "II. Institutional Background",
+      "pages": [
+        7,
+        11
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "III. Data",
+      "pages": [
+        11,
+        16
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "IV. Identification Strategy",
+      "pages": [
+        16,
+        21
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "V. Results",
+      "pages": [
+        21,
+        32
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "robustness",
+      "title": "VI. Robustness",
+      "pages": [
+        32,
+        35
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "conclusion",
+      "title": "VII. Conclusion and Data Availability statement",
+      "pages": [
+        35,
+        39
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        39,
+        45
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "Journal back matter (Nemmers Prize call for nominations; not part of the article)",
+      "pages": [
+        46,
+        46
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named"
+      ],
+      "statement": "States a baseline two-way fixed-effects (TWFE) model (equation 1) comparing adjacent high-school cohorts around staggered state reforms, with a continuous 0-1 evolution-coverage score as treatment and state/cohort/survey-year fixed effects.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section IV, equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "parallel_trends_argued"
+      ],
+      "statement": "States the key identifying assumption in its strong (continuous-treatment) form: absent the reforms, potential outcomes would have moved on parallel trends at every level of evolution-coverage dosage, and treatment effects are assumed homogeneous over time.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IV, paragraph after equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "evolved along parallel trends"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Enumerates four confounds the TWFE design is argued to rule out: time-invariant state differences, national cohort-level trends, state shocks affecting adjacent cohorts equally, and (via a separate robustness specification) smooth state-specific trends.",
+      "pages": [
+        17,
+        18
+      ],
+      "locator": "Section IV",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "other:institutional_natural_experiment"
+      ],
+      "statement": "Argues the precise reform year (though not whether a reform occurs) is close to exogenous, because it depends on institutional idiosyncrasies such as gubernatorial election cycles and Board of Education member tenures of up to nine years.",
+      "pages": [
+        8,
+        10
+      ],
+      "locator": "Section II.C",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "as good as random"
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "other:predetermined_covariate_check"
+      ],
+      "statement": "Reports a quantitative exogenous-timing check: state-year unemployment, partisan composition, school resources, and evolution/creationism search intensity are regressed on the evolution score with state and year fixed effects, with the coefficients detailed in the Online Appendix.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section II.C, referencing Online Appendix A.3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Links a state-level treatment measure (the evolution score) to three separate individual-level, repeated cross-sectional data sets (NAEP, GSS, ACS), each matched to a respondent's inferred state and year of high-school entry.",
+      "pages": [
+        11,
+        16
+      ],
+      "locator": "Section III.A-B",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated",
+        "exclusions_justified"
+      ],
+      "statement": "Restricts all three micro-samples to individuals who started high school between 1990 and 2010, justified as balancing enough years for credible pre-trend/fixed-effect estimation against contamination from the 2013 Next Generation Science Standards.",
+      "pages": [
+        13,
+        14
+      ],
+      "locator": "Section III.B, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "restricted_data_used"
+      ],
+      "statement": "States that the individual-level NAEP and GSS data used are restricted-use files obtained under special contractual arrangements and cannot be shared or made available by the author; interested readers are told to contact the data provider.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Unnumbered author footnote on page 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "not available from the author"
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Limits the NAEP sample to public-school test takers because Science Standards never bind private schools, while the GSS and ACS samples pool public, private, and homeschooled respondents since school type is not identifiable in those surveys.",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Section III.B.1-3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Reports the exact analysis-sample size for every outcome panel in Table I (separately for the NAEP, GSS and ACS samples), and these counts stay fixed across the four columns that progressively add controls and fixed effects.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table I",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Defines the treatment as an externally constructed 0-1 'evolution score' (Lerner 2000; Mead and Mates 2009) combining whether standards mention evolution, depth of biological/human/geological/cosmological coverage, topic linkage, and absence of creationist jargon.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines each of the three outcomes as a single respondent-level scalar: share of NAEP evolution questions answered correctly, a GSS true/false evolution-belief indicator, and an ACS indicator for working in life sciences (rescaled by 100).",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Section III.B.1-3; Table I notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "measurement_error_discussed"
+      ],
+      "statement": "Notes that one state received an out-of-range negative evolution score in the earliest standards wave, which is recoded to zero for interpretability, and states that results using the original value do not differ meaningfully (unreported, available on request).",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Footnote 12",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "other:dosage_weighting"
+      ],
+      "statement": "Constructs an alternative 'dosage' treatment coding, a weighted average of pre- and post-reform evolution scores by number of pre/post-reform high-school years, used only in one robustness column rather than the baseline specification.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Footnote 14; Table II column (4)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "controls_progressive_columns",
+        "baseline_then_variants"
+      ],
+      "statement": "Builds the main result across four columns moving from no controls/no fixed effects, to controls only, to fixed effects only, to controls plus fixed effects together, so the reader sees how each ingredient shifts the coefficient.",
+      "pages": [
+        21,
+        22
+      ],
+      "locator": "Table I column headers",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table"
+      ],
+      "statement": "Table I column headers explicitly flag, for every column, whether state fixed effects and cohort fixed effects are included, rather than leaving fixed-effect structure only to the footnote text.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table I header rows",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes",
+        "mean_of_dependent_reported",
+        "n_reported",
+        "r2_reported"
+      ],
+      "statement": "Table I and Table II notes report, for every specification, the SE clustering level, the full control-variable list, the outcome definition and data source, plus the mean/SD of the dependent variable, adjusted R-squared, and N.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table I notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Justifies clustering standard errors at the state level (the level at which treatment/reforms are assigned) by citing Abadie et al. (2023) and Athey and Imbens (2022) on correlated error terms across cohorts within a state.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IV, paragraph describing equation (1)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference"
+      ],
+      "statement": "Describes a permutation-based placebo exercise, labelled 'an alternative way of inference,' that randomly reshuffles reform years across reforming states many times and reports the baseline coefficient's percentile in that null distribution for each outcome.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "Section VI.A",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "an alternative way of inference"
+    },
+    {
+      "id": "o20",
+      "category": "diagnostic_reported",
+      "tags": [
+        "pre_trends_plot",
+        "pre_trends_test",
+        "in_main_text"
+      ],
+      "statement": "Presents event-study estimates (equation 2) separately for reform-reducing and reform-expanding states in the main text, reporting the pre-reform coefficients together with joint F-tests of the pre-trend restriction for each outcome.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Figures II, III, V; Sections V.A.2, V.B.2, V.C.2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "bandwidth_sensitivity",
+        "other:rambachan_roth_sensitivity",
+        "in_appendix"
+      ],
+      "statement": "Assesses event-study robustness to nonlinear pre-trend violations using the Rambachan and Roth (2023) sensitivity-bound method, reporting the largest per-period nonlinearity parameter M for which the confidence interval still excludes zero for each outcome.",
+      "pages": [
+        34,
+        34
+      ],
+      "locator": "Section VI.C",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "Reports a covariate-balance check regressing the evolution score on a set of predetermined state/cohort covariates plus survey-year fixed effects, finding little systematic correlation, with the full set of estimates placed in an Online Appendix figure.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Footnote 23",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "placebo_outcomes",
+        "in_appendix",
+        "in_main_text"
+      ],
+      "statement": "Estimates reform effects on nine non-evolution knowledge topics and on non-evolution scientific, religious, and political attitudes, finding null or much smaller effects, with formal equality-of-coefficient tests against the evolution outcome reported in text and appendix tables.",
+      "pages": [
+        33,
+        33
+      ],
+      "locator": "Section VI.B",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:predetermined_trend_check",
+        "in_appendix"
+      ],
+      "statement": "Relates reform timing to contemporaneous state economic, political, and educational conditions and to search interest in evolution and creationism in the online appendix, as a diagnostic supporting the exogenous-timing identification argument.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section II.C, referencing Online Appendix A.3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator"
+      ],
+      "statement": "Runs the Callaway and Sant'Anna (2021) staggered-DiD estimator, using not-yet-treated units as controls and binned endpoints (Schmidheiny and Siegloch 2023) to avoid multicollinearity, alongside the TWFE OLS event studies, reporting that the two closely agree.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section IV, final two paragraphs; Section V.A.2",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "alt_specification",
+        "alt_estimator",
+        "alt_control_group",
+        "summarized_in_one_table"
+      ],
+      "statement": "Table II reports twelve further robustness columns (close-election governors, governor-party control, state trends, dosage coding, single-reform states, large states only, states with standards text, alternate sample-start years, a probit model, outcome recodings), each with a formal equality test against the baseline coefficient.",
+      "pages": [
+        35,
+        37
+      ],
+      "locator": "Section VI.D; Table II",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Adds a set of four never-treated states (Nebraska, Oregon, Utah, Wisconsin) to the event-study samples as a robustness check, reporting that the resulting graphs do not change meaningfully from the baseline event studies.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Footnote 26; Section VI.C",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "other:coefficient_sensitivity_explained"
+      ],
+      "statement": "Attributes the sensitivity of some Table II point estimates relative to the Table I baseline to small state-by-cohort cell sizes relative to the number of added control variables, rather than treating the sensitivity as undermining the main result.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Section VI.D",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "in_appendix"
+      ],
+      "statement": "Reports larger belief effects for individuals raised as mainline Protestants versus non-religious, for Black versus White respondents, and for those raised in urban versus rural areas, with the detailed heterogeneity analysis deferred to an Online Appendix section.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section V.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "suggestive_labelled"
+      ],
+      "statement": "Offers classroom-level mechanism evidence labelled 'suggestive': teacher-survey measures of time spent teaching evolution, teachers' stated personal opinions and students' selection into biology courses are each estimated against the standards score and reported together.",
+      "pages": [
+        25,
+        25
+      ],
+      "locator": "Section V.A.3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "suggestive evidence"
+    },
+    {
+      "id": "o31",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean"
+      ],
+      "statement": "Interprets all three headline effects primarily as a percentage of the relevant outcome's sample mean rather than only in raw coefficient units.",
+      "pages": [
+        21,
+        29
+      ],
+      "locator": "Sections V.A.1, V.B.1, V.C.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature",
+        "other:persuasion_rate"
+      ],
+      "statement": "Converts the evolution-belief effect into a DellaVigna and Gentzkow (2010) persuasion rate and benchmarks it explicitly against persuasion rates reported for a Chinese school-textbook reform and for several media-persuasion studies.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section V.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "monetary_terms"
+      ],
+      "statement": "Scales the occupational-choice effect to the national adult population to obtain an absolute headcount of additional life-science workers and contextualizes it with industry statistics on GDP share, employment multiplier, and patent share.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section V.C.1; footnotes 34-35",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "other:extrapolation_exercise"
+      ],
+      "statement": "Presents a separate 'naive linear extrapolation' exercise in the conclusion projecting population-level changes in evolution belief and life-science/biology employment, expressed relative to sample means, if all states adopted highly comprehensive standards.",
+      "pages": [
+        38,
+        38
+      ],
+      "locator": "Section VII, first paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "measurement"
+      ],
+      "statement": "States that because reform implementation is not always immediate or complete, some cohorts coded as pre-reform may have received partial post-reform content, diluting the treatment-control contrast, so estimates are framed as lower bounds.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section II.D, closing paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "interpreted as lower-bound estimates"
+    },
+    {
+      "id": "o36",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat",
+        "data_coverage"
+      ],
+      "statement": "Discusses the null religiosity finding with several non-adjudicated candidate explanations: theistic evolution among some religious subgroups, belief compartmentalization, earlier-childhood formation of religious identity, and the short post-reform time horizon available in the data.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Section VI.B",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "external_validity",
+      "tags": [
+        "time_period_specific",
+        "site_specific"
+      ],
+      "statement": "Explicitly limits the causal evidence to the 2000-2009 reform period and U.S. context, framing relevance to the later Next Generation Science Standards, other countries, and other science topics as speculative extensions for future research.",
+      "pages": [
+        39,
+        39
+      ],
+      "locator": "Section VII, penultimate paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "presentation_convention",
+      "tags": [
+        "event_study_figure",
+        "coefficient_plot"
+      ],
+      "statement": "Figures II, III, and V each overlay TWFE OLS point estimates with Callaway-Sant'Anna estimates and confidence intervals on the same event-study axes, split into separate panels for coverage-reducing and coverage-expanding reform states.",
+      "pages": [
+        24,
+        31
+      ],
+      "locator": "Figures II, III, V",
+      "basis": "stated",
+      "applies_to": [
+        "did",
+        "event_study"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used"
+      ],
+      "statement": "Table I and Table II report conventional significance stars at the three usual levels beneath each table.",
+      "pages": [
+        22,
+        37
+      ],
+      "locator": "Table I and Table II notes",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "map",
+        "raw_data_plot"
+      ],
+      "statement": "Figure I is a choropleth U.S. state map of the raw 2000-2009 evolution-score difference, shown before any regression results, to motivate the identifying variation.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Figure I",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a",
+        "in_appendix"
+      ],
+      "statement": "Places detailed supporting material (text analysis of standards, case-study anecdotes, quantitative pretrend/placebo checks, heterogeneity breakdowns, multiple-hypothesis-testing corrections) in an 'Online Appendix' referenced with an 'A.'-prefixed numbering scheme rather than reproducing it in the main text.",
+      "pages": [
+        8,
+        35
+      ],
+      "locator": "Sections II.C, IV, VI.D, and elsewhere",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "main_result_first"
+      ],
+      "statement": "The introduction previews the paper's three headline quantitative results (effects on knowledge, belief, and occupational choice), including approximate magnitudes, well before the formal results section.",
+      "pages": [
+        4,
+        5
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "writing_structure",
+      "tags": [
+        "roadmap_paragraph"
+      ],
+      "statement": "The introduction closes with an explicit one-paragraph roadmap naming each of the paper's subsequent numbered sections in order.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section I, final paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "The article proceeds as follows"
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph"
+      ],
+      "statement": "Before the roadmap, the introduction contains several literature-positioning paragraphs connecting the paper to the STEM-sorting, religiosity-determinants, and education-content literatures, each stating what the paper adds.",
+      "pages": [
+        5,
+        7
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": [
+        "robustness_separate_section"
+      ],
+      "statement": "Robustness material is grouped into its own numbered Section VI, with four lettered subsections (placebo tests, other outcomes, event-study sensitivity, further checks), organizationally separated from the results in Section V.",
+      "pages": [
+        32,
+        35
+      ],
+      "locator": "Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited",
+        "code_public"
+      ],
+      "statement": "A dedicated 'Data Availability' statement, placed just before the reference list, cites the replication programs as deposited at Harvard Dataverse with a specific DOI.",
+      "pages": [
+        39,
+        39
+      ],
+      "locator": "Data Availability statement (before References)",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "data_access",
+      "tags": [
+        "data_restricted",
+        "data_access_procedure_described"
+      ],
+      "statement": "States that the underlying NAEP and GSS microdata are restricted-use and not shareable by the author, and directs readers who want the data to contact the data-provider organizations directly.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Unnumbered author footnote on page 1",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "survey_collected"
+      ],
+      "statement": "Describes NAEP as a federally administered standardized-testing program, GSS as an interviewer-administered biennial survey, and ACS as a mandatory-response Census Bureau survey, noting ACS response is 'required by U.S. law.'",
+      "pages": [
+        14,
+        16
+      ],
+      "locator": "Section III.B.1-3",
+      "basis": "stated",
+      "applies_to": [
+        "did"
+      ],
+      "quote": "required by U.S. law"
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Baseline specification (equation 1) is a two-way fixed effects OLS regression.",
+      "card_shows": "s1 and s2 are traced as plain Stata 'reg' (OLS) commands.",
+      "status": "agree",
+      "pages": [
+        16,
+        21
+      ],
+      "card_ref": "s1.est / s2.est"
+    },
+    {
+      "item": "estimator",
+      "paper_says": "Robustness runs the Callaway and Sant'Anna (2021) staggered-DiD estimator alongside the baseline.",
+      "card_shows": "No traced specification records that estimator; 'csdid' appears in the card's package list as installation_only, with no spec attached.",
+      "status": "paper_only",
+      "pages": [
+        16,
+        21
+      ],
+      "card_ref": "packages[csdid]",
+      "note": "Only 6 files were read for the card, so the absence is a coverage gap, not evidence that the code lacks the estimator."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "States state fixed effects, cohort/high-school-entry fixed effects, and (in the full model) survey/test-year fixed effects.",
+      "card_shows": "s1 and s2 both record a structured fe field of None, even though the raw Stata command lines include 'i.state i.byear' (s1) and 'i.state i.year i.byear' (s2) as fixed-effect dummies.",
+      "status": "paper_only",
+      "pages": [
+        17,
+        17
+      ],
+      "card_ref": "s1.fe",
+      "note": "Raw code is consistent with the paper's stated FE structure, but the card's structured fe field was not populated/parsed."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are clustered at the state level throughout, citing Abadie et al. (2023) and Athey and Imbens (2022).",
+      "card_shows": "s1.se and s2.se both record cluster/['state'], matching 'vce(cluster state)' in the traced Stata lines.",
+      "status": "agree",
+      "pages": [
+        17,
+        17
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "controls",
+      "paper_says": "The full model (Table I column 4) includes individual-level controls listed in the table notes (gender, race/ethnicity, subsidized-lunch status, home possessions, birth month, test session, test/survey year).",
+      "card_shows": "s1's traced regression line has no control variables (bare 'i.state i.byear'); s2's line includes an unresolved Stata global macro '$controls' whose contents are not shown in the card.",
+      "status": "unknown",
+      "pages": [
+        21,
+        22
+      ],
+      "card_ref": "s2.stata_line",
+      "note": "The card shows that a controls macro is used in s2 but its contents were not resolved/traced, so it cannot be checked against the paper's stated control list."
+    },
+    {
+      "item": "sample",
+      "paper_says": "NAEP main sample is public-school 12th graders who started high school 1990-2010 and answered at least one evolution question (N=14,080).",
+      "card_shows": "s1 conditions on schtype==1 & sample_naep==1 (consistent with the public-school restriction); s2 adds a closestate10==1 condition not explained anywhere in the main text pages read.",
+      "status": "unknown",
+      "pages": [
+        14,
+        22
+      ],
+      "card_ref": "s1.stata_line / s2.stata_line",
+      "note": "closestate10 plausibly relates to the 'close elections' robustness check (Table II column 1), but the main text does not name this variable, so the mapping cannot be confirmed from the text alone."
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "States the comparison is adjacent cohorts within the same state (pre- vs post-reform high-school entry cohorts), with not-yet-treated/never-treated states as controls in the CS event studies.",
+      "card_shows": "The design record d1 has treatment=None and role=unknown, so no structured comparison-group information is captured in the card.",
+      "status": "paper_only",
+      "pages": [
+        16,
+        21
+      ],
+      "card_ref": "d1.treatment / d1.role"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No mention of survey or sampling weights is made anywhere in the read main text for any of the three analyses.",
+      "card_shows": "s1.w and s2.w are both recorded as None (no weights) in the traced specs.",
+      "status": "agree",
+      "pages": [
+        21,
+        22
+      ],
+      "card_ref": "s1.w"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Reports several diagnostics: main-text event-study pre-trend tests for all three outcomes, Rambachan-Roth sensitivity bounds, a placebo permutation test, and a predetermined-covariate balance check.",
+      "card_shows": "The card's single diag record x1 documents only the pre-trend/event-study diagnostic ('reghdfe event study with pre-treatment coefficients for parallel trends'); the other three diagnostics have no counterpart in the card.",
+      "status": "paper_only",
+      "pages": [
+        18,
+        34
+      ],
+      "card_ref": "x1",
+      "note": "The core pretrend_test in the card agrees with the paper's event-study diagnostic, but most of the paper's other reported diagnostics are not represented in the card."
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Table II alone reports twelve distinct robustness variants, plus a never-treated-states check and a placebo-outcomes check described in the text.",
+      "card_shows": "The card's single robustness record documents only one alt_sample check (base spec s1 vs variant spec s2, confirmed).",
+      "status": "paper_only",
+      "pages": [
+        21,
+        37
+      ],
+      "card_ref": "robustness[0]",
+      "note": "Only 1 of the many robustness variants described in the paper is represented in the traced card; most of Table II's columns have no corresponding card record."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The published article contains two main tables (Table I, Table II) and five main-text figures (Figures I-V) across the NAEP, GSS, and ACS analyses, plus numerous Online Appendix tables and figures.",
+      "card_shows": "The card records only tables=1 and figures=1, reflecting the single NAEP-focused do-file (naep_output.do) among the 6 files read, not the full replication package.",
+      "status": "paper_only",
+      "pages": [
+        21,
+        32
+      ],
+      "card_ref": "outputs",
+      "note": "Card coverage is explicitly marked partial; only the NAEP script's outputs are captured, not the GSS or ACS analysis code or outputs."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Names three restricted/individual-level micro data sources (NAEP, GSS, ACS/IPUMS) each linked to a state-level evolution-score treatment measure from Lerner (2000) and Mead and Mates (2009).",
+      "card_shows": "The visible card specs (s1, s2) are both drawn from the NAEP script (code/dataverse_HYLZUO/.../naep_output.do); no GSS or ACS analysis file appears among the specs listed.",
+      "status": "paper_only",
+      "pages": [
+        11,
+        16
+      ],
+      "card_ref": "s1 / s2 (files_read)",
+      "note": "Consistent with the card header's coverage=partial flag; GSS and ACS code was not among the 6 files traced for this card."
+    }
+  ],
+  "gaps": [
+    "No preregistration, IRB approval, or participant-consent statement of any kind appears in the read text (category preregistration_or_ethics is entirely absent).",
+    "No explicit statement of analysis software (e.g., Stata/R and version) appears in the main text; software names (reghdfe, csdid, honestdid) are only visible in the replication code, not in the prose.",
+    "No explicit discussion of survey or sampling weights for the GSS or ACS analyses is given in the main text (consistent with the card's w=None for the traced NAEP specs).",
+    "No explicit 'few clusters' discussion (e.g., wild-bootstrap or few-cluster correction) despite state-level clustering with roughly fifty clusters.",
+    "No multiple-hypothesis-testing correction is shown in the main text; the paper states this material is in the Online Appendix (Section VI.D), which is a separate document not included in this text extraction and so could not be verified here."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        39
+      ],
+      [
+        40,
+        46
+      ]
+    ],
+    "coverage": "main_text",
+    "note": "All 46 pages of the provided text were read: pages 1-39 (title/abstract through Conclusion and Data Availability statement) were read in full for content; pages 40-45 (References) were read to confirm they are bibliography only and to locate the Data Availability statement; page 46 is unrelated journal back matter (a Nemmers Prize call for nominations) and is not part of the article. The paper's Online Appendix, cited extensively throughout (identification checks, heterogeneity detail, many robustness and diagnostic results), is a separate document not included in this text extraction and was not read; its existence and general content are recorded only as stated by the main text. Numeric results scrubbed from statements on 2026-09-08 (paper-practice-v1 rule: no numerical results)."
+  }
+}

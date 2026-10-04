@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 - 2026-10-03
+
+- Move the public CLI to `tools/fh.py` and research examples to `examples/code-cards/` and `examples/paper-notes/`.
+- Consolidate all 31 source skills and nine source roles under `harness/`.
+- Keep existing method-summary exclusions under `examples/exclusions/`.
+- Exclude the entire local build directory from the public tree and remove the legacy compatibility CLI from distribution.
+- Allow optional corpus search to use an existing index selected with `--index`.
+
 ## 0.2.0 - 2026-10-03
 
 - Provide 20 method skills and nine shared research skills, with estimation and export examples in R, Python, Stata and MATLAB where applicable.

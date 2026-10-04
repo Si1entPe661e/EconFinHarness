@@ -1,0 +1,1020 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_112_5_9",
+  "journal": "AER",
+  "year": 2022,
+  "doi": "10.1257/aer.20200146",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_112_5_9.pdf",
+    "pdf_sha256": "1afb922265c50fdd1be8337adda2b74963b4a7f0ae13f943b90e601f1783179d",
+    "text_path": "harness_build/papers/text/aer_112_5_9.txt",
+    "text_sha256": "54776ef901c18efc0d1924322741d74101719094e9c863f71eb12ed7fc6f5f5d",
+    "pages": 34
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:55:14Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/aer_112_5_9.json",
+    "card_sha256": "97d84bd3608281f56aab0dafb2756db4c02cbe797b62f01196d9b499f6b42ced"
+  },
+  "methods": [
+    "iv",
+    "structural_estimation"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "model",
+      "title": "I. Model",
+      "pages": [
+        4,
+        8
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "design",
+      "title": "II. Identification",
+      "pages": [
+        8,
+        14
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "data",
+      "title": "III. Data and Empirical Setting",
+      "pages": [
+        14,
+        21
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "results",
+      "title": "IV.A-B. IV Estimates of Returns; Speed of Learning and Signaling Value",
+      "pages": [
+        21,
+        26
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "robustness",
+      "title": "IV.C. Robustness and Additional Results",
+      "pages": [
+        26,
+        28
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "other",
+      "title": "V. Extensions (Partially Transparent Instrument; Heterogeneous Returns)",
+      "pages": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "other",
+      "title": "VI. Discussion",
+      "pages": [
+        29,
+        31
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "conclusion",
+      "title": "VII. Conclusion",
+      "pages": [
+        31,
+        32
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        32,
+        34
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "identifying_assumption_explicit",
+        "design_variant_named"
+      ],
+      "statement": "The paper formalizes identification with four numbered assumptions (IV exogeneity/relevance, a hidden-instrument assumption, a transparent-instrument assumption, and a homogeneity assumption across samples) and names the estimand as private versus social returns to education.",
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "Section IIA, Assumptions 1-3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed",
+        "instrument_exclusion_argued"
+      ],
+      "statement": "A footnote addresses a specific threat to the exclusion restriction (the schooling reform also changed curriculum quality) with an algebraic argument showing the bias term cancels out of the private-versus-social-returns gap, rather than testing it empirically.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "footnote 21",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "other:literature_taxonomy"
+      ],
+      "statement": "The paper situates its own instrument within a taxonomy it builds from the prior literature, listing several well-known instruments as examples of plausibly hidden instruments and others as examples of plausibly transparent instruments.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section IIA, discussion after Assumptions 2 and 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "restricted_data_used",
+        "attrition_reported"
+      ],
+      "statement": "Data come from linked Statistics Norway administrative registries (population, income and tax, education, and the historical census) merged by personal identifier with military IQ test scores; the authors state attrition is limited to death or out-migration rather than survey nonresponse.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "unit_of_observation_stated"
+      ],
+      "statement": "The analysis sample is restricted to Norwegian males in a stated birth-cohort window, with immigrants and those missing schooling, municipality, IQ, or reform-exposure information excluded; the male-only restriction is justified by differential female labor-force participation and IQ-test coverage.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Person-years are further restricted to earnings above a stated minimum-earnings threshold, justified as a way to limit variation in annual earnings coming from hours worked rather than from wages, with the resulting sample size reported.",
+      "pages": [
+        14,
+        15
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported",
+        "sample_size_reported_per_table"
+      ],
+      "statement": "The paper explains that the panel is unbalanced across experience because the earnings data end in a fixed calendar year, so older cohorts are observed for more career years than younger cohorts, and reports how many individuals are observed at early versus late experience.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section IIIA, footnote 17",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "measurement_error_discussed"
+      ],
+      "statement": "Years of schooling, the treatment variable, is taken from an administrative education register populated directly by educational establishments, which the authors argue makes misreporting unlikely.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section IIIB",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition",
+        "logs_or_ihs"
+      ],
+      "statement": "The outcome is the log of pretax annual labor earnings, excluding capital income, self-employment income, and government transfers; hourly wages are not used because they are unavailable for most of the sample period.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Section IIIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The instrument is a binary reform-exposure indicator equal to one if the compulsory-schooling law had been implemented in the worker's childhood municipality by the stated age cutoff, built from municipality-level historical implementation-year records.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IIID, equation (16)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition",
+        "instrument_construction"
+      ],
+      "statement": "The hidden and transparent IV samples are formed by partitioning workers according to whether their childhood municipality was the largest-population municipality in its local labor market, a fixed institutional/geographic classification rather than a randomized assignment.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section IIIC",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "running_variable_definition",
+        "other:experience_measure"
+      ],
+      "statement": "Potential work experience, the dimension along which the model's returns are allowed to vary, is defined as age minus years of schooling minus an assumed school-starting age.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section IIIB",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "se_type_in_notes",
+        "n_reported",
+        "mean_of_dependent_reported"
+      ],
+      "statement": "The first-stage table reports the instrument coefficient with its standard error, checkmarks for the included fixed effects, the first-stage F-statistic, the sample mean and standard deviation of schooling, and the observation count for each of three columns.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "The same cohort and childhood-municipality fixed effects are applied identically across the full-sample, hidden-IV-sample, and transparent-IV-sample columns of the first-stage table, so the three columns are directly comparable variants of one specification.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "other:experience_specific_regressions"
+      ],
+      "statement": "Rather than pooling experience into one regression, the second-stage IV specification is estimated separately for every year of work experience, so coefficients and standard errors are reported as a profile across experience rather than as a single row.",
+      "pages": [
+        19,
+        19
+      ],
+      "locator": "Section IIID, equation (15)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants",
+        "other:panel_structured_table"
+      ],
+      "statement": "The structural-parameter table is organized into separate labeled panels for the underlying model parameters, the implied weight on the initial signal, the implied internal rate of return, and the implied present discounted value, decomposing one estimation system into several interpretable rows within a single table.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "no_justification_found"
+      ],
+      "statement": "Standard errors are clustered at the local labor market region in the reported tables, but the text states this choice in a table note without separately arguing why that level, rather than municipality or another level, is the appropriate clustering unit.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 1 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ],
+      "quote": "We cluster the standard errors at the local labor market region."
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "No discussion of multiple-testing correction or family-wise error appears anywhere in the text, even though the design produces a separate hypothesis test for each year of work experience within each IV sample.",
+      "pages": [
+        21,
+        26
+      ],
+      "locator": "Section IV, throughout",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "weak_iv_statistic",
+        "in_main_text"
+      ],
+      "statement": "First-stage F-statistics are reported in the main first-stage table for the full sample and for each of the hidden and transparent subsamples, and the text interprets these as evidence against weak-instrument bias.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:constant_returns_test",
+        "in_footnote"
+      ],
+      "statement": "A joint F-test of whether the transparent-IV experience profile is flat, and a parallel test for the hidden-IV profile, are reported in a footnote as a formal check of the model's constant-returns-to-skill assumption.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "footnote 25",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:auxiliary_first_stage_diagnostic",
+        "in_appendix"
+      ],
+      "statement": "As an auxiliary diagnostic connecting the instrument to a direct ability measure, the paper reports a separate IV regression of a standardized IQ test score on schooling using the same reform instrument, with the estimates placed in the online appendix.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section IVC, \"Causal Effect of Education on IQ\"",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "The robustness subsection is organized as a sequence of separately headed checks covering differential municipality trends, sample balance, the earnings threshold, and the definition of the hidden and transparent samples, with full supporting tables and figures placed in the online appendix.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section IVC",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Robustness to differential pre-existing trends across municipalities is checked by adding extrapolated linear and quadratic municipality-specific trends in schooling estimated from pre-reform cohorts, with results reported only in the online appendix.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section IVC, \"Differential Trends\"",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Sensitivity to panel imbalance is checked by capping experience at an early-career window for the full cohort range and, separately, by restricting to earlier birth cohorts observed for the full experience window, plus a further check extending the cohort range.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Section IVC, \"Sample Selection\"",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "The minimum-earnings threshold used to select workers with limited hours variation is varied to several alternative levels around the baseline as a robustness check on that sample-selection rule.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section IVC, \"Earnings Threshold\"",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "alt_control_group",
+        "in_appendix"
+      ],
+      "statement": "The population-size cutoff used to classify municipalities as central versus noncentral, which defines the hidden and transparent IV samples, is varied across several alternative thresholds as a check on the sample-partitioning rule.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section IVC, \"Definition of the Hidden and Transparent IV Samples\"",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "other:theoretical_extension"
+      ],
+      "statement": "Rather than reporting heterogeneous treatment effects across subgroups of a single sample, the paper extends its identification results to a potential-outcomes/complier framework, showing analytically that the two IVs identify complier-average private and social returns under heterogeneous returns.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section VB",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "suggestive_labelled",
+        "back_of_envelope"
+      ],
+      "statement": "The paper combines its auxiliary IV regression of IQ on schooling with a separate regression of earnings on IQ to back out how much of the estimated social return could run through an ability channel, explicitly cautioning that this is suggestive rather than a direct productivity test.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section IVC, \"Causal Effect of Education on IQ\"",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "other:dual_metric_triangulation"
+      ],
+      "statement": "The gap between private and social returns, interpreted as the signaling value of education, is computed two different ways from the same underlying parameter estimates, an internal-rate-of-return measure and a present-discounted-value measure, and the two are compared for consistency.",
+      "pages": [
+        25,
+        26
+      ],
+      "locator": "Section IVB",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "The paper benchmarks its speed-of-learning finding against an earlier employer-learning study using a similar setting, and separately notes that a companion working paper using an IQ-based ability proxy reaches broadly consistent conclusions.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Introduction; footnote 6",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "structural_estimation"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "interpretation_caveat"
+      ],
+      "statement": "A dedicated discussion section, described by the authors as brief, walks through several maintained assumptions the paper does not test empirically, including symmetric employer learning, competitive labor markets, and the possibility that education also affects job assignment, framing these as topics for future work.",
+      "pages": [
+        29,
+        31
+      ],
+      "locator": "Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat"
+      ],
+      "statement": "The authors state directly that their setting assumes all employers share the same information about a worker, contrasting this with other evidence that incumbent employers can have an information advantage over the market.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VIA",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The authors state that their identification approach applies best to instruments affecting a small subpopulation relative to the whole economy, since such instruments are less likely to generate general-equilibrium confounds that the model does not capture.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section VID",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "time_period_specific"
+      ],
+      "statement": "The paper flags that its own reform was gradually rolled out across nearly the whole country over the sample period, raising the possibility that general-equilibrium effects interacting with experience could confound the estimated experience profile, a concern the authors say is beyond the paper's scope to address.",
+      "pages": [
+        31,
+        31
+      ],
+      "locator": "Section VID",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot",
+        "other:experience_profile_plot"
+      ],
+      "statement": "The paper's central results are shown mainly as line plots of point estimates against years of work experience with confidence-interval bands, rather than as a single table of coefficients, so readers see how the returns evolve over a career.",
+      "pages": [
+        22,
+        25
+      ],
+      "locator": "Figures 3 and 4",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars",
+        "notes_state_se"
+      ],
+      "statement": "Regression tables report point estimates with standard errors directly beneath in parentheses and do not use significance stars; statistical precision is instead conveyed through confidence-interval bands in the figures and through F-statistics reported in table notes.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Tables 1 and 2",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot",
+        "summary_stats_table"
+      ],
+      "statement": "Before presenting main results, the paper includes descriptive figures showing the conditional distribution of IQ by years of schooling and the geographic and cohort variation in reform exposure and timing, used to motivate the empirical setting.",
+      "pages": [
+        15,
+        17
+      ],
+      "locator": "Figures 1 and 2",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro",
+        "roadmap_paragraph",
+        "contribution_paragraph"
+      ],
+      "statement": "The introduction previews the paper's headline qualitative findings and closes with an explicit roadmap paragraph listing what each numbered section covers.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "writing_structure",
+      "tags": [
+        "design_before_data"
+      ],
+      "statement": "The paper presents its theoretical model and identification results before introducing the data, so the identification argument is established in the abstract before it is connected to the specific Norwegian setting.",
+      "pages": [
+        4,
+        21
+      ],
+      "locator": "Sections I-III ordering",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "writing_structure",
+      "tags": [
+        "robustness_separate_section",
+        "appendix_heavy"
+      ],
+      "statement": "Robustness checks are collected into one dedicated subsection following the main results, and most of the corresponding tables and figures are deferred to the online appendix rather than included in the main text.",
+      "pages": [
+        26,
+        28
+      ],
+      "locator": "Section IVC",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "writing_structure",
+      "tags": [
+        "other:discussion_before_conclusion"
+      ],
+      "statement": "A qualitative discussion section addressing untested assumptions is placed after all empirical results and before the conclusion, separate from the robustness subsection that reports additional quantitative checks.",
+      "pages": [
+        29,
+        32
+      ],
+      "locator": "Section VI",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "data_restricted"
+      ],
+      "statement": "The data are linked Norwegian administrative registries and restricted military IQ test records rather than a public-use dataset, and the main text does not itself describe an access procedure, instead directing readers in a footnote to the online article page for additional materials and disclosure statements.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "title footnote",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "First-stage regression of years of schooling on the reform-exposure instrument, plus second-stage two-stage-least-squares regressions of log earnings on instrumented schooling estimated separately by experience year, combined afterward via nonlinear least squares to recover the structural learning parameters.",
+      "card_shows": "Card records one OLS spec (s1: reghdfe yos on the instrument) matching the first stage, and two ivreghdfe 2SLS specs (s2, s3: log_lonnP on yos instrumented by the reform variable). No nonlinear-least-squares step is present among the traced specs.",
+      "status": "agree",
+      "pages": [
+        19,
+        24
+      ],
+      "card_ref": "d1;s1;s2;s3",
+      "note": "The traced code covers the linear IV building blocks the paper describes; the NLLS step that combines them into structural parameters is not captured in the recipe card's spec trace."
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Every specification includes birth-cohort and childhood-municipality fixed effects.",
+      "card_shows": "s1, s2, and s3 all absorb the municipality (tkom) and cohort variables.",
+      "status": "agree",
+      "pages": [
+        19,
+        22
+      ],
+      "card_ref": "s1.fe;s2.fe;s3.fe"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are clustered at the local labor market region.",
+      "card_shows": "s1, s2, and s3 all cluster on the local-labor-market-region variable.",
+      "status": "agree",
+      "pages": [
+        22,
+        22
+      ],
+      "card_ref": "s1.se.cluster_level;s2.se.cluster_level;s3.se.cluster_level"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The analysis rests on two economically distinct samples, hidden IV (noncentral-municipality childhoods) and transparent IV (central-municipality childhoods), each with its own stated observation count, and this split is the core of the identification strategy rather than a robustness check.",
+      "card_shows": "The card frames the transparent-sample regression (s3) as an alt_control_group robustness variant of the base spec (s2) rather than as a second core design arm, and the traced spec fields do not record explicit sample sizes or the central/noncentral sample definitions.",
+      "status": "disagree",
+      "pages": [
+        17,
+        22
+      ],
+      "card_ref": "robustness.alt_control_group(base=s2,var=s3)",
+      "note": "This is a framing mismatch: what the paper treats as its central two-arm identification strategy is recorded in the card as a robustness variant of a base specification."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "First-stage F-statistics are reported in the main first-stage table for the full, hidden, and transparent samples as evidence against weak-instrument bias.",
+      "card_shows": "diag x2 (weak_iv) is recorded as not_found_in_scope.",
+      "status": "disagree",
+      "pages": [
+        22,
+        22
+      ],
+      "card_ref": "x2",
+      "note": "Likely a coverage gap in the traced files/lines rather than a genuine absence, since the paper's weak-IV evidence sits directly in the first-stage table."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "No overidentification test is discussed or applicable, since the design uses a single instrument in a just-identified 2SLS setup.",
+      "card_shows": "diag x3 (overid) is recorded as not_applicable.",
+      "status": "agree",
+      "pages": [
+        22,
+        24
+      ],
+      "card_ref": "x3"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The main text presents two numbered tables (first-stage estimates; structural parameter estimates) plus four main figures, with substantial additional tables and figures in the online appendix.",
+      "card_shows": "The card records three table outputs (t1, t2, t3) and no figure outputs among the traced specs.",
+      "status": "disagree",
+      "pages": [
+        15,
+        25
+      ],
+      "card_ref": "s1.outputs;s2.outputs;s3.outputs",
+      "note": "The code trace covers the regression-table building blocks; the paper's figures and appendix outputs are not represented in the traced spec outputs."
+    },
+    {
+      "item": "controls",
+      "paper_says": "No individual-level covariates beyond the fixed effects appear in the baseline specification; the only additional controls considered are municipality-specific pre-reform trends added as a robustness check.",
+      "card_shows": "The traced commands for s1, s2, and s3 show no covariates beyond the absorbed municipality and cohort fixed effects.",
+      "status": "agree",
+      "pages": [
+        19,
+        26
+      ],
+      "card_ref": "s1;s2;s3"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No sample weights are mentioned in the empirical specification or in any table note.",
+      "card_shows": "Card records weights as unset (None) for s1, s2, and s3.",
+      "status": "agree",
+      "pages": [
+        19,
+        22
+      ],
+      "card_ref": "s1.weights;s2.weights;s3.weights"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Data are Statistics Norway administrative registries (population, income and tax, education) linked with Norwegian Armed Forces IQ test scores via personal identifiers.",
+      "card_shows": "The traced Stata commands reference variable names consistent with a Norwegian registry panel but do not themselves record the provenance of the underlying data.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        15
+      ],
+      "card_ref": "d1"
+    }
+  ],
+  "gaps": [
+    "The online Appendix (tables A.1-A.4, Appendix B on the partially transparent instrument, Appendix C on heterogeneous returns, and Figures A.1-A.3) is referenced throughout the main text but is a separate document not included in the supplied text, so its diagnostic and robustness content could not be read directly.",
+    "No explicit justification is given in the text for clustering standard errors at the local-labor-market level specifically, as opposed to the municipality level or another level.",
+    "No discussion of multiple-testing or family-wise error concerns appears despite the paper reporting a separate IV estimate for every year of work experience in each sample.",
+    "No preregistration, IRB, or ethics statement is found anywhere in the main text, and the paper does not flag this as inapplicable.",
+    "No balance table comparing observable characteristics of the hidden IV sample against the transparent IV sample is reported in the main text.",
+    "No explicit software or package name is stated in the main text for the IV, NLLS, or robustness estimations.",
+    "No formal data-or-code availability statement appears in the main text; only a footnote directs readers to the online article page for additional materials and author disclosure statements."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        34
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read all 34 pages of the provided text in full: title and abstract, Sections I-VII (Model, Identification, Data and Empirical Setting, Empirical Results, Extensions, Discussion, Conclusion), and the reference list. The paper's online Appendix is referenced extensively but is a separate supplementary document not included in this text file, so it was not read; this is recorded as a gap rather than as a skipped page within the 34-page source."
+  }
+}

@@ -1,0 +1,1137 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "ecta_92_2_2",
+  "journal": "Econometrica",
+  "year": 2024,
+  "doi": "10.3982/ecta19127",
+  "source": {
+    "pdf_path": "Paper/PDF/ecta_92_2_2.pdf",
+    "pdf_sha256": "d63ea7740afd6775b309cb50c69693a9d278d2f8a1b1bb74bf335e9a3bcb897b",
+    "text_path": "harness_build/papers/text/ecta_92_2_2.txt",
+    "text_sha256": "a0e754f64a6e5f57c5fcaad9b68c2f593983b1515502694188a241127be1d582",
+    "pages": 32
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:10:17Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/ecta_92_2_2.json",
+    "card_sha256": "49923149ab2f474cf8315a0a77e22d7b1b580abdfc424638b100dbb6cc1fd75c"
+  },
+  "methods": [
+    "rct",
+    "panel_fe"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "1. Introduction",
+      "pages": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "2. Context: Floods and Costly Coping Strategies",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "background",
+      "title": "3.1 The Emergency Loan: Product Description",
+      "pages": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "model",
+      "title": "3.2 Theoretical Framework",
+      "pages": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "4. Research Design and Data",
+      "pages": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "5.1 Credit as an Adaptation Tool",
+      "pages": [
+        12,
+        21
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "heterogeneity",
+      "title": "5.2 Spillovers to Ineligible Households",
+      "pages": [
+        21,
+        26
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "results",
+      "title": "5.3 The Emergency Loan Is Profitable for the Private Sector",
+      "pages": [
+        26,
+        28
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "conclusion",
+      "title": "6. Conclusion",
+      "pages": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "other",
+      "title": "References and Data Availability Statement",
+      "pages": [
+        29,
+        32
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "estimand_named",
+        "randomization_described"
+      ],
+      "statement": "States the design as a branch-level randomized controlled trial stratified by district, comparing eligible clients in treatment branches to eligible clients in control branches.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Section 4.1, Research Design",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit"
+      ],
+      "statement": "Explains that borrower eligibility was fixed by credit score well before the flood season, so assignment and eligibility could not respond to a realized shock, supporting a causal reading of the estimates.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section 3.1, Product Description",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ],
+      "quote": "assessed each client's eligibility in April, before the Aman planting season"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Discusses a threat to the flood-activation protocol from possible misreporting by field staff and states that the field verification and an independent government river gauge rarely disagreed and that disagreements were balanced across arms.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 4.1, footnote 10",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named"
+      ],
+      "statement": "Defines a second estimand adding a realized-flood indicator and its interaction with treatment, described as separating the ex ante investment channel from the combined investment-and-liquidity channel once a flood occurs.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, ex post specification",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Names two data sources: BRAC's administrative loan and repayment records for all clients in the experimental branches, and a household survey panel drawn from randomly selected village organizations within each branch.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated"
+      ],
+      "statement": "States that survey data were collected in three rounds, a pre-treatment baseline, a first follow-up after one Aman rainy season, and a second follow-up after a second rainy season.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Restricts the experimental sample to branches in historically flood-prone areas located near a government river gauge, justified as necessary so flooding could be monitored remotely and validated for loan activation.",
+      "pages": [
+        10,
+        10
+      ],
+      "locator": "Section 4.1, Research Design",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "attrition_reported"
+      ],
+      "statement": "Reports re-survey rates in a footnote, together with a formal test there of the treatment-control gap in attrition.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, footnote 15",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines cultivated land across three tenure categories, owned, rented, and sharecropped, collected separately because the expected investment response to guaranteed credit differs by land-tenure type.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index"
+      ],
+      "statement": "Constructs an inverse-covariance-weighted investment index combining land cultivation, fertilizer, pesticide, seed, labor, and non-agricultural business investment into a single ex ante outcome.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index"
+      ],
+      "statement": "Constructs an inverse-covariance-weighted welfare index combining consumption, income, crop production, business profits and assets, and livestock into a single ex post outcome.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "winsorization"
+      ],
+      "statement": "States that all outcome variables are winsorized at fixed upper and lower percentiles before estimation to limit the influence of outliers.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, baseline specification paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "baseline_then_variants"
+      ],
+      "statement": "Reports a baseline linear specification of outcome on a treatment indicator with district and year fixed effects, applied as one common template across the ex ante and ex post outcome tables.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, baseline specification equation",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": [
+        "cluster_level_in_notes",
+        "mean_of_dependent_reported",
+        "n_reported",
+        "notes_state_se",
+        "notes_state_sample"
+      ],
+      "statement": "Table notes routinely restate the estimation sample, the clustering level for standard errors, the mean of the dependent variable, and the observation count directly beneath the coefficient rows.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Table I, notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table"
+      ],
+      "statement": "For MFI branch-month outcomes the specification adds month fixed effects to the district and year fixed effects used for household-level outcomes, reflecting the higher observation frequency of these variables.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, MFI-outcome specification",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes"
+      ],
+      "statement": "Main result tables report a randomization-inference p-value as an additional row placed directly beneath the conventional clustered standard error for the treatment coefficient, rather than replacing it.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Table I, layout",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "States as a general rule for the household-level analysis that standard errors are always clustered at the branch level, the level at which the Emergency Loan was randomized.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, baseline specification paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "randomization_inference",
+        "no_justification_found"
+      ],
+      "statement": "Reports randomization-inference p-values alongside cluster-robust standard errors throughout the results tables without stating in the running text why this extra inference procedure is added.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Table I and subsequent result tables",
+      "basis": "inferred",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level",
+        "no_justification_found"
+      ],
+      "statement": "Departs from branch-level clustering for one monthly panel specification on Good Loan uptake, where standard errors are instead clustered at the district level, without an explicit reason given for the change.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table V, notes",
+      "basis": "inferred",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ],
+      "quote": "Standard errors clustered at the district level."
+    },
+    {
+      "id": "o20",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "Points to an appendix balance table comparing treatment and control branches on baseline observable characteristics and summarizes in the main text that the randomized branches are balanced.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 4.1, referencing Appendix Table A.2",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis",
+        "in_appendix"
+      ],
+      "statement": "Points to an appendix table with a formal differential-attrition test between treatment and control households, summarized in a footnote as showing a small, statistically insignificant gap.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, footnote 15, referencing Appendix Table A.5",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:persistence_check",
+        "in_appendix"
+      ],
+      "statement": "Reports a check of whether treatment effects on investment fade in the second year among households already flooded in the first year, pointing to an appendix table and summarizing the result as no evidence of fading.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 5.1, referencing Appendix Table A.16",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Reports a robustness check using an alternative, gauge-only flood-activation definition in place of the field-verified definition, summarized as yielding consistent conclusions, with full tables in the appendix.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 4.1, footnote 10, referencing Appendix Tables A.6-A.8",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "alt_estimator",
+        "in_appendix"
+      ],
+      "statement": "Addresses possible differential selection into eligibility across the two experimental years with appendix tables that repeat key results excluding the second year and with an alternative specification instrumenting for eligibility using branch treatment status.",
+      "pages": [
+        11,
+        11
+      ],
+      "locator": "Section 4.1, footnote 13, referencing Appendix Tables A.9-A.15",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "in_appendix"
+      ],
+      "statement": "Examines whether experiencing flood shocks in both experimental years erodes the value of guaranteed credit through an expanded specification with a double-flood indicator interacted with treatment, reported in an appendix table.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.1, footnote 23, referencing Appendix Table A.17",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "coefficient_plot",
+        "interaction"
+      ],
+      "statement": "Reports treatment-effect heterogeneity by borrower credit-score decile through a multi-panel coefficient plot and a companion table fitting a linear trend, covering loan-uptake, repayment, and profitability outcomes.",
+      "pages": [
+        22,
+        24
+      ],
+      "locator": "Figure 1 and Table VI",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "exploratory_labelled"
+      ],
+      "statement": "Notes in a footnote that the theoretical model predicts heterogeneous investment responses by risk aversion, starting wealth, and existing credit access, but reports only weak evidence of such heterogeneity in the data.",
+      "pages": [
+        15,
+        15
+      ],
+      "locator": "Section 5.1, footnote 20",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope"
+      ],
+      "statement": "Interprets the ex ante land-investment result by comparing it with the prediction of the calibrated theoretical model at the sample's average risk-aversion level, describing the two as closely aligned.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 5.1, calibration discussion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "sd_units"
+      ],
+      "statement": "Interprets the pooled ex ante investment index and ex post welfare index effects in standard-deviation units of the underlying inverse-covariance-weighted index rather than in the index's raw units.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Section 5.1, ex ante and ex post outcome discussion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope",
+        "monetary_terms"
+      ],
+      "statement": "Translates the estimated value households place on preserving Emergency Loan access into an implied ratio of the marginal utility of credit after a flood relative to credit in the pre-period, under both conservative and more realistic assumptions.",
+      "pages": [
+        20,
+        20
+      ],
+      "locator": "Section 5.1, Value for Borrowers",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity",
+        "identification_caveat"
+      ],
+      "statement": "Acknowledges that households in the selected flood-prone areas may already be partially adapted to flood risk, which could make the estimated effect a lower bound relative to less flood-experienced populations.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Section 4.1, Research Design",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "interpretation_caveat"
+      ],
+      "statement": "Caveats the flood-interaction coefficient as a lower bound on the effect for flood-affected households, because not every household within an activated branch actually suffered flood damage.",
+      "pages": [
+        13,
+        13
+      ],
+      "locator": "Section 4.1, ex post specification discussion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ],
+      "quote": "interaction effect is a lower bound on the impact"
+    },
+    {
+      "id": "o33",
+      "category": "limitation_stated",
+      "tags": [
+        "data_coverage",
+        "interpretation_caveat"
+      ],
+      "statement": "Caveats the double-flood robustness result by noting the first-year shock was not especially damaging, so the finding on repeated shocks may not generalize to more severe initial events.",
+      "pages": [
+        18,
+        18
+      ],
+      "locator": "Section 5.1, footnote 23",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_se",
+        "mean_of_dependent_reported",
+        "n_reported"
+      ],
+      "statement": "Uses a common table format across most result tables: outcome columns, a treatment coefficient with a clustered standard error in parentheses, a randomization-inference p-value row, the dependent-variable mean, and the observation count.",
+      "pages": [
+        14,
+        14
+      ],
+      "locator": "Table I format, repeated through Section 5",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "presentation_convention",
+      "tags": [
+        "coefficient_plot"
+      ],
+      "statement": "Presents credit-score heterogeneity as a multi-panel coefficient plot showing the treatment effect by credit-score decile across several outcomes side by side.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Figure 1",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "presentation_convention",
+      "tags": [
+        "appendix_tables_numbered_a"
+      ],
+      "statement": "Labels appendix items with an A- or B- prefix and directs readers to a separate, externally hosted companion document for their content rather than appending them to the published article.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section 1, roadmap paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ],
+      "quote": "See Lane (2023) for the Appendix"
+    },
+    {
+      "id": "o37",
+      "category": "replication_statement",
+      "tags": [
+        "data_restricted",
+        "replication_package_cited",
+        "data_access_procedure_described"
+      ],
+      "statement": "A publisher note states the replication package is hosted at a Zenodo DOI, that the authors were granted an exemption to withhold some restricted data, and that a synthetic dataset lets the code still run.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "End of article, journal data-availability note",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ],
+      "quote": "authors were granted an exemption to publish parts of their data"
+    },
+    {
+      "id": "o38",
+      "category": "replication_statement",
+      "tags": [
+        "code_public",
+        "data_access_procedure_described"
+      ],
+      "statement": "States that the journal's data editor checked the submitted code and data for the ability to reproduce all tables and figures, and where the non-exempted data allowed, checked for reproduction of the results, noting the synthetic data are not designed to match them.",
+      "pages": [
+        32,
+        32
+      ],
+      "locator": "End of article, journal data-availability note",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "Previews all three main results, adaptation-investment effects, absence of adverse spillovers, and MFI profitability, in the introduction, framed as a three-step description before the results section.",
+      "pages": [
+        3,
+        4
+      ],
+      "locator": "Section 1, Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "writing_structure",
+      "tags": [
+        "other:model_before_results"
+      ],
+      "statement": "Places a short theoretical model of household investment choice before the research-design and results sections, with a fuller structural model deferred to an appendix and used later for a calibration exercise.",
+      "pages": [
+        9,
+        9
+      ],
+      "locator": "Section 3.2, Theoretical Framework",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "writing_structure",
+      "tags": [
+        "main_result_first"
+      ],
+      "statement": "Organizes the results section into three ordered subsections that mirror the paper's three contributions, adaptation and outcomes, spillovers to ineligible households, and lender profitability, rather than grouping by robustness or outcome type.",
+      "pages": [
+        12,
+        26
+      ],
+      "locator": "Section 5, subsection headers 5.1-5.3",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "mechanism_evidence",
+      "tags": [
+        "intermediate_outcomes",
+        "suggestive_labelled"
+      ],
+      "statement": "Tests an intermediate outcome, days worked and earnings from agricultural day labor, as evidence for the employment channel behind the consumption spillover to ineligible households, and explicitly labels this evidence as suggestive.",
+      "pages": [
+        21,
+        24
+      ],
+      "locator": "Section 5.2, employment-channel discussion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism"
+      ],
+      "statement": "Uses the split between the treatment coefficient and the treatment-flood interaction coefficient as the main device for separating the investment-return channel from the additional-liquidity channel behind the ex post consumption effect.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section 5.1, Ex Post Outcomes discussion",
+      "basis": "stated",
+      "applies_to": [
+        "rct",
+        "panel_fe"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "Discusses generalizability by arguing similar products could be designed for other climate shocks such as droughts or cyclones and offered by other lenders, framed as a scalability argument rather than a formal external-validity test.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section 6, Conclusion, policy-perspective paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "external_validity",
+      "tags": [
+        "site_specific"
+      ],
+      "statement": "Notes that the results are unlikely to generalize to lenders or borrower pools lacking the repayment-history records needed to build the eligibility credit score used to target the loan.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section 6, Conclusion",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "preregistered",
+        "irb_stated"
+      ],
+      "statement": "Discloses an AEA RCT registry identification and institutional review board approval from the researcher's university in the acknowledgments footnote rather than in a dedicated ethics or preregistration section.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title page, acknowledgments footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "data_access",
+      "tags": [
+        "survey_collected",
+        "administrative"
+      ],
+      "statement": "Sources primary outcome data from a purpose-built household survey run through BRAC's field structure, complemented by BRAC's own administrative loan and repayment system for lender-side outcomes.",
+      "pages": [
+        12,
+        12
+      ],
+      "locator": "Section 4.2, Data",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "data_access",
+      "tags": [
+        "web_scraped",
+        "administrative"
+      ],
+      "statement": "Describes obtaining real-time flood information by scraping a government flood-forecasting agency's public website, combined with an in-person field visit to confirm flooding before a branch is treated as activated.",
+      "pages": [
+        10,
+        11
+      ],
+      "locator": "Section 4.1, Research Design",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Baseline equation is a linear regression of the outcome on a treatment indicator plus fixed effects; no other estimator named for the main tables.",
+      "card_shows": "Card records estimator ols, command reg, for spec s1.",
+      "status": "agree",
+      "pages": [
+        13,
+        13
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "States the baseline specification includes a district fixed effect (the stratification level) and a year fixed effect.",
+      "card_shows": "Card records fixed_effects district, year for spec s1.",
+      "status": "agree",
+      "pages": [
+        13,
+        13
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "States that standard errors are always clustered at the branch level and, separately, reports a randomization-inference p-value in every main table.",
+      "card_shows": "Card records se.type randomization_inference for spec s1, built from the ritest call; the conventional clustered standard error is not separately recorded as a distinct se type.",
+      "status": "agree",
+      "pages": [
+        13,
+        14
+      ],
+      "card_ref": "s1.se.type",
+      "note": "The card captures the randomization-inference layer the paper also reports, but does not separately record the conventional clustered SE that appears in the same table cells."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "States standard errors are clustered at the branch level, the unit of randomization.",
+      "card_shows": "Card records se.cluster_level as hchyid (the ritest cluster variable) with district used as the randomization-inference strata; the card does not state whether hchyid corresponds to the branch identifier.",
+      "status": "unknown",
+      "pages": [
+        13,
+        14
+      ],
+      "card_ref": "s1.se.cluster_level",
+      "note": "Could not confirm from the card or the read code excerpts whether hchyid is equivalent to the branch-level identifier the paper describes in its clustering statement."
+    },
+    {
+      "item": "controls",
+      "paper_says": "Baseline specification described as treatment plus district and year fixed effects only, with no additional controls in the main household-outcome tables.",
+      "card_shows": "Card records controls_summary as null for spec s1.",
+      "status": "agree",
+      "pages": [
+        13,
+        13
+      ],
+      "card_ref": "s1.controls_summary"
+    },
+    {
+      "item": "weights",
+      "paper_says": "No sample weights are mentioned for the baseline household-level specification; a separate re-weighting exercise is described only for one supplementary total-population calculation, not the main spec.",
+      "card_shows": "Card records weights as null for spec s1.",
+      "status": "agree",
+      "pages": [
+        13,
+        13
+      ],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "sample",
+      "paper_says": "States the main analysis compares eligible BRAC members across treatment and control branches, where control-branch eligibility is defined by the same credit-score rule as in treatment branches.",
+      "card_shows": "Card design d1 records the treatment as access to the Emergency Loan for eligible (type==1) borrowers in treatment branches, consistent with an eligible-only estimation sample.",
+      "status": "agree",
+      "pages": [
+        7,
+        12
+      ],
+      "card_ref": "d1.treatment"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "States explicitly that the comparison group is eligible clients in control branches, defined using the same credit-score threshold that determined eligibility in treatment branches.",
+      "card_shows": "Card leaves comparison_group null for spec s1.",
+      "status": "paper_only",
+      "pages": [
+        12,
+        12
+      ],
+      "card_ref": "s1.comparison_group"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Points to an appendix balance table and states in the main text that randomized branches are balanced on baseline observable characteristics.",
+      "card_shows": "Card records one diagnostic, x1, kind balance, status unknown, with a note describing an orthogonality-style balance test over baseline variables.",
+      "status": "agree",
+      "pages": [
+        11,
+        11
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "Describes several robustness checks in footnotes: an alternative gauge-only flood definition, checks for differential eligibility selection across years, and a double-flood-shock specification.",
+      "card_shows": "Card's robustness array is empty.",
+      "status": "paper_only",
+      "pages": [
+        11,
+        18
+      ],
+      "card_ref": "robustness"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Names nine main numbered tables (Table I-IX) and a multi-panel figure (Figure 1) in the main text, plus numerous lettered appendix tables and figures.",
+      "card_shows": "Card's outputs.tables and outputs.figures arrays are both empty.",
+      "status": "paper_only",
+      "pages": [
+        14,
+        27
+      ],
+      "card_ref": "outputs.tables"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "Names BRAC administrative loan and repayment records and a purpose-built household survey panel as the two primary data sources.",
+      "card_shows": "Card's data array lists baseline.csv, endline_1.csv, and endline_2.csv as survey files and em_loans.csv as an admin file, consistent with the paper's description.",
+      "status": "agree",
+      "pages": [
+        12,
+        12
+      ],
+      "card_ref": "data"
+    }
+  ],
+  "gaps": [
+    "No explicit justification in the main text for why randomization-inference p-values are reported alongside cluster-robust standard errors was found.",
+    "No explicit statistical power or minimum-detectable-effect calculation for the branch-level randomization was found in the main text.",
+    "No discussion of a multiple-testing adjustment across the many outcomes and subgroup checks was found.",
+    "The paper's own online appendix (Lane 2023) is hosted as a separate document and is not part of the extracted text, so appendix diagnostic and robustness table content could not be read directly, only the main text's pointers to it.",
+    "No pre-analysis plan document is cited beyond the AEA RCT registry identification, and no discussion distinguishing registered hypotheses from exploratory analyses was found."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        32
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the entire 32-page extract (introduction, context, product description, theoretical model, research design, data, all results subsections, conclusion, references, and the journal data-availability note) in full. The paper's own online appendix (cited as Lane (2023), hosted separately on SSRN) is not part of this extract; appendix tables/figures (A.x, B.x) referenced throughout are described only as the main text describes them, their content was not read."
+  }
+}

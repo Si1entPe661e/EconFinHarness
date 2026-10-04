@@ -208,12 +208,12 @@
     {
       "artid": "jpe_133_5_2",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/regression.json"
+      "list": "examples/exclusions/regression.json"
     },
     {
       "artid": "restud_2026_restud_rdag050",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/regression.json"
+      "list": "examples/exclusions/regression.json"
     }
   ],
   "denominators": {

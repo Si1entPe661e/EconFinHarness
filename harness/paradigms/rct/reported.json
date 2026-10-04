@@ -120,12 +120,12 @@
     {
       "artid": "aer_114_12_7",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/rct.json"
+      "list": "examples/exclusions/rct.json"
     },
     {
       "artid": "ecta_2026_ecta21180",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/rct.json"
+      "list": "examples/exclusions/rct.json"
     }
   ],
   "denominators": {

@@ -1,0 +1,670 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "jpe_2025_736209",
+  "journal": "JPE",
+  "year": 2025,
+  "doi": "10.1086/736209",
+  "source": {
+    "pdf_path": "Paper/PDF/jpe_2025_736209.pdf",
+    "pdf_sha256": "d10d22a1aa2f5a799f68781d05f84aaeac045d5a1986354ba9ee31b61a1bfdf5",
+    "text_path": "harness_build/papers/text/jpe_2025_736209.txt",
+    "text_sha256": "cc45eedbd5551622122bf89c0d5b0575252547872d50248ae6313f1f39241699",
+    "pages": 44
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T20:15:06Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/jpe_2025_736209.json",
+    "card_sha256": "3900951fcfe7b2dbe7170c7028804bbe4b711e1d75305f2368b4ce40d4394d1f"
+  },
+  "methods": ["rct", "regression", "structural_estimation", "other:double_lasso_control_selection"],
+  "structure": [
+    {"id": "sec1", "kind": "introduction", "title": "I. Introduction", "pages": [1, 7]},
+    {"id": "sec2", "kind": "background", "title": "II. Overview of Refugee Policies and Attitudes", "pages": [8, 8]},
+    {"id": "sec3", "kind": "design", "title": "III. Experimental Design", "pages": [9, 19]},
+    {"id": "sec4", "kind": "results", "title": "IV. Results", "pages": [19, 30]},
+    {"id": "sec5", "kind": "mechanisms", "title": "V. Mechanisms behind Changing Policy Views", "pages": [30, 37]},
+    {"id": "sec6", "kind": "conclusion", "title": "VI. Discussion", "pages": [38, 39]},
+    {"id": "sec7", "kind": "other", "title": "Data Availability", "pages": [39, 39]},
+    {"id": "sec8", "kind": "other", "title": "References", "pages": [39, 44]}
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": ["estimand_named", "design_variant_named"],
+      "statement": "Frames the study as a stratified multi-arm randomized controlled trial (five treatment arms plus a pure control) estimating intent-to-treat effects of each arm relative to control on policy-view and belief outcomes, stacking survey waves in one specification.",
+      "pages": [9, 14],
+      "locator": "Section III.D Randomization; Section III.E Empirical Strategy",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": ["threats_discussed", "design_variant_named"],
+      "statement": "Explicitly distinguishes intent-to-treat estimates that combine program and anticipation effects (first survey round, completed before intervention delivery finished) from later rounds completed after programs were finished, because of a COVID-19 pause partway through rollout.",
+      "pages": [13, 14],
+      "locator": "Section III.C, COVID-19 disruptions",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": ["randomization_described"],
+      "statement": "Describes randomization as stratified assignment to six conditions using the Stata command randtreat within the experimental sample, with mentor-mentee pairs formed by a greedy matching algorithm within gender-sector cells to minimize travel distance.",
+      "pages": [14, 14],
+      "locator": "Section III.D Randomization",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": ["identifying_assumption_explicit", "threats_discussed"],
+      "statement": "States that the design cannot separately identify a pure wealth effect of the unlabeled grant because recipients may implicitly associate it with the refugee-led implementer or because receiving aid may reduce resentment toward refugees independent of wealth.",
+      "pages": [5, 6],
+      "locator": "Section I Introduction",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": ["design_variant_named"],
+      "statement": "Presents the Kenya sample as a second, independently prespecified experiment run under different economic conditions and policy status quo, intended to test whether the Uganda findings replicate in a setting with lower baseline support for integration.",
+      "pages": [17, 18],
+      "locator": "Section III.G Study Design in Kenya",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "unit_of_observation_stated", "exclusions_justified"],
+      "statement": "Draws the Uganda sample from a census of tailor and salon owner-operators within 10 km of Kampala, restricted to owners no older than 40, with no more than five years of sector experience, conversational in one of three named languages, and excluding businesses with five or more employees or very high profits or capital.",
+      "pages": [9, 10],
+      "locator": "Section III.A Sample Selection",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": ["sample_size_reported_per_table"],
+      "statement": "Reports the resulting Uganda experimental sample size explicitly and compares its demographic composition (education, age, baseline policy support) against national averages to characterize external representativeness.",
+      "pages": [10, 10],
+      "locator": "Section III.A Sample Selection",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": ["exclusions_justified", "sample_size_reported_per_table"],
+      "statement": "Restricts the Kenya estimation sample to households surveyed on the first visit day within each village, justified as minimizing spillovers between the grant-only and labeled-grant arms, which reduces a larger sampled population to the reported analysis sample of households.",
+      "pages": [18, 18],
+      "locator": "Section III.G Study Design in Kenya",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": ["attrition_reported"],
+      "statement": "Reports round-by-round Uganda follow-up retention rates and the share surveyed at least once across four rounds, and shows via a joint significance test that being surveyed at least once does not differ significantly across treatment groups.",
+      "pages": [10, 11],
+      "locator": "Section III.B Data Collection Timeline",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o10",
+      "category": "sample_construction",
+      "tags": ["data_source_named", "matching_or_linkage_described"],
+      "statement": "Notes that the Kenya sample of villages and households was drawn from a separate, unrelated study on migration networks, meaning the sampling frame was not designed specifically for this experiment.",
+      "pages": [17, 17],
+      "locator": "Section III.G Study Design in Kenya",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": ["outcome_definition"],
+      "statement": "Converts Likert-scale and other categorical survey responses into binary outcome measures, with a stated rule of resolving neutral responses toward whichever binary category is smaller.",
+      "pages": [15, 15],
+      "locator": "Section III.E.2 Measurement and Multiple-Hypothesis Testing",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"],
+      "quote": "resolving neutrals toward the smaller group"
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": ["standardized_index"],
+      "statement": "Constructs domain summary indices as weighted averages of standardized component outcomes following an established index-construction method, with weights derived from the inverted covariance matrix of outcomes within each domain.",
+      "pages": [15, 15],
+      "locator": "Section III.E.2 Measurement and Multiple-Hypothesis Testing",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": ["winsorization", "deflated_or_real_terms"],
+      "statement": "Winsorizes monetary outcomes at the first and ninety-ninth percentiles within each survey round, codes them as zero for firms not currently operating, and expresses them in a fixed base-year currency.",
+      "pages": [15, 16],
+      "locator": "Section III.E.2 Measurement and Multiple-Hypothesis Testing",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": ["treatment_definition"],
+      "statement": "Defines each of the six treatment conditions precisely by delivery mechanics and content: an information-only script with a listening exercise, the same information paired with a labeled cash grant, mentorship by an experienced refugee or by a Ugandan business owner, an unlabeled cash grant, and a pure control.",
+      "pages": [11, 13],
+      "locator": "Section III.C Interventions",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": ["fe_listed_in_table"],
+      "statement": "States the main equation includes randomization-stratum fixed effects, survey-round fixed effects, a phone-survey-mode indicator, a linear survey-date control, and a baseline-outcome control with a missing-baseline indicator, with the control vector for each outcome chosen by a per-outcome double-lasso procedure.",
+      "pages": [14, 14],
+      "locator": "Equation (1), Section III.E.1",
+      "basis": "stated",
+      "applies_to": ["rct", "regression", "other:double_lasso_control_selection"]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": ["n_reported", "mean_of_dependent_reported"],
+      "statement": "Main results tables report observation counts beneath each column and list separate control-group mean rows for baseline and follow-up periods, alongside p-values from pairwise comparisons across treatment arms.",
+      "pages": [20, 21],
+      "locator": "Table 1",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": ["se_type_in_notes", "cluster_level_in_notes"],
+      "statement": "Table notes state that standard errors clustered at the enterprise level appear in parentheses, that bracketed values are two-sided p-values, and that outcomes not prespecified are flagged with a superscript symbol.",
+      "pages": [21, 21],
+      "locator": "Table 1 notes",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": ["baseline_then_variants"],
+      "statement": "The Kenya results table separates same-day immediate-impact estimates, which use randomization-inference p-values and village-clustered standard errors, from a later demand-free-bound panel that uses heteroskedasticity-robust standard errors, within one table structure.",
+      "pages": [25, 25],
+      "locator": "Table 2",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": ["cluster_at_unit_level"],
+      "statement": "States that standard errors in the main Uganda ANCOVA specification are clustered at the individual (enterprise) level, consistent with each respondent contributing repeated observations across stacked survey rounds.",
+      "pages": [14, 14],
+      "locator": "Section III.E.1 Estimating Equations",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": ["randomization_inference"],
+      "statement": "For Kenya same-day comparisons against the pure control, reports p-values from randomization inference permuting treatment assignment many times using a named Stata command, while pairwise comparisons between the two active arms (assigned at a finer level) use ordinary robust standard errors instead.",
+      "pages": [18, 25],
+      "locator": "Section III.G Study Design in Kenya; Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": ["multiple_testing_adjustment"],
+      "statement": "Computes sharpened q-values to control the false discovery rate within each prespecified outcome domain, and separately reports Westfall-Young stepdown-adjusted p-values for prespecified primary hypotheses in an appendix table, while flagging non-prespecified outcomes as using naive p-values.",
+      "pages": [15, 15],
+      "locator": "Section III.E.2 Measurement and Multiple-Hypothesis Testing",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o22",
+      "category": "inference_justification",
+      "tags": ["no_justification_found"],
+      "statement": "Beyond noting that respondents are observed repeatedly across waves, no extended discussion is given of why enterprise-level clustering (rather than an alternative level) is the appropriate choice for the Uganda specification.",
+      "pages": [14, 14],
+      "locator": "Section III.E.1 Estimating Equations",
+      "basis": "inferred",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": ["balance_table", "in_appendix"],
+      "statement": "Reports a joint orthogonality test of baseline covariates across treatment arms in an appendix table, stating how many of the baseline variables are statistically significant in the full randomized sample.",
+      "pages": [14, 14],
+      "locator": "Section III.D Randomization; appendix table",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": ["attrition_analysis", "in_appendix"],
+      "statement": "Repeats the balance check restricted to respondents surveyed at least once after baseline in a separate appendix table, to assess whether attrition introduced imbalance across arms.",
+      "pages": [14, 14],
+      "locator": "Section III.D Randomization; appendix table",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": ["attrition_analysis", "in_appendix"],
+      "statement": "Reports Lee bounds for each prespecified outcome domain in appendix tables to assess whether differential attrition could drive the main results, noting that the bounds are wide for many outcomes.",
+      "pages": [11, 11],
+      "locator": "Section III.B Data Collection Timeline",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": ["placebo_outcomes", "in_appendix"],
+      "statement": "Describes a placebo information campaign about an unrelated topic and a survey-based priming experiment, detailed in an appendix section, used as diagnostics against experimenter demand effects rather than as tests of the main identification strategy.",
+      "pages": [35, 36],
+      "locator": "Section V.B; Appendix section C.1",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "in_appendix"],
+      "statement": "States that main Uganda results are reproduced weighting observations by the inverse probability of retention, estimated by lasso logistic regression, as a check against differential attrition, with results reported in a set of appendix tables.",
+      "pages": [11, 11],
+      "locator": "Section III.B Data Collection Timeline; appendix tables",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": ["alt_sample", "in_appendix", "summarized_in_one_table"],
+      "statement": "Reports that impacts on policy views are similar when the sample is reweighted by entropy balancing to match education, age, and integration-support moments from a nationally representative survey, presented in a single appendix table.",
+      "pages": [21, 21],
+      "locator": "Section IV.A, footnote 17",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": ["in_appendix"],
+      "statement": "Robustness checks against experimenter-demand explanations (a placebo campaign, a priming experiment, and a future-assistance-expectation test) are summarized narratively in the main text as a set with a stated conclusion, rather than consolidated into one robustness table, with details deferred to an appendix subsection.",
+      "pages": [35, 36],
+      "locator": "Section V.B Other Potential Mechanisms",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o30",
+      "category": "robustness_reported",
+      "tags": ["alt_specification", "in_appendix"],
+      "statement": "Exploits random variation in the mentorship program's start date to test whether more in-person meetings produced more persistent policy-view changes, reporting in an appendix table that initial gains among early starters fade over time.",
+      "pages": [36, 36],
+      "locator": "Section V.B; Appendix section C.8",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": ["interaction"],
+      "statement": "Examines heterogeneity by baseline economic concerns, cultural concerns, and economic well-being through a specification that enters all three interacted dimensions jointly, reported in an appendix table, to assess which dimension predicts treatment effects most strongly while controlling for the others.",
+      "pages": [37, 37],
+      "locator": "Section V.C Economic versus Cultural Beliefs",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o32",
+      "category": "heterogeneity_reported",
+      "tags": ["split_sample"],
+      "statement": "In Kenya, splits the sample into terciles of subcounty-level baseline integration-support (a proxy, since no individual pretreatment measure of policy views exists there), because a household-level baseline outcome was not collected in that experiment.",
+      "pages": [26, 26],
+      "locator": "Section IV.B Support for Refugee Integration Policies in Kenya",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o33",
+      "category": "mechanism_evidence",
+      "tags": ["intermediate_outcomes", "suggestive_labelled"],
+      "statement": "Mechanism analysis relies on treatment effects on secondary or intermediate belief measures (knowledge of aid-sharing, trust in aid organizations, resource-resentment items) rather than a single decisive test, and the authors explicitly characterize this evidence as suggestive rather than definitive.",
+      "pages": [30, 30],
+      "locator": "Section V Mechanisms behind Changing Policy Views",
+      "basis": "stated",
+      "applies_to": ["rct"],
+      "quote": "suggestive rather than definitive"
+    },
+    {
+      "id": "o34",
+      "category": "mechanism_evidence",
+      "tags": ["model_guided", "in_appendix"],
+      "statement": "Builds a simple structural model, detailed in an appendix, that separates a wealth-effect channel from information and resource-resentment channels using treatment impacts on intermediate outcomes, and uses it to recover counterfactual treatment impacts net of the wealth channel.",
+      "pages": [33, 33],
+      "locator": "Section V.A, model description; Appendix D",
+      "basis": "stated",
+      "applies_to": ["structural_estimation", "rct"]
+    },
+    {
+      "id": "o35",
+      "category": "mechanism_evidence",
+      "tags": ["ruled_out_alternatives"],
+      "statement": "Systematically works through and reports evidence against several alternative explanations for the results (demand effects, contact with refugees, reciprocity to the implementer, personal-versus-group benefit framing, differential attrition, spillovers, altruism crowd-out, and mentorship dose) in a dedicated subsection.",
+      "pages": [34, 37],
+      "locator": "Section V.B Other Potential Mechanisms",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o36",
+      "category": "magnitude_interpretation",
+      "tags": ["relative_to_mean"],
+      "statement": "Reports treatment effects throughout as percentage-point changes relative to a stated control-group base rate for each outcome, rather than presenting coefficients without a reference level.",
+      "pages": [21, 21],
+      "locator": "Section IV.A Support for Refugee Integration Policies in Uganda",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o37",
+      "category": "magnitude_interpretation",
+      "tags": ["sd_units"],
+      "statement": "Interprets effects on the domain summary indices in standard-deviation units, using this common scale to compare magnitudes of different treatment arms and across the two country samples.",
+      "pages": [21, 25],
+      "locator": "Sections IV.A and IV.B",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o38",
+      "category": "magnitude_interpretation",
+      "tags": ["compared_to_literature", "back_of_envelope", "cost_benefit"],
+      "statement": "Computes and compares program cost per unit change in support for refugee hosting across treatment arms and across the two countries, and frames the discussion of aggregate magnitudes by connecting to related persuasion and immigration-attitude literatures.",
+      "pages": [22, 43],
+      "locator": "Section IV.A; Section VI Discussion",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o39",
+      "category": "limitation_stated",
+      "tags": ["identification_caveat"],
+      "statement": "Acknowledges as a limitation that the unlabeled-grant arm cannot cleanly isolate a pure wealth effect because of confounding implicit labeling and resource-resentment channels operating alongside it.",
+      "pages": [5, 6],
+      "locator": "Section I Introduction",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o40",
+      "category": "limitation_stated",
+      "tags": ["external_validity"],
+      "statement": "Flags that grant disbursement occurring around the COVID-19 pandemic in Uganda complicates generalizing effect sizes to more typical economic conditions, a point the authors say they return to later in the paper.",
+      "pages": [13, 13],
+      "locator": "Section III.C, COVID-19 disruptions",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": ["stars_used", "notes_state_se", "notes_state_sample"],
+      "statement": "Main tables use conventional significance stars, report standard errors in parentheses with p-values in brackets beneath coefficients, and table notes specify the unit of observation and estimation method used.",
+      "pages": [21, 21],
+      "locator": "Table 1 notes",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o42",
+      "category": "presentation_convention",
+      "tags": ["coefficient_plot"],
+      "statement": "Presents a figure plotting estimated treatment-impact coefficients on the policy-support index separately by survey round with confidence intervals, shading the calendar periods during which interventions were delivered.",
+      "pages": [24, 24],
+      "locator": "Figure 2",
+      "basis": "stated",
+      "applies_to": ["regression"]
+    },
+    {
+      "id": "o43",
+      "category": "presentation_convention",
+      "tags": ["summary_stats_table", "in_appendix", "appendix_tables_numbered_a"],
+      "statement": "Places the baseline summary-statistics table for the Uganda sample in an appendix (numbered with an A-prefix) rather than the main text, summarized narratively in the body instead.",
+      "pages": [16, 16],
+      "locator": "Section III.F Summary Statistics",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": ["results_previewed_in_intro", "contribution_paragraph"],
+      "statement": "The introduction previews the main quantitative comparisons across arms and the mechanism findings before the results section presents them, and closes with a labeled 'Related literature' paragraph sequence situating the paper's contributions against several literatures.",
+      "pages": [2, 7],
+      "locator": "Section I Introduction",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": ["mechanisms_after_main", "robustness_separate_section"],
+      "statement": "Structures the paper so that mechanism analysis and demand-effect or alternative-explanation checks follow the main treatment-effect results in a dedicated Section V, rather than being interleaved with the main results tables.",
+      "pages": [30, 37],
+      "locator": "Section V Mechanisms behind Changing Policy Views",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o46",
+      "category": "writing_structure",
+      "tags": ["appendix_heavy", "online_appendix_not_available"],
+      "statement": "Relies heavily on an online appendix (lettered tables A1 through E32, plus appendix sections B through E) for balance checks, robustness tables, program scripts, and the structural-model derivation, with only four numbered tables and two figures presented in the main text.",
+      "pages": [1, 44],
+      "locator": "Throughout the main text",
+      "basis": "inferred",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o47",
+      "category": "replication_statement",
+      "tags": ["code_public", "replication_package_cited"],
+      "statement": "A Data Availability statement at the end of the article states that code replicating the tables and figures is deposited in a named public repository with a DOI, citing the authors' own replication data record.",
+      "pages": [39, 39],
+      "locator": "Data Availability",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o48",
+      "category": "replication_statement",
+      "tags": ["software_named"],
+      "statement": "Names specific Stata packages used for estimation: a post-double-selection lasso package for control selection in the main regressions, and a randomization-inference package for the Kenya permutation-based p-values.",
+      "pages": [14, 25],
+      "locator": "Section III.E.1; Table 2 notes",
+      "basis": "stated",
+      "applies_to": ["rct", "regression"]
+    },
+    {
+      "id": "o49",
+      "category": "data_access",
+      "tags": ["survey_collected"],
+      "statement": "Outcome data are original survey data collected by the research team across a baseline and four follow-up rounds in Uganda and two rounds in Kenya, administered in Uganda by a data-collection firm kept organizationally distinct from the implementing nonprofit to limit demand effects.",
+      "pages": [10, 18],
+      "locator": "Sections III.B and III.G",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o50",
+      "category": "preregistration_or_ethics",
+      "tags": ["preregistered", "pap_deviations_reported"],
+      "statement": "States both experiments were registered in the AEA RCT Registry with cited registration numbers and pre-analysis plans, and notes explicitly that the body of the paper presents only a subset of the full prespecified set of outcomes, with the rest in an appendix.",
+      "pages": [2, 15],
+      "locator": "Front-matter footnote; Section III.E.2",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o51",
+      "category": "preregistration_or_ethics",
+      "tags": ["irb_stated"],
+      "statement": "A front-matter footnote lists Institutional Review Board approvals from five separate institutions and national bodies covering both the Uganda and comparable oversight for the study.",
+      "pages": [2, 2],
+      "locator": "Front-matter footnote",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    },
+    {
+      "id": "o52",
+      "category": "external_validity",
+      "tags": ["scaling_discussed", "site_specific"],
+      "statement": "Discusses how far the findings might generalize, positioning Uganda alongside other countries that already combine labor-market access with aid-sharing, and Kenya as representative of countries on the margin of adopting such policy bargains, while treating the Kenya results themselves as an out-of-sample replication check on the Uganda design.",
+      "pages": [41, 42],
+      "locator": "Section VI Discussion",
+      "basis": "stated",
+      "applies_to": ["rct"]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Main specification is an ANCOVA regression with baseline controls selected via a post-double-selection lasso procedure (Chernozhukov et al. 2018), implemented with the Stata package pdslasso.",
+      "card_shows": "Records estimator=lasso for the Uganda specifications (s1, s2) built with pdslasso in Tables1_3_4.do, matching the paper's stated estimation method.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s1.est; s2.est"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Equation (1) includes a randomization-stratum fixed effect and a survey-round fixed effect in the pooled Uganda specification.",
+      "card_shows": "s1 records fixed_effects=['i.strata'] only; s2 (line 73 of Tables1_3_4.do) records fixed_effects=['i.strata','i.wave'], matching the full stated specification.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s2.fe"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors in the main Uganda ANCOVA regressions are clustered at the individual (enterprise) level.",
+      "card_shows": "s1 and s2 record se=cluster on ent_id (enterprise id), consistent with the paper's stated clustering level.",
+      "status": "agree",
+      "pages": [14, 21],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "Kenya same-day comparisons against the pure control use randomization inference; comparisons between the labeled-grant and grant-only arms (assigned at the household level within villages) use Huber-White robust standard errors instead.",
+      "card_shows": "s3/s4 (Tables2_A7_A8_B5_C3.do) record se=cluster on village_id; s5/s6 in the same file record se=robust with no cluster variable, matching the paper's split between village-clustered and robust comparisons.",
+      "status": "agree",
+      "pages": [18, 25],
+      "card_ref": "s3.se; s5.se"
+    },
+    {
+      "item": "sample",
+      "paper_says": "The Kenya estimation sample is restricted to households surveyed on the first visit day per village, to avoid within-village spillovers between the two active arms.",
+      "card_shows": "The card's design and specification records for Kenya do not carry an explicit sample-restriction field describing this first-visit-day filter.",
+      "status": "paper_only",
+      "pages": [18, 18],
+      "card_ref": "d1"
+    },
+    {
+      "item": "weights",
+      "paper_says": "The main specifications in both countries are unweighted; inverse-probability-of-retention weighting is used only in a stated Uganda robustness check, not the main results.",
+      "card_shows": "All six recorded specifications (s1-s6) show weights=None, consistent with the main tables being unweighted.",
+      "status": "agree",
+      "pages": [11, 14],
+      "card_ref": "s1.weights"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Reports a joint orthogonality (balance) test of baseline covariates across treatment arms in an appendix table as part of the randomization description.",
+      "card_shows": "Diagnostic x1 (balance) is recorded as not_found_in_scope, meaning the code trace did not locate the balance-table-generating script among the files read.",
+      "status": "paper_only",
+      "pages": [14, 14],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Describes reweighting by inverse probability of retention and Lee bounds by outcome domain as attrition diagnostics, with results in appendix tables.",
+      "card_shows": "Diagnostic x2 (attrition) is recorded as unknown, i.e. the card does not confirm or deny an attrition-adjustment routine from the traced code.",
+      "status": "paper_only",
+      "pages": [11, 11],
+      "card_ref": "x2"
+    },
+    {
+      "item": "other",
+      "paper_says": "States that sharpened q-values control the false discovery rate within each outcome domain and that Westfall-Young stepdown p-values are reported for prespecified primary hypotheses in an appendix table.",
+      "card_shows": "Diagnostic x3 (multiple_testing) is recorded as unknown in the card.",
+      "status": "paper_only",
+      "pages": [15, 15],
+      "card_ref": "x3"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "The main text presents four numbered tables and two numbered figures, with most additional tables and figures (lettered A through E) deferred to an online appendix.",
+      "card_shows": "The card records tables=0 and figures=0, i.e. no table or figure identifiers were extracted from the traced code files.",
+      "status": "disagree",
+      "pages": [20, 29],
+      "card_ref": "tables; figures",
+      "note": "The card's zero counts reflect that its code trace did not identify table/figure-producing output statements in the files it read, not that the paper itself lacks tables and figures."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "A Data Availability statement cites a Harvard Dataverse replication package as the source of the code that produces the tables and figures.",
+      "card_shows": "The card records languages=['Stata'] and files_read=10, consistent with a Stata-based Dataverse replication package.",
+      "status": "agree",
+      "pages": [39, 39],
+      "card_ref": "root.languages; root.files_read"
+    },
+    {
+      "item": "controls",
+      "paper_says": "The control vector for each outcome includes the baseline value of that outcome, a missing-baseline indicator, and a broad candidate set of baseline covariates selected per outcome via double lasso.",
+      "card_shows": "The recorded pdslasso command lines for s1 and s2 include conditioning-variable lists (categorical, Likert, and continuous baseline variable groups) alongside the stratum and wave indicators, consistent with a broad lasso-selected control set.",
+      "status": "agree",
+      "pages": [14, 14],
+      "card_ref": "s1.spec_line; s2.spec_line"
+    }
+  ],
+  "gaps": [
+    "No extended discussion found of why enterprise/individual-level clustering (rather than an alternative level) is the appropriate choice for the Uganda specification beyond noting repeated observations per respondent.",
+    "No explicit power calculation or minimum-detectable-effect discussion appears in the main text; the preanalysis plan is cited but its power analysis, if any, is not reproduced.",
+    "The specific list of deviations from the prespecified analysis plan is not given in the main text beyond a general statement that only a subset of prespecified outcomes is presented; a full accounting is deferred to the appendix.",
+    "Uptake rates by treatment arm (stated as at least 79% in each arm) are referenced but the underlying uptake/compliance table is in the online appendix and not part of this extracted text.",
+    "No discussion of researcher degrees of freedom in choosing the double-lasso specification versus alternative model-selection approaches."
+  ],
+  "reading": {
+    "pages_read": [[1, 44]],
+    "coverage": "full",
+    "note": "Read the entire extracted text end to end: title, abstract, Sections I through VI, the Data Availability statement, and the reference list (pages 1-44). The paper's online appendices (lettered tables A1-E32 and appendix sections B-E), cited repeatedly for balance tables, robustness checks, program scripts, and the structural-model derivation, are a separate document not included in this text extraction; their content is recorded only as referenced by the main text."
+  }
+}

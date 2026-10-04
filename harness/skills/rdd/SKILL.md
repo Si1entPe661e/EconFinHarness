@@ -45,7 +45,7 @@ Use [checklist.md](checklist.md) as needed.
 
 ## Evidence
 
-Observed practice is generated into `harness/paradigms/rdd/observed.md`. The distillation set excludes the four held-out papers listed in `harness_build/evals/holdout/rdd.json` (aer_107_1_5, ecta_92_3_6, jpe_132_9_2, qje_140_1_11); they are reserved for evaluating this skill. At the time of writing the distillation set has 10 validated cards (ReStud 4, AER 3, JPE 1, QJE 1, RFS 1; all 10 with Stata code, 3 with R; coverage partial 9, minimal 1). Headline observations, each with artid and source-line pointers in `observed.md`:
+Observed practice is generated into `harness/paradigms/rdd/observed.md`. The distillation set excludes the four held-out papers listed in `examples/exclusions/rdd.json` (aer_107_1_5, ecta_92_3_6, jpe_132_9_2, qje_140_1_11); they are reserved for evaluating this skill. At the time of writing the distillation set has 10 validated cards (ReStud 4, AER 3, JPE 1, QJE 1, RFS 1; all 10 with Stata code, 3 with R; coverage partial 9, minimal 1). Headline observations, each with artid and source-line pointers in `observed.md`:
 
 - `rdrobust` is the estimation command in all 10 papers (estimators `local_polynomial_rd` 5, `local_linear_rd` 4); fuzzy designs through 2SLS commands appear once (`ivreghdfe`).
 - Fuzzy designs are recorded in 4 papers, a kink design in 1, normalised multiple cutoffs in 1; the variant is unknown in 4.

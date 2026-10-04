@@ -22,7 +22,7 @@ Verification: `verified_online` = DOI resolved through the Crossref API on 2026-
 | rdrobust R package (CRAN). DOI 10.32614/CRAN.package.rdrobust | software_doc | verified_online | Check the package version used by the analysis. |
 | aer_114_11_1 | corpus_card | verified_repo | rdrobust with normalised multiple cutoffs, clustered SEs, bandwidth selection and polynomial order recorded |
 | aer_110_2_5 | corpus_card | verified_repo | sharp and fuzzy RD (rdrobust and ivreghdfe), bandwidth sensitivity figure |
-| held out for evaluation (not used here): aer_107_1_5, ecta_92_3_6, jpe_132_9_2, qje_140_1_11 | corpus_card | verified_repo | see harness_build/evals/holdout/rdd.json |
+| held out for evaluation (not used here): aer_107_1_5, ecta_92_3_6, jpe_132_9_2, qje_140_1_11 | corpus_card | verified_repo | see examples/exclusions/rdd.json |
 | restud_2025_restud_rdae108 | corpus_card | verified_repo | rdrobust sharp and fuzzy calls, rddensity, first stage |
 | jpe_2026_740226 | corpus_card | verified_repo | rdrobust with bandwidth selection, density test, first stage |
 | harness/paradigms/rdd/observed.md | paradigm | verified_repo | generated observed practice with pointers |

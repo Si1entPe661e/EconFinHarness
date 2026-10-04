@@ -39,7 +39,7 @@ Generated 2026-09-09T01:06:38Z by fhb papers distill fhb-papers-0.1.0 from 24 pa
 | rfs_2026_rfs_hhaf079 | RFS | 2026 | full | yes | 2938d6c7b728 |
 | rfs_2026_rfs_hhaf081 | RFS | 2026 | full | yes | 34b87230ff18 |
 
-Excluded (paper-level hold-out `harness_build/evals/holdout/regression.json`, not used for this method's skill evidence): jpe_133_5_2, restud_2026_restud_rdag050. Their notes still count in `_all`.
+Excluded (paper-level hold-out `examples/exclusions/regression.json`, not used for this method's skill evidence): jpe_133_5_2, restud_2026_restud_rdag050. Their notes still count in `_all`.
 
 ## Practices by category and tag
 

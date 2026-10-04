@@ -1,0 +1,1035 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "aer_113_1_8",
+  "journal": "AER",
+  "year": 2023,
+  "doi": "10.1257/aer.20201860",
+  "source": {
+    "pdf_path": "Paper/PDF/aer_113_1_8.pdf",
+    "pdf_sha256": "c4d4534370116a5786e6e8357fc9cdfcade8eb2fae59a2c2273ad6acee0a5c57",
+    "text_path": "harness_build/papers/text/aer_113_1_8.txt",
+    "text_sha256": "0ac0f4de1db5db50293fb78f0a109b0579969b978c15a7bd458216da835fa384",
+    "pages": 25
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T19:55:05Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/aer_113_1_8.json",
+    "card_sha256": "5442c8409b3f9b3c500ac138bdd05dcb474549d36ab7db1af703fdbe7eb983c7"
+  },
+  "methods": [
+    "iv",
+    "other:instrument_validity_test"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "Introduction",
+      "pages": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "I. Background for Empirical Example",
+      "pages": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "design",
+      "title": "II. Econometric Framework",
+      "pages": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "design",
+      "title": "III. Testing Procedure (incl. A. Incorporating Covariates, B. Power and Finite-Sample Performance)",
+      "pages": [
+        9,
+        16
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "IV. Implications If the Test Rejects",
+      "pages": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "conclusion",
+      "title": "V. Conclusion",
+      "pages": [
+        23,
+        23
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "other",
+      "title": "References",
+      "pages": [
+        23,
+        25
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "design_variant_named"
+      ],
+      "statement": "The estimand is framed as a nonnegative-weighted average of individual treatment effects under the LATE framework, with the judge fixed effects design named as the leading application of a broader multi-instrument IV setting.",
+      "pages": [
+        6,
+        8
+      ],
+      "locator": "Section II, Condition 1 and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "identifying_assumption_explicit",
+        "instrument_exclusion_argued"
+      ],
+      "statement": "Identification is stated as three jointly required conditions: random assignment of individuals to judges, exclusion of judges from outcomes except through treatment, and monotonicity of each judge's effect on treatment status.",
+      "pages": [
+        6,
+        7
+      ],
+      "locator": "Section II, Condition 1 (LATE Instrumental Variables Validity)",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "The paper's stated purpose is to test, rather than assume, the exclusion and monotonicity threats that underlie judge fixed effects designs, motivated by the difficulty of verifying these assumptions with existing tools.",
+      "pages": [
+        1,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named"
+      ],
+      "statement": "The paper explicitly names and traces the 'judge fixed effects design' to Kling (2006) and situates it as a special case of designs using exogenous assignment to a decision-maker as an instrument for a binary treatment.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Introduction, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ],
+      "quote": "dubbed the “judge fixed effects” design"
+    },
+    {
+      "id": "o5",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "The empirical illustration uses felony case records provided by the New York State Division of Criminal Justice Services and the New York State Office of Court Administration, describing the extract as identical to that used in a prior published study.",
+      "pages": [
+        4,
+        5
+      ],
+      "locator": "Section I, Background for Empirical Example",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "sample_period_stated"
+      ],
+      "statement": "The sample covers defendants arrested and charged with a felony in New York City over a stated multi-year window in the 2009-2013 period.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Section I; Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "exclusions_justified"
+      ],
+      "statement": "Cases are dropped when bail-posting status, arraignment judge ID, or case outcome is unavailable, and the sample is further restricted to judges who presided over at least a minimum caseload, a threshold the paper links to the finite-sample size properties of its test established in simulations.",
+      "pages": [
+        5,
+        17
+      ],
+      "locator": "Table 2 notes; Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Summary statistics are reported separately for released, detained, and full-sample subgroups, with the number of unique judges and unique defendants also stated in the table notes.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Table 2 and notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "unit_of_observation_stated"
+      ],
+      "statement": "The unit of observation is the individual defendant/case, with the arraignment judge identifying the instrument-level grouping used throughout the design.",
+      "pages": [
+        4,
+        5
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Pretrial detention is defined as being remanded without bail or having a bail amount set but never posted, as stated in the summary statistics table notes.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Conviction, the outcome of interest, is defined as either pleading guilty or being convicted at trial.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Table 2 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "instrument_construction"
+      ],
+      "statement": "The instrument is a leave-out mean of a residualized detention measure computed within judge, where detention is first regressed on covariates and judge indicators before residualizing, chosen to match a prior published study's construction.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section I, paragraph preceding Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "other:covariate_partialling_described"
+      ],
+      "statement": "Two alternative ways of incorporating covariates into the test are described: partialling covariates out of outcome and treatment via linear regression before applying the test, or running the test separately within discrete covariate cells and averaging.",
+      "pages": [
+        9,
+        14
+      ],
+      "locator": "Section III, introductory paragraph and Section III.A",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "specification_reporting",
+      "tags": [
+        "fe_listed_in_table",
+        "se_type_in_notes",
+        "cluster_level_in_notes"
+      ],
+      "statement": "The main first-stage/second-stage table's notes list the fixed effects (year, month, day of week, arraignment location/shift), enumerate the covariate set, and state the standard error type and clustering level, all in prose rather than as table rows.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 3 and notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "other:single_specification_no_progression"
+      ],
+      "statement": "The main results table reports a single first-stage/second-stage specification rather than a progression of columns adding controls or fixed effects incrementally.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 3",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "other:no_n_or_r2_reported"
+      ],
+      "statement": "The main first-stage/second-stage table reports only coefficients and standard errors; it does not report the sample size, R-squared, or the dependent variable's mean in the table itself.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 3",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_assignment_level"
+      ],
+      "statement": "Standard errors in the main table are clustered at the judge level, the level at which the instrument (judge assignment) varies.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 3 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "The choice to cluster at the judge level is stated as a fact in the table notes without an accompanying discussion of why that level is appropriate, though it coincides with the unit of instrument assignment described earlier in the design.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 3 notes",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "other:stratified_bootstrap"
+      ],
+      "statement": "For the subgroup first-stage table, standard errors are instead computed by a bootstrap using random resampling stratified on judge (and, for subgroup columns, on the subgroup), rather than analytic clustering.",
+      "pages": [
+        21,
+        21
+      ],
+      "locator": "Table 5 notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "other:test_specific_asymptotic_critical_value"
+      ],
+      "statement": "Beyond conventional standard errors, the paper derives its own asymptotic critical value for the proposed exclusion/monotonicity test from order-statistics theory, distinct from the inference used for the regression coefficients.",
+      "pages": [
+        9,
+        10
+      ],
+      "locator": "Section III, Theorem 2 and critical value derivation",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "in_main_text"
+      ],
+      "statement": "A first-stage coefficient of judge severity on detention, with its standard error, is reported alongside the second-stage estimate in the main results table.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:custom_exclusion_monotonicity_test",
+        "in_main_text"
+      ],
+      "statement": "The paper's central diagnostic is its own nonparametric test of the exclusion and monotonicity assumptions, reported as a test statistic and p-value under four alternative maximum-treatment-effect bounds.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Table 4 and surrounding text",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:subgroup_first_stage_check",
+        "in_main_text"
+      ],
+      "statement": "As a plausibility check for the proposed average monotonicity condition, the first-stage coefficient is re-estimated within subsamples defined by crime type and defendant characteristics and checked for a consistent sign and statistical significance.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section IV; Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "online_appendix_not_available"
+      ],
+      "statement": "Finite-sample size and power simulations, including data-generating processes calibrated to the empirical application, are summarized narratively in the main text but reported in full only in the online Appendix, which is not part of the supplied text.",
+      "pages": [
+        16,
+        17
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:balance_test_referenced_not_shown"
+      ],
+      "statement": "The text notes that random assignment of the instrument can in principle be verified with usual balance tests, but no balance table for the empirical application is presented in the main text.",
+      "pages": [
+        7,
+        7
+      ],
+      "locator": "Section II, discussion after Condition 1",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "robustness_reported",
+      "tags": [
+        "sensitivity_bounds",
+        "in_main_text",
+        "summarized_in_one_table"
+      ],
+      "statement": "The exclusion/monotonicity test is reported under four alternative bounds on the maximum plausible treatment effect magnitude, showing how the test's rejection depends on how tight a bound is assumed.",
+      "pages": [
+        15,
+        16
+      ],
+      "locator": "Table 4",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_estimator",
+        "in_main_text"
+      ],
+      "statement": "The text notes as an aside that using the full set of judge indicators directly as excluded instruments in a simple two-stage least squares regression, instead of the leave-out residualized instrument, yields results described as nearly identical.",
+      "pages": [
+        6,
+        6
+      ],
+      "locator": "Section I, paragraph before Table 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_specification",
+        "online_appendix_not_available"
+      ],
+      "statement": "An alternative semiparametric version of the test that imposes more structure on the propensity-outcome relationship to increase power is presented only in the online Appendix.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "split_sample",
+        "mechanism_motivated"
+      ],
+      "statement": "The first-stage relationship is split by crime type (drug, violent) and by defendant subgroup (first-time offenders, White, Black defendants) to probe the plausibility of the paper's proposed weaker monotonicity condition rather than to characterize substantive treatment-effect heterogeneity.",
+      "pages": [
+        20,
+        21
+      ],
+      "locator": "Section IV; Table 5",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "mechanism_evidence",
+      "tags": [
+        "other:complier_characterization"
+      ],
+      "statement": "A reweighted summary statistics table characterizes which defendants receive high implicit weight in the instrumental-variables estimand, extending an existing weighting method for describing the population to which the estimate applies.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IV; Table 6",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "limitation_stated",
+      "tags": [
+        "power",
+        "identification_caveat"
+      ],
+      "statement": "The authors state that the test lacks power against certain knife-edge violations of monotonicity or exclusion where affected judges have offsetting effects, though they argue such violations are also less consequential for bias.",
+      "pages": [
+        16,
+        16
+      ],
+      "locator": "Section III.B",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "The paper states that a rejection of the test does not by itself indicate whether the exclusion restriction, the monotonicity assumption, or both are violated.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IV, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "limitation_stated",
+      "tags": [
+        "identification_caveat",
+        "interpretation_caveat"
+      ],
+      "statement": "The weaker average monotonicity and average exclusion conditions proposed as a fallback are stated to still constrain inference: they do not permit identifying marginal treatment effects across the full distribution of judge propensities the way the conventional assumptions would.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section IV, concluding paragraphs",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "presentation_convention",
+      "tags": [
+        "no_stars",
+        "notes_state_se"
+      ],
+      "statement": "Point estimates in the main and subgroup tables are shown with standard errors in parentheses beneath them and without significance stars.",
+      "pages": [
+        6,
+        21
+      ],
+      "locator": "Table 3; Table 5",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "summary_stats_table"
+      ],
+      "statement": "The summary statistics table's notes spell out the sample construction rules (arrest/charge window, exclusion criteria, minimum judge caseload) and the coding of the treatment and outcome variables in prose beneath the table.",
+      "pages": [
+        5,
+        5
+      ],
+      "locator": "Table 2 and notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot",
+        "other:schematic_illustration_figure"
+      ],
+      "statement": "Figures are used both schematically, to illustrate the logic of the proposed test with fictional judges, and empirically, plotting each judge's observed average outcome against estimated propensity with the fitted test function overlaid.",
+      "pages": [
+        10,
+        12
+      ],
+      "locator": "Figures 1, 2, and 3",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "replication_statement",
+      "tags": [
+        "replication_package_cited"
+      ],
+      "statement": "A replication data package is cited in the reference list with a named repository (an AEA data and code repository) and a DOI, following the journal's standard data-availability citation format.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "References list",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "data_access",
+      "tags": [
+        "administrative"
+      ],
+      "statement": "The underlying case-level data are administrative records obtained directly from two New York State agencies, with an acknowledgment disclaiming that the agencies are not liable for the data's use.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title-page footnote (acknowledgments)",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "writing_structure",
+      "tags": [
+        "contribution_paragraph",
+        "results_previewed_in_intro"
+      ],
+      "statement": "The introduction previews the paper's two contributions (the nonparametric validity test and the weaker average monotonicity/average exclusion conditions) and previews, in general terms, that the empirical application fails to reject under wide bounds but rejects under tighter ones.",
+      "pages": [
+        1,
+        4
+      ],
+      "locator": "Introduction",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "writing_structure",
+      "tags": [
+        "data_before_design"
+      ],
+      "statement": "The paper introduces the motivating empirical setting and data (Section I) before laying out the formal econometric framework and identifying conditions (Section II), reversing the more common design-then-data ordering.",
+      "pages": [
+        4,
+        6
+      ],
+      "locator": "Section I precedes Section II",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "writing_structure",
+      "tags": [
+        "other:extensions_after_main_test"
+      ],
+      "statement": "The paper's proposed relaxations of the identifying assumptions (average monotonicity, average exclusion) are presented as a distinct section following, and conditional on, the main testing procedure and its empirical application.",
+      "pages": [
+        17,
+        17
+      ],
+      "locator": "Section IV follows Section III",
+      "basis": "inferred",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "writing_structure",
+      "tags": [
+        "appendix_heavy",
+        "online_appendix_not_available"
+      ],
+      "statement": "The text repeatedly defers proofs, covariate-adjustment formulas, the semiparametric test extension, and all finite-sample simulation results to an online Appendix not included in the print article.",
+      "pages": [
+        8,
+        17
+      ],
+      "locator": "Multiple points across Sections II-III",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "The paper argues its testing framework generalizes beyond judge assignment to any setting using one or more instruments for a binary treatment, citing information-nudge experiments and multi-arm randomized trials as further examples.",
+      "pages": [
+        4,
+        4
+      ],
+      "locator": "Introduction, final paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "other:instrument_validity_test"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "external_validity",
+      "tags": [
+        "site_specific"
+      ],
+      "statement": "The pretrial detention application is explicitly framed as a single real-world illustration of the general test, drawn from one city's felony court system rather than as the paper's primary empirical contribution.",
+      "pages": [
+        1,
+        5
+      ],
+      "locator": "Abstract; Section I",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "First-stage regression of detention on the judge-severity instrument, followed by a second-stage two-stage least squares regression of conviction on instrumented detention (Table 3).",
+      "card_shows": "s1 records estimator hdfe_ols via areg (first stage); s2 records estimator 2sls via ivreg2 (second stage), both traced to the same fll_aer_replication.do lines used for Table 3.",
+      "status": "agree",
+      "pages": [
+        6,
+        6
+      ],
+      "card_ref": "s1.estimator, s2.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Table 3 notes state fixed effects for year, month, day of week, and location/shift of the arraignment.",
+      "card_shows": "s1.fixed_effects lists only ['ori_part']; the s1 formula_or_call snippet additionally includes i.larg_yr i.larg_mo i.larg_dow, which are not repeated in the fixed_effects field itself.",
+      "status": "agree",
+      "pages": [
+        6,
+        6
+      ],
+      "card_ref": "s1.fixed_effects",
+      "note": "The four FE categories the paper names are all present in the captured Stata call, but the card's fixed_effects field only itemizes the absorbed term (ori_part), not the included year/month/day-of-week dummies."
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Table 3 notes state standard errors are clustered at the judge level.",
+      "card_shows": "s1.se and s2.se both record type cluster with cluster_level ['judge'].",
+      "status": "agree",
+      "pages": [
+        6,
+        6
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Table 5's subgroup first-stage estimates use bootstrapped standard errors from resampling stratified on judge and subgroup, distinct from the clustered SEs in Table 3.",
+      "card_shows": "The card records only cluster-type SEs for specifications s1 and s2; no specification or SE record corresponds to the Table 5 subgroup regressions or a bootstrap SE type.",
+      "status": "paper_only",
+      "pages": [
+        21,
+        21
+      ],
+      "card_ref": "s1.se.type",
+      "note": "The card has no spec_id for the Table 5 by-subgroup first-stage regressions, so the bootstrap SE practice described in the paper is not represented in the card at all."
+    },
+    {
+      "item": "sample",
+      "paper_says": "Table 2 notes give a detailed sample definition: NYC felony arrests 2009-2013, dropped if bail status/judge ID/outcome unknown, restricted to judges with at least 50 arraignments, with counts of unique judges and defendants stated.",
+      "card_shows": "pipeline.sample_restrictions has one entry, description 'Full sample of cases arraigned in lower court', linked to specs s1 and s2, without the specific exclusion criteria or the judge-caseload threshold.",
+      "status": "agree",
+      "pages": [
+        5,
+        5
+      ],
+      "card_ref": "pipeline.sample_restrictions[0].description",
+      "note": "The card's restriction description is a coarse summary consistent with, but far less detailed than, the exclusion criteria and minimum-caseload rule stated in the paper's table notes."
+    },
+    {
+      "item": "controls",
+      "paper_says": "Table 3 notes list an extensive covariate set: indicators for sex, race/ethnicity categories, first-time offender status, most serious offense charge code, counts of prior felony/misdemeanor arrests and convictions, and number of counts in the case.",
+      "card_shows": "controls_summary is null for both s1 and s2; the captured formula_or_call snippets show only the fixed-effect terms (i.year, i.month, i.dow, ori_part) with no visible demographic or offense covariates.",
+      "status": "paper_only",
+      "pages": [
+        6,
+        6
+      ],
+      "card_ref": "s1.controls_summary",
+      "note": "The code excerpts the card drew from are truncated line ranges of the .do file, so the additional covariates the paper describes may exist in code the card reader did not capture; the card records this as unknown rather than absent."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Table 3 explicitly reports the first-stage coefficient of judge severity on detention with its standard error.",
+      "card_shows": "Diagnostic x1 (kind first_stage) has status 'unknown' with observation null and no evidence entries.",
+      "status": "paper_only",
+      "pages": [
+        6,
+        6
+      ],
+      "card_ref": "x1",
+      "note": "The card's first-stage diagnostic record was not resolved despite the paper visibly reporting a first-stage estimate in Table 3."
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "The paper's central diagnostic is the nonparametric exclusion/monotonicity test, reported in Table 4 as a test statistic and p-value under four treatment-effect bounds.",
+      "card_shows": "Diagnostic x2 (kind other:monotonicity_exclusion_test) has status 'observed' with observation 'call_present', linked to specs s1 and s2 and to the testjfe.ado call in the .do file.",
+      "status": "agree",
+      "pages": [
+        15,
+        16
+      ],
+      "card_ref": "x2"
+    },
+    {
+      "item": "robustness",
+      "paper_says": "The paper reports the K-bound sensitivity of the exclusion/monotonicity test (Table 4) and notes that a simple two-stage least squares specification with judge indicators produces nearly identical results to the leave-out instrument used in Table 3.",
+      "card_shows": "The card's top-level robustness array is empty.",
+      "status": "paper_only",
+      "pages": [
+        6,
+        16
+      ],
+      "card_ref": "robustness",
+      "note": "Neither the bound-sensitivity table nor the alternative-instrument-construction check described in the paper is represented as a robustness record in the card."
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Table 4 in the printed article varies the assumed maximum treatment-effect magnitude K across four columns (K = 1, 0.8, 0.6, 0.4).",
+      "card_shows": "Output table t3 is produced by an esttab of variables named test5/test10/test15/test20 to paper/NYCtests.tex; the recipe card's reading_notes describe testjfe as run 'with 5, 10, 15, 20 knots', i.e. varying spline knot count, not the K bound.",
+      "status": "unknown",
+      "pages": [
+        16,
+        16
+      ],
+      "card_ref": "outputs.tables[id=t3]",
+      "note": "It is unclear from the available text and code excerpt whether t3/NYCtests.tex corresponds to the printed Table 4 (which varies K) or to the semiparametric, knot-based extension the paper says is reported only in the online Appendix."
+    },
+    {
+      "item": "data_source",
+      "paper_says": "The data source is described as felony case records from the New York State Division of Criminal Justice Services (DCJS) and Office of Court Administration (OCA), identical to the extract used in a prior published study.",
+      "card_shows": "data[0].source_hint records 'DCJS and OCA data; Leslie & Pope (2018) extract', type 'admin', access 'unknown'.",
+      "status": "agree",
+      "pages": [
+        4,
+        5
+      ],
+      "card_ref": "data[0].source_hint"
+    }
+  ],
+  "gaps": [
+    "No software (Stata, MATLAB, or otherwise) is named anywhere in the main article text, even though the recipe card shows the underlying code is written in Stata and MATLAB.",
+    "No pre-registration, IRB approval, or ethics/consent statement appears anywhere in the article; the paper uses secondary administrative data and proposes a statistical test rather than running an experiment.",
+    "No balance table is reported for the empirical application, even though the text states that random assignment is directly testable via usual balance tests.",
+    "No explicit magnitude interpretation (relative to the outcome mean, in standard-deviation units, as an elasticity, or benchmarked against prior literature estimates) is given for the illustrative IV point estimate in Table 3.",
+    "No weak-instrument F-statistic or other standard first-stage-strength diagnostic is reported beyond the first-stage coefficient and its own standard error.",
+    "No explicit multiple-testing adjustment is discussed even though the exclusion/monotonicity test is reported across four different assumed bounds in Table 4.",
+    "The finite-sample size and power simulation results, and the semiparametric test extension, are stated to be reported only in the online Appendix, which was not part of the supplied text and so could not be read or recorded in detail."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        25
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full printed article (title through references), pages 1-25 of the extracted text; page 26 is a blank trailing page with no content. All formal derivations, proofs, the semiparametric extension, and the finite-sample simulation results are stated to be in the online Appendix, which is not part of the supplied text and was not read; every place the main text defers to it is flagged with the online_appendix_not_available tag."
+  }
+}

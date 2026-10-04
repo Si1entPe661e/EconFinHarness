@@ -13,10 +13,12 @@ EconFinHarness provides empirical research skills, method guides and selected re
 
 ## Repository layout
 
-- `harness/`: source skills, roles, composition guidance, methods, workflows and task prompts.
-- `harness_build/`: the lightweight CLI, reading skills and roles, accepted code cards and paper-practice notes.
-- `.agents/`, `.claude/`, `.codex/`: host configurations generated from source roles and skills. Refresh them with `python3 harness_build/cli/fh.py sync-adapters` after source changes.
+- `harness/`: source skills, roles, composition guidance, methods, workflows and task prompts, including the reading skills and roles.
+- `tools/`: the lightweight CLI for reading materials and synchronizing host configurations.
+- `examples/`: code cards, paper-practice notes and the existing exclusion lists used by method summaries.
+- `.agents/`, `.claude/`, `.codex/`: host configurations generated from source roles and skills. Refresh them with `python3 tools/fh.py sync-adapters` after source changes.
 - `Paper/`, when available locally: an optional research corpus excluded from public version control. A fresh clone does not include it.
+- `harness_build/`, when present locally: historical construction materials excluded from public version control and not required by the public tools.
 
 ## Editing and access
 

@@ -1,0 +1,1242 @@
+{
+  "schema_version": "paper-practice-note-v1",
+  "artid": "qje_139_3_7",
+  "journal": "QJE",
+  "year": 2024,
+  "doi": "10.1093/qje/qjae003",
+  "source": {
+    "pdf_path": "Paper/PDF/qje_139_3_7.pdf",
+    "pdf_sha256": "cd91e4fe8a91dcda1a3341b8397d920127b3108034f1bdf345f808c69b5a564f",
+    "text_path": "harness_build/papers/text/qje_139_3_7.txt",
+    "text_sha256": "2fc8b06099f43eaf2eaf8becab8a53b3fba19d4be7b59a98b93c3301bb823d17",
+    "pages": 56
+  },
+  "reader": {
+    "role": "empirical-analyst",
+    "model": "claude-sonnet (Agent tool)",
+    "prompt_version": "paper-practice-v1",
+    "generated_at": "2026-09-08T21:26:01Z"
+  },
+  "card_link": {
+    "path": "examples/code-cards/qje_139_3_7.json",
+    "card_sha256": "d21bc6ec9741e4be51df858c19cac5fb0426b0072ee26aecf1853e28730cf72b"
+  },
+  "methods": [
+    "rct",
+    "iv"
+  ],
+  "structure": [
+    {
+      "id": "sec1",
+      "kind": "introduction",
+      "title": "I. Introduction",
+      "pages": [
+        1,
+        7
+      ]
+    },
+    {
+      "id": "sec2",
+      "kind": "background",
+      "title": "II. Related Literature",
+      "pages": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "sec3",
+      "kind": "model",
+      "title": "III. Model",
+      "pages": [
+        10,
+        19
+      ]
+    },
+    {
+      "id": "sec4",
+      "kind": "background",
+      "title": "IV. Intervention",
+      "pages": [
+        19,
+        22
+      ]
+    },
+    {
+      "id": "sec5",
+      "kind": "design",
+      "title": "V. Experimental Design",
+      "pages": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "sec6",
+      "kind": "results",
+      "title": "VI.A Take-up Rates",
+      "pages": [
+        25,
+        27
+      ]
+    },
+    {
+      "id": "sec7",
+      "kind": "results",
+      "title": "VI.B Repayment and Profitability",
+      "pages": [
+        27,
+        36
+      ]
+    },
+    {
+      "id": "sec8",
+      "kind": "results",
+      "title": "VI.C Schooling Outcomes",
+      "pages": [
+        36,
+        39
+      ]
+    },
+    {
+      "id": "sec9",
+      "kind": "results",
+      "title": "VI.D Household Balance Sheet Outcomes and Resilience to Shocks",
+      "pages": [
+        39,
+        44
+      ]
+    },
+    {
+      "id": "sec10",
+      "kind": "mechanisms",
+      "title": "VII.A Alternative Explanations",
+      "pages": [
+        44,
+        45
+      ]
+    },
+    {
+      "id": "sec11",
+      "kind": "mechanisms",
+      "title": "VII.B Other Potential Roles for Digital Collateral",
+      "pages": [
+        45,
+        46
+      ]
+    },
+    {
+      "id": "sec12",
+      "kind": "other",
+      "title": "VII.C Welfare Implications",
+      "pages": [
+        46,
+        48
+      ]
+    },
+    {
+      "id": "sec13",
+      "kind": "conclusion",
+      "title": "VIII. Conclusion",
+      "pages": [
+        48,
+        50
+      ]
+    },
+    {
+      "id": "sec14",
+      "kind": "other",
+      "title": "Data Availability and References",
+      "pages": [
+        50,
+        54
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "o1",
+      "category": "design_statement",
+      "tags": [
+        "randomization_described",
+        "design_variant_named"
+      ],
+      "statement": "Describes randomizing customers who responded to a loan invitation into a control group and three treatment arms that vary whether the loan requires digital collateral and whether that requirement is disclosed before or after acceptance.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section V.A, Figure II",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o2",
+      "category": "design_statement",
+      "tags": [
+        "design_variant_named",
+        "compliers_described"
+      ],
+      "statement": "States that, following a named prior methodology, moral hazard is identified from the comparison between the fully secured arm and the surprise-unsecured arm, while selection is identified from the comparison between the surprise-unsecured arm and the disclosed-unsecured arm.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Section V.A",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ],
+      "quote": "allows us to separately identify moral hazard and selection"
+    },
+    {
+      "id": "o3",
+      "category": "design_statement",
+      "tags": [
+        "estimand_named",
+        "compliers_described"
+      ],
+      "statement": "Names the reported repayment and completion effects as local average treatment effects that instrument realized compliance with random treatment-group assignment, explicitly distinguishing this from an intent-to-treat estimate reported separately.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section VI.B, equation (5), Table I notes",
+      "basis": "stated",
+      "applies_to": [
+        "iv",
+        "rct"
+      ]
+    },
+    {
+      "id": "o4",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Discusses a specific threat to the moral hazard estimate: households anticipate eligibility for future loans conditional on timely repayment, which could bias the estimated moral hazard effect downward, and derives an analytical bound on the size of this bias.",
+      "pages": [
+        44,
+        45
+      ],
+      "locator": "Section VII.A",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o5",
+      "category": "design_statement",
+      "tags": [
+        "threats_discussed"
+      ],
+      "statement": "Considers and argues against an alternative interpretation in which lockout functions merely as a payment reminder rather than an incentive device, citing that all arms received identical reminder messages regardless of treatment status.",
+      "pages": [
+        44,
+        44
+      ],
+      "locator": "Section VII.A",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o6",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "unit_of_observation_stated"
+      ],
+      "statement": "Defines the sampling frame as prior customers who had fully repaid an earlier loan and had no outstanding school-fee loan, and describes an SMS invitation sent to this frame, with only those replying affirmatively entering the randomized sample.",
+      "pages": [
+        22,
+        22
+      ],
+      "locator": "Section V, opening paragraph",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o7",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named"
+      ],
+      "statement": "Benchmarks the study sample against a nationally representative household survey in an appendix table, noting that the lender's customers differ systematically from the rural population on gender, marital status, household size, employment sector, and region.",
+      "pages": [
+        22,
+        23
+      ],
+      "locator": "Section V; Online Appendix Table A.1",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o8",
+      "category": "sample_construction",
+      "tags": [
+        "sample_size_reported_per_table"
+      ],
+      "statement": "Reports a different analysis sample size in almost every main table, reflecting restrictions to particular treatment-arm pairs, loan-level versus household-level versus child-level units, and outcome-specific availability at endline.",
+      "pages": [
+        26,
+        43
+      ],
+      "locator": "Tables I through VII",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o9",
+      "category": "sample_construction",
+      "tags": [
+        "data_source_named",
+        "matching_or_linkage_described"
+      ],
+      "statement": "Combines lender administrative repayment and transaction records with an original baseline survey fielded to invited customers and an endline survey fielded roughly six months after loan disbursement.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section V.B",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o10",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Defines the primary repayment outcome as cumulative payments toward principal divided by total loan principal, and defines a binary completion indicator as whether that repayment ratio has reached one, presenting both as complementary measures.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section VI.B.1",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o11",
+      "category": "variable_construction",
+      "tags": [
+        "treatment_definition"
+      ],
+      "statement": "Constructs the endogenous regressor for the local-average-treatment-effect specifications as the share of days a household's loan was in compliance, instrumented by the randomly assigned treatment-group indicator.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "Section VI.B.1, equation (5) discussion",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o12",
+      "category": "variable_construction",
+      "tags": [
+        "standardized_index"
+      ],
+      "statement": "Builds a composite schooling index by standardizing enrollment, an inverted absence measure, and log expenditures against control-group moments and weighting them by the inverse of a control-group covariance matrix, following a named prior indexing method.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "Section VI.C; Table III notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o13",
+      "category": "variable_construction",
+      "tags": [
+        "winsorization",
+        "logs_or_ihs"
+      ],
+      "statement": "Winsorizes monetary outcomes such as school expenditures, asset purchases and sales, and borrowing at the 99th percentile, and log-transforms school expenditures while leaving the corresponding control-group mean in levels.",
+      "pages": [
+        37,
+        42
+      ],
+      "locator": "Table III, Table V, Table VI notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o14",
+      "category": "variable_construction",
+      "tags": [
+        "outcome_definition"
+      ],
+      "statement": "Constructs a profitability measure as the internal rate of return that sets the net present value of a loan's or portfolio's cash flows to zero, computed both at the individual-loan level and after sorting loans into terciles within treatment arm.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VI.B.2; Figure IV notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o15",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Reports the main repayment and completion results as single treatment-indicator regressions with no additional covariates, repeated at several fixed day horizons after loan origination rather than as a single pooled specification.",
+      "pages": [
+        27,
+        28
+      ],
+      "locator": "Section VI.B.1; Table I",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o16",
+      "category": "specification_reporting",
+      "tags": [
+        "mean_of_dependent_reported"
+      ],
+      "statement": "Includes an outcome control-group mean row alongside treatment coefficients in every main outcomes table, allowing readers to benchmark estimated effects against the untreated level of the dependent variable without restating it in text.",
+      "pages": [
+        28,
+        42
+      ],
+      "locator": "Table I through Table VII notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o17",
+      "category": "specification_reporting",
+      "tags": [
+        "baseline_then_variants"
+      ],
+      "statement": "Structures the schooling and balance-sheet tables with a pooled treatment row followed by separate rows for each of the three treatment arms, plus a reported p-value from a formal test of equality between the secured and unsecured arm coefficients.",
+      "pages": [
+        37,
+        42
+      ],
+      "locator": "Tables III through VI",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o18",
+      "category": "specification_reporting",
+      "tags": [
+        "se_type_in_notes",
+        "cluster_level_in_notes"
+      ],
+      "statement": "States standard errors in parentheses under every coefficient but specifies a cluster level in the table notes only for the child-level schooling table, where standard errors are clustered at the household level.",
+      "pages": [
+        28,
+        39
+      ],
+      "locator": "Table I notes; Table IV notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o19",
+      "category": "inference_justification",
+      "tags": [
+        "cluster_at_unit_level"
+      ],
+      "statement": "Justifies household-level clustering specifically for the child-level schooling table by noting that the unit of observation changes to individual children, who are not independent within the same household.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "Section VI.C; Table IV notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o20",
+      "category": "inference_justification",
+      "tags": [
+        "no_justification_found"
+      ],
+      "statement": "Gives no explicit statement of the standard-error type or clustering rationale for the loan-level repayment, completion, and profitability specifications, where the unit of observation is the loan or household and no clustering is described.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Table I notes",
+      "basis": "inferred",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o21",
+      "category": "inference_justification",
+      "tags": [
+        "multiple_testing_adjustment"
+      ],
+      "statement": "Motivates the inverse-covariance-weighted schooling index partly as a way of summarizing several correlated outcomes into a single test, functioning as an implicit response to concerns about testing multiple related schooling measures.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "Section VI.C",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o22",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "Reports baseline balance across treatment arms in appendix tables and summarizes the result in a footnote using both the count of individually significant differences and a joint multivariate test across all baseline variables.",
+      "pages": [
+        23,
+        23
+      ],
+      "locator": "footnote 25; Online Appendix Tables A.2-A.5",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o23",
+      "category": "diagnostic_reported",
+      "tags": [
+        "other:compliance_orthogonality",
+        "in_appendix"
+      ],
+      "statement": "Reports in an appendix table that loan noncompliance is uncorrelated with treatment-group assignment and orthogonal to a range of baseline socioeconomic characteristics, supporting the validity of the instrument used for the LATE specifications.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "footnote 28; Online Appendix Table A.7",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o24",
+      "category": "diagnostic_reported",
+      "tags": [
+        "balance_table",
+        "in_appendix"
+      ],
+      "statement": "Checks in an appendix table whether households that took up the loan differ in baseline characteristics across treatment arms, reporting that most characteristics are individually and jointly indistinguishable across groups among takers.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section VI.A; Online Appendix Table A.6",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o25",
+      "category": "diagnostic_reported",
+      "tags": [
+        "first_stage_table",
+        "in_appendix",
+        "online_appendix_not_available"
+      ],
+      "statement": "Points readers to appendix tables for compliance detail and intent-to-treat estimates underlying the LATE specifications rather than reproducing first-stage or ITT results in the main text tables.",
+      "pages": [
+        27,
+        27
+      ],
+      "locator": "footnote 28; Online Appendix Tables A.8-A.10",
+      "basis": "stated",
+      "applies_to": [
+        "iv"
+      ]
+    },
+    {
+      "id": "o26",
+      "category": "diagnostic_reported",
+      "tags": [
+        "attrition_analysis"
+      ],
+      "statement": "Describes a two-stage take-up process in which some households in the surprise-unsecured arm learned of the surprise before finalizing their deposit, and addresses this as a form of measurement contamination with a described robustness subsample.",
+      "pages": [
+        24,
+        25
+      ],
+      "locator": "Section V.B",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o27",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Reports a robustness check restricting the surprise-unsecured arm to households that completed their deposit before field staff visited them, addressing possible contamination from premature disclosure of the surprise, with results in an appendix table.",
+      "pages": [
+        35,
+        35
+      ],
+      "locator": "Section VI.B.3; Online Appendix Table A.12",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o28",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_appendix"
+      ],
+      "statement": "Reports a robustness specification that includes households without school-aged children by assigning boundary values to the schooling outcomes, showing the coefficient pattern is similar though noisier than in the restricted sample.",
+      "pages": [
+        39,
+        39
+      ],
+      "locator": "footnote 34; Online Appendix Table A.14",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o29",
+      "category": "robustness_reported",
+      "tags": [
+        "alt_sample",
+        "in_main_text"
+      ],
+      "statement": "Reports profitability results separately for the full sample and for a subsample restricted to loans with perfect compliance, presenting both figures in the main text as a check on how partial compliance affects the profitability estimate.",
+      "pages": [
+        29,
+        29
+      ],
+      "locator": "Section VI.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o30",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "mechanism_motivated"
+      ],
+      "statement": "Reports treatment effects interacted with an indicator for above-median risk based on repayment history on the customer's earlier loan, motivated by the model's prediction that continuation value and hence moral hazard should vary with prior repayment behavior.",
+      "pages": [
+        30,
+        32
+      ],
+      "locator": "Section VI.B.3; Table II",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o31",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction",
+        "mechanism_motivated"
+      ],
+      "statement": "Reports take-up and repayment effects split by a survey-elicited willingness-to-pay measure for continued device access, grouped into three categories, motivated by the model's prediction that higher device values induce more positive selection into secured loans.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Section VI.B.3; Figure VI",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o32",
+      "category": "heterogeneity_reported",
+      "tags": [
+        "interaction"
+      ],
+      "statement": "Reports schooling outcomes separately by child gender with a formal test of equality between the male and female coefficients, describing the split as showing similar overall magnitudes despite some difference in the enrollment coefficient.",
+      "pages": [
+        38,
+        39
+      ],
+      "locator": "Section VI.C; Table IV",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o33",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "relative_to_mean",
+        "back_of_envelope"
+      ],
+      "statement": "Rescales the pooled intent-to-treat enrollment coefficient by the share of households that took up the loan to obtain an implied effect for compliers, then reframes that effect as a share reduction in the control group's rate of non-enrollment.",
+      "pages": [
+        35,
+        36
+      ],
+      "locator": "Section VI.C",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o34",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "sd_units"
+      ],
+      "statement": "Interprets the composite schooling index effect in units of the control group's standard deviation rather than in the index's own arbitrary scale, following the cited indexing methodology.",
+      "pages": [
+        38,
+        38
+      ],
+      "locator": "Section VI.C",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o35",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "back_of_envelope"
+      ],
+      "statement": "Cross-checks the estimated increase in household borrowing against the increase in school expenditures reported earlier, noting the two point estimates lie within one standard error of each other as an informal consistency check.",
+      "pages": [
+        40,
+        40
+      ],
+      "locator": "Section VI.D",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o36",
+      "category": "magnitude_interpretation",
+      "tags": [
+        "compared_to_literature"
+      ],
+      "statement": "Situates the estimated take-up differential between secured and unsecured offers against two other collateral-requirement studies in low- and middle-income settings, discussing both similarity in take-up patterns and contrast in repayment mechanisms.",
+      "pages": [
+        26,
+        26
+      ],
+      "locator": "Section VI.A",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o37",
+      "category": "limitation_stated",
+      "tags": [
+        "external_validity",
+        "interpretation_caveat"
+      ],
+      "statement": "States that the relatively low profitability found for secured loans partly reflects that eligibility criteria were relaxed and loan sizes enlarged for the purposes of running the experiment relative to the lender's normal business practice.",
+      "pages": [
+        29,
+        30
+      ],
+      "locator": "Section VI.B.2",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o38",
+      "category": "limitation_stated",
+      "tags": [
+        "interpretation_caveat"
+      ],
+      "statement": "States that fully quantifying the welfare effects of digitally secured lending would require additional structure on household preferences and returns to education that is beyond the scope of the paper, and calls for structural follow-up work.",
+      "pages": [
+        47,
+        47
+      ],
+      "locator": "Section VII.C",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o39",
+      "category": "limitation_stated",
+      "tags": [
+        "measurement",
+        "data_coverage"
+      ],
+      "statement": "Notes that household consumption was not directly collected, so any inferred reduction in consumption from taking the loan is deduced indirectly from balance-sheet and device-usage patterns rather than measured.",
+      "pages": [
+        47,
+        47
+      ],
+      "locator": "Section VII.C",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o40",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot"
+      ],
+      "statement": "Presents repayment and completion dynamics in paneled figures that decompose the total treatment effect into a moral-hazard component and a selection component plotted separately alongside the raw time paths by arm.",
+      "pages": [
+        26,
+        27
+      ],
+      "locator": "Figure III and notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o41",
+      "category": "presentation_convention",
+      "tags": [
+        "stars_used"
+      ],
+      "statement": "Applies a uniform significance-star convention at three thresholds across every regression table in the paper, stated once in each table's notes rather than in a single global legend.",
+      "pages": [
+        28,
+        28
+      ],
+      "locator": "Table I notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o42",
+      "category": "presentation_convention",
+      "tags": [
+        "notes_state_sample",
+        "notes_state_se"
+      ],
+      "statement": "Writes detailed table notes for each main table that restate the outcome definition, the sample restriction, any winsorization or transformation applied, and the standard-error convention used in that specific table.",
+      "pages": [
+        28,
+        42
+      ],
+      "locator": "Table notes throughout Section VI",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o43",
+      "category": "presentation_convention",
+      "tags": [
+        "raw_data_plot"
+      ],
+      "statement": "Plots the full cumulative distribution of loan-level internal rates of return by treatment arm, with bootstrapped confidence intervals, rather than reporting only mean or tercile-level profitability figures.",
+      "pages": [
+        30,
+        30
+      ],
+      "locator": "Figure V and notes",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o44",
+      "category": "writing_structure",
+      "tags": [
+        "other:model_precedes_design"
+      ],
+      "statement": "Places a full theoretical model before the description of the experimental design and results, and includes a dedicated subsection that explicitly maps the model's parameters and comparative statics onto the experiment's treatment arms.",
+      "pages": [
+        17,
+        19
+      ],
+      "locator": "Section III.D",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o45",
+      "category": "writing_structure",
+      "tags": [
+        "results_previewed_in_intro"
+      ],
+      "statement": "Previews all four categories of experimental results, take-up, repayment and profitability, schooling outcomes, and balance-sheet outcomes, in the introduction before the results are presented in the body of the paper.",
+      "pages": [
+        3,
+        6
+      ],
+      "locator": "Section I",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o46",
+      "category": "writing_structure",
+      "tags": [
+        "mechanisms_after_main"
+      ],
+      "statement": "Organizes a discussion section into separate subsections on alternative explanations, other theoretical roles for the contract, and welfare implications, all placed after the main results rather than interleaved with them.",
+      "pages": [
+        44,
+        48
+      ],
+      "locator": "Section VII",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o47",
+      "category": "replication_statement",
+      "tags": [
+        "data_public",
+        "replication_package_cited",
+        "data_access_procedure_described"
+      ],
+      "statement": "States in a dedicated data-availability section that the underlying data are posted publicly on a named data repository with a citable DOI, distinct from the article's own DOI.",
+      "pages": [
+        50,
+        50
+      ],
+      "locator": "Data Availability section",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o48",
+      "category": "data_access",
+      "tags": [
+        "administrative",
+        "survey_collected"
+      ],
+      "statement": "Describes combining lender-held administrative transaction and repayment records with an original baseline and endline household survey fielded by the research team's own field staff, rather than relying on a single data source.",
+      "pages": [
+        24,
+        24
+      ],
+      "locator": "Section V.B",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o49",
+      "category": "preregistration_or_ethics",
+      "tags": [
+        "preregistered",
+        "irb_stated"
+      ],
+      "statement": "States on the title page that the experiment is registered in a public trial registry under a specific code and that the protocol received institutional review board approval, also disclosing that the authors have no financial interest in the results.",
+      "pages": [
+        1,
+        1
+      ],
+      "locator": "Title-page footnote",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o50",
+      "category": "external_validity",
+      "tags": [
+        "scaling_discussed"
+      ],
+      "statement": "Discusses potential scaling of the lockout-based contract beyond the studied solar-device loan to other lockable durable goods and to utility services such as electricity, telecommunications, and water that can remotely disable access.",
+      "pages": [
+        48,
+        49
+      ],
+      "locator": "Section VIII",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o51",
+      "category": "external_validity",
+      "tags": [
+        "site_specific",
+        "compliers_vs_population"
+      ],
+      "statement": "Flags that because customers must already be in good standing with the lender to be eligible for the studied loan, the sample likely understates the importance of selection relative to a market for first-time borrowers.",
+      "pages": [
+        23,
+        24
+      ],
+      "locator": "Section V.A",
+      "basis": "stated",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o52",
+      "category": "mechanism_evidence",
+      "tags": [
+        "heterogeneity_as_mechanism",
+        "model_guided"
+      ],
+      "statement": "Uses the willingness-to-pay heterogeneity result as corroborating evidence for the model's device-value channel, treating the pattern as a cross-check against the risk-based heterogeneity result derived from prior repayment history.",
+      "pages": [
+        33,
+        34
+      ],
+      "locator": "Section VI.B.3",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    },
+    {
+      "id": "o53",
+      "category": "mechanism_evidence",
+      "tags": [
+        "suggestive_labelled",
+        "ruled_out_alternatives"
+      ],
+      "statement": "Uses the absence of adverse effects on balance sheets and on self-reported financial shocks to argue against a channel in which high-interest borrowing worsens household financial distress, treating this as suggestive rather than a direct test.",
+      "pages": [
+        43,
+        47
+      ],
+      "locator": "Section VI.D; Section VII.C",
+      "basis": "inferred",
+      "applies_to": [
+        "rct"
+      ]
+    }
+  ],
+  "concordance": [
+    {
+      "item": "estimator",
+      "paper_says": "Repayment and completion effects are LATEs obtained by instrumenting realized loan compliance with random treatment-group assignment (2SLS); an OLS ITT specification is also used.",
+      "card_shows": "Specs s1-s3, s5 record ivregress 2sls with locked_share_wupg/completeloan instrumented by treatment; spec s4 records a plain regress of the outcome on treatment.",
+      "status": "agree",
+      "pages": [
+        27,
+        28
+      ],
+      "card_ref": "s1.estimator"
+    },
+    {
+      "item": "fixed_effects",
+      "paper_says": "Main repayment, completion, schooling, and balance-sheet regressions are simple treatment-indicator comparisons with no fixed effects mentioned.",
+      "card_shows": "fixed_effects is null for all recorded specifications (s1-s6).",
+      "status": "paper_only",
+      "pages": [
+        27,
+        28
+      ],
+      "card_ref": "s1.fixed_effects"
+    },
+    {
+      "item": "cluster_level",
+      "paper_says": "Standard errors are clustered at the household level only for the child-level schooling table; no cluster level is stated for loan- or household-level tables.",
+      "card_shows": "se.cluster_level is null for every recorded specification.",
+      "status": "paper_only",
+      "pages": [
+        28,
+        39
+      ],
+      "card_ref": "s1.se.cluster_level"
+    },
+    {
+      "item": "se_type",
+      "paper_says": "Table notes state only that standard errors appear in parentheses; no SE type (robust, analytic, bootstrap) is named except that IRR confidence intervals are bootstrapped.",
+      "card_shows": "se.type is null for every recorded specification.",
+      "status": "agree",
+      "pages": [
+        28,
+        30
+      ],
+      "card_ref": "s1.se.type",
+      "note": "Both paper and card effectively show the SE type as unspecified for the main regression tables."
+    },
+    {
+      "item": "sample",
+      "paper_says": "States sample restrictions in words for each table (loans by arm pair, households with at least one school-aged child, etc.) with an N row rather than a formal sample field.",
+      "card_shows": "sample is null for every recorded specification.",
+      "status": "paper_only",
+      "pages": [
+        27,
+        42
+      ],
+      "card_ref": "s1.sample"
+    },
+    {
+      "item": "comparison_group",
+      "paper_says": "Explicitly names three pairwise comparison groups: Secured vs Unsecured for the total effect, Surprise Unsecured vs Unsecured for selection, and Secured vs Surprise Unsecured for moral hazard.",
+      "card_shows": "comparison_group is null for every recorded specification, and the design record's treatment field is also null.",
+      "status": "paper_only",
+      "pages": [
+        23,
+        24
+      ],
+      "card_ref": "s1.comparison_group"
+    },
+    {
+      "item": "controls",
+      "paper_says": "Main repayment/completion specifications include no controls beyond the treatment indicator; the schooling specification adds an interaction with number of school-aged children as a control.",
+      "card_shows": "controls_summary is null for every recorded specification.",
+      "status": "paper_only",
+      "pages": [
+        27,
+        37
+      ],
+      "card_ref": "s1.controls_summary"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "References first-stage and intent-to-treat detail as located in named online appendix tables rather than reproducing them in the main text.",
+      "card_shows": "Diagnostic x1 (first_stage) has status unknown, based only on the ivregress `first` option appearing in code, not a confirmed reported statistic.",
+      "status": "unknown",
+      "pages": [
+        27,
+        27
+      ],
+      "card_ref": "x1"
+    },
+    {
+      "item": "diagnostic",
+      "paper_says": "Reports a baseline balance check across arms in appendix tables with a footnote summarizing the count of significant differences and a joint multivariate test.",
+      "card_shows": "Diagnostic x2 (balance) has status not_found_in_scope, noting the relevant balance script was not read in depth.",
+      "status": "paper_only",
+      "pages": [
+        23,
+        23
+      ],
+      "card_ref": "x2"
+    },
+    {
+      "item": "data_source",
+      "paper_says": "States the replication data are posted on Harvard Dataverse under a specific DOI in a dedicated Data Availability section.",
+      "card_shows": "Data entries record local file names (for example fenix_repay_extend_07172020_rep.dta) with access and source_hint left unknown.",
+      "status": "paper_only",
+      "pages": [
+        50,
+        50
+      ],
+      "card_ref": "data[0].source_hint"
+    },
+    {
+      "item": "outputs",
+      "paper_says": "Presents eight numbered main-text tables and six numbered main-text figures across the results and discussion sections.",
+      "card_shows": "outputs.tables records a single table entry (t1, an esttab call) and outputs.figures is empty, reflecting the partial code coverage noted by the extractor.",
+      "status": "paper_only",
+      "pages": [
+        28,
+        43
+      ],
+      "card_ref": "outputs.tables",
+      "note": "Card coverage is explicitly partial (5 of about 40 code files read), so the undercount reflects extraction scope rather than a disagreement about what the code produces."
+    },
+    {
+      "item": "weights",
+      "paper_says": "No mention of regression weights in any main specification.",
+      "card_shows": "weights is null for every recorded specification.",
+      "status": "unknown",
+      "pages": [
+        27,
+        28
+      ],
+      "card_ref": "s1.weights",
+      "note": "Neither source states a weighting scheme, so absence cannot be distinguished from unknown in either source."
+    }
+  ],
+  "gaps": [
+    "No explicit statement of the standard-error type (analytic, robust, or otherwise) for the loan-level repayment, completion, and profitability tables.",
+    "No first-stage F-statistic or weak-instrument diagnostic is reported in the main text for the LATE specifications; the paper points to online appendix tables that are outside the read scope.",
+    "No pre-analysis plan is cited; the paper mentions trial registration and IRB approval but does not state whether outcomes or specifications were pre-specified in a pre-analysis plan.",
+    "No explicit discussion of multiple-testing correction across the several schooling and balance-sheet outcome families beyond the single composite index and the pairwise equality tests already recorded."
+  ],
+  "reading": {
+    "pages_read": [
+      [
+        1,
+        56
+      ]
+    ],
+    "coverage": "full",
+    "note": "Read the full extracted text end to end: the title page through the reference list (pages 1-54, corresponding to printed pages 1713-1766), including the theoretical model, experimental design, all results and discussion subsections, and the data-availability statement, plus the trailing publisher advertisement and blank page (pages 55-56), which carry no article content. This PDF/text extraction does not include the paper's Online Appendix; all appendix material is known only through in-text and footnote references to it, which are recorded as such (tag online_appendix_not_available where relevant)."
+  }
+}

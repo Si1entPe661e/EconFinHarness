@@ -104,22 +104,22 @@
     {
       "artid": "aer_107_1_5",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/rdd.json"
+      "list": "examples/exclusions/rdd.json"
     },
     {
       "artid": "ecta_92_3_6",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/rdd.json"
+      "list": "examples/exclusions/rdd.json"
     },
     {
       "artid": "jpe_132_9_2",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/rdd.json"
+      "list": "examples/exclusions/rdd.json"
     },
     {
       "artid": "qje_140_1_11",
       "reason": "holdout",
-      "list": "harness_build/evals/holdout/rdd.json"
+      "list": "examples/exclusions/rdd.json"
     }
   ],
   "denominators": {

@@ -6,7 +6,7 @@ model: inherit
 effort: low
 ---
 
-<!-- Generated from harness_build/agents/recipe-card-writer.md by fh sync-adapters. Edit the source. -->
+<!-- Generated from harness/agents/recipe-card-writer.md by fh sync-adapters. Edit the source. -->
 
 Follow AGENTS.md.
 
