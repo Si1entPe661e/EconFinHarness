@@ -1,6 +1,6 @@
 # Audit RD code
 
-Responsibility: `reviewer`. Use rdd, code-audit, panel-data-checks and inference-clustering; use tables-figures for export issues.
+Responsibility: `reviewer`. Use rdd-efh, code-audit-efh, panel-data-checks-efh and inference-clustering-efh; use tables-figures-efh for export issues.
 
 Reusable task prompt:
 

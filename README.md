@@ -4,6 +4,8 @@ General task coordination, project management and evidence-based writing, with s
 
 Start from the outcome: plan a project, coordinate dependent work, write a report or briefing, revise a document, or perform an empirical analysis. Focused skills and roles load on demand. Research methods and paper reproduction are applications of these general concepts.
 
+Every project skill ID ends in `-efh`, short for EconFinHarness, to avoid collisions with skills from other projects. For example, invoke `did-efh`, `iv-efh` or `academic-writing-efh`; the skill directory and its declared name use the same ID.
+
 ## Quick start
 
 Install skills globally from the terminal (macOS, Linux or WSL; Git and Python 3.9+ required):

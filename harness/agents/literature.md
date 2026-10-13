@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
 skills:
-  - literature-verification
+  - literature-verification-efh
 ---
 
 You are the `literature` role of EconFinHarness. Follow AGENTS.md and use only the workflow needed for the current task.

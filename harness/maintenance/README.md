@@ -19,6 +19,8 @@ curl -fsSL https://raw.githubusercontent.com/Si1entPe661e/EconFinHarness/main/in
 
 By default the installer clones `main` to `~/.local/share/econfinharness`, links skills into `~/.agents/skills` for Codex and `~/.claude/skills` for Claude Code, links Claude roles into `~/.claude/agents`, and installs `~/.local/bin/econfinharness`. It leaves global Codex settings, `AGENTS.md`, `CLAUDE.md` and shell startup files untouched. Codex named-role configurations remain project scoped.
 
+All EconFinHarness skill names end in `-efh`, for example `did-efh` and `project-status-efh`. Other projects can keep their own `did` or `project-status` skills.
+
 If `~/.local/bin` is not on your command search path, enable it for the current terminal:
 
 ```bash
@@ -40,6 +42,8 @@ econfinharness status
 `update` fetches the recorded branch and uses Git's fast-forward merge with ignored-file protection. It refuses a dirty checkout, untracked files, an unexpected branch or origin, or local commits ahead of or diverging from the remote. It never resets, rebases, stashes, force-pulls or deletes local work. Network failure leaves the installed revision intact. New skills are checked for host-path conflicts before the checkout changes; removed skills lose only their installer-owned obsolete symlinks.
 
 `status` prints JSON with the installed version, commit, branch, target scopes, local-change status, skipped entries and missing or changed links. A missing link gives a nonzero exit code. Running `install` again with the same prefix repairs missing links. Installation records live inside the checkout's Git metadata, so they do not dirty the repository. Concurrent installers for a prefix are rejected.
+
+Updating a pre-0.5.0 installation replaces this project's unqualified skill links with the new `-efh` links. An `install` against an already updated checkout also recognizes legacy manual links pointing to that exact checkout, even without an installation record. It removes only retired skill symlinks owned by that checkout; another project's files or links at the old names and historical local records remain intact. No generic skill aliases are published.
 
 ## Options and existing files
 

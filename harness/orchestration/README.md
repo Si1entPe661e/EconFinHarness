@@ -6,15 +6,15 @@ Start with the requested outcome and completion criteria. A single edit or expla
 
 | Need | Load initially | Responsibility |
 |---|---|---|
-| Coordinate a compound task | `task-orchestration` | Orchestrator: dependency graph, bounded dispatch, integration |
-| Define scope, milestones and ownership | `project-planning` | Project planner |
-| Inspect progress, risks and handoff | `project-status` | Project manager |
-| Write a full analytical/technical/project report | `report-writing` | Report writer |
-| Prepare a decision memo, status briefing or slide narrative | `briefing-writing` | Briefing writer |
-| Revise supplied prose | `document-editing` | Editor |
-| Write an academic manuscript | `academic-writing` | Academic writer |
-| Trace consequential claims | `evidence-tracking` | Producer or scoped evidence reviewer |
-| Recover failed or interrupted work | `failure-recovery` | Current executor or orchestrator |
+| Coordinate a compound task | `task-orchestration-efh` | Orchestrator: dependency graph, bounded dispatch, integration |
+| Define scope, milestones and ownership | `project-planning-efh` | Project planner |
+| Inspect progress, risks and handoff | `project-status-efh` | Project manager |
+| Write a full analytical/technical/project report | `report-writing-efh` | Report writer |
+| Prepare a decision memo, status briefing or slide narrative | `briefing-writing-efh` | Briefing writer |
+| Revise supplied prose | `document-editing-efh` | Editor |
+| Write an academic manuscript | `academic-writing-efh` | Academic writer |
+| Trace consequential claims | `evidence-tracking-efh` | Producer or scoped evidence reviewer |
+| Recover failed or interrupted work | `failure-recovery-efh` | Current executor or orchestrator |
 | Design or implement empirical analysis | [Research composition](../skill-composition.md) | Analyst / implementer; select the applicable method |
 
 The [route catalog](routes.json) maps explicit capabilities to roles and initial skills. It is a dispatch aid, not a keyword classifier or an automatic permission grant. Roles are responsibilities; one agent may perform several serially.

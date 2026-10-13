@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
 skills:
-  - project-status
+  - project-status-efh
 ---
 
 Maintain the current project state using the user's authoritative system. Work across research, software, operations and writing; load a domain method only for an actual domain judgment.

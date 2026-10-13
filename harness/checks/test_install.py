@@ -168,6 +168,56 @@ class InstallerChecks(unittest.TestCase):
             self.assertFalse((self.user / relative / "example").is_symlink())
             self.assertTrue((self.user / relative / "new-skill").is_symlink())
 
+    def rename_fixture_skill(self):
+        (self.origin / "harness/skills/example").rename(self.origin / "harness/skills/example-efh")
+        self.write("harness/skills/example-efh/SKILL.md", "---\nname: example-efh\ndescription: Fixture\n---\n")
+        self.commit("Namespace fixture skill")
+
+    def test_namespace_upgrade_retires_owned_links_and_preserves_other_projects_skills(self):
+        personal = self.user / ".agents/skills/example"
+        personal.mkdir(parents=True)
+        (personal / "SKILL.md").write_text("Another project's skill\n")
+        self.install("--skip-existing")
+        self.rename_fixture_skill()
+        result = self.cli("update")
+        self.assertEqual(result[0], 0, result[2])
+        for relative in (".agents/skills", ".claude/skills"):
+            self.assertTrue((self.user / relative / "example-efh").is_symlink())
+        self.assertFalse((self.user / ".claude/skills/example").is_symlink())
+        self.assertEqual((personal / "SKILL.md").read_text(), "Another project's skill\n")
+
+    def test_install_migrates_legacy_links_without_a_registry_and_preserves_local_records(self):
+        self.install()
+        installer.state_path(self.prefix).unlink()
+        self.rename_fixture_skill()
+        self.git(self.prefix, "fetch", "origin", "main")
+        self.git(self.prefix, "merge", "--ff-only", "FETCH_HEAD")
+        record = self.prefix / "harness/skills/example/manifest.json"
+        record.parent.mkdir(parents=True)
+        record.write_text('{"historical": true}\n')
+        with (self.prefix / ".git/info/exclude").open("a") as stream:
+            stream.write("\nharness/skills/example/manifest.json\n")
+        self.install()
+        for relative in (".agents/skills", ".claude/skills"):
+            self.assertFalse((self.user / relative / "example").is_symlink())
+            self.assertTrue((self.user / relative / "example-efh").is_symlink())
+        self.assertEqual(record.read_text(), '{"historical": true}\n')
+
+    def test_legacy_migration_preserves_an_unrelated_symlink_at_the_old_name(self):
+        self.install()
+        installer.state_path(self.prefix).unlink()
+        personal = self.base / "other-project-skill"
+        personal.mkdir()
+        old = self.user / ".agents/skills/example"
+        old.unlink()
+        old.symlink_to(personal)
+        self.rename_fixture_skill()
+        self.git(self.prefix, "fetch", "origin", "main")
+        self.git(self.prefix, "merge", "--ff-only", "FETCH_HEAD")
+        self.install()
+        self.assertEqual(old.resolve(), personal)
+        self.assertTrue((self.user / ".agents/skills/example-efh").is_symlink())
+
     def test_new_skill_collision_is_detected_before_checkout_changes(self):
         self.install()
         previous = self.head()

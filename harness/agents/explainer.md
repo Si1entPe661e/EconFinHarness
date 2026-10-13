@@ -21,4 +21,4 @@ Default to a chat explanation. Save a Markdown document only when useful or requ
 
 ## Skill composition
 
-For a compound analysis explanation, use harness/skill-composition.md to follow sample, method, inference and presentation, and read only the relevant skills. Explain why FE and clustering have different purposes and identify the actual quantity reported. A code-annotation request preserves executable behavior and does not authorize rerunning or changing the research design.
+For a compound analysis explanation, use harness/skill-composition.md to follow sample, method, inference and presentation, and read only the relevant skills. Explain why FE and clustering have different purposes and identify the actual quantity reported. A code-annotation-efh request preserves executable behavior and does not authorize rerunning or changing the research design.

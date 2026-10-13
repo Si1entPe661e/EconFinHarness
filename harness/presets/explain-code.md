@@ -1,6 +1,6 @@
 # Explain code or research
 
-Responsibility: `explainer`. Use research-explanation and only the method/inference skills needed to explain the issue.
+Responsibility: `explainer`. Use research-explanation-efh and only the method/inference skills needed to explain the issue.
 
 Reusable task prompt:
 

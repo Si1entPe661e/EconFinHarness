@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 0.5.0
+
+- Rename all 39 skill IDs and directories with the `-efh` suffix to distinguish EconFinHarness skills from other projects.
+- Update skill cross-references, capability routes, shared roles, examples and preservation-fixture paths while retaining research-record contents.
+- Migrate installer-owned and verified legacy skill links to the namespaced IDs; preserve other projects' same-name skills and historical local records.
+- Preserve custom skill kind, version and status fields under supported frontmatter metadata; validate every skill with the skill-creator validator.
+
 ## 0.4.1
 
 - Add a terminal bootstrap and `econfinharness install`, `update` and `status` commands, with global installation by default and optional project setup.

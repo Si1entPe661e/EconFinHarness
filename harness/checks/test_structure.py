@@ -12,6 +12,25 @@ from harness.maintenance.sync_roles import ROOT, expected_config, expected_role,
 
 
 class StructureChecks(unittest.TestCase):
+    def test_skill_frontmatter_uses_supported_top_level_fields(self):
+        allowed={"name","description","license","allowed-tools","metadata"}
+        for path in (ROOT/"harness/skills").glob("*/SKILL.md"):
+            front=path.read_text().split("---",2)[1]
+            keys=set(re.findall(r"(?m)^([a-z][a-z0-9-]*):",front))
+            self.assertFalse(keys-allowed,(path.parent.name,sorted(keys-allowed)))
+
+    def test_published_skill_ids_have_the_project_suffix(self):
+        skills=list((ROOT/"harness/skills").glob("*/SKILL.md"))
+        self.assertTrue(skills)
+        for path in skills:
+            self.assertRegex(path.parent.name,r"^[a-z0-9]+(?:-[a-z0-9]+)*-efh$")
+            self.assertLess(len(path.parent.name),64)
+            self.assertFalse((path.parent.parent/path.parent.name.removesuffix("-efh")/"SKILL.md").exists())
+        for path in (ROOT/"harness/agents").glob("*.md"):
+            metadata,_=role_source(path)
+            for skill in metadata["skills"]:
+                self.assertTrue(skill.endswith("-efh"),(path.name,skill))
+
     def test_tool_entrypoints_remain_relative_shared_symlinks(self):
         expected={".agents/skills":"harness/skills",".claude/skills":"harness/skills",
                   ".claude/agents":"harness/agents"}
@@ -62,8 +81,11 @@ class StructureChecks(unittest.TestCase):
     def test_general_and_split_document_links_resolve(self):
         paths=list((ROOT/"harness/orchestration").glob("*.md"))
         paths+=list((ROOT/"harness/workflows").glob("*.md"))
-        paths+=list((ROOT/"harness/skills").glob("*/SKILL.md"))
-        paths+=list((ROOT/"harness/skills").glob("*/references/*.md"))
+        paths+=list((ROOT/"harness/skills").rglob("*.md"))
+        paths+=list((ROOT/"harness/presets").glob("*.md"))
+        paths+=list((ROOT/"harness/maintenance").glob("*.md"))
+        paths+=list((ROOT/"harness/examples").glob("*/README.md"))
+        paths+=[ROOT/"README.md",ROOT/"harness/README.md",ROOT/"harness/skill-composition.md"]
         for path in paths:
             # Markdown links only; inline-code paths and optional local corpus pointers are not links.
             for target in re.findall(r"\]\(([^)]+)\)",path.read_text()):

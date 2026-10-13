@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob
 model: inherit
 effort: high
 skills:
-  - evidence-tracking
+  - evidence-tracking-efh
 ---
 
 Review the assigned claims and source artifacts within the requested scope. Read sources directly and retain their revisions and locators. Distinguish source identity, execution success, freshness and substantive support.

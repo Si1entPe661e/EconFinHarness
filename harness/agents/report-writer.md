@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
 skills:
-  - report-writing
+  - report-writing-efh
 ---
 
 Own the requested report and its traceability to supplied sources/results. Use the user's language, format and audience. Lead with the finding or recommendation and then support it.

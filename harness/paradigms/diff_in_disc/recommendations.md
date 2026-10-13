@@ -62,17 +62,17 @@ Counts are papers out of the 3 notes in `reported.md`; a note that lacks a tag d
 | Hausman, Rapson (2018), Regression Discontinuity in Time: Considerations for Empirical Applications, Annual Review of Resource Economics 10. DOI 10.1146/annurev-resource-121517-033306 | paper | verified_online (Crossref, 2026-09-08) | time running variable, serial correlation, placebo dates |
 | Keele, Titiunik (2015), Geographic Boundaries as Regression Discontinuities, Political Analysis 23. DOI 10.1093/pan/mpu014 | paper | verified_online (Crossref, 2026-09-08) | distance running variable, compound treatment at borders |
 | Conley (1999), GMM estimation with cross sectional dependence, J. Econometrics 92. DOI 10.1016/S0304-4076(98)00084-0 | paper | verified_online (Crossref, 2026-09-08) | spatial HAC standard errors |
-| Calonico, Cattaneo, Titiunik (2014), Econometrica 82. DOI 10.3982/ECTA11757 | paper | verified_online (harness/skills/rdd/references.md) | local polynomial estimation and robust CIs |
-| Calonico, Cattaneo, Farrell, Titiunik (2017), rdrobust, Stata Journal 17. DOI 10.1177/1536867X1701700208 | software_doc | verified_online (harness/skills/rdd/references.md) | reporting fields |
-| Imbens, Kalyanaraman (2012), REStud 79. DOI 10.1093/restud/rdr043 | paper | verified_online (harness/skills/rdd/references.md) | MSE-optimal bandwidth |
-| Gelman, Imbens (2019), JBES 37. DOI 10.1080/07350015.2017.1366909 | paper | verified_online (harness/skills/rdd/references.md) | polynomial order |
-| Cattaneo, Jansson, Ma (2020), JASA 115. DOI 10.1080/01621459.2019.1635480 | paper | verified_online (harness/skills/rdd/references.md) | density test |
-| Lee, Lemieux (2010), JEL 48. DOI 10.1257/jel.48.2.281 | paper | verified_online (harness/skills/rdd/references.md) | practice guide, covariate checks |
-| Cattaneo, Titiunik (2022), Annual Review of Economics 14. DOI 10.1146/annurev-economics-051520-021409 | paper | verified_online (harness/skills/rdd/references.md) | current practice survey |
-| Roth (2022), Pretest with Caution, AER: Insights 4. DOI 10.1257/aeri.20210236 | paper | verified_online (harness/skills/did/references.md) | pre-test caveat for the period plot |
-| Bertrand, Duflo, Mullainathan (2004), QJE 119. DOI 10.1162/003355304772839588 | paper | verified_online (harness/skills/did/references.md) | serial correlation in the second difference |
-| Cameron, Gelbach, Miller (2008), REStat 90. DOI 10.1162/rest.90.3.414 | paper | verified_online (harness/skills/did/references.md) | wild cluster bootstrap |
-| Abadie, Athey, Imbens, Wooldridge (2022), QJE 138. DOI 10.1093/qje/qjac038 | paper | verified_online (harness/skills/did/references.md) | cluster level from the design |
-| MacKinnon, Nielsen, Webb (2023), J. Econometrics 232. DOI 10.1016/j.jeconom.2022.04.001 | paper | verified_online (harness/skills/did/references.md) | few clusters |
+| Calonico, Cattaneo, Titiunik (2014), Econometrica 82. DOI 10.3982/ECTA11757 | paper | verified_online (harness/skills/rdd-efh/references.md) | local polynomial estimation and robust CIs |
+| Calonico, Cattaneo, Farrell, Titiunik (2017), rdrobust, Stata Journal 17. DOI 10.1177/1536867X1701700208 | software_doc | verified_online (harness/skills/rdd-efh/references.md) | reporting fields |
+| Imbens, Kalyanaraman (2012), REStud 79. DOI 10.1093/restud/rdr043 | paper | verified_online (harness/skills/rdd-efh/references.md) | MSE-optimal bandwidth |
+| Gelman, Imbens (2019), JBES 37. DOI 10.1080/07350015.2017.1366909 | paper | verified_online (harness/skills/rdd-efh/references.md) | polynomial order |
+| Cattaneo, Jansson, Ma (2020), JASA 115. DOI 10.1080/01621459.2019.1635480 | paper | verified_online (harness/skills/rdd-efh/references.md) | density test |
+| Lee, Lemieux (2010), JEL 48. DOI 10.1257/jel.48.2.281 | paper | verified_online (harness/skills/rdd-efh/references.md) | practice guide, covariate checks |
+| Cattaneo, Titiunik (2022), Annual Review of Economics 14. DOI 10.1146/annurev-economics-051520-021409 | paper | verified_online (harness/skills/rdd-efh/references.md) | current practice survey |
+| Roth (2022), Pretest with Caution, AER: Insights 4. DOI 10.1257/aeri.20210236 | paper | verified_online (harness/skills/did-efh/references.md) | pre-test caveat for the period plot |
+| Bertrand, Duflo, Mullainathan (2004), QJE 119. DOI 10.1162/003355304772839588 | paper | verified_online (harness/skills/did-efh/references.md) | serial correlation in the second difference |
+| Cameron, Gelbach, Miller (2008), REStat 90. DOI 10.1162/rest.90.3.414 | paper | verified_online (harness/skills/did-efh/references.md) | wild cluster bootstrap |
+| Abadie, Athey, Imbens, Wooldridge (2022), QJE 138. DOI 10.1093/qje/qjac038 | paper | verified_online (harness/skills/did-efh/references.md) | cluster level from the design |
+| MacKinnon, Nielsen, Webb (2023), J. Econometrics 232. DOI 10.1016/j.jeconom.2022.04.001 | paper | verified_online (harness/skills/did-efh/references.md) | few clusters |
 | harness/paradigms/rdd/recommendations.md | paradigm | verified_repo | rdd rules r1 to r12 referred to by id |
 | harness/paradigms/diff_in_disc/reported.md | paradigm | verified_repo | generated reported practice with pointers; no observed layer |

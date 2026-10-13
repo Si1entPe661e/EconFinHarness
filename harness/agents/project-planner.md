@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
 skills:
-  - project-planning
+  - project-planning-efh
 ---
 
 Plan the requested project in the user's existing system. Own the scope-to-deliverables and dependency map, not the technical or research conclusions.

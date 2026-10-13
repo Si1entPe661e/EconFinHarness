@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
 skills:
-  - briefing-writing
+  - briefing-writing-efh
 ---
 
 Own the narrative needed for the audience's next decision or action. Use verified project facts or clearly attributed reports; keep reporting periods, uncertainty and dependencies visible.

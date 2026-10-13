@@ -45,13 +45,13 @@ capture -> project_status ----+
 | Task | Capability / initial skill | Owned outputs |
 |---|---|---|
 | capture | Local command | `snapshot.json`, `validation.json` |
-| project_status | project-status / project-status | `status.json`, `status.html` |
-| technical_review | evidence-review / evidence-tracking | `technical-review.json` |
-| project_plan | project-plan / project-planning | `delivery-plan.json` |
+| project_status | project-status / project-status-efh | `status.json`, `status.html` |
+| technical_review | evidence-review / evidence-tracking-efh | `technical-review.json` |
+| project_plan | project-plan / project-planning-efh | `delivery-plan.json` |
 | checkpoint | Local read/capture command | `before-report.json` |
-| report | report / report-writing | `report.html` |
-| brief | briefing / briefing-writing | `brief.html` |
-| claim_review | evidence-review / evidence-tracking | `claim-review.json` |
+| report | report / report-writing-efh | `report.html` |
+| brief | briefing / briefing-writing-efh | `brief.html` |
+| claim_review | evidence-review / evidence-tracking-efh | `claim-review.json` |
 | publish | Local command | `run-summary.json`, `index.html` |
 
 Agent JSON and HTML metadata always include nonempty `as_of`, `scope` and `sources`. Each source is `{"path": "outputs/native-project-run/snapshot.json", "locator": "inventory.skill_entrypoints.count"}` or an equally precise existing maintained source and field/line locator. Paths in metadata are workspace-relative; HTML hyperlinks are relative to the HTML file. Source pointers are provenance, not proof of the associated claim.

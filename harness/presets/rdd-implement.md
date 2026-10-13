@@ -1,6 +1,6 @@
 # Implement RD
 
-Responsibility: `code-engineer`. Use rdd, panel-data-checks, inference-clustering and tables-figures.
+Responsibility: `code-engineer`. Use rdd-efh, panel-data-checks-efh, inference-clustering-efh and tables-figures-efh.
 
 Reusable task prompt:
 

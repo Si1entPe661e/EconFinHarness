@@ -1,6 +1,6 @@
 # Implement an empirical analysis
 
-Responsibility: `code-engineer`. Select the main method; combine panel-data-checks, inference-clustering and tables-figures.
+Responsibility: `code-engineer`. Select the main method; combine panel-data-checks-efh, inference-clustering-efh and tables-figures-efh.
 
 Reusable task prompt:
 

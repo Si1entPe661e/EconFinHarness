@@ -1,6 +1,6 @@
 # Organize research work
 
-Responsibility: `project-manager`. Use project-bookkeeping and the composition guide for larger connected tasks.
+Responsibility: `project-manager`. Use project-bookkeeping-efh and the composition guide for larger connected tasks.
 
 Reusable task prompt:
 

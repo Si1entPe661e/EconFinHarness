@@ -1,6 +1,6 @@
 # Write research prose
 
-Use `academic-writing` with the actual design, main method and outputs from [result presentation](present-results.md). Use `tables-figures` for output notes and the [composition guide](../skill-composition.md) for connected analysis steps.
+Use `academic-writing-efh` with the actual design, main method and outputs from [result presentation](present-results.md). Use `tables-figures-efh` for output notes and the [composition guide](../skill-composition.md) for connected analysis steps.
 
 Organize the requested prose around the question, identification/model, sample, inference, results and interpretation. Preserve estimands, units, weights, effects, intervals, p-values and numbers from the same analysis. Do not reconstruct tests from rounded values.
 

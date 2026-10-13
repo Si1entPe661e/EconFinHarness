@@ -10,37 +10,37 @@ Start with the question, estimand and data structure. Preserve an existing desig
 
 | Question or data structure | Main method and relevant branches |
 |---|---|
-| Conditional associations; linear or nonlinear regression | `regression`; use `panel-fe` for absorbed panel effects. A regression command alone does not establish causal identification. |
-| Within-unit variation; one-way or multiple fixed effects | `panel-fe`; route staggered policy adoption to `did`. For short panels with lagged outcomes, consider dynamic bias and the moment conditions in `gmm`. |
-| Before/after comparisons or staggered treatment adoption | `did`; use `event-study` for dynamics and support. Do not substitute ordinary TWFE automatically for a heterogeneity-compatible estimator. |
-| Dynamic responses around panel events | `event-study`; use `did` when identification comes from absorbing adoption. Repeated events and continuous shocks require their own design. |
-| Treatment jumps at a known running-variable threshold | `rdd`; the fuzzy branch requires a local first stage and appropriate inference. |
-| A cutoff jump changes across periods or groups | `diff-in-disc`, with `rdd` for local support; assess stability of other cutoff effects and joint inference. |
-| Excluded instruments shift an endogenous regressor | `iv`; select branches for leniency, weak instruments or multiple endogenous regressors as needed. |
-| Baseline shares multiplied by common shocks | `shift-share`; also use `iv` when exposure is an instrument. Distinguish shares-based and shocks-based identification and inference. |
-| Randomized assignment | `rct`; a noncompliance LATE also needs `iv` conditions. Keep ITT defined by assignment. |
-| Treatment/control matching on observed variables | `matching`; a subsequent DID must preserve matching weights and satisfy `did` assumptions. |
-| Few treated units with credible donor trajectories | `synthetic-control`; synthetic DID belongs to the corresponding `did` branch. |
-| Distributional bunching around a kink or notch | `bunching`; density mass is not an RD outcome jump. |
-| Explicit orthogonality conditions; IV-GMM or dynamic-panel moments | `gmm`; consult `iv` for linear-IV validity. Arbitrary lags are not automatically valid instruments. |
-| Behavioral or equilibrium parameters and counterfactuals | `structural-estimation`; combine with `gmm` for GMM/SMM while preserving solution and simulation steps. |
-| Machine learning assists causal estimation | `ml-nuisance` and the underlying design. IV/DID needs valid design-specific orthogonal scores, not a relabeled ordinary PLR. |
-| Average repeated cross-sectional slopes | `fama-macbeth`; infer from the slope time series and address generated-beta uncertainty when applicable. |
-| Asset sorts, portfolio returns and factor adjustment | `portfolio-sorts`; ML-generated signals need out-of-sample formation under `ml-prediction`. |
-| Announcement abnormal returns; CAR/BHAR | `return-event-study`; distinguish this from panel treatment-effect `event-study`, and check event dates and dependence. |
-| Time-series predictive regressions; rolling or recursive forecasts | `predictive-regression`; retain feature availability, target realization dates, overlapping horizons and feasible benchmarks. |
-| Classification or ML prediction | `ml-prediction`; use group/time splits and keep tuning and transformations away from the test sample. Prediction accuracy does not establish a causal effect. |
+| Conditional associations; linear or nonlinear regression | `regression-efh`; use `panel-fe-efh` for absorbed panel effects. A regression command alone does not establish causal identification. |
+| Within-unit variation; one-way or multiple fixed effects | `panel-fe-efh`; route staggered policy adoption to `did-efh`. For short panels with lagged outcomes, consider dynamic bias and the moment conditions in `gmm-efh`. |
+| Before/after comparisons or staggered treatment adoption | `did-efh`; use `event-study-efh` for dynamics and support. Do not substitute ordinary TWFE automatically for a heterogeneity-compatible estimator. |
+| Dynamic responses around panel events | `event-study-efh`; use `did-efh` when identification comes from absorbing adoption. Repeated events and continuous shocks require their own design. |
+| Treatment jumps at a known running-variable threshold | `rdd-efh`; the fuzzy branch requires a local first stage and appropriate inference. |
+| A cutoff jump changes across periods or groups | `diff-in-disc-efh`, with `rdd-efh` for local support; assess stability of other cutoff effects and joint inference. |
+| Excluded instruments shift an endogenous regressor | `iv-efh`; select branches for leniency, weak instruments or multiple endogenous regressors as needed. |
+| Baseline shares multiplied by common shocks | `shift-share-efh`; also use `iv-efh` when exposure is an instrument. Distinguish shares-based and shocks-based identification and inference. |
+| Randomized assignment | `rct-efh`; a noncompliance LATE also needs `iv-efh` conditions. Keep ITT defined by assignment. |
+| Treatment/control matching on observed variables | `matching-efh`; a subsequent DID must preserve matching weights and satisfy `did-efh` assumptions. |
+| Few treated units with credible donor trajectories | `synthetic-control-efh`; synthetic DID belongs to the corresponding `did-efh` branch. |
+| Distributional bunching around a kink or notch | `bunching-efh`; density mass is not an RD outcome jump. |
+| Explicit orthogonality conditions; IV-GMM or dynamic-panel moments | `gmm-efh`; consult `iv-efh` for linear-IV validity. Arbitrary lags are not automatically valid instruments. |
+| Behavioral or equilibrium parameters and counterfactuals | `structural-estimation-efh`; combine with `gmm-efh` for GMM/SMM while preserving solution and simulation steps. |
+| Machine learning assists causal estimation | `ml-nuisance-efh` and the underlying design. IV/DID needs valid design-specific orthogonal scores, not a relabeled ordinary PLR. |
+| Average repeated cross-sectional slopes | `fama-macbeth-efh`; infer from the slope time series and address generated-beta uncertainty when applicable. |
+| Asset sorts, portfolio returns and factor adjustment | `portfolio-sorts-efh`; ML-generated signals need out-of-sample formation under `ml-prediction-efh`. |
+| Announcement abnormal returns; CAR/BHAR | `return-event-study-efh`; distinguish this from panel treatment-effect `event-study-efh`, and check event dates and dependence. |
+| Time-series predictive regressions; rolling or recursive forecasts | `predictive-regression-efh`; retain feature availability, target realization dates, overlapping horizons and feasible benchmarks. |
+| Classification or ML prediction | `ml-prediction-efh`; use group/time splits and keep tuning and transformations away from the test sample. Prediction accuracy does not establish a causal effect. |
 
 Skills live at `harness/skills/<name>/SKILL.md`. Method choice is a research judgment, not a keyword rule that activates every branch.
 
 ## Shared analysis sequence
 
-1. **Specify the research choices.** Define the estimand, sample, variables, weights, comparison group, model and identification assumptions. Use `literature-verification` for claims that need sources.
-2. **Construct the applicable sample.** Use relevant `panel-data-checks` for observation units, keys, dates, merges, missingness, treatment timing and weights. Prediction tasks also retain splits and label availability.
-3. **Choose the model and inference.** The main method defines the estimand, controls, fixed effects and specific diagnostics. `inference-clustering` handles dependence, standard errors, intervals and tests. Decide fixed effects and clustering separately. Preserve specialized RD, matching, weak-IV, bootstrap and randomization inference.
+1. **Specify the research choices.** Define the estimand, sample, variables, weights, comparison group, model and identification assumptions. Use `literature-verification-efh` for claims that need sources.
+2. **Construct the applicable sample.** Use relevant `panel-data-checks-efh` for observation units, keys, dates, merges, missingness, treatment timing and weights. Prediction tasks also retain splits and label availability.
+3. **Choose the model and inference.** The main method defines the estimand, controls, fixed effects and specific diagnostics. `inference-clustering-efh` handles dependence, standard errors, intervals and tests. Decide fixed effects and clustering separately. Preserve specialized RD, matching, weak-IV, bootstrap and randomization inference.
 4. **Fit the model and inspect its actual sample.** Keep variable definitions and selected weights, effects and inference consistent. Inspect losses from missingness, singletons, collinearity, bandwidths, matching or support restrictions. Compute N and cluster counts from fitted observations. Use a common comparison sample when appropriate, or explain sample differences.
-5. **Present the same analysis.** `tables-figures` reads fitted objects or method-specific numerical results using `harness/workflows/present-results.md`. Keep coefficients, SEs, p-values, intervals, stars, N and notes consistent. Diagnostics and evaluation metrics retain their own applicable samples.
-6. **Explain or write.** Use `research-explanation` for explanation and `academic-writing` for prose. Preserve the actual estimand, sample, units and uncertainty rather than reconstructing numbers from rounded tables.
+5. **Present the same analysis.** `tables-figures-efh` reads fitted objects or method-specific numerical results using `harness/workflows/present-results.md`. Keep coefficients, SEs, p-values, intervals, stars, N and notes consistent. Diagnostics and evaluation metrics retain their own applicable samples.
+6. **Explain or write.** Use `research-explanation-efh` for explanation and `academic-writing-efh` for prose. Preserve the actual estimand, sample, units and uncertainty rather than reconstructing numbers from rounded tables.
 
 Continue using existing variables, fitted objects, scripts and output paths. A short explanation or parameters in the analysis script are usually sufficient for coordination.
 

@@ -1,6 +1,6 @@
 # Implement IV
 
-Responsibility: `code-engineer`. Use iv, panel-data-checks, inference-clustering and tables-figures; select shift-share or other branches when relevant.
+Responsibility: `code-engineer`. Use iv-efh, panel-data-checks-efh, inference-clustering-efh and tables-figures-efh; select shift-share-efh or other branches when relevant.
 
 Reusable task prompt:
 

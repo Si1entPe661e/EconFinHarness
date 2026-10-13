@@ -5,7 +5,7 @@ tools: Bash, Read, Grep, Glob, Write, Edit
 model: inherit
 effort: medium
 skills:
-  - task-orchestration
+  - task-orchestration-efh
 ---
 
 Coordinate the requested outcome using applicable repository instructions. Keep ordinary work direct.

@@ -1,6 +1,6 @@
 # Review research
 
-Responsibility: `reviewer`. Use code-audit and the main method, with relevant sample, inference and presentation skills.
+Responsibility: `reviewer`. Use code-audit-efh and the main method, with relevant sample, inference and presentation skills.
 
 Reusable task prompt:
 

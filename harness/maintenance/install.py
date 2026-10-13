@@ -159,6 +159,26 @@ def link_plan(root, targets, bin_directory, skip_existing, inventory=None):
     return accepted, skipped
 
 
+def retired_skill_source(source):
+    return (source.parent.name == "skills" and source.parent.parent.name == "harness"
+            and not (source / "SKILL.md").is_file())
+
+
+def legacy_skill_links(root, targets):
+    """Recognize retired links from manual installations by their source checkout."""
+    retired = {}
+    for target in targets:
+        for destination, source in target_links(root, target).items():
+            if source.parent != root / "harness/skills" or not source.name.endswith("-efh"):
+                continue
+            previous_source = source.with_name(source.name.removesuffix("-efh"))
+            previous_link = destination.with_name(previous_source.name)
+            if (previous_link.is_symlink() and previous_link.resolve() == previous_source.resolve()
+                    and retired_skill_source(previous_source)):
+                retired[str(previous_link)] = str(previous_source)
+    return retired
+
+
 def apply_links(links, old_links):
     created = []
     try:
@@ -174,11 +194,11 @@ def apply_links(links, old_links):
         for destination in reversed(created):
             destination.unlink()
         raise
-    # Only obsolete symlinks whose exact target is still ours may be removed.
+    # Only obsolete symlinks whose resolved target is still ours may be removed.
     for destination, source in old_links.items():
         path = Path(destination)
-        if path not in links and path.is_symlink() and path.readlink() == Path(source):
-            if not Path(source).exists():
+        if path not in links and path.is_symlink() and path.resolve() == Path(source).resolve():
+            if not Path(source).exists() or retired_skill_source(Path(source)):
                 path.unlink()
 
 
@@ -198,7 +218,8 @@ def install(root, repository, branch, user_directory, bin_directory, tools, proj
         targets.append(target)
         policy = skip_existing or state.get("skip_existing", False)
         links, skipped = link_plan(root, targets, bin_directory, policy)
-        apply_links(links, state["links"])
+        previous_links = {**state["links"], **legacy_skill_links(root, targets)}
+        apply_links(links, previous_links)
         state.update(targets=targets, bin_directory=str(bin_directory), skip_existing=policy,
                      links={str(p): str(s) for p, s in links.items()}, skipped=skipped)
         save_state(root, state)
@@ -226,7 +247,8 @@ def update(root, skip_existing):
                                    skip_existing or state.get("skip_existing", False), inventory)
         # Git also protects ignored local files when an upstream file collides.
         git(root, "-c", "merge.autostash=false", "merge", "--ff-only", "--no-overwrite-ignore", revision)
-        apply_links(links, state["links"])
+        previous_links = {**state["links"], **legacy_skill_links(root, state["targets"])}
+        apply_links(links, previous_links)
         state.update(links={str(p): str(s) for p, s in links.items()}, skipped=skipped,
                      skip_existing=skip_existing or state.get("skip_existing", False))
         save_state(root, state)

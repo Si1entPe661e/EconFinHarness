@@ -1,6 +1,6 @@
 # Annotate research code
 
-Responsibility: `explainer`. Use code-annotation and relevant method guidance.
+Responsibility: `explainer`. Use code-annotation-efh and relevant method guidance.
 
 Reusable task prompt:
 

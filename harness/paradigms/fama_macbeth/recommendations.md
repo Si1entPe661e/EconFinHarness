@@ -70,4 +70,4 @@ Counts are papers out of the 3 notes in `reported.md`; a note that lacks a tag d
 | Hou, Xue, Zhang (2020), Replicating Anomalies, RFS 33. DOI 10.1093/rfs/hhy131 | paper | verified_online (Crossref, 2026-09-08; Crossref issued date 2018, online first) | microcap screens and value-weighted alternatives (r5) |
 | Harvey, Liu, Zhu (2016), ... and the Cross-Section of Expected Returns, RFS 29. DOI 10.1093/rfs/hhv059 | paper | verified_online (Crossref, 2026-09-08; Crossref issued date 2015, online first) | multiple-testing statement in r6 |
 | Cochrane (2005), Asset Pricing, revised edition, Princeton University Press, ch. 12 | book | unverified | textbook treatment of the cross-sectional regression and its standard errors |
-| harness/skills/inference-clustering/SKILL.md (step 7) and harness/skills/panel-data-checks/SKILL.md (steps 14, 15) | harness convention | not a literature source | HAC lag statement and winsorization recording rules |
+| harness/skills/inference-clustering-efh/SKILL.md (step 7) and harness/skills/panel-data-checks-efh/SKILL.md (steps 14, 15) | harness convention | not a literature source | HAC lag statement and winsorization recording rules |

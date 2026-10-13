@@ -92,7 +92,7 @@ class NativeChecks(unittest.TestCase):
         self.assertEqual(request["role"], "report-writer")
         self.assertEqual(request["host_agent_type"], "default")
         self.assertIn("Semantic role: report-writer. Native host agent type: default.", request["prompt"])
-        self.assertIn("Initial skill report-writing:", request["prompt"])
+        self.assertIn("Initial skill report-writing-efh:", request["prompt"])
         self.assertEqual(request["tool_args"]["agent_type"], "default")
 
     def test_unknown_capability_or_missing_role_skill_never_claims(self):

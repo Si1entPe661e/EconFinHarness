@@ -15,7 +15,7 @@ class PaperFirstWorkflowChecks(unittest.TestCase):
         self.assertNotIn("Read actual sample construction, estimation and export calls.", text)
 
     def test_presentation_preserves_the_same_boundary(self):
-        text = (ROOT / "harness/skills/tables-figures/SKILL.md").read_text()
+        text = (ROOT / "harness/skills/tables-figures-efh/SKILL.md").read_text()
         self.assertIn("In paper-first replication, preserve the source boundary", text)
         self.assertNotIn("Read existing output code before replacing its conventions.", text)
 
@@ -23,10 +23,10 @@ class PaperFirstWorkflowChecks(unittest.TestCase):
         paths = ["harness/workflows/paper-first-replication.md",
                  "harness/examples/war-discourse/run.R",
                  "harness/examples/war-discourse/checks.R",
-                 "harness/skills/fama-macbeth/two-pass-pricing.md"]
+                 "harness/skills/fama-macbeth-efh/two-pass-pricing.md"]
         for path in paths:
             self.assertTrue((ROOT / path).is_file(), path)
-        text = (ROOT / "harness/skills/fama-macbeth/SKILL.md").read_text()
+        text = (ROOT / "harness/skills/fama-macbeth-efh/SKILL.md").read_text()
         self.assertIn("two-pass-pricing.md", text)
 
 

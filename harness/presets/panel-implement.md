@@ -1,6 +1,6 @@
 # Implement a panel regression
 
-Responsibility: `code-engineer`. Use panel-data-checks, panel-fe, inference-clustering and tables-figures; route policy, IV or dynamic-panel issues to the relevant method.
+Responsibility: `code-engineer`. Use panel-data-checks-efh, panel-fe-efh, inference-clustering-efh and tables-figures-efh; route policy, IV or dynamic-panel issues to the relevant method.
 
 Reusable task prompt:
 

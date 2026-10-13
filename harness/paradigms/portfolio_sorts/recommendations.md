@@ -73,4 +73,4 @@ Counts are papers out of the 4 notes in `reported.md`; a note that lacks a tag d
 | Patton and Timmermann 2010, Monotonicity in asset returns, JFE, doi:10.1016/j.jfineco.2010.06.006 | journal article | verified_online (Crossref, 2026-09-08; title and first author match) | monotonicity test across portfolios (r5) |
 | Lo and MacKinlay 1990, Data-Snooping Biases in Tests of Financial Asset Pricing Models, RFS, doi:10.1093/rfs/3.3.431 | journal article | verified_online (Crossref, 2026-09-08; title and first author match) | data snooping in characteristic sorts (r5) |
 | Novy-Marx and Velikov 2016, A Taxonomy of Anomalies and Their Trading Costs, RFS, doi:10.1093/rfs/hhv063 | journal article | verified_online (Crossref, 2026-09-08; title and first author match) | transaction costs and turnover (r6) |
-| harness/skills/inference-clustering/SKILL.md | task skill | not a literature source; carries no corpus counts | HAC lag rule and sensitivity ordering (r4) |
+| harness/skills/inference-clustering-efh/SKILL.md | task skill | not a literature source; carries no corpus counts | HAC lag rule and sensitivity ordering (r4) |
