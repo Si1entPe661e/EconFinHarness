@@ -6,12 +6,24 @@ Start from the outcome: plan a project, coordinate dependent work, write a repor
 
 ## Quick start
 
+Install skills globally from the terminal (macOS, Linux or WSL; Git and Python 3.9+ required):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Si1entPe661e/EconFinHarness/main/install.sh | bash -s -- install
+export PATH="$HOME/.local/bin:$PATH"
+econfinharness status
+```
+
+The default installation serves Codex and Claude Code across projects. Update with `econfinharness update`; use `--tool codex` or `--tool claude` to select one host. Existing skills and configurations are preserved; `--skip-existing` keeps conflicting entries and reports them. See [installation options and project setup](harness/maintenance/README.md) for a download-then-run command, custom paths and project-scoped roles.
+
+Alternatively, clone the repository and use its project configuration directly:
+
 ```bash
 git clone https://github.com/Si1entPe661e/EconFinHarness.git
 cd EconFinHarness
 ```
 
-Open this directory as the project root in Codex or Claude Code. The repository includes their skill and role configurations. In Codex, trust the project when prompted so its role settings can load. No package installation or local runtime startup is required to use the skills and roles. Start with a concrete request and the location of your inputs, for example:
+Open your working project in Codex or Claude Code; after a direct clone, open this repository as the project root to use its role configurations. In Codex, trust the project when prompted so its role settings can load. Open a new session after installing skills. No analysis package installation or local runtime startup is required to use the guides. Start with a concrete request and the location of your inputs, for example:
 
 > Inspect this project's actual files and progress. Prepare a delivery plan with dependencies, owners and acceptance criteria, then implement the authorized next steps. Keep verified completion separate from planned work.
 
@@ -29,6 +41,7 @@ Replace the example paths and variable names with your own. Empirical analyses r
 
 | Task | Entry point |
 |---|---|
+| Install globally, set up a project or update | [Terminal installer](harness/maintenance/README.md) |
 | Coordinate tasks, evidence and recovery | [General orchestration](harness/orchestration/README.md) |
 | Plan or maintain a project | [Project management](harness/workflows/project-management.md) |
 | Write reports, briefings or revisions | [Reports](harness/workflows/write-report.md), [briefings](harness/workflows/prepare-briefing.md), [editing](harness/workflows/edit-document.md) |

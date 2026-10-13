@@ -12,6 +12,8 @@ python3 -B harness/examples/war-discourse/check_runner.py
 
 These checks require Python 3.9+ and its standard library and can run from a fresh clone. The War Discourse runner checks inject failures without loading research data or requiring R; the empirical R analysis has separate package and local-input requirements documented in that example.
 
+Installer checks use actual local Git repositories, isolated user roots and file-URL downloads. They cover global/project setup, installed command execution, fast-forward updates, host collisions, skipped entries, ignored local files, local changes/commits, failed network operations and concurrent mutations. They never write into the real user installation or require network access.
+
 The runtime checks inject actual transient/permanent failures, missing/stale artifacts, source changes during checking, duplicate dispatch, invalid tokens, evidence revision changes and unsafe retry declarations. Structure checks validate routes, links, entrypoint bounds, unchanged migrated research records, role/configuration synchronization and resumable demonstrations. These are deterministic implementation checks, not a benchmark of an LLM's domain judgment.
 
 Native adapter checks cover durable dispatch, authorization before execution, dependency/capacity selection, fresh contexts, observed-handle binding, explicit unknown-outcome resolution, strict terminal receipts, source budgets and concurrent acceptance. CLI integration uses explicitly simulated handles. Live transport and writing judgment are exercised separately by the [real project workflow](../examples/native-project/README.md); no unit-test handle counts as a live agent.

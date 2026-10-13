@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 0.4.1
+
+- Add a terminal bootstrap and `econfinharness install`, `update` and `status` commands, with global installation by default and optional project setup.
+- Reuse Git clone/fetch/fast-forward operations, preserve conflicting user files and configuration, and add offline installation/update regression checks.
+
 ## 0.4.0 - 2026-10-12
 
 - Add focused project planning, status, report writing, briefing, editing, evidence and recovery skills, with synchronized Codex and Claude Code roles.
