@@ -1,6 +1,11 @@
 # Reusable task prompts
 
-Use these prompts directly or adapt them to the current research question. Select relevant methods and shared steps through the [composition guide](../skill-composition.md).
+Use these prompts directly or adapt them to the current outcome. Start general work with [orchestration](../orchestration/README.md); empirical tasks use the [research composition guide](../skill-composition.md).
+
+- [Coordinate a compound task](coordinate-task.md)
+- [Manage a project](manage-project.md)
+- [Write a report and briefing](write-report.md)
+- [Revise a document](edit-document.md)
 
 - [Implement an empirical analysis](analysis-implement.md)
 - [Annotate research code](annotate-code.md)

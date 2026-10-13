@@ -1,8 +1,8 @@
 # EconFinHarness
 
-Research skills and method guides for finance, economics, management, operations research and statistics.
+General task coordination, project management and evidence-based writing, with specialized empirical research capabilities for finance, economics, management, operations research and statistics.
 
-Use the harness with your own data or research code to design an analysis, implement an estimator, choose inference, present results or explain existing work. It includes 20 method skills, nine shared research skills, two reading skills, nine roles, 11 workflows and 12 task prompts.
+Start from the outcome: plan a project, coordinate dependent work, write a report or briefing, revise a document, or perform an empirical analysis. Focused skills and roles load on demand. Research methods and paper reproduction are applications of these general concepts.
 
 ## Quick start
 
@@ -11,30 +11,48 @@ git clone https://github.com/Si1entPe661e/EconFinHarness.git
 cd EconFinHarness
 ```
 
-Open this directory as the project root in your AI coding tool. The repository includes skill and role configurations for Codex and Claude Code. In Codex, trust the project when prompted so its role settings can load. Start with a concrete request and the location of your data or code, for example:
+Open this directory as the project root in Codex or Claude Code. The repository includes their skill and role configurations. In Codex, trust the project when prompted so its role settings can load. No package installation or local runtime startup is required to use the skills and roles. Start with a concrete request and the location of your inputs, for example:
+
+> Inspect this project's actual files and progress. Prepare a delivery plan with dependencies, owners and acceptance criteria, then implement the authorized next steps. Keep verified completion separate from planned work.
+
+For general tasks, start with [orchestration](harness/orchestration/README.md); the [research composition guide](harness/skill-composition.md) is the empirical-analysis branch. A single agent can execute serially. Native-agent delegation uses bounded context and output ownership when useful and authorized.
+
+Other starting requests:
 
 > Read AGENTS.md and harness/skill-composition.md. Analyze my company panel in data/panel.csv using firm_id and year as the panel keys, y as the outcome and x as the main regressor. Use firm and year fixed effects, choose inference from the research design, inspect the fitted sample, and export a regression table with a concise interpretation. Prefer R.
 
-Replace the example path and variable names with your own. The [composition guide](harness/skill-composition.md) connects method choice, sample checks, fixed effects, inference and result presentation. A single agent can carry out the relevant steps.
+> Write a technical report for the project lead from the supplied logs and results, then prepare a one-page decision briefing. Trace material claims, preserve uncertainties and flag evidence gaps.
 
-Reading the guides requires no software installation. Running an analysis requires the selected R, Python, Stata or MATLAB environment and the packages used by that analysis.
+Replace the example paths and variable names with your own. Empirical analyses require your data, the selected R, Python, Stata or MATLAB environment, and relevant packages. Local paper collections and search databases are optional and are not included in a clone.
 
 ## Find the right material
 
 | Task | Entry point |
 |---|---|
+| Coordinate tasks, evidence and recovery | [General orchestration](harness/orchestration/README.md) |
+| Plan or maintain a project | [Project management](harness/workflows/project-management.md) |
+| Write reports, briefings or revisions | [Reports](harness/workflows/write-report.md), [briefings](harness/workflows/prepare-briefing.md), [editing](harness/workflows/edit-document.md) |
 | Choose and combine research skills | [Skill composition](harness/skill-composition.md) |
 | Implement an empirical analysis | [Analysis workflow](harness/workflows/empirical-analysis.md) |
 | Export tables and scientific figures | [Presentation workflow](harness/workflows/present-results.md) |
 | Read estimation commands | [Skills and methods](harness/README.md) |
 | Study summaries of recorded research practice | [Method materials](harness/paradigms/README.md) |
 | Start from a reusable task prompt | [Task prompts](harness/presets/README.md) |
+| Independently reproduce a paper without reading author code | [Paper-first workflow](harness/workflows/paper-first-replication.md) and [War Discourse example](harness/examples/war-discourse/README.md) |
 
-## Research content and tool entry points
+## Optional advanced workflows
+
+The [local coordination adapter](harness/orchestration/runtime.md) records task dependencies, checkpoints, source revisions, execution attempts and evidence for work that needs durable recovery. It requires Python 3.9+ and its standard library. It runs on demand, calls no model itself, and can wrap an existing project workflow engine. Ordinary skill and role use does not require it.
+
+The [general demonstrations](harness/examples/general/README.md) exercise these contracts with authored fixtures. The [native host bridge](harness/orchestration/native.md) and [real project workflow](harness/examples/native-project/README.md) additionally require an active host agent to dispatch authorized native agents and observe their returns. Python alone does not launch those agents.
+
+Maintainers can run the [implementation checks](harness/checks/README.md) from a fresh clone without local research data or corpus files.
+
+## Repository content and tool entry points
 
 | Directory | Purpose |
 |---|---|
-| `harness/` | Skills, roles, methods, workflows and task prompts |
+| `harness/` | Focused skills/roles, methods, workflows, checks, task prompts and optional coordination runtime |
 | `.agents/skills` | Relative symlink to `harness/skills/` for Codex discovery |
 | `.claude/skills` | Relative symlink to the same skills |
 | `.claude/agents` | Relative symlink to `harness/agents/` for Claude Code roles |
@@ -46,8 +64,8 @@ Use a Git clone with symlink support; the tool entry points are relative links w
 
 ## Distribution
 
-The public repository contains method guides, operational skills, role configurations, workflows, task prompts and existing summaries of recorded research practice. Code observations, paper statements and methodological recommendations have different evidentiary roles; practice frequencies do not establish validity.
+The public repository contains focused skills and roles, workflows, checks, authored demonstrations, method guides, existing summaries of recorded research practice and the optional coordination adapter. Code observations, paper statements and methodological recommendations have different evidentiary roles; practice frequencies do not establish validity. Execution success, artifact freshness and claim support are recorded separately.
 
-Local CLI tools, standalone code cards and paper notes, the full article catalog, original replication source trees, paper PDFs, extracted full text and search databases are not distributed. Historical input pointers in method summaries describe their original source records. References to `Paper/<Journal>/articles/<artid>/` identify original source locations rather than files bundled here. Use the recorded DOI or repository link to locate the original publication or code under its own access and license terms.
+Workstation-only collection/build tools, standalone code cards and paper notes, the full article catalog, original replication source trees, research datasets, paper PDFs, extracted full text, search databases and generated run outputs are not distributed. Historical input pointers in method summaries describe their original source records. References to `Paper/<Journal>/articles/<artid>/` identify original source locations rather than files bundled here. Use the recorded DOI or repository link to locate the original publication or code under its own access and license terms.
 
 Version: [harness/VERSION](harness/VERSION). License: [LICENSE](LICENSE).

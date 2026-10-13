@@ -10,6 +10,8 @@ kind: method
 
 Use to average coefficients from repeated cross-sectional regressions, often of future asset returns on known characteristics or estimated exposures. Pooled panel OLS with clustered SE is a different estimator.
 
+For estimated-beta asset pricing, distinguish a full-sample two-pass regression of average returns on fixed estimated betas from monthly regressions using lagged rolling betas. Follow the paper's actual estimator rather than substituting a generic Fama-MacBeth command. See [two-pass pricing](two-pass-pricing.md) for the distinction and numerical checks.
+
 ## Inputs
 
 Asset/date keys, forward or contemporaneous return definition, observable-at-formation characteristics or estimated betas, cross-sectional controls, weighting/normalization rules, sample filters and time-series covariance plan.

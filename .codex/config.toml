@@ -3,13 +3,25 @@
 [features]
 multi_agent = true
 
+[agents.briefing_writer]
+description = "Write concise status briefings, decision memos and presentation narratives."
+config_file = "../harness/agents/codex/briefing-writer.toml"
+
 [agents.code_engineer]
-description = "Implement research analyses, read or translate replication code, and fix implementation problems."
+description = "Implement scoped software tasks and research analyses, reuse existing tools, and fix implementation problems."
 config_file = "../harness/agents/codex/code-engineer.toml"
+
+[agents.editor]
+description = "Revise existing documents for structure, clarity and consistency without changing unsupported facts."
+config_file = "../harness/agents/codex/editor.toml"
 
 [agents.empirical_analyst]
 description = "Design empirical studies, choose specifications and inference, and interpret existing research results."
 config_file = "../harness/agents/codex/empirical-analyst.toml"
+
+[agents.evidence_reviewer]
+description = "Check whether material claims and completion assertions are supported by current cited sources or actual checks."
+config_file = "../harness/agents/codex/evidence-reviewer.toml"
 
 [agents.explainer]
 description = "Explain research code, methods, results or project progress for the reader who asked."
@@ -19,17 +31,29 @@ config_file = "../harness/agents/codex/explainer.toml"
 description = "Find papers and public code in the local corpus, then verify or supplement with public sources."
 config_file = "../harness/agents/codex/literature.toml"
 
+[agents.orchestrator]
+description = "Coordinate compound tasks, bounded capability dispatch, evidence and recovery across domains."
+config_file = "../harness/agents/codex/orchestrator.toml"
+
 [agents.paper_note_reader]
 description = "Read a paper and record its research practice when a new reading is explicitly requested."
 config_file = "../harness/agents/codex/paper-note-reader.toml"
 
 [agents.project_manager]
-description = "Organize research work, identify useful files and report actual progress and blockers."
+description = "Maintain evidence-based project status, dependencies, delivery risks and handoffs across domains."
 config_file = "../harness/agents/codex/project-manager.toml"
+
+[agents.project_planner]
+description = "Define project deliverables, milestones, ownership, dependencies and acceptance criteria."
+config_file = "../harness/agents/codex/project-planner.toml"
 
 [agents.recipe_card_writer]
 description = "Read one paper's research code and describe its implementation when new extraction is explicitly requested."
 config_file = "../harness/agents/codex/recipe-card-writer.toml"
+
+[agents.report_writer]
+description = "Write analytical, technical and project reports from supplied evidence for a defined audience."
+config_file = "../harness/agents/codex/report-writer.toml"
 
 [agents.reviewer]
 description = "Check research code, methods or manuscript claims when requested or when a concrete issue needs attention."
@@ -38,5 +62,4 @@ config_file = "../harness/agents/codex/reviewer.toml"
 [agents.writer]
 description = "Write or revise academic prose using actual research plans, results, figures and sources."
 config_file = "../harness/agents/codex/writer.toml"
-
 # <<< fh-managed <<<

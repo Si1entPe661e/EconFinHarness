@@ -1,0 +1,13 @@
+{
+  "orchestration": {"role": "orchestrator", "skills": ["task-orchestration"]},
+  "project-plan": {"role": "project-planner", "skills": ["project-planning"]},
+  "project-status": {"role": "project-manager", "skills": ["project-status"]},
+  "report": {"role": "report-writer", "skills": ["report-writing"]},
+  "briefing": {"role": "briefing-writer", "skills": ["briefing-writing"]},
+  "editing": {"role": "editor", "skills": ["document-editing"]},
+  "academic": {"role": "writer", "skills": ["academic-writing"]},
+  "evidence-review": {"role": "evidence-reviewer", "skills": ["evidence-tracking"]},
+  "analysis": {"role": "empirical-analyst", "skills": []},
+  "implementation": {"role": "code-engineer", "skills": []},
+  "literature": {"role": "literature", "skills": ["literature-verification"]}
+}

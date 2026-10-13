@@ -1,5 +1,7 @@
 # Composing research skills
 
+For general task routing, project management, reports and resumable execution, start with [orchestration](orchestration/README.md). This document is the empirical-analysis branch; a nonresearch task does not need to load the method table below.
+
 Choose the relevant skills for a compound research task. A focused explanation, annotation, presentation change or bug fix needs only the relevant steps. Roles describe responsibilities; combining skills does not require multiple agents or a separate review.
 
 ## Choose the method first

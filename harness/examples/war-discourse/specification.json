@@ -1,0 +1,18 @@
+{
+  "paper": "Hirshleifer, Mai and Pukthuanthong (2025), DOI 10.1111/jofi.13482",
+  "mode": "paper-first independent implementation; author programs and output workbooks remain unread",
+  "data_root": "examples/war-discourse/Disclosure Statement-20230479/input",
+  "output_root": "outputs/war-discourse-reproduction",
+  "primary_index": "War_base",
+  "index_mapping_basis": "Paper PDF page 11 reports a January 1871-October 2019 mean of 9.71%; War_base has mean 0.09710069; War_main has mean 0.08723316. Mapping was fixed before pricing estimation.",
+  "post_first_run_amendment": "Retain the original War_base specification and add a separately labelled published_series track using War_main and observed-month lags. The predeclared all-index sensitivity found the closest published numerical correspondence with this series. A later AR-window check excluded the pre-start lag and left small published discrepancies. Numerical correspondence does not establish seed-word provenance. Author code and author output workbooks remain unread.",
+  "pricing_sample": {"start": "1972-07", "end": "2016-12"},
+  "ar": {"start": "1926-01", "window": "expanding", "include_current": true, "min_pairs": 12, "primary_lag": "calendar month", "sensitivity_lag": "previous observed month", "basis": "Paper PDF pages 14-15, equations 3-4 and footnote 13; rolling window length and initial minimum are unspecified. Expanding estimation through the current month is an explicit implementation assumption."},
+  "two_pass": {"first_pass": "OLS with intercept over the full selected sample", "second_pass": "OLS of time-series average excess returns on a constant and full-sample estimated betas", "inference": "Shanken covariance with residual and factor covariance divisors T; factor covariance term included", "inference_sensitivity": "conditional covariance omitting factor covariance term, and residual degrees-of-freedom adjustment", "basis": "Paper PDF pages 14-15, equations 1-2; Table I-V notes. This is distinct from rolling-beta Fama-MacBeth."},
+  "portfolio_filter": "From test_portfolios_original.rds, select the stated sample, then retain assets with all monthly returns observed before applying factor availability. Preserve the supplied return units and record that excess-return provenance is not fully documented by generic column names.",
+  "nontraded_scaling": "Multiply each comparison factor by sd(WarFac)/sd(factor) on its own matched estimation sample; do not demean.",
+  "industry": {"sample_end": "2018-12", "window_calendar_months": 60, "minimum_complete_months": 60, "formation": "estimate betas through t-1; predict returns at t", "rank": "quintiles of crisis-related betas rescaled to [0,1]; FF3 betas unranked", "hac": "Bartlett, lag 6, no prewhitening, no finite-sample adjustment", "hac_sensitivity_lags": [0, 3, 12], "basis": "Paper PDF pages 37-38, equations 5-6. HAC lag and exact tie convention are unspecified; lag 6 and deterministic average-rank quintiles are explicit assumptions."},
+  "wmp": "Cross-sectional slopes on full-sample WarFac betas of the 360 tree portfolios; time-series projection excludes its intercept when constructing the mimicking return. Both are retrospective, not feasible trading strategies.",
+  "missing_inputs": ["Full rolling NYT corpus", "Firm characteristics, capitalizations and delisting records needed to reconstruct supplied portfolio returns", "Article-level topic weights for Appendix G"],
+  "comparison_policy": "Compare estimates with published tables only after the implementation and synthetic checks are written. Do not modify choices solely to reduce published discrepancies. Never read author code in this task."
+}

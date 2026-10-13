@@ -1,0 +1,37 @@
+# Native collaboration adapter
+
+`harness.runtime.native.NativeDispatcher` connects the existing SQLite task DAG to the host's actual `collaboration.spawn_agent` tool. It does not launch a model process, use an SDK, start tmux, or claim that preparing a packet ran an agent. Use it only when the user authorized delegation. Keep the same worker limit across hosts sharing a state directory.
+
+The adapter reuses `Engine` for readiness, input revisions, recovery, output fingerprints and real acceptance checks. Native request records and events live in the same database. Every request retains its unique attempt token, semantic role, advertised host agent type, exact tool arguments, full scoped packet and prompt, resource hashes, context metrics and observed outcome. The selected route determines the semantic role. A hyphenated role maps to an underscore host type only when that type is advertised; otherwise the default host type receives the explicit semantic role instructions. Every call uses `fork_turns="none"` and omits model and reasoning overrides.
+
+## Host sequence
+
+1. Run `native next --authorized` after configuring the actual worker limit and advertised types. The CLI runs ready local command tasks and returns compact envelopes containing the exact persisted `tool_args` for dependency-ready agent tasks. A prepared envelope is reviewable data, not a host tool call.
+2. Run `native begin --token TOKEN` immediately before the real tool call. Call the actual `collaboration.spawn_agent` with that envelope's `tool_args` exactly once. The durable `sending` boundary makes an interrupted call an unknown outcome.
+3. Run `native bind --token TOKEN --native-id CANONICAL_NAME` with the actual canonical name from the spawn result or host agent listing. The generated final name component must match the request; a canonical name can bind only one attempt. A late handle from a superseded request remains recorded for explicit reconciliation.
+4. Let the child execute its short bootstrap command, `native context --token TOKEN`. This loads only the selected role body, initial skills, scoped instruction, source/output/check pointers and read/return contracts. Each attempt permits one initial load. The budget includes the exact bootstrap and generated initial prompt, validated before claiming the task. The child is a leaf, owns only the declared outputs and must use `native read --token TOKEN --path PATH --start N --end N` for substantive source reads.
+5. Wait for an actual terminal host event, then use `native settle --token TOKEN --native-id CANONICAL_NAME --terminal-state completed --result-file RETURN_FILE`. Save the actual observed child return as `RETURN_FILE`; do not manufacture an absent result. The host may also report `failed` or `interrupted` with its observed final text.
+
+The CLI prefix is `python3 -B -m harness.runtime --root ROOT --manifest MANIFEST --state-dir STATE`. Generated commands shell-quote arguments and keep manifest/state paths relative to the workspace. The package must be importable from the checkout where the command runs. `native context` prints the prompt as text; `native read` prints only numbered UTF-8 source lines. The Python helpers return additional metrics for callers that need them.
+
+## Context and completion
+
+Default limits are two active requests, 16,000 initial characters, 40,000 cumulative read characters and 8,000 characters per source-read call. The helpers allow only declared input/reference files under the workspace, require inclusive valid line ranges, charge actual numbered characters returned, and log source hashes and UTF-8 byte counts. Repeated reads consume the cumulative budget. Role/skill resources and sources actually read must retain their hashes through settlement. These are cooperative context controls, not a filesystem sandbox; host permissions and workspace instructions still apply.
+
+A terminal `completed` event requires a JSON object with exactly `task`, `attempt_token`, `input_signature`, `status`, `artifacts`, `summary` and `unresolved`. Status must explicitly be `completed`, `needs_attention` or `failed`; missing status never passes. Artifacts must list exactly the declared output paths, summary is limited to 2,000 characters, unresolved is a list of strings, and the full return is limited to 6,000 characters. A completed deliverable may document unresolved findings; acceptance checks determine whether the deliverable itself is complete.
+
+The adapter first persists active `checking` state, then runs `Engine.complete` without holding the outbox's database reservation across subprocess checks. Independent workers can load context and read sources during acceptance. A guarded final transaction rechecks attempt ownership, input/output revisions and observed source/resource hashes before marking the native receipt `accepted`. A rejection leaves the matching task needing attention; it does not resend work. Exact duplicate accepted receipts are idempotent; changed handles or content are rejected. Recovery never makes an older return current.
+
+## Unknown outcomes and recovery
+
+`native status` reports request states, active/available capacity, initial/read metrics and unresolved dispatches. Prepared, sending, bound and checking requests occupy capacity. A recovered prepared request can be marked superseded safely because `begin` never committed. Sending requests cannot be reissued merely because the host stopped observing them. Inspect the actual host listing or tool error first.
+
+Known failed, rejected and interrupted receipts remain visible in request history. They require attention while their attempt is current, but no longer count as unresolved dispatches after explicit task recovery transfers ownership. Unknown sending outcomes and superseded live bound/checking requests remain unresolved until the host reconciles them, even if a newer attempt succeeds.
+
+Use `native resolve --token TOKEN --outcome not_started --reason OBSERVATION` only when a sending request definitively created no native agent. Use `--outcome stopped` only for a bound/checking worker the host observed stopped. The required reason is an attestation of that observation; the adapter cannot independently authenticate a host tool result. Resolution preserves history, releases native capacity, and marks a matching task needing attention. It never changes a newer attempt and never retries automatically. Then use ordinary `recover TASK --reason RESOLUTION` if another attempt is appropriate. A checking request left by an interrupted coordinator must also be reconciled explicitly.
+
+## Python interface and checks
+
+`NativeDispatcher(engine, max_workers=2, available_agent_types=("default",), max_initial_chars=16000, max_read_chars=40000, max_chunk_chars=8000)` exposes `prepare(authorized=False)`, `begin(token)`, `bind(token, native_id)`, `context(token)`, `source_read(token, path, start=1, end=None)`, `settle(token, native_id, terminal_state, final_text)`, `resolve(token, outcome, reason)` and `status()`.
+
+Run `python3 -B -m unittest harness.checks.test_native -v`. These checks cover dependency fanout/join, shared capacity, authorization, native identity and attempt ownership, bounded context, strict returns, actual output/check failures, stale sources, duplicate receipts, interrupted dispatches, explicit reconciliation and independent database access during acceptance. They use local handle fixtures to exercise the contract; a live host integration run is separate evidence.

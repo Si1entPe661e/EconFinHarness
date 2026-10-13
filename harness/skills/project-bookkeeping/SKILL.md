@@ -1,6 +1,6 @@
 ---
 name: project-bookkeeping
-description: Organize research tasks, files and progress with concise notes in the user's preferred format.
+description: Organize project files and lightweight notes in the user's existing system; route substantial planning and status work to focused capabilities.
 ---
 
 # Project organization
@@ -14,7 +14,7 @@ Use the user's existing system. A small task needs no project files; larger work
 - When moving a file, update links that depend on it.
 - Leave research design to the analyst and data or code changes to the implementer.
 
-`templates/project.md` is an optional starting point. Do not require event logs, asset databases or machine state files.
+`templates/project.md` is an optional starting point. Small tasks need no event log or machine state. For substantial planning use `project-planning`; for current progress use `project-status`; for resumable dependencies and execution use `task-orchestration`. Use the existing project system rather than maintaining competing copies.
 
 ## Skill composition
 

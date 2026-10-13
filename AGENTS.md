@@ -1,10 +1,13 @@
 # Repository guidance
 
-EconFinHarness provides empirical research skills, method guides and summaries of recorded research practice. Work from the research question and available files. Use only the relevant methods and keep ordinary tasks direct.
+EconFinHarness coordinates general project work, evidence-based writing and empirical research. Work from the requested outcome and available files. Use only relevant capabilities and keep ordinary tasks direct.
 
-## Research work
+## Task execution and research
 
-- For compound tasks, read `harness/skill-composition.md`. Select the main method before combining sample checks, estimation, inference and presentation.
+- For compound tasks, start with `harness/orchestration/README.md`. Select the relevant capability and load detail progressively. Research analyses then use `harness/skill-composition.md` to connect the main method, sample, inference and presentation.
+- Keep task dependencies, ownership, source revisions, actual check results and unresolved claims visible when they matter. Use the existing project engine or the optional local runtime for resumable work. A completion artifact is not proof that a substantive claim is true.
+- Dispatch bounded responsibilities with relevant paths and acceptance checks. Avoid full-history handoffs and loading every skill. One agent may execute serially; delegation should serve a concrete dependency, capacity or verification need.
+- Retry only classified, replay-safe work within a stated budget. Reconcile unknown external effects before resubmitting; preserve failed attempts and invalidate affected downstream work when sources change.
 - Keep the estimand, variable timing, weights, fixed effects, fitted sample and inference consistent across code, tables, figures and prose. Determine fixed effects and clustering separately.
 - Use actual model objects and numerical outputs. State missing information and distinguish static code reading, synthetic demonstrations and reproduction with original data.
 - Keep code observations, paper statements and methodological recommendations distinct. Cite papers by DOI or artid and retain relevant source lines or page pointers.
@@ -23,6 +26,8 @@ EconFinHarness provides empirical research skills, method guides and summaries o
 ## Editing and access
 
 Maintain repository documentation, code, comments and reusable prompts in English. Keep changes focused and preserve existing research material. Use repository-relative paths in maintained files and Conventional Commits for commit messages.
+
+For each code bug fixed, add a targeted check that exposes the failure and verifies the repair. Prefer applicable mature packages, projects or existing solutions over reimplementing them.
 
 Edit the shared skills and Markdown roles under `harness/`; preserve the root symlinks. Keep each Codex TOML role consistent with its corresponding Markdown role.
 

@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 0.4.0 - 2026-10-12
+
+- Add focused project planning, status, report writing, briefing, editing, evidence and recovery skills, with synchronized Codex and Claude Code roles.
+- Add general task routing and workflows while retaining empirical research as a specialized branch.
+- Keep skill and role use installation-free; document the optional Python coordination runtime separately for durable task state, checked artifacts, bounded retries and native host handoffs.
+- Add deterministic checks and authored general demonstrations, plus a native project delivery workflow that requires actual host agent returns.
+- Move detailed research records into linked references, preserving their exact content and keeping entrypoints focused.
+- Add paper-first replication guidance, a two-pass pricing reference and an independently written War Discourse example. Third-party data, source programs and PDFs remain external inputs.
+- Distribute maintained sources, checks and examples; exclude local corpora, datasets, third-party snapshots, private configuration and generated outputs.
+
 ## 0.3.1 - 2026-10-03
 
 - Replace host skill copies and Claude Code role copies with relative symlinks to shared files under `harness/`.
