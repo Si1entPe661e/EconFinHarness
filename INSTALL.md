@@ -1,4 +1,4 @@
-# Install and update from a terminal
+# Install, update and uninstall from a terminal
 
 Requirements: macOS, Linux or WSL; Bash, Git, Python 3.9+ and symlink support. The downloaded bootstrap also uses curl. No Python packages, model API key, administrator access or running coordination service are required.
 
@@ -52,6 +52,17 @@ curl -fsSL https://raw.githubusercontent.com/Si1entPe661e/EconFinHarness/main/in
 ```
 
 This fast-forwards the checkout and retargets the command to the root `install.py`.
+
+## Uninstall
+
+```bash
+econfinharness uninstall
+econfinharness uninstall --tool codex
+econfinharness uninstall --project /path/to/existing/project
+econfinharness uninstall --remove-checkout
+```
+
+`uninstall` removes the host links and the `econfinharness` command that this checkout installed. It removes a link only while it still points to the file or directory the installer linked, so replaced entries and other projects' skills stay. `--tool` removes one host and `--project` one project installation; the command stays while any installation remains. The managed checkout is kept unless you add `--remove-checkout`, which requires removing every host and project and refuses a checkout with local changes, untracked files or commits not on the remote. Pass `--prefix` for a custom location when running a separately downloaded script.
 
 ## Options and existing files
 

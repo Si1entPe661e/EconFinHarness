@@ -16,7 +16,7 @@ export PATH="$HOME/.local/bin:$PATH"
 econfinharness status
 ```
 
-The default installation serves Codex and Claude Code across projects. Update with `econfinharness update`; use `--tool codex` or `--tool claude` to select one host. Existing skills and configurations are preserved; `--skip-existing` keeps conflicting entries and reports them. See [installation options and project setup](INSTALL.md) for a download-then-run command, custom paths and project-scoped roles.
+The default installation serves Codex and Claude Code across projects. Update with `econfinharness update` and remove it with `econfinharness uninstall`; use `--tool codex` or `--tool claude` to select one host. Existing skills and configurations are preserved; `--skip-existing` keeps conflicting entries and reports them. See [installation options and project setup](INSTALL.md) for a download-then-run command, custom paths and project-scoped roles.
 
 Alternatively, clone the repository and use its project configuration directly:
 

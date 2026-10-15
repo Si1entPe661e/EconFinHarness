@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install and update EconFinHarness with Git and the Python standard library."""
+"""Install, update and uninstall EconFinHarness with Git and the Python standard library."""
 import argparse
 import fcntl
 import json
@@ -272,6 +272,48 @@ def update(root, skip_existing):
         return result
 
 
+def uninstall(root, project, tools, remove_checkout):
+    with installation_lock(root):
+        state = read_state(root)
+
+        def selected(target):
+            return project is None or (target["scope"], target["base"]) == ("project", str(project))
+
+        if project is not None and not any(selected(t) for t in state["targets"]):
+            raise InstallError(f"No installation record for project {project}.")
+        targets = [{**t, "tools": [tool for tool in t["tools"] if not selected(t) or tool not in tools]}
+                   for t in state["targets"]]
+        targets = [t for t in targets if t["tools"]]
+        if remove_checkout:
+            if targets:
+                raise InstallError("--remove-checkout needs every host and project removed. Nothing was changed.")
+            if git(root, "status", "--porcelain", "--untracked-files=all").stdout:
+                raise InstallError("Local changes or untracked files exist. Nothing was changed.")
+            ahead = git(root, "rev-list", "--count", "@{upstream}..HEAD", check=False)
+            if ahead.returncode or ahead.stdout.strip() != "0":
+                raise InstallError("Local commits are not on the remote. Nothing was changed.")
+        command = Path(state["bin_directory"]) / "econfinharness"
+        keep = {command: root / "install.py"} if targets else {}
+        for target in targets:
+            keep.update(target_links(root, target))
+        removed = []
+        for destination, source in {**state["links"], **legacy_skill_links(root, state["targets"])}.items():
+            path = Path(destination)
+            # Only symlinks that still point to what this checkout installed are removed.
+            if path not in keep and path.is_symlink() and path.resolve() == Path(source).resolve():
+                path.unlink()
+                removed.append(destination)
+        if targets:
+            state.update(targets=targets, links={p: s for p, s in state["links"].items() if Path(p) in keep})
+            save_state(root, state)
+        else:
+            state_path(root).unlink()
+        if remove_checkout:
+            shutil.rmtree(root)
+        return {"prefix": str(root), "removed_links": removed, "targets": targets,
+                "checkout_removed": remove_checkout, "command": str(command) if targets else None}
+
+
 def describe(root, state):
     missing = [p for p, source in state["links"].items()
                if not Path(p).exists() or Path(p).resolve() != Path(source).resolve()]
@@ -288,7 +330,7 @@ def main(argv=None, user_directory=None):
     user_directory = Path(user_directory or Path.home()).resolve()
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
-    for action in ("install", "update", "status"):
+    for action in ("install", "update", "status", "uninstall"):
         command = subparsers.add_parser(action)
         command.add_argument("--prefix", type=Path, help="Managed checkout directory.")
         if action in ("install", "update"):
@@ -296,9 +338,15 @@ def main(argv=None, user_directory=None):
         if action == "install":
             command.add_argument("--repo", default=REPOSITORY, help="Git repository URL; defaults to the public GitHub repository.")
             command.add_argument("--branch", default="main")
-            command.add_argument("--tool", choices=("codex", "claude", "both"), default="both")
-            command.add_argument("--project", type=Path, help="Install for this project instead of all user projects.")
             command.add_argument("--bin-dir", type=Path, help="Command directory; defaults to ~/.local/bin.")
+        if action in ("install", "uninstall"):
+            command.add_argument("--tool", choices=("codex", "claude", "both"), default="both")
+            command.add_argument("--project", type=Path, help=(
+                "Install for this project instead of all user projects." if action == "install"
+                else "Remove only this project's installation."))
+        if action == "uninstall":
+            command.add_argument("--remove-checkout", action="store_true",
+                                 help="Also delete the managed checkout when it has no local changes or commits.")
     args = parser.parse_args(argv)
     if not shutil.which("git"):
         parser.error("Git is required. Install it before running this script.")
@@ -312,11 +360,12 @@ def main(argv=None, user_directory=None):
         parser.error("The installation prefix must not be a symlink.")
     root = root.resolve()
     try:
+        if args.command in ("install", "uninstall"):
+            tools = ["codex", "claude"] if args.tool == "both" else [args.tool]
+            project = args.project.expanduser().resolve() if args.project else None
         if args.command == "install":
             if args.branch.startswith("-"):
                 raise InstallError("Branch names must not start with '-'.")
-            tools = ["codex", "claude"] if args.tool == "both" else [args.tool]
-            project = args.project.expanduser().resolve() if args.project else None
             if project and not project.is_dir():
                 raise InstallError("--project must name an existing project directory.")
             bin_directory = (args.bin_dir or user_directory / ".local/bin").expanduser().absolute()
@@ -324,13 +373,17 @@ def main(argv=None, user_directory=None):
                              tools, project, args.skip_existing)
         elif args.command == "update":
             result = update(root, args.skip_existing)
+        elif args.command == "uninstall":
+            result = uninstall(root, project, tools, args.remove_checkout)
         else:
             result = describe(root, read_state(root))
         print(json.dumps(result, indent=2))
-        if args.command != "status":
+        if args.command in ("install", "update"):
             print("Open a new Codex or Claude Code session to discover installed skills.")
             print("If the command is not on PATH, run it using the full 'command' path above.")
-        return 0 if not result["missing_or_changed_links"] else 1
+        elif args.command == "uninstall":
+            print("Open a new Codex or Claude Code session so hosts stop listing removed skills.")
+        return 0 if not result.get("missing_or_changed_links") else 1
     except (InstallError, OSError, ValueError) as exc:
         print(f"econfinharness: {exc}", file=sys.stderr)
         return 1
