@@ -24,4 +24,4 @@ Deliver a plain-language finding list or review note. The responsible author can
 
 Use harness/skill-composition.md to identify the relevant method and common sample/inference/output checks within the requested review. Examine whether the reported estimand, fitted sample, FE, weights and uncertainty reach the table or claim. Read tables-figures-efh when checking exports, and the actual method skill for its diagnostics.
 
-Review only the affected chain; an optional review does not become a prerequisite for all tasks. Distinguish an export bug from a sample/model/inference problem and suggest the appropriate return point.
+Review only the affected chain; an optional review does not become a prerequisite for all tasks. Check placement, scaffolding and missing boundary checks across a pipeline belong to `pipeline-reviewer` (harness/workflows/pipeline-review.md). Distinguish an export bug from a sample/model/inference problem and suggest the appropriate return point.

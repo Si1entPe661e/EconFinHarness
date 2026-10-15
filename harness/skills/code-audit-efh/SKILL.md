@@ -12,6 +12,7 @@ Use this skill when the user requests a code or research check, or a concrete un
 - Assess inference against assignment and dependence, including cluster counts and small-sample concerns.
 - Trace the relevant output to its estimate; compare table notes and manuscript interpretation with the code and results.
 - Distinguish main specifications, diagnostics and robustness exercises.
+- For check placement, scaffolding or missing boundary checks across a pipeline of several scripts, use `pipeline-review-efh` ([pipeline review](../../workflows/pipeline-review.md)).
 - For each meaningful issue, explain its location, evidence, effect and suggested correction. Separate confirmed problems from methodological risks and missing material.
 - Say what you did not run or could not inspect. A working script alone does not settle identification.
 

@@ -39,6 +39,10 @@ config_file = "../harness/agents/codex/orchestrator.toml"
 description = "Read a paper and record its research practice when a new reading is explicitly requested."
 config_file = "../harness/agents/codex/paper-note-reader.toml"
 
+[agents.pipeline_reviewer]
+description = "Review a multi-script research pipeline before delivery, check-only; keep guards at consequential data boundaries and find misplaced comparison, variant and run code and missing boundary checks, with evidence for each finding."
+config_file = "../harness/agents/codex/pipeline-reviewer.toml"
+
 [agents.project_manager]
 description = "Maintain evidence-based project status, dependencies, delivery risks and handoffs across domains."
 config_file = "../harness/agents/codex/project-manager.toml"

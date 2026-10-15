@@ -34,16 +34,12 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 
 ## Software commands
 
-[code-examples.md](code-examples.md) contains sharp/fuzzy rdrobust, rddensity, plotting and bandwidth sensitivity in R, plus Stata calls.
-
-The existing [R template](templates/rd_analysis.R) is available when useful. Its support-count gates are local conventions, not universal thresholds; its positive-first-stage check requires treatment coding to match that orientation. Its kink branch estimates an outcome slope change only. A kink effect additionally requires the policy or treatment slope change and corresponding inference.
+[code-examples.md](code-examples.md) contains sharp/fuzzy rdrobust, rddensity, plotting, bandwidth sensitivity and counts of observations, support points and clusters inside the bandwidth in R, plus Stata calls. A kink effect needs the policy or treatment slope change and its inference, not only the outcome slope change.
 
 ## Outputs and missing information
 
 Return the estimate and interval, bandwidths, kernel/order, cutoff, effective observations on each side, first-stage jump if fuzzy, and RD plots. If support or compliance is insufficient, explain the limitation without treating a software output as a credible causal estimate.
 
-Use [checklist.md](checklist.md) as needed.
-
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/rdd/`: code observations in `observed.md` and paper statements in `reported.md`, kept apart from the recommendations in `recommendations.md`.

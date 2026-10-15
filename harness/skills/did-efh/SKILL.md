@@ -41,18 +41,10 @@ Method skill for difference-in-differences (DID) and event studies. It covers th
 
 Read [design and estimation details](references/design-and-estimation.md) for the applicable estimator branch, diagnostics and missing-information rules. Use [code-examples.md](code-examples.md) only for the selected language and command; avoid loading every estimator's examples.
 
-## Checklist
-
-See `checklist.md`.
-
 ## Skill composition
 
 For a compound analysis, read harness/skill-composition.md and combine this method with relevant panel-data-checks-efh, inference-clustering-efh and tables-figures-efh steps. Preserve this method's estimand and specialized inference; generic clustering or export must not replace them. Use the actual fitted/evaluation sample, weights, FE and numerical results throughout. Revisit affected steps when sample, identification, covariance or prediction splits change; load other methods only for a relevant design branch.
 
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
-
-## Templates
-
-- None tested yet. The RD template shows the intended structure (prepare, estimate with explicit options, diagnostics, report); a DID template with synthetic staggered data and a planted negative-weight case is the next milestone item.
+Recorded practice is in `harness/paradigms/did/` and `harness/paradigms/event_study/`: code observations in `observed.md` and paper statements in `reported.md`, kept apart from the recommendations in `recommendations.md`.

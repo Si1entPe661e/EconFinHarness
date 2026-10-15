@@ -40,6 +40,11 @@ ivregress 2sls y y_baseline i.block (received = assigned), vce(cluster school)
 estat firststage
 regress y ib0.arm y_baseline i.block, vce(cluster school)
 test 1.arm 2.arm
+* Heterogeneity by baseline group g: group main effects and group-by-arm terms
+regress y ibn.g#i(1 2).arm i.g y_baseline i.block, vce(cluster school)
+* Missing baseline covariate: constant fill plus an indicator
+gen byte x_miss = missing(x)
+replace x = 0 if x_miss
 ~~~
 
 For independent individual randomization with no additional dependence, heteroskedastic robust covariance may suffice. Unequal probabilities and pair-randomized designs require the corresponding design treatment.

@@ -12,8 +12,8 @@ installer_directory=""
 if [[ -n "${BASH_SOURCE[0]:-}" ]]; then
   installer_directory="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 fi
-if [[ -n "$installer_directory" && -f "$installer_directory/harness/maintenance/install.py" ]]; then
-  exec python3 "$installer_directory/harness/maintenance/install.py" "$@"
+if [[ -n "$installer_directory" && -f "$installer_directory/install.py" && -f "$installer_directory/harness/VERSION" ]]; then
+  exec python3 "$installer_directory/install.py" "$@"
 fi
 
 if ! command -v curl >/dev/null 2>&1; then
@@ -23,6 +23,6 @@ fi
 installer_temporary="$(mktemp -d)"
 trap 'rm -rf -- "$installer_temporary"' EXIT
 curl --fail --silent --show-error --location \
-  "https://raw.githubusercontent.com/Si1entPe661e/EconFinHarness/main/harness/maintenance/install.py" \
+  "https://raw.githubusercontent.com/Si1entPe661e/EconFinHarness/main/install.py" \
   --output "$installer_temporary/install.py"
 python3 "$installer_temporary/install.py" "$@"

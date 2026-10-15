@@ -16,7 +16,7 @@ export PATH="$HOME/.local/bin:$PATH"
 econfinharness status
 ```
 
-The default installation serves Codex and Claude Code across projects. Update with `econfinharness update`; use `--tool codex` or `--tool claude` to select one host. Existing skills and configurations are preserved; `--skip-existing` keeps conflicting entries and reports them. See [installation options and project setup](harness/maintenance/README.md) for a download-then-run command, custom paths and project-scoped roles.
+The default installation serves Codex and Claude Code across projects. Update with `econfinharness update`; use `--tool codex` or `--tool claude` to select one host. Existing skills and configurations are preserved; `--skip-existing` keeps conflicting entries and reports them. See [installation options and project setup](INSTALL.md) for a download-then-run command, custom paths and project-scoped roles.
 
 Alternatively, clone the repository and use its project configuration directly:
 
@@ -25,7 +25,7 @@ git clone https://github.com/Si1entPe661e/EconFinHarness.git
 cd EconFinHarness
 ```
 
-Open your working project in Codex or Claude Code; after a direct clone, open this repository as the project root to use its role configurations. In Codex, trust the project when prompted so its role settings can load. Open a new session after installing skills. No analysis package installation or local runtime startup is required to use the guides. Start with a concrete request and the location of your inputs, for example:
+Open your working project in Codex or Claude Code; after a direct clone, open this repository as the project root to use its role configurations. In Codex, trust the project when prompted so its role settings can load. Open a new session after installing skills. No analysis package installation is required to use the guides. Start with a concrete request and the location of your inputs, for example:
 
 > Inspect this project's actual files and progress. Prepare a delivery plan with dependencies, owners and acceptance criteria, then implement the authorized next steps. Keep verified completion separate from planned work.
 
@@ -43,31 +43,24 @@ Replace the example paths and variable names with your own. Empirical analyses r
 
 | Task | Entry point |
 |---|---|
-| Install globally, set up a project or update | [Terminal installer](harness/maintenance/README.md) |
+| Install globally, set up a project or update | [Terminal installer](INSTALL.md) |
 | Coordinate tasks, evidence and recovery | [General orchestration](harness/orchestration/README.md) |
 | Plan or maintain a project | [Project management](harness/workflows/project-management.md) |
-| Write reports, briefings or revisions | [Reports](harness/workflows/write-report.md), [briefings](harness/workflows/prepare-briefing.md), [editing](harness/workflows/edit-document.md) |
+| Write reports, briefings or revisions | [Reports](harness/workflows/write-report.md), [briefings](harness/workflows/prepare-briefing.md), [editing](harness/workflows/edit-document.md), final [defensive-writing and logic revision](harness/workflows/revise-writing.md) |
 | Choose and combine research skills | [Skill composition](harness/skill-composition.md) |
 | Implement an empirical analysis | [Analysis workflow](harness/workflows/empirical-analysis.md) |
 | Export tables and scientific figures | [Presentation workflow](harness/workflows/present-results.md) |
 | Read estimation commands | [Skills and methods](harness/README.md) |
 | Study summaries of recorded research practice | [Method materials](harness/paradigms/README.md) |
 | Start from a reusable task prompt | [Task prompts](harness/presets/README.md) |
-| Independently reproduce a paper without reading author code | [Paper-first workflow](harness/workflows/paper-first-replication.md) and [War Discourse example](harness/examples/war-discourse/README.md) |
-
-## Optional advanced workflows
-
-The [local coordination adapter](harness/orchestration/runtime.md) records task dependencies, checkpoints, source revisions, execution attempts and evidence for work that needs durable recovery. It requires Python 3.9+ and its standard library. It runs on demand, calls no model itself, and can wrap an existing project workflow engine. Ordinary skill and role use does not require it.
-
-The [general demonstrations](harness/examples/general/README.md) exercise these contracts with authored fixtures. The [native host bridge](harness/orchestration/native.md) and [real project workflow](harness/examples/native-project/README.md) additionally require an active host agent to dispatch authorized native agents and observe their returns. Python alone does not launch those agents.
-
-Maintainers can run the [implementation checks](harness/checks/README.md) from a fresh clone without local research data or corpus files.
+| Independently reproduce a paper without reading author code | [Paper-first workflow](harness/workflows/paper-first-replication.md) |
 
 ## Repository content and tool entry points
 
 | Directory | Purpose |
 |---|---|
-| `harness/` | Focused skills/roles, methods, workflows, checks, task prompts and optional coordination runtime |
+| `harness/` | Focused skills/roles, methods, workflows and task prompts; guides only, no runners, tests or runtimes |
+| `install.sh`, `install.py` | Terminal installer described in [INSTALL.md](INSTALL.md) |
 | `.agents/skills` | Relative symlink to `harness/skills/` for Codex discovery |
 | `.claude/skills` | Relative symlink to the same skills |
 | `.claude/agents` | Relative symlink to `harness/agents/` for Claude Code roles |
@@ -79,7 +72,7 @@ Use a Git clone with symlink support; the tool entry points are relative links w
 
 ## Distribution
 
-The public repository contains focused skills and roles, workflows, checks, authored demonstrations, method guides, existing summaries of recorded research practice and the optional coordination adapter. Code observations, paper statements and methodological recommendations have different evidentiary roles; practice frequencies do not establish validity. Execution success, artifact freshness and claim support are recorded separately.
+The public repository contains focused skills and roles, workflows, task prompts, method guides, existing summaries of recorded research practice and the terminal installer. `harness/` holds guides only; demonstrations, runners, test suites and coordination runtimes are maintained locally and are not distributed. Code observations, paper statements and methodological recommendations have different evidentiary roles; practice frequencies do not establish validity. Execution success, artifact freshness and claim support are recorded separately.
 
 Workstation-only collection/build tools, standalone code cards and paper notes, the full article catalog, original replication source trees, research datasets, paper PDFs, extracted full text, search databases and generated run outputs are not distributed. Historical input pointers in method summaries describe their original source records. References to `Paper/<Journal>/articles/<artid>/` identify original source locations rather than files bundled here. Use the recorded DOI or repository link to locate the original publication or code under its own access and license terms.
 

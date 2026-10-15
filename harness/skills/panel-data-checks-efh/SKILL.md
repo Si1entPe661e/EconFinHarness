@@ -23,21 +23,19 @@ Unit of observation, intended key, time frequency, outcome and regressors, treat
 2. Parse dates and identifiers consistently, preserving leading zeros. Confirm frequency, sorting and time gaps. A previous row is a calendar lag only when the time index is consecutive.
 3. Count units, periods, observations per unit, singleton FE groups and cluster sizes. Inspect entry/exit and balanced-panel restrictions for selection; compare estimator N with the intended sample after singleton/collinearity removal.
 4. Check every merge's cardinality and matched/unmatched keys. Inspect fan-out and differential unmatched rates across treatment or time. A successful join is not evidence of a correct match.
-5. Apply restrictions sequentially and explain major losses. Check missingness for outcomes, every model term, instruments, weights, FE and clusters. Do not change the sample unintentionally when comparing models.
+5. Apply restrictions sequentially and explain major losses. Check missingness for outcomes, every model term, instruments, weights, FE and clusters. Do not change the sample unintentionally when comparing models. A derived indicator keeps a missing source missing until a declared fill rule; count missing sources per derived variable before filling. Comparisons such as `x != 1` or `x > 0` are true for a missing value in Stata, and conditional helpers in R and pandas can turn a missing source into 0.
 6. Check treatment cohorts, treatment before recorded adoption, reversals and event-time coding. The never-treated sentinel must match the estimator. Eligibility, assignment and treatment received are distinct variables.
-7. Inspect ranges, units, special missing codes, transformations and outliers. Map columns to source definitions using documented meaning and independent diagnostics; names such as `main`, `base` or `original` do not establish provenance, excess-return treatment or the upstream estimation procedure. Distinguish supplied intermediate data from transformations independently reproduced. Logs exclude nonpositive values; zero and missing are different. Winsorization needs a substantive rule and must not use future observations when constructing predictions or portfolio signals.
+7. Inspect ranges, units, special missing codes, transformations and outliers. For a declared discrete scale, list values off its support: non-integers, out-of-range values and stored nonresponse codes such as 7, 77, 98 or 99, negative codes and decimal placeholders; record a rule and its alternative. A regressor that is constant on all but one or two fitted rows acts as an observation dummy. Before totalling to a higher level, confirm the component is not already copied to every member row. When a concept has several measurements or informants, follow [variable construction](references/variable-construction.md). Map columns to source definitions using documented meaning and independent diagnostics; names such as `main`, `base` or `original` do not establish provenance, excess-return treatment or the upstream estimation procedure. Distinguish supplied intermediate data from transformations independently reproduced. Logs exclude nonpositive values; zero and missing are different. Winsorization needs a substantive rule and must not use future observations when constructing predictions or portfolio signals.
 8. Check weights for missingness, sign and extreme concentration; distinguish sampling, analytic, frequency and portfolio weights. Decide how zero weights are treated by the estimator.
 9. Inspect the final fitted sample and cluster counts. Return the important issues and their effect on sample construction, with small summaries when useful.
 
 ## Software commands
 
-[code-examples.md](code-examples.md) provides duplicate inspection, validated merges, calendar-aware lags, treatment reversal checks and weight/missingness checks in Python, R and Stata.
+[code-examples.md](code-examples.md) provides duplicate inspection, validated merges, calendar-aware lags, treatment reversal checks and weight/missingness checks in Python, R and Stata, plus fitted-sample boundary counts and missing-value behavior in four runtimes.
 
 ## Missing information and outputs
 
 When data are unavailable, explain which properties cannot be checked. Return the intended/fitted N, units/periods, merge losses and unresolved variable issues that matter to the analysis. A short note or sample-flow table is enough; use existing templates only when useful.
-
-[checklist.md](checklist.md) is optional.
 
 ## Skill composition
 
@@ -45,4 +43,4 @@ For compound tasks, consult harness/skill-composition.md and read only relevant 
 
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.

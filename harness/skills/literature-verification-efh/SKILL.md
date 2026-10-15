@@ -56,7 +56,7 @@ For compound tasks, consult harness/skill-composition.md and read only relevant 
 
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.
 
 ## Templates
 

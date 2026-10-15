@@ -18,7 +18,5 @@ Read only the relevant detail:
 - [Dispatch and context](../../orchestration/dispatch.md): task decomposition, context bounds, fan-out and handoffs.
 - [Task and evidence contracts](../../orchestration/contracts.md): durable state and completion semantics.
 - `failure-recovery-efh`: an actual failed or interrupted task.
-- [Local runtime](../../orchestration/runtime.md): CLI checkpoints, command execution or native-agent packets when durable coordination helps.
-- [Native host dispatch](../../orchestration/native.md): automatic ready-task selection, fresh scoped role loading, observed agent handles, bounded source reads and terminal receipts. An active host orchestrator forwards generated native tool calls; unknown launch outcomes require reconciliation.
 
 Deliver the requested work plus its material unresolved items. Coordination files support execution; they do not replace it.

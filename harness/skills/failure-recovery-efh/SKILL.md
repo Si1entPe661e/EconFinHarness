@@ -17,6 +17,6 @@ Inspect the failed attempt, error, current artifacts and affected dependencies b
 
 Never treat a partial return, absent reviewer, stale file or exhausted retry budget as success. Propagate blocked dependencies while continuing independent work. A recovery changes execution status; it does not silently change the user's objective or a domain assumption.
 
-For the local adapter, read [runtime recovery](../../orchestration/runtime.md#recovery). Its automatic retries require declared replay safety and matching exit codes; failed validation is not transient. Each code bug repaired needs a check that exposes the original failure.
+Automatic retries require declared replay safety and a matching failure class; failed validation is not transient. Each code bug repaired needs a check that exposes the original failure.
 
-For a native spawn with an absent receipt, use [native reconciliation](../../orchestration/native.md). Inspect the host's actual agent state before binding or resolving the request. A lost response is not proof that launch failed; a superseded worker still occupies capacity until its outcome is reconciled.
+For a delegated agent with an absent return, inspect the host's actual agent state before re-dispatching. A lost response is not proof that launch failed; a superseded worker still occupies capacity until its outcome is reconciled.

@@ -6,4 +6,4 @@ Organize the requested prose around the question, identification/model, sample, 
 
 For missing results or conflicts between tables and prose, state the specific gap and return to the affected estimation/export step while completing unaffected text. Cite verified DOI/artid sources.
 
-Deliver the requested manuscript text, notes or response. The `writer` responsibility can be handled by the current agent.
+Before delivery, run the [revise module](revise-writing.md) unless its skip conditions apply: defensive writing, then logic, then the fact comparison. Deliver the requested manuscript text, notes or response. The `writer` responsibility can be handled by the current agent.

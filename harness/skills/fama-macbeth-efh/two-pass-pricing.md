@@ -24,5 +24,3 @@ Useful checks include:
 - Means, MAPE, raw and adjusted cross-sectional R-squared are explicitly distinguished. Compare each against the quantity named in the paper.
 - Rolling betas never use target-month or future returns. Handle missing asset histories per asset rather than discarding all earlier dates because one asset starts late.
 - After missing months, an observation lag differs from a calendar lag. Label both when a source leaves the convention ambiguous. For HAC, missing months must not become adjacent observations.
-
-An independently written, runnable implementation and synthetic checks are in `harness/examples/war-discourse/methods.R` and `checks.R`. OLS uses base R QR routines; HAC uses the installed `sandwich` backend. Its source guards and data inputs belong to that example, not to every research task.

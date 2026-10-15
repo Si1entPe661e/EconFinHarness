@@ -35,6 +35,13 @@
       "document-editing-efh"
     ]
   },
+  "final-revision": {
+    "role": "editor",
+    "skills": [
+      "defensive-writing-check-efh",
+      "logic-check-efh"
+    ]
+  },
   "academic": {
     "role": "writer",
     "skills": [
@@ -54,6 +61,18 @@
   "implementation": {
     "role": "code-engineer",
     "skills": []
+  },
+  "code-audit": {
+    "role": "reviewer",
+    "skills": [
+      "code-audit-efh"
+    ]
+  },
+  "pipeline-review": {
+    "role": "pipeline-reviewer",
+    "skills": [
+      "pipeline-review-efh"
+    ]
   },
   "literature": {
     "role": "literature",

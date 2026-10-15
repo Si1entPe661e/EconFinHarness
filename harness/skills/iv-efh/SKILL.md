@@ -40,8 +40,6 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 
 Return the estimate and interval, first-stage results, reduced form, sample size, FE, weights, covariance choice and cluster count. Explain the instrument and estimand in plain language. Missing exclusion or assignment information remains an unresolved design question; a successful estimation call does not resolve it.
 
-The existing [checklist.md](checklist.md) is optional.
-
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/iv/`: code observations in `observed.md` and paper statements in `reported.md`, kept apart from the recommendations in `recommendations.md`.

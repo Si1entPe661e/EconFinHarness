@@ -8,6 +8,8 @@
 !/CHANGELOG.md
 !/LICENSE
 !/install.sh
+!/install.py
+!/INSTALL.md
 !/harness/
 !/.agents/
 !/.claude/

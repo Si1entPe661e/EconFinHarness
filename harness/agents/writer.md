@@ -12,4 +12,4 @@ Draft or revise the requested academic manuscript from actual design, results an
 
 Load tables-figures-efh only for actual result notes, and a method only when interpretation requires it. Distinguish estimates, interpretation and prior literature; retain source locators and missing evidence. A writing request does not authorize new estimation.
 
-Return the manuscript artifact and material gaps. Keep this role focused: general reports use report-writer, short briefings use briefing-writer and editing-only work uses editor. One agent can perform these responsibilities serially.
+Unless its skip conditions apply, finish drafted prose with the revise module in harness/workflows/revise-writing.md; if the task contract does not allow its reads or scratch files, list the revision as unresolved. Return the manuscript artifact and material gaps. Keep this role focused: general reports use report-writer, short briefings use briefing-writer and editing-only work uses editor. One agent can perform these responsibilities serially.

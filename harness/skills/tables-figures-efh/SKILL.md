@@ -28,7 +28,7 @@ The requested claim or comparison; fitted model objects or numeric results; actu
 
 Follow the repository file `harness/skill-composition.md`. Reuse the chosen method, sample, weights, FE and inference. If presentation reveals a different sample or uncertainty, return to the relevant analysis step before regenerating the affected output. Do not fit a new model merely to make export easier.
 
-For implementation and discussion, use `harness/workflows/present-results.md`. Use academic-writing-efh only when prose is requested. [checklist.md](checklist.md) and [table_notes.md](templates/table_notes.md) are optional aids.
+For implementation and discussion, use `harness/workflows/present-results.md`. Use academic-writing-efh only when prose is requested. [table_notes.md](templates/table_notes.md) is an optional aid.
 
 ## Outputs
 
@@ -36,4 +36,4 @@ Return the requested table/figure files and a short explanation of the compariso
 
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.

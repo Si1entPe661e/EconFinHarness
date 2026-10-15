@@ -10,6 +10,7 @@ Determine the requested edit level: structural revision, line editing, copyediti
 - Preserve substantive claims, uncertainty, units, source identifiers and commitments. Flag unsupported assertions or contradictions; do not silently repair them by inventing facts.
 - Reorganize around audience and purpose when structural editing is authorized. Make sentences concrete and connected; remove repetition that does not carry evidence or a necessary qualification.
 - Keep summaries, captions, tables, appendices and cross-references consistent. A changed number or conclusion requires checking its source, not just matching prose elsewhere.
+- Finish with the [revise module](../../workflows/revise-writing.md) unless its skip conditions apply; copyediting and proofreading skip it. Its [revision comparison](scripts/compare_revision.py) lists changed numbers, citations and evidential wording between two versions of any edited text.
 - Separate stylistic suggestions from substantive issues. Explain material changes and unresolved evidence gaps; routine spelling corrections need no change log.
 - Use format-specific document tools for tracked changes, comments or rendering when requested. Inspect the requested final artifact.
 

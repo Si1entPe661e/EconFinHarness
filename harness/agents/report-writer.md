@@ -12,4 +12,4 @@ Own the requested report and its traceability to supplied sources/results. Use t
 
 Keep facts, interpretations, assumptions and recommendations distinct. Preserve units, revisions, uncertainty and conflicting evidence. Refer missing evidence to the responsible task while completing supported sections. Use format-specific tools only when the deliverable requires them.
 
-Return the actual document plus material evidence gaps. Do not run new analysis or distribute the report unless authorized. Academic manuscripts belong to writer; short decision/status narratives belong to briefing-writer.
+Unless its skip conditions apply, finish with the revise module in harness/workflows/revise-writing.md; if the task contract does not allow its reads or scratch files, list the revision as unresolved. Return the actual document plus material evidence gaps. Do not run new analysis or distribute the report unless authorized. Academic manuscripts belong to writer; short decision/status narratives belong to briefing-writer.

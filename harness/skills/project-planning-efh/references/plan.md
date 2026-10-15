@@ -6,4 +6,4 @@ For a decision, record the question, alternatives considered, selected choice, r
 
 For handoff, include current revision, work completed with evidence, remaining checks, known failures, the next executable action and output ownership. A list of filenames without their status is insufficient; a full transcript is unnecessary.
 
-Use the local runtime only when machine execution or cross-session dependencies warrant it. A document, issue tracker or spreadsheet can be the project system; avoid maintaining conflicting copies of status.
+Use a workflow engine only when machine execution or cross-session dependencies warrant it. A document, issue tracker or spreadsheet can be the project system; avoid maintaining conflicting copies of status.

@@ -49,7 +49,3 @@
 | Relevant but does not support the claim | `relevant_not_supporting` | one sentence on what the paper does establish |
 | Local code expected but absent | `code_absent` or `link_only` | the metadata link if one exists, and the collector's status |
 | Scope not specified by the requester | `assumed_scope` | the assumed journals, years, and methods |
-
-## Checklist
-
-See [checklist.md](../checklist.md). Every item accepts yes, no, or unknown. `unknown` is a legitimate answer and is not `no`.

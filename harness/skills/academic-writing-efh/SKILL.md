@@ -17,7 +17,7 @@ Use the available plan, actual results, figures and literature. Do not require a
 - For a long manuscript, `templates/claims_to_evidence.md` can help connect key claims to outputs. It is optional; individual paragraphs do not need a separate mapping file.
 - If the underlying results change, revisit the affected text as needed.
 
-Deliver the requested draft or revision. Table notes and pending items can be included in the same document.
+Before delivery, run the [revise module](../../workflows/revise-writing.md) unless its skip conditions apply: `defensive-writing-check-efh`, then `logic-check-efh`, then the fact comparison. Deliver the requested draft or revision. Table notes and pending items can be included in the same document.
 
 ## Skill composition
 
@@ -25,4 +25,4 @@ For compound tasks, consult harness/skill-composition.md and read only relevant 
 
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.

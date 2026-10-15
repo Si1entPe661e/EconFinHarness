@@ -38,12 +38,10 @@ Estimating equation, fitted sample, assignment/sampling mechanism, repeated obse
 
 Return the covariance choice and rationale, cluster counts or time/spatial tuning parameters, interval/test details and any material limitation. If assignment or dependence is unknown, explain the candidate choices instead of silently selecting one.
 
-Use [checklist.md](checklist.md) or the existing trace note when useful; no additional plan file is required.
-
 ## Skill composition
 
 For compound tasks, consult harness/skill-composition.md and read only relevant skills. Work with the selected method and actual fitted sample. Preserve specialized RD, matching, weak-IV, randomization or forecast inference where required. Return selected covariance/test results and reference-distribution choices to implementation and tables-figures-efh; changing inference requires updating affected intervals, p-values, stars and claims.
 
 ## Research records
 
-Read [research records](references/research-records.md) only when recorded practice or corpus evidence is relevant. These records are distinct from methodological recommendations.
+Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.

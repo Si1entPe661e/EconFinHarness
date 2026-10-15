@@ -12,6 +12,7 @@ Fit the audience, available time and requested medium. A briefing can be written
 - Distinguish decisions needed from routine next actions already authorized. State a recommendation and viable alternatives with their material tradeoffs when a decision is needed.
 - For status updates, separate verified completion, work in progress, blockers, forecast and next actions. Do not report aspirations as progress.
 - For slides, give each slide one purpose, a claim supported by its content and a clear place in the narrative. Use the available presentation tool for layout and rendering.
+- Run the [revise module](../../workflows/revise-writing.md) before delivery unless its skip conditions apply. Alternatives, risks, blockers and status the decision needs stay in the briefing.
 - Finish with the concrete action, owner if known and timing if agreed. Do not invent commitments or send the briefing to others without authorization.
 
 Use `project-status-efh` to establish current project facts, `report-writing-efh` for a full report and `document-editing-efh` for revision of supplied prose.

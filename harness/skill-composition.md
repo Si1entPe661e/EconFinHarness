@@ -39,8 +39,8 @@ Skills live at `harness/skills/<name>/SKILL.md`. Method choice is a research jud
 2. **Construct the applicable sample.** Use relevant `panel-data-checks-efh` for observation units, keys, dates, merges, missingness, treatment timing and weights. Prediction tasks also retain splits and label availability.
 3. **Choose the model and inference.** The main method defines the estimand, controls, fixed effects and specific diagnostics. `inference-clustering-efh` handles dependence, standard errors, intervals and tests. Decide fixed effects and clustering separately. Preserve specialized RD, matching, weak-IV, bootstrap and randomization inference.
 4. **Fit the model and inspect its actual sample.** Keep variable definitions and selected weights, effects and inference consistent. Inspect losses from missingness, singletons, collinearity, bandwidths, matching or support restrictions. Compute N and cluster counts from fitted observations. Use a common comparison sample when appropriate, or explain sample differences.
-5. **Present the same analysis.** `tables-figures-efh` reads fitted objects or method-specific numerical results using `harness/workflows/present-results.md`. Keep coefficients, SEs, p-values, intervals, stars, N and notes consistent. Diagnostics and evaluation metrics retain their own applicable samples.
-6. **Explain or write.** Use `research-explanation-efh` for explanation and `academic-writing-efh` for prose. Preserve the actual estimand, sample, units and uncertainty rather than reconstructing numbers from rounded tables.
+5. **Present the same analysis.** `tables-figures-efh` reads fitted objects or method-specific numerical results using `harness/workflows/present-results.md`. Keep coefficients, SEs, p-values, intervals, stars, N and notes consistent. Diagnostics and evaluation metrics retain their own applicable samples. Before delivering a pipeline of several scripts, run the [pipeline review](workflows/pipeline-review.md).
+6. **Explain or write.** Use `research-explanation-efh` for explanation and `academic-writing-efh` for prose. Preserve the actual estimand, sample, units and uncertainty rather than reconstructing numbers from rounded tables. Finish drafted prose with the [revise module](workflows/revise-writing.md).
 
 Continue using existing variables, fitted objects, scripts and output paths. A short explanation or parameters in the analysis script are usually sufficient for coordination.
 
@@ -60,9 +60,10 @@ Continue using existing variables, fitted objects, scripts and output paths. A s
 ## Role coordination
 
 - `empirical-analyst`: research choices, the main method and identification assumptions, together with appropriate inference.
-- `code-engineer`: implement the same design, retain its actual sample and inference, and produce results.
+- `code-engineer`: implement the same design in [lean code](skills/pipeline-review-efh/references/lean-code.md), retain its actual sample and inference, and produce results.
 - `writer` / `explainer`: use existing results for prose or explanation; flag numerical or estimand conflicts.
 - `reviewer`: inspect the requested claim or a concrete issue in method, sample, inference or export.
+- `pipeline-reviewer`: before delivery and check-only, keep boundary guards and find misplaced comparison, variant and run code and missing boundary checks.
 - `literature`: provide verified literature and implementation sources for the current question.
 - `project-manager`: coordinate necessary dependencies, responsibilities and progress for larger tasks.
 
