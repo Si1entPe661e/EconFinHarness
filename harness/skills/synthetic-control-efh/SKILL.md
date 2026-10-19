@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 [code-examples.md](code-examples.md) gives classical SCM with sc_estimate, donor weights, pre-fit and leave-one-out sensitivity. Use `did-efh` for synthetic DID.
 
 Return treated/synthetic paths, gaps, donor weights, pre-fit, sensitivity and a cautious interpretation conditional on donor comparability.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).

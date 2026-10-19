@@ -43,3 +43,7 @@ Return the estimate and interval, bandwidths, kernel/order, cutoff, effective ob
 ## Research records
 
 Recorded practice is in `harness/paradigms/rdd/`: code observations in `observed.md` and paper statements in `reported.md`, kept apart from the recommendations in `recommendations.md`.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).

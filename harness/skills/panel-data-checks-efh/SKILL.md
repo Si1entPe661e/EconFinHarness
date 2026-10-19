@@ -44,3 +44,7 @@ For compound tasks, consult harness/skill-composition.md and read only relevant 
 ## Research records
 
 Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).

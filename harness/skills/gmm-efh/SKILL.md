@@ -32,3 +32,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Commands and output
 
 [code-examples.md](code-examples.md) contains a complete R moment function and Stata clustered IV-GMM. Return parameter estimates, intervals, moments/instruments, objective/convergence and material diagnostics. Do not fabricate structural moments when the economic model is missing.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md).

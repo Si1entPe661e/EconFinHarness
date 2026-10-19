@@ -37,3 +37,7 @@ Return the requested table/figure files and a short explanation of the compariso
 ## Research records
 
 Recorded practice is in `harness/paradigms/`: each method's folder and `_all/reported.md` across methods. It describes what papers did, not what is correct.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).

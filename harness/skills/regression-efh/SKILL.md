@@ -32,3 +32,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Commands
 
 [code-examples.md](code-examples.md) contains OLS, WLS, PPML, logit and marginal effects in R/Stata/Python.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).

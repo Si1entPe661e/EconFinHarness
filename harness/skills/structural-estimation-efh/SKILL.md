@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 [code-examples.md](code-examples.md) supplies a fully defined static-choice likelihood in R and an actual MATLAB simulated-likelihood optimizer call. For another model, first provide its solver/likelihood rather than inventing a universal command.
 
 Return parameter estimates and uncertainty, fit diagnostics, identification/normalization and counterfactual assumptions.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).

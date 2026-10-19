@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 [code-examples.md](code-examples.md) gives construction, common-control residualization, shock aggregation and clustered shock-level IV, plus Stata ivreg2 calls.
 
 Return instrument components, identification branch, concentration, first-stage/IV results and the chosen shock/exposure inference.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).

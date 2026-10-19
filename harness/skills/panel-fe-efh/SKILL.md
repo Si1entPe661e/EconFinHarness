@@ -32,3 +32,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Commands and output
 
 [code-examples.md](code-examples.md) gives fixest, reghdfe/xtreg and PanelOLS calls, including unit-by-time FE. Return within-effect estimates/intervals, FE, fitted N and covariance; avoid interpreting overall R-squared as within fit.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).

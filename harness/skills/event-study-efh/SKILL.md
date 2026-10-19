@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 [code-examples.md](code-examples.md) gives Sun–Abraham in R and cohort-aware Stata eventstudyinteract. The did command collection includes imputation, group-time ATT and HonestDiD alternatives.
 
 Return event-time coefficients/intervals, reference/comparison definitions, support and aggregation/inference assumptions.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).

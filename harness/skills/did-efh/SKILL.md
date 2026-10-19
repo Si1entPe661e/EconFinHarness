@@ -48,3 +48,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Research records
 
 Recorded practice is in `harness/paradigms/did/` and `harness/paradigms/event_study/`: code observations in `observed.md` and paper statements in `reported.md`, kept apart from the recommendations in `recommendations.md`.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md).

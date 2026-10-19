@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 [code-examples.md](code-examples.md) gives a complete group-split random-forest pipeline with training-only randomized search, plus a chronological alternative for one time series.
 
 Return split/feature timing, held-out metrics versus benchmark, selected tuning values and material limits.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).

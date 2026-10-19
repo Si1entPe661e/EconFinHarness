@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 [code-examples.md](code-examples.md) gives blocked ANCOVA, compliance IV and arm contrasts in R/Stata. Use inference-clustering-efh for blocked cluster permutations.
 
 Return arm counts, receipt/attrition rates, ITT contrasts with intervals, any first-stage/complier result, and the randomization/inference assumptions.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md).

@@ -34,3 +34,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Commands and output
 
 [code-examples.md](code-examples.md) gives Python FamaMacBeth, Stata xtfmb and an R implementation retaining date-level slopes. Return average slopes, intervals/t-statistics, dates used, sample coverage and timing/normalization rules.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).

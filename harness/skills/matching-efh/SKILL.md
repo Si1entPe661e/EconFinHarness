@@ -33,3 +33,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Commands and output
 
 [code-examples.md](code-examples.md) includes MatchIt sample construction and Stata matching estimation. Return balance, overlap, retained counts/weights and the treatment contrast with its inference assumptions.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md).

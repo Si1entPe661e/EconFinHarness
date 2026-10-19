@@ -11,7 +11,7 @@ Start with [general orchestration](orchestration/README.md) for task routing, pr
 | `workflows/` | General execution, project management, writing and specialized research workflows |
 | `presets/` | Reusable task prompts for general work and empirical analysis |
 
-Each method skill has a `SKILL.md` entry point and a `code-examples.md` file with commands, input variables and interpretation guidance.
+Each method skill has a `SKILL.md` entry point and a `code-examples.md` file with commands, input variables and interpretation guidance. Where the corpus has related commands, `examples/` holds them as published replication packages wrote them, by language. Each entry gives the share of papers using each option, the most common option sets and a verbatim call with its DOI and file lines. A deterministic parser, not a model, extracted the calls, and each command reaches a skill through terms of its own documentation.
 
 | Area | Skills |
 |---|---|

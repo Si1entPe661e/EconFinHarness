@@ -32,3 +32,7 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 ## Commands and output
 
 [code-examples.md](code-examples.md) gives explicit forward-horizon construction/HAC and recursive one-step forecasts. Return timing, evaluation sample, feasible benchmark, forecast metrics and the inferential limitations.
+
+## Corpus examples
+
+Related commands as written in published replication packages, with paper shares: [R](examples/r.md).
