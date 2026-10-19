@@ -8,19 +8,19 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 6 of 1163 R papers (0.5%) — Scoring Rules for Parametric and Simulated Distribution Forecasts.
 
-Options (share of these 6 papers): `y` 50%, `dat` 50%.
+Options (share of these 6 papers): `dat` 50%, `y` 50%.
 
-Most common option set: `dat`, `y`; at least one call in 3 papers (50%).
+Most common option set: none; at least one call in 3 papers (50%).
+
+```r
+        crps_vec[j] <- crps_sample(Ytest[j], zM[, j])
+```
+JASA 2026, [doi:10.1080/01621459.2025.2529025](https://doi.org/10.1080/01621459.2025.2529025), `code/github_kevinli1324_ADMIN-GP/R_Results/BART_emulation.R` line 67.
+
+Next most common option set: `dat`, `y`; at least one call in 3 papers (50%).
 
 ```r
     scores_ens[["crps"]] <- crps_sample(y = y, 
                                         dat = ens) }
 ```
 JRSSB 2026, [doi:10.1093/jrsssb/qkag066](https://doi.org/10.1093/jrsssb/qkag066), `code/github_GGavrilos_SMCS/Wind_Gust/fn_eval.R` lines 540-541.
-
-Next most common option set: none; at least one call in 3 papers (50%).
-
-```r
-        crps_vec[j] <- crps_sample(Ytest[j], zM[, j])
-```
-JASA 2026, [doi:10.1080/01621459.2025.2529025](https://doi.org/10.1080/01621459.2025.2529025), `code/github_kevinli1324_ADMIN-GP/R_Results/BART_emulation.R` line 67.

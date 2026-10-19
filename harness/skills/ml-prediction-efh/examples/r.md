@@ -21,7 +21,7 @@ JASA 2023, [doi:10.1080/01621459.2021.1938084](https://doi.org/10.1080/01621459.
 
 Used in 90 of 1163 R papers (8%) — Lasso and Elastic-Net Regularized Generalized Linear Models.
 
-Options (share of these 90 papers): `lambda` 84%, `family` 62%, `alpha` 59%, `intercept` 48%, `x` 37%, `y` 37%, `standardize` 31%, `penalty.factor` 26%, `weights` 6%, `nlambda` 6%.
+Options (share of these 90 papers): `lambda` 84%, `family` 62%, `alpha` 59%, `intercept` 48%, `x` 37%, `y` 37%, `standardize` 31%, `penalty.factor` 26%, `nlambda` 6%, `weights` 6%.
 
 Most common option set: `alpha`, `lambda`; at least one call in 11 papers (12%).
 
@@ -34,7 +34,7 @@ JASA 2026, [doi:10.1080/01621459.2025.2529602](https://doi.org/10.1080/01621459.
 
 Used in 41 of 1163 R papers (4%) — Breiman and Cutlers Random Forests for Classification and Regression.
 
-Options (share of these 41 papers): `data` 54%, `ntree` 51%, `x` 39%, `y` 39%, `mtry` 34%, `importance` 32%, `nodesize` 17%, `maxnodes` 12%, `na.action` 10%, `xtest` 7%.
+Options (share of these 41 papers): `data` 54%, `ntree` 51%, `x` 39%, `y` 39%, `mtry` 34%, `importance` 32%, `nodesize` 17%, `maxnodes` 12%, `na.action` 10%, `keep.forest` 7%.
 
 Most common option set: `data`; at least one call in 7 papers (17%).
 
@@ -88,20 +88,20 @@ JASA 2025, [doi:10.1080/01621459.2025.2516181](https://doi.org/10.1080/01621459.
 
 Used in 11 of 1163 R papers (0.9%) — Generalized Random Forests.
 
-Options (share of these 11 papers): `W.hat` 73%, `num.trees` 45%, `seed` 45%, `Y.hat` 36%, `X` 27%, `Y` 27%, `W` 27%, `min.node.size` 27%, `num.threads` 18%, `clusters` 18%.
+Options (share of these 11 papers): `W.hat` 73%, `num.trees` 45%, `seed` 45%, `Y.hat` 36%, `W` 27%, `X` 27%, `Y` 27%, `min.node.size` 27%, `clusters` 18%, `num.threads` 18%.
 
-Most common option set: `W`, `W.hat`, `X`, `Y`; at least one call in 1 paper (9%).
+Most common option set: none; at least one call in 1 paper (9%).
 
 ```r
-c.forest <- causal_forest(X = x, Y =y, W = d, W.hat = pscore);
+causal_forest_model_infla <- causal_forest(X, W, Y)
 ```
-Econometrica 2025, [doi:10.3982/ecta19303](https://doi.org/10.3982/ecta19303), `code/zenodo_10871241/replication_package/replication_package/Code/figure3-CausalRF.R` line 125.
+RFS 2026, [doi:10.1093/rfs/hhaf079](https://doi.org/10.1093/rfs/hhaf079), `code/dataverse_FGXMJE/replication_package/replication_final/Code/cate_figures.R` line 63.
 
 ### `grf::regression_forest`
 
 Used in 11 of 1163 R papers (0.9%) — Generalized Random Forests.
 
-Options (share of these 11 papers): `X` 55%, `Y` 55%, `tune.parameters` 27%, `seed` 27%, `num.threads` 27%, `honesty` 18%, `min.node.size` 18%, `clusters` 18%, `equalize.cluster.weights` 18%.
+Options (share of these 11 papers): `X` 55%, `Y` 55%, `num.threads` 27%, `seed` 27%, `tune.parameters` 27%, `clusters` 18%, `equalize.cluster.weights` 18%, `honesty` 18%, `min.node.size` 18%.
 
 Most common option set: none; at least one call in 2 papers (18%).
 

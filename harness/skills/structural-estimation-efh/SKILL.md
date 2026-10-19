@@ -37,4 +37,4 @@ Return parameter estimates and uncertainty, fit diagnostics, identification/norm
 
 ## Corpus examples
 
-Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md).
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md), [MATLAB](examples/matlab.md), [Julia](examples/julia.md).

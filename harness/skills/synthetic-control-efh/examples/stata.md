@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 8 of 1904 Stata papers (0.4%) — module to implement Synthetic Control Methods for Comparative Case Studies.
 
-Options (share of these 8 papers): `trunit` 88%, `trperiod` 88%, `keep` 75%, `replace` 50%, `figure` 25%.
+Options (share of these 8 papers): `trperiod` 88%, `trunit` 88%, `keep` 75%, `replace` 50%, `figure` 25%.
 
 Most common option set: `keep`, `replace`, `trperiod`, `trunit`; at least one call in 2 papers (25%).
 

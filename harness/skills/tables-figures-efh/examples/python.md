@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 248 of 864 Python papers (29%) — Python plotting package.
 
-Options (share of these 248 papers): `figsize` 83%, `sharex` 17%, `sharey` 13%, `nrows` 8%, `ncols` 8%, `dpi` 6%, `gridspec_kw` 5%, `constrained_layout` 4%, `tight_layout` 3%, `squeeze` 2%.
+Options (share of these 248 papers): `figsize` 83%, `sharex` 17%, `sharey` 13%, `ncols` 8%, `nrows` 8%, `dpi` 6%, `gridspec_kw` 5%, `constrained_layout` 4%, `tight_layout` 3%, `squeeze` 2%.
 
 Most common option set: `figsize`; at least one call in 166 papers (67%).
 
@@ -48,7 +48,7 @@ MPC 2026, [doi:10.1007/s12532-025-00294-y](https://doi.org/10.1007/s12532-025-00
 
 Used in 210 of 864 Python papers (24%) — Python plotting package.
 
-Options (share of these 210 papers): `figsize` 82%, `dpi` 8%, `constrained_layout` 1%, `tight_layout` 1.0%, `facecolor` 1.0%, `frameon` 1.0%.
+Options (share of these 210 papers): `figsize` 82%, `dpi` 8%, `constrained_layout` 1%, `facecolor` 1.0%, `frameon` 1.0%, `tight_layout` 1.0%.
 
 Most common option set: `figsize`; at least one call in 157 papers (75%).
 
@@ -101,7 +101,7 @@ IJOC 2026, [doi:10.1287/ijoc.2024.0886](https://doi.org/10.1287/ijoc.2024.0886),
 
 Used in 178 of 864 Python papers (21%) — Python plotting package.
 
-Options (share of these 178 papers): `fontsize` 35%, `size` 2%, `fontweight` 2%, `labelpad` 1%, `**` 1%, `fontdict` 1%.
+Options (share of these 178 papers): `fontsize` 35%, `fontweight` 2%, `size` 2%, `**` 1%, `fontdict` 1%, `labelpad` 1%.
 
 Most common option set: none; at least one call in 137 papers (77%).
 
@@ -121,7 +121,7 @@ IJOC 2026, [doi:10.1287/ijoc.2024.0736](https://doi.org/10.1287/ijoc.2024.0736),
 
 Used in 178 of 864 Python papers (21%) — Python plotting package.
 
-Options (share of these 178 papers): `fontsize` 37%, `size` 2%, `fontweight` 2%, `rotation` 2%, `labelpad` 2%, `color` 1%, `**` 1%, `fontdict` 1%.
+Options (share of these 178 papers): `fontsize` 37%, `fontweight` 2%, `size` 2%, `labelpad` 2%, `rotation` 2%, `**` 1%, `color` 1%, `fontdict` 1%.
 
 Most common option set: none; at least one call in 135 papers (76%).
 
@@ -141,7 +141,7 @@ IJOC 2026, [doi:10.1287/ijoc.2024.0776](https://doi.org/10.1287/ijoc.2024.0776),
 
 Used in 167 of 864 Python papers (19%) — Python plotting package.
 
-Options (share of these 167 papers): `label` 67%, `color` 50%, `linewidth` 32%, `linestyle` 31%, `marker` 23%, `alpha` 12%, `markersize` 11%, `lw` 7%, `ls` 5%, `markevery` 5%.
+Options (share of these 167 papers): `label` 67%, `color` 50%, `linewidth` 32%, `linestyle` 31%, `marker` 23%, `alpha` 12%, `markersize` 11%, `lw` 7%, `c` 5%, `ls` 5%.
 
 Most common option set: none; at least one call in 72 papers (43%).
 

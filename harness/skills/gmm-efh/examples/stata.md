@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 46 of 1904 Stata papers (2%) — module to perform extended IV/2SLS, GMM and AC/HAC, LIML and k-class regression for panel data models.
 
-Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `ffirst` 11%, `cl` 11%.
+Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `cl` 11%, `ffirst` 11%.
 
 Most common option set: `cluster`, `fe`; at least one call in 12 papers (26%).
 
@@ -21,7 +21,7 @@ RFS 2026, [doi:10.1093/rfs/hhaf114](https://doi.org/10.1093/rfs/hhaf114), `code/
 
 Used in 31 of 1904 Stata papers (2%) — Generalized method of moments estimation.
 
-Options (share of these 31 papers): `winitial` 81% (`identity` 52%, `unadjusted` 23%), `instruments` 68%, `from` 45%, `vce` 42% (`cluster` 26%, `robust` 10%), `conv_maxiter` 29%, `wmatrix` 29% (`cluster` 10%, `unadjusted` 10%, `hac` 6%), `twostep` 26%, `onestep` 26%, `technique` 16%, `nocommonesample` 13%.
+Options (share of these 31 papers): `winitial` 81% (`identity` 52%, `unadjusted` 23%), `instruments` 68%, `from` 45%, `vce` 42% (`cluster` 26%, `robust` 10%), `conv_maxiter` 29%, `wmatrix` 29% (`cluster` 10%, `unadjusted` 10%, `hac` 6%), `onestep` 26%, `twostep` 26%, `technique` 16%, `nequations` 13%.
 
 Most common option set: none; at least one call in 4 papers (13%).
 
@@ -42,7 +42,7 @@ ReStud 2025, [doi:10.1093/restud/rdaf011](https://doi.org/10.1093/restud/rdaf011
 
 Used in 8 of 1904 Stata papers (0.4%) — module to extend xtabond dynamic panel data estimator.
 
-Options (share of these 8 papers): `gmm` 62%, `robust` 62%, `iv` 50%, `twostep` 38%, `gmmstyle` 38%, `small` 25%, `h` 25%, `ivstyle` 25%.
+Options (share of these 8 papers): `gmm` 62%, `robust` 62%, `iv` 50%, `gmmstyle` 38%, `twostep` 38%, `h` 25%, `ivstyle` 25%, `small` 25%.
 
 Most common option set: `gmm`, `iv`, `robust`, `twostep`; at least one call in 2 papers (25%).
 

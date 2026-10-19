@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 1431 of 1904 Stata papers (75%) — Linear regression.
 
-Options (share of these 1431 papers): `robust` 40%, `cluster` 40%, `vce` 23% (`cluster` 17%, `robust` 6%), `noconstant` 17%, `noc?` 2%, `absorb?` 2%, `nocon?` 1%, `level` 1%, `noheader` 0.8%, `a?` 0.8%.
+Options (share of these 1431 papers): `robust` 40%, `cluster` 40%, `vce` 23% (`cluster` 17%, `robust` 6%), `noconstant` 17%, `absorb?` 2%, `noc?` 2%, `nocon?` 1%, `level` 1%, `a?` 0.8%, `noheader` 0.8%.
 
 Most common option set: none; at least one call in 1040 papers (73%).
 
@@ -28,7 +28,7 @@ QJE 2025, [doi:10.1093/qje/qjaf015](https://doi.org/10.1093/qje/qjaf015), `code/
 
 Used in 736 of 1904 Stata papers (39%) — Linear regression with multiple fixed effects. Also supports individual FEs with group-level outcomes.
 
-Options (share of these 736 papers): `absorb` 98%, `cluster` 60%, `vce` 54% (`cluster` 43%, `robust` 16%), `residuals` 24%, `noabsorb?` 13%, `noconstant` 10%, `keepsingletons` 5%, `old?` 2%, `tolerance` 2%, `compile?` 1%.
+Options (share of these 736 papers): `absorb` 98%, `cluster` 60%, `vce` 54% (`cluster` 43%, `robust` 16%), `residuals` 24%, `noabsorb?` 13%, `noconstant` 10%, `keepsingletons` 5%, `old?` 2%, `tolerance` 2%.
 
 Most common option set: `absorb`, `cluster`; at least one call in 410 papers (56%).
 
@@ -48,7 +48,7 @@ QJE 2025, [doi:10.1093/qje/qjaf009](https://doi.org/10.1093/qje/qjaf009), `code/
 
 Used in 472 of 1904 Stata papers (25%) — Linear regression with many indicator.
 
-Options (share of these 472 papers): `absorb` 99%, `cluster` 52%, `robust` 21%, `vce` 21% (`cluster` 19%, `robust` 3%), `if?` 0.6%, `noomitted?` 0.6%, `using?` 0.4%, `keep?` 0.4%.
+Options (share of these 472 papers): `absorb` 99%, `cluster` 52%, `robust` 21%, `vce` 21% (`cluster` 19%, `robust` 3%), `if?` 0.6%, `noomitted?` 0.6%, `keep?` 0.4%.
 
 Most common option set: `absorb`, `cluster`; at least one call in 219 papers (46%).
 
@@ -88,7 +88,7 @@ JPE 2025, [doi:10.1086/732526](https://doi.org/10.1086/732526), `code/dataverse_
 
 Used in 150 of 1904 Stata papers (8%) — Logistic regression, reporting.
 
-Options (share of these 150 papers): `cluster` 20%, `vce` 19% (`cluster` 13%, `robust` 3%), `robust` 10%, `iterate` 7%, `or` 6%, `noconstant` 5%, `nolog?` 3%, `asis` 2%, `difficult` 1%, `nocon?` 1%.
+Options (share of these 150 papers): `cluster` 20%, `vce` 19% (`cluster` 13%, `robust` 3%), `robust` 10%, `iterate` 7%, `or` 6%, `noconstant` 5%, `nolog?` 3%, `asis` 2%, `difficult` 1%.
 
 Most common option set: none; at least one call in 85 papers (57%).
 
@@ -108,7 +108,7 @@ Econometrica 2026, [doi:10.3982/ecta21097](https://doi.org/10.3982/ecta21097), `
 
 Used in 150 of 1904 Stata papers (8%) — Probit regression.
 
-Options (share of these 150 papers): `cluster` 25%, `vce` 24% (`cluster` 20%, `robust` 3%), `robust` 9%, `difficult` 3%, `iterate` 3%, `asis` 3%, `noconstant` 1%, `nocon?` 1%.
+Options (share of these 150 papers): `cluster` 25%, `vce` 24% (`cluster` 20%, `robust` 3%), `robust` 9%, `difficult` 3%, `asis` 3%, `iterate` 3%, `nocon?` 1%, `noconstant` 1%.
 
 Most common option set: none; at least one call in 77 papers (51%).
 
@@ -128,7 +128,7 @@ RFS 2026, [doi:10.1093/rfs/hhaf114](https://doi.org/10.1093/rfs/hhaf114), `code/
 
 Used in 63 of 1904 Stata papers (3%) — module for Poisson pseudo-likelihood regression with multiple levels of fixed effects.
 
-Options (share of these 63 papers): `absorb` 78%, `cluster` 52%, `vce` 43%, `a` 25%, `d` 22%, `cl` 10%, `nocons` 5%, `abs` 5%, `noconstant` 5%, `noabsorb` 5%.
+Options (share of these 63 papers): `absorb` 78%, `cluster` 52%, `vce` 43%, `a` 25%, `d` 22%, `cl` 10%, `abs` 5%, `noabsorb` 5%, `nocons` 5%, `noconstant` 5%.
 
 Most common option set: `absorb`, `cluster`; at least one call in 23 papers (37%).
 
@@ -148,7 +148,7 @@ Econometrica 2026, [doi:10.3982/ecta19350](https://doi.org/10.3982/ecta19350), `
 
 Used in 34 of 1904 Stata papers (2%) — Poisson regression.
 
-Options (share of these 34 papers): `robust` 29%, `cluster` 29%, `vce` 21% (`cluster` 12%, `robust` 9%), `iterate` 12%, `noconstant` 6%.
+Options (share of these 34 papers): `cluster` 29%, `robust` 29%, `vce` 21% (`cluster` 12%, `robust` 9%), `iterate` 12%, `noconstant` 6%.
 
 Most common option set: none; at least one call in 11 papers (32%).
 
@@ -157,10 +157,9 @@ Most common option set: none; at least one call in 11 papers (32%).
 ```
 QJE 2026, [doi:10.1093/qje/qjag009](https://doi.org/10.1093/qje/qjag009), `code/dataverse_SDOODF/_conf_displ_humcap_public/code/1_creation/_to_del/8_cost_od_iv_6_agg_23ethn.do` line 283.
 
-Next most common option set: `robust`; at least one call in 7 papers (21%).
+Next most common option set: `cluster`; at least one call in 7 papers (21%).
 
 ```stata
-					poisson n after10white 1.after10white#1.in280380 after10notwhite ///
-						1.after10notwhite#1.in280380 notwhite in280380, r
+xi:poisson yu1992	$border		$geo	$demo	$trans	 								i.Pr		cwd	  new_bltcfix_lit		if year==1992, cluster(distrito1)
 ```
-ReStud 2026, [doi:10.1093/restud/rdag037](https://doi.org/10.1093/restud/rdag037), `code/zenodo_18343807/REStud_Rep_MS33255/REStud_Rep_MS33255/code/3_001_apdx_ussc.do` lines 392-393.
+Econometrica 2025, [doi:10.3982/ecta17951](https://doi.org/10.3982/ecta17951), `code/zenodo_15242012/replication_landmines_ecma/replication_landmines_ecma/code/03_analysis/appendix_correlates_landmines_timing.do` line 97.

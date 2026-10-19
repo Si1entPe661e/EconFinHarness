@@ -81,7 +81,7 @@ ReStud 2025, [doi:10.1093/restud/rdae104](https://doi.org/10.1093/restud/rdae104
 
 Used in 12 of 1163 R papers (1%) — Fast Estimators for Design-Based Inference.
 
-Options (share of these 12 papers): `data` 100%, `se_type` 58%, `clusters` 50%, `formula` 25%, `weights` 25%, `cluster` 25%, `fixed_effects` 17%.
+Options (share of these 12 papers): `data` 100%, `se_type` 58%, `clusters` 50%, `cluster` 25%, `formula` 25%, `weights` 25%, `fixed_effects` 17%.
 
 Most common option set: `clusters`, `data`, `se_type`; at least one call in 3 papers (25%).
 

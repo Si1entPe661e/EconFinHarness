@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 612 of 1163 R papers (53%) — Construct aesthetic mappings.
 
-Options (share of these 612 papers): `x` 96%, `y` 94%, `color` 61%, `fill` 55%, `ymin` 42%, `ymax` 42%, `group` 39%, `linetype` 34%, `shape` 31%, `label` 24%.
+Options (share of these 612 papers): `x` 96%, `y` 94%, `color` 61%, `fill` 55%, `ymax` 42%, `ymin` 42%, `group` 39%, `linetype` 34%, `shape` 31%, `label` 24%.
 
 Most common option set: `x`, `y`; at least one call in 380 papers (62%).
 

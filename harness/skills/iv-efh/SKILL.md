@@ -46,4 +46,4 @@ Recorded practice is in `harness/paradigms/iv/`: code observations in `observed.
 
 ## Corpus examples
 
-Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md).
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Julia](examples/julia.md).

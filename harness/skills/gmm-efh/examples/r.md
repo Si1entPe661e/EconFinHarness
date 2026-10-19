@@ -8,18 +8,19 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 5 of 1163 R papers (0.4%) — Generalized Method of Moments and Generalized Empirical Likelihood.
 
-Options (share of these 5 papers): `t0` 60%, `itermax` 40%, `x` 40%, `wmatrix` 40%.
+Options (share of these 5 papers): `t0` 60%, `itermax` 40%, `wmatrix` 40%, `x` 40%.
 
-Most common option set: `itermax`, `lower`, `optfct`, `tol`, `upper`; at least one call in 1 paper (20%).
-
-```r
-Base_result<-gmm(myg2_par_multi,myX_list,tet0,optfct="nlminb",lower=lb,upper=ub,tol = 1e-8, itermax=10000)
-```
-AER 2024, [doi:10.1257/aer.20211242](https://doi.org/10.1257/aer.20211242), `code/Code/proc_output_Table6_base2.R` line 52.
-
-Next most common option set: `eqConst`, `t0`, `x`; at least one call in 1 paper (20%).
+Most common option set: none; at least one call in 1 paper (20%).
 
 ```r
-        dGMM <- gmm(y ~ z, x = zw,t0=t0,eqConst=fixi)
+    fit = gmm(p.obj, subdata, params0)
 ```
-AER 2024, [doi:10.1257/aer.20211653](https://doi.org/10.1257/aer.20211653), `code/code/estimate.R` line 34.
+JFE 2022, [doi:10.1016/j.jfineco.2021.09.025](https://doi.org/10.1016/j.jfineco.2021.09.025), `code/mendeley_yvvmsz4dkt_v1/replication_code/replication_code/producing_tables_and_figures/14_estimate_gmm_with_shock_size_cutoffs.R` line 111.
+
+Next most common option set: `control`, `crit`, `itermax`, `method`, `t0`, `type`, `wmatrix`; at least one call in 1 paper (20%).
+
+```r
+  ma <- gmm(function_for_estimation,data_for_gmm, t0=initial_points,
+            crit=1e-6,type = "iterative", method="BFGS",control = list(maxit=100),itermax = 100, wmatrix=w_matrix)
+```
+ReStud 2026, [doi:10.1093/restud/rdag032](https://doi.org/10.1093/restud/rdag032), `code/zenodo_18764264/replication_package/empirics/script/gmm_functions.R` lines 48-49.

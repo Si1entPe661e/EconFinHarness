@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 33 of 1904 Stata papers (2%) — module to provide robust data-driven inference in the regression-discontinuity design.
 
-Options (share of these 33 papers): `h` 61%, `c` 58%, `p` 55%, `vce` 52%, `kernel` 45%, `covs` 39%, `all` 36%, `fuzzy` 27%, `bwselect` 15%, `q` 9%.
+Options (share of these 33 papers): `h` 61%, `c` 58%, `p` 55%, `vce` 52%, `kernel` 45%, `covs` 39%, `all` 36%, `fuzzy` 27%, `bwselect` 15%, `b` 9%.
 
 Most common option set: none; at least one call in 3 papers (9%).
 

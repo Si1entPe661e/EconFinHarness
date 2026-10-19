@@ -30,19 +30,19 @@ Used in 8 of 1904 Stata papers (0.4%) — Display coefficients after lasso estim
 
 Options (share of these 8 papers): `display` 62%, `sort` 25%.
 
-Most common option set: `display`; at least one call in 3 papers (38%).
-
-```stata
-	lassocoef, display(coef, penalized)
-```
-ReStud 2026, [doi:10.1093/restud/rdaf071](https://doi.org/10.1093/restud/rdaf071), `code/zenodo_16539681/Replication/Replication/code/do/2_analysis/appendix/tableA15.do` line 364.
-
-Next most common option set: none; at least one call in 3 papers (38%).
+Most common option set: none; at least one call in 3 papers (38%).
 
 ```stata
 lassocoef
 ```
 ReStud 2026, [doi:10.1093/restud/rdag027](https://doi.org/10.1093/restud/rdag027), `code/zenodo_17361408/BFFPT_RESTUD_replication/code/1c_lasso_tablea1_tablea2_tableb8.do` line 384.
+
+Next most common option set: `display`; at least one call in 3 papers (38%).
+
+```stata
+	lassocoef, display(coef, penalized)
+```
+ReStud 2026, [doi:10.1093/restud/rdaf071](https://doi.org/10.1093/restud/rdaf071), `code/zenodo_16539681/Replication/Replication/code/do/2_analysis/appendix/tableA15.do` line 364.
 
 ### `dsregress`
 
@@ -59,29 +59,29 @@ Most common option set: `controls`, `vce`; at least one call in 3 papers (50%).
 ```
 QJE 2025, [doi:10.1093/qje/qjae039](https://doi.org/10.1093/qje/qjae039), `code/dataverse_9MRZEA/Replication_code_admin_function/function_admin__functions.do` lines 264-266.
 
-Next most common option set: `controls`, `selection`, `vce`; at least one call in 1 paper (17%).
+Next most common option set: `controls`; at least one call in 1 paper (17%).
 
 ```stata
-			eststo: dsregress `y' $treat, controls(i.(strata qtr) $cont_all) vce(cluster fid) selection(adaptive)
+quietly dsregress app_after  High_f  if Treated_firm==0 & survey=="E1", controls($Blasso)
 ```
-AER 2023, [doi:10.1257/aer.20210701](https://doi.org/10.1257/aer.20210701), `code/dofiles/tables.do` line 111.
+ReStud 2025, [doi:10.1093/restud/rdae094](https://doi.org/10.1093/restud/rdae094), `code/zenodo_13153322/RR_CIV_2024_107/Reproducibility package/Paper 2nd follow-up/Sub-dofiles/Tables and Graphs/Outputs Restud paper.do` line 4556.
 
 ### `rforest`
 
 Used in 5 of 1904 Stata papers (0.3%) — module to implement Random Forest algorithm.
 
-Options (share of these 5 papers): `type` 100%, `iter` 40%, `numvars` 40%, `seed` 40%, `iterations` 40%.
+Options (share of these 5 papers): `type` 100%, `iter` 40%, `iterations` 40%, `numvars` 40%, `seed` 40%.
 
-Most common option set: `type`; at least one call in 1 paper (20%).
-
-```stata
-rforest inMTOby2008 `features', type(class)
-```
-AER 2021, [doi:10.1257/aer.20201237](https://doi.org/10.1257/aer.20201237), `code/Repository/code/analysis/2_5_Balancing_weights_robustness_random_forest.do` line 311.
-
-Next most common option set: `iter`, `numvars`, `type`; at least one call in 1 paper (20%).
+Most common option set: `iter`, `numvars`, `type`; at least one call in 1 paper (20%).
 
 ```stata
 		cap: rforest qw $controls if qw!=., type(reg) iter(`i') numvars(`numvars')
 ```
 AER 2025, [doi:10.1257/aer.20230393](https://doi.org/10.1257/aer.20230393), `code/Replication_package/Dofiles/7_analysis_experiment3.do` line 50.
+
+Next most common option set: `iter`, `seed`, `type`; at least one call in 1 paper (20%).
+
+```stata
+qui rforest removed $controls cfe_* , type(reg) iter(500) seed(252164)
+```
+ReStud 2026, [doi:10.1093/restud/rdaf044](https://doi.org/10.1093/restud/rdaf044), `code/zenodo_14293584/helensdotter_replication/analysis/code/compliers.do` line 42.

@@ -8,18 +8,18 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 71 of 864 Python papers (8%) — Fundamental algorithms for scientific computing in Python.
 
-Options (share of these 71 papers): `method` 82%, `bounds` 54%, `options` 42%, `jac` 42%, `args` 32%, `constraints` 32%, `x0` 17%, `tol` 15%, `fun` 7%, `callback` 7%.
+Options (share of these 71 papers): `method` 82%, `bounds` 54%, `jac` 42%, `options` 42%, `args` 32%, `constraints` 32%, `x0` 17%, `tol` 15%, `callback` 7%, `fun` 7%.
 
-Most common option set: `method`; at least one call in 5 papers (7%).
+Most common option set: `bounds`, `constraints`, `method`; at least one call in 5 papers (7%).
 
 ```python
-            CIs[i,j] = -minimize(f_RD, 0.0, (X[i], X[j], SigmaXs[i], SigmaXs[j]), method='TNC').fun
+    res = minimize(obj, x0, bounds=bounds, constraints=cons, method='SLSQP')
 ```
-JRSSB 2022, [doi:10.1111/rssb.12509](https://doi.org/10.1111/rssb.12509), `code/github_iggallagher_Spectral-Embedding/spectral_embedding/chernoff.py` line 16; license file: MIT.
+IJOC 2026, [doi:10.1287/ijoc.2025.1570](https://doi.org/10.1287/ijoc.2025.1570), `code/github_INFORMSJoC_2025.1570/src/optimization.py` line 218; license file: MIT.
 
 ### `cvxpy.Minimize`
 
-Used in 22 of 864 Python papers (3%) — A domain-specific language for modeling convex optimization problems in Python..
+Used in 22 of 864 Python papers (3%) — A domain-specific language for modeling convex optimization problems in Python.
 
 Most common option set: none; at least one call in 22 papers (100%).
 

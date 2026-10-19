@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 25 of 1904 Stata papers (1%) — module to perform full Mahalanobis and propensity score matching, common support graphing, and covariate imbalance testing.
 
-Options (share of these 25 papers): `neighbor` 52%, `noreplacement` 40%, `caliper` 36%, `common` 32%, `pscore` 24%, `out` 20%, `outcome` 20%, `logit` 16%, `norepl` 12%, `n` 12%.
+Options (share of these 25 papers): `neighbor` 52%, `noreplacement` 40%, `caliper` 36%, `common` 32%, `pscore` 24%, `out` 20%, `outcome` 20%, `logit` 16%, `n` 12%, `norepl` 12%.
 
 Most common option set: none; at least one call in 2 papers (8%).
 

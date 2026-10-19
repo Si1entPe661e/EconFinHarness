@@ -21,7 +21,7 @@ JRSSB 2026, [doi:10.1093/jrsssb/qkaf082](https://doi.org/10.1093/jrsssb/qkaf082)
 
 Used in 50 of 1163 R papers (4%) — One Dimensional Optimization.
 
-Options (share of these 50 papers): `interval` 48%, `maximum` 34%, `lower` 28%, `upper` 28%, `tol` 22%, `f` 12%, `l` 8%, `alpha` 8%, `d` 4%, `b` 4%.
+Options (share of these 50 papers): `interval` 48%, `maximum` 34%, `lower` 28%, `upper` 28%, `tol` 22%, `f` 12%, `alpha` 8%, `l` 8%, `A` 4%, `X` 4%.
 
 Most common option set: none; at least one call in 8 papers (16%).
 
@@ -55,7 +55,7 @@ JASA 2026, [doi:10.1080/01621459.2026.2723402](https://doi.org/10.1080/01621459.
 
 Used in 18 of 1163 R papers (2%) — Non-Linear Minimization.
 
-Options (share of these 18 papers): `iterlim` 33%, `print.level` 22%, `p` 22%, `hessian` 17%, `stepmax` 17%, `f` 17%, `ndigit` 11%, `gradtol` 11%, `typsize` 11%, `x` 11%.
+Options (share of these 18 papers): `iterlim` 33%, `p` 22%, `print.level` 22%, `f` 17%, `hessian` 17%, `stepmax` 17%, `gradtol` 11%, `ndigit` 11%, `typsize` 11%, `x` 11%.
 
 Most common option set: none; at least one call in 4 papers (22%).
 
@@ -103,7 +103,7 @@ JRSSB 2025, [doi:10.1093/jrsssb/qkaf009](https://doi.org/10.1093/jrsssb/qkaf009)
 
 Used in 13 of 1163 R papers (1%) — R interface to NLopt.
 
-Options (share of these 13 papers): `opts` 100%, `eval_f` 92%, `x0` 85%, `lb` 77%, `ub` 69%, `eval_g_ineq` 46%, `eval_grad_f` 38%, `eval_jac_g_ineq` 31%, `eval_g_eq` 23%, `eval_jac_g_eq` 15%.
+Options (share of these 13 papers): `opts` 100%, `eval_f` 92%, `x0` 85%, `lb` 77%, `ub` 69%, `eval_g_ineq` 46%, `eval_grad_f` 38%, `eval_jac_g_ineq` 31%, `eval_g_eq` 23%, `Z` 15%.
 
 Most common option set: `eval_f`, `eval_g_ineq`, `eval_grad_f`, `eval_jac_g_ineq`, `lb`, `opts`, `ub`, `x0`; at least one call in 2 papers (15%).
 

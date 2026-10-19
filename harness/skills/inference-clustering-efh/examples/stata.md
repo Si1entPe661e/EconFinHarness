@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 115 of 1904 Stata papers (6%) — Bootstrap sampling and estimation.
 
-Options (share of these 115 papers): `reps` 97%, `seed?` 59%, `cluster` 49% (`idcluster` 6%), `saving` 23%, `idcluster` 14%, `nodots` 11%, `strata` 9%, `nowarn` 9%, `nodrop` 8%, `noisily` 3%.
+Options (share of these 115 papers): `reps` 97%, `seed?` 59%, `cluster` 49% (`idcluster` 6%), `saving` 23%, `idcluster` 14%, `nodots` 11%, `nowarn` 9%, `strata` 9%, `nodrop` 8%, `level` 3%.
 
 Most common option set: `reps`, `seed?`; at least one call in 21 papers (18%).
 
@@ -34,7 +34,7 @@ ReStud 2024, [doi:10.1093/restud/rdad041](https://doi.org/10.1093/restud/rdad041
 
 Used in 46 of 1904 Stata papers (2%) — module to perform extended IV/2SLS, GMM and AC/HAC, LIML and k-class regression for panel data models.
 
-Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `ffirst` 11%, `cl` 11%.
+Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `cl` 11%, `ffirst` 11%.
 
 Most common option set: `cluster`, `fe`; at least one call in 12 papers (26%).
 
@@ -47,7 +47,7 @@ RFS 2026, [doi:10.1093/rfs/hhaf114](https://doi.org/10.1093/rfs/hhaf114), `code/
 
 Used in 31 of 1904 Stata papers (2%) — module to provide fast execution of the wild bootstrap with null imposed.
 
-Options (share of these 31 papers): `seed` 52%, `reps` 48%, `nograph` 39%, `boottype` 35%, `cluster` 32%, `weight` 16%, `bootcluster` 13%, `small` 13%, `nogr` 13%, `noci` 10%.
+Options (share of these 31 papers): `seed` 52%, `reps` 48%, `nograph` 39%, `boottype` 35%, `cluster` 32%, `weight` 16%, `bootcluster` 13%, `nogr` 13%, `small` 13%, `level` 10%.
 
 Most common option set: `boottype`; at least one call in 3 papers (10%).
 
@@ -80,14 +80,14 @@ ReStud 2025, [doi:10.1093/restud/rdaf109](https://doi.org/10.1093/restud/rdaf109
 
 Used in 13 of 1904 Stata papers (0.7%) — Graph standard error bar chart.
 
-Options (share of these 13 papers): `xtitle` 85%, `xlabel` 77%, `ytitle` 77%, `scale` 69%, `mvopts` 46%, `legend` 46%, `ylabel` 46%, `yline` 38%, `addplot` 31%, `xline` 31%.
+Options (share of these 13 papers): `xtitle` 85%, `xlabel` 77%, `ytitle` 77%, `scale` 69%, `legend` 46%, `mvopts` 46%, `ylabel` 46%, `yline` 38%, `addplot` 31%, `graphregion` 31% (`color` 31%).
 
-Most common option set: `lcolor`, `legend`, `lpattern`, `lwidth`, `mvopts`, `scale`, `xlabel`, `xtitle`, `yline`, `ytitle`; at least one call in 1 paper (8%).
+Most common option set: ``options'?`, `scale`, `xlabel`, `xtitle`; at least one call in 1 paper (8%).
 
 ```stata
-serrbar coef se agegroup, lwidth(medthick) lcolor(black) lpattern(dash) mvopts(msize(huge) mcolor(black) msymbol(o)) scale(1.96) yline(0, lcolor(black))  xlabel(1 2 3 4 5 6 7, valuelabel) xtitle(Age Range Observed) ytitle(Any Mental Rx Coefficient) legend(off)
+		serrbar `value' `stderr' `order' if `order'<=`max',  xlabel(none) xtitle(Variable) `options' scale(2)
 ```
-AER 2018, [doi:10.1257/aer.20141406](https://doi.org/10.1257/aer.20141406), `code/Programs_AER_2014_1406/analysis_codeFINAL.do` line 241.
+AER 2019, [doi:10.1257/aer.20180609](https://doi.org/10.1257/aer.20180609), `code/data/datastore/Newspaper-Entry--Gentzkow-et-al-/data/20091316_data/external/plotcoeffs_nolab.ado` line 58.
 
 ### `qreg2`
 

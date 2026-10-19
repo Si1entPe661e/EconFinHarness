@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 8 of 864 Python papers (0.9%) — Linear Panel, Instrumental Variable, Asset Pricing, and System Regression models for Python.
 
-Options (share of these 8 papers): `entity_effects` 100%, `time_effects` 100%, `weights` 38%, `other_effects` 25%, `drop_absorbed` 25%.
+Options (share of these 8 papers): `entity_effects` 100%, `time_effects` 100%, `weights` 38%, `drop_absorbed` 25%, `other_effects` 25%.
 
 Most common option set: `entity_effects`, `time_effects`; at least one call in 4 papers (50%).
 
@@ -63,9 +63,10 @@ Most common option set: `cluster_entity`, `cov_type`; at least one call in 3 pap
 ```
 RFS 2025, [doi:10.1093/rfs/hhaf046](https://doi.org/10.1093/rfs/hhaf046), `code/dataverse_3KZHG9/replication_code.tar/replication_code/code/02_main_analysis.ipynb` cell 8, line 30.
 
-Next most common option set: `cluster_entity`, `cov_type`, `low_memory`; at least one call in 2 papers (29%).
+Next most common option set: `cluster_entity`, `cluster_time`, `cov_type`; at least one call in 2 papers (29%).
 
 ```python
-res = mod.fit(cov_type='clustered', cluster_entity=True,low_memory=True)
+    res = res.fit(cov_type='clustered',
+                    cluster_entity=True, cluster_time=True)
 ```
-QJE 2025, [doi:10.1093/qje/qjaf029](https://doi.org/10.1093/qje/qjaf029), `code/dataverse_UKMYBQ/replication_simulation_files/replication_package_final/exercice/Firm_cyclicality_regressions_cournot_sigma1d66_epsi4_vol27_sampling_robust3_FDonFD.ipynb` cell 6, line 3.
+RFS 2024, [doi:10.1093/rfs/hhae047](https://doi.org/10.1093/rfs/hhae047), `code/dataverse_KPAM5B/Replication_Package_Gulen_Ion_Jens_Rossi_2024/Code/PYTHON/7_Table3_PanelA.ipynb` cell 7, lines 12-13.

@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 395 of 1163 R papers (34%) — Fitting Linear Models.
 
-Options (share of these 395 papers): `data` 58%, `weights` 13%, `formula` 4%, `na.action` 4%, `subset` 3%, `weight` 1%, `x` 1%, `y` 0.8%, `w` 0.8%.
+Options (share of these 395 papers): `data` 58%, `weights` 13%, `formula` 4%, `na.action` 4%, `subset` 3%, `weight` 1%, `x` 1%, `w` 0.8%, `y` 0.8%.
 
 Most common option set: none; at least one call in 240 papers (61%).
 
@@ -62,7 +62,7 @@ JASA 2023, [doi:10.1080/01621459.2021.1938084](https://doi.org/10.1080/01621459.
 
 Used in 90 of 1163 R papers (8%) — Lasso and Elastic-Net Regularized Generalized Linear Models.
 
-Options (share of these 90 papers): `lambda` 84%, `family` 62%, `alpha` 59%, `intercept` 48%, `x` 37%, `y` 37%, `standardize` 31%, `penalty.factor` 26%, `weights` 6%, `nlambda` 6%.
+Options (share of these 90 papers): `lambda` 84%, `family` 62%, `alpha` 59%, `intercept` 48%, `x` 37%, `y` 37%, `standardize` 31%, `penalty.factor` 26%, `nlambda` 6%, `weights` 6%.
 
 Most common option set: `alpha`, `lambda`; at least one call in 11 papers (12%).
 
@@ -75,7 +75,7 @@ JASA 2026, [doi:10.1080/01621459.2025.2519814](https://doi.org/10.1080/01621459.
 
 Used in 67 of 1163 R papers (6%) — Fixed-effects OLS estimation.
 
-Options (share of these 67 papers): `data` 94%, `cluster` 60%, `weights` 24%, `vcov` 22%, `panel.id` 12%, `fml` 10%, `warn` 7%, `se` 7%, `lean` 7%, `weight` 6%.
+Options (share of these 67 papers): `data` 94%, `cluster` 60%, `weights` 24%, `vcov` 22%, `panel.id` 12%, `fml` 10%, `lean` 7%, `se` 7%, `warn` 7%, `split` 6%.
 
 Most common option set: `data`; at least one call in 32 papers (48%).
 

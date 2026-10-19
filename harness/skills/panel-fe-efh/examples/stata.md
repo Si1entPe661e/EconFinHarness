@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 736 of 1904 Stata papers (39%) — Linear regression with multiple fixed effects. Also supports individual FEs with group-level outcomes.
 
-Options (share of these 736 papers): `absorb` 98%, `cluster` 60%, `vce` 54% (`cluster` 43%, `robust` 16%), `residuals` 24%, `noabsorb?` 13%, `noconstant` 10%, `keepsingletons` 5%, `old?` 2%, `tolerance` 2%, `compile?` 1%.
+Options (share of these 736 papers): `absorb` 98%, `cluster` 60%, `vce` 54% (`cluster` 43%, `robust` 16%), `residuals` 24%, `noabsorb?` 13%, `noconstant` 10%, `keepsingletons` 5%, `old?` 2%, `tolerance` 2%.
 
 Most common option set: `absorb`, `cluster`; at least one call in 410 papers (56%).
 
@@ -78,7 +78,7 @@ QJE 2025, [doi:10.1093/qje/qjaf015](https://doi.org/10.1093/qje/qjaf015), `code/
 
 Used in 63 of 1904 Stata papers (3%) — module for Poisson pseudo-likelihood regression with multiple levels of fixed effects.
 
-Options (share of these 63 papers): `absorb` 78%, `cluster` 52%, `vce` 43%, `a` 25%, `d` 22%, `cl` 10%, `nocons` 5%, `abs` 5%, `noconstant` 5%, `noabsorb` 5%.
+Options (share of these 63 papers): `absorb` 78%, `cluster` 52%, `vce` 43%, `a` 25%, `d` 22%, `cl` 10%, `abs` 5%, `noabsorb` 5%, `nocons` 5%, `noconstant` 5%.
 
 Most common option set: `absorb`, `cluster`; at least one call in 23 papers (37%).
 
@@ -98,7 +98,7 @@ Econometrica 2026, [doi:10.3982/ecta19350](https://doi.org/10.3982/ecta19350), `
 
 Used in 46 of 1904 Stata papers (2%) — module to perform extended IV/2SLS, GMM and AC/HAC, LIML and k-class regression for panel data models.
 
-Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `ffirst` 11%, `cl` 11%.
+Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `cl` 11%, `ffirst` 11%.
 
 Most common option set: `cluster`, `fe`; at least one call in 12 papers (26%).
 
@@ -111,7 +111,7 @@ RFS 2026, [doi:10.1093/rfs/hhaf114](https://doi.org/10.1093/rfs/hhaf114), `code/
 
 Used in 28 of 1904 Stata papers (1%) — Conditional (fixed-effects) logistic.
 
-Options (share of these 28 papers): `group` 100%, `cluster` 29%, `vce` 18% (`cluster` 18%), `robust` 7%, `nonest` 7%, `constraints` 7%, `or` 7%.
+Options (share of these 28 papers): `group` 100%, `cluster` 29%, `vce` 18% (`cluster` 18%), `constraints` 7%, `nonest` 7%, `or` 7%, `robust` 7%.
 
 Most common option set: `group`; at least one call in 13 papers (46%).
 

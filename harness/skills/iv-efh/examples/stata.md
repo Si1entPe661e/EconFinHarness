@@ -41,7 +41,7 @@ ReStud 2026, [doi:10.1093/restud/rdaf079](https://doi.org/10.1093/restud/rdaf079
 
 Used in 46 of 1904 Stata papers (2%) — module to perform extended IV/2SLS, GMM and AC/HAC, LIML and k-class regression for panel data models.
 
-Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `ffirst` 11%, `cl` 11%.
+Options (share of these 46 papers): `fe` 98%, `cluster` 76%, `first` 35%, `i` 28%, `partial` 26%, `savefirst` 20%, `robust` 17%, `savefprefix` 13%, `cl` 11%, `ffirst` 11%.
 
 Most common option set: `cluster`, `fe`; at least one call in 12 papers (26%).
 
@@ -54,7 +54,7 @@ RFS 2026, [doi:10.1093/rfs/hhaf114](https://doi.org/10.1093/rfs/hhaf114), `code/
 
 Used in 23 of 1904 Stata papers (1%) — module for post-selection and post-regularization OLS or IV estimation and inference.
 
-Options (share of these 23 papers): `cluster` 70%, `partial` 52%, `fe` 17%, `robust` 17%, `cl` 13%, `pnotpen` 13%, `lopt` 13%, `aset` 9%, `rob` 9%, `post` 9%.
+Options (share of these 23 papers): `cluster` 70%, `partial` 52%, `fe` 17%, `robust` 17%, `cl` 13%, `lopt` 13%, `pnotpen` 13%, `aset` 9%, `post` 9%, `rob` 9%.
 
 Most common option set: `cluster`, `partial`; at least one call in 4 papers (17%).
 
@@ -87,7 +87,7 @@ AER 2024, [doi:10.1257/aer.20220711](https://doi.org/10.1257/aer.20220711), `cod
 
 Used in 12 of 1904 Stata papers (0.6%) — module to perform weak-instrument-robust tests and confidence intervals for instrumental-variable (IV) estimation of linear, probit and tobit models.
 
-Options (share of these 12 papers): `cluster` 17%, `partial` 17%, `estadd` 17%, `md` 17%, `robust` 17%, `level` 17%.
+Options (share of these 12 papers): `cluster` 17%, `estadd` 17%, `level` 17%, `md` 17%, `partial` 17%, `robust` 17%.
 
 Most common option set: none; at least one call in 5 papers (42%).
 
@@ -119,19 +119,19 @@ JPE 2026, [doi:10.1086/738249](https://doi.org/10.1086/738249), `code/dataverse_
 
 Used in 8 of 1904 Stata papers (0.4%) — module to create shock-level aggregates for shift-share IV.
 
-Options (share of these 8 papers): `n` 100%, `s` 100%, `l` 100%, `controls` 100%, `sfilename` 75%, `t` 62%, `addmissing` 50%, `sfile` 25%.
+Options (share of these 8 papers): `controls` 100%, `l` 100%, `n` 100%, `s` 100%, `sfilename` 75%, `t` 62%, `addmissing` 50%, `sfile` 25%.
 
-Most common option set: `controls`, `l`, `n`, `s`, `sfilename`, `t`; at least one call in 2 papers (25%).
+Most common option set: `addmissing`, `controls`, `l`, `n`, `s`, `sfilename`, `t`; at least one call in 2 papers (25%).
+
+```stata
+ssaggregate `outcomes' [aw=mean_weight], n(bank) t(quarter_year) s(s_fbt) sfilename(shares) l(firm) addmissing controls("`controls'") 
+```
+ReStud 2022, [doi:10.1093/restud/rdab065](https://doi.org/10.1093/restud/rdab065), `code/zenodo_5094270/Supplementary_-_July2021/Supplementary - July2021/dofile.do` line 936.
+
+Next most common option set: `controls`, `l`, `n`, `s`, `sfilename`, `t`; at least one call in 2 papers (25%).
 
 ```stata
 ssaggregate `balancevars' z [aw=wei], ///
 	n(sic87dd) t(year) s(ind_share) sfilename(Lshares) l(czone) controls("`basecontrols'")  
 ```
 ReStud 2022, [doi:10.1093/restud/rdab030](https://doi.org/10.1093/restud/rdab030), `code/zenodo_4619197/BHJ_Replication_Archive/BHJ Replication Archive/ADH/Code/Table3.do` lines 34-35.
-
-Next most common option set: `addmissing`, `controls`, `l`, `n`, `s`, `sfilename`, `t`; at least one call in 2 papers (25%).
-
-```stata
-ssaggregate `outcomes' [aw=mean_weight], n(bank) t(quarter_year) s(s_fbt) sfilename(shares) l(firm) addmissing controls("`controls'") 
-```
-ReStud 2022, [doi:10.1093/restud/rdab065](https://doi.org/10.1093/restud/rdab065), `code/zenodo_5094270/Supplementary_-_July2021/Supplementary - July2021/dofile.do` line 936.

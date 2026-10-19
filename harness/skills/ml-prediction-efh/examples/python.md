@@ -125,7 +125,7 @@ IJOC 2026, [doi:10.1287/ijoc.2023.0493](https://doi.org/10.1287/ijoc.2023.0493),
 
 Used in 34 of 864 Python papers (4%) — Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 
-Options (share of these 34 papers): `kernel_size` 79%, `padding` 65%, `stride` 59%, `bias` 35%, `out_channels` 26%, `in_channels` 24%, `groups` 9%, `dilation` 9%, `**` 6%.
+Options (share of these 34 papers): `kernel_size` 79%, `padding` 65%, `stride` 59%, `bias` 35%, `out_channels` 26%, `in_channels` 24%, `dilation` 9%, `groups` 9%, `**` 6%.
 
 Most common option set: none; at least one call in 17 papers (50%).
 

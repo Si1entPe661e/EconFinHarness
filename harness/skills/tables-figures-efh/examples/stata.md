@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 1215 of 1904 Stata papers (64%) — Export current graph.
 
-Options (share of these 1215 papers): `replace` 100%, `as` 34% (`pdf` 22%, `png` 9%, `eps` 9%), `width` 8%, `name` 7%, `height` 3%, `preview?` 3%, `fontface` 2%, `logo?` 1%, `mag` 0.7%, `font?` 0.7%.
+Options (share of these 1215 papers): `replace` 100%, `as` 34% (`pdf` 22%, `png` 9%, `eps` 9%), `width` 8%, `name` 7%, `height` 3%, `preview?` 3%, `fontface` 2%, `logo?` 1%, `font?` 0.7%, `mag` 0.7%.
 
 Most common option set: `replace`; at least one call in 928 papers (76%).
 
@@ -113,7 +113,7 @@ ReStud 2026, [doi:10.1093/restud/rdag027](https://doi.org/10.1093/restud/rdag027
 
 Used in 267 of 1904 Stata papers (14%) — Bar charts.
 
-Options (share of these 267 papers): `over` 95%, `ytitle` 85%, `legend` 75% (`label` 27%, `order` 22%, `size` 5%, `rows` 4%), `bar` 69%, `graphregion` 55% (`color` 43%, `fcolor` 10%, `margin` 3%), `ylabel` 50%, `title` 25%, `b1title?` 24%, `stack` 23%, `asyvars` 19%.
+Options (share of these 267 papers): `over` 95%, `ytitle` 85%, `legend` 75% (`label` 27%, `order` 22%, `size` 5%, `position` 4%), `bar` 69%, `graphregion` 55% (`color` 43%, `fcolor` 10%, `margin` 3%), `ylabel` 50%, `title` 25%, `b1title?` 24%, `stack` 23%, `asyvars` 19%.
 
 Most common option set: `over`; at least one call in 12 papers (4%).
 

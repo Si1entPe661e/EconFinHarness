@@ -28,7 +28,7 @@ AER 2023, [doi:10.1257/aer.20210937](https://doi.org/10.1257/aer.20210937), `cod
 
 Used in 5 of 1163 R papers (0.4%) — Group-Time Average Treatment Effects.
 
-Options (share of these 5 papers): `yname` 100%, `tname` 100%, `idname` 100%, `gname` 100%, `data` 100%, `control_group` 80%, `clustervars` 80%, `base_period` 60%, `weightsname` 40%, `bstrap` 40%.
+Options (share of these 5 papers): `data` 100%, `gname` 100%, `idname` 100%, `tname` 100%, `yname` 100%, `clustervars` 80%, `control_group` 80%, `base_period` 60%, `allow_unbalanced_panel` 40%, `bstrap` 40%.
 
 Most common option set: `allow_unbalanced_panel`, `base_period`, `clustervars`, `data`, `gname`, `idname`, `tname`, `yname`; at least one call in 1 paper (20%).
 
@@ -38,18 +38,20 @@ Most common option set: `allow_unbalanced_panel`, `base_period`, `clustervars`, 
 ```
 ReStud 2026, [doi:10.1093/restud/rdag063](https://doi.org/10.1093/restud/rdag063), `code/zenodo_18464228/replication_package_archive1/codes/2_rf/7_state_reins_DiD_reins_purchase.R` lines 523-524.
 
-Next most common option set: `base_period`, `clustervars`, `control_group`, `data`, `gname`, `idname`, `tname`, `xformla`, `yname`; at least one call in 1 paper (20%).
+Next most common option set: `base_period`, `bstrap`, `cband`, `clustervars`, `control_group`, `data`, `gname`, `idname`, `tname`, `xformla`, `yname`; at least one call in 1 paper (20%).
 
 ```r
-example_attgt <- att_gt(yname = "greenness",
-                        tname = "year",
-                        idname = "uniqueid",
-                        gname = "foundationCS",
-                        xformla = as.formula(fml) ,
-                        control_group = control_group,
-                        clustervars = c("uniqueid","cddaid"),
-                        data = strat_sample,
-                        base_period = 'universal'
-)
+  example_attgt <- att_gt(yname = "greenness",
+                          tname = "year",
+                          idname = "uniqueid",
+                          gname = "foundationCS",
+                          xformla = as.formula(fml),
+                          control_group = control_group,
+                          base_period = 'universal',
+                          clustervars = c("uniqueid", 'cddaid'),
+                          data = cleandat,
+                          cband = FALSE,
+                          bstrap = FALSE
+  )
 ```
-ReStud 2026, [doi:10.1093/restud/rdag080](https://doi.org/10.1093/restud/rdag080), `code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/10_Robustness.r` lines 374-383.
+ReStud 2026, [doi:10.1093/restud/rdag080](https://doi.org/10.1093/restud/rdag080), `code/zenodo_18849776/EUForest_Workspace/EUForest Workspace/analysis/10_Robustness.r` lines 788-799.

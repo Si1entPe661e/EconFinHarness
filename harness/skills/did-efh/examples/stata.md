@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 18 of 1904 Stata papers (0.9%) — module to perform treatment effect estimation and pre-trend testing in event studies.
 
-Options (share of these 18 papers): `autosample` 89%, `fe` 72%, `cluster` 56%, `horizons` 50%, `pretrends` 44%, `controls` 44%, `pretrend` 39%, `minn` 33%, `maxit` 28%, `hor` 22%.
+Options (share of these 18 papers): `autosample` 89%, `fe` 72%, `cluster` 56%, `horizons` 50%, `controls` 44%, `pretrends` 44%, `pretrend` 39%, `minn` 33%, `maxit` 28%, `hor` 22%.
 
 Most common option set: `autosample`, `cluster`, `fe`; at least one call in 2 papers (11%).
 
@@ -22,7 +22,7 @@ ReStud 2026, [doi:10.1093/restud/rdag056](https://doi.org/10.1093/restud/rdag056
 
 Used in 16 of 1904 Stata papers (0.8%) — module to plot the staggered-adoption diff-in-diff ("event study") estimates.
 
-Options (share of these 16 papers): `graph_opt` 100%, `stub_lag` 62%, `stub_lead` 62%, `together` 62%, `ciplottype` 56%, `plottype` 50%, `lag_opt` 44%, `lag_ci_opt` 44%, `default_look` 44%, `noautolegend` 38%.
+Options (share of these 16 papers): `graph_opt` 100%, `stub_lag` 62%, `stub_lead` 62%, `together` 62%, `ciplottype` 56%, `plottype` 50%, `default_look` 44%, `lag_ci_opt` 44%, `lag_opt` 44%, `noautolegend` 38%.
 
 Most common option set: `ciplottype`, `graph_opt`, `lag_ci_opt`, `lag_opt`, `lead_ci_opt`, `lead_opt`, `plottype`, `stub_lag`, `stub_lead`; at least one call in 2 papers (12%).
 
@@ -45,7 +45,7 @@ QJE 2024, [doi:10.1093/qje/qjae019](https://doi.org/10.1093/qje/qjae019), `code/
 
 Used in 14 of 1904 Stata papers (0.7%) — module to implement the interaction weighted estimator for an event study.
 
-Options (share of these 14 papers): `cohort` 100%, `control_cohort` 100%, `absorb` 100%, `vce` 100%, `covariates` 50%.
+Options (share of these 14 papers): `absorb` 100%, `cohort` 100%, `control_cohort` 100%, `vce` 100%, `covariates` 50%.
 
 Most common option set: `absorb`, `cohort`, `control_cohort`, `vce`; at least one call in 9 papers (64%).
 
@@ -69,14 +69,14 @@ ReStud 2026, [doi:10.1093/restud/rdag051](https://doi.org/10.1093/restud/rdag051
 
 Used in 13 of 1904 Stata papers (0.7%) — module to estimate sharp Difference-in-Difference designs with multiple groups and periods.
 
-Options (share of these 13 papers): `breps` 100%, `cluster` 100%, `placebo` 77%, `dynamic` 62%, `robust_dynamic` 54%, `controls` 46%, `trends_nonparam` 31%, `average_effect` 31%, `save_results` 31%, `jointtestplacebo` 23%.
+Options (share of these 13 papers): `breps` 100%, `cluster` 100%, `placebo` 77%, `dynamic` 62%, `robust_dynamic` 54%, `controls` 46%, `average_effect` 31%, `save_results` 31%, `trends_nonparam` 31%, `covariances` 23%.
 
-Most common option set: `breps`, `cluster`, `placebo`; at least one call in 2 papers (15%).
+Most common option set: `breps`, `cluster`; at least one call in 2 papers (15%).
 
 ```stata
-did_multiplegt F id_firm anno ndr_cal, placebo(3) breps(200) cluster(id_firm)
+did_multiplegt units dea1 Date After, breps(50) cluster(BUYER_ZIP)
 ```
-AER 2022, [doi:10.1257/aer.20201015](https://doi.org/10.1257/aer.20201015), `code/do/replication_do/Table_5.do` line 25.
+AER 2023, [doi:10.1257/aer.20210357](https://doi.org/10.1257/aer.20210357), `code/Code/Code_Analysis/PrepareTable_3.do` line 23.
 
 Next most common option set: `breps`, `cluster`, `dynamic`, `placebo`; at least one call in 2 papers (15%).
 
@@ -89,45 +89,41 @@ QJE 2024, [doi:10.1093/qje/qjad032](https://doi.org/10.1093/qje/qjad032), `code/
 
 Used in 5 of 1904 Stata papers (0.3%) — module to panel event study models and generate event study plots.
 
-Options (share of these 5 papers): `timevar` 100%, `graph_op` 100%, `ci` 100%, `accum` 60%, `lags` 60%, `leads` 60%, `noline` 60%, `method` 60%, `coef_op` 60%, `hdfe` 40%.
+Options (share of these 5 papers): `ci` 100%, `graph_op` 100%, `timevar` 100%, `accum` 60%, `coef_op` 60%, `lags` 60%, `leads` 60%, `method` 60%, `noline` 60%, `absorb` 40%.
 
-Most common option set: `absorb`, `accum`, `ci`, `ci_op`, `cluster`, `endpoints_op`, `graph_op`, `hdfe`, `lags`, `leads`, `noline`, `timevar`; at least one call in 1 paper (20%).
-
-```stata
-eventdd lynching_any all, hdfe absorb(week_date#state_fips fips) timevar(month_to_treat) cluster(state_fips) accum lags(6) leads(6) 
-graph_op(ylabel(-.001(.001).002, grid labsize(med)) yscale(range(-.00125 .00225)) 
-ytitle("Lynching", size(`tsize')) xtitle("Months to Screening", size(`tsize'))
-xlabel(-6(1)6) xline(-.5, lcolor(red)) yline(0, lwidth("thin") lcolor(black)) 
- plotregion(fcolor(white) lcolor(white)) graphregion(fcolor(white) lcolor(white)) bgcolor(white) legend(off)) noline ci(rcap) ci_op(lcolor(`rcap_color')) endpoints_op(mcolor(maroon));
-```
-AER 2023, [doi:10.1257/aer.20201867](https://doi.org/10.1257/aer.20201867), `code/replication_FINAL_v2/code/figure3.do` lines 7-11.
-
-Next most common option set: `absorb`, `accum`, `ci`, `cluster`, `hdfe`, `lags`, `leads`, `timevar`; at least one call in 1 paper (20%).
+Most common option set: `absorb`, `accum`, `baseline`, `ci`, `cluster`, `hdfe`, `lags`, `leads`, `timevar`; at least one call in 1 paper (20%).
 
 ```stata
-eventdd `y' all, hdfe absorb(`fe' fips) timevar(month_to_treat) cluster(state_fips) accum lags(6) leads(6) ci(rcap)
+eventdd any_exp, hdfe absorb(i.year i.panel) timevar(ry) ci(rcap) cluster(province) accum lags(3) leads(3) baseline(0)
 ```
-AER 2023, [doi:10.1257/aer.20201867](https://doi.org/10.1257/aer.20201867), `code/replication_FINAL_v2/code/figureA8.do` line 25.
+JPE 2025, [doi:10.1086/734873](https://doi.org/10.1086/734873), `code/dataverse_38SN2Y/code/code/analysis/appendixFigures/connection_exp.do` line 46.
+
+Next most common option set: `absorb`, `accum`, `baseline`, `cluster`, `hdfe`, `lags`, `leads`, `timevar`; at least one call in 1 paper (20%).
+
+```stata
+eventdd exp, timevar(rel_year) baseline(0) lags(4) leads(3) accum hdfe absorb(ministry_id year) cluster(ministry_id)
+```
+JPE 2025, [doi:10.1086/734873](https://doi.org/10.1086/734873), `code/dataverse_38SN2Y/code/code/analysis/appendixFigures/MU analysis.do` line 94.
 
 ### `sdid`
 
 Used in 5 of 1904 Stata papers (0.3%) — module to perform synthetic difference-in-differences estimation, inference, and visualization.
 
-Options (share of these 5 papers): `vce` 100%, `seed` 80%, `covariates` 80%, `reps` 40%, `graph` 40%.
+Options (share of these 5 papers): `vce` 100%, `covariates` 80%, `seed` 80%, `graph` 40%, `reps` 40%.
 
-Most common option set: `vce`; at least one call in 2 papers (40%).
+Most common option set: `covariates`, `seed`, `vce`; at least one call in 2 papers (40%).
 
 ```stata
-sdid log_extortion muni_route ym comp_post,  vce(jackknife) 
+	eststo sdid`m'a: sdid `var' $fixedeffects PostXBuyerExpHigh $cond, vce(jackknife) covariates(PostXSellerExpHigh) seed(1989)
 ```
-ReStud 2025, [doi:10.1093/restud/rdae057](https://doi.org/10.1093/restud/rdae057), `code/zenodo_10855174/replication/code/nonaggression_pact_effect/effect_on_extortion_synthetic_dd.do` line 241.
+ReStud 2026, [doi:10.1093/restud/rdaf080](https://doi.org/10.1093/restud/rdaf080), `code/zenodo_16614282/ReSTUD_MS_35738/ReSTUD MS 35738/Code/Analysis/reduced_form_analysis.do` line 967.
 
 Next most common option set: `covariates`, `vce`; at least one call in 2 papers (40%).
 
 ```stata
-	sdid return_i firmn year treat, vce(placebo) covariates($controls) 
+sdid log_extortion muni_route ym comp_post,  vce(jackknife) covariates($covariates) 
 ```
-JFE 2024, [doi:10.1016/j.jfineco.2024.103809](https://doi.org/10.1016/j.jfineco.2024.103809), `code/mendeley_nkk2cyw4f6_v2/Replication/Replication/do/analysis_sdid.do` line 213.
+ReStud 2025, [doi:10.1093/restud/rdae057](https://doi.org/10.1093/restud/rdae057), `code/zenodo_10855174/replication/code/nonaggression_pact_effect/effect_on_extortion_synthetic_dd.do` line 254.
 
 ### `twowayfeweights`
 
@@ -142,9 +138,12 @@ twowayfeweights cash_atw gvkey yearq max_ann56 if ll_window==1 , type(feTR)
 ```
 JFE 2024, [doi:10.1016/j.jfineco.2024.103795](https://doi.org/10.1016/j.jfineco.2024.103795), `code/mendeley_9p3m5vgsyf_v2/replication_package_responses_to_fragility_posted/responsetofragility_resultsinpaper.do` line 478.
 
-Next most common option set: `path`, `type`; at least one call in 1 paper (20%).
+Next most common option set: `controls`, `path`, `type`; at least one call in 1 paper (20%).
 
 ```stata
-twowayfeweights ltot_cals_pc area period_reg expansion, type(feTR) path("$CLEANDATA/OTHER/weights_chaisemartin.dta")		
+    twowayfeweights `var' bvd_id year treat_post, type(feTR) ///
+        controls(productivity_cd2 ln_totalassets b_equitytotalasset ///
+                 b_roa b_netloansdepst b_loangrowth) ///
+        path("`wfile'")
 ```
-AER 2024, [doi:10.1257/aer.20220822](https://doi.org/10.1257/aer.20220822), `code/code/analysis/figure_A3.do` line 9.
+RFS 2026, [doi:10.1093/rfs/hhag045](https://doi.org/10.1093/rfs/hhag045), `code/dataverse_2EVES4/1_code/4_1_did_banklevel_treatment.do` lines 985-988; license file: BSD.

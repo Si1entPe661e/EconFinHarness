@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 84 of 1163 R papers (7%) — Linear Group Fixed Effects.
 
-Options (share of these 84 papers): `data` 86%, `weights` 23%, `formula` 7%, `na.action` 4%, `exactDOF` 2%, `cmethod` 2%, `keepModel` 2%.
+Options (share of these 84 papers): `data` 86%, `weights` 23%, `formula` 7%, `na.action` 4%, `cmethod` 2%, `exactDOF` 2%, `keepModel` 2%.
 
 Most common option set: `data`; at least one call in 58 papers (69%).
 
@@ -28,7 +28,7 @@ RFS 2026, [doi:10.1093/rfs/hhag063](https://doi.org/10.1093/rfs/hhag063), `code/
 
 Used in 67 of 1163 R papers (6%) — Fixed-effects OLS estimation.
 
-Options (share of these 67 papers): `data` 94%, `cluster` 60%, `weights` 24%, `vcov` 22%, `panel.id` 12%, `fml` 10%, `warn` 7%, `se` 7%, `lean` 7%, `weight` 6%.
+Options (share of these 67 papers): `data` 94%, `cluster` 60%, `weights` 24%, `vcov` 22%, `panel.id` 12%, `fml` 10%, `lean` 7%, `se` 7%, `warn` 7%, `split` 6%.
 
 Most common option set: `data`; at least one call in 32 papers (48%).
 

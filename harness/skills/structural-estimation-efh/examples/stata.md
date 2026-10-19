@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 22 of 1904 Stata papers (1%) — Maximum likelihood estimation.
 
-Options (share of these 22 papers): `maximize` 45%, `init` 45%, `iterate` 36%, `cluster` 32%, `technique` 32%, `difficult` 23%, `missing` 18%, `search` 18% (`off` 18%), `level` 14%, `vce` 14%.
+Options (share of these 22 papers): `init` 45%, `maximize` 45%, `iterate` 36%, `cluster` 32%, `technique` 32%, `difficult` 23%, `missing` 18%, `search` 18% (`off` 18%), `constraints` 14%, `continue` 14%.
 
 Most common option set: none; at least one call in 20 papers (91%).
 

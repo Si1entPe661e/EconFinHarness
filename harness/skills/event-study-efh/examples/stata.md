@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 18 of 1904 Stata papers (0.9%) — module to perform treatment effect estimation and pre-trend testing in event studies.
 
-Options (share of these 18 papers): `autosample` 89%, `fe` 72%, `cluster` 56%, `horizons` 50%, `pretrends` 44%, `controls` 44%, `pretrend` 39%, `minn` 33%, `maxit` 28%, `hor` 22%.
+Options (share of these 18 papers): `autosample` 89%, `fe` 72%, `cluster` 56%, `horizons` 50%, `controls` 44%, `pretrends` 44%, `pretrend` 39%, `minn` 33%, `maxit` 28%, `hor` 22%.
 
 Most common option set: `autosample`, `cluster`, `fe`; at least one call in 2 papers (11%).
 
@@ -22,7 +22,7 @@ ReStud 2026, [doi:10.1093/restud/rdag056](https://doi.org/10.1093/restud/rdag056
 
 Used in 16 of 1904 Stata papers (0.8%) — module to plot the staggered-adoption diff-in-diff ("event study") estimates.
 
-Options (share of these 16 papers): `graph_opt` 100%, `stub_lag` 62%, `stub_lead` 62%, `together` 62%, `ciplottype` 56%, `plottype` 50%, `lag_opt` 44%, `lag_ci_opt` 44%, `default_look` 44%, `noautolegend` 38%.
+Options (share of these 16 papers): `graph_opt` 100%, `stub_lag` 62%, `stub_lead` 62%, `together` 62%, `ciplottype` 56%, `plottype` 50%, `default_look` 44%, `lag_ci_opt` 44%, `lag_opt` 44%, `noautolegend` 38%.
 
 Most common option set: `ciplottype`, `graph_opt`, `lag_ci_opt`, `lag_opt`, `lead_ci_opt`, `lead_opt`, `plottype`, `stub_lag`, `stub_lead`; at least one call in 2 papers (12%).
 
@@ -45,7 +45,7 @@ QJE 2024, [doi:10.1093/qje/qjae019](https://doi.org/10.1093/qje/qjae019), `code/
 
 Used in 14 of 1904 Stata papers (0.7%) — module to implement the interaction weighted estimator for an event study.
 
-Options (share of these 14 papers): `cohort` 100%, `control_cohort` 100%, `absorb` 100%, `vce` 100%, `covariates` 50%.
+Options (share of these 14 papers): `absorb` 100%, `cohort` 100%, `control_cohort` 100%, `vce` 100%, `covariates` 50%.
 
 Most common option set: `absorb`, `cohort`, `control_cohort`, `vce`; at least one call in 9 papers (64%).
 
@@ -69,22 +69,18 @@ ReStud 2026, [doi:10.1093/restud/rdag051](https://doi.org/10.1093/restud/rdag051
 
 Used in 5 of 1904 Stata papers (0.3%) — module to panel event study models and generate event study plots.
 
-Options (share of these 5 papers): `timevar` 100%, `graph_op` 100%, `ci` 100%, `accum` 60%, `lags` 60%, `leads` 60%, `noline` 60%, `method` 60%, `coef_op` 60%, `hdfe` 40%.
+Options (share of these 5 papers): `ci` 100%, `graph_op` 100%, `timevar` 100%, `accum` 60%, `coef_op` 60%, `lags` 60%, `leads` 60%, `method` 60%, `noline` 60%, `absorb` 40%.
 
-Most common option set: `absorb`, `accum`, `ci`, `ci_op`, `cluster`, `endpoints_op`, `graph_op`, `hdfe`, `lags`, `leads`, `noline`, `timevar`; at least one call in 1 paper (20%).
-
-```stata
-eventdd lynching_any all, hdfe absorb(week_date#state_fips fips) timevar(month_to_treat) cluster(state_fips) accum lags(6) leads(6) 
-graph_op(ylabel(-.001(.001).002, grid labsize(med)) yscale(range(-.00125 .00225)) 
-ytitle("Lynching", size(`tsize')) xtitle("Months to Screening", size(`tsize'))
-xlabel(-6(1)6) xline(-.5, lcolor(red)) yline(0, lwidth("thin") lcolor(black)) 
- plotregion(fcolor(white) lcolor(white)) graphregion(fcolor(white) lcolor(white)) bgcolor(white) legend(off)) noline ci(rcap) ci_op(lcolor(`rcap_color')) endpoints_op(mcolor(maroon));
-```
-AER 2023, [doi:10.1257/aer.20201867](https://doi.org/10.1257/aer.20201867), `code/replication_FINAL_v2/code/figure3.do` lines 7-11.
-
-Next most common option set: `absorb`, `accum`, `ci`, `cluster`, `hdfe`, `lags`, `leads`, `timevar`; at least one call in 1 paper (20%).
+Most common option set: `absorb`, `accum`, `baseline`, `ci`, `cluster`, `hdfe`, `lags`, `leads`, `timevar`; at least one call in 1 paper (20%).
 
 ```stata
-eventdd `y' all, hdfe absorb(`fe' fips) timevar(month_to_treat) cluster(state_fips) accum lags(6) leads(6) ci(rcap)
+eventdd any_exp, hdfe absorb(i.year i.panel) timevar(ry) ci(rcap) cluster(province) accum lags(3) leads(3) baseline(0)
 ```
-AER 2023, [doi:10.1257/aer.20201867](https://doi.org/10.1257/aer.20201867), `code/replication_FINAL_v2/code/figureA8.do` line 25.
+JPE 2025, [doi:10.1086/734873](https://doi.org/10.1086/734873), `code/dataverse_38SN2Y/code/code/analysis/appendixFigures/connection_exp.do` line 46.
+
+Next most common option set: `absorb`, `accum`, `baseline`, `cluster`, `hdfe`, `lags`, `leads`, `timevar`; at least one call in 1 paper (20%).
+
+```stata
+eventdd exp, timevar(rel_year) baseline(0) lags(4) leads(3) accum hdfe absorb(ministry_id year) cluster(ministry_id)
+```
+JPE 2025, [doi:10.1086/734873](https://doi.org/10.1086/734873), `code/dataverse_38SN2Y/code/code/analysis/appendixFigures/MU analysis.do` line 94.

@@ -72,7 +72,7 @@ IJOC 2026, [doi:10.1287/ijoc.2025.1353](https://doi.org/10.1287/ijoc.2025.1353),
 
 Used in 32 of 864 Python papers (4%) — deprecated sklearn package, use scikit-learn instead.
 
-Options (share of these 32 papers): `random_state` 50%, `max_iter` 50%, `solver` 41%, `C` 38%, `penalty` 34%, `multi_class` 16%, `class_weight` 12%, `fit_intercept` 9%, `n_jobs` 6%.
+Options (share of these 32 papers): `max_iter` 50%, `random_state` 50%, `solver` 41%, `C` 38%, `penalty` 34%, `multi_class` 16%, `class_weight` 12%, `fit_intercept` 9%, `n_jobs` 6%.
 
 Most common option set: none; at least one call in 5 papers (16%).
 

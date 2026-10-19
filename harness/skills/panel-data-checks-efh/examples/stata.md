@@ -28,7 +28,7 @@ RFS 2026, [doi:10.1093/rfs/hhag045](https://doi.org/10.1093/rfs/hhag045), `code/
 
 Used in 906 of 1904 Stata papers (48%) — Report, tag, or drop duplicate observations.
 
-Options (share of these 906 papers): `force` 62%, `generate` 36% (`tag` 6%), `table` 0.2%, `divider` 0.2%, `sepby` 0.2%.
+Options (share of these 906 papers): `force` 62%, `generate` 36% (`tag` 6%), `divider` 0.2%, `sepby` 0.2%, `table` 0.2%.
 
 Most common option set: none; at least one call in 643 papers (71%).
 

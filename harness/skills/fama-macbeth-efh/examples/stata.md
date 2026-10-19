@@ -8,7 +8,7 @@ Each excerpt is copied verbatim from the cited package; reuse follows that packa
 
 Used in 24 of 1904 Stata papers (1%) — module to estimate rolling window regressions, Fama-MacBeth and by(group) regressions.
 
-Options (share of these 24 papers): `fmb` 38%, `newey` 38%, `wind` 25%, `min` 25%, `fit` 21%, `se` 17%, `by` 17%, `fitted` 8%, `window` 8%.
+Options (share of these 24 papers): `fmb` 38%, `newey` 38%, `min` 25%, `wind` 25%, `fit` 21%, `by` 17%, `se` 17%, `fitted` 8%, `window` 8%.
 
 Most common option set: `fmb`, `newey`; at least one call in 7 papers (29%).
 

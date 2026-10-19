@@ -68,7 +68,7 @@ ReStud 2025, [doi:10.1093/restud/rdad113](https://doi.org/10.1093/restud/rdad113
 
 Used in 26 of 864 Python papers (3%) — Powerful data structures for data analysis, time series, and statistics.
 
-Options (share of these 26 papers): `on` 81%, `how` 73%, `right_index` 23%, `left_index` 15%, `validate` 8%, `left_on` 8%.
+Options (share of these 26 papers): `on` 81%, `how` 73%, `right_index` 23%, `left_index` 15%, `left_on` 8%, `validate` 8%.
 
 Most common option set: `how`, `on`; at least one call in 14 papers (54%).
 
@@ -129,21 +129,21 @@ IJOC 2026, [doi:10.1287/ijoc.2024.0660](https://doi.org/10.1287/ijoc.2024.0660),
 
 Used in 21 of 864 Python papers (2%) — Powerful data structures for data analysis, time series, and statistics.
 
-Options (share of these 21 papers): `axis` 71%, `inplace` 48%, `columns` 48%.
+Options (share of these 21 papers): `axis` 71%, `columns` 48%, `inplace` 48%.
 
-Most common option set: `axis`, `inplace`; at least one call in 7 papers (33%).
-
-```python
-				df.drop([var], axis=1, inplace=True)
-```
-ReStud 2026, [doi:10.1093/restud/rdag063](https://doi.org/10.1093/restud/rdag063), `code/zenodo_18464228/replication_package_archive1/codes/3_model/config.py` line 272.
-
-Next most common option set: `axis`; at least one call in 7 papers (33%).
+Most common option set: `axis`; at least one call in 7 papers (33%).
 
 ```python
     crsp1=crsp1.drop(['me'], axis=1)
 ```
 JPE 2026, [doi:10.1086/740220](https://doi.org/10.1086/740220), `code/dataverse_2QAGRH/DataCode/CCM.py` line 147.
+
+Next most common option set: `axis`, `inplace`; at least one call in 7 papers (33%).
+
+```python
+				df.drop([var], axis=1, inplace=True)
+```
+ReStud 2026, [doi:10.1093/restud/rdag063](https://doi.org/10.1093/restud/rdag063), `code/zenodo_18464228/replication_package_archive1/codes/3_model/config.py` line 272.
 
 ### `pandas.concat().merge`
 
