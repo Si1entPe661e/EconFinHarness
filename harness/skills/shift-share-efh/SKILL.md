@@ -37,4 +37,4 @@ Return instrument components, identification branch, concentration, first-stage/
 
 ## Corpus examples
 
-Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md). Open only the file for the language in use.

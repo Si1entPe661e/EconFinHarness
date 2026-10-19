@@ -37,4 +37,4 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 
 ## Corpus examples
 
-Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md).
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md). Open only the file for the language in use.

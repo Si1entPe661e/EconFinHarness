@@ -35,4 +35,4 @@ For a compound analysis, read harness/skill-composition.md and combine this meth
 
 ## Corpus examples
 
-Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md), [MATLAB](examples/matlab.md), [Julia](examples/julia.md).
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md), [Python](examples/python.md), [MATLAB](examples/matlab.md), [Julia](examples/julia.md). Open only the file for the language in use.

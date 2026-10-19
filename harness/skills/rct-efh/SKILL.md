@@ -37,4 +37,4 @@ Return arm counts, receipt/attrition rates, ITT contrasts with intervals, any fi
 
 ## Corpus examples
 
-Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md).
+Related commands as written in published replication packages, with paper shares: [Stata](examples/stata.md), [R](examples/r.md). Open only the file for the language in use.
